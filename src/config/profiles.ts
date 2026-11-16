@@ -1,5 +1,44 @@
 import type { JobProfile, RawJobListing } from '../types.ts';
 
+export const DEFAULT_TARGET_COMPANIES: (string | RegExp)[] = [
+  // Global Tech Majors
+  /\bmicrosoft\b/i,
+  /\bgoogle\b/i,
+  /\bamazon\b/i,
+  /\boracle\b/i,
+  /\bcisco\b/i,
+  /\badobe\b/i,
+  /\bsalesforce\b/i,
+  /\bmeta\b/i,
+  /\bapple\b/i,
+  // Top Consultancies & IT Giants
+  /\baccenture\b/i,
+  /\binfosys\b/i,
+  /\bcognizant\b/i,
+  /\bcapgemini\b/i,
+  /\bdeloitte\b/i,
+  /\bibm\b/i,
+  /\bpwc\b/i,
+  /\bhcl\b/i,
+  /\bhcltech\b/i,
+  /\bltimindtree\b/i,
+  // Kochi Infopark & SmartCity Tech Majors
+  /(?:^|\b)ust(?:\s*global)?(?:\b|$)/i,
+  /\bibs\s*software\b/i,
+  /\bqburst\b/i,
+  /\btata\s*elxsi\b/i,
+  /\bexperion(?:\s*technologies)?\b/i,
+  /\bfingent\b/i,
+  /\bnest\s*digital\b/i,
+  /\bnest\s*technologies\b/i,
+  /\bkeyvalue(?:\s*software)?\b/i,
+  /\btech\s*mahindra\b/i,
+  /\bsutherland\b/i,
+  /\bgeojit\b/i,
+  /\bignitho\b/i,
+  /\brapidvalue\b/i
+];
+
 export function getProfiles(env: Record<string, string | undefined> = process.env): JobProfile[] {
   const defaultRecipient = env.RECIPIENT_EMAIL || 'user@example.com';
 
@@ -7,8 +46,10 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
     {
       id: 'power-platform',
       name: 'Power Platform Job Radar',
-      candidateName: 'Celine',
+      candidateName: 'Bhavya',
       recipientEmail: env.RECIPIENT_EMAIL_POWERPLATFORM || defaultRecipient,
+      excludedCompanies: [/\bwipro\b/i],
+      targetCompanies: DEFAULT_TARGET_COMPANIES,
       experience: {
         minYears: 3,
         maxYears: 8,
@@ -84,6 +125,8 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
       name: 'Full Stack Developer Job Radar',
       candidateName: 'Vishnu',
       recipientEmail: env.RECIPIENT_EMAIL_FULLSTACK || defaultRecipient,
+      excludedCompanies: [/(?:^|\b)(?:ey|ernst\s*&\s*young|ernst\s*and\s*young)(?:\b|$)/i],
+      targetCompanies: DEFAULT_TARGET_COMPANIES,
       experience: {
         minYears: 2,
         maxYears: 8,
@@ -153,6 +196,8 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
       name: 'Java & Spring Boot Developer Job Radar',
       candidateName: 'Aswin',
       recipientEmail: env.RECIPIENT_EMAIL_JAVA || defaultRecipient,
+      excludedCompanies: [/(?:^|\b)(?:tcs|tata\s*consultancy(?:\s*services)?)(?:\b|$)/i],
+      targetCompanies: DEFAULT_TARGET_COMPANIES,
       experience: {
         minYears: 2,
         maxYears: 6,

@@ -58,12 +58,21 @@ export function generateEmailDigestHtml(
       </div>
     `;
 
-    const jobCardsHtml = jobs
+    const sortedJobs = [...jobs].sort((a, b) => {
+      if (a.isTargetCompany && !b.isTargetCompany) return -1;
+      if (!a.isTargetCompany && b.isTargetCompany) return 1;
+      return 0;
+    });
+
+    const jobCardsHtml = sortedJobs
       .map((job) => {
         const title = escapeHtml(job.title);
         const company = escapeHtml(job.company || 'Confidential Company');
         const location = escapeHtml(job.location || 'India / Remote');
         const source = escapeHtml(job.source ? job.source.toUpperCase() : 'JOB FEED');
+        const targetBadge = job.isTargetCompany
+          ? `<span style="display: inline-block; background-color: #fef08a; color: #854d0e; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; border: 1px solid #fde047; margin-left: 8px;">⭐ Priority Target</span>`
+          : '';
         const tagsHtml = job.tags
           .map(
             (tag) => `
@@ -81,7 +90,7 @@ export function generateEmailDigestHtml(
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                   <td>
-                    <span style="font-size: 11px; font-weight: 700; color: ${accentColor}; text-transform: uppercase; letter-spacing: 0.5px;">${source}</span>
+                    <span style="font-size: 11px; font-weight: 700; color: ${accentColor}; text-transform: uppercase; letter-spacing: 0.5px;">${source}</span>${targetBadge}
                     <h3 style="margin: 6px 0 4px 0; font-size: 18px; font-weight: 700; color: #0f172a; line-height: 1.3;">${title}</h3>
                     <p style="margin: 0 0 14px 0; font-size: 14px; color: #475569; font-weight: 500;">
                       <strong style="color: #1e293b;">${company}</strong> &bull; 

@@ -104,5 +104,39 @@ describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {
       assert.ok(html.includes('Hey there!'));
       assert.ok(!html.includes('undefined'));
     });
+
+    it('prioritizes target company jobs at the top and displays badge (HF-019)', () => {
+      const regularJob: Job = {
+        id: '1',
+        title: 'Backend Engineer',
+        company: 'Standard Startup',
+        location: 'Remote, India',
+        url: 'https://example.com/job-regular',
+        tags: ['[Java]'],
+        source: 'remotive',
+        description: 'Regular job',
+        isTargetCompany: false
+      };
+
+      const targetJob: Job = {
+        id: '2',
+        title: 'Senior Java Architect',
+        company: 'UST Global',
+        location: 'Kochi Infopark, India',
+        url: 'https://example.com/job-ust',
+        tags: ['[Spring Boot]', '[Java]'],
+        source: 'jobicy',
+        description: 'Target company job',
+        isTargetCompany: true
+      };
+
+      // Even if regularJob is first in the array, targetJob should be sorted to the top
+      const { html } = generateEmailDigestHtml([regularJob, targetJob], 'Java & Spring Boot Developer Job Radar', '#ea580c', 'Aswin');
+
+      assert.ok(html.includes('⭐ Priority Target'), 'Must include Priority Target badge');
+      const ustIndex = html.indexOf('UST Global');
+      const standardIndex = html.indexOf('Standard Startup');
+      assert.ok(ustIndex < standardIndex, 'UST Global (Target Company) must appear before Standard Startup');
+    });
   });
 });

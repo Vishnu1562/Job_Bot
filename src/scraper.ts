@@ -4,7 +4,9 @@ import {
   isPowerPlatformJob,
   isIndiaLocation,
   containsNegativeKeywords,
-  normalizeUrl
+  normalizeUrl,
+  isCompanyExcluded,
+  isTargetCompany
 } from './filter.ts';
 import { extractSkillTags } from './tagger.ts';
 import { getProfiles, isJobMatchingProfile, extractProfileSkillTags } from './config/profiles.ts';
@@ -34,6 +36,7 @@ function processCandidateJob(
   if (containsNegativeKeywords(raw)) return null;
 
   if (profile) {
+    if (isCompanyExcluded(raw.company, profile)) return null;
     if (!isJobMatchingProfile(raw, profile)) return null;
     if (!isExperienceMatching(raw, profile)) return null;
   } else {
@@ -46,6 +49,8 @@ function processCandidateJob(
     ? extractProfileSkillTags(raw.title, raw.description, profile)
     : extractSkillTags(raw.title, raw.description);
 
+  const isTarget = profile ? isTargetCompany(raw.company, profile) : false;
+
   return {
     id,
     profileId: profile?.id,
@@ -56,7 +61,8 @@ function processCandidateJob(
     tags,
     source,
     description: raw.description?.trim() || '',
-    publishedAt: raw.publishedAt
+    publishedAt: raw.publishedAt,
+    isTargetCompany: isTarget
   };
 }
 

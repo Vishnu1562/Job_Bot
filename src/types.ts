@@ -20,6 +20,7 @@ export interface Job {
   description: string;
   publishedAt?: string;
   scrapedAt?: string;
+  isTargetCompany?: boolean;
 }
 
 export interface SkillRule {
@@ -44,6 +45,8 @@ export interface JobProfile {
   skills: SkillRule[];
   defaultTag: string;
   negativeKeywords?: string[];
+  excludedCompanies?: (string | RegExp)[];
+  targetCompanies?: (string | RegExp)[];
   accentColor?: string;
 }
 

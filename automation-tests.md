@@ -182,6 +182,12 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
   - Replaces all technical server/bot strings (`running 24/7 on GitHub Actions`, `Tracked via SQLite`) with warm closing ("Curated with care • Stay confident and keep going! ✨").
 - **Final State**: Candidate receives an encouraging, personalized email tailored specifically for them.
 
+#### [HF-019] Target Company Prioritization & Badging (Global + Infopark Kochi)
+- **Preconditions**: Profile configured with `targetCompanies` including Global Tech Majors (Microsoft, Google, Amazon, Oracle, Cisco, Adobe, Salesforce), IT giants (Accenture, Infosys, Cognizant, Capgemini, Deloitte, IBM, PwC, HCLTech, LTIMindtree), and Kochi Infopark majors (UST, IBS Software, QBurst, Tata Elxsi, Experion, Fingent, NeST Digital, KeyValue).
+- **Action**: Template generator detects matching companies, badges them with `⭐ Priority Target`, and sorts them to the top of the email digest.
+- **Expected Result**: Priority company jobs appear first in the email digest, followed by all other valid matching openings. Broad search is preserved.
+- **Final State**: Top-tier and local tech employer roles highlighted prominently for the candidate.
+
 ---
 
 ### Negative Flows
@@ -228,6 +234,15 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Job requiring 1-2 years is rejected as below the 3-year threshold.
 - **Final State**: Only mid-to-senior roles delivered.
 
+#### [NF-008] Per-Profile Company Exclusions
+- **Preconditions**: Profiles configured with specific excluded companies:
+  - Bhavya (`power-platform`): `Wipro`
+  - Aswin (`java-backend`): `TCS` (and "Tata Consultancy Services")
+  - Vishnu (`full-stack`): `EY` (and "Ernst & Young")
+- **Action**: Ingestion filter checks candidate company name against profile's `excludedCompanies` list.
+- **Expected Result**: Any job from an excluded company is dropped from ingestion, even if matching skills and experience.
+- **Final State**: Zero listings from excluded employers delivered to that profile.
+
 ---
 
 ### Edge Cases
@@ -273,6 +288,15 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Action**: Experience parser extracts `minYears` and `maxYears`.
 - **Expected Result**: Accurately determines numerical bounds without false positives on calendar years (e.g. "since 2020").
 - **Final State**: Robust numerical bounds extracted for filtering.
+
+#### [EC-008] Company Name Alias & Word Boundary Matching
+- **Preconditions**: Company names containing short acronyms (e.g., "EY", "TCS") or corporate suffixes (e.g., "Wipro Technologies", "Tata Consultancy Services Ltd", "Ernst & Young LLP").
+- **Action**: Exclusion and target company matchers use regex word boundaries and alias mapping.
+- **Expected Result**:
+  - Excludes "EY" and "Ernst & Young" without falsely matching words like "Honey", "EyeCare", or "Journey".
+  - Excludes "TCS" and "Tata Consultancy Services" without falsely matching unrelated words.
+  - Excludes "Wipro" and "Wipro Limited".
+- **Final State**: Precise company matching without false positive drops.
 
 ---
 
