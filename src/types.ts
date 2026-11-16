@@ -10,6 +10,7 @@ export interface RawJobListing {
 
 export interface Job {
   id: string;
+  profileId?: string;
   title: string;
   company: string;
   location: string;
@@ -19,6 +20,23 @@ export interface Job {
   description: string;
   publishedAt?: string;
   scrapedAt?: string;
+}
+
+export interface SkillRule {
+  tag: string;
+  patterns: (string | RegExp)[];
+}
+
+export interface JobProfile {
+  id: string;
+  name: string;
+  recipientEmail: string;
+  queryTerms: string[];
+  keywords: (string | RegExp)[];
+  skills: SkillRule[];
+  defaultTag: string;
+  negativeKeywords?: string[];
+  accentColor?: string;
 }
 
 export interface MailerConfig {

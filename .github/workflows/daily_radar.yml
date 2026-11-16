@@ -42,6 +42,8 @@ jobs:
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
           SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+          RECIPIENT_EMAIL_POWERPLATFORM: ${{ secrets.RECIPIENT_EMAIL_POWERPLATFORM }}
+          RECIPIENT_EMAIL_FULLSTACK: ${{ secrets.RECIPIENT_EMAIL_FULLSTACK }}
         run: npm start
 
       - name: Persist jobs.db Deduplication Database

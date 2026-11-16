@@ -13,6 +13,7 @@ yarn-error.log*
 Thumbs.db
 
 # Preview HTML
+preview_*.html
 preview_digest.html
 
 # Note: jobs.db is intentionally NOT ignored so GitHub Actions can persist deduplication

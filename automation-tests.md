@@ -1,8 +1,12 @@
 # Automation Behavioral Specification & Tests Contract
-## Power Platform Job Radar (Node.js / TypeScript Edition)
+## Multi-Profile Job Radar (Power Platform & Full Stack Editions)
 
 ### Feature / Change Summary
-Automated "Power Platform Job Radar" script in Node.js / TypeScript that runs every morning at 8:30 AM IST (03:00 UTC) via GitHub Actions, scrapes free public endpoints (Remotive, Jobicy, Arbeitnow, public RSS feeds), filters for Power Platform roles in India (remote/hybrid/on-site), smart-tags skills, deduplicates via SQLite (`jobs.db`), and sends a responsive HTML email digest using Gmail SMTP.
+Modular, generic, scalable Job Radar in Node.js / TypeScript that runs every morning via GitHub Actions, supports multiple search profiles with independent skill tagging and recipient mappings:
+1. **Power Platform Profile**: Power Apps, Power Automate, Dataverse, PCF, Copilot Studio, Power Pages, Dynamics 365.
+2. **Full Stack Profile**: Full Stack / Backend / Frontend Developer with NestJS, Angular, .NET, PostgreSQL, MSSQL, Azure DevOps, GitHub.
+Easily expandable with additional job profiles by adding definitions to `src/config/profiles.ts`.
+Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, generates tailored responsive HTML email digests, and dispatches to each profile's configured recipient (or defaults to `RECIPIENT_EMAIL`).
 
 ---
 
@@ -21,18 +25,30 @@ Automated "Power Platform Job Radar" script in Node.js / TypeScript that runs ev
   - Location: "India / Remote"
   - Description: "Looking for an expert in Canvas Apps, Dataverse, Power Automate, and PCF components."
   - URL: "https://example.com/jobs/contoso-101"
+- **Sample Full Stack Developer Job (India Remote)**:
+  - Title: "Full Stack Engineer (Angular / NestJS)"
+  - Company: "Nexus Innovations"
+  - Location: "Bangalore, India"
+  - Description: "Building scalable microservices with NestJS, Angular frontend, PostgreSQL database, and CI/CD via Azure DevOps and GitHub."
+  - URL: "https://example.com/jobs/nexus-202"
+- **Sample Full Stack .NET Job**:
+  - Title: "Senior .NET & Angular Developer"
+  - Company: "Global Financial Systems"
+  - Location: "Hyderabad, India"
+  - Description: "Expertise in .NET Core, C#, MSSQL Server, Angular 17+, and Azure DevOps pipelines."
+  - URL: "https://example.com/jobs/global-303"
 - **Sample Non-India Job (US Remote Only)**:
   - Title: "Power Platform Consultant"
   - Company: "Fabrikam US"
   - Location: "Remote - USA Only"
   - Description: "Dynamics 365 and Power Apps specialist in US time zones."
-  - URL: "https://example.com/jobs/fabrikam-202"
+  - URL: "https://example.com/jobs/fabrikam-404"
 - **Sample Negative Filter Job (Data Entry / Unpaid)**:
   - Title: "Unpaid Intern - Excel Data Entry"
   - Company: "SpamCorp"
   - Location: "India"
   - Description: "Basic Excel and data entry internship. Unpaid."
-  - URL: "https://example.com/jobs/spam-303"
+  - URL: "https://example.com/jobs/spam-505"
 
 ---
 
@@ -40,52 +56,76 @@ Automated "Power Platform Job Radar" script in Node.js / TypeScript that runs ev
 
 #### [HF-001] Job Ingestion & India Location Filtering
 - **Preconditions**: Public API responses containing raw job listings.
-- **Action**: Feed processor filters listings matching target keywords ("Power Apps", "Power Platform", "Power Automate", "Dataverse", "PCF", "Power Pages", "Dynamics 365") and location ("India", "Bangalore", "Hyderabad", "Remote - India", "Worldwide Remote").
-- **Expected Result**: Only relevant Power Platform jobs matching India or Worldwide Remote are retained; US/EU-only or unrelated roles are excluded.
+- **Action**: Feed processor filters listings matching target keywords and location ("India", "Bangalore", "Hyderabad", "Remote - India", "Worldwide Remote").
+- **Expected Result**: Only relevant jobs matching India or Worldwide Remote are retained; US/EU-only or unrelated roles are excluded.
 - **Final State**: Normalized list of `Job` objects ready for deduplication and tagging.
 
-#### [HF-002] Smart Skill Tagging
-- **Preconditions**: Normalized job listings with title and description text.
+#### [HF-002] Power Platform Smart Skill Tagging
+- **Preconditions**: Normalized Power Platform job listings with title and description text.
 - **Action**: Skill tagger scans text for predefined keywords.
 - **Expected Result**: Matching skill badges added:
-  - `[Canvas Apps]`
-  - `[Model-Driven]`
-  - `[Dataverse]`
-  - `[PCF]`
-  - `[Power Automate]`
-  - `[Copilot Studio]`
-  - `[Power Pages]`
-  - `[Dynamics 365]`
-- **Final State**: Each job has a `tags` array containing identified skills (minimum default `[Power Platform]`).
+  - `[Canvas Apps]`, `[Model-Driven]`, `[Dataverse]`, `[PCF]`, `[Power Automate]`, `[Copilot Studio]`, `[Power Pages]`, `[Dynamics 365]`.
+- **Final State**: Each job has a `tags` array containing identified skills (fallback `[Power Platform]`).
 
 #### [HF-003] SQLite Deduplication Engine
 - **Preconditions**: SQLite database `jobs.db` initialized with schema.
 - **Action**: Scraped jobs are checked against `jobs.db`. New jobs are inserted; existing URLs/IDs are identified as duplicates.
-- **Expected Result**: Deduplication returns only genuine new jobs for the daily email. Duplicate entries are not inserted or re-sent.
+- **Expected Result**: Deduplication returns only genuine new jobs for the daily email. Duplicate entries are not re-sent.
 - **Final State**: `jobs.db` holds persistent record of sent jobs; returns new unemailed jobs.
 
 #### [HF-004] Responsive HTML Email Generation (Jobs Found)
-- **Preconditions**: 1 or more new jobs identified.
-- **Action**: HTML template engine generates email with summary header: "✨ Power Platform Job Radar • [X] New Roles Found Today".
+- **Preconditions**: 1 or more new jobs identified for a profile.
+- **Action**: HTML template engine generates email with summary header: "✨ [Profile Name] • [X] New Roles Found Today".
 - **Expected Result**: Beautiful, responsive HTML containing:
-  - Daily header with job count and scan date.
+  - Daily header with profile name, job count, and scan date.
   - Cards per job: Company name, Job title, Location badge, Skill tag pills, and an `[Apply Now ↗]` CTA button.
   - Inline CSS for compatibility across Outlook, Gmail, Apple Mail, and mobile clients.
 - **Final State**: Rendered HTML string ready for SMTP transport.
 
 #### [HF-005] Status Digest Generation (0 New Jobs Found)
-- **Preconditions**: 0 new jobs found after scraping and deduplication.
+- **Preconditions**: 0 new jobs found after scraping and deduplication for a profile.
 - **Action**: Digest generator creates "0 New Roles Found Today" status email.
 - **Expected Result**: Email clearly states:
-  - "✨ Power Platform Job Radar • 0 New Roles Found Today"
+  - "✨ [Profile Name] • 0 New Roles Found Today"
   - Confirmation message: "Radar active & scanning. No new roles matching your criteria since the last scan."
 - **Final State**: Status email ready for dispatch so user knows automation is healthy.
 
 #### [HF-006] SMTP Email Dispatcher
 - **Preconditions**: Valid SMTP credentials (`SENDER_EMAIL`, `SENDER_PASSWORD`, `RECIPIENT_EMAIL`).
-- **Action**: Mailer connects to `smtp.gmail.com:587` with TLS and sends email.
-- **Expected Result**: Message successfully handed off to Gmail SMTP server with correct `From`, `To`, `Subject`, and HTML body.
+- **Action**: Mailer connects to SMTP provider (Resend, Brevo, Gmail) and sends email.
+- **Expected Result**: Message successfully handed off to SMTP server with correct `From`, `To`, `Subject`, and HTML body.
 - **Final State**: Email sent timestamp recorded.
+
+#### [HF-007] Multi-Profile Configuration Engine
+- **Preconditions**: `src/config/profiles.ts` defining distinct profiles (`power-platform`, `full-stack`).
+- **Action**: Configuration loader retrieves active profiles and resolves recipient emails (falling back to `RECIPIENT_EMAIL` if profile recipient is not individually overridden).
+- **Expected Result**: Returns array of valid `JobProfile` objects.
+- **Final State**: Pipeline has access to all configured search profiles.
+
+#### [HF-008] Full Stack Job Matching
+- **Preconditions**: Raw job listings from free feeds.
+- **Action**: Profile matcher tests listing against Full Stack keywords and target tech stack (`NestJS`, `Angular`, `.NET`, `Postgres`, `MSSQL`, `Azure DevOps`, `GitHub`).
+- **Expected Result**: Matches developer roles with target skills; rejects unrelated non-matching positions.
+- **Final State**: Candidates filtered for Full Stack profile.
+
+#### [HF-009] Full Stack Smart Skill Tagging
+- **Preconditions**: Matching Full Stack job listing.
+- **Action**: Skill tagger detects skills from title and description.
+- **Expected Result**: Identifies and attaches tags:
+  - `[NestJS]`, `[Angular]`, `[.NET]`, `[PostgreSQL]`, `[MSSQL]`, `[Azure DevOps]`, `[GitHub]`.
+- **Final State**: Job object contains all detected technology tags (fallback `[Full Stack]`).
+
+#### [HF-010] Profile-Scoped Deduplication
+- **Preconditions**: SQLite database tracking jobs per `(profile_id, url)`.
+- **Action**: Scraped job is checked against the database specifically for the running profile.
+- **Expected Result**: A job sent to Profile A does not prevent Profile B from receiving it if it qualifies, while preventing Profile A from receiving it twice.
+- **Final State**: Independent deduplication across distinct recipients and profiles.
+
+#### [HF-011] Multi-Profile Pipeline Orchestration
+- **Preconditions**: Multiple profiles configured.
+- **Action**: Main orchestrator loops over each profile, runs scraping/filtering, deduplicates, and sends separate branded email digests to each recipient.
+- **Expected Result**: Both Power Platform and Full Stack email digests are generated and dispatched to their respective recipients.
+- **Final State**: All active profiles processed.
 
 ---
 
@@ -94,20 +134,26 @@ Automated "Power Platform Job Radar" script in Node.js / TypeScript that runs ev
 #### [NF-001] Negative Filter Exclusion
 - **Preconditions**: Listings containing negative keywords ("unpaid", "internship", "data entry", "excel only", "recruiter spam").
 - **Action**: Negative filter inspects title and description.
-- **Expected Result**: Jobs containing negative filters are dropped even if they mention "Power" or "Excel".
+- **Expected Result**: Jobs containing negative filters are dropped.
 - **Final State**: Zero spam/unpaid jobs in the ingestion pipeline.
 
 #### [NF-002] Graceful Upstream Failure
-- **Preconditions**: One API endpoint (e.g., Remotive or Jobicy) is down, returns 500, or times out.
+- **Preconditions**: One API endpoint is down, returns 500, or times out.
 - **Action**: Scraper queries all endpoints concurrently with `Promise.allSettled`.
-- **Expected Result**: Failed endpoint logs warning; successful endpoints continue processing without pipeline termination.
+- **Expected Result**: Failed endpoint logs warning; successful endpoints continue processing.
 - **Final State**: Pipeline completes with available data from working feeds.
 
 #### [NF-003] Missing Environment Credentials Validation
 - **Preconditions**: Missing `SENDER_EMAIL`, `SENDER_PASSWORD`, or `RECIPIENT_EMAIL`.
 - **Action**: Mailer verifies environment before attempting connection.
-- **Expected Result**: Fails fast with clear diagnostic message stating which variable is missing, avoiding opaque network timeouts.
+- **Expected Result**: Fails fast with clear diagnostic message.
 - **Final State**: Execution halts cleanly with code 1.
+
+#### [NF-004] Isolated Profile Execution Failure
+- **Preconditions**: An error occurs during processing of one profile (e.g. invalid template or specific feed issue).
+- **Action**: Main orchestrator uses `try/catch` per profile.
+- **Expected Result**: The error is logged and the remaining profiles continue processing.
+- **Final State**: Pipeline resilience across multiple recipients.
 
 ---
 
@@ -126,23 +172,37 @@ Automated "Power Platform Job Radar" script in Node.js / TypeScript that runs ev
 - **Final State**: Properly escaped HTML document.
 
 #### [EC-003] Cross-Feed Duplicate Detection
-- **Preconditions**: Same job posted across multiple boards with slightly different URL tracking parameters (e.g. `?ref=jobicy` vs `?utm_source=remotive`).
-- **Action**: Deduplicator normalizes URLs (strips query parameters) and matches on `(normalized_title, normalized_company)`.
+- **Preconditions**: Same job posted across multiple boards with slightly different URL tracking parameters.
+- **Action**: Deduplicator normalizes URLs (strips query parameters).
 - **Expected Result**: Only 1 instance of the job is kept.
 - **Final State**: No redundant listings in the email digest.
+
+#### [EC-004] .NET and C# Boundary Matching
+- **Preconditions**: Text mentioning ".NET", "C#", "ASP.NET", ".NET 8", "dotnet" vs words ending in "net" like "internet" or "network".
+- **Action**: Regex parser uses word boundaries and specific pattern checks.
+- **Expected Result**: Correctly tags `[.NET]` without false positive triggers on "network" or "internet".
+- **Final State**: Accurate skill identification.
+
+#### [EC-005] Multiple Profiles Sent to Same Email Address
+- **Preconditions**: Both profiles configured with identical `recipientEmail` (current user configuration).
+- **Action**: Mailer sends 2 distinct emails with unique subject lines and branding.
+- **Expected Result**: Recipient receives both "✨ Power Platform Job Radar" and "✨ Full Stack Developer Job Radar" emails clearly separated.
+- **Final State**: 2 distinct digest emails delivered.
 
 ---
 
 ### Validation Rules
 - `VR-001`: Every job must have non-empty `title`, `company`, and valid `url` (starting with `http://` or `https://`).
-- `VR-002`: Skill tags must contain at least one valid tag (defaults to `[Power Platform]` if no sub-skill detected).
+- `VR-002`: Skill tags must contain at least one valid tag.
 - `VR-003`: Email address format validation for sender and recipient.
+- `VR-004`: Each `JobProfile` must have unique `id`, non-empty `name`, `recipientEmail`, and search keywords.
 
 ---
 
 ### Loading / State Transitions
-- `ST-001`: SQLite database initialization creates table `jobs` (`id`, `title`, `company`, `url`, `location`, `tags`, `scraped_at`, `emailed_at`) with UNIQUE constraint on `url`.
-- `ST-002`: Pipeline progression: `IDLE` -> `FETCHING_FEEDS` -> `FILTERING_AND_TAGGING` -> `DEDUPLICATING` -> `GENERATING_EMAIL` -> `DISPATCHING_SMTP` -> `PERSISTING_DB` -> `COMPLETE`.
+- `ST-001`: SQLite database initialization creates table `jobs` with `profile_id` column.
+- `ST-002`: Pipeline progression: `IDLE` -> `FOR_EACH_PROFILE` -> `FETCHING_FEEDS` -> `FILTERING_AND_TAGGING` -> `DEDUPLICATING` -> `GENERATING_EMAIL` -> `DISPATCHING_SMTP` -> `PERSISTING_DB` -> `COMPLETE`.
+- `ST-003`: Migration check: If `jobs` table exists without `profile_id`, adds `profile_id` column automatically.
 
 ---
 

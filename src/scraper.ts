@@ -7,12 +7,12 @@ import {
   normalizeUrl
 } from './filter.ts';
 import { extractSkillTags } from './tagger.ts';
-import type { Job, RawJobListing } from './types.ts';
+import { getProfiles, isJobMatchingProfile, extractProfileSkillTags } from './config/profiles.ts';
+import type { Job, RawJobListing, JobProfile } from './types.ts';
 
 const USER_AGENT = 'PowerPlatformJobRadar/1.0 (+https://github.com/Vishnu1562/Job_Bot)';
 
 function generateJobId(url: string): string {
-  // Simple deterministic hash
   let hash = 0;
   for (let i = 0; i < url.length; i++) {
     const char = url.charCodeAt(i);
@@ -25,19 +25,28 @@ function generateJobId(url: string): string {
 function processCandidateJob(
   raw: RawJobListing,
   source: string,
-  explicitId?: string
+  explicitId?: string,
+  profile?: JobProfile
 ): Job | null {
   if (!validateJob(raw)) return null;
-  if (!isPowerPlatformJob(raw)) return null;
   if (!isIndiaLocation(raw.location)) return null;
   if (containsNegativeKeywords(raw)) return null;
 
+  if (profile) {
+    if (!isJobMatchingProfile(raw, profile)) return null;
+  } else {
+    if (!isPowerPlatformJob(raw)) return null;
+  }
+
   const cleanUrl = normalizeUrl(raw.url);
   const id = explicitId || generateJobId(cleanUrl);
-  const tags = extractSkillTags(raw.title, raw.description);
+  const tags = profile
+    ? extractProfileSkillTags(raw.title, raw.description, profile)
+    : extractSkillTags(raw.title, raw.description);
 
   return {
     id,
+    profileId: profile?.id,
     title: raw.title.trim(),
     company: raw.company.trim(),
     location: raw.location.trim(),
@@ -49,7 +58,7 @@ function processCandidateJob(
   };
 }
 
-export function parseRemotiveJob(raw: any): Job | null {
+export function parseRemotiveJob(raw: any, profile?: JobProfile): Job | null {
   if (!raw || typeof raw !== 'object') return null;
   const rawListing: RawJobListing = {
     title: raw.title || '',
@@ -59,10 +68,10 @@ export function parseRemotiveJob(raw: any): Job | null {
     url: raw.url || '',
     publishedAt: raw.publication_date
   };
-  return processCandidateJob(rawListing, 'remotive', raw.id ? `remotive-${raw.id}` : undefined);
+  return processCandidateJob(rawListing, 'remotive', raw.id ? `remotive-${raw.id}` : undefined, profile);
 }
 
-export function parseJobicyJob(raw: any): Job | null {
+export function parseJobicyJob(raw: any, profile?: JobProfile): Job | null {
   if (!raw || typeof raw !== 'object') return null;
   const rawListing: RawJobListing = {
     title: raw.jobTitle || '',
@@ -72,10 +81,10 @@ export function parseJobicyJob(raw: any): Job | null {
     url: raw.url || '',
     publishedAt: raw.pubDate
   };
-  return processCandidateJob(rawListing, 'jobicy', raw.id ? `jobicy-${raw.id}` : undefined);
+  return processCandidateJob(rawListing, 'jobicy', raw.id ? `jobicy-${raw.id}` : undefined, profile);
 }
 
-export function parseArbeitnowJob(raw: any): Job | null {
+export function parseArbeitnowJob(raw: any, profile?: JobProfile): Job | null {
   if (!raw || typeof raw !== 'object') return null;
   const location = raw.remote ? `${raw.location || 'Remote'} (Remote)` : raw.location || 'Remote';
   const rawListing: RawJobListing = {
@@ -85,16 +94,15 @@ export function parseArbeitnowJob(raw: any): Job | null {
     description: raw.description || '',
     url: raw.url || ''
   };
-  return processCandidateJob(rawListing, 'arbeitnow', raw.slug ? `arbeitnow-${raw.slug}` : undefined);
+  return processCandidateJob(rawListing, 'arbeitnow', raw.slug ? `arbeitnow-${raw.slug}` : undefined, profile);
 }
 
-export function parseRssItem(raw: any, sourceName: string): Job | null {
+export function parseRssItem(raw: any, sourceName: string, profile?: JobProfile): Job | null {
   if (!raw || typeof raw !== 'object') return null;
   const title = raw.title || '';
   const description = raw.description || '';
   const link = raw.link || '';
 
-  // Often RSS title is "Company: Job Title"
   let company = 'Tech Company';
   let cleanTitle = title;
   if (title.includes(':')) {
@@ -112,7 +120,7 @@ export function parseRssItem(raw: any, sourceName: string): Job | null {
     publishedAt: raw.pubDate
   };
 
-  return processCandidateJob(rawListing, sourceName);
+  return processCandidateJob(rawListing, sourceName, undefined, profile);
 }
 
 async function fetchWithTimeout(url: string, timeoutMs: number = 10000): Promise<Response> {
@@ -132,7 +140,7 @@ async function fetchWithTimeout(url: string, timeoutMs: number = 10000): Promise
   }
 }
 
-export async function fetchPowerPlatformJobs(): Promise<Job[]> {
+export async function fetchJobsForProfile(profile: JobProfile): Promise<Job[]> {
   const jobs: Job[] = [];
   const seenUrls = new Set<string>();
 
@@ -143,12 +151,10 @@ export async function fetchPowerPlatformJobs(): Promise<Job[]> {
     jobs.push(candidate);
   };
 
-  // List of scrapers to execute concurrently
   const tasks: Array<() => Promise<void>> = [
     // 1. Remotive Queries
     async () => {
-      const queries = ['power apps', 'power platform', 'dynamics'];
-      for (const q of queries) {
+      for (const q of profile.queryTerms) {
         try {
           const res = await fetchWithTimeout(
             `https://remotive.com/api/remote-jobs?search=${encodeURIComponent(q)}`
@@ -157,7 +163,7 @@ export async function fetchPowerPlatformJobs(): Promise<Job[]> {
             const data: any = await res.json();
             if (Array.isArray(data.jobs)) {
               for (const item of data.jobs) {
-                addUnique(parseRemotiveJob(item));
+                addUnique(parseRemotiveJob(item, profile));
               }
             }
           }
@@ -169,20 +175,22 @@ export async function fetchPowerPlatformJobs(): Promise<Job[]> {
 
     // 2. Jobicy API
     async () => {
-      try {
-        const res = await fetchWithTimeout(
-          'https://jobicy.com/api/v2/remote-jobs?count=50&tag=power%20platform'
-        );
-        if (res.ok) {
-          const data: any = await res.json();
-          if (Array.isArray(data.jobs)) {
-            for (const item of data.jobs) {
-              addUnique(parseJobicyJob(item));
+      for (const q of profile.queryTerms.slice(0, 3)) {
+        try {
+          const res = await fetchWithTimeout(
+            `https://jobicy.com/api/v2/remote-jobs?count=50&tag=${encodeURIComponent(q)}`
+          );
+          if (res.ok) {
+            const data: any = await res.json();
+            if (Array.isArray(data.jobs)) {
+              for (const item of data.jobs) {
+                addUnique(parseJobicyJob(item, profile));
+              }
             }
           }
+        } catch (err: any) {
+          console.warn(`[Scraper] Jobicy API failed for "${q}":`, err.message);
         }
-      } catch (err: any) {
-        console.warn('[Scraper] Jobicy API failed:', err.message);
       }
     },
 
@@ -194,7 +202,7 @@ export async function fetchPowerPlatformJobs(): Promise<Job[]> {
           const data: any = await res.json();
           if (Array.isArray(data.data)) {
             for (const item of data.data) {
-              addUnique(parseArbeitnowJob(item));
+              addUnique(parseArbeitnowJob(item, profile));
             }
           }
         }
@@ -203,7 +211,7 @@ export async function fetchPowerPlatformJobs(): Promise<Job[]> {
       }
     },
 
-    // 4. Public RSS Feed (We Work Remotely)
+    // 4. Public RSS Feed
     async () => {
       try {
         const res = await fetchWithTimeout(
@@ -216,10 +224,10 @@ export async function fetchPowerPlatformJobs(): Promise<Job[]> {
           const items = parsed?.rss?.channel?.item;
           if (Array.isArray(items)) {
             for (const item of items) {
-              addUnique(parseRssItem(item, 'weworkremotely'));
+              addUnique(parseRssItem(item, 'weworkremotely', profile));
             }
           } else if (items) {
-            addUnique(parseRssItem(items, 'weworkremotely'));
+            addUnique(parseRssItem(items, 'weworkremotely', profile));
           }
         }
       } catch (err: any) {
@@ -228,9 +236,12 @@ export async function fetchPowerPlatformJobs(): Promise<Job[]> {
     }
   ];
 
-  // Run all feed tasks concurrently with error isolation (NF-002)
   await Promise.allSettled(tasks.map((task) => task()));
-
-  console.log(`[Scraper] Total matching Power Platform jobs collected: ${jobs.length}`);
+  console.log(`[Scraper][${profile.name}] Total matching jobs collected: ${jobs.length}`);
   return jobs;
+}
+
+export async function fetchPowerPlatformJobs(): Promise<Job[]> {
+  const defaultProfile = getProfiles()[0];
+  return fetchJobsForProfile(defaultProfile);
 }

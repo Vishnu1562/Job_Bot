@@ -57,4 +57,10 @@ describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {
     assert.ok(html.includes('&lt;Lead&gt;'));
     assert.ok(html.includes('AT&amp;T') || html.includes('AT&T'));
   });
+
+  it('supports custom profile titles (e.g. Full Stack Developer Job Radar) (HF-004 & EC-005)', () => {
+    const { subject, html } = generateEmailDigestHtml([], 'Full Stack Developer Job Radar');
+    assert.ok(subject.includes('Full Stack Developer Job Radar'));
+    assert.ok(html.includes('Full Stack Developer Job Radar'));
+  });
 });

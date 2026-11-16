@@ -10,7 +10,11 @@ function escapeHtml(unsafe: string): string {
     .replace(/'/g, '&#039;');
 }
 
-export function generateEmailDigestHtml(jobs: Job[]): { subject: string; html: string } {
+export function generateEmailDigestHtml(
+  jobs: Job[],
+  profileName: string = 'Power Platform Job Radar',
+  accentColor: string = '#742774'
+): { subject: string; html: string } {
   const count = jobs.length;
   const today = new Date().toLocaleDateString('en-US', {
     weekday: 'long',
@@ -21,8 +25,8 @@ export function generateEmailDigestHtml(jobs: Job[]): { subject: string; html: s
 
   const subject =
     count === 1
-      ? `✨ Power Platform Job Radar • 1 New Role Found Today`
-      : `✨ Power Platform Job Radar • ${count} New Roles Found Today`;
+      ? `✨ ${profileName} • 1 New Role Found Today`
+      : `✨ ${profileName} • ${count} New Roles Found Today`;
 
   let contentHtml = '';
 
@@ -32,7 +36,7 @@ export function generateEmailDigestHtml(jobs: Job[]): { subject: string; html: s
         <div style="font-size: 40px; margin-bottom: 12px;">🎯</div>
         <h3 style="margin: 0 0 8px 0; font-size: 18px; color: #1e293b; font-weight: 600;">Radar active &amp; scanning</h3>
         <p style="margin: 0; font-size: 14px; color: #64748b; line-height: 1.5;">
-          No new Power Platform roles matching your criteria were found since the last scan.<br>
+          No new roles matching your criteria were found since the last scan.<br>
           We will keep scanning every morning and alert you as soon as fresh opportunities appear!
         </p>
       </div>
@@ -61,7 +65,7 @@ export function generateEmailDigestHtml(jobs: Job[]): { subject: string; html: s
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                   <td>
-                    <span style="font-size: 11px; font-weight: 700; color: #742774; text-transform: uppercase; letter-spacing: 0.5px;">${source}</span>
+                    <span style="font-size: 11px; font-weight: 700; color: ${accentColor}; text-transform: uppercase; letter-spacing: 0.5px;">${source}</span>
                     <h3 style="margin: 6px 0 4px 0; font-size: 18px; font-weight: 700; color: #0f172a; line-height: 1.3;">${title}</h3>
                     <p style="margin: 0 0 14px 0; font-size: 14px; color: #475569; font-weight: 500;">
                       <strong style="color: #1e293b;">${company}</strong> &bull; 
@@ -76,7 +80,7 @@ export function generateEmailDigestHtml(jobs: Job[]): { subject: string; html: s
                 </tr>
                 <tr>
                   <td>
-                    <a href="${escapeHtml(job.url)}" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #742774 0%, #4a154b 100%); color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 600; padding: 10px 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(116, 39, 116, 0.25);">
+                    <a href="${escapeHtml(job.url)}" target="_blank" style="display: inline-block; background-color: ${accentColor}; color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 600; padding: 10px 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);">
                       Apply Now &nearr;
                     </a>
                   </td>
@@ -104,14 +108,14 @@ export function generateEmailDigestHtml(jobs: Job[]): { subject: string; html: s
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width: 620px;">
           <!-- Header Banner -->
           <tr>
-            <td style="background: linear-gradient(135deg, #742774 0%, #2e0854 100%); border-radius: 14px 14px 0 0; padding: 32px 28px; text-align: left; color: #ffffff;">
+            <td style="background: linear-gradient(135deg, ${accentColor} 0%, #0f172a 100%); border-radius: 14px 14px 0 0; padding: 32px 28px; text-align: left; color: #ffffff;">
               <div style="display: inline-block; background-color: rgba(255, 255, 255, 0.15); padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">
                 ⚡ Daily Morning Dispatch
               </div>
               <h1 style="margin: 0 0 8px 0; font-size: 24px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px;">
-                Power Platform Job Radar
+                ${escapeHtml(profileName)}
               </h1>
-              <p style="margin: 0; font-size: 14px; color: #e9d5ff; font-weight: 500;">
+              <p style="margin: 0; font-size: 14px; color: #e2e8f0; font-weight: 500;">
                 ${count} fresh role${count === 1 ? '' : 's'} identified for India &bull; ${today}
               </p>
             </td>
@@ -126,7 +130,7 @@ export function generateEmailDigestHtml(jobs: Job[]): { subject: string; html: s
           <tr>
             <td style="padding: 20px; text-align: center; color: #94a3b8; font-size: 12px; line-height: 1.6;">
               <p style="margin: 0 0 6px 0;">
-                Automated by <strong>Power Platform Job Radar</strong> running 24/7 on GitHub Actions.
+                Automated by <strong>${escapeHtml(profileName)}</strong> running 24/7 on GitHub Actions.
               </p>
               <p style="margin: 0;">
                 100% Free &bull; Zero Server Costs &bull; Tracked via SQLite

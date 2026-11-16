@@ -64,9 +64,13 @@ export function validateMailerConfig(env: Record<string, string | undefined> = p
 export async function sendDigestEmail(
   subject: string,
   html: string,
-  overrideConfig?: MailerConfig
+  overrideConfig?: Partial<MailerConfig>
 ): Promise<void> {
-  const config = overrideConfig || validateMailerConfig();
+  const baseConfig = validateMailerConfig();
+  const config: MailerConfig = {
+    ...baseConfig,
+    ...overrideConfig
+  };
 
   const transporter = nodemailer.createTransport({
     host: config.smtpHost,
@@ -79,12 +83,12 @@ export async function sendDigestEmail(
   });
 
   const mailOptions = {
-    from: `"Power Platform Job Radar" <${config.fromEmail}>`,
+    from: `"Job Radar" <${config.fromEmail}>`,
     to: config.recipientEmail,
     subject,
     html
   };
 
   const info = await transporter.sendMail(mailOptions);
-  console.log(`[Mailer] Email dispatched successfully via ${config.smtpHost}! MessageId: ${info.messageId}`);
+  console.log(`[Mailer] Email dispatched to ${config.recipientEmail} via ${config.smtpHost}! MessageId: ${info.messageId}`);
 }

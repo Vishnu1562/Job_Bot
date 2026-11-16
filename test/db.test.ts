@@ -94,4 +94,31 @@ describe('[HF-003, ST-001, REG-001] SQLite Deduplication Database', () => {
     const unemailedAfter = db.getUnemailedJobs();
     assert.strictEqual(unemailedAfter.length, 0);
   });
+
+  it('deduplicates per profile_id so multiple profiles can receive relevant jobs independently (HF-010)', () => {
+    const crossJob: Job = {
+      id: 'job-cross',
+      title: 'Full Stack & Dynamics Architect',
+      company: 'MultiTech',
+      location: 'India',
+      url: 'https://example.com/job-cross',
+      tags: ['[Dynamics 365]', '[.NET]'],
+      source: 'remotive',
+      description: 'Test'
+    };
+
+    // Save for profile 1
+    const p1New = db.saveJobIfNew(crossJob, 'power-platform');
+    assert.strictEqual(p1New, true);
+
+    // Profile 1 duplicate should be false
+    assert.strictEqual(db.saveJobIfNew(crossJob, 'power-platform'), false);
+
+    // Profile 2 should receive it as new
+    const p2New = db.saveJobIfNew(crossJob, 'full-stack');
+    assert.strictEqual(p2New, true, 'Profile 2 must be allowed to receive the job');
+
+    // Profile 2 duplicate should be false
+    assert.strictEqual(db.saveJobIfNew(crossJob, 'full-stack'), false);
+  });
 });

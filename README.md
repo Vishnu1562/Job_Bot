@@ -1,29 +1,51 @@
-# ⚡ Power Platform Job Radar
+# ⚡ Multi-Profile Job Radar (Power Platform & Full Stack)
 
-An automated daily job scanner built in Node.js & TypeScript that searches free, public feeds every morning for fresh **Power Apps & Power Platform** developer jobs in **India & Worldwide Remote**, filters out non-tech spam, smart-tags core skills, deduplicates via SQLite, and dispatches a responsive HTML email digest to your inbox via Gmail SMTP.
+An automated daily job scanner built in Node.js & TypeScript that searches free, public feeds every morning for fresh developer jobs in **India & Worldwide Remote**, filters out non-tech spam, smart-tags core skills, deduplicates via SQLite, and dispatches responsive HTML email digests to their respective recipients.
 
 **Runs 100% free, 24/7 in the cloud via GitHub Actions — zero PC uptime and zero paid APIs required.**
 
 ---
 
-## 🌟 Key Features
+## 🌟 Supported Search Profiles
 
-- **Free Job Feeds**: Queries public APIs and endpoints including Remotive, Jobicy, Arbeitnow, and tech RSS feeds.
-- **Smart Skill Tagging**: Automatically detects and tags:
-  - `[Canvas Apps]`
-  - `[Model-Driven]`
-  - `[Dataverse]`
-  - `[PCF]`
-  - `[Power Automate]`
-  - `[Copilot Studio]`
-  - `[Power Pages]`
-  - `[Dynamics 365]`
-- **Target Location Matching**: Focuses on jobs in **India** (Bangalore, Hyderabad, Pune, Mumbai, Delhi-NCR, etc.) and **Worldwide Remote / Anywhere**. Rejects US/EU-only listings.
-- **Negative Spam Filters**: Drops data-entry gigs, Excel-only jobs, unpaid internships, and recruiter spam.
-- **Deduplication Engine**: Backed by a persistent SQLite database (`jobs.db`). Once a job is emailed, you will never see it again.
-- **Responsive HTML Digest**: Custom email design with cards, status badges, skill pills, and `[Apply Now ↗]` buttons.
-- **0-Job Status Heartbeat**: If no new jobs are posted on a given morning, sends a clean status notification ("0 New Roles Found Today - Radar active & scanning") so you know the automation ran successfully.
-- **24/7 Cloud Automation**: Pre-configured GitHub Actions workflow runs every morning at **8:30 AM IST (03:00 UTC)** and commits `jobs.db` back to the repository.
+The radar includes two pre-configured profiles out of the box and is built to be easily expandable:
+
+1. **Power Platform Job Radar**:
+   - Focus: Power Apps, Power Automate, Dataverse, PCF, Copilot Studio, Power Pages, Dynamics 365.
+   - Skill Tags: `[Canvas Apps]`, `[Model-Driven]`, `[Dataverse]`, `[PCF]`, `[Power Automate]`, `[Copilot Studio]`, `[Power Pages]`, `[Dynamics 365]`.
+   - Recipient: `RECIPIENT_EMAIL_POWERPLATFORM` (or falls back to `RECIPIENT_EMAIL`).
+
+2. **Full Stack Developer Job Radar**:
+   - Focus: Full Stack / Backend / Frontend developer positions.
+   - Target Tech Stack: NestJS, Angular, .NET, PostgreSQL, MSSQL, Azure DevOps, GitHub.
+   - Skill Tags: `[NestJS]`, `[Angular]`, `[.NET]`, `[PostgreSQL]`, `[MSSQL]`, `[Azure DevOps]`, `[GitHub]`.
+   - Recipient: `RECIPIENT_EMAIL_FULLSTACK` (or falls back to `RECIPIENT_EMAIL`).
+
+---
+
+## 🚀 How to Add New Search Profiles in the Future
+
+The architecture is 100% modular and scalable. To add a 3rd or 4th profile (e.g. "DevOps / SRE" or "Data Engineer"):
+1. Open [`src/config/profiles.ts`](file:///d:/Projects/Job_Bot/src/config/profiles.ts).
+2. Add a new profile definition to the `getProfiles()` array:
+```ts
+{
+  id: 'devops-sre',
+  name: 'DevOps & SRE Job Radar',
+  recipientEmail: env.RECIPIENT_EMAIL_DEVOPS || defaultRecipient,
+  queryTerms: ['devops', 'sre', 'kubernetes', 'terraform'],
+  keywords: ['devops', 'sre', 'site reliability', 'cloud engineer'],
+  skills: [
+    { tag: '[Kubernetes]', patterns: ['kubernetes', /\bk8s\b/i] },
+    { tag: '[Terraform]', patterns: ['terraform'] },
+    { tag: '[AWS]', patterns: [/\baws\b/i, 'amazon web services'] },
+    { tag: '[Docker]', patterns: ['docker', 'containers'] }
+  ],
+  defaultTag: '[DevOps]',
+  accentColor: '#10b981'
+}
+```
+That's it! The workflow will automatically pick up the new profile, query feeds for its keywords, track deduplication in `jobs.db`, and send a dedicated digest to its recipient.
 
 ---
 
