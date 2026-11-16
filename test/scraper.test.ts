@@ -4,6 +4,7 @@ import {
   parseRemotiveJob,
   parseJobicyJob,
   parseArbeitnowJob,
+  parseRemoteOkJob,
   parseRssItem
 } from '../src/scraper.ts';
 
@@ -82,6 +83,38 @@ describe('[HF-001] Scraper Normalizers & Parsers', () => {
     assert.strictEqual(job?.title, 'Power Platform & PCF Developer');
     assert.strictEqual(job?.url, 'https://weworkremotely.com/jobs/pcf-dev-123');
     assert.ok(job?.tags.includes('[PCF]'));
+  });
+
+  it('correctly maps RemoteOK job structure (HF-020)', () => {
+    const raw = {
+      id: '123456',
+      position: 'Senior Power Apps Engineer',
+      company: 'Remote Inc',
+      location: 'Worldwide Remote',
+      url: 'https://remoteok.com/remote-jobs/123456?ref=remoteok',
+      apply_url: 'https://remoteok.com/remote-jobs/123456',
+      tags: ['powerapps', 'canvas apps'],
+      description: 'Power Platform and Canvas Apps development with Dataverse.',
+      date: '2026-11-16T12:00:00Z'
+    };
+
+    const job = parseRemoteOkJob(raw);
+    assert.ok(job);
+    assert.strictEqual(job?.title, 'Senior Power Apps Engineer');
+    assert.strictEqual(job?.company, 'Remote Inc');
+    assert.strictEqual(job?.location, 'Worldwide Remote');
+    assert.strictEqual(job?.url, 'https://remoteok.com/remote-jobs/123456');
+    assert.strictEqual(job?.source, 'remoteok');
+  });
+
+  it('safely handles RemoteOK disclaimer/legal object (HF-020)', () => {
+    const legalNotice = {
+      legal: 'Please do not scrape without user-agent',
+      id: null,
+      position: null
+    };
+    assert.strictEqual(parseRemoteOkJob(legalNotice), null);
+    assert.strictEqual(parseRemoteOkJob(null), null);
   });
 
   it('rejects listings that do not match location or are spam', () => {

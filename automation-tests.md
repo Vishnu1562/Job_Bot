@@ -188,6 +188,12 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Priority company jobs appear first in the email digest, followed by all other valid matching openings. Broad search is preserved.
 - **Final State**: Top-tier and local tech employer roles highlighted prominently for the candidate.
 
+#### [HF-020] Multi-Source Ingestion with RemoteOK and Expanded Tech RSS Feeds
+- **Preconditions**: Available free public feeds: Remotive API, Jobicy API, Arbeitnow API, RemoteOK API, WeWorkRemotely RSS feeds (programming, back-end, full-stack, front-end), Himalayas RSS, and NoDesk RSS.
+- **Action**: Feed scraper queries all free public endpoints concurrently with `Promise.allSettled`, maps their respective schemas (e.g. RemoteOK `position`, `apply_url`), and passes listings through profile filters and deduplication.
+- **Expected Result**: Successfully parses valid developer listings across all feeds without API keys or credentials.
+- **Final State**: Broadened job pool across multiple independent tech sources.
+
 ---
 
 ### Negative Flows
