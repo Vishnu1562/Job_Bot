@@ -52,6 +52,18 @@ describe('[NF-003 & AUTH-001] Mailer Configuration Validation', () => {
     assert.strictEqual(config.smtpPort, 465);
   });
 
+  it('auto-detects Resend from SENDER_EMAIL="resend" or SENDER_PASSWORD starting with "re_" even without SMTP_HOST', () => {
+    const config = validateMailerConfig({
+      SENDER_EMAIL: 'resend',
+      SENDER_PASSWORD: 're_abcdef123456',
+      RECIPIENT_EMAIL: 'receiver@gmail.com'
+    });
+    assert.strictEqual(config.smtpHost, 'smtp.resend.com');
+    assert.strictEqual(config.authUser, 'resend');
+    assert.strictEqual(config.fromEmail, 'onboarding@resend.dev');
+    assert.strictEqual(config.smtpPort, 465);
+  });
+
   it('allows custom SMTP_HOST and SMTP_PORT', () => {
     const config = validateMailerConfig({
       SMTP_HOST: 'smtp.gmail.com',

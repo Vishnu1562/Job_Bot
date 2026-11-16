@@ -10,7 +10,6 @@ export function validateMailerConfig(env: Record<string, string | undefined> = p
   const rawSenderEmail = env.SENDER_EMAIL?.trim();
   const rawPassword = env.SENDER_PASSWORD?.trim();
   const rawRecipientEmail = env.RECIPIENT_EMAIL?.trim();
-  const smtpHost = env.SMTP_HOST?.trim() || 'smtp-relay.brevo.com';
 
   if (!rawSenderEmail) {
     throw new Error('Missing required environment variable: SENDER_EMAIL');
@@ -22,8 +21,16 @@ export function validateMailerConfig(env: Record<string, string | undefined> = p
     throw new Error('Missing required environment variable: RECIPIENT_EMAIL');
   }
 
-  // Resend uses 465 (SSL) or 587; standard relays use 587 (STARTTLS)
-  const defaultPort = smtpHost.includes('resend.com') ? '465' : '587';
+  // Auto-detect Resend by username ('resend'), API key prefix ('re_'), or explicit host
+  const isResend =
+    (env.SMTP_HOST?.includes('resend.com') ?? false) ||
+    rawSenderEmail.toLowerCase() === 'resend' ||
+    rawPassword.startsWith('re_');
+
+  const smtpHost = env.SMTP_HOST?.trim() || (isResend ? 'smtp.resend.com' : 'smtp-relay.brevo.com');
+
+  // Resend prefers port 465 (SSL); standard relays use 587 (STARTTLS)
+  const defaultPort = isResend ? '465' : '587';
   const smtpPort = parseInt(env.SMTP_PORT?.trim() || defaultPort, 10);
 
   const recipientEmail = cleanEmail(rawRecipientEmail);
@@ -32,7 +39,7 @@ export function validateMailerConfig(env: Record<string, string | undefined> = p
   let authUser = rawSenderEmail;
   let fromEmail = cleanEmail(env.FROM_EMAIL?.trim() || '');
 
-  if (smtpHost.includes('resend.com')) {
+  if (isResend) {
     authUser = 'resend';
     if (!fromEmail) {
       fromEmail = 'onboarding@resend.dev';
