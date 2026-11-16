@@ -44,7 +44,7 @@ async function main() {
         console.log(`[2/4] Identified ${newJobs.length} brand new, un-sent role(s).`);
 
         console.log('[3/4] Generating responsive HTML email digest...');
-        const { subject, html } = generateEmailDigestHtml(
+        const { subject, html, text } = generateEmailDigestHtml(
           newJobs,
           profile.name,
           profile.accentColor,
@@ -68,7 +68,7 @@ async function main() {
         }
 
         console.log(`[4/4] Dispatching daily digest to ${profile.recipientEmail}: "${subject}"...`);
-        await sendDigestEmail(subject, html, { recipientEmail: profile.recipientEmail });
+        await sendDigestEmail(subject, html, { recipientEmail: profile.recipientEmail }, text);
 
         if (newJobs.length > 0) {
           db.markJobsAsEmailed(newJobs.map((j) => j.url), profile.id);

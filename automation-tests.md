@@ -86,10 +86,11 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Beautiful, responsive HTML containing:
   - Daily header with profile name, job count, and scan date.
   - Personal motivational greeting addressing candidate (e.g. "Hey Aswin! Take a deep breath — the job hunt is a journey, but you're doing great and you will find the right role. Here are today's top curated opportunities for you:").
-  - Cards per job: Company name, Job title, Location badge, Skill tag pills, and an `[Apply Now ↗]` CTA button.
+  - Cards per job: Company name, Job title, Location badge, Skill tag pills, and an `Apply Now ↗` CTA button with clean Unicode arrow (no broken HTML entity text like `&nearr;`).
   - Professional, warm footer sign-off ("Curated with care • Stay confident and keep going! ✨") without robotic infrastructure text ("running 24/7 on GitHub Actions", "Tracked via SQLite").
+  - Multipart alternative text generation (`text` + `html`) for high inbox deliverability.
   - Inline CSS for compatibility across Outlook, Gmail, Apple Mail, and mobile clients.
-- **Final State**: Rendered HTML string ready for SMTP transport.
+- **Final State**: Rendered HTML and plain-text strings ready for SMTP transport.
 
 #### [HF-005] Status Digest Generation (0 New Jobs Found)
 - **Preconditions**: 0 new jobs found after scraping and deduplication for a profile.
@@ -329,7 +330,7 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 ---
 
 ### Authentication / Authorization
-- `AUTH-001`: SMTP authentication supporting dedicated Gmail SMTP (`smtp.gmail.com:465` with 16-character Google App Passwords and automatic detection from `@gmail.com`), free Resend SMTP (`smtp.resend.com:465` with automatic `fromEmail: onboarding@resend.dev`), Brevo SMTP relay (`smtp-relay.brevo.com:587`), or custom SMTP providers over TLS. Direct multi-recipient delivery without forwarding authorization. Configurable via `SENDER_EMAIL`, `SENDER_PASSWORD`, and optional `SMTP_HOST` / `SMTP_PORT`.
+- `AUTH-001`: Dedicated Gmail SMTP (`smtp.gmail.com:465` with 16-character Google App Passwords) for direct multi-recipient delivery without forwarding authorization. Configurable via `SENDER_EMAIL`, `SENDER_PASSWORD`, and optional `SMTP_HOST` / `SMTP_PORT`. Resend and Brevo implementations removed.
 
 ---
 

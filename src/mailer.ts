@@ -21,27 +21,9 @@ export function validateMailerConfig(env: Record<string, string | undefined> = p
     throw new Error('Missing required environment variable: RECIPIENT_EMAIL');
   }
 
-  // Auto-detect Resend by username ('resend'), API key prefix ('re_'), or explicit host
-  const isResend =
-    (env.SMTP_HOST?.includes('resend.com') ?? false) ||
-    rawSenderEmail.toLowerCase() === 'resend' ||
-    rawPassword.startsWith('re_');
-
-  // Auto-detect Gmail by email domain or explicit host
-  const isGmail =
-    (env.SMTP_HOST?.includes('gmail.com') ?? false) ||
-    rawSenderEmail.toLowerCase().endsWith('@gmail.com');
-
-  let defaultHost = 'smtp-relay.brevo.com';
-  let defaultPort = '587';
-
-  if (isResend) {
-    defaultHost = 'smtp.resend.com';
-    defaultPort = '465';
-  } else if (isGmail) {
-    defaultHost = 'smtp.gmail.com';
-    defaultPort = '465';
-  }
+  // Pure Gmail SMTP default (smtp.gmail.com:465 SSL)
+  const defaultHost = 'smtp.gmail.com';
+  const defaultPort = '465';
 
   const smtpHost = env.SMTP_HOST?.trim() || defaultHost;
   const smtpPort = parseInt(env.SMTP_PORT?.trim() || defaultPort, 10);
@@ -49,19 +31,8 @@ export function validateMailerConfig(env: Record<string, string | undefined> = p
   const recipientEmail = cleanEmail(rawRecipientEmail);
   const senderPassword = rawPassword.replace(/\s+/g, '');
 
-  let authUser = rawSenderEmail;
-  let fromEmail = cleanEmail(env.FROM_EMAIL?.trim() || '');
-
-  if (isResend) {
-    authUser = 'resend';
-    if (!fromEmail) {
-      fromEmail = 'onboarding@resend.dev';
-    }
-  } else {
-    if (!fromEmail) {
-      fromEmail = cleanEmail(rawSenderEmail);
-    }
-  }
+  const authUser = rawSenderEmail;
+  const fromEmail = cleanEmail(env.FROM_EMAIL?.trim() || '') || cleanEmail(rawSenderEmail);
 
   return {
     senderEmail: rawSenderEmail,
@@ -77,7 +48,8 @@ export function validateMailerConfig(env: Record<string, string | undefined> = p
 export async function sendDigestEmail(
   subject: string,
   html: string,
-  overrideConfig?: Partial<MailerConfig>
+  overrideConfig?: Partial<MailerConfig>,
+  text?: string
 ): Promise<void> {
   const baseConfig = validateMailerConfig();
   const config: MailerConfig = {
@@ -99,6 +71,7 @@ export async function sendDigestEmail(
     from: `"Job Radar" <${config.fromEmail}>`,
     to: config.recipientEmail,
     subject,
+    ...(text ? { text } : {}),
     html
   };
 

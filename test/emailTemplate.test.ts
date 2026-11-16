@@ -18,7 +18,7 @@ describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {
       }
     ];
 
-    const { subject, html } = generateEmailDigestHtml(jobs);
+    const { subject, html, text } = generateEmailDigestHtml(jobs);
 
     assert.ok(subject.includes('1 New Roles Found Today') || subject.includes('1 New Role'));
     assert.ok(html.includes('Lead Power Platform Architect'));
@@ -27,8 +27,10 @@ describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {
     assert.ok(html.includes('[Canvas Apps]'));
     assert.ok(html.includes('[Dataverse]'));
     assert.ok(html.includes('[PCF]'));
-    assert.ok(html.includes('Apply Now'));
+    assert.ok(html.includes('Apply Now ↗'), 'Must render clean unicode arrow in Apply button');
+    assert.ok(!html.includes('&nearr;'), 'Must not render raw &nearr; entity in button text');
     assert.ok(html.includes('https://example.com/apply-infosys'));
+    assert.ok(typeof text === 'string' && text.includes('Lead Power Platform Architect'), 'Must generate plain-text fallback');
   });
 
   it('generates status digest when 0 new jobs are found (HF-005)', () => {

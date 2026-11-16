@@ -15,7 +15,7 @@ export function generateEmailDigestHtml(
   profileName: string = 'Power Platform Job Radar',
   accentColor: string = '#742774',
   candidateName?: string
-): { subject: string; html: string } {
+): { subject: string; html: string; text: string } {
   const count = jobs.length;
   const displayName = candidateName?.trim() || 'there';
   const today = new Date().toLocaleDateString('en-US', {
@@ -29,6 +29,12 @@ export function generateEmailDigestHtml(
     count === 1
       ? `✨ ${profileName} • 1 New Role Found Today`
       : `✨ ${profileName} • ${count} New Roles Found Today`;
+
+  const sortedJobs = [...jobs].sort((a, b) => {
+    if (a.isTargetCompany && !b.isTargetCompany) return -1;
+    if (!a.isTargetCompany && b.isTargetCompany) return 1;
+    return 0;
+  });
 
   let contentHtml = '';
 
@@ -57,12 +63,6 @@ export function generateEmailDigestHtml(
         </p>
       </div>
     `;
-
-    const sortedJobs = [...jobs].sort((a, b) => {
-      if (a.isTargetCompany && !b.isTargetCompany) return -1;
-      if (!a.isTargetCompany && b.isTargetCompany) return 1;
-      return 0;
-    });
 
     const jobCardsHtml = sortedJobs
       .map((job) => {
@@ -105,8 +105,8 @@ export function generateEmailDigestHtml(
                 </tr>
                 <tr>
                   <td>
-                    <a href="${escapeHtml(job.url)}" target="_blank" style="display: inline-block; background-color: ${accentColor}; color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 600; padding: 10px 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);">
-                      Apply Now &nearr;
+                    <a href="${escapeHtml(job.url)}" target="_blank" style="display: inline-block; background-color: ${accentColor}; color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 700; padding: 10px 22px; border-radius: 8px; letter-spacing: 0.3px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);">
+                      Apply Now ↗
                     </a>
                   </td>
                 </tr>
@@ -118,6 +118,20 @@ export function generateEmailDigestHtml(
       .join('');
 
     contentHtml = `${greetingHtml}\n${jobCardsHtml}`;
+  }
+
+  let text = '';
+  if (count === 0) {
+    text = `⚡ Daily Morning Dispatch • ${profileName}\n\nHey ${displayName}, it's completely fine!\nNo worries at all if today was a bit quiet on new postings — good opportunities take time, but your skills and hard work speak for themselves. You will find the right fit!\n\nWe'll keep scanning fresh feeds every morning and alert you the second an exciting role drops. Keep your head high and stay confident!\n\nCurated with care • Stay confident and keep going! ✨`;
+  } else {
+    const jobLines = sortedJobs
+      .map((j, idx) => {
+        const priorityLabel = j.isTargetCompany ? ' [⭐ Priority Target]' : '';
+        return `${idx + 1}. ${j.title} (${j.company})${priorityLabel}\n   Location: ${j.location}\n   Tags: ${j.tags.join(' ')}\n   Apply: ${j.url}`;
+      })
+      .join('\n\n');
+
+    text = `⚡ Daily Morning Dispatch • ${profileName}\n\nHey ${displayName}! Take a deep breath — the job hunt is a journey, but you're doing great and you will find the right role!\nHere are today's ${count} curated opportunities:\n\n${jobLines}\n\nCurated with care • Stay confident and keep going! ✨\nCustom job alerts for ${displayName} • Delivered every morning`;
   }
 
   const html = `<!DOCTYPE html>
@@ -171,5 +185,5 @@ export function generateEmailDigestHtml(
 </body>
 </html>`;
 
-  return { subject, html };
+  return { subject, html, text };
 }
