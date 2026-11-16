@@ -110,7 +110,7 @@ describe('Job Filters & Normalization', () => {
     const javaBackend = profiles.find((p) => p.id === 'java-backend')!;
     const fullStack = profiles.find((p) => p.id === 'full-stack')!;
 
-    it('excludes Wipro for Bhavya (Power Platform) (NF-008)', () => {
+    it('excludes Wipro for Celine (Power Platform) (NF-008)', () => {
       assert.strictEqual(isCompanyExcluded('Wipro', powerPlatform), true);
       assert.strictEqual(isCompanyExcluded('Wipro Technologies', powerPlatform), true);
       assert.strictEqual(isCompanyExcluded('Wipro Limited', powerPlatform), true);

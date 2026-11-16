@@ -91,12 +91,12 @@ describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {
     });
 
     it('removes robotic developer infrastructure text from footer', () => {
-      const { html } = generateEmailDigestHtml([sampleJob], 'Power Platform Job Radar', '#742774', 'Bhavya');
+      const { html } = generateEmailDigestHtml([sampleJob], 'Power Platform Job Radar', '#742774', 'Celine');
       assert.ok(!html.includes('running 24/7 on GitHub Actions'), 'Should not contain GitHub Actions bot text');
       assert.ok(!html.includes('Tracked via SQLite'), 'Should not contain SQLite tracking text');
       assert.ok(!html.includes('Zero Server Costs'), 'Should not contain Zero Server Costs text');
       assert.ok(html.includes('Curated with care'));
-      assert.ok(html.includes('Bhavya'));
+      assert.ok(html.includes('Celine'));
     });
 
     it('defaults gracefully to friendly generic greeting when candidate name is omitted', () => {

@@ -46,7 +46,7 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
     {
       id: 'power-platform',
       name: 'Power Platform Job Radar',
-      candidateName: 'Bhavya',
+      candidateName: 'Celine',
       recipientEmail: env.RECIPIENT_EMAIL_POWERPLATFORM || defaultRecipient,
       excludedCompanies: [/\bwipro\b/i],
       targetCompanies: DEFAULT_TARGET_COMPANIES,

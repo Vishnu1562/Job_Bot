@@ -158,15 +158,15 @@ describe('[HF-007, HF-008, HF-009, EC-004] Multi-Profile Configuration & Matchin
     });
   });
 
-  describe('[HF-016, NF-007] Power Platform Profile (Bhavya V - Resume-based)', () => {
-    it('sets experience bounds to 3-8 years matching Bhavya 6.1 yrs profile', () => {
+  describe('[HF-016, NF-007] Power Platform Profile (Celine - Resume-based)', () => {
+    it('sets experience bounds to 3-8 years matching Celine 6.1 yrs profile', () => {
       const profiles = getProfiles();
       const ppProfile = profiles.find((p) => p.id === 'power-platform')!;
       assert.strictEqual(ppProfile.experience?.minYears, 3);
       assert.strictEqual(ppProfile.experience?.maxYears, 8);
     });
 
-    it('tags SharePoint Online and M365 / PL-400 from Bhavya resume (HF-016)', () => {
+    it('tags SharePoint Online and M365 / PL-400 from Celine resume (HF-016)', () => {
       const profiles = getProfiles();
       const ppProfile = profiles.find((p) => p.id === 'power-platform')!;
 

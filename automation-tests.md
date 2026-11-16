@@ -3,7 +3,7 @@
 
 ### Feature / Change Summary
 Modular, generic, scalable Job Radar in Node.js / TypeScript that runs every morning via GitHub Actions, supports multiple search profiles with independent skill tagging and recipient mappings:
-1. **Power Platform Profile (Bhavya V - 6.1 Yrs)**: Power Apps (Canvas Apps), Power Automate, Dataverse, SharePoint Online, M365 Integration, Copilot Studio, PL-400. Experience bounds: 3–8 years.
+1. **Power Platform Profile (Celine - 6.1 Yrs)**: Power Apps (Canvas Apps), Power Automate, Dataverse, SharePoint Online, M365 Integration, Copilot Studio, PL-400. Experience bounds: 3–8 years.
 2. **Full Stack Profile**: Full Stack / Backend / Frontend Developer with NestJS, Angular, .NET, PostgreSQL, MSSQL, Azure DevOps, GitHub. Experience bounds: 2–8 years.
 3. **Java & Spring Boot Profile (Aswin M Suthan - 4 Yrs)**: Enterprise Java Software Engineer with Spring Boot, JPA/Hibernate, Microservices, REST APIs, Oracle SQL, PostgreSQL, Docker, Spring Security/JWT, Python/Shell. Experience bounds: 2–6 years.
 Easily expandable with additional job profiles by adding definitions to `src/config/profiles.ts`.
@@ -161,10 +161,10 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Accepted if title contains standard developer roles without excluded seniority titles.
 - **Final State**: Legitimate tech jobs with unstated experience are not dropped.
 
-#### [HF-016] Resume-Tailored Power Platform Experience & Skills (Bhavya V)
+#### [HF-016] Resume-Tailored Power Platform Experience & Skills (Celine)
 - **Preconditions**: Power Platform profile configured with 3–8 years experience range.
 - **Action**: Ingestion checks for matching years (e.g. "4-6 years", "5+ years") and tags resume-specific skills: `[Canvas Apps]`, `[Power Automate]`, `[Dataverse]`, `[SharePoint Online]`, `[M365 / PL-400]`, `[Copilot Studio]`.
-- **Expected Result**: Jobs matching Bhavya's 6.1 years experience and skills are tagged and accepted.
+- **Expected Result**: Jobs matching Celine's 6.1 years experience and skills are tagged and accepted.
 - **Final State**: Tailored Power Platform listings ready for dispatch.
 
 #### [HF-017] Resume-Tailored Java Backend Experience & Skills (Aswin M Suthan)
@@ -174,7 +174,7 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Final State**: Tailored Java backend listings ready for dispatch.
 
 #### [HF-018] Personalized & Motivating Email Digest Template
-- **Preconditions**: Candidate name configured per profile (`candidateName: 'Aswin'`, `candidateName: 'Bhavya'`, etc.).
+- **Preconditions**: Candidate name configured per profile (`candidateName: 'Aswin'`, `candidateName: 'Celine'`, etc.).
 - **Action**: Template generator builds email with personalized motivational greeting, encouraging zero-job state, and professional warm footer.
 - **Expected Result**:
   - Personal greeting at top: "Hey [Name]! Take a deep breath — the job hunt is a journey, but you're doing great and you will find the right role."
@@ -228,7 +228,7 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Job is rejected even if no explicit years are mentioned.
 - **Final State**: Excluded leadership/fresher roles dropped.
 
-#### [NF-007] Junior Power Platform Role Rejection (Bhavya V - requires 3+ years)
+#### [NF-007] Junior Power Platform Role Rejection (Celine - requires 3+ years)
 - **Preconditions**: Job requiring 1-2 years experience for Power Platform profile (minYears: 3).
 - **Action**: Experience matcher compares required max years against profile minYears.
 - **Expected Result**: Job requiring 1-2 years is rejected as below the 3-year threshold.
@@ -236,7 +236,7 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 
 #### [NF-008] Per-Profile Company Exclusions
 - **Preconditions**: Profiles configured with specific excluded companies:
-  - Bhavya (`power-platform`): `Wipro`
+  - Celine (`power-platform`): `Wipro`
   - Aswin (`java-backend`): `TCS` (and "Tata Consultancy Services")
   - Vishnu (`full-stack`): `EY` (and "Ernst & Young")
 - **Action**: Ingestion filter checks candidate company name against profile's `excludedCompanies` list.
