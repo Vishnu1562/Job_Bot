@@ -76,4 +76,17 @@ describe('[NF-003 & AUTH-001] Mailer Configuration Validation', () => {
     assert.strictEqual(config.smtpPort, 465);
     assert.strictEqual(config.fromEmail, 'sender@gmail.com');
   });
+
+  it('auto-detects Gmail from SENDER_EMAIL ending with @gmail.com without requiring SMTP_HOST (AUTH-001)', () => {
+    const config = validateMailerConfig({
+      SENDER_EMAIL: 'radarbotalerts@gmail.com',
+      SENDER_PASSWORD: 'abcd efgh ijkl mnop',
+      RECIPIENT_EMAIL: 'receiver@gmail.com'
+    });
+    assert.strictEqual(config.smtpHost, 'smtp.gmail.com');
+    assert.strictEqual(config.smtpPort, 465);
+    assert.strictEqual(config.authUser, 'radarbotalerts@gmail.com');
+    assert.strictEqual(config.fromEmail, 'radarbotalerts@gmail.com');
+    assert.strictEqual(config.senderPassword, 'abcdefghijklmnop');
+  });
 });

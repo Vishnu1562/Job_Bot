@@ -27,10 +27,23 @@ export function validateMailerConfig(env: Record<string, string | undefined> = p
     rawSenderEmail.toLowerCase() === 'resend' ||
     rawPassword.startsWith('re_');
 
-  const smtpHost = env.SMTP_HOST?.trim() || (isResend ? 'smtp.resend.com' : 'smtp-relay.brevo.com');
+  // Auto-detect Gmail by email domain or explicit host
+  const isGmail =
+    (env.SMTP_HOST?.includes('gmail.com') ?? false) ||
+    rawSenderEmail.toLowerCase().endsWith('@gmail.com');
 
-  // Resend prefers port 465 (SSL); standard relays use 587 (STARTTLS)
-  const defaultPort = isResend ? '465' : '587';
+  let defaultHost = 'smtp-relay.brevo.com';
+  let defaultPort = '587';
+
+  if (isResend) {
+    defaultHost = 'smtp.resend.com';
+    defaultPort = '465';
+  } else if (isGmail) {
+    defaultHost = 'smtp.gmail.com';
+    defaultPort = '465';
+  }
+
+  const smtpHost = env.SMTP_HOST?.trim() || defaultHost;
   const smtpPort = parseInt(env.SMTP_PORT?.trim() || defaultPort, 10);
 
   const recipientEmail = cleanEmail(rawRecipientEmail);

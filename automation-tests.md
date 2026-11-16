@@ -329,7 +329,7 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 ---
 
 ### Authentication / Authorization
-- `AUTH-001`: SMTP authentication supporting free Resend SMTP (`smtp.resend.com:465` with automatic `fromEmail: onboarding@resend.dev`), Brevo SMTP relay (`smtp-relay.brevo.com:587`), Gmail SMTP (`smtp.gmail.com:587`), or custom SMTP providers over TLS. Configurable via `SMTP_HOST`, `SMTP_PORT`, and optional `FROM_EMAIL`.
+- `AUTH-001`: SMTP authentication supporting dedicated Gmail SMTP (`smtp.gmail.com:465` with 16-character Google App Passwords and automatic detection from `@gmail.com`), free Resend SMTP (`smtp.resend.com:465` with automatic `fromEmail: onboarding@resend.dev`), Brevo SMTP relay (`smtp-relay.brevo.com:587`), or custom SMTP providers over TLS. Direct multi-recipient delivery without forwarding authorization. Configurable via `SENDER_EMAIL`, `SENDER_PASSWORD`, and optional `SMTP_HOST` / `SMTP_PORT`.
 
 ---
 
