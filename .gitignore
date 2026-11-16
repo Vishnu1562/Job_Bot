@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Environment credentials
+.env
+.env.local
+
+# Logs and system
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+
+# Preview HTML
+preview_digest.html
+
+# Note: jobs.db is intentionally NOT ignored so GitHub Actions can persist deduplication
+!jobs.db
