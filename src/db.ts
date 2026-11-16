@@ -121,6 +121,10 @@ export class JobDatabase {
     return newJobs;
   }
 
+  public filterNewJobs(jobs: Job[], profileId: string = 'power-platform'): Job[] {
+    return jobs.filter((job) => !this.isJobKnown(job.url, job.profileId || profileId));
+  }
+
   public getUnemailedJobs(profileId?: string): Job[] {
     let stmt;
     let rows;

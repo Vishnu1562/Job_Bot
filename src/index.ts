@@ -41,7 +41,9 @@ async function main() {
         console.log(`[1/4] Found ${scrapedJobs.length} candidate listing(s).`);
 
         console.log(`[2/4] Deduplicating against persistent SQLite database for profile "${profile.id}"...`);
-        const newJobs = db.filterAndSaveNewJobs(scrapedJobs, profile.id);
+        const newJobs = isDryRun
+          ? db.filterNewJobs(scrapedJobs, profile.id)
+          : db.filterAndSaveNewJobs(scrapedJobs, profile.id);
         console.log(`[2/4] Identified ${newJobs.length} brand new, un-sent role(s).`);
 
         console.log('[3/4] Generating responsive HTML email digest...');
