@@ -27,10 +27,17 @@ export interface SkillRule {
   patterns: (string | RegExp)[];
 }
 
+export interface ExperienceConfig {
+  minYears?: number;
+  maxYears?: number;
+  excludedSeniority?: string[];
+}
+
 export interface JobProfile {
   id: string;
   name: string;
   recipientEmail: string;
+  experience?: ExperienceConfig;
   queryTerms: string[];
   keywords: (string | RegExp)[];
   skills: SkillRule[];

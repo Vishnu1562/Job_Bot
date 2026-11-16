@@ -8,6 +8,11 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
       id: 'power-platform',
       name: 'Power Platform Job Radar',
       recipientEmail: env.RECIPIENT_EMAIL_POWERPLATFORM || defaultRecipient,
+      experience: {
+        minYears: 2,
+        maxYears: 8,
+        excludedSeniority: ['director', 'vp', 'vice president', 'head of', 'intern', 'internship', 'fresher']
+      },
       queryTerms: ['power apps', 'power platform', 'dynamics'],
       keywords: [
         'power apps',
@@ -65,6 +70,11 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
       id: 'full-stack',
       name: 'Full Stack Developer Job Radar',
       recipientEmail: env.RECIPIENT_EMAIL_FULLSTACK || defaultRecipient,
+      experience: {
+        minYears: 2,
+        maxYears: 8,
+        excludedSeniority: ['director', 'vp', 'vice president', 'head of', 'intern', 'internship', 'fresher']
+      },
       queryTerms: ['full stack', 'angular', 'nestjs', 'dotnet', '.net developer'],
       keywords: [
         'full stack',
@@ -128,6 +138,11 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
       id: 'java-backend',
       name: 'Java & Spring Boot Developer Job Radar',
       recipientEmail: env.RECIPIENT_EMAIL_JAVA || defaultRecipient,
+      experience: {
+        minYears: 2,
+        maxYears: 6,
+        excludedSeniority: ['director', 'vp', 'vice president', 'head of', 'principal', 'intern', 'internship', 'fresher']
+      },
       queryTerms: ['java developer', 'spring boot', 'java backend', 'java engineer'],
       keywords: [
         'java',

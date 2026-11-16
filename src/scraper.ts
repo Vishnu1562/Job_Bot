@@ -8,6 +8,7 @@ import {
 } from './filter.ts';
 import { extractSkillTags } from './tagger.ts';
 import { getProfiles, isJobMatchingProfile, extractProfileSkillTags } from './config/profiles.ts';
+import { isExperienceMatching } from './experience.ts';
 import type { Job, RawJobListing, JobProfile } from './types.ts';
 
 const USER_AGENT = 'PowerPlatformJobRadar/1.0 (+https://github.com/Vishnu1562/Job_Bot)';
@@ -34,6 +35,7 @@ function processCandidateJob(
 
   if (profile) {
     if (!isJobMatchingProfile(raw, profile)) return null;
+    if (!isExperienceMatching(raw, profile)) return null;
   } else {
     if (!isPowerPlatformJob(raw)) return null;
   }

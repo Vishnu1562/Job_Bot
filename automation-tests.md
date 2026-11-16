@@ -146,6 +146,18 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Correctly tags `[Spring Boot]`, `[Java]`, `[Hibernate/JPA]`, `[Microservices]`, `[REST APIs]`, `[PostgreSQL]`, `[Oracle SQL]`, `[Docker]`, `[Spring Security]`, `[React]`.
 - **Final State**: Job object has relevant Java tags.
 
+#### [HF-014] Experience Level Range Matching
+- **Preconditions**: Profile configured with `minYears` and `maxYears` (e.g. 2–6 years for Java, 2–8 years for Full Stack / Power Platform).
+- **Action**: Experience parser checks job title and description text for years of experience requirements.
+- **Expected Result**: Jobs requiring matching years (e.g. "3-5 years", "4+ years") are accepted.
+- **Final State**: Candidate listing matches experience requirements.
+
+#### [HF-015] Unspecified Experience Handling
+- **Preconditions**: Job description contains no explicit years of experience statement.
+- **Action**: Experience matcher checks job title for excluded seniorities (e.g. Director, VP, Intern).
+- **Expected Result**: Accepted if title contains standard developer roles without excluded seniority titles.
+- **Final State**: Legitimate tech jobs with unstated experience are not dropped.
+
 ---
 
 ### Negative Flows
@@ -173,6 +185,18 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Action**: Main orchestrator uses `try/catch` per profile.
 - **Expected Result**: The error is logged and the remaining profiles continue processing.
 - **Final State**: Pipeline resilience across multiple recipients.
+
+#### [NF-005] Experience Level Mismatch Exclusion
+- **Preconditions**: Job requiring 10+ years (overqualified) or 0-1 years internship (underqualified) for a 2-6 years profile.
+- **Action**: Experience matcher checks detected years against profile range.
+- **Expected Result**: Job is rejected and dropped from ingestion.
+- **Final State**: Only experience-appropriate roles retained.
+
+#### [NF-006] Excluded Seniority Title Rejection
+- **Preconditions**: Job with title containing "Director", "VP", "Vice President", "Head of", or "Principal".
+- **Action**: Experience matcher inspects job title against `profile.experience.excludedSeniority`.
+- **Expected Result**: Job is rejected even if no explicit years are mentioned.
+- **Final State**: Excluded leadership/fresher roles dropped.
 
 ---
 
@@ -214,6 +238,12 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Does NOT tag `[Java]` when only "JavaScript" is mentioned.
 - **Final State**: Zero false positive tags on JavaScript roles.
 
+#### [EC-007] Multi-Pattern Experience Extraction
+- **Preconditions**: Experience requirements phrased in diverse formats: "3+ years", "3-5 years", "minimum 4 years of experience", "2 to 4 years".
+- **Action**: Experience parser extracts `minYears` and `maxYears`.
+- **Expected Result**: Accurately determines numerical bounds without false positives on calendar years (e.g. "since 2020").
+- **Final State**: Robust numerical bounds extracted for filtering.
+
 ---
 
 ### Validation Rules
@@ -221,6 +251,7 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - `VR-002`: Skill tags must contain at least one valid tag.
 - `VR-003`: Email address format validation for sender and recipient.
 - `VR-004`: Each `JobProfile` must have unique `id`, non-empty `name`, `recipientEmail`, and search keywords.
+- `VR-005`: Profile experience configuration must ensure `minYears <= maxYears` when both are defined.
 
 ---
 
