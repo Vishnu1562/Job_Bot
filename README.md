@@ -8,7 +8,7 @@ An automated daily job scanner built in Node.js & TypeScript that searches free,
 
 ## 🌟 Supported Search Profiles
 
-The radar includes two pre-configured profiles out of the box and is built to be easily expandable:
+The radar includes three pre-configured profiles out of the box and is built to be easily expandable:
 
 1. **Power Platform Job Radar**:
    - Focus: Power Apps, Power Automate, Dataverse, PCF, Copilot Studio, Power Pages, Dynamics 365.
@@ -20,6 +20,12 @@ The radar includes two pre-configured profiles out of the box and is built to be
    - Target Tech Stack: NestJS, Angular, .NET, PostgreSQL, MSSQL, Azure DevOps, GitHub.
    - Skill Tags: `[NestJS]`, `[Angular]`, `[.NET]`, `[PostgreSQL]`, `[MSSQL]`, `[Azure DevOps]`, `[GitHub]`.
    - Recipient: `RECIPIENT_EMAIL_FULLSTACK` (or falls back to `RECIPIENT_EMAIL`).
+
+3. **Java & Spring Boot Developer Job Radar**:
+   - Focus: Enterprise Java Backend / Core Banking / Microservices developer positions.
+   - Target Tech Stack: Java, Spring Boot, Hibernate, JPA, Microservices, REST APIs, Oracle SQL, PostgreSQL, Docker, Spring Security.
+   - Skill Tags: `[Spring Boot]`, `[Java]`, `[Hibernate/JPA]`, `[Microservices]`, `[REST APIs]`, `[Oracle SQL]`, `[PostgreSQL]`, `[Docker]`, `[Spring Security]`, `[React]`.
+   - Recipient: `RECIPIENT_EMAIL_JAVA` (or falls back to `RECIPIENT_EMAIL`).
 
 ---
 

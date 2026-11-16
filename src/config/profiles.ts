@@ -123,6 +123,70 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
       ],
       defaultTag: '[Full Stack]',
       accentColor: '#0284c7'
+    },
+    {
+      id: 'java-backend',
+      name: 'Java & Spring Boot Developer Job Radar',
+      recipientEmail: env.RECIPIENT_EMAIL_JAVA || defaultRecipient,
+      queryTerms: ['java developer', 'spring boot', 'java backend', 'java engineer'],
+      keywords: [
+        'java',
+        'spring',
+        'spring boot',
+        'springboot',
+        'hibernate',
+        'microservice',
+        'microservices',
+        'jpa',
+        'rest api',
+        'oracle sql',
+        'postgresql',
+        'docker'
+      ],
+      skills: [
+        {
+          tag: '[Spring Boot]',
+          patterns: ['spring boot', 'springboot', /\bspring-boot\b/i]
+        },
+        {
+          tag: '[Java]',
+          patterns: [/(?:^|[^a-zA-Z0-9])java(?:$|[^a-zA-Z0-9])/i, /\bcore java\b/i]
+        },
+        {
+          tag: '[Hibernate/JPA]',
+          patterns: ['hibernate', /\bjpa\b/i, 'spring data jpa']
+        },
+        {
+          tag: '[Microservices]',
+          patterns: ['microservice', 'microservices', 'distributed systems']
+        },
+        {
+          tag: '[REST APIs]',
+          patterns: ['rest api', 'restful', 'rest apis', 'web services']
+        },
+        {
+          tag: '[Oracle SQL]',
+          patterns: ['oracle', 'oracle sql', 'pl/sql', 'plsql']
+        },
+        {
+          tag: '[PostgreSQL]',
+          patterns: ['postgresql', 'postgres', /\bpsql\b/i]
+        },
+        {
+          tag: '[Docker]',
+          patterns: ['docker', 'containerization', 'containers']
+        },
+        {
+          tag: '[Spring Security]',
+          patterns: ['spring security', 'jwt', 'oauth2']
+        },
+        {
+          tag: '[React]',
+          patterns: [/(?:^|[^a-zA-Z0-9])react(?:$|[^a-zA-Z0-9])/i, /\breactjs\b/i]
+        }
+      ],
+      defaultTag: '[Java Developer]',
+      accentColor: '#ea580c'
     }
   ];
 }
@@ -142,7 +206,6 @@ export function isJobMatchingProfile(job: RawJobListing, profile: JobProfile): b
 
     if (!isTechRole) return false;
 
-    // Must match at least one of target stack
     const targetStack = [
       'angular',
       'nestjs',
@@ -157,6 +220,28 @@ export function isJobMatchingProfile(job: RawJobListing, profile: JobProfile): b
       'github'
     ];
     return targetStack.some((tech) => combined.includes(tech));
+  }
+
+  // For Java Backend, ensure developer role AND matches Java / Spring Boot / Hibernate
+  if (profile.id === 'java-backend') {
+    const isTechRole =
+      combined.includes('developer') ||
+      combined.includes('engineer') ||
+      combined.includes('architect') ||
+      combined.includes('programmer') ||
+      combined.includes('backend') ||
+      combined.includes('software');
+
+    if (!isTechRole) return false;
+
+    const hasJavaCore =
+      /(?:^|[^a-zA-Z0-9])java(?:$|[^a-zA-Z0-9])/i.test(combined) ||
+      combined.includes('spring') ||
+      combined.includes('spring boot') ||
+      combined.includes('springboot') ||
+      combined.includes('hibernate');
+
+    return hasJavaCore;
   }
 
   // Standard matching for other profiles

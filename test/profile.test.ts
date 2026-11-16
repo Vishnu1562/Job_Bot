@@ -83,4 +83,66 @@ describe('[HF-007, HF-008, HF-009, EC-004] Multi-Profile Configuration & Matchin
 
     assert.strictEqual(isJobMatchingProfile(unrelatedJob, fullStack), false);
   });
+
+  describe('[HF-012, HF-013, EC-006] Java & Spring Boot Profile (Resume-based)', () => {
+    it('loads Java profile and resolves recipient email (HF-012)', () => {
+      const profiles = getProfiles({ RECIPIENT_EMAIL: 'default@example.com' });
+      const javaProfile = profiles.find((p) => p.id === 'java-backend');
+      assert.ok(javaProfile, 'Java & Spring Boot profile must exist');
+      assert.strictEqual(javaProfile?.recipientEmail, 'default@example.com');
+
+      const customProfiles = getProfiles({
+        RECIPIENT_EMAIL: 'default@example.com',
+        RECIPIENT_EMAIL_JAVA: 'aswinmsuthan333@gmail.com'
+      });
+      const customJava = customProfiles.find((p) => p.id === 'java-backend');
+      assert.strictEqual(customJava?.recipientEmail, 'aswinmsuthan333@gmail.com');
+    });
+
+    it('matches Java backend developer jobs (HF-013)', () => {
+      const profiles = getProfiles();
+      const javaProfile = profiles.find((p) => p.id === 'java-backend')!;
+
+      const javaJob: RawJobListing = {
+        title: 'Senior Java Backend Engineer (Spring Boot / Microservices)',
+        company: 'Core Banking Tech',
+        location: 'Kochi, India',
+        description: `
+          Design and develop core banking backend modules using Java, Spring Boot, and Hibernate.
+          Experience with Oracle SQL, PostgreSQL, REST APIs, and Docker.
+          Implement authentication using Spring Security and JWT.
+        `,
+        url: 'https://example.com/job-java-1'
+      };
+
+      assert.strictEqual(isJobMatchingProfile(javaJob, javaProfile), true);
+
+      const tags = extractProfileSkillTags(javaJob.title, javaJob.description, javaProfile);
+      assert.ok(tags.includes('[Java]'));
+      assert.ok(tags.includes('[Spring Boot]'));
+      assert.ok(tags.includes('[Hibernate/JPA]'));
+      assert.ok(tags.includes('[Microservices]'));
+      assert.ok(tags.includes('[REST APIs]'));
+      assert.ok(tags.includes('[Oracle SQL]'));
+      assert.ok(tags.includes('[PostgreSQL]'));
+      assert.ok(tags.includes('[Docker]'));
+      assert.ok(tags.includes('[Spring Security]'));
+    });
+
+    it('does NOT false-positive match Java on pure JavaScript frontend jobs (EC-006)', () => {
+      const profiles = getProfiles();
+      const javaProfile = profiles.find((p) => p.id === 'java-backend')!;
+
+      const jsJob: RawJobListing = {
+        title: 'Frontend JavaScript Developer',
+        company: 'Web Studio',
+        location: 'India',
+        description: 'JavaScript, CSS, HTML, Webpack.',
+        url: 'https://example.com/job-js'
+      };
+
+      const tags = extractProfileSkillTags(jsJob.title, jsJob.description, javaProfile);
+      assert.strictEqual(tags.includes('[Java]'), false, 'Should not tag pure JavaScript as Java');
+    });
+  });
 });

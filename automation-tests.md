@@ -1,10 +1,11 @@
 # Automation Behavioral Specification & Tests Contract
-## Multi-Profile Job Radar (Power Platform & Full Stack Editions)
+## Multi-Profile Job Radar (Power Platform, Full Stack & Java Backend Editions)
 
 ### Feature / Change Summary
 Modular, generic, scalable Job Radar in Node.js / TypeScript that runs every morning via GitHub Actions, supports multiple search profiles with independent skill tagging and recipient mappings:
 1. **Power Platform Profile**: Power Apps, Power Automate, Dataverse, PCF, Copilot Studio, Power Pages, Dynamics 365.
 2. **Full Stack Profile**: Full Stack / Backend / Frontend Developer with NestJS, Angular, .NET, PostgreSQL, MSSQL, Azure DevOps, GitHub.
+3. **Java & Spring Boot Profile**: Enterprise Java Software Engineer with Spring Boot, JPA/Hibernate, Microservices, REST APIs, Oracle SQL, PostgreSQL, Docker.
 Easily expandable with additional job profiles by adding definitions to `src/config/profiles.ts`.
 Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, generates tailored responsive HTML email digests, and dispatches to each profile's configured recipient (or defaults to `RECIPIENT_EMAIL`).
 
@@ -31,6 +32,12 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
   - Location: "Bangalore, India"
   - Description: "Building scalable microservices with NestJS, Angular frontend, PostgreSQL database, and CI/CD via Azure DevOps and GitHub."
   - URL: "https://example.com/jobs/nexus-202"
+- **Sample Java Backend Job (India Remote)**:
+  - Title: "Senior Java Backend Engineer"
+  - Company: "FinTech Banking Solutions"
+  - Location: "Kochi / Remote - India"
+  - Description: "Experience in Java, Spring Boot, Hibernate, REST APIs, Microservices, Oracle SQL, PostgreSQL, and Docker."
+  - URL: "https://example.com/jobs/fintech-606"
 - **Sample Full Stack .NET Job**:
   - Title: "Senior .NET & Angular Developer"
   - Company: "Global Financial Systems"
@@ -127,6 +134,18 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Both Power Platform and Full Stack email digests are generated and dispatched to their respective recipients.
 - **Final State**: All active profiles processed.
 
+#### [HF-012] Java & Spring Boot Profile Configuration
+- **Preconditions**: Resume-based Java profile defined (`id: 'java-backend'`).
+- **Action**: Loader instantiates Java profile, resolving recipient via `RECIPIENT_EMAIL_JAVA` (or default `RECIPIENT_EMAIL`).
+- **Expected Result**: Profile has name "Java & Spring Boot Developer Job Radar" and query terms for Java and Spring Boot.
+- **Final State**: Java profile ready for ingestion.
+
+#### [HF-013] Java & Spring Boot Skill Tagging
+- **Preconditions**: Job listing matching Java profile.
+- **Action**: Skill tagger scans for Java ecosystem technologies.
+- **Expected Result**: Correctly tags `[Spring Boot]`, `[Java]`, `[Hibernate/JPA]`, `[Microservices]`, `[REST APIs]`, `[PostgreSQL]`, `[Oracle SQL]`, `[Docker]`, `[Spring Security]`, `[React]`.
+- **Final State**: Job object has relevant Java tags.
+
 ---
 
 ### Negative Flows
@@ -189,6 +208,12 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Recipient receives both "✨ Power Platform Job Radar" and "✨ Full Stack Developer Job Radar" emails clearly separated.
 - **Final State**: 2 distinct digest emails delivered.
 
+#### [EC-006] Java Boundary Matching (Java vs JavaScript)
+- **Preconditions**: Job descriptions containing "JavaScript" or "TypeScript" without Java.
+- **Action**: Regex parser uses word boundaries `\bjava\b`.
+- **Expected Result**: Does NOT tag `[Java]` when only "JavaScript" is mentioned.
+- **Final State**: Zero false positive tags on JavaScript roles.
+
 ---
 
 ### Validation Rules
@@ -219,3 +244,4 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 
 ### Regression Requirements
 - `REG-001`: Consecutive pipeline execution with identical feed data must yield 0 new jobs on the second run and send the 0-job status digest.
+- `REG-002`: Multi-profile pipeline execution across all configured profiles (Power Platform, Full Stack, Java Backend) maintains independent deduplication state.
