@@ -195,6 +195,20 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Successfully parses valid developer listings across all feeds without API keys or credentials.
 - **Final State**: Broadened job pool across multiple independent tech sources.
 
+#### [HF-021] Smart Digest Capping (Top 15 Roles & Overflow Indicator)
+- **Preconditions**: Profile matches more than 15 jobs in a single scan (e.g., 52 Full Stack jobs).
+- **Action**:
+  - Template generator sorts priority target companies first, then slices the list to the Top 15 roles (`maxJobs = 15`).
+  - Renders a clean overflow summary badge below the job cards: `+ X additional roles identified today • Showing top 15 priority matches`.
+  - Appends overflow summary note in plain-text alternative.
+  - Mailer includes standard automated headers (`Auto-Submitted: auto-generated`, `X-Auto-Response-Suppress: OOF, AutoReply`).
+  - Main dispatcher introduces a 2-second throttling pause between profile email dispatches to prevent SMTP burst flags.
+- **Expected Result**:
+  - Exactly 15 job cards rendered in HTML and listed in text when count > 15.
+  - Email payload remains compact (< 35 KB) and outbound links capped at 15, preventing Gmail 102 KB message clipping and link-spam heuristic penalties.
+  - All jobs <= 15 are rendered completely without overflow badge.
+- **Final State**: Highly deliverable, reader-friendly daily digest delivered directly to inbox.
+
 ---
 
 ### Negative Flows

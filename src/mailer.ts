@@ -71,6 +71,10 @@ export async function sendDigestEmail(
     from: `"Job Radar" <${config.fromEmail}>`,
     to: config.recipientEmail,
     subject,
+    headers: {
+      'Auto-Submitted': 'auto-generated',
+      'X-Auto-Response-Suppress': 'OOF, AutoReply'
+    },
     ...(text ? { text } : {}),
     html
   };

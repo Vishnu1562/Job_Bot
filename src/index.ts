@@ -27,7 +27,8 @@ async function main() {
   const db = new JobDatabase(dbPath);
 
   try {
-    for (const profile of profiles) {
+    for (let i = 0; i < profiles.length; i++) {
+      const profile = profiles[i];
       console.log(`\n-----------------------------------------------------`);
       console.log(`🎯 Profile [${profile.id}]: ${profile.name}`);
       console.log(`📬 Target Recipient: ${profile.recipientEmail}`);
@@ -73,6 +74,11 @@ async function main() {
         if (newJobs.length > 0) {
           db.markJobsAsEmailed(newJobs.map((j) => j.url), profile.id);
           console.log(`[4/4] Successfully marked ${newJobs.length} job(s) as sent for profile "${profile.id}".`);
+        }
+
+        if (!isDryRun && i < profiles.length - 1) {
+          console.log(`[Throttler] Waiting 2s before next profile dispatch to prevent SMTP burst flags...`);
+          await new Promise((resolve) => setTimeout(resolve, 2000));
         }
       } catch (profileError: any) {
         console.error(`❌ [${profile.id}] Error executing profile pipeline:`, profileError.message || profileError);

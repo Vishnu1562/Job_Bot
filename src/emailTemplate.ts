@@ -14,7 +14,8 @@ export function generateEmailDigestHtml(
   jobs: Job[],
   profileName: string = 'Power Platform Job Radar',
   accentColor: string = '#742774',
-  candidateName?: string
+  candidateName?: string,
+  maxJobs: number = 15
 ): { subject: string; html: string; text: string } {
   const count = jobs.length;
   const displayName = candidateName?.trim() || 'there';
@@ -35,6 +36,9 @@ export function generateEmailDigestHtml(
     if (!a.isTargetCompany && b.isTargetCompany) return 1;
     return 0;
   });
+
+  const displayedJobs = sortedJobs.slice(0, maxJobs);
+  const overflowCount = sortedJobs.length - displayedJobs.length;
 
   let contentHtml = '';
 
@@ -64,7 +68,7 @@ export function generateEmailDigestHtml(
       </div>
     `;
 
-    const jobCardsHtml = sortedJobs
+    const jobCardsHtml = displayedJobs
       .map((job) => {
         const title = escapeHtml(job.title);
         const company = escapeHtml(job.company || 'Confidential Company');
@@ -117,21 +121,37 @@ export function generateEmailDigestHtml(
       })
       .join('');
 
-    contentHtml = `${greetingHtml}\n${jobCardsHtml}`;
+    const overflowHtml =
+      overflowCount > 0
+        ? `
+      <!-- Overflow Summary Card -->
+      <div style="background-color: #ffffff; border-radius: 12px; border: 1px dashed #cbd5e1; padding: 18px 20px; text-align: center; margin-bottom: 20px;">
+        <p style="margin: 0; font-size: 13px; color: #475569; font-weight: 600;">
+          ⚡ +${overflowCount} additional ${overflowCount === 1 ? 'role' : 'roles'} identified today &bull; Top ${displayedJobs.length} priority matches displayed above
+        </p>
+      </div>`
+        : '';
+
+    contentHtml = `${greetingHtml}\n${jobCardsHtml}\n${overflowHtml}`;
   }
 
   let text = '';
   if (count === 0) {
     text = `⚡ Daily Morning Dispatch • ${profileName}\n\nHey ${displayName}, it's completely fine!\nNo worries at all if today was a bit quiet on new postings — good opportunities take time, but your skills and hard work speak for themselves. You will find the right fit!\n\nWe'll keep scanning fresh feeds every morning and alert you the second an exciting role drops. Keep your head high and stay confident!\n\nCurated with care • Stay confident and keep going! ✨`;
   } else {
-    const jobLines = sortedJobs
+    const jobLines = displayedJobs
       .map((j, idx) => {
         const priorityLabel = j.isTargetCompany ? ' [⭐ Priority Target]' : '';
         return `${idx + 1}. ${j.title} (${j.company})${priorityLabel}\n   Location: ${j.location}\n   Tags: ${j.tags.join(' ')}\n   Apply: ${j.url}`;
       })
       .join('\n\n');
 
-    text = `⚡ Daily Morning Dispatch • ${profileName}\n\nHey ${displayName}! Take a deep breath — the job hunt is a journey, but you're doing great and you will find the right role!\nHere are today's ${count} curated opportunities:\n\n${jobLines}\n\nCurated with care • Stay confident and keep going! ✨\nCustom job alerts for ${displayName} • Delivered every morning`;
+    const overflowText =
+      overflowCount > 0
+        ? `\n\n+ ${overflowCount} additional role(s) identified today • Top ${displayedJobs.length} priority matches displayed above`
+        : '';
+
+    text = `⚡ Daily Morning Dispatch • ${profileName}\n\nHey ${displayName}! Take a deep breath — the job hunt is a journey, but you're doing great and you will find the right role!\nHere are today's ${count} curated opportunities:\n\n${jobLines}${overflowText}\n\nCurated with care • Stay confident and keep going! ✨\nCustom job alerts for ${displayName} • Delivered every morning`;
   }
 
   const html = `<!DOCTYPE html>

@@ -140,5 +140,56 @@ describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {
       const standardIndex = html.indexOf('Standard Startup');
       assert.ok(ustIndex < standardIndex, 'UST Global (Target Company) must appear before Standard Startup');
     });
+
+    it('caps displayed jobs to top 15 and shows overflow card when more than 15 jobs are found (HF-021)', () => {
+      // Create 20 jobs
+      const jobs: Job[] = Array.from({ length: 20 }, (_, i) => ({
+        id: `job-${i + 1}`,
+        title: `Full Stack Engineer Level ${i + 1}`,
+        company: i === 18 ? 'Microsoft' : `Company ${i + 1}`,
+        location: 'Bangalore, India',
+        url: `https://example.com/job-${i + 1}`,
+        tags: ['[Angular]', '[NestJS]'],
+        source: 'remotive',
+        description: `Description ${i + 1}`,
+        isTargetCompany: i === 18 // Job 19 is Microsoft (Priority Target)
+      }));
+
+      const { html, text } = generateEmailDigestHtml(jobs, 'Full Stack Developer Job Radar', '#0284c7', 'Vishnu');
+
+      // Microsoft should be sorted to the top and thus included in top 15
+      assert.ok(html.includes('Microsoft'), 'Priority target Microsoft must be included in top 15');
+      assert.ok(html.includes('Full Stack Engineer Level 19'));
+
+      // Count occurrences of "Apply Now ↗" (each job card has exactly 1)
+      const buttonMatches = html.match(/Apply Now ↗/g);
+      assert.strictEqual(buttonMatches?.length, 15, 'Must render exactly 15 Apply Now buttons');
+
+      // Overflow indicator should show +5 additional roles
+      assert.ok(html.includes('+5 additional roles identified today'), 'HTML must include +5 overflow note');
+      assert.ok(html.includes('Top 15 priority matches displayed above'));
+      assert.ok(text.includes('+ 5 additional role(s) identified today'), 'Plain text must include overflow note');
+      assert.ok(text.includes('Top 15 priority matches displayed above'));
+    });
+
+    it('does not display overflow card when total jobs are 15 or fewer (HF-021)', () => {
+      const jobs: Job[] = Array.from({ length: 5 }, (_, i) => ({
+        id: `job-${i + 1}`,
+        title: `Java Developer ${i + 1}`,
+        company: `Company ${i + 1}`,
+        location: 'Remote, India',
+        url: `https://example.com/job-${i + 1}`,
+        tags: ['[Java]'],
+        source: 'arbeitnow',
+        description: `Description ${i + 1}`
+      }));
+
+      const { html, text } = generateEmailDigestHtml(jobs, 'Java & Spring Boot Developer Job Radar', '#ea580c', 'Aswin');
+
+      const buttonMatches = html.match(/Apply Now ↗/g);
+      assert.strictEqual(buttonMatches?.length, 5, 'Must render all 5 Apply Now buttons');
+      assert.ok(!html.includes('additional roles identified today'), 'Should NOT display overflow note');
+      assert.ok(!text.includes('additional role(s) identified today'));
+    });
   });
 });
