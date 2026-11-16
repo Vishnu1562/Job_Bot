@@ -35,6 +35,21 @@ describe('[NF-003 & AUTH-001] Mailer Configuration Validation', () => {
     assert.strictEqual(config.recipientEmail, 'receiver@gmail.com');
     assert.strictEqual(config.smtpHost, 'smtp-relay.brevo.com');
     assert.strictEqual(config.smtpPort, 587);
+    assert.strictEqual(config.authUser, 'sender@example.com');
+    assert.strictEqual(config.fromEmail, 'sender@example.com');
+  });
+
+  it('handles Resend SMTP host and automatically sets valid fromEmail (onboarding@resend.dev)', () => {
+    const config = validateMailerConfig({
+      SMTP_HOST: 'smtp.resend.com',
+      SENDER_EMAIL: 'resend',
+      SENDER_PASSWORD: 're_1234567890',
+      RECIPIENT_EMAIL: 'receiver@gmail.com'
+    });
+    assert.strictEqual(config.smtpHost, 'smtp.resend.com');
+    assert.strictEqual(config.authUser, 'resend');
+    assert.strictEqual(config.fromEmail, 'onboarding@resend.dev', 'Resend must use a valid email domain in FROM header');
+    assert.strictEqual(config.smtpPort, 465);
   });
 
   it('allows custom SMTP_HOST and SMTP_PORT', () => {
@@ -47,5 +62,6 @@ describe('[NF-003 & AUTH-001] Mailer Configuration Validation', () => {
     });
     assert.strictEqual(config.smtpHost, 'smtp.gmail.com');
     assert.strictEqual(config.smtpPort, 465);
+    assert.strictEqual(config.fromEmail, 'sender@gmail.com');
   });
 });

@@ -153,7 +153,7 @@ Automated "Power Platform Job Radar" script in Node.js / TypeScript that runs ev
 ---
 
 ### Authentication / Authorization
-- `AUTH-001`: SMTP authentication supporting free Brevo SMTP relay (`smtp-relay.brevo.com:587`), Gmail SMTP (`smtp.gmail.com:587`), or custom SMTP providers over TLS port 587. Configurable via `SMTP_HOST` (defaults to `smtp-relay.brevo.com`) and `SMTP_PORT` (defaults to `587`).
+- `AUTH-001`: SMTP authentication supporting free Resend SMTP (`smtp.resend.com:465` with automatic `fromEmail: onboarding@resend.dev`), Brevo SMTP relay (`smtp-relay.brevo.com:587`), Gmail SMTP (`smtp.gmail.com:587`), or custom SMTP providers over TLS. Configurable via `SMTP_HOST`, `SMTP_PORT`, and optional `FROM_EMAIL`.
 
 ---
 

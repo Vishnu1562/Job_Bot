@@ -27,4 +27,6 @@ export interface MailerConfig {
   recipientEmail: string;
   smtpHost: string;
   smtpPort: number;
+  fromEmail: string;
+  authUser: string;
 }

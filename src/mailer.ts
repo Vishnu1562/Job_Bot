@@ -1,32 +1,56 @@
 import nodemailer from 'nodemailer';
 import type { MailerConfig } from './types.ts';
 
-export function validateMailerConfig(env: Record<string, string | undefined> = process.env): MailerConfig {
-  const senderEmail = env.SENDER_EMAIL?.trim();
-  const rawPassword = env.SENDER_PASSWORD?.trim();
-  const recipientEmail = env.RECIPIENT_EMAIL?.trim();
-  const smtpHost = env.SMTP_HOST?.trim() || 'smtp-relay.brevo.com';
-  const smtpPort = parseInt(env.SMTP_PORT?.trim() || '587', 10);
+function cleanEmail(val: string): string {
+  if (!val) return '';
+  return val.replace(/[<>"]/g, '').trim();
+}
 
-  if (!senderEmail) {
+export function validateMailerConfig(env: Record<string, string | undefined> = process.env): MailerConfig {
+  const rawSenderEmail = env.SENDER_EMAIL?.trim();
+  const rawPassword = env.SENDER_PASSWORD?.trim();
+  const rawRecipientEmail = env.RECIPIENT_EMAIL?.trim();
+  const smtpHost = env.SMTP_HOST?.trim() || 'smtp-relay.brevo.com';
+
+  if (!rawSenderEmail) {
     throw new Error('Missing required environment variable: SENDER_EMAIL');
   }
   if (!rawPassword) {
     throw new Error('Missing required environment variable: SENDER_PASSWORD');
   }
-  if (!recipientEmail) {
+  if (!rawRecipientEmail) {
     throw new Error('Missing required environment variable: RECIPIENT_EMAIL');
   }
 
-  // Strip extraneous whitespace
+  // Resend uses 465 (SSL) or 587; standard relays use 587 (STARTTLS)
+  const defaultPort = smtpHost.includes('resend.com') ? '465' : '587';
+  const smtpPort = parseInt(env.SMTP_PORT?.trim() || defaultPort, 10);
+
+  const recipientEmail = cleanEmail(rawRecipientEmail);
   const senderPassword = rawPassword.replace(/\s+/g, '');
 
+  let authUser = rawSenderEmail;
+  let fromEmail = cleanEmail(env.FROM_EMAIL?.trim() || '');
+
+  if (smtpHost.includes('resend.com')) {
+    authUser = 'resend';
+    if (!fromEmail) {
+      fromEmail = 'onboarding@resend.dev';
+    }
+  } else {
+    if (!fromEmail) {
+      fromEmail = cleanEmail(rawSenderEmail);
+    }
+  }
+
   return {
-    senderEmail,
+    senderEmail: rawSenderEmail,
     senderPassword,
     recipientEmail,
     smtpHost,
-    smtpPort
+    smtpPort,
+    fromEmail,
+    authUser
   };
 }
 
@@ -42,13 +66,13 @@ export async function sendDigestEmail(
     port: config.smtpPort,
     secure: config.smtpPort === 465,
     auth: {
-      user: config.senderEmail,
+      user: config.authUser,
       pass: config.senderPassword
     }
   });
 
   const mailOptions = {
-    from: `"Power Platform Job Radar" <${config.senderEmail}>`,
+    from: `"Power Platform Job Radar" <${config.fromEmail}>`,
     to: config.recipientEmail,
     subject,
     html
