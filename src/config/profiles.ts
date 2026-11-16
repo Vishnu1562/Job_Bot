@@ -7,7 +7,7 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
     {
       id: 'power-platform',
       name: 'Power Platform Job Radar',
-      candidateName: 'Bhavya',
+      candidateName: 'Celine',
       recipientEmail: env.RECIPIENT_EMAIL_POWERPLATFORM || defaultRecipient,
       experience: {
         minYears: 3,
