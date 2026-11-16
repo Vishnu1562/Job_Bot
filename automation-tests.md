@@ -209,6 +209,16 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
   - All jobs <= 15 are rendered completely without overflow badge.
 - **Final State**: Highly deliverable, reader-friendly daily digest delivered directly to inbox.
 
+#### [HF-022] Indian IT Hubs Aggregator via JSearch & Adzuna (LinkedIn, Naukri, Indeed)
+- **Preconditions**: Active profile targeting Indian developer jobs. Configurable `RAPIDAPI_KEY` (for JSearch Google for Jobs aggregator indexing LinkedIn, Naukri, Indeed, Glassdoor) and `ADZUNA_APP_ID`/`ADZUNA_APP_KEY` (for Adzuna India).
+- **Action**:
+  - Scraper queries JSearch API and Adzuna India with profile-specific search terms tailored to Indian IT parks and hubs across India (Kochi Infopark, Trivandrum Technopark, Bangalore, Hyderabad, Pune, Chennai, Delhi NCR, Mumbai, etc.).
+  - Normalizes real publisher sources (`source: 'linkedin'`, `'naukri'`, `'indeed'`, `'adzuna'`).
+  - Extracts clean direct apply links, company names, and domestic locations.
+  - In absence of keys, gracefully degrades without interrupting existing free RSS/API pipelines.
+- **Expected Result**: Successfully ingests authentic native Indian job postings from LinkedIn, Naukri, and Indeed.
+- **Final State**: Live domestic Indian jobs available in daily digest.
+
 ---
 
 ### Negative Flows
@@ -264,15 +274,29 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Any job from an excluded company is dropped from ingestion, even if matching skills and experience.
 - **Final State**: Zero listings from excluded employers delivered to that profile.
 
+#### [NF-009] Conflicting Tech Stack & Recruiter Keyword Stuffing Exclusion
+- **Preconditions**: Candidate job with title denoting an unrelated tech stack (e.g. "Senior Magento Developer", "PHP Developer", "WordPress Developer", "Shopify Developer", "Drupal Developer", "iOS Developer", "Salesforce Developer") where the recruiter body mentions "Java", "Python", or "Angular" in passing.
+- **Action**: Profile matcher inspects job title against `excludedTitleKeywords` before evaluating body text.
+- **Expected Result**: Rejects the job outright due to title conflict. Prevents irrelevant CMS, PHP, or mobile roles from leaking into Java or Full Stack profiles.
+- **Final State**: Candidate only receives roles fundamentally aligned with their target stack.
+
 ---
 
 ### Edge Cases
 
-#### [EC-001] India Location Variations & Dialects
-- **Preconditions**: Job locations formatted as "Bengaluru, Karnataka", "Hyderabad, Telangana", "Remote, IN", "IN", "India (Hybrid)", "Worldwide Remote", "Anywhere".
-- **Action**: Location matcher evaluates geographic tokens.
-- **Expected Result**: Correctly accepts Indian metropolitan tech hubs and global remote listings; rejects regional exclusions (e.g., "US Remote Only", "UK Only").
-- **Final State**: Accurate geographic filtering.
+#### [EC-001] Pan-India IT Parks & Tech Hubs Location Normalizer
+- **Preconditions**: Job locations specifying Indian IT parks and tech hubs across India:
+  - Kochi & Kerala: "Kochi", "Cochin", "Infopark", "Technopark", "Trivandrum", "Kerala"
+  - Bengaluru: "Bangalore", "Bengaluru", "Whitefield", "Electronic City", "Manyata"
+  - Hyderabad: "Hyderabad", "HITEC City", "Cyberabad", "Gachibowli", "Telangana"
+  - Pune: "Pune", "Hinjawadi", "Magarpatta", "Kharadi", "Maharashtra"
+  - Chennai: "Chennai", "OMR", "Tidel Park", "Guindy", "Tamil Nadu"
+  - Delhi NCR: "Noida", "Gurugram", "Gurgaon", "Delhi", "NCR"
+  - Mumbai, Kolkata, Coimbatore, Ahmedabad GIFT City
+  - Pan-India: "India", "Remote - India", "India (Hybrid)", "Worldwide Remote", "Anywhere"
+- **Action**: Location matcher evaluates geographic tokens against all Indian IT park hubs.
+- **Expected Result**: Correctly accepts Indian IT park locations and global remote listings; rejects regional exclusions (e.g., "US Remote Only", "UK Only", "Europe Only").
+- **Final State**: Accurate geographic filtering covering all major Indian tech corridors.
 
 #### [EC-002] Special Characters in Job Titles & Descriptions
 - **Preconditions**: Job titles containing HTML entities or characters (`&`, `<`, `>`, `"`, `'`, `/`).

@@ -127,6 +127,66 @@ export function parseRemoteOkJob(raw: any, profile?: JobProfile): Job | null {
   );
 }
 
+export function parseJSearchJob(raw: any, profile?: JobProfile): Job | null {
+  if (!raw || typeof raw !== 'object') return null;
+  const title = raw.job_title || '';
+  if (!title) return null;
+
+  const city = raw.job_city || '';
+  const state = raw.job_state || '';
+  const country = raw.job_country || 'India';
+  const locationParts = [city, state, country].filter(Boolean);
+  let location = locationParts.length > 0 ? locationParts.join(', ') : 'India';
+  if (raw.job_is_remote) {
+    location = `${location} (Remote)`;
+  }
+
+  const url = raw.job_apply_link || raw.job_google_link || '';
+  const publisher = raw.job_publisher ? raw.job_publisher.toLowerCase() : 'linkedin';
+
+  const rawListing: RawJobListing = {
+    title,
+    company: raw.employer_name || 'Tech Company',
+    location,
+    description: raw.job_description || '',
+    url,
+    publishedAt: raw.job_posted_at_datetime_utc
+  };
+
+  return processCandidateJob(
+    rawListing,
+    publisher,
+    raw.job_id ? `jsearch-${raw.job_id}` : undefined,
+    profile
+  );
+}
+
+export function parseAdzunaJob(raw: any, profile?: JobProfile): Job | null {
+  if (!raw || typeof raw !== 'object') return null;
+  const title = raw.title || '';
+  if (!title) return null;
+
+  const location = raw.location?.display_name || 'India';
+  const company = raw.company?.display_name || 'Tech Company';
+  const url = raw.redirect_url || '';
+
+  const rawListing: RawJobListing = {
+    title,
+    company,
+    location,
+    description: raw.description || '',
+    url,
+    publishedAt: raw.created
+  };
+
+  return processCandidateJob(
+    rawListing,
+    'adzuna',
+    raw.id ? `adzuna-${raw.id}` : undefined,
+    profile
+  );
+}
+
 export function parseRssItem(raw: any, sourceName: string, profile?: JobProfile): Job | null {
   if (!raw || typeof raw !== 'object') return null;
   const title = raw.title || '';
@@ -157,14 +217,19 @@ export function parseRssItem(raw: any, sourceName: string, profile?: JobProfile)
   return processCandidateJob(rawListing, sourceName, undefined, profile);
 }
 
-async function fetchWithTimeout(url: string, timeoutMs: number = 10000): Promise<Response> {
+async function fetchWithTimeout(
+  url: string,
+  timeoutMs: number = 10000,
+  extraHeaders: Record<string, string> = {}
+): Promise<Response> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
     const response = await fetch(url, {
       headers: {
         'User-Agent': USER_AGENT,
-        Accept: 'application/json, application/xml, text/xml, */*'
+        Accept: 'application/json, application/xml, text/xml, */*',
+        ...extraHeaders
       },
       signal: controller.signal
     });
@@ -291,6 +356,61 @@ export async function fetchJobsForProfile(profile: JobProfile): Promise<Job[]> {
           }
         } catch (err: any) {
           console.warn(`[Scraper] RSS feed failed for ${feed.source}:`, err.message);
+        }
+      }
+    },
+
+    // 6. JSearch API (LinkedIn, Naukri, Indeed via Google for Jobs across Pan-India IT Hubs)
+    async () => {
+      const rapidApiKey = process.env.RAPIDAPI_KEY?.trim();
+      if (!rapidApiKey) return;
+
+      for (const q of profile.queryTerms.slice(0, 2)) {
+        try {
+          const searchQuery = `${q} in India`;
+          const jsearchUrl = `https://jsearch.p.rapidapi.com/search?query=${encodeURIComponent(
+            searchQuery
+          )}&page=1&num_pages=1&country=in&date_posted=all`;
+          const res = await fetchWithTimeout(jsearchUrl, 10000, {
+            'x-rapidapi-key': rapidApiKey,
+            'x-rapidapi-host': 'jsearch.p.rapidapi.com'
+          });
+          if (res.ok) {
+            const data: any = await res.json();
+            if (Array.isArray(data?.data)) {
+              for (const item of data.data) {
+                addUnique(parseJSearchJob(item, profile));
+              }
+            }
+          }
+        } catch (err: any) {
+          console.warn(`[Scraper] JSearch query failed for "${q}":`, err.message);
+        }
+      }
+    },
+
+    // 7. Adzuna India API (Vacancies across Indian IT Parks)
+    async () => {
+      const appId = process.env.ADZUNA_APP_ID?.trim();
+      const appKey = process.env.ADZUNA_APP_KEY?.trim();
+      if (!appId || !appKey) return;
+
+      for (const q of profile.queryTerms.slice(0, 2)) {
+        try {
+          const adzunaUrl = `https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=${appId}&app_key=${appKey}&what=${encodeURIComponent(
+            q
+          )}&where=India&content-type=application/json`;
+          const res = await fetchWithTimeout(adzunaUrl, 10000);
+          if (res.ok) {
+            const data: any = await res.json();
+            if (Array.isArray(data?.results)) {
+              for (const item of data.results) {
+                addUnique(parseAdzunaJob(item, profile));
+              }
+            }
+          }
+        } catch (err: any) {
+          console.warn(`[Scraper] Adzuna India query failed for "${q}":`, err.message);
         }
       }
     }

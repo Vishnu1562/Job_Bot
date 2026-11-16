@@ -5,8 +5,11 @@ import {
   parseJobicyJob,
   parseArbeitnowJob,
   parseRemoteOkJob,
-  parseRssItem
+  parseRssItem,
+  parseJSearchJob,
+  parseAdzunaJob
 } from '../src/scraper.ts';
+import { getProfiles } from '../src/config/profiles.ts';
 
 describe('[HF-001] Scraper Normalizers & Parsers', () => {
   it('correctly maps Remotive job structure', () => {
@@ -137,5 +140,60 @@ describe('[HF-001] Scraper Normalizers & Parsers', () => {
       description: 'Unpaid typing'
     };
     assert.strictEqual(parseRemotiveJob(spam), null);
+  });
+
+  describe('[HF-022] Indian IT Hubs Aggregator via JSearch & Adzuna (LinkedIn, Naukri, Indeed)', () => {
+    const profiles = getProfiles();
+    const javaProfile = profiles.find((p) => p.id === 'java-backend')!;
+    const fullStackProfile = profiles.find((p) => p.id === 'full-stack')!;
+
+    it('correctly maps JSearch LinkedIn / Naukri job item with Indian IT park location', () => {
+      const rawJSearch = {
+        job_id: 'jsearch-123',
+        job_title: 'Java Spring Boot Developer',
+        employer_name: 'Cognizant',
+        job_city: 'Kochi',
+        job_state: 'Kerala',
+        job_country: 'IN',
+        job_is_remote: false,
+        job_apply_link: 'https://in.linkedin.com/jobs/view/123456?utm_source=jsearch',
+        job_publisher: 'LinkedIn',
+        job_description: 'Looking for a 3-5 years Java & Spring Boot engineer at Infopark Kochi with PostgreSQL and Microservices.',
+        job_posted_at_datetime_utc: '2026-11-16T10:00:00.000Z'
+      };
+
+      const job = parseJSearchJob(rawJSearch, javaProfile);
+      assert.ok(job);
+      assert.strictEqual(job?.title, 'Java Spring Boot Developer');
+      assert.strictEqual(job?.company, 'Cognizant');
+      assert.ok(job?.location.includes('Kochi'));
+      assert.strictEqual(job?.url, 'https://in.linkedin.com/jobs/view/123456');
+      assert.strictEqual(job?.source, 'linkedin');
+      assert.ok(job?.tags.includes('[Java]'));
+      assert.ok(job?.tags.includes('[Spring Boot]'));
+      assert.strictEqual(job?.isTargetCompany, true, 'Cognizant is target company');
+    });
+
+    it('correctly maps Adzuna India job item', () => {
+      const rawAdzuna = {
+        id: 'adzuna-999',
+        title: 'Full Stack Engineer (Angular / NestJS)',
+        company: { display_name: 'UST Global' },
+        location: { display_name: 'Whitefield, Bengaluru, Karnataka' },
+        redirect_url: 'https://www.adzuna.in/land/ad/adzuna-999?utm_medium=api',
+        description: 'Design web apps using NestJS, Angular, and PostgreSQL with Azure DevOps.',
+        created: '2026-11-16T08:00:00Z'
+      };
+
+      const job = parseAdzunaJob(rawAdzuna, fullStackProfile);
+      assert.ok(job);
+      assert.strictEqual(job?.title, 'Full Stack Engineer (Angular / NestJS)');
+      assert.strictEqual(job?.company, 'UST Global');
+      assert.ok(job?.location.includes('Bengaluru') || job?.location.includes('Whitefield'));
+      assert.strictEqual(job?.source, 'adzuna');
+      assert.ok(job?.tags.includes('[Angular]'));
+      assert.ok(job?.tags.includes('[NestJS]'));
+      assert.strictEqual(job?.isTargetCompany, true, 'UST Global is target company');
+    });
   });
 });

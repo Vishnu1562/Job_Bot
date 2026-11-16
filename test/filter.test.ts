@@ -50,15 +50,33 @@ describe('Job Filters & Normalization', () => {
   });
 
   describe('[EC-001] isIndiaLocation', () => {
-    it('matches Indian cities and country identifiers', () => {
+    it('matches Indian cities, IT parks, and country identifiers', () => {
       assert.strictEqual(isIndiaLocation('India'), true);
       assert.strictEqual(isIndiaLocation('Bangalore, Karnataka'), true);
       assert.strictEqual(isIndiaLocation('Bengaluru'), true);
+      assert.strictEqual(isIndiaLocation('Whitefield, Bangalore'), true);
+      assert.strictEqual(isIndiaLocation('Electronic City, Bengaluru'), true);
+      assert.strictEqual(isIndiaLocation('Manyata Tech Park'), true);
       assert.strictEqual(isIndiaLocation('Hyderabad, Telangana'), true);
+      assert.strictEqual(isIndiaLocation('HITEC City, Hyderabad'), true);
+      assert.strictEqual(isIndiaLocation('Cyberabad / Gachibowli'), true);
       assert.strictEqual(isIndiaLocation('Pune / Hybrid'), true);
+      assert.strictEqual(isIndiaLocation('Hinjawadi, Pune'), true);
+      assert.strictEqual(isIndiaLocation('Magarpatta City, Pune'), true);
+      assert.strictEqual(isIndiaLocation('Kochi, Kerala'), true);
+      assert.strictEqual(isIndiaLocation('Infopark Kochi'), true);
+      assert.strictEqual(isIndiaLocation('Technopark, Trivandrum'), true);
+      assert.strictEqual(isIndiaLocation('Thiruvananthapuram, Kerala'), true);
+      assert.strictEqual(isIndiaLocation('Chennai, Tamil Nadu'), true);
+      assert.strictEqual(isIndiaLocation('OMR, Chennai'), true);
+      assert.strictEqual(isIndiaLocation('Tidel Park, Coimbatore'), true);
       assert.strictEqual(isIndiaLocation('Gurgaon / Gurugram'), true);
       assert.strictEqual(isIndiaLocation('Noida, UP'), true);
+      assert.strictEqual(isIndiaLocation('Delhi NCR'), true);
       assert.strictEqual(isIndiaLocation('Mumbai, Maharashtra'), true);
+      assert.strictEqual(isIndiaLocation('Navi Mumbai'), true);
+      assert.strictEqual(isIndiaLocation('Kolkata, Sector V'), true);
+      assert.strictEqual(isIndiaLocation('GIFT City, Ahmedabad'), true);
       assert.strictEqual(isIndiaLocation('Remote - India'), true);
       assert.strictEqual(isIndiaLocation('Remote (Worldwide)'), true);
       assert.strictEqual(isIndiaLocation('Anywhere'), true);

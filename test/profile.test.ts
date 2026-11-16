@@ -156,6 +156,73 @@ describe('[HF-007, HF-008, HF-009, EC-004] Multi-Profile Configuration & Matchin
       const tags = extractProfileSkillTags(jsJob.title, jsJob.description, javaProfile);
       assert.strictEqual(tags.includes('[Java]'), false, 'Should not tag pure JavaScript as Java');
     });
+
+    it('rejects conflicting tech stack titles like Magento, PHP, WordPress, and Shopify (NF-009)', () => {
+      const profiles = getProfiles();
+      const javaProfile = profiles.find((p) => p.id === 'java-backend')!;
+
+      // Simulates Lemon.io "Senior Magento Developer" from user screenshot where body mentions Java/Python
+      const magentoJob: RawJobListing = {
+        title: 'Senior Magento Developer',
+        company: 'Lemon.io',
+        location: 'Remote Worldwide',
+        description: 'We need a Magento developer. Experience with PHP, Java, React, Python is a plus.',
+        url: 'https://example.com/job-magento'
+      };
+      assert.strictEqual(isJobMatchingProfile(magentoJob, javaProfile), false, 'Magento Developer must be rejected for Java');
+
+      const phpJob: RawJobListing = {
+        title: 'PHP / Laravel Backend Developer',
+        company: 'Web Solutions',
+        location: 'India',
+        description: 'Build web applications in PHP with Laravel. Microservices and Java background welcome.',
+        url: 'https://example.com/job-php'
+      };
+      assert.strictEqual(isJobMatchingProfile(phpJob, javaProfile), false, 'PHP Developer must be rejected for Java');
+
+      const wpJob: RawJobListing = {
+        title: 'Senior WordPress Developer',
+        company: 'CMS Agency',
+        location: 'India',
+        description: 'Custom themes, plugins, REST APIs, and Java integrations.',
+        url: 'https://example.com/job-wp'
+      };
+      assert.strictEqual(isJobMatchingProfile(wpJob, javaProfile), false, 'WordPress Developer must be rejected for Java');
+
+      const shopifyJob: RawJobListing = {
+        title: 'Shopify App Developer',
+        company: 'Ecom Store',
+        location: 'India',
+        description: 'Shopify Liquid, APIs, Java backend webhook endpoints.',
+        url: 'https://example.com/job-shopify'
+      };
+      assert.strictEqual(isJobMatchingProfile(shopifyJob, javaProfile), false, 'Shopify Developer must be rejected for Java');
+    });
+  });
+
+  describe('[NF-009] Full Stack Conflicting Tech Stack Title Exclusion', () => {
+    it('rejects Magento, WordPress, and Shopify jobs for Full Stack profile', () => {
+      const profiles = getProfiles();
+      const fullStack = profiles.find((p) => p.id === 'full-stack')!;
+
+      const magentoJob: RawJobListing = {
+        title: 'Senior Magento Developer',
+        company: 'Agency',
+        location: 'India',
+        description: 'Full stack Magento with Angular frontend and backend modules.',
+        url: 'https://example.com/fs-magento'
+      };
+      assert.strictEqual(isJobMatchingProfile(magentoJob, fullStack), false);
+
+      const wpJob: RawJobListing = {
+        title: 'WordPress Theme Developer',
+        company: 'Media House',
+        location: 'India',
+        description: 'Full stack WordPress and PHP developer with Postgres.',
+        url: 'https://example.com/fs-wp'
+      };
+      assert.strictEqual(isJobMatchingProfile(wpJob, fullStack), false);
+    });
   });
 
   describe('[HF-016, NF-007] Power Platform Profile (Celine - Resume-based)', () => {

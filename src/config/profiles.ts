@@ -49,6 +49,7 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
       candidateName: 'Celine',
       recipientEmail: env.RECIPIENT_EMAIL_POWERPLATFORM || defaultRecipient,
       excludedCompanies: [/\bwipro\b/i],
+      excludedTitleKeywords: ['magento', 'wordpress', 'shopify', 'drupal', 'php developer', 'ruby', 'ios developer', 'android developer'],
       targetCompanies: DEFAULT_TARGET_COMPANIES,
       experience: {
         minYears: 3,
@@ -126,6 +127,7 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
       candidateName: 'Vishnu',
       recipientEmail: env.RECIPIENT_EMAIL_FULLSTACK || defaultRecipient,
       excludedCompanies: [/(?:^|\b)(?:ey|ernst\s*&\s*young|ernst\s*and\s*young)(?:\b|$)/i],
+      excludedTitleKeywords: ['magento', 'wordpress', 'shopify', 'drupal', 'php', 'ruby', 'rails', 'salesforce developer', 'ios developer', 'android developer', 'flutter', 'qa engineer', 'quality assurance', 'data engineer'],
       targetCompanies: DEFAULT_TARGET_COMPANIES,
       experience: {
         minYears: 2,
@@ -197,6 +199,7 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
       candidateName: 'Aswin',
       recipientEmail: env.RECIPIENT_EMAIL_JAVA || defaultRecipient,
       excludedCompanies: [/(?:^|\b)(?:tcs|tata\s*consultancy(?:\s*services)?)(?:\b|$)/i],
+      excludedTitleKeywords: ['magento', 'wordpress', 'shopify', 'drupal', 'php', 'ruby', 'rails', 'salesforce developer', 'ios developer', 'android developer', 'flutter', 'react native', '.net developer', 'c# developer'],
       targetCompanies: DEFAULT_TARGET_COMPANIES,
       experience: {
         minYears: 2,
@@ -271,6 +274,19 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
 }
 
 export function isJobMatchingProfile(job: RawJobListing, profile: JobProfile): boolean {
+  const titleLower = (job.title || '').toLowerCase();
+
+  // Enforce Title Relevance: Drop jobs with conflicting tech stack titles (e.g. Magento, PHP, WordPress)
+  if (profile.excludedTitleKeywords && profile.excludedTitleKeywords.length > 0) {
+    const isExcluded = profile.excludedTitleKeywords.some((pattern) => {
+      if (typeof pattern === 'string') {
+        return titleLower.includes(pattern.toLowerCase());
+      }
+      return pattern.test(titleLower);
+    });
+    if (isExcluded) return false;
+  }
+
   const combined = `${job.title} ${job.description || ''}`.toLowerCase();
 
   // For Full Stack, ensure role matches developer keywords AND at least one of target tech stack

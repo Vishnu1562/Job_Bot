@@ -45,6 +45,7 @@ export interface JobProfile {
   skills: SkillRule[];
   defaultTag: string;
   negativeKeywords?: string[];
+  excludedTitleKeywords?: (string | RegExp)[];
   excludedCompanies?: (string | RegExp)[];
   targetCompanies?: (string | RegExp)[];
   accentColor?: string;
