@@ -9,11 +9,11 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
       name: 'Power Platform Job Radar',
       recipientEmail: env.RECIPIENT_EMAIL_POWERPLATFORM || defaultRecipient,
       experience: {
-        minYears: 2,
+        minYears: 3,
         maxYears: 8,
-        excludedSeniority: ['director', 'vp', 'vice president', 'head of', 'intern', 'internship', 'fresher']
+        excludedSeniority: ['director', 'vp', 'vice president', 'head of', 'intern', 'internship', 'fresher', 'entry level']
       },
-      queryTerms: ['power apps', 'power platform', 'dynamics'],
+      queryTerms: ['power apps developer', 'power platform', 'power automate', 'sharepoint power apps'],
       keywords: [
         'power apps',
         'powerapps',
@@ -27,7 +27,11 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
         'powerpages',
         'power virtual agents',
         'copilot studio',
-        'dynamics 365'
+        'dynamics 365',
+        'sharepoint',
+        'sharegate',
+        'm365',
+        'pl-400'
       ],
       skills: [
         {
@@ -35,35 +39,43 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
           patterns: ['canvas app', 'canvas apps', /\bcanvas\b/i]
         },
         {
-          tag: '[Model-Driven]',
-          patterns: ['model driven', 'model-driven', 'modeldriven']
+          tag: '[Power Automate]',
+          patterns: ['power automate', 'powerautomate', 'cloud flow', 'ms flow', 'flow designer', 'approval workflow']
         },
         {
           tag: '[Dataverse]',
           patterns: ['dataverse', 'common data service', /\bcds\b/i]
         },
         {
-          tag: '[PCF]',
-          patterns: ['pcf', 'power apps component framework', 'powerapps component framework']
+          tag: '[SharePoint Online]',
+          patterns: ['sharepoint', 'sharepoint online', /\bspo\b/i, 'sharegate']
         },
         {
-          tag: '[Power Automate]',
-          patterns: ['power automate', 'powerautomate', 'cloud flow', 'ms flow', 'flow designer']
+          tag: '[M365 / PL-400]',
+          patterns: ['microsoft 365', 'm365', 'pl-400', 'pl 400']
         },
         {
           tag: '[Copilot Studio]',
           patterns: ['copilot studio', 'power virtual agents', /\bpva\b/i, 'copilot']
         },
         {
+          tag: '[Model-Driven]',
+          patterns: ['model driven', 'model-driven', 'modeldriven']
+        },
+        {
           tag: '[Power Pages]',
           patterns: ['power pages', 'powerpages', 'power portals', 'power apps portal']
+        },
+        {
+          tag: '[PCF]',
+          patterns: ['pcf', 'power apps component framework', 'powerapps component framework']
         },
         {
           tag: '[Dynamics 365]',
           patterns: ['dynamics 365', /\bd365\b/i, 'dynamics crm']
         }
       ],
-      defaultTag: '[Power Platform]',
+      defaultTag: '[Power Apps Developer]',
       accentColor: '#742774'
     },
     {
@@ -141,7 +153,7 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
       experience: {
         minYears: 2,
         maxYears: 6,
-        excludedSeniority: ['director', 'vp', 'vice president', 'head of', 'principal', 'intern', 'internship', 'fresher']
+        excludedSeniority: ['director', 'vp', 'vice president', 'head of', 'principal', 'intern', 'internship', 'fresher', 'entry level']
       },
       queryTerms: ['java developer', 'spring boot', 'java backend', 'java engineer'],
       keywords: [
@@ -192,12 +204,16 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
           patterns: ['docker', 'containerization', 'containers']
         },
         {
-          tag: '[Spring Security]',
-          patterns: ['spring security', 'jwt', 'oauth2']
+          tag: '[Spring Security / JWT]',
+          patterns: ['spring security', 'jwt', 'oauth2', 'authentication']
         },
         {
           tag: '[React]',
           patterns: [/(?:^|[^a-zA-Z0-9])react(?:$|[^a-zA-Z0-9])/i, /\breactjs\b/i]
+        },
+        {
+          tag: '[Python / Shell]',
+          patterns: [/(?:^|[^a-zA-Z0-9])python(?:$|[^a-zA-Z0-9])/i, 'shell scripting', 'bash', 'runbook', 'runbooks']
         }
       ],
       defaultTag: '[Java Developer]',

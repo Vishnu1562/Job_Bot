@@ -126,7 +126,19 @@ describe('[HF-007, HF-008, HF-009, EC-004] Multi-Profile Configuration & Matchin
       assert.ok(tags.includes('[Oracle SQL]'));
       assert.ok(tags.includes('[PostgreSQL]'));
       assert.ok(tags.includes('[Docker]'));
-      assert.ok(tags.includes('[Spring Security]'));
+      assert.ok(tags.includes('[Spring Security / JWT]'));
+    });
+
+    it('tags Python and Shell Scripting from Aswin resume (HF-017)', () => {
+      const profiles = getProfiles();
+      const javaProfile = profiles.find((p) => p.id === 'java-backend')!;
+
+      const tags = extractProfileSkillTags(
+        'Backend Automation Engineer',
+        'Strong in Python and Shell Scripting / Bash deployment runbooks.',
+        javaProfile
+      );
+      assert.ok(tags.includes('[Python / Shell]'));
     });
 
     it('does NOT false-positive match Java on pure JavaScript frontend jobs (EC-006)', () => {
@@ -143,6 +155,34 @@ describe('[HF-007, HF-008, HF-009, EC-004] Multi-Profile Configuration & Matchin
 
       const tags = extractProfileSkillTags(jsJob.title, jsJob.description, javaProfile);
       assert.strictEqual(tags.includes('[Java]'), false, 'Should not tag pure JavaScript as Java');
+    });
+  });
+
+  describe('[HF-016, NF-007] Power Platform Profile (Bhavya V - Resume-based)', () => {
+    it('sets experience bounds to 3-8 years matching Bhavya 6.1 yrs profile', () => {
+      const profiles = getProfiles();
+      const ppProfile = profiles.find((p) => p.id === 'power-platform')!;
+      assert.strictEqual(ppProfile.experience?.minYears, 3);
+      assert.strictEqual(ppProfile.experience?.maxYears, 8);
+    });
+
+    it('tags SharePoint Online and M365 / PL-400 from Bhavya resume (HF-016)', () => {
+      const profiles = getProfiles();
+      const ppProfile = profiles.find((p) => p.id === 'power-platform')!;
+
+      const jobDesc = `
+        Enterprise Canvas Apps developer needed.
+        Requires hands-on experience in SharePoint Online modernization and migration with ShareGate.
+        Deep knowledge of Microsoft 365 integration, Dataverse tables, and PL-400 certification preferred.
+        Experience in Copilot Studio is a plus.
+      `;
+
+      const tags = extractProfileSkillTags('Senior Power Apps Developer', jobDesc, ppProfile);
+      assert.ok(tags.includes('[Canvas Apps]'));
+      assert.ok(tags.includes('[Dataverse]'));
+      assert.ok(tags.includes('[SharePoint Online]'));
+      assert.ok(tags.includes('[M365 / PL-400]'));
+      assert.ok(tags.includes('[Copilot Studio]'));
     });
   });
 });

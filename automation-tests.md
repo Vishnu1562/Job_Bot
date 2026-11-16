@@ -3,9 +3,9 @@
 
 ### Feature / Change Summary
 Modular, generic, scalable Job Radar in Node.js / TypeScript that runs every morning via GitHub Actions, supports multiple search profiles with independent skill tagging and recipient mappings:
-1. **Power Platform Profile**: Power Apps, Power Automate, Dataverse, PCF, Copilot Studio, Power Pages, Dynamics 365.
-2. **Full Stack Profile**: Full Stack / Backend / Frontend Developer with NestJS, Angular, .NET, PostgreSQL, MSSQL, Azure DevOps, GitHub.
-3. **Java & Spring Boot Profile**: Enterprise Java Software Engineer with Spring Boot, JPA/Hibernate, Microservices, REST APIs, Oracle SQL, PostgreSQL, Docker.
+1. **Power Platform Profile (Bhavya V - 6.1 Yrs)**: Power Apps (Canvas Apps), Power Automate, Dataverse, SharePoint Online, M365 Integration, Copilot Studio, PL-400. Experience bounds: 3–8 years.
+2. **Full Stack Profile**: Full Stack / Backend / Frontend Developer with NestJS, Angular, .NET, PostgreSQL, MSSQL, Azure DevOps, GitHub. Experience bounds: 2–8 years.
+3. **Java & Spring Boot Profile (Aswin M Suthan - 4 Yrs)**: Enterprise Java Software Engineer with Spring Boot, JPA/Hibernate, Microservices, REST APIs, Oracle SQL, PostgreSQL, Docker, Spring Security/JWT, Python/Shell. Experience bounds: 2–6 years.
 Easily expandable with additional job profiles by adding definitions to `src/config/profiles.ts`.
 Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, generates tailored responsive HTML email digests, and dispatches to each profile's configured recipient (or defaults to `RECIPIENT_EMAIL`).
 
@@ -158,6 +158,18 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Accepted if title contains standard developer roles without excluded seniority titles.
 - **Final State**: Legitimate tech jobs with unstated experience are not dropped.
 
+#### [HF-016] Resume-Tailored Power Platform Experience & Skills (Bhavya V)
+- **Preconditions**: Power Platform profile configured with 3–8 years experience range.
+- **Action**: Ingestion checks for matching years (e.g. "4-6 years", "5+ years") and tags resume-specific skills: `[Canvas Apps]`, `[Power Automate]`, `[Dataverse]`, `[SharePoint Online]`, `[M365 / PL-400]`, `[Copilot Studio]`.
+- **Expected Result**: Jobs matching Bhavya's 6.1 years experience and skills are tagged and accepted.
+- **Final State**: Tailored Power Platform listings ready for dispatch.
+
+#### [HF-017] Resume-Tailored Java Backend Experience & Skills (Aswin M Suthan)
+- **Preconditions**: Java profile configured with 2–6 years experience range.
+- **Action**: Ingestion checks for matching years (e.g. "3-5 years", "4+ years") and tags resume-specific skills: `[Java]`, `[Spring Boot]`, `[Hibernate/JPA]`, `[Oracle SQL]`, `[PostgreSQL]`, `[Docker]`, `[Spring Security / JWT]`, `[Python / Shell]`.
+- **Expected Result**: Jobs matching Aswin's 4 years experience and enterprise banking skills are tagged and accepted.
+- **Final State**: Tailored Java backend listings ready for dispatch.
+
 ---
 
 ### Negative Flows
@@ -197,6 +209,12 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Action**: Experience matcher inspects job title against `profile.experience.excludedSeniority`.
 - **Expected Result**: Job is rejected even if no explicit years are mentioned.
 - **Final State**: Excluded leadership/fresher roles dropped.
+
+#### [NF-007] Junior Power Platform Role Rejection (Bhavya V - requires 3+ years)
+- **Preconditions**: Job requiring 1-2 years experience for Power Platform profile (minYears: 3).
+- **Action**: Experience matcher compares required max years against profile minYears.
+- **Expected Result**: Job requiring 1-2 years is rejected as below the 3-year threshold.
+- **Final State**: Only mid-to-senior roles delivered.
 
 ---
 
