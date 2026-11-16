@@ -36,6 +36,7 @@ export interface ExperienceConfig {
 export interface JobProfile {
   id: string;
   name: string;
+  candidateName?: string;
   recipientEmail: string;
   experience?: ExperienceConfig;
   queryTerms: string[];

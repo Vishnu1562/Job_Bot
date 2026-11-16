@@ -82,20 +82,23 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 
 #### [HF-004] Responsive HTML Email Generation (Jobs Found)
 - **Preconditions**: 1 or more new jobs identified for a profile.
-- **Action**: HTML template engine generates email with summary header: "✨ [Profile Name] • [X] New Roles Found Today".
+- **Action**: HTML template engine generates email with summary header: "✨ [Profile Name] • [X] New Roles Found Today" and personalized motivational greeting.
 - **Expected Result**: Beautiful, responsive HTML containing:
   - Daily header with profile name, job count, and scan date.
+  - Personal motivational greeting addressing candidate (e.g. "Hey Aswin! Take a deep breath — the job hunt is a journey, but you're doing great and you will find the right role. Here are today's top curated opportunities for you:").
   - Cards per job: Company name, Job title, Location badge, Skill tag pills, and an `[Apply Now ↗]` CTA button.
+  - Professional, warm footer sign-off ("Curated with care • Stay confident and keep going! ✨") without robotic infrastructure text ("running 24/7 on GitHub Actions", "Tracked via SQLite").
   - Inline CSS for compatibility across Outlook, Gmail, Apple Mail, and mobile clients.
 - **Final State**: Rendered HTML string ready for SMTP transport.
 
 #### [HF-005] Status Digest Generation (0 New Jobs Found)
 - **Preconditions**: 0 new jobs found after scraping and deduplication for a profile.
-- **Action**: Digest generator creates "0 New Roles Found Today" status email.
+- **Action**: Digest generator creates warm, motivating "0 New Roles Found Today" status email.
 - **Expected Result**: Email clearly states:
   - "✨ [Profile Name] • 0 New Roles Found Today"
-  - Confirmation message: "Radar active & scanning. No new roles matching your criteria since the last scan."
-- **Final State**: Status email ready for dispatch so user knows automation is healthy.
+  - Empathetic and encouraging message addressing the candidate (e.g. "Hey Aswin, it's completely fine! No worries at all if today was a bit quiet on new postings — good opportunities take time, but your skills and hard work speak for themselves. You will find the right fit!").
+  - Professional warm footer sign-off without technical developer jargon.
+- **Final State**: Status email ready for dispatch so candidate stays motivated and knows automation is healthy.
 
 #### [HF-006] SMTP Email Dispatcher
 - **Preconditions**: Valid SMTP credentials (`SENDER_EMAIL`, `SENDER_PASSWORD`, `RECIPIENT_EMAIL`).
@@ -169,6 +172,15 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Action**: Ingestion checks for matching years (e.g. "3-5 years", "4+ years") and tags resume-specific skills: `[Java]`, `[Spring Boot]`, `[Hibernate/JPA]`, `[Oracle SQL]`, `[PostgreSQL]`, `[Docker]`, `[Spring Security / JWT]`, `[Python / Shell]`.
 - **Expected Result**: Jobs matching Aswin's 4 years experience and enterprise banking skills are tagged and accepted.
 - **Final State**: Tailored Java backend listings ready for dispatch.
+
+#### [HF-018] Personalized & Motivating Email Digest Template
+- **Preconditions**: Candidate name configured per profile (`candidateName: 'Aswin'`, `candidateName: 'Bhavya'`, etc.).
+- **Action**: Template generator builds email with personalized motivational greeting, encouraging zero-job state, and professional warm footer.
+- **Expected Result**:
+  - Personal greeting at top: "Hey [Name]! Take a deep breath — the job hunt is a journey, but you're doing great and you will find the right role."
+  - When 0 jobs: "Hey [Name], it's completely fine! No worries at all if today was a bit quiet on new postings — good opportunities take time... You will find the right fit!"
+  - Replaces all technical server/bot strings (`running 24/7 on GitHub Actions`, `Tracked via SQLite`) with warm closing ("Curated with care • Stay confident and keep going! ✨").
+- **Final State**: Candidate receives an encouraging, personalized email tailored specifically for them.
 
 ---
 

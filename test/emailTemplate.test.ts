@@ -36,7 +36,7 @@ describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {
 
     assert.ok(subject.includes('0 New Roles Found Today'));
     assert.ok(html.includes('0 New Roles'));
-    assert.ok(html.includes('Radar active &amp; scanning') || html.includes('Radar active & scanning') || html.includes('Radar active'));
+    assert.ok(html.includes("it's completely fine!") || html.includes('completely fine'));
   });
 
   it('escapes special characters to prevent HTML corruption (EC-002)', () => {
@@ -62,5 +62,47 @@ describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {
     const { subject, html } = generateEmailDigestHtml([], 'Full Stack Developer Job Radar');
     assert.ok(subject.includes('Full Stack Developer Job Radar'));
     assert.ok(html.includes('Full Stack Developer Job Radar'));
+  });
+
+  describe('[HF-018] Personalized & Motivating Email Digest Template', () => {
+    const sampleJob: Job = {
+      id: '1',
+      title: 'Senior Java Backend Engineer',
+      company: 'FinTech Corp',
+      location: 'Kochi, India',
+      url: 'https://example.com/apply-fintech',
+      tags: ['[Spring Boot]', '[Java]'],
+      source: 'jobicy',
+      description: 'Java enterprise'
+    };
+
+    it('renders warm personalized greeting card for candidate when jobs are found', () => {
+      const { html } = generateEmailDigestHtml([sampleJob], 'Java & Spring Boot Developer Job Radar', '#ea580c', 'Aswin');
+      assert.ok(html.includes('Hey Aswin!'));
+      assert.ok(html.includes('you will find the right role'));
+      assert.ok(html.includes('Senior Java Backend Engineer'));
+    });
+
+    it('renders encouraging personalized message when 0 jobs are found', () => {
+      const { html } = generateEmailDigestHtml([], 'Java & Spring Boot Developer Job Radar', '#ea580c', 'Aswin');
+      assert.ok(html.includes("Hey Aswin, it's completely fine!"));
+      assert.ok(html.includes('find the right fit'));
+      assert.ok(html.includes('Stay confident and keep going!'));
+    });
+
+    it('removes robotic developer infrastructure text from footer', () => {
+      const { html } = generateEmailDigestHtml([sampleJob], 'Power Platform Job Radar', '#742774', 'Bhavya');
+      assert.ok(!html.includes('running 24/7 on GitHub Actions'), 'Should not contain GitHub Actions bot text');
+      assert.ok(!html.includes('Tracked via SQLite'), 'Should not contain SQLite tracking text');
+      assert.ok(!html.includes('Zero Server Costs'), 'Should not contain Zero Server Costs text');
+      assert.ok(html.includes('Curated with care'));
+      assert.ok(html.includes('Bhavya'));
+    });
+
+    it('defaults gracefully to friendly generic greeting when candidate name is omitted', () => {
+      const { html } = generateEmailDigestHtml([sampleJob]);
+      assert.ok(html.includes('Hey there!'));
+      assert.ok(!html.includes('undefined'));
+    });
   });
 });

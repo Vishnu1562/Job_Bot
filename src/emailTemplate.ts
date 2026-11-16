@@ -13,9 +13,11 @@ function escapeHtml(unsafe: string): string {
 export function generateEmailDigestHtml(
   jobs: Job[],
   profileName: string = 'Power Platform Job Radar',
-  accentColor: string = '#742774'
+  accentColor: string = '#742774',
+  candidateName?: string
 ): { subject: string; html: string } {
   const count = jobs.length;
+  const displayName = candidateName?.trim() || 'there';
   const today = new Date().toLocaleDateString('en-US', {
     weekday: 'long',
     year: 'numeric',
@@ -33,16 +35,30 @@ export function generateEmailDigestHtml(
   if (count === 0) {
     contentHtml = `
       <div style="background-color: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; padding: 32px 24px; text-align: center; margin-bottom: 24px;">
-        <div style="font-size: 40px; margin-bottom: 12px;">🎯</div>
-        <h3 style="margin: 0 0 8px 0; font-size: 18px; color: #1e293b; font-weight: 600;">Radar active &amp; scanning</h3>
-        <p style="margin: 0; font-size: 14px; color: #64748b; line-height: 1.5;">
-          No new roles matching your criteria were found since the last scan.<br>
-          We will keep scanning every morning and alert you as soon as fresh opportunities appear!
+        <div style="font-size: 40px; margin-bottom: 12px;">🌟</div>
+        <h3 style="margin: 0 0 8px 0; font-size: 18px; color: #1e293b; font-weight: 700;">Hey ${escapeHtml(displayName)}, it's completely fine!</h3>
+        <p style="margin: 0 0 12px 0; font-size: 14px; color: #475569; line-height: 1.6;">
+          No worries at all if today was a bit quiet on new postings &mdash; good opportunities take time, but your skills and hard work speak for themselves. You <strong>will</strong> find the right fit!
+        </p>
+        <p style="margin: 0; font-size: 13px; color: #64748b; line-height: 1.5;">
+          We'll keep scanning fresh feeds every morning and alert you the second an exciting role drops. Keep your head high and stay confident! 💪
         </p>
       </div>
     `;
   } else {
-    contentHtml = jobs
+    const greetingHtml = `
+      <!-- Motivational Greeting Card -->
+      <div style="background-color: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-left: 4px solid ${accentColor}; padding: 18px 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+        <p style="margin: 0 0 6px 0; font-size: 15px; font-weight: 700; color: #0f172a;">
+          Hey ${escapeHtml(displayName)}! 👋
+        </p>
+        <p style="margin: 0; font-size: 13px; color: #475569; line-height: 1.5;">
+          Take a deep breath &mdash; the job hunt is a journey, but you're doing great and you will find the right role! Here are today's top curated opportunities for you:
+        </p>
+      </div>
+    `;
+
+    const jobCardsHtml = jobs
       .map((job) => {
         const title = escapeHtml(job.title);
         const company = escapeHtml(job.company || 'Confidential Company');
@@ -91,6 +107,8 @@ export function generateEmailDigestHtml(
         </table>`;
       })
       .join('');
+
+    contentHtml = `${greetingHtml}\n${jobCardsHtml}`;
   }
 
   const html = `<!DOCTYPE html>
@@ -128,12 +146,12 @@ export function generateEmailDigestHtml(
           </tr>
           <!-- Footer -->
           <tr>
-            <td style="padding: 20px; text-align: center; color: #94a3b8; font-size: 12px; line-height: 1.6;">
-              <p style="margin: 0 0 6px 0;">
-                Automated by <strong>${escapeHtml(profileName)}</strong> running 24/7 on GitHub Actions.
+            <td style="padding: 24px 20px; text-align: center; color: #64748b; font-size: 13px; line-height: 1.6;">
+              <p style="margin: 0 0 6px 0; font-weight: 600; color: #334155;">
+                Curated with care &bull; Stay confident and keep going! ✨
               </p>
-              <p style="margin: 0;">
-                100% Free &bull; Zero Server Costs &bull; Tracked via SQLite
+              <p style="margin: 0; font-size: 11px; color: #94a3b8;">
+                Custom job alerts for ${escapeHtml(displayName)} &bull; Delivered every morning
               </p>
             </td>
           </tr>

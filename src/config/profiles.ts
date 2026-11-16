@@ -7,6 +7,7 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
     {
       id: 'power-platform',
       name: 'Power Platform Job Radar',
+      candidateName: 'Bhavya',
       recipientEmail: env.RECIPIENT_EMAIL_POWERPLATFORM || defaultRecipient,
       experience: {
         minYears: 3,
@@ -81,6 +82,7 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
     {
       id: 'full-stack',
       name: 'Full Stack Developer Job Radar',
+      candidateName: 'Vishnu',
       recipientEmail: env.RECIPIENT_EMAIL_FULLSTACK || defaultRecipient,
       experience: {
         minYears: 2,
@@ -149,6 +151,7 @@ export function getProfiles(env: Record<string, string | undefined> = process.en
     {
       id: 'java-backend',
       name: 'Java & Spring Boot Developer Job Radar',
+      candidateName: 'Aswin',
       recipientEmail: env.RECIPIENT_EMAIL_JAVA || defaultRecipient,
       experience: {
         minYears: 2,

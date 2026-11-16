@@ -44,7 +44,12 @@ async function main() {
         console.log(`[2/4] Identified ${newJobs.length} brand new, un-sent role(s).`);
 
         console.log('[3/4] Generating responsive HTML email digest...');
-        const { subject, html } = generateEmailDigestHtml(newJobs, profile.name, profile.accentColor);
+        const { subject, html } = generateEmailDigestHtml(
+          newJobs,
+          profile.name,
+          profile.accentColor,
+          profile.candidateName
+        );
 
         if (isDryRun) {
           const previewFile = path.resolve(`preview_${profile.id}.html`);
