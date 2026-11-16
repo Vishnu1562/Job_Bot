@@ -37,6 +37,8 @@ jobs:
 
       - name: Execute Job Radar & Dispatch Digest
         env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST || 'smtp-relay.brevo.com' }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT || '587' }}
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
           SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}

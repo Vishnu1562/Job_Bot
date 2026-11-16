@@ -153,7 +153,7 @@ Automated "Power Platform Job Radar" script in Node.js / TypeScript that runs ev
 ---
 
 ### Authentication / Authorization
-- `AUTH-001`: Gmail SMTP authentication using 16-character Google App Password over TLS port 587.
+- `AUTH-001`: SMTP authentication supporting free Brevo SMTP relay (`smtp-relay.brevo.com:587`), Gmail SMTP (`smtp.gmail.com:587`), or custom SMTP providers over TLS port 587. Configurable via `SMTP_HOST` (defaults to `smtp-relay.brevo.com`) and `SMTP_PORT` (defaults to `587`).
 
 ---
 

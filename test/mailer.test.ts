@@ -24,14 +24,28 @@ describe('[NF-003 & AUTH-001] Mailer Configuration Validation', () => {
     );
   });
 
-  it('succeeds when all 3 credentials are provided', () => {
+  it('succeeds when all 3 credentials are provided, defaulting to Brevo relay', () => {
     const config = validateMailerConfig({
-      SENDER_EMAIL: 'sender@gmail.com',
+      SENDER_EMAIL: 'sender@example.com',
       SENDER_PASSWORD: 'abcd efgh ijkl mnop',
       RECIPIENT_EMAIL: 'receiver@gmail.com'
     });
-    assert.strictEqual(config.senderEmail, 'sender@gmail.com');
+    assert.strictEqual(config.senderEmail, 'sender@example.com');
     assert.strictEqual(config.senderPassword, 'abcdefghijklmnop'); // whitespace stripped
     assert.strictEqual(config.recipientEmail, 'receiver@gmail.com');
+    assert.strictEqual(config.smtpHost, 'smtp-relay.brevo.com');
+    assert.strictEqual(config.smtpPort, 587);
+  });
+
+  it('allows custom SMTP_HOST and SMTP_PORT', () => {
+    const config = validateMailerConfig({
+      SMTP_HOST: 'smtp.gmail.com',
+      SMTP_PORT: '465',
+      SENDER_EMAIL: 'sender@gmail.com',
+      SENDER_PASSWORD: 'secretpassword',
+      RECIPIENT_EMAIL: 'receiver@gmail.com'
+    });
+    assert.strictEqual(config.smtpHost, 'smtp.gmail.com');
+    assert.strictEqual(config.smtpPort, 465);
   });
 });

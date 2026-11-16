@@ -5,6 +5,8 @@ export function validateMailerConfig(env: Record<string, string | undefined> = p
   const senderEmail = env.SENDER_EMAIL?.trim();
   const rawPassword = env.SENDER_PASSWORD?.trim();
   const recipientEmail = env.RECIPIENT_EMAIL?.trim();
+  const smtpHost = env.SMTP_HOST?.trim() || 'smtp-relay.brevo.com';
+  const smtpPort = parseInt(env.SMTP_PORT?.trim() || '587', 10);
 
   if (!senderEmail) {
     throw new Error('Missing required environment variable: SENDER_EMAIL');
@@ -16,13 +18,15 @@ export function validateMailerConfig(env: Record<string, string | undefined> = p
     throw new Error('Missing required environment variable: RECIPIENT_EMAIL');
   }
 
-  // Google App Passwords are 16 lowercase characters often formatted with spaces: 'abcd efgh ijkl mnop'
+  // Strip extraneous whitespace
   const senderPassword = rawPassword.replace(/\s+/g, '');
 
   return {
     senderEmail,
     senderPassword,
-    recipientEmail
+    recipientEmail,
+    smtpHost,
+    smtpPort
   };
 }
 
@@ -34,9 +38,9 @@ export async function sendDigestEmail(
   const config = overrideConfig || validateMailerConfig();
 
   const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false, // upgrades via STARTTLS
+    host: config.smtpHost,
+    port: config.smtpPort,
+    secure: config.smtpPort === 465,
     auth: {
       user: config.senderEmail,
       pass: config.senderPassword
@@ -51,5 +55,5 @@ export async function sendDigestEmail(
   };
 
   const info = await transporter.sendMail(mailOptions);
-  console.log(`[Mailer] Email dispatched successfully! MessageId: ${info.messageId}`);
+  console.log(`[Mailer] Email dispatched successfully via ${config.smtpHost}! MessageId: ${info.messageId}`);
 }

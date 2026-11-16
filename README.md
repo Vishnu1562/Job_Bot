@@ -59,40 +59,40 @@ Job_Bot/
 
 ---
 
-## 🔑 Step 1: Generate a Free Google "App Password"
+## 🔑 Step 1: Get Free SMTP Credentials from Brevo (2 Minutes, No Credit Card)
 
-To send automated emails through Gmail without compromising your master password, Google provides dedicated 16-character **App Passwords**.
+Brevo provides a **100% free forever tier** with 300 free emails per day and direct SMTP relay access without needing Google App Passwords:
 
-> **Note**: Your Google account must have **2-Step Verification** turned on.
-
-1. Go to your Google Account security settings: [https://myaccount.google.com/security](https://myaccount.google.com/security).
-2. Under the **"How you sign in to Google"** section, ensure **2-Step Verification** is enabled.
-3. In the search bar at the very top of your Google Account page, type: **`App passwords`** and select it (or navigate directly to [https://myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)).
-4. Under **"App name"**, enter a friendly label such as `Job Radar` and click **Create**.
-5. Google will display a yellow box with a **16-character code** (e.g. `abcd efgh ijkl mnop`).
-6. **Copy this 16-character code** (the spaces do not matter; our code automatically cleans them). This is your `SENDER_PASSWORD`.
+1. Sign up for free at [**https://www.brevo.com/**](https://www.brevo.com/) (Click **Sign up free** — no credit card needed).
+2. Once inside your dashboard, go to the SMTP Settings page: [**https://app.brevo.com/settings/keys/smtp**](https://app.brevo.com/settings/keys/smtp).
+3. On the **SMTP** tab, note your:
+   - **Login**: (e.g. `yourname@gmail.com` or your login ID). This is your `SENDER_EMAIL`.
+4. Click the blue **"Generate a new SMTP key"** button.
+5. Name it `Job Radar` and click **Generate**.
+6. **Copy the generated key**. This is your `SENDER_PASSWORD`.
 
 ---
 
 ## 🔒 Step 2: Add Secrets to GitHub
 
-To allow GitHub Actions to run securely without hardcoding your email credentials into git:
+To allow GitHub Actions to run securely without exposing credentials:
 
-1. Open your repository on GitHub: `https://github.com/Vishnu1562/Job_Bot`.
-2. Click on **Settings** (tab at the top right of the repository).
-3. In the left sidebar, click **Secrets and variables** &rarr; **Actions**.
-4. Click the green **New repository secret** button and add these three secrets:
+1. Open your repository on GitHub: [`https://github.com/Vishnu1562/Job_Bot`](https://github.com/Vishnu1562/Job_Bot).
+2. Go to **Settings** (tab at the top right) &rarr; **Secrets and variables** (left sidebar) &rarr; **Actions**.
+3. Click the green **New repository secret** button and add these three secrets:
 
 | Secret Name | Description | Example Value |
 |-------------|-------------|---------------|
-| `SENDER_EMAIL` | The Gmail address sending the digest | `your-email@gmail.com` |
-| `SENDER_PASSWORD` | The 16-character Google App Password | `abcdefghijklmnop` |
-| `RECIPIENT_EMAIL` | The email address where you want to receive digests | `destination@gmail.com` |
+| `SENDER_EMAIL` | Your Brevo SMTP login email | `your-brevo-login@gmail.com` |
+| `SENDER_PASSWORD` | The Brevo SMTP key generated in Step 1 | `xsmtpsib-...` |
+| `RECIPIENT_EMAIL` | Your personal email where you want to receive digests | `your.inbox@gmail.com` |
 
-5. **Ensure Workflow Write Permissions**:
-   - In your repo settings, go to **Actions** &rarr; **General**.
+4. *(Optional)* If you ever want to switch back to Gmail or Outlook later, you can also add `SMTP_HOST` (e.g. `smtp.gmail.com`). By default, it automatically uses Brevo (`smtp-relay.brevo.com`).
+
+5. **Enable Workflow Write Permissions**:
+   - In repository **Settings** &rarr; **Actions** &rarr; **General**.
    - Scroll down to **Workflow permissions**.
-   - Select **"Read and write permissions"** and click **Save**. (This allows the bot to commit `jobs.db` back to the repository so it never re-emails the same jobs).
+   - Select **"Read and write permissions"** and click **Save**. (This allows the bot to commit `jobs.db` back to git so duplicate jobs are never sent twice).
 
 ---
 
