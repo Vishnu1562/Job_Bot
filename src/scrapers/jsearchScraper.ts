@@ -1,15 +1,51 @@
 import { processCandidateJob, fetchWithTimeout } from './scraperUtils.ts';
-import { API_ENDPOINTS, JSEARCH_CANDIDATE_ENDPOINTS } from '../constants/apiEndpoints.ts';
+import { API_ENDPOINTS } from '../constants/apiEndpoints.ts';
 import type { Job, RawJobListing, JobProfile } from '../types.ts';
 
-let resolvedJSearchEndpoint: string | null = null;
-
-export function getResolvedJSearchEndpoint(): string | null {
-  return resolvedJSearchEndpoint;
+/**
+ * Shape of an individual raw job item returned by JSearch v5.
+ */
+export interface JSearchRawJob {
+  job_id?: string;
+  job_title?: string;
+  title?: string;
+  employer_name?: string;
+  company_name?: string;
+  company?: string;
+  job_city?: string;
+  city?: string;
+  job_state?: string;
+  state?: string;
+  job_country?: string;
+  country?: string;
+  job_is_remote?: boolean;
+  remote?: boolean;
+  is_remote?: boolean;
+  job_apply_link?: string;
+  apply_link?: string;
+  job_google_link?: string;
+  url?: string;
+  job_publisher?: string;
+  publisher?: string;
+  job_description?: string;
+  description?: string;
+  job_posted_at_datetime_utc?: string;
+  posted_at?: string;
+  date?: string;
+  [key: string]: any;
 }
 
-export function setResolvedJSearchEndpoint(url: string | null): void {
-  resolvedJSearchEndpoint = url;
+/**
+ * Verified JSearch v5 API response envelope.
+ */
+export interface JSearchApiResponse {
+  status?: string;
+  request_id?: string;
+  parameters?: Record<string, any>;
+  data?: {
+    jobs?: JSearchRawJob[];
+    [key: string]: any;
+  };
 }
 
 export function parseJSearchJob(raw: any, profile?: JobProfile): Job | null {
@@ -93,74 +129,42 @@ export async function fetchJSearchJobs(
 
   for (const q of profile.queryTerms.slice(0, 2)) {
     const searchQuery = `${q} in India`;
-    console.log(`[Scraper][JSearch] Requesting query: "${searchQuery}"`);
+    try {
+      const jsearchUrl = `${API_ENDPOINTS.JSEARCH}?query=${encodeURIComponent(
+        searchQuery
+      )}&num_pages=1&country=in&date_posted=all`;
 
-    const endpointsToTry: readonly string[] = resolvedJSearchEndpoint
-      ? [resolvedJSearchEndpoint]
-      : JSEARCH_CANDIDATE_ENDPOINTS;
+      console.log(`[Scraper][JSearch] Requesting: "${searchQuery}"`);
+      const res = await fetchWithTimeout(jsearchUrl, 12000, {
+        'x-rapidapi-key': rapidApiKey,
+        'x-rapidapi-host': 'jsearch.p.rapidapi.com'
+      });
 
-    for (const baseEndpoint of endpointsToTry) {
-      try {
-        const jsearchUrl = `${baseEndpoint}?query=${encodeURIComponent(
-          searchQuery
-        )}&num_pages=1&country=in&date_posted=all`;
-
-        const res = await fetchWithTimeout(jsearchUrl, 12000, {
-          'x-rapidapi-key': rapidApiKey,
-          'x-rapidapi-host': 'jsearch.p.rapidapi.com'
-        });
-
-        if (!res.ok) {
-          const errText = await res.text().catch(() => '');
-          if (res.status === 404 && (errText.includes('does not exist') || errText.includes('Not Found'))) {
-            console.warn(
-              `[Scraper][JSearch] ⚠️ Endpoint "${baseEndpoint}" returned 404 (${errText}). Testing next candidate...`
-            );
-            continue; // probe next endpoint
-          }
-          console.warn(
-            `[Scraper][JSearch] HTTP ${res.status} (${res.statusText}) for "${searchQuery}" via ${baseEndpoint}: ${errText}`
-          );
-          break; // other error (403, 429) -> don't spam other endpoints
-        }
-
-        const data: any = await res.json();
-        if (resolvedJSearchEndpoint !== baseEndpoint) {
-          resolvedJSearchEndpoint = baseEndpoint;
-          console.log(
-            `[Scraper][JSearch] 🎯 Discovered active endpoint: "${baseEndpoint}". Cached for subsequent queries.`
-          );
-        }
-
-        let items: any[] = [];
-        if (Array.isArray(data?.data?.jobs)) {
-          items = data.data.jobs;
-        } else if (Array.isArray(data?.data)) {
-          items = data.data;
-        } else if (Array.isArray(data?.jobs)) {
-          items = data.jobs;
-        } else if (Array.isArray(data?.results)) {
-          items = data.results;
-        } else if (Array.isArray(data)) {
-          items = data;
-        }
-
-        console.log(
-          `[Scraper][JSearch] JSearch returned ${items.length} raw items for "${searchQuery}" from ${baseEndpoint}.`
+      if (!res.ok) {
+        const errText = await res.text().catch(() => '');
+        console.warn(
+          `[Scraper][JSearch] HTTP ${res.status} (${res.statusText}) for "${searchQuery}": ${errText}`
         );
-        let addedCount = 0;
-        for (const item of items) {
-          const parsed = parseJSearchJob(item, profile);
-          if (parsed) {
-            addUnique(parsed);
-            addedCount++;
-          }
-        }
-        console.log(`[Scraper][JSearch] Filtered & added ${addedCount} matching role(s) for "${profile.name}".`);
-        break; // successfully queried for this term
-      } catch (err: any) {
-        console.warn(`[Scraper] JSearch query failed on ${baseEndpoint} for "${q}":`, err.message);
+        continue;
       }
+
+      const data = (await res.json()) as JSearchApiResponse;
+      const items: any[] = Array.isArray(data?.data?.jobs)
+        ? data.data.jobs
+        : (Array.isArray(data?.data) ? data.data : (Array.isArray(data?.jobs) ? data.jobs : []));
+
+      console.log(`[Scraper][JSearch] JSearch returned ${items.length} raw items for "${searchQuery}".`);
+      let addedCount = 0;
+      for (const item of items) {
+        const parsed = parseJSearchJob(item, profile);
+        if (parsed) {
+          addUnique(parsed);
+          addedCount++;
+        }
+      }
+      console.log(`[Scraper][JSearch] Filtered & added ${addedCount} matching role(s) for "${profile.name}".`);
+    } catch (err: any) {
+      console.warn(`[Scraper] JSearch query failed for "${q}":`, err.message);
     }
   }
 }

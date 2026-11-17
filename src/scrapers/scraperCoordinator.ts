@@ -15,9 +15,7 @@ export {
   parseJSearchJob,
   parseAdzunaJob,
   fetchJSearchJobs,
-  fetchAdzunaJobs,
-  getResolvedJSearchEndpoint,
-  setResolvedJSearchEndpoint
+  fetchAdzunaJobs
 } from './jsearchScraper.ts';
 
 export {

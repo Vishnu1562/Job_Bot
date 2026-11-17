@@ -225,13 +225,8 @@ describe('[HF-001] Scraper Normalizers & Parsers', () => {
       assert.strictEqual(job?.isTargetCompany, true, 'Microsoft is target company');
     });
 
-    it('recovers via auto-fallback when primary endpoint returns 404 does not exist', async () => {
-      const { fetchJSearchJobs, setResolvedJSearchEndpoint, getResolvedJSearchEndpoint } = await import(
-        '../src/scrapers/jsearchScraper.ts'
-      );
-
-      // Reset cache
-      setResolvedJSearchEndpoint(null);
+    it('queries search-v2 and extracts jobs from data.jobs', async () => {
+      const { fetchJSearchJobs } = await import('../src/scrapers/jsearchScraper.ts');
 
       const originalFetch = globalThis.fetch;
       const requestedUrls: string[] = [];
@@ -245,10 +240,12 @@ describe('[HF-001] Scraper Normalizers & Parsers', () => {
           return new Response(
             JSON.stringify({
               status: 'OK',
+              request_id: 'test-req-123',
+              parameters: { query: 'power apps developer in India' },
               data: {
                 jobs: [
                   {
-                    job_id: 'auto-fallback-1',
+                    job_id: 'v5-job-1',
                     job_title: 'Senior Power Apps Developer',
                     employer_name: 'Wipro Technologies', // note: excluded company for Celine
                     job_city: 'Bengaluru',
@@ -257,7 +254,7 @@ describe('[HF-001] Scraper Normalizers & Parsers', () => {
                     job_description: 'Power Apps and Dataverse 4 years exp'
                   },
                   {
-                    job_id: 'auto-fallback-2',
+                    job_id: 'v5-job-2',
                     job_title: 'Power Platform Developer',
                     employer_name: 'Infosys',
                     job_city: 'Kochi',
@@ -286,17 +283,14 @@ describe('[HF-001] Scraper Normalizers & Parsers', () => {
           if (job) collected.push(job);
         });
 
-        // Verify requested URL hits /search-v2
-        assert.ok(requestedUrls.some((u) => u.includes('/search-v2')));
-        // Verify job collection succeeded (Infosys accepted, Wipro excluded across 2 queries)
+        // Verify requested URL hits /search-v2 with country=in
+        assert.ok(requestedUrls.some((u) => u.includes('/search-v2') && u.includes('country=in')));
+        // Verify job collection succeeded (Infosys accepted, Wipro excluded across queries)
         assert.strictEqual(collected.length, 2);
         assert.strictEqual(collected[0].company, 'Infosys');
-        // Verify working endpoint was cached
-        assert.strictEqual(getResolvedJSearchEndpoint(), 'https://jsearch.p.rapidapi.com/search-v2');
       } finally {
         globalThis.fetch = originalFetch;
         delete process.env.RAPIDAPI_KEY;
-        setResolvedJSearchEndpoint(null);
       }
     });
   });
