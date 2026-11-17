@@ -369,6 +369,25 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Instant positive confirmation of saved status with auto-dismiss in 2.5 seconds.
 - **Final State**: Responsive, tactile user feedback.
 
+#### [HF-042] Dedicated Modular Web Portal Architecture (Clean Code TS/HTML/CSS)
+- **Preconditions**: Developer working on portal components or deployment build running.
+- **Action**: Portal source files are strictly separated by domain concern:
+  1. `src/portal/template.html`: Dedicated pure HTML structure without inlined `<style>` or `<script>` application code.
+  2. `src/portal/styles.css`: Dedicated pure stylesheet containing all design system rules, theme variables, and responsive layout.
+  3. `src/portal/app.ts`: Dedicated pure TypeScript client module with explicit interfaces, event controllers, and DOM handlers.
+  4. `src/portal/portalPageBuilder.ts`: Dedicated TypeScript builder that compiles `app.ts` -> `app.js` (via Node type stripping), injects data into `template.html`, and outputs clean modular files to `docs/` (`index.html`, `styles.css`, `app.js`, `jobs.json`).
+- **Expected Result**: Clear separation of concerns, zero monolithic strings in TypeScript, clean readable `docs/index.html` linking to external `styles.css` and `app.js`.
+- **Final State**: Highly maintainable, modular frontend architecture.
+
+#### [HF-043] Action Button Event Isolation (No Drawer Opening on Save/Applied)
+- **Preconditions**: User browsing job cards in Grid mode or rows in Table mode.
+- **Action**: User clicks the "⭐ Save" or "✅ Applied" button on a job card or row:
+  1. `event.stopPropagation()` stops event bubbling to the parent card/row.
+  2. Card footer and action button boundaries prevent triggering drawer expansion.
+  3. Job status toggles, toast confirmation fires, and button visual state updates without full-page re-rendering.
+- **Expected Result**: Description drawer DOES NOT open when saving or marking a job as applied. Drawer ONLY opens when clicking on the card body, title, company, or row content.
+- **Final State**: Polished, bug-free interaction without unexpected drawer popups.
+
 ---
 
 ### Negative Flows

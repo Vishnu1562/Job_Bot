@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Radar Portal • Modern Candidate Intelligence Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Glass Navigation -->
+  <header class="top-navbar">
+    <div class="nav-inner">
+      <div class="brand-group">
+        <a href="#" class="brand-logo">
+          ⚡ <span class="gradient-text">Job Radar Portal</span>
+        </a>
+        <div class="live-dot-badge">
+          <span class="live-pulse"></span>
+          Live Feed
+        </div>
+      </div>
+      <div class="nav-actions">
+        <!-- Grid vs Table View Mode (HF-040) -->
+        <div class="view-mode-toggle" id="view-mode-toggle">
+          <button class="view-btn active" data-view="grid">▦ Grid</button>
+          <button class="view-btn" data-view="table">≡ Table</button>
+        </div>
+        <!-- Dark / Light Theme Toggle (HF-038) -->
+        <button class="icon-btn" id="theme-toggle" title="Toggle Light / Dark Mode" data-action="toggle-theme">
+          🌙
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero & Live KPI Summary Bar (HF-038) -->
+  <div class="hero-container" id="app">
+    <!-- @portal:app -->
+    <div class="kpi-grid" id="kpi-stats-bar">
+      <div class="kpi-card">
+        <div class="kpi-icon-wrap" style="background: rgba(99, 102, 241, 0.15); color: #818cf8;">
+          📊
+        </div>
+        <div>
+          <div class="kpi-stat-value" id="kpi-total-jobs">{{TOTAL_JOBS_COUNT}}</div>
+          <div class="kpi-stat-label">Total Active Roles</div>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-icon-wrap" style="background: rgba(244, 63, 94, 0.15); color: #fb7185;">
+          🔥
+        </div>
+        <div>
+          <div class="kpi-stat-value" id="kpi-today-jobs">0</div>
+          <div class="kpi-stat-label">New in Today's Batch</div>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-icon-wrap" style="background: var(--emerald-bg); color: var(--emerald);">
+          📍
+        </div>
+        <div>
+          <div class="kpi-stat-value" id="kpi-domestic-jobs">0</div>
+          <div class="kpi-stat-label">Domestic Priority</div>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-icon-wrap" style="background: var(--amber-bg); color: var(--amber);">
+          ⭐
+        </div>
+        <div>
+          <div class="kpi-stat-value" id="kpi-saved-jobs">0</div>
+          <div class="kpi-stat-label">My Saved Roles</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls & Multi-Filters -->
+    <div class="controls-deck">
+      <!-- Search Input -->
+      <div class="search-row">
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" placeholder="Search by title, company, skills, or city...">
+          <span class="kbd-shortcut">/</span>
+        </div>
+      </div>
+
+      <!-- Profile Segmented Pills -->
+      <div class="filter-pills-row" id="profile-filters">
+        <span class="filter-label">Profile:</span>
+        <button class="pill-btn active" data-profile="all">All Roles ({{TOTAL_JOBS_COUNT}})</button>
+        {{PROFILE_PILLS}}
+      </div>
+
+      <!-- Candidate Status Tracker Filters -->
+      <div class="filter-pills-row" id="status-filters">
+        <span class="filter-label">Status:</span>
+        <button class="pill-btn active" data-status="all">All Active</button>
+        <button class="pill-btn" data-status="saved">⭐ Saved (<span id="status-saved-badge">0</span>)</button>
+        <button class="pill-btn" data-status="applied">✅ Applied (<span id="status-applied-badge">0</span>)</button>
+      </div>
+
+      <!-- Secondary Filters: Date & Tier -->
+      <div class="filter-pills-row" id="date-and-tier-filters">
+        <span class="filter-label">Timeline:</span>
+        <button class="pill-btn active" data-date="all">All Dates</button>
+        <button class="pill-btn" data-date="today">Today's Batch</button>
+        <button class="pill-btn" data-date="yesterday">Yesterday</button>
+
+        <span class="filter-label" style="margin-left: 12px;">Tier:</span>
+        <button class="pill-btn active" data-tier="all">All Tiers</button>
+        <button class="pill-btn" data-tier="domestic">📍 Domestic Priority</button>
+        <button class="pill-btn" data-tier="remote">🌐 Global Remote</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Feed Area -->
+  <main class="content-area" id="listings-container">
+    <!-- Injected dynamically by JavaScript -->
+  </main>
+
+  <!-- Slide-Over Job Detail Drawer (HF-039) -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <aside class="job-drawer" id="job-drawer">
+    <div class="drawer-header">
+      <div class="table-company-cell">
+        <div class="monogram-sm" id="drawer-company-monogram">C</div>
+        <div>
+          <div id="drawer-company" style="font-size: 13px; font-weight: 700; color: var(--text-muted);">Company</div>
+          <h2 id="drawer-title" style="font-size: 18px; font-weight: 800; color: var(--text-main); line-height: 1.3;">Job Title</h2>
+        </div>
+      </div>
+      <button class="drawer-close-btn" id="drawer-close" title="Close Drawer (Esc)">✕</button>
+    </div>
+    <div class="drawer-body">
+      <div id="drawer-badges" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;"></div>
+      <div id="drawer-location" style="font-size: 13px; color: var(--text-dim); display: flex; align-items: center; gap: 6px;"></div>
+      <div id="drawer-skills" style="display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 0;"></div>
+      <div class="drawer-desc" id="drawer-description"></div>
+    </div>
+    <div class="drawer-footer">
+      <div class="card-action-group">
+        <button class="action-icon-btn" id="drawer-save-btn" data-action="save" onclick="event.stopPropagation();">⭐ Save</button>
+        <button class="action-icon-btn" id="drawer-applied-btn" data-action="applied" onclick="event.stopPropagation();">✅ Applied</button>
+      </div>
+      <a href="#" target="_blank" rel="noopener noreferrer" class="btn-apply-cta" id="drawer-apply-link" onclick="event.stopPropagation();">
+        Apply Now ↗
+      </a>
+    </div>
+  </aside>
+
+  <!-- Toast Container (HF-041) -->
+  <div class="toast-container">
+    <div class="toast-pill" id="toast-notification">
+      <span id="toast-icon">✨</span>
+      <span id="toast-message">Action saved</span>
+    </div>
+  </div>
+
+  <!-- Embedded JSON Bootstrap for Offline & Local File Fallback (EC-021) -->
+  <script id="portal-data" type="application/json">
+{{PORTAL_DATA_JSON}}
+  </script>
+
+  <script defer src="app.js"></script>
+</body>
+</html>

@@ -133,7 +133,7 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
   describe('[HF-036 & EC-021] generateWebPortal & buildPortalHtml', () => {
     const testOutputDir = path.resolve('test-docs-temp');
 
-    it('generates a self-contained static HTML single-page dashboard with tier sections and offline bootstrap', () => {
+    it('generates a clean modular HTML dashboard linking to external CSS and JS [HF-042 & HF-043]', () => {
       // Ingest sample job
       db.saveJobIfNew({
         id: 'job-test-1',
@@ -149,57 +149,57 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
       const portalData = exportPortalData(db, testProfiles);
       const html = buildPortalHtml(portalData);
 
-      // 1. Verify HTML Structure & Branding
+      // 1. Verify Clean HTML Structure & External Asset Links (HF-042)
       assert.ok(html.includes('Job Radar Portal'), 'Must include title');
+      assert.ok(html.includes('<link rel="stylesheet" href="styles.css">'), 'Must link to external styles.css');
+      assert.ok(html.includes('<script src="app.js"') || html.includes('<script defer src="app.js"'), 'Must link to external app.js');
+      assert.ok(!html.includes('<style>\n    :root') && !html.includes('<style>:root'), 'Must NOT have monolithic inline <style> block');
       assert.ok(html.includes('<!-- @portal:app -->') || html.includes('id="app"'), 'Must have root container');
 
-      // 2. Verify Profile Tabs
+      // 2. Verify Profile Tabs & Filters in Template
       assert.ok(html.includes('Power Platform Radar'), 'Must render Power Platform tab');
       assert.ok(html.includes('Java Backend Radar'), 'Must render Java Backend tab');
 
-      // 3. Verify Tier Section Headings
-      assert.ok(html.includes('Domestic &amp; Regional Priority') || html.includes('Domestic & Regional Priority'), 'Must render Domestic Priority heading');
-      assert.ok(html.includes('Curated Global &amp; Remote') || html.includes('Curated Global & Remote'), 'Must render Global Remote heading');
-
-      // 4. Verify Interactive Search & LocalStorage tracker scripts
-      assert.ok(html.includes('localStorage'), 'Must include localStorage bookmark script');
-      assert.ok(html.includes('data-action="save"') || html.includes('toggleSave'), 'Must include save button handler');
-      assert.ok(html.includes('data-action="applied"') || html.includes('toggleApplied'), 'Must include applied button handler');
-
-      // 5. Verify Offline Bootstrap Data Embedded ([EC-021])
+      // 3. Verify Offline Bootstrap Data Embedded ([EC-021])
       assert.ok(html.includes('id="portal-data"'), 'Must include embedded JSON bootstrap for offline/file:// resilience');
       assert.ok(html.includes('job-test-1'), 'Embedded JSON must contain ingested jobs');
 
-      // 6. Verify Modern UI Redesign: KPI Stats Bar & Theme Toggle (HF-038)
+      // 4. Verify Modern UI Component Skeletons
       assert.ok(html.includes('id="kpi-stats-bar"'), 'Must include KPI summary stats bar');
       assert.ok(html.includes('id="theme-toggle"'), 'Must include Dark/Light theme toggle');
-      assert.ok(html.includes('company-monogram') || html.includes('getMonogramColor'), 'Must include company monogram avatars');
-
-      // 7. Verify Slide-over Job Detail Drawer (HF-039)
       assert.ok(html.includes('id="job-drawer"'), 'Must include slide-over job detail drawer');
       assert.ok(html.includes('id="drawer-overlay"'), 'Must include drawer backdrop overlay');
-
-      // 8. Verify View Mode Switcher: Grid vs Table (HF-040)
       assert.ok(html.includes('data-view="grid"') && html.includes('data-view="table"'), 'Must include View Mode switcher buttons');
-
-      // 9. Verify Toast Notifications (HF-041)
       assert.ok(html.includes('id="toast-notification"'), 'Must include toast notification container');
     });
 
-    it('writes index.html and jobs.json to destination folder without error', () => {
+    it('writes index.html, styles.css, app.js, and jobs.json to destination folder without error [HF-042 & HF-043]', () => {
       try {
         generateWebPortal(db, testProfiles, testOutputDir);
 
         const indexPath = path.join(testOutputDir, 'index.html');
+        const cssPath = path.join(testOutputDir, 'styles.css');
+        const jsPath = path.join(testOutputDir, 'app.js');
         const jsonPath = path.join(testOutputDir, 'jobs.json');
         const nojekyllPath = path.join(testOutputDir, '.nojekyll');
 
         assert.ok(fs.existsSync(indexPath), 'docs/index.html must be generated');
+        assert.ok(fs.existsSync(cssPath), 'docs/styles.css must be generated');
+        assert.ok(fs.existsSync(jsPath), 'docs/app.js must be generated');
         assert.ok(fs.existsSync(jsonPath), 'docs/jobs.json must be generated');
         assert.ok(fs.existsSync(nojekyllPath), 'docs/.nojekyll must be generated to bypass Jekyll');
 
         const indexContent = fs.readFileSync(indexPath, 'utf-8');
-        assert.ok(indexContent.length > 500, 'index.html must not be empty');
+        assert.ok(indexContent.includes('<link rel="stylesheet" href="styles.css">'), 'index.html must reference styles.css');
+        assert.ok(indexContent.includes('src="app.js"'), 'index.html must reference app.js');
+        assert.ok(!indexContent.includes('<style>\n    :root') && !indexContent.includes('<style>:root'), 'index.html must not contain inline CSS');
+
+        const cssContent = fs.readFileSync(cssPath, 'utf-8');
+        assert.ok(cssContent.includes(':root') && cssContent.includes('.job-drawer'), 'styles.css must contain CSS rules');
+
+        const jsContent = fs.readFileSync(jsPath, 'utf-8');
+        assert.ok(jsContent.includes('localStorage'), 'app.js must contain tracker persistence logic');
+        assert.ok(jsContent.includes('stopPropagation'), 'app.js must contain action event isolation (HF-043)');
 
         const jsonContent = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
         assert.strictEqual(typeof jsonContent.totalJobsCount, 'number');
