@@ -63,7 +63,45 @@ export class JobDatabase {
     this.db.exec(`
       CREATE INDEX IF NOT EXISTS idx_jobs_profile_url ON jobs (profile_id, url);
       CREATE INDEX IF NOT EXISTS idx_jobs_profile_emailed ON jobs (profile_id, emailed_at);
+      CREATE TABLE IF NOT EXISTS dispatch_history (
+        profile_id TEXT NOT NULL,
+        dispatch_date TEXT NOT NULL,
+        dispatched_at TEXT DEFAULT CURRENT_TIMESTAMP,
+        jobs_count INTEGER DEFAULT 0,
+        PRIMARY KEY (profile_id, dispatch_date)
+      );
     `);
+  }
+
+  public getTodayDateString(): string {
+    return new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Kolkata' }); // YYYY-MM-DD
+  }
+
+  public recordDispatch(profileId: string, dateStr?: string, jobsCount: number = 0): void {
+    const date = dateStr || this.getTodayDateString();
+    const stmt = this.db.prepare(`
+      INSERT OR REPLACE INTO dispatch_history (profile_id, dispatch_date, dispatched_at, jobs_count)
+      VALUES (?, ?, CURRENT_TIMESTAMP, ?)
+    `);
+    stmt.run(profileId, date, jobsCount);
+  }
+
+  public hasDispatchedToday(profileId: string, dateStr?: string): boolean {
+    const date = dateStr || this.getTodayDateString();
+    const stmt = this.db.prepare(`
+      SELECT 1 FROM dispatch_history WHERE profile_id = ? AND dispatch_date = ?
+    `);
+    const row = stmt.get(profileId, date);
+    return row !== undefined;
+  }
+
+  public getLastDispatch(profileId?: string): { profile_id: string; dispatch_date: string; dispatched_at: string; jobs_count: number } | null {
+    if (profileId) {
+      const stmt = this.db.prepare('SELECT * FROM dispatch_history WHERE profile_id = ? ORDER BY dispatched_at DESC LIMIT 1');
+      return (stmt.get(profileId) as any) || null;
+    }
+    const stmt = this.db.prepare('SELECT * FROM dispatch_history ORDER BY dispatched_at DESC LIMIT 1');
+    return (stmt.get() as any) || null;
   }
 
   public getTotalJobCount(profileId?: string): number {

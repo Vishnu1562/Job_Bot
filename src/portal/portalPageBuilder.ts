@@ -65,8 +65,24 @@ export function buildPortalHtml(data: PortalData): string {
 
   const jsonString = JSON.stringify(data);
 
+  let lastSyncedFormatted = 'Just now';
+  try {
+    const genDate = new Date(data.generatedAt);
+    lastSyncedFormatted = genDate.toLocaleString('en-US', {
+      timeZone: 'Asia/Kolkata',
+      month: 'short',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true
+    }) + ' IST';
+  } catch {
+    lastSyncedFormatted = data.generatedAt || 'Recent';
+  }
+
   return template
     .replace(/\{\{TOTAL_JOBS_COUNT\}\}/g, String(data.totalJobsCount))
+    .replace(/\{\{LAST_SYNCED_TIME\}\}/g, lastSyncedFormatted)
     .replace(/\{\{PROFILE_PILLS\}\}/g, profilePillsHtml)
     .replace(/\{\{PORTAL_DATA_JSON\}\}/g, jsonString);
 }

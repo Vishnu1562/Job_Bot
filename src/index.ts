@@ -11,14 +11,15 @@ import { generateWebPortal } from './portal/index.ts';
 import type { Job } from './types.ts';
 
 async function main() {
-  const isDryRun = process.argv.includes('--dry-run');
+  const isDryRun = process.argv.includes('--dry-run') || process.env.DRY_RUN === 'true';
+  const isForceDispatch = process.argv.includes('--force-dispatch') || process.env.FORCE_DISPATCH === 'true';
   const dbPath = process.env.DB_PATH || 'jobs.db';
 
   console.log('=====================================================');
   console.log('🚀 Multi-Profile Job Radar • Automated Scan');
   console.log(`⏰ Time: ${new Date().toISOString()}`);
   console.log(`💾 Database: ${dbPath}`);
-  console.log(`⚙️  Mode: ${isDryRun ? 'DRY RUN (no emails sent)' : 'PRODUCTION'}`);
+  console.log(`⚙️  Mode: ${isDryRun ? 'DRY RUN (no emails sent)' : 'PRODUCTION'}${isForceDispatch ? ' [FORCE DISPATCH]' : ''}`);
   const hasRapidApi = Boolean(process.env.RAPIDAPI_KEY?.trim());
   console.log(`🔑 RapidAPI Key: ${hasRapidApi ? `Detected (${process.env.RAPIDAPI_KEY?.trim().slice(0, 5)}...)` : '❌ NOT CONFIGURED (JSearch live LinkedIn/Naukri will be skipped)'}`);
   console.log('=====================================================');
@@ -109,8 +110,18 @@ async function main() {
           continue;
         }
 
+        const todayStr = db.getTodayDateString();
+        const alreadyDispatched = db.hasDispatchedToday(profile.id, todayStr);
+
+        if (alreadyDispatched && !isForceDispatch) {
+          console.log(`[DispatchGuard] Morning digest already dispatched for [${profile.id}] today (${todayStr}).`);
+          console.log(`[DispatchGuard] Skipping email to prevent duplicate delivery. (Pass --force-dispatch to override)`);
+          continue;
+        }
+
         console.log(`[4/4] Dispatching digest to ${profile.recipientEmail}: "${subject}"...`);
         await sendDigestEmail(subject, html, { recipientEmail: profile.recipientEmail }, text);
+        db.recordDispatch(profile.id, todayStr, displayedJobs.length);
 
         if (displayedJobs.length > 0) {
           const urlsToMark = displayedJobs.map((j) => j.url);

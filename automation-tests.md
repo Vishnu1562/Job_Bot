@@ -461,6 +461,18 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Cleaner card interface, reduced vertical card bulk, eliminating repetitive badge noise.
 - **Final State**: Streamlined cards where roles and companies are prioritized visually.
 
+#### [HF-051] Off-Peak Dispatch Scheduling, Self-Healing Watchdog & Once-Per-Day Guard
+- **Preconditions**: Daily GitHub Actions schedule configured with primary off-peak trigger and secondary safety watchdog.
+- **Action**:
+  1. Primary schedule set to 7:05 AM IST (`35 1 * * *` UTC) to run in low-traffic off-peak hours.
+  2. Backup watchdog schedule set to 8:35 AM IST (`05 3 * * *` UTC) as a self-healing safety net.
+  3. `JobDatabase` maintains `dispatch_history` recording successful daily dispatches per profile.
+  4. `hasDispatchedToday(profileId)` prevents duplicate email dispatches when the watchdog triggers if the primary run succeeded.
+  5. If the primary run failed or was skipped by GitHub, the watchdog automatically dispatches the morning digest.
+  6. Web portal navbar displays live "Last Synced" timestamp pill indicating exact sync time.
+- **Expected Result**: Guaranteed daily execution with zero duplicate email dispatches.
+- **Final State**: Robust self-healing pipeline with complete visibility.
+
 ---
 
 ### Negative Flows

@@ -302,4 +302,23 @@ describe('[HF-003, ST-001, REG-001] SQLite Deduplication Database', () => {
       assert.strictEqual(queue.length, 0, 'Emailed job must never appear in unemailed queue');
     });
   });
+
+  describe('[HF-051] Daily Dispatch History & Once-Per-Day Guard', () => {
+    it('initializes dispatch_history table and tracks daily dispatches', () => {
+      // @ts-ignore
+      assert.strictEqual(db.hasDispatchedToday('power-platform', '2026-11-17'), false);
+
+      // @ts-ignore
+      db.recordDispatch('power-platform', '2026-11-17', 15);
+
+      // @ts-ignore
+      assert.strictEqual(db.hasDispatchedToday('power-platform', '2026-11-17'), true);
+      // Different profile has not dispatched yet
+      // @ts-ignore
+      assert.strictEqual(db.hasDispatchedToday('java-backend', '2026-11-17'), false);
+      // Different date has not dispatched yet
+      // @ts-ignore
+      assert.strictEqual(db.hasDispatchedToday('power-platform', '2026-11-18'), false);
+    });
+  });
 });
