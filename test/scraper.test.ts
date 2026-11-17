@@ -236,43 +236,37 @@ describe('[HF-001] Scraper Normalizers & Parsers', () => {
       const originalFetch = globalThis.fetch;
       const requestedUrls: string[] = [];
 
-      // Mock global fetch to simulate 404 on /job-search, then 200 on /search
+      // Mock global fetch to simulate search-v2 returning { data: { jobs: [...] } }
       globalThis.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
         const urlStr = input.toString();
         requestedUrls.push(urlStr);
 
-        if (urlStr.includes('/job-search')) {
-          return new Response(JSON.stringify({ message: "Endpoint '/job-search' does not exist" }), {
-            status: 404,
-            statusText: 'Not Found',
-            headers: { 'Content-Type': 'application/json' }
-          });
-        }
-
-        if (urlStr.includes('/search')) {
+        if (urlStr.includes('/search-v2')) {
           return new Response(
             JSON.stringify({
               status: 'OK',
-              data: [
-                {
-                  job_id: 'auto-fallback-1',
-                  job_title: 'Senior Power Apps Developer',
-                  employer_name: 'Wipro Technologies', // note: excluded company for Celine
-                  job_city: 'Bengaluru',
-                  job_country: 'IN',
-                  job_apply_link: 'https://example.com/job1',
-                  job_description: 'Power Apps and Dataverse 4 years exp'
-                },
-                {
-                  job_id: 'auto-fallback-2',
-                  job_title: 'Power Platform Developer',
-                  employer_name: 'Infosys',
-                  job_city: 'Kochi',
-                  job_country: 'IN',
-                  job_apply_link: 'https://example.com/job2',
-                  job_description: 'Power Apps, Dataverse, SharePoint Online 4 years exp'
-                }
-              ]
+              data: {
+                jobs: [
+                  {
+                    job_id: 'auto-fallback-1',
+                    job_title: 'Senior Power Apps Developer',
+                    employer_name: 'Wipro Technologies', // note: excluded company for Celine
+                    job_city: 'Bengaluru',
+                    job_country: 'IN',
+                    job_apply_link: 'https://example.com/job1',
+                    job_description: 'Power Apps and Dataverse 4 years exp'
+                  },
+                  {
+                    job_id: 'auto-fallback-2',
+                    job_title: 'Power Platform Developer',
+                    employer_name: 'Infosys',
+                    job_city: 'Kochi',
+                    job_country: 'IN',
+                    job_apply_link: 'https://example.com/job2',
+                    job_description: 'Power Apps, Dataverse, SharePoint Online 4 years exp'
+                  }
+                ]
+              }
             }),
             {
               status: 200,
@@ -292,13 +286,13 @@ describe('[HF-001] Scraper Normalizers & Parsers', () => {
           if (job) collected.push(job);
         });
 
-        // Verify fallback attempted candidate endpoints
-        assert.ok(requestedUrls.some((u) => u.includes('/job-search') || u.includes('/search')));
+        // Verify requested URL hits /search-v2
+        assert.ok(requestedUrls.some((u) => u.includes('/search-v2')));
         // Verify job collection succeeded (Infosys accepted, Wipro excluded across 2 queries)
         assert.strictEqual(collected.length, 2);
         assert.strictEqual(collected[0].company, 'Infosys');
         // Verify working endpoint was cached
-        assert.strictEqual(getResolvedJSearchEndpoint(), 'https://jsearch.p.rapidapi.com/search');
+        assert.strictEqual(getResolvedJSearchEndpoint(), 'https://jsearch.p.rapidapi.com/search-v2');
       } finally {
         globalThis.fetch = originalFetch;
         delete process.env.RAPIDAPI_KEY;

@@ -6,15 +6,14 @@
  * Candidate JSearch RapidAPI endpoints probed in sequence to self-heal across version routing shifts.
  */
 export const JSEARCH_CANDIDATE_ENDPOINTS = [
-  'https://jsearch.p.rapidapi.com/job-search',
+  'https://jsearch.p.rapidapi.com/search-v2',
   'https://jsearch.p.rapidapi.com/search',
-  'https://jsearch.p.rapidapi.com/jobs',
-  'https://jsearch.p.rapidapi.com/v1/search'
+  'https://jsearch.p.rapidapi.com/job-search'
 ] as const;
 
 export const API_ENDPOINTS = {
-  /** RapidAPI Google for Jobs aggregator (LinkedIn, Naukri, Indeed, Glassdoor) */
-  JSEARCH: 'https://jsearch.p.rapidapi.com/job-search',
+  /** RapidAPI Google for Jobs aggregator (LinkedIn, Naukri, Indeed, Glassdoor via v5 search-v2) */
+  JSEARCH: 'https://jsearch.p.rapidapi.com/search-v2',
   JSEARCH_LEGACY: 'https://jsearch.p.rapidapi.com/search',
 
   /** Adzuna India developer job search API */

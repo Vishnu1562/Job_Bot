@@ -103,11 +103,11 @@ export async function fetchJSearchJobs(
       try {
         const jsearchUrl = `${baseEndpoint}?query=${encodeURIComponent(
           searchQuery
-        )}&num_pages=1&date_posted=all`;
+        )}&num_pages=1&country=in&date_posted=all`;
 
         const res = await fetchWithTimeout(jsearchUrl, 12000, {
-          'X-RapidAPI-Key': rapidApiKey,
-          'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
+          'x-rapidapi-key': rapidApiKey,
+          'x-rapidapi-host': 'jsearch.p.rapidapi.com'
         });
 
         if (!res.ok) {
@@ -133,7 +133,9 @@ export async function fetchJSearchJobs(
         }
 
         let items: any[] = [];
-        if (Array.isArray(data?.data)) {
+        if (Array.isArray(data?.data?.jobs)) {
+          items = data.data.jobs;
+        } else if (Array.isArray(data?.data)) {
           items = data.data;
         } else if (Array.isArray(data?.jobs)) {
           items = data.jobs;
