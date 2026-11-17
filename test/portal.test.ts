@@ -115,6 +115,11 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
       assert.strictEqual(javaData.length, 1);
       assert.strictEqual(javaData[0].id, 'job-java-today');
       assert.strictEqual(javaData[0].tier, 'domestic');
+
+      // Verify candidateName is omitted for privacy on public portal (HF-035)
+      data.profiles.forEach((p: any) => {
+        assert.strictEqual(p.candidateName, undefined, 'Must not expose candidateName in public portal data');
+      });
     });
 
     it('gracefully handles empty database ([NF-010])', () => {

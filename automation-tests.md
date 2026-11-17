@@ -313,7 +313,8 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
      - 📍 **Domestic & Regional Priority (LinkedIn, Naukri & Corporate Boards)**
      - 🌐 **Curated Global & Remote Opportunities**
   3. Tags priority target companies with `⭐ Priority Target`.
-- **Expected Result**: Returns structured JSON data partitioned by profile, date, and tier for client-side rendering.
+  4. Omits private candidate names (`candidateName`) from public portal payloads to ensure candidate privacy on public web deployment.
+- **Expected Result**: Returns structured JSON data partitioned by profile, date, and tier for client-side rendering with zero private candidate names exposed.
 - **Final State**: Clean, normalized data layer ready for static site generation.
 
 #### [HF-036] Static Web Portal Generator (Single-Page App on GitHub Pages)

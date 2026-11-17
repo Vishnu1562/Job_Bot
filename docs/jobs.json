@@ -1,26 +1,23 @@
 {
-  "generatedAt": "2026-11-17T09:35:36.122Z",
+  "generatedAt": "2026-11-17T09:51:24.631Z",
   "totalJobsCount": 113,
   "profiles": [
     {
       "id": "power-platform",
       "name": "Power Platform Job Radar",
       "accentColor": "#742774",
-      "candidateName": "Celine",
       "jobsCount": 19
     },
     {
       "id": "full-stack",
       "name": "Full Stack Developer Job Radar",
       "accentColor": "#0284c7",
-      "candidateName": "Vishnu",
       "jobsCount": 63
     },
     {
       "id": "java-backend",
       "name": "Java & Spring Boot Developer Job Radar",
       "accentColor": "#ea580c",
-      "candidateName": "Aswin",
       "jobsCount": 31
     }
   ],

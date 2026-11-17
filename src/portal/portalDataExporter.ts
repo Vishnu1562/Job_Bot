@@ -23,7 +23,6 @@ export interface PortalProfileData {
   id: string;
   name: string;
   accentColor: string;
-  candidateName?: string;
   jobsCount: number;
 }
 
@@ -130,7 +129,6 @@ export function exportPortalData(db: JobDatabase, profiles: JobProfile[]): Porta
     id: p.id,
     name: p.name,
     accentColor: p.accentColor,
-    candidateName: p.candidateName,
     jobsCount: (jobsByProfile[p.id] || []).length
   }));
 
