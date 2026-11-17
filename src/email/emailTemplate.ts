@@ -1,4 +1,5 @@
 import type { Job } from '../types.ts';
+import { loadTemplate, renderTemplate } from './templateLoader.ts';
 
 export function escapeHtml(unsafe: string): string {
   if (!unsafe) return '';
@@ -11,13 +12,10 @@ export function escapeHtml(unsafe: string): string {
 }
 
 function renderJobCard(job: Job, accentColor: string): string {
-  const title = escapeHtml(job.title);
-  const company = escapeHtml(job.company || 'Confidential Company');
-  const location = escapeHtml(job.location || 'India / Remote');
-  const source = escapeHtml(job.source ? job.source.toUpperCase() : 'JOB FEED');
   const targetBadge = job.isTargetCompany
     ? `<span style="display: inline-block; background-color: #fef08a; color: #854d0e; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; border: 1px solid #fde047; margin-left: 8px;">⭐ Priority Target</span>`
     : '';
+
   const tagsHtml = job.tags
     .map(
       (tag) => `
@@ -27,38 +25,16 @@ function renderJobCard(job: Job, accentColor: string): string {
     )
     .join('');
 
-  return `
-  <!-- Job Card -->
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 18px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); overflow: hidden;">
-    <tr>
-      <td style="padding: 24px 20px;">
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-          <tr>
-            <td>
-              <span style="font-size: 11px; font-weight: 700; color: ${accentColor}; text-transform: uppercase; letter-spacing: 0.5px;">${source}</span>${targetBadge}
-              <h3 style="margin: 6px 0 4px 0; font-size: 18px; font-weight: 700; color: #0f172a; line-height: 1.3;">${title}</h3>
-              <p style="margin: 0 0 14px 0; font-size: 14px; color: #475569; font-weight: 500;">
-                <strong style="color: #1e293b;">${company}</strong> &bull; 
-                <span style="display: inline-block; background-color: #f0fdf4; color: #166534; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 4px; border: 1px solid #bbf7d0;">📍 ${location}</span>
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding: 4px 0 16px 0;">
-              ${tagsHtml}
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="${escapeHtml(job.url)}" target="_blank" style="display: inline-block; background-color: ${accentColor}; color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 700; padding: 10px 22px; border-radius: 8px; letter-spacing: 0.3px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);">
-                Apply Now ↗
-              </a>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>`;
+  return renderTemplate(loadTemplate('job-card.html'), {
+    accentColor,
+    source: escapeHtml(job.source ? job.source.toUpperCase() : 'JOB FEED'),
+    targetBadge,
+    title: escapeHtml(job.title),
+    company: escapeHtml(job.company || 'Confidential Company'),
+    location: escapeHtml(job.location || 'India / Remote'),
+    tagsHtml,
+    url: escapeHtml(job.url)
+  });
 }
 
 function renderSectionHeader(
@@ -69,25 +45,14 @@ function renderSectionHeader(
   badgeColor: string,
   badgeBg: string
 ): string {
-  return `
-  <!-- Section Header -->
-  <div style="margin: 22px 0 14px 0; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0;">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-      <tr>
-        <td>
-          <span style="font-size: 15px; font-weight: 800; color: #0f172a; letter-spacing: -0.2px;">
-            ${icon} ${escapeHtml(title)}
-          </span>
-          <span style="display: inline-block; background-color: ${badgeBg}; color: ${badgeColor}; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 12px; margin-left: 8px;">
-            ${escapeHtml(badgeText)}
-          </span>
-          <p style="margin: 4px 0 0 0; font-size: 12px; color: #64748b; font-weight: 500;">
-            ${escapeHtml(subtitle)}
-          </p>
-        </td>
-      </tr>
-    </table>
-  </div>`;
+  return renderTemplate(loadTemplate('section-header.html'), {
+    icon,
+    title: escapeHtml(title),
+    badgeBg,
+    badgeColor,
+    badgeText: escapeHtml(badgeText),
+    subtitle: escapeHtml(subtitle)
+  });
 }
 
 export function generateEmailDigestHtml(
@@ -163,30 +128,14 @@ export function generateEmailDigestHtml(
   let contentHtml = '';
 
   if (count === 0) {
-    contentHtml = `
-      <div style="background-color: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; padding: 32px 24px; text-align: center; margin-bottom: 24px;">
-        <div style="font-size: 40px; margin-bottom: 12px;">🌟</div>
-        <h3 style="margin: 0 0 8px 0; font-size: 18px; color: #1e293b; font-weight: 700;">Hey ${escapeHtml(displayName)}, it's completely fine!</h3>
-        <p style="margin: 0 0 12px 0; font-size: 14px; color: #475569; line-height: 1.6;">
-          No worries at all if today was a bit quiet on new postings &mdash; good opportunities take time, but your skills and hard work speak for themselves. You <strong>will</strong> find the right fit!
-        </p>
-        <p style="margin: 0; font-size: 13px; color: #64748b; line-height: 1.5;">
-          We'll keep scanning fresh feeds every morning and alert you the second an exciting role drops. Keep your head high and stay confident! 💪
-        </p>
-      </div>
-    `;
+    contentHtml = renderTemplate(loadTemplate('empty-state.html'), {
+      displayName: escapeHtml(displayName)
+    });
   } else {
-    const greetingHtml = `
-      <!-- Motivational Greeting Card -->
-      <div style="background-color: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-left: 4px solid ${accentColor}; padding: 18px 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
-        <p style="margin: 0 0 6px 0; font-size: 15px; font-weight: 700; color: #0f172a;">
-          Hey ${escapeHtml(displayName)}! 👋
-        </p>
-        <p style="margin: 0; font-size: 13px; color: #475569; line-height: 1.5;">
-          Take a deep breath &mdash; the job hunt is a journey, but you're doing great and you will find the right role! Here are today's top curated opportunities for you:
-        </p>
-      </div>
-    `;
+    const greetingHtml = renderTemplate(loadTemplate('greeting-card.html'), {
+      displayName: escapeHtml(displayName),
+      accentColor
+    });
 
     let sectionsHtml = '';
 
@@ -218,13 +167,11 @@ export function generateEmailDigestHtml(
 
     const overflowHtml =
       overflowCount > 0
-        ? `
-      <!-- Overflow Summary Card -->
-      <div style="background-color: #ffffff; border-radius: 12px; border: 1px dashed #cbd5e1; padding: 18px 20px; text-align: center; margin-bottom: 20px;">
-        <p style="margin: 0; font-size: 13px; color: #475569; font-weight: 600;">
-          ⚡ +${overflowCount} additional ${overflowCount === 1 ? 'role' : 'roles'} identified today &bull; Top ${displayedJobs.length} priority matches displayed above
-        </p>
-      </div>`
+        ? renderTemplate(loadTemplate('overflow-card.html'), {
+            overflowCount,
+            roleWord: overflowCount === 1 ? 'role' : 'roles',
+            displayedCount: displayedJobs.length
+          })
         : '';
 
     contentHtml = `${greetingHtml}\n${sectionsHtml}${overflowHtml}`;
@@ -249,56 +196,17 @@ export function generateEmailDigestHtml(
     text = `⚡ ${dispatchEdition} • ${profileName}\n\nHey ${displayName}! Take a deep breath — the job hunt is a journey, but you're doing great and you will find the right role!\nHere are today's ${count} curated opportunities:\n\n${jobLines}${overflowText}\n\nCurated with care • Stay confident and keep going! ✨\nCustom job alerts for ${displayName} • Delivered daily`;
   }
 
-  const html = `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${escapeHtml(subject)}</title>
-</head>
-<body style="margin: 0; padding: 0; background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; color: #1e293b;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8fafc; padding: 30px 15px;">
-    <tr>
-      <td align="center">
-        <!-- Main Container -->
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width: 620px;">
-          <!-- Header Banner -->
-          <tr>
-            <td style="background: linear-gradient(135deg, ${accentColor} 0%, #0f172a 100%); border-radius: 14px 14px 0 0; padding: 32px 28px; text-align: left; color: #ffffff;">
-              <div style="display: inline-block; background-color: rgba(255, 255, 255, 0.15); padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">
-                ⚡ ${escapeHtml(dispatchEdition)}
-              </div>
-              <h1 style="margin: 0 0 8px 0; font-size: 24px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px;">
-                ${escapeHtml(profileName)}
-              </h1>
-              <p style="margin: 0; font-size: 14px; color: #e2e8f0; font-weight: 500;">
-                ${count} fresh role${count === 1 ? '' : 's'} identified for India &bull; ${today}
-              </p>
-            </td>
-          </tr>
-          <!-- Body Content -->
-          <tr>
-            <td style="background-color: #f8fafc; padding: 24px 0;">
-              ${contentHtml}
-            </td>
-          </tr>
-          <!-- Footer -->
-          <tr>
-            <td style="padding: 24px 20px; text-align: center; color: #64748b; font-size: 13px; line-height: 1.6;">
-              <p style="margin: 0 0 6px 0; font-weight: 600; color: #334155;">
-                Curated with care &bull; Stay confident and keep going! ✨
-              </p>
-              <p style="margin: 0; font-size: 11px; color: #94a3b8;">
-                Custom job alerts for ${escapeHtml(displayName)} &bull; Delivered daily
-              </p>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-</body>
-</html>`;
+  const html = renderTemplate(loadTemplate('layout.html'), {
+    title: escapeHtml(subject),
+    accentColor,
+    dispatchEdition: escapeHtml(dispatchEdition),
+    profileName: escapeHtml(profileName),
+    count,
+    pluralS: count === 1 ? '' : 's',
+    today,
+    content: contentHtml,
+    displayName: escapeHtml(displayName)
+  });
 
   return { subject, html, text, displayedJobs };
 }

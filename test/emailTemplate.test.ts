@@ -401,5 +401,42 @@ describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {
       assert.strictEqual(displayedDomestic.length, 12, 'Must display all 12 domestic jobs');
       assert.strictEqual(displayedRemote.length, 3, 'Must cap remote jobs so total is 15');
     });
+
+    describe('[HF-029, HF-030, EC-016] Dedicated HTML Template Files & Engine', () => {
+      it('loads standalone .html files and substitutes tokens cleanly (HF-029)', async () => {
+        const { loadTemplate, renderTemplate } = await import('../src/email/templateLoader.ts');
+        const layoutHtml = loadTemplate('layout.html');
+        assert.ok(layoutHtml.includes('{{content}}'), 'layout.html must contain {{content}} placeholder');
+        assert.ok(layoutHtml.includes('{{title}}'), 'layout.html must contain {{title}} placeholder');
+
+        const rendered = renderTemplate(layoutHtml, {
+          title: 'Custom Digest',
+          content: '<p>Test Content</p>',
+          accentColor: '#123456',
+          dispatchEdition: 'Morning Dispatch',
+          profileName: 'Power Platform',
+          today: 'Monday, Nov 17',
+          displayName: 'Celine'
+        });
+
+        assert.ok(rendered.includes('Custom Digest'));
+        assert.ok(rendered.includes('<p>Test Content</p>'));
+        assert.ok(!rendered.includes('{{title}}'), 'No unresolved placeholders should remain');
+      });
+
+      it('safely cleans up unmatched placeholders without syntax leakage (EC-016)', async () => {
+        const { renderTemplate } = await import('../src/email/templateLoader.ts');
+        const template = '<div>{{known}} and {{unknownToken}}</div>';
+        const rendered = renderTemplate(template, { known: 'Value' });
+        assert.strictEqual(rendered, '<div>Value and </div>', 'Unmatched placeholder must be replaced with empty string');
+      });
+
+      it('supports per-profile custom template overrides with generic fallback (HF-030)', async () => {
+        const { loadTemplate } = await import('../src/email/templateLoader.ts');
+        // When requesting with unknown or default profile, falls back to generic template
+        const genericLayout = loadTemplate('layout.html', 'non-existent-profile');
+        assert.ok(genericLayout.includes('{{content}}'));
+      });
+    });
   });
 });

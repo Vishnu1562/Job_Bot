@@ -269,6 +269,25 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Prevents stale jobs from piling up indefinitely and prevents artificial inflation of queue counts.
 - **Final State**: Only active, fresh listings (≤ 48 hours) remain in the dispatch queue.
 
+#### [HF-029] Dedicated Standalone HTML Templates & Generic Loader
+- **Preconditions**: Email digest generator called to produce HTML output.
+- **Action**: Template engine loads pure standalone `.html` files from `src/email/templates/`:
+  - `layout.html` (main responsive email shell)
+  - `job-card.html` (single job card presentation)
+  - `section-header.html` (section divider and badges)
+  - `greeting-card.html` (motivational greeting card)
+  - `empty-state.html` (0 jobs status card)
+  - `overflow-card.html` (backlog indicator card)
+  Injects values into `{{token}}` placeholders safely with HTML escaping.
+- **Expected Result**: Clean separation between TypeScript business logic and HTML presentation. Zero raw HTML strings in `.ts` files.
+- **Final State**: Modular, maintainable HTML templates with native editor syntax highlighting and reusable generic components.
+
+#### [HF-030] Per-Profile Custom Template Override Resolution
+- **Preconditions**: Profile configured with custom layout needs or optional dedicated template file.
+- **Action**: Template loader checks for profile-specific template overrides (e.g. `templates/profiles/${profileId}.html`), falling back cleanly to generic `layout.html`.
+- **Expected Result**: Generic templates serve all services by default without code duplication, while allowing profile-specific customization when desired.
+- **Final State**: Flexible, DRY templating architecture.
+
 ---
 
 ### Negative Flows
@@ -410,6 +429,18 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Action**: Sorter dynamically allows the other category to backfill up to the total email cap (15 jobs).
 - **Expected Result**: Candidate receives a full, high-quality digest without empty slots or dead sections.
 - **Final State**: Robust digest rendering across all volume scenarios.
+
+#### [EC-016] Missing Placeholder Graceful Handling
+- **Preconditions**: A template file contains an unassigned placeholder or dynamic data is missing a field.
+- **Action**: Template renderer cleans up unreplaced tokens or replaces with empty string.
+- **Expected Result**: Output does not display raw `{{unmatchedToken}}` in candidate-facing emails.
+- **Final State**: Polished email presentation with zero syntax leakage.
+
+#### [EC-017] Secure HTML Escaping across Template Boundary
+- **Preconditions**: Job fields or candidate names containing raw HTML characters (`<`, `>`, `&`, `"`).
+- **Action**: Template engine escapes values before token injection into HTML templates.
+- **Expected Result**: Prevents HTML structure breakage and sanitizes all external text.
+- **Final State**: 100% XSS-safe email generation.
 
 ---
 
