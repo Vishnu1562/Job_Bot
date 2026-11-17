@@ -222,7 +222,7 @@ describe('[HF-003, ST-001, REG-001] SQLite Deduplication Database', () => {
       // @ts-ignore
       db['db'].prepare(`UPDATE jobs SET scraped_at = datetime('now', '-10 days'), emailed_at = datetime('now', '-10 days') WHERE id = 'job-10-days'`).run();
 
-      // 3. Unemailed job in active queue (must be immune from prune - EC-020)
+      // 3. Fresh unemailed job in active queue (must be protected from prune - EC-020)
       db.saveJobIfNew({
         id: 'job-unemailed',
         title: 'Active Queue Role',
@@ -234,25 +234,42 @@ describe('[HF-003, ST-001, REG-001] SQLite Deduplication Database', () => {
         description: 'Active description'
       }, 'java-backend');
 
-      assert.strictEqual(db.getTotalJobCount('java-backend'), 3);
+      // 4. Stale unemailed job older than 60 days (must be unconditionally deleted - HF-033)
+      db.saveJobIfNew({
+        id: 'job-unemailed-old',
+        title: '75 Day Stale Unemailed Role',
+        company: 'Stale Corp',
+        location: 'India',
+        url: 'https://example.com/job-stale-old',
+        tags: ['[Java]'],
+        source: 'linkedin',
+        description: 'Stale description'
+      }, 'java-backend');
+      // @ts-ignore
+      db['db'].prepare(`UPDATE jobs SET scraped_at = datetime('now', '-75 days'), emailed_at = NULL WHERE id = 'job-unemailed-old'`).run();
+
+      assert.strictEqual(db.getTotalJobCount('java-backend'), 4);
 
       const prunedCount = db.pruneHistoricalJobs(60);
-      assert.strictEqual(prunedCount, 1, 'Should prune exactly 1 job older than 60 days');
+      assert.strictEqual(prunedCount, 2, 'Should prune exactly 2 jobs older than 60 days (1 emailed, 1 unemailed)');
 
-      // Total count should now be 2
+      // Total count should now be 2 (retained 10-day emailed + fresh active unemailed)
       assert.strictEqual(db.getTotalJobCount('java-backend'), 2);
 
-      // 70 day old job is gone
+      // 70-day old emailed job is gone
       assert.strictEqual(db.isJobKnown('https://example.com/job-70-days', 'java-backend'), false);
 
-      // 10 day old job is retained for deduplication (HF-034)
+      // 75-day old unemailed job is unconditionally gone (HF-033)
+      assert.strictEqual(db.isJobKnown('https://example.com/job-stale-old', 'java-backend'), false);
+
+      // 10-day old job is retained for deduplication (HF-034)
       assert.strictEqual(db.isJobKnown('https://example.com/job-10-days', 'java-backend'), true);
       // Description is compacted to NULL to save space
       // @ts-ignore
       const retainedJob = db['db'].prepare(`SELECT description FROM jobs WHERE id = 'job-10-days'`).get() as { description: string | null };
       assert.strictEqual(retainedJob.description, null, 'Emailed job description should be cleared to conserve SQLite storage');
 
-      // Active unemailed job is preserved intact (EC-020)
+      // Fresh active unemailed job is preserved intact (EC-020)
       assert.strictEqual(db.isJobKnown('https://example.com/job-active', 'java-backend'), true);
       const queue = db.getUnemailedJobs('java-backend');
       assert.strictEqual(queue.length, 1);

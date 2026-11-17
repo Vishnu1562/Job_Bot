@@ -191,12 +191,8 @@ export class JobDatabase {
     if (profileId) {
       deleteStmt = this.db.prepare(`
         DELETE FROM jobs
-        WHERE emailed_at IS NOT NULL
-          AND profile_id = ?
-          AND (
-            emailed_at < datetime('now', '-' || ? || ' days')
-            OR scraped_at < datetime('now', '-' || ? || ' days')
-          )
+        WHERE profile_id = ?
+          AND scraped_at < datetime('now', '-' || ? || ' days')
       `);
       compactStmt = this.db.prepare(`
         UPDATE jobs
@@ -205,17 +201,13 @@ export class JobDatabase {
           AND profile_id = ?
           AND description IS NOT NULL
       `);
-      const info = deleteStmt.run(profileId, days, days);
+      const info = deleteStmt.run(profileId, days);
       compactStmt.run(profileId);
       return Number(info.changes || 0);
     } else {
       deleteStmt = this.db.prepare(`
         DELETE FROM jobs
-        WHERE emailed_at IS NOT NULL
-          AND (
-            emailed_at < datetime('now', '-' || ? || ' days')
-            OR scraped_at < datetime('now', '-' || ? || ' days')
-          )
+        WHERE scraped_at < datetime('now', '-' || ? || ' days')
       `);
       compactStmt = this.db.prepare(`
         UPDATE jobs
@@ -223,7 +215,7 @@ export class JobDatabase {
         WHERE emailed_at IS NOT NULL
           AND description IS NOT NULL
       `);
-      const info = deleteStmt.run(days, days);
+      const info = deleteStmt.run(days);
       compactStmt.run();
       return Number(info.changes || 0);
     }
