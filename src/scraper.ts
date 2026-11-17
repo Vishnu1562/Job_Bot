@@ -134,7 +134,8 @@ export function parseJSearchJob(raw: any, profile?: JobProfile): Job | null {
 
   const city = raw.job_city || '';
   const state = raw.job_state || '';
-  const country = raw.job_country || 'India';
+  const rawCountry = (raw.job_country || '').toUpperCase();
+  const country = rawCountry === 'IN' || rawCountry === 'INDIA' || !rawCountry ? 'India' : raw.job_country;
   const locationParts = [city, state, country].filter(Boolean);
   let location = locationParts.length > 0 ? locationParts.join(', ') : 'India';
   if (raw.job_is_remote) {
@@ -142,6 +143,8 @@ export function parseJSearchJob(raw: any, profile?: JobProfile): Job | null {
   }
 
   const url = raw.job_apply_link || raw.job_google_link || '';
+  if (!url) return null;
+
   const publisher = raw.job_publisher ? raw.job_publisher.toLowerCase() : 'linkedin';
 
   const rawListing: RawJobListing = {
@@ -363,26 +366,40 @@ export async function fetchJobsForProfile(profile: JobProfile): Promise<Job[]> {
     // 6. JSearch API (LinkedIn, Naukri, Indeed via Google for Jobs across Pan-India IT Hubs)
     async () => {
       const rapidApiKey = process.env.RAPIDAPI_KEY?.trim();
-      if (!rapidApiKey) return;
+      if (!rapidApiKey) {
+        console.log(`[Scraper][JSearch] No RAPIDAPI_KEY configured; skipping JSearch live job query.`);
+        return;
+      }
 
+      console.log(`[Scraper][JSearch] RAPIDAPI_KEY detected (${rapidApiKey.slice(0, 5)}...). Querying live LinkedIn/Naukri/Indeed jobs...`);
       for (const q of profile.queryTerms.slice(0, 2)) {
         try {
           const searchQuery = `${q} in India`;
           const jsearchUrl = `https://jsearch.p.rapidapi.com/search?query=${encodeURIComponent(
             searchQuery
-          )}&page=1&num_pages=1&country=in&date_posted=all`;
-          const res = await fetchWithTimeout(jsearchUrl, 10000, {
-            'x-rapidapi-key': rapidApiKey,
-            'x-rapidapi-host': 'jsearch.p.rapidapi.com'
+          )}&page=1&num_pages=1&date_posted=all`;
+          console.log(`[Scraper][JSearch] Requesting: "${searchQuery}"`);
+          const res = await fetchWithTimeout(jsearchUrl, 12000, {
+            'X-RapidAPI-Key': rapidApiKey,
+            'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
           });
-          if (res.ok) {
-            const data: any = await res.json();
-            if (Array.isArray(data?.data)) {
-              for (const item of data.data) {
-                addUnique(parseJSearchJob(item, profile));
-              }
+          if (!res.ok) {
+            const errText = await res.text().catch(() => '');
+            console.warn(`[Scraper][JSearch] HTTP ${res.status} (${res.statusText}) for "${searchQuery}": ${errText}`);
+            continue;
+          }
+          const data: any = await res.json();
+          const items = Array.isArray(data?.data) ? data.data : [];
+          console.log(`[Scraper][JSearch] JSearch returned ${items.length} raw items for "${searchQuery}".`);
+          let addedCount = 0;
+          for (const item of items) {
+            const parsed = parseJSearchJob(item, profile);
+            if (parsed) {
+              addUnique(parsed);
+              addedCount++;
             }
           }
+          console.log(`[Scraper][JSearch] Filtered & added ${addedCount} matching role(s) for "${profile.name}".`);
         } catch (err: any) {
           console.warn(`[Scraper] JSearch query failed for "${q}":`, err.message);
         }
