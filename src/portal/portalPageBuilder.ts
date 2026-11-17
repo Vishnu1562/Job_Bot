@@ -33,6 +33,11 @@ export function getPortalJs(): string {
   return tsContent;
 }
 
+export function getPortalFavicon(): string {
+  const faviconPath = path.join(__dirname, 'favicon.svg');
+  return fs.readFileSync(faviconPath, 'utf-8');
+}
+
 export function formatProfileShortName(name: string): string {
   if (!name) return '';
   return name
@@ -70,7 +75,7 @@ export function generateWebPortal(
   db: JobDatabase,
   profiles: JobProfile[],
   outputDir: string = 'docs'
-): { portalData: PortalData; indexPath: string; jsonPath: string; cssPath: string; jsPath: string } {
+): { portalData: PortalData; indexPath: string; jsonPath: string; cssPath: string; jsPath: string; faviconPath: string } {
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
   }
@@ -79,20 +84,23 @@ export function generateWebPortal(
   const html = buildPortalHtml(portalData);
   const css = getPortalCss();
   const js = getPortalJs();
+  const favicon = getPortalFavicon();
 
   const indexPath = path.join(outputDir, 'index.html');
   const cssPath = path.join(outputDir, 'styles.css');
   const jsPath = path.join(outputDir, 'app.js');
   const jsonPath = path.join(outputDir, 'jobs.json');
   const nojekyllPath = path.join(outputDir, '.nojekyll');
+  const faviconPath = path.join(outputDir, 'favicon.svg');
 
   fs.writeFileSync(indexPath, html, 'utf-8');
   fs.writeFileSync(cssPath, css, 'utf-8');
   fs.writeFileSync(jsPath, js, 'utf-8');
+  fs.writeFileSync(faviconPath, favicon, 'utf-8');
   fs.writeFileSync(jsonPath, JSON.stringify(portalData, null, 2), 'utf-8');
   if (!fs.existsSync(nojekyllPath)) {
     fs.writeFileSync(nojekyllPath, '', 'utf-8');
   }
 
-  return { portalData, indexPath, jsonPath, cssPath, jsPath };
+  return { portalData, indexPath, jsonPath, cssPath, jsPath, faviconPath };
 }

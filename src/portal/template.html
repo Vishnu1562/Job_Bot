@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,7 +16,14 @@
     <div class="nav-inner">
       <div class="brand-group">
         <a href="#" class="brand-logo">
-          ⚡ <span class="gradient-text">Job Radar Portal</span>
+          <svg class="brand-icon-svg" viewBox="0 0 32 32" width="24" height="24" style="vertical-align: middle; flex-shrink: 0;">
+            <circle cx="16" cy="16" r="13" fill="none" stroke="#6366f1" stroke-opacity="0.3" stroke-width="2"/>
+            <circle cx="16" cy="16" r="8" fill="none" stroke="#a855f7" stroke-opacity="0.5" stroke-width="2"/>
+            <circle cx="16" cy="16" r="3.5" fill="#6366f1"/>
+            <path d="M16 16 L26 8 A13 13 0 0 0 16 3 Z" fill="url(#radarSweep)" opacity="0.6"/>
+            <circle cx="21" cy="9" r="2.5" fill="#10b981"/>
+          </svg>
+          <span class="gradient-text">Job Radar Portal</span>
         </a>
         <div class="live-dot-badge">
           <span class="live-pulse"></span>

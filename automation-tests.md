@@ -406,6 +406,15 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Clean, intuitive geographical classification without confusing engineering jargon.
 - **Final State**: Candidate-centric UI clarity.
 
+#### [HF-046] High-Resolution Vector Favicon & Brand Iconography
+- **Preconditions**: Web portal opened in desktop or mobile web browser.
+- **Action**:
+  1. `<head>` contains `<link rel="icon" type="image/svg+xml" href="favicon.svg">`.
+  2. Dedicated vector asset `docs/favicon.svg` is generated, featuring a modern radar sweep with concentric signal rings and an active role discovery blip.
+  3. Browser tab displays the custom glowing radar emblem, replacing the default browser blank globe icon.
+- **Expected Result**: Crisp high-DPI browser tab branding and polished visual identity.
+- **Final State**: Complete visual finish across browser chrome and page viewport.
+
 ---
 
 ### Negative Flows

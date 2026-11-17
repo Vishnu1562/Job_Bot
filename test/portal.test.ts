@@ -177,6 +177,10 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
       // 5. Verify User-Facing Region Terminology (HF-045)
       assert.ok(html.includes('All Regions'), 'Toolbar must display "All Regions"');
       assert.ok(!html.includes('All Tiers'), 'Toolbar must NOT display engineering jargon "All Tiers"');
+
+      // 6. Verify Favicon Link (HF-046)
+      assert.ok(html.includes('rel="icon"'), 'Must include favicon link');
+      assert.ok(html.includes('favicon.svg'), 'Must reference favicon.svg');
     });
 
     it('writes index.html, styles.css, app.js, and jobs.json to destination folder without error [HF-042 & HF-043]', () => {
@@ -188,12 +192,14 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
         const jsPath = path.join(testOutputDir, 'app.js');
         const jsonPath = path.join(testOutputDir, 'jobs.json');
         const nojekyllPath = path.join(testOutputDir, '.nojekyll');
+        const faviconPath = path.join(testOutputDir, 'favicon.svg');
 
         assert.ok(fs.existsSync(indexPath), 'docs/index.html must be generated');
         assert.ok(fs.existsSync(cssPath), 'docs/styles.css must be generated');
         assert.ok(fs.existsSync(jsPath), 'docs/app.js must be generated');
         assert.ok(fs.existsSync(jsonPath), 'docs/jobs.json must be generated');
         assert.ok(fs.existsSync(nojekyllPath), 'docs/.nojekyll must be generated to bypass Jekyll');
+        assert.ok(fs.existsSync(faviconPath), 'docs/favicon.svg must be generated (HF-046)');
 
         const indexContent = fs.readFileSync(indexPath, 'utf-8');
         assert.ok(indexContent.includes('<link rel="stylesheet" href="styles.css">'), 'index.html must reference styles.css');
