@@ -2,9 +2,20 @@
  * Centralized registry of all external job board APIs, aggregators, and RSS feeds.
  */
 
+/**
+ * Candidate JSearch RapidAPI endpoints probed in sequence to self-heal across version routing shifts.
+ */
+export const JSEARCH_CANDIDATE_ENDPOINTS = [
+  'https://jsearch.p.rapidapi.com/job-search',
+  'https://jsearch.p.rapidapi.com/search',
+  'https://jsearch.p.rapidapi.com/jobs',
+  'https://jsearch.p.rapidapi.com/v1/search'
+] as const;
+
 export const API_ENDPOINTS = {
   /** RapidAPI Google for Jobs aggregator (LinkedIn, Naukri, Indeed, Glassdoor) */
-  JSEARCH: 'https://jsearch.p.rapidapi.com/search',
+  JSEARCH: 'https://jsearch.p.rapidapi.com/job-search',
+  JSEARCH_LEGACY: 'https://jsearch.p.rapidapi.com/search',
 
   /** Adzuna India developer job search API */
   ADZUNA_INDIA: 'https://api.adzuna.com/v1/api/jobs/in/search/1',

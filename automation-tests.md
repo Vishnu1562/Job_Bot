@@ -232,6 +232,17 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: All LinkedIn, Naukri, and Indeed roles appear first at the top of the email digest, followed by target company openings, followed by generic remote postings.
 - **Final State**: Candidates see actionable domestic LinkedIn/Naukri jobs first, followed by target companies, preventing generic remote feeds from taking the top slots.
 
+#### [HF-024 & RR-002] Multi-Version JSearch Endpoint Auto-Fallback & Shape Normalization
+- **Preconditions**: RapidAPI JSearch API version routing shifts (e.g., `v5 (current)` exposing `GET /job-search` vs legacy `GET /search`, `/jobs`, or `/v1/search`).
+- **Action**:
+  - Scraper maintains a candidate endpoint registry (`/job-search`, `/search`, `/jobs`, `/v1/search`).
+  - When encountering HTTP 404 with `"Endpoint '...' does not exist"`, automatically falls back to the next candidate endpoint.
+  - Upon receiving HTTP 200 OK, caches the resolved working endpoint in memory for all subsequent query terms and profile scans.
+  - Normalizes varied response payload wrappers (`data.data`, `data.jobs`, `data.results`, or root array).
+  - Normalizes varied attribute names across versions (`job_title` / `title`, `employer_name` / `company_name` / `company`, `job_apply_link` / `url`, `job_city` / `city`, etc.).
+- **Expected Result**: Automatic recovery from endpoint 404 errors; successfully ingests live LinkedIn/Naukri postings and caches the correct route.
+- **Final State**: Resilient and self-healing JSearch integration across RapidAPI API version shifts.
+
 ---
 
 ### Negative Flows

@@ -197,6 +197,116 @@ describe('[HF-001] Scraper Normalizers & Parsers', () => {
     });
   });
 
+  describe('[HF-024 & RR-002] Multi-Version JSearch Endpoint Auto-Fallback & Shape Normalization', () => {
+    const profiles = getProfiles();
+    const powerProfile = profiles.find((p) => p.id === 'power-platform')!;
+
+    it('correctly maps JSearch v5 shape with alternate field names', () => {
+      const v5Raw = {
+        id: 'v5-role-777',
+        title: 'Power Apps & Power Automate Consultant',
+        company_name: 'Microsoft',
+        city: 'Hyderabad',
+        state: 'Telangana',
+        country: 'IN',
+        remote: false,
+        apply_link: 'https://careers.microsoft.com/jobs/v5-role-777?ref=rapidapi',
+        publisher: 'Naukri',
+        description: 'Design Power Platform, Dataverse, Canvas Apps, and Power Automate flows for 4-6 years experienced professionals.'
+      };
+
+      const job = parseJSearchJob(v5Raw, powerProfile);
+      assert.ok(job, 'Must successfully parse v5 job structure');
+      assert.strictEqual(job?.title, 'Power Apps & Power Automate Consultant');
+      assert.strictEqual(job?.company, 'Microsoft');
+      assert.ok(job?.location.includes('Hyderabad'));
+      assert.strictEqual(job?.url, 'https://careers.microsoft.com/jobs/v5-role-777');
+      assert.strictEqual(job?.source, 'naukri');
+      assert.strictEqual(job?.isTargetCompany, true, 'Microsoft is target company');
+    });
+
+    it('recovers via auto-fallback when primary endpoint returns 404 does not exist', async () => {
+      const { fetchJSearchJobs, setResolvedJSearchEndpoint, getResolvedJSearchEndpoint } = await import(
+        '../src/scrapers/jsearchScraper.ts'
+      );
+
+      // Reset cache
+      setResolvedJSearchEndpoint(null);
+
+      const originalFetch = globalThis.fetch;
+      const requestedUrls: string[] = [];
+
+      // Mock global fetch to simulate 404 on /job-search, then 200 on /search
+      globalThis.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
+        const urlStr = input.toString();
+        requestedUrls.push(urlStr);
+
+        if (urlStr.includes('/job-search')) {
+          return new Response(JSON.stringify({ message: "Endpoint '/job-search' does not exist" }), {
+            status: 404,
+            statusText: 'Not Found',
+            headers: { 'Content-Type': 'application/json' }
+          });
+        }
+
+        if (urlStr.includes('/search')) {
+          return new Response(
+            JSON.stringify({
+              status: 'OK',
+              data: [
+                {
+                  job_id: 'auto-fallback-1',
+                  job_title: 'Senior Power Apps Developer',
+                  employer_name: 'Wipro Technologies', // note: excluded company for Celine
+                  job_city: 'Bengaluru',
+                  job_country: 'IN',
+                  job_apply_link: 'https://example.com/job1',
+                  job_description: 'Power Apps and Dataverse 4 years exp'
+                },
+                {
+                  job_id: 'auto-fallback-2',
+                  job_title: 'Power Platform Developer',
+                  employer_name: 'Infosys',
+                  job_city: 'Kochi',
+                  job_country: 'IN',
+                  job_apply_link: 'https://example.com/job2',
+                  job_description: 'Power Apps, Dataverse, SharePoint Online 4 years exp'
+                }
+              ]
+            }),
+            {
+              status: 200,
+              statusText: 'OK',
+              headers: { 'Content-Type': 'application/json' }
+            }
+          );
+        }
+
+        return new Response('Not found', { status: 404 });
+      };
+
+      try {
+        process.env.RAPIDAPI_KEY = 'test_key_12345';
+        const collected: any[] = [];
+        await fetchJSearchJobs(powerProfile, (job) => {
+          if (job) collected.push(job);
+        });
+
+        // Verify fallback attempted candidate endpoints
+        assert.ok(requestedUrls.some((u) => u.includes('/job-search') || u.includes('/search')));
+        // Verify job collection succeeded (Infosys accepted, Wipro excluded across 2 queries)
+        assert.strictEqual(collected.length, 2);
+        assert.strictEqual(collected[0].company, 'Infosys');
+        // Verify working endpoint was cached
+        assert.strictEqual(getResolvedJSearchEndpoint(), 'https://jsearch.p.rapidapi.com/search');
+      } finally {
+        globalThis.fetch = originalFetch;
+        delete process.env.RAPIDAPI_KEY;
+        setResolvedJSearchEndpoint(null);
+      }
+    });
+  });
+
   describe('[REG-004] Centralized API Endpoints & Feeds Registry', () => {
     it('verifies all API and RSS endpoints are defined and are valid HTTPS URLs', async () => {
       const { API_ENDPOINTS, RSS_FEEDS } = await import('../src/constants/apiEndpoints.ts');
