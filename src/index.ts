@@ -7,6 +7,7 @@ import { JobDatabase } from './db/jobDatabase.ts';
 import { generateEmailDigestHtml } from './email/emailTemplate.ts';
 import { sendDigestEmail } from './email/mailer.ts';
 import { isTargetCompany } from './filters/companyFilter.ts';
+import { generateWebPortal } from './portal/index.ts';
 import type { Job } from './types.ts';
 
 async function main() {
@@ -126,6 +127,11 @@ async function main() {
         console.error(`❌ [${profile.id}] Error executing profile pipeline:`, profileError.message || profileError);
       }
     }
+
+    // Generate static Web Portal dashboard into docs/
+    console.log('\n[Portal] Generating static web dashboard into docs/...');
+    const { portalData } = generateWebPortal(db, profiles, 'docs');
+    console.log(`[Portal] Generated dashboard for ${portalData.totalJobsCount} active role(s) across ${portalData.profiles.length} profile(s).`);
 
     if (!isDryRun) {
       db.vacuum();

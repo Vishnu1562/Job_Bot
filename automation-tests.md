@@ -305,6 +305,34 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Previously seen jobs are rejected as known duplicates (`isJobKnown === true`), preventing identical roles from ever being re-emailed within 60 days.
 - **Final State**: High signal-to-noise ratio: only genuinely fresh roles sent daily.
 
+#### [HF-035] Web Portal Data Exporter (Chronological & Tiered 60-Day Archive)
+- **Preconditions**: SQLite database contains jobs across multiple profiles, dates (0 to 60 days), and sources.
+- **Action**: Module `src/portal/portalDataExporter.ts` queries all active jobs within retention window:
+  1. Sorts chronologically with Today's newest jobs at the top (`scraped_at DESC`), followed by Yesterday and historical dates.
+  2. Divides listings into dedicated tier sections matching the email hierarchy:
+     - 📍 **Domestic & Regional Priority (LinkedIn, Naukri & Corporate Boards)**
+     - 🌐 **Curated Global & Remote Opportunities**
+  3. Tags priority target companies with `⭐ Priority Target`.
+- **Expected Result**: Returns structured JSON data partitioned by profile, date, and tier for client-side rendering.
+- **Final State**: Clean, normalized data layer ready for static site generation.
+
+#### [HF-036] Static Web Portal Generator (Single-Page App on GitHub Pages)
+- **Preconditions**: Portal data payload and target output directory (`docs/`).
+- **Action**: Module `src/portal/portalPageBuilder.ts` generates self-contained `docs/index.html` and `docs/jobs.json`:
+  1. Responsive dashboard with Profile Switcher tabs (`All`, `Power Platform`, `Full Stack Developer`, `Java Backend`).
+  2. Date timeline filters (`Today's Batch`, `Yesterday`, `Past 7 Days`, `Full 60-Day Archive`).
+  3. Real-time instant search bar (matches title, company, skills, location).
+  4. Interactive candidate tracker: **⭐ Save** and **✅ Applied** toggle buttons persisted in browser `localStorage`.
+  5. Dedicated tabs to review `Saved Roles` and `Applied Roles`.
+- **Expected Result**: Zero-build-overhead, self-contained single-page application ready to be served by GitHub Pages.
+- **Final State**: Seamless web portal deployed automatically every morning for $0.
+
+#### [HF-037] Email Digest CTA Integration to Web Portal
+- **Preconditions**: Daily email digest generated for candidate.
+- **Action**: Email generator embeds `[🌐 View All Roles on Web Portal ↗]` CTA buttons in greeting card and overflow section.
+- **Expected Result**: Recipients can click through to browse 100% of today's listings and 60-day backlog on the web board.
+- **Final State**: Tight loop connecting push email notifications to interactive web exploration.
+
 ---
 
 ### Negative Flows
@@ -365,6 +393,12 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Action**: Profile matcher inspects job title against `excludedTitleKeywords` before evaluating body text.
 - **Expected Result**: Rejects the job outright due to title conflict. Prevents irrelevant CMS, PHP, or mobile roles from leaking into Java or Full Stack profiles.
 - **Final State**: Candidate only receives roles fundamentally aligned with their target stack.
+
+#### [NF-010] Empty Database Portal Rendering Resilience
+- **Preconditions**: Database is empty or 0 jobs exist within the 60-day window.
+- **Action**: Portal exporter and page builder execute.
+- **Expected Result**: Generates a clean, friendly empty state with helpful status indicators rather than throwing null-reference or file generation errors.
+- **Final State**: Graceful zero-data handling.
 
 ---
 
@@ -464,6 +498,18 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Action**: Retention pruning deletes any job where `scraped_at < datetime('now', '-60 days')`. Fresh unemailed jobs (0-48h old) remain in the active queue untouched.
 - **Expected Result**: Active dispatch pipeline is preserved for fresh jobs, while all records older than 60 days are unconditionally wiped out.
 - **Final State**: Zero stale jobs > 60 days survive, while daily fresh queues operate normally.
+
+#### [EC-021] Self-Contained Offline & Local Storage Resilience
+- **Preconditions**: User opens `docs/index.html` locally via `file://` protocol or in an environment where `localStorage` is restricted or partitioned.
+- **Action**: Portal script embeds initial JSON data as inline bootstrap fallback and wraps storage calls in safe `try/catch`.
+- **Expected Result**: Page renders smoothly without CORS errors or uncaught security exceptions when saving/viewing roles.
+- **Final State**: Bulletproof offline and online resilience.
+
+#### [EC-022] Multi-Day Chronological Grouping & Tier Partitioning
+- **Preconditions**: Jobs in database spanning multiple days with mix of sources (JSearch LinkedIn/Naukri vs Remotive/Jobicy).
+- **Action**: Data exporter groups listings by date (`scraped_at`), prioritizing Today's roles at the top, and partitions each date into Domestic Priority vs Global Remote tiers.
+- **Expected Result**: Today's jobs are indexed first, and each date view renders dedicated domestic vs remote sections.
+- **Final State**: Perfect mirror of email tier hierarchy across the entire 60-day historical window.
 
 ---
 

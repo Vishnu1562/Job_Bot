@@ -124,17 +124,20 @@ export function generateEmailDigestHtml(
   const displayedRemote = allRemote.slice(0, remoteCount);
   const displayedJobs = [...displayedDomestic, ...displayedRemote];
   const overflowCount = jobs.length - displayedJobs.length;
+  const portalUrl = escapeHtml(process.env.PORTAL_URL || 'https://vishnu1562.github.io/Job_Bot/');
 
   let contentHtml = '';
 
   if (count === 0) {
     contentHtml = renderTemplate(getTemplateSnippet('emptyState'), {
-      displayName: escapeHtml(displayName)
+      displayName: escapeHtml(displayName),
+      portalUrl
     });
   } else {
     const greetingHtml = renderTemplate(getTemplateSnippet('greetingCard'), {
       displayName: escapeHtml(displayName),
-      accentColor
+      accentColor,
+      portalUrl
     });
 
     let sectionsHtml = '';
@@ -170,7 +173,8 @@ export function generateEmailDigestHtml(
         ? renderTemplate(getTemplateSnippet('overflowCard'), {
             overflowCount,
             roleWord: overflowCount === 1 ? 'role' : 'roles',
-            displayedCount: displayedJobs.length
+            displayedCount: displayedJobs.length,
+            portalUrl
           })
         : '';
 

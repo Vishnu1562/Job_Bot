@@ -48,14 +48,14 @@ jobs:
           RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
         run: npm start
 
-      - name: Persist jobs.db Deduplication Database
+      - name: Persist jobs.db and Web Portal Dashboard
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add jobs.db
+          git add jobs.db docs/
           if git diff --staged --quiet; then
-            echo "No database changes to commit."
+            echo "No changes to commit."
           else
-            git commit -m "chore(db): persist jobs.db after daily radar scan [skip ci]"
+            git commit -m "chore(radar): update jobs.db and web portal dashboard [skip ci]"
             git push
           fi

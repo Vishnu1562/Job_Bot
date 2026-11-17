@@ -454,6 +454,23 @@ describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {
         const genericLayout = loadEmailTemplate('non-existent-profile');
         assert.ok(genericLayout.includes('{{content}}'));
       });
+
+      it('embeds web portal CTA links in email greeting and overflow cards (HF-037)', () => {
+        const jobs: Job[] = Array.from({ length: 20 }, (_, i) => ({
+          id: `job-${i}`,
+          title: `Role ${i}`,
+          company: `Company ${i}`,
+          location: 'Bangalore, India',
+          url: `https://example.com/job-${i}`,
+          tags: ['[Java]'],
+          source: 'jsearch-linkedin',
+          description: ''
+        }));
+
+        const { html } = generateEmailDigestHtml(jobs, 'Java Radar', '#ea580c', 'Aswin');
+        assert.ok(html.includes('https://vishnu1562.github.io/Job_Bot/'), 'Must link to web portal URL');
+        assert.ok(html.includes('Web Portal'), 'Must include Web Portal CTA text');
+      });
     });
   });
 });

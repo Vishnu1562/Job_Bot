@@ -160,6 +160,42 @@ export class JobDatabase {
     }));
   }
 
+  public getAllActiveJobs(days: number = 60, profileId?: string): Job[] {
+    let stmt;
+    let rows;
+    if (profileId) {
+      stmt = this.db.prepare(`
+        SELECT id, profile_id, title, company, location, url, tags, source, description, scraped_at, emailed_at
+        FROM jobs
+        WHERE profile_id = ?
+          AND scraped_at >= datetime('now', '-' || ? || ' days')
+        ORDER BY scraped_at DESC
+      `);
+      rows = stmt.all(profileId, days) as Array<any>;
+    } else {
+      stmt = this.db.prepare(`
+        SELECT id, profile_id, title, company, location, url, tags, source, description, scraped_at, emailed_at
+        FROM jobs
+        WHERE scraped_at >= datetime('now', '-' || ? || ' days')
+        ORDER BY scraped_at DESC
+      `);
+      rows = stmt.all(days) as Array<any>;
+    }
+
+    return rows.map((row) => ({
+      id: row.id,
+      profileId: row.profile_id,
+      title: row.title,
+      company: row.company,
+      location: row.location,
+      url: row.url,
+      tags: typeof row.tags === 'string' ? JSON.parse(row.tags) : [],
+      source: row.source,
+      description: row.description,
+      scrapedAt: row.scraped_at
+    }));
+  }
+
   public expireOldUnemailedJobs(hours: number = 48, profileId?: string): number {
     let stmt;
     if (profileId) {
