@@ -121,4 +121,33 @@ describe('[HF-003, ST-001, REG-001] SQLite Deduplication Database', () => {
     // Profile 2 duplicate should be false
     assert.strictEqual(db.saveJobIfNew(crossJob, 'full-stack'), false);
   });
+
+  it('supports FIFO queue roll-over: marks only displayed jobs as emailed and preserves unemailed backlog (HF-021)', () => {
+    const jobs: Job[] = Array.from({ length: 5 }, (_, i) => ({
+      id: `job-queue-${i + 1}`,
+      title: `Developer ${i + 1}`,
+      company: `Company ${i + 1}`,
+      location: 'India',
+      url: `https://example.com/job-queue-${i + 1}`,
+      tags: ['[Java]'],
+      source: 'remotive',
+      description: ''
+    }));
+
+    // Ingest all 5 jobs into database
+    db.filterAndSaveNewJobs(jobs, 'java-backend');
+    assert.strictEqual(db.getUnemailedJobs('java-backend').length, 5);
+
+    // Simulate sending Top 2 in the morning dispatch
+    const displayedUrls = [jobs[0].url, jobs[1].url];
+    db.markJobsAsEmailed(displayedUrls, 'java-backend');
+
+    // Verify 3 jobs remain in queue for evening dispatch
+    const remainingQueue = db.getUnemailedJobs('java-backend');
+    assert.strictEqual(remainingQueue.length, 3, 'Queue backlog must retain the 3 un-displayed jobs');
+    const remainingUrls = remainingQueue.map((j) => j.url);
+    assert.ok(remainingUrls.includes('https://example.com/job-queue-3'));
+    assert.ok(remainingUrls.includes('https://example.com/job-queue-4'));
+    assert.ok(remainingUrls.includes('https://example.com/job-queue-5'));
+  });
 });

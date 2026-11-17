@@ -16,7 +16,7 @@ export function generateEmailDigestHtml(
   accentColor: string = '#742774',
   candidateName?: string,
   maxJobs: number = 15
-): { subject: string; html: string; text: string } {
+): { subject: string; html: string; text: string; displayedJobs: Job[] } {
   const count = jobs.length;
   const displayName = candidateName?.trim() || 'there';
   const today = new Date().toLocaleDateString('en-US', {
@@ -25,6 +25,9 @@ export function generateEmailDigestHtml(
     month: 'short',
     day: 'numeric'
   });
+
+  const isEvening = new Date().getUTCHours() >= 10;
+  const dispatchEdition = isEvening ? 'Daily Evening Dispatch' : 'Daily Morning Dispatch';
 
   const subject =
     count === 1
@@ -161,7 +164,7 @@ export function generateEmailDigestHtml(
 
   let text = '';
   if (count === 0) {
-    text = `⚡ Daily Morning Dispatch • ${profileName}\n\nHey ${displayName}, it's completely fine!\nNo worries at all if today was a bit quiet on new postings — good opportunities take time, but your skills and hard work speak for themselves. You will find the right fit!\n\nWe'll keep scanning fresh feeds every morning and alert you the second an exciting role drops. Keep your head high and stay confident!\n\nCurated with care • Stay confident and keep going! ✨`;
+    text = `⚡ ${dispatchEdition} • ${profileName}\n\nHey ${displayName}, it's completely fine!\nNo worries at all if today was a bit quiet on new postings — good opportunities take time, but your skills and hard work speak for themselves. You will find the right fit!\n\nWe'll keep scanning fresh feeds every day and alert you the second an exciting role drops. Keep your head high and stay confident!\n\nCurated with care • Stay confident and keep going! ✨`;
   } else {
     const jobLines = displayedJobs
       .map((j, idx) => {
@@ -175,7 +178,7 @@ export function generateEmailDigestHtml(
         ? `\n\n+ ${overflowCount} additional role(s) identified today • Top ${displayedJobs.length} priority matches displayed above`
         : '';
 
-    text = `⚡ Daily Morning Dispatch • ${profileName}\n\nHey ${displayName}! Take a deep breath — the job hunt is a journey, but you're doing great and you will find the right role!\nHere are today's ${count} curated opportunities:\n\n${jobLines}${overflowText}\n\nCurated with care • Stay confident and keep going! ✨\nCustom job alerts for ${displayName} • Delivered every morning`;
+    text = `⚡ ${dispatchEdition} • ${profileName}\n\nHey ${displayName}! Take a deep breath — the job hunt is a journey, but you're doing great and you will find the right role!\nHere are today's ${count} curated opportunities:\n\n${jobLines}${overflowText}\n\nCurated with care • Stay confident and keep going! ✨\nCustom job alerts for ${displayName} • Delivered daily`;
   }
 
   const html = `<!DOCTYPE html>
@@ -195,7 +198,7 @@ export function generateEmailDigestHtml(
           <tr>
             <td style="background: linear-gradient(135deg, ${accentColor} 0%, #0f172a 100%); border-radius: 14px 14px 0 0; padding: 32px 28px; text-align: left; color: #ffffff;">
               <div style="display: inline-block; background-color: rgba(255, 255, 255, 0.15); padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">
-                ⚡ Daily Morning Dispatch
+                ⚡ ${escapeHtml(dispatchEdition)}
               </div>
               <h1 style="margin: 0 0 8px 0; font-size: 24px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px;">
                 ${escapeHtml(profileName)}
@@ -218,7 +221,7 @@ export function generateEmailDigestHtml(
                 Curated with care &bull; Stay confident and keep going! ✨
               </p>
               <p style="margin: 0; font-size: 11px; color: #94a3b8;">
-                Custom job alerts for ${escapeHtml(displayName)} &bull; Delivered every morning
+                Custom job alerts for ${escapeHtml(displayName)} &bull; Delivered daily
               </p>
             </td>
           </tr>
@@ -229,5 +232,5 @@ export function generateEmailDigestHtml(
 </body>
 </html>`;
 
-  return { subject, html, text };
+  return { subject, html, text, displayedJobs };
 }

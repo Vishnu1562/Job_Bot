@@ -6,6 +6,8 @@ import { fetchJobsForProfile } from './scrapers/scraperCoordinator.ts';
 import { JobDatabase } from './db/jobDatabase.ts';
 import { generateEmailDigestHtml } from './email/emailTemplate.ts';
 import { sendDigestEmail } from './email/mailer.ts';
+import { isTargetCompany } from './filters/companyFilter.ts';
+import type { Job } from './types.ts';
 
 async function main() {
   const isDryRun = process.argv.includes('--dry-run');
@@ -40,15 +42,36 @@ async function main() {
         const scrapedJobs = await fetchJobsForProfile(profile);
         console.log(`[1/4] Found ${scrapedJobs.length} candidate listing(s).`);
 
-        console.log(`[2/4] Deduplicating against persistent SQLite database for profile "${profile.id}"...`);
-        const newJobs = isDryRun
-          ? db.filterNewJobs(scrapedJobs, profile.id)
-          : db.filterAndSaveNewJobs(scrapedJobs, profile.id);
-        console.log(`[2/4] Identified ${newJobs.length} brand new, un-sent role(s).`);
+        console.log(`[2/4] Updating persistent SQLite queue for profile "${profile.id}"...`);
+        let unemailedJobs: Job[];
 
-        console.log('[3/4] Generating responsive HTML email digest...');
-        const { subject, html, text } = generateEmailDigestHtml(
-          newJobs,
+        if (isDryRun) {
+          const existingUnemailed = db.getUnemailedJobs(profile.id);
+          const newScraped = db.filterNewJobs(scrapedJobs, profile.id);
+          const combined = [...newScraped, ...existingUnemailed];
+          const seen = new Set<string>();
+          unemailedJobs = combined.filter((j) => {
+            if (seen.has(j.url)) return false;
+            seen.add(j.url);
+            return true;
+          });
+        } else {
+          db.filterAndSaveNewJobs(scrapedJobs, profile.id);
+          unemailedJobs = db.getUnemailedJobs(profile.id);
+        }
+
+        // Decorate target company status for priority ranking
+        unemailedJobs.forEach((job) => {
+          if (job.isTargetCompany === undefined) {
+            job.isTargetCompany = isTargetCompany(job.company, profile);
+          }
+        });
+
+        console.log(`[2/4] Found ${unemailedJobs.length} total un-sent role(s) (new + queue backlog).`);
+
+        console.log('[3/4] Generating responsive HTML email digest (Top 15 priority)...');
+        const { subject, html, text, displayedJobs } = generateEmailDigestHtml(
+          unemailedJobs,
           profile.name,
           profile.accentColor,
           profile.candidateName
@@ -59,10 +82,11 @@ async function main() {
           fs.writeFileSync(previewFile, html, 'utf-8');
           console.log(`[DryRun] Wrote digest preview to: ${previewFile}`);
           console.log(`[DryRun] Subject: "${subject}"`);
-          console.log(`[DryRun] New jobs count: ${newJobs.length}`);
-          if (newJobs.length > 0) {
-            newJobs.forEach((job, i) => {
-              console.log(`  ${i + 1}. [${job.company}] ${job.title} (${job.location})`);
+          console.log(`[DryRun] Total queue: ${unemailedJobs.length} role(s) | Displayed in email: ${displayedJobs.length} role(s)`);
+          if (displayedJobs.length > 0) {
+            displayedJobs.forEach((job, i) => {
+              const priority = job.isTargetCompany ? ' [⭐ Priority Target]' : '';
+              console.log(`  ${i + 1}. [${job.company}] ${job.title} (${job.location})${priority}`);
               console.log(`     Tags: ${job.tags.join(' ')}`);
               console.log(`     URL: ${job.url}`);
             });
@@ -70,12 +94,14 @@ async function main() {
           continue;
         }
 
-        console.log(`[4/4] Dispatching daily digest to ${profile.recipientEmail}: "${subject}"...`);
+        console.log(`[4/4] Dispatching digest to ${profile.recipientEmail}: "${subject}"...`);
         await sendDigestEmail(subject, html, { recipientEmail: profile.recipientEmail }, text);
 
-        if (newJobs.length > 0) {
-          db.markJobsAsEmailed(newJobs.map((j) => j.url), profile.id);
-          console.log(`[4/4] Successfully marked ${newJobs.length} job(s) as sent for profile "${profile.id}".`);
+        if (displayedJobs.length > 0) {
+          const urlsToMark = displayedJobs.map((j) => j.url);
+          db.markJobsAsEmailed(urlsToMark, profile.id);
+          const remainingInQueue = unemailedJobs.length - displayedJobs.length;
+          console.log(`[4/4] Successfully marked ${displayedJobs.length} displayed job(s) as sent. ${remainingInQueue} role(s) remain in queue for next dispatch.`);
         }
 
         if (!isDryRun && i < profiles.length - 1) {

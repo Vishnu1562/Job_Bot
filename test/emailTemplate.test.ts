@@ -155,7 +155,9 @@ describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {
         isTargetCompany: i === 18 // Job 19 is Microsoft (Priority Target)
       }));
 
-      const { html, text } = generateEmailDigestHtml(jobs, 'Full Stack Developer Job Radar', '#0284c7', 'Vishnu');
+      const { html, text, displayedJobs } = generateEmailDigestHtml(jobs, 'Full Stack Developer Job Radar', '#0284c7', 'Vishnu');
+
+      assert.strictEqual(displayedJobs.length, 15, 'Must return exactly 15 displayedJobs for dispatch tracking');
 
       // Microsoft should be sorted to the top and thus included in top 15
       assert.ok(html.includes('Microsoft'), 'Priority target Microsoft must be included in top 15');
