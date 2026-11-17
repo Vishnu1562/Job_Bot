@@ -31,9 +31,31 @@ export function generateEmailDigestHtml(
       ? `✨ ${profileName} • 1 New Role Found Today`
       : `✨ ${profileName} • ${count} New Roles Found Today`;
 
+  const isJSearchOrDomestic = (job: Job): boolean => {
+    const src = (job.source || '').toLowerCase();
+    const id = (job.id || '').toLowerCase();
+    return (
+      id.startsWith('jsearch') ||
+      src === 'linkedin' ||
+      src === 'naukri' ||
+      src === 'indeed' ||
+      src === 'glassdoor' ||
+      src === 'jsearch' ||
+      src === 'adzuna'
+    );
+  };
+
   const sortedJobs = [...jobs].sort((a, b) => {
+    // 1. Priority Target Companies first
     if (a.isTargetCompany && !b.isTargetCompany) return -1;
     if (!a.isTargetCompany && b.isTargetCompany) return 1;
+
+    // 2. JSearch live postings (LinkedIn, Naukri, Indeed, Glassdoor) next
+    const aIsJSearch = isJSearchOrDomestic(a);
+    const bIsJSearch = isJSearchOrDomestic(b);
+    if (aIsJSearch && !bIsJSearch) return -1;
+    if (!aIsJSearch && bIsJSearch) return 1;
+
     return 0;
   });
 

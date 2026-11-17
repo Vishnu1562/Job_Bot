@@ -191,5 +191,59 @@ describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {
       assert.ok(!html.includes('additional roles identified today'), 'Should NOT display overflow note');
       assert.ok(!text.includes('additional role(s) identified today'));
     });
+
+    it('prioritizes JSearch LinkedIn and Naukri jobs above generic remote feeds within the Top 15 cap (HF-023)', () => {
+      // 15 generic WeWorkRemotely jobs
+      const wwrJobs: Job[] = Array.from({ length: 15 }, (_, i) => ({
+        id: `wwr-${i + 1}`,
+        title: `Generic Remote Developer ${i + 1}`,
+        company: `Remote Startup ${i + 1}`,
+        location: 'Remote Worldwide',
+        url: `https://weworkremotely.com/jobs/${i + 1}`,
+        tags: ['[Java]'],
+        source: 'weworkremotely',
+        description: `WWR job ${i + 1}`
+      }));
+
+      // 2 JSearch LinkedIn and Naukri jobs added at the end of the array
+      const linkedInJob: Job = {
+        id: 'jsearch-li-101',
+        title: 'Lead Java Engineer (LinkedIn India)',
+        company: 'Kochi FinTech Ltd',
+        location: 'Infopark Kochi, Kerala',
+        url: 'https://in.linkedin.com/jobs/view/101',
+        tags: ['[Java]', '[Spring Boot]'],
+        source: 'linkedin',
+        description: 'LinkedIn India job'
+      };
+
+      const naukriJob: Job = {
+        id: 'jsearch-nk-102',
+        title: 'Senior Spring Boot Architect (Naukri)',
+        company: 'Bengaluru Tech Park',
+        location: 'Whitefield, Bengaluru, India',
+        url: 'https://www.naukri.com/job-102',
+        tags: ['[Java]', '[Microservices]'],
+        source: 'naukri',
+        description: 'Naukri job'
+      };
+
+      // Combined array has 17 jobs with LinkedIn and Naukri placed at the very end
+      const allJobs = [...wwrJobs, linkedInJob, naukriJob];
+
+      const { html } = generateEmailDigestHtml(allJobs, 'Java & Spring Boot Developer Job Radar', '#ea580c', 'Aswin');
+
+      // Both LinkedIn and Naukri jobs MUST be included in the top 15
+      assert.ok(html.includes('Lead Java Engineer (LinkedIn India)'), 'LinkedIn job must be included in top 15');
+      assert.ok(html.includes('Senior Spring Boot Architect (Naukri)'), 'Naukri job must be included in top 15');
+
+      // Furthermore, LinkedIn and Naukri jobs must be rendered BEFORE the generic WWR jobs
+      const linkedInIndex = html.indexOf('Lead Java Engineer (LinkedIn India)');
+      const naukriIndex = html.indexOf('Senior Spring Boot Architect (Naukri)');
+      const firstWwrIndex = html.indexOf('Generic Remote Developer 1');
+
+      assert.ok(linkedInIndex < firstWwrIndex, 'LinkedIn job must appear before generic WeWorkRemotely jobs');
+      assert.ok(naukriIndex < firstWwrIndex, 'Naukri job must appear before generic WeWorkRemotely jobs');
+    });
   });
 });

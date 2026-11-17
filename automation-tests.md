@@ -219,6 +219,15 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Successfully ingests authentic native Indian job postings from LinkedIn, Naukri, and Indeed.
 - **Final State**: Live domestic Indian jobs available in daily digest.
 
+#### [HF-023] JSearch & LinkedIn / Naukri Feed Prioritization
+- **Preconditions**: Ingestion pool containing both generic remote feeds (WeWorkRemotely, RemoteOK, Remotive) and JSearch feeds (LinkedIn, Naukri, Indeed, Glassdoor).
+- **Action**: Email digest generator prioritizes jobs in ranked tiers before taking the Top 15 cap:
+  1. Priority Target companies (`isTargetCompany: true`)
+  2. JSearch / LinkedIn / Naukri / Indeed domestic roles (`source: 'linkedin'`, `'naukri'`, `'indeed'`, `'glassdoor'`, or ID prefixed with `jsearch-`)
+  3. Generic international remote boards (WeWorkRemotely, RemoteOK, Remotive, Jobicy)
+- **Expected Result**: LinkedIn, Naukri, and Indeed roles are rendered ahead of WeWorkRemotely and generic remote boards, ensuring local/domestic opportunities are guaranteed within the Top 15 email slots.
+- **Final State**: Candidates see actionable domestic LinkedIn/Naukri jobs first.
+
 ---
 
 ### Negative Flows
