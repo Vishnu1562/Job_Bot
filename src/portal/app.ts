@@ -539,7 +539,7 @@ type TrackerState = Record<string, TrackerEntry>;
         <div class="empty-state">
           <div class="empty-icon">☀️</div>
           <h3 style="font-size: 18px; color: var(--text-main); font-weight: 700; margin-bottom: 6px;">No Matching Opportunities</h3>
-          <p>Try clearing your search query or selecting "All Dates" / "All Tiers".</p>
+          <p>Try clearing your search query or selecting "All Dates" / "All Regions".</p>
         </div>
       `;
       return;
@@ -607,7 +607,7 @@ type TrackerState = Record<string, TrackerEntry>;
                 <tr>
                   <th>Company</th>
                   <th>Role &amp; Stack</th>
-                  <th>Tier</th>
+                  <th>Region</th>
                   <th>Location</th>
                   <th style="text-align: right;">Action</th>
                 </tr>

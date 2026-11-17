@@ -392,10 +392,19 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Preconditions**: Web portal loaded with single or multiple active candidate profiles.
 - **Action**: Filter deck renders with clean Option 2 architecture:
   1. **Top Profile Tab Strip**: Horizontal scrollable segmented bar with accent color dots, concise labels (stripping redundant "Job Radar" suffixes), role counts, and smooth scroll overflow for 10+ profiles.
-  2. **Unified Command & Filter Toolbar**: Search bar seamlessly integrated with compact quick-filter chips for Status (`⭐ Saved`, `✅ Applied`), Timeline (`All Dates`, `Today's Batch`), and Tier (`📍 Domestic`, `🌐 Remote`).
+  2. **Unified Command & Filter Toolbar**: Search bar seamlessly integrated with compact quick-filter chips for Status (`⭐ Saved`, `✅ Applied`), Timeline (`All Dates`, `Today's Batch`), and Region (`📍 Domestic`, `🌐 Remote`).
   3. **One-Click Reset**: A quick reset button appears when non-default filters are active.
 - **Expected Result**: Reduces vertical height by ~50%, looks visually stunning, and scales gracefully to unlimited future profiles without wrapping.
 - **Final State**: Clean, developer-grade command deck matching Linear / Raycast standards.
+
+#### [HF-045] User-Facing Region Terminology Standardization
+- **Preconditions**: Web portal loaded on desktop or mobile.
+- **Action**: Replace all internal engineering jargon ("Tier") in user-facing UI with candidate-friendly "Region" terminology:
+  1. Filter toolbar button displays `All Regions` instead of `All Tiers`.
+  2. Table view column header displays `Region` instead of `Tier`.
+  3. Empty search state text suggests `"All Dates" / "All Regions"` instead of `"All Tiers"`.
+- **Expected Result**: Clean, intuitive geographical classification without confusing engineering jargon.
+- **Final State**: Candidate-centric UI clarity.
 
 ---
 

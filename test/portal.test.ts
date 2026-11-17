@@ -173,6 +173,10 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
       assert.ok(html.includes('id="drawer-overlay"'), 'Must include drawer backdrop overlay');
       assert.ok(html.includes('data-view="grid"') && html.includes('data-view="table"'), 'Must include View Mode switcher buttons');
       assert.ok(html.includes('id="toast-notification"'), 'Must include toast notification container');
+
+      // 5. Verify User-Facing Region Terminology (HF-045)
+      assert.ok(html.includes('All Regions'), 'Toolbar must display "All Regions"');
+      assert.ok(!html.includes('All Tiers'), 'Toolbar must NOT display engineering jargon "All Tiers"');
     });
 
     it('writes index.html, styles.css, app.js, and jobs.json to destination folder without error [HF-042 & HF-043]', () => {
@@ -202,6 +206,8 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
         const jsContent = fs.readFileSync(jsPath, 'utf-8');
         assert.ok(jsContent.includes('localStorage'), 'app.js must contain tracker persistence logic');
         assert.ok(jsContent.includes('stopPropagation'), 'app.js must contain action event isolation (HF-043)');
+        assert.ok(jsContent.includes('<th>Region</th>'), 'Table header must display Region instead of Tier (HF-045)');
+        assert.ok(!jsContent.includes('<th>Tier</th>'), 'Table header must not display Tier');
 
         const jsonContent = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
         assert.strictEqual(typeof jsonContent.totalJobsCount, 'number');
