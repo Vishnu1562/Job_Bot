@@ -205,6 +205,8 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
         assert.ok(indexContent.includes('<link rel="stylesheet" href="styles.css">'), 'index.html must reference styles.css');
         assert.ok(indexContent.includes('src="app.js"'), 'index.html must reference app.js');
         assert.ok(!indexContent.includes('<style>\n    :root') && !indexContent.includes('<style>:root'), 'index.html must not contain inline CSS');
+        assert.ok(!indexContent.includes('<div class="kpi-icon-wrap" style="background: rgba(99, 102, 241, 0.15); color: #818cf8;">\n          📊'), 'KPI cards must not use emoji 📊 (HF-049)');
+        assert.ok(indexContent.includes('kpi-icon-svg'), 'KPI cards must use vector SVG icons (HF-049)');
 
         const cssContent = fs.readFileSync(cssPath, 'utf-8');
         assert.ok(cssContent.includes(':root') && cssContent.includes('.job-drawer'), 'styles.css must contain CSS rules');

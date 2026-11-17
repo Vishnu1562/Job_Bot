@@ -92,6 +92,18 @@ type TrackerState = Record<string, TrackerEntry>;
     return (parts[0][0] + parts[1][0]).toUpperCase();
   }
 
+  // 3b. Professional SVG Vector Icons (HF-049)
+  const ICONS = {
+    locationPin: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -1px; margin-right: 3px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>`,
+    globe: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -1px; margin-right: 3px;"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>`,
+    star: `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -1px; margin-right: 3px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>`,
+    bookmark: (fill: boolean = false) => `<svg width="12" height="12" viewBox="0 0 24 24" fill="${fill ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -1px; margin-right: 3px;"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>`,
+    check: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -1px; margin-right: 3px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`,
+    calendar: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -1px; margin-right: 3px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>`,
+    sun: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`,
+    moon: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`
+  };
+
   // 4. UI State
   let selectedProfile = 'all';
   let selectedStatus = 'all';
@@ -110,7 +122,7 @@ type TrackerState = Record<string, TrackerEntry>;
     if (!toast || !msgElem || !iconElem) return;
 
     msgElem.textContent = message;
-    iconElem.textContent = icon;
+    iconElem.innerHTML = icon;
     toast.classList.add('show');
 
     clearTimeout(toastTimer);
@@ -125,17 +137,17 @@ type TrackerState = Record<string, TrackerEntry>;
     const toggleBtn = document.getElementById('theme-toggle');
     if (savedTheme === 'light') {
       document.body.classList.add('light');
-      if (toggleBtn) toggleBtn.textContent = '☀️';
+      if (toggleBtn) toggleBtn.innerHTML = ICONS.sun;
     } else {
       document.body.classList.remove('light');
-      if (toggleBtn) toggleBtn.textContent = '🌙';
+      if (toggleBtn) toggleBtn.innerHTML = ICONS.moon;
     }
     if (toggleBtn) {
       toggleBtn.addEventListener('click', () => {
         const isLight = document.body.classList.toggle('light');
-        toggleBtn.textContent = isLight ? '☀️' : '🌙';
+        toggleBtn.innerHTML = isLight ? ICONS.sun : ICONS.moon;
         localStorage.setItem(THEME_KEY, isLight ? 'light' : 'dark');
-        showToast(isLight ? 'Switched to Light Mode' : 'Switched to Dark Mode', isLight ? '☀️' : '🌙');
+        showToast(isLight ? 'Switched to Light Mode' : 'Switched to Dark Mode', isLight ? ICONS.sun : ICONS.moon);
       });
     }
   }
@@ -199,16 +211,16 @@ type TrackerState = Record<string, TrackerEntry>;
     }
     if (companyElem) companyElem.textContent = job.company;
     if (titleElem) titleElem.textContent = job.title;
-    if (locationElem) locationElem.textContent = '📍 ' + (job.location || 'Location Not Specified');
+    if (locationElem) locationElem.innerHTML = `${ICONS.locationPin} <span>${escapeHtml(job.location || 'Location Not Specified')}</span>`;
 
     if (badgesElem) {
       const tierBadge = job.tier === 'domestic'
-        ? '<span class="badge-tier-sm badge-domestic">📍 Domestic Priority</span>'
-        : '<span class="badge-tier-sm badge-remote">🌐 Global Remote</span>';
+        ? `<span class="badge-tier-sm badge-domestic">${ICONS.locationPin}Domestic Priority</span>`
+        : `<span class="badge-tier-sm badge-remote">${ICONS.globe}Global Remote</span>`;
       const targetBadge = job.isTargetCompany
-        ? '<span class="badge-priority-target">⭐ Priority Target Company</span>'
+        ? `<span class="badge-priority-target">${ICONS.star}Priority Target Company</span>`
         : '';
-      const dateBadge = `<span class="date-pill" style="font-size: 11px;">🗓️ ${escapeHtml(job.dateLabel || 'Archive')}</span>`;
+      const dateBadge = `<span class="date-pill" style="font-size: 11px;">${ICONS.calendar}${escapeHtml(job.dateLabel || 'Archive')}</span>`;
       badgesElem.innerHTML = tierBadge + targetBadge + dateBadge;
     }
 
@@ -229,11 +241,11 @@ type TrackerState = Record<string, TrackerEntry>;
 
     if (saveBtn) {
       saveBtn.classList.toggle('saved', Boolean(status.saved));
-      saveBtn.textContent = status.saved ? '⭐ Saved' : '⭐ Save';
+      saveBtn.innerHTML = `${ICONS.bookmark(Boolean(status.saved))} ${status.saved ? 'Saved' : 'Save'}`;
     }
     if (appliedBtn) {
       appliedBtn.classList.toggle('applied', Boolean(status.applied));
-      appliedBtn.textContent = status.applied ? '✅ Applied' : '✅ Applied';
+      appliedBtn.innerHTML = `${ICONS.check} ${status.applied ? 'Applied' : 'Applied'}`;
     }
 
     overlay.classList.add('open');
@@ -263,10 +275,10 @@ type TrackerState = Record<string, TrackerEntry>;
     const initials = getInitials(job.company);
 
     const tierBadge = job.tier === 'domestic'
-      ? '<span class="badge-tier-sm badge-domestic">📍 Domestic Priority</span>'
-      : '<span class="badge-tier-sm badge-remote">🌐 Global Remote</span>';
+      ? `<span class="badge-tier-sm badge-domestic">${ICONS.locationPin}Domestic Priority</span>`
+      : `<span class="badge-tier-sm badge-remote">${ICONS.globe}Global Remote</span>`;
     const targetBadge = job.isTargetCompany
-      ? '<span class="badge-priority-target">⭐ Priority Target</span>'
+      ? `<span class="badge-priority-target">${ICONS.star}Priority Target</span>`
       : '';
 
     const skillsHtml = (job.tags || []).slice(0, 4)
@@ -287,7 +299,7 @@ type TrackerState = Record<string, TrackerEntry>;
               </div>
               <h3 class="card-title">${escapeHtml(job.title)}</h3>
               <div class="card-company">${escapeHtml(job.company)}</div>
-              <div class="card-location">📍 ${escapeHtml(job.location)}</div>
+              <div class="card-location">${ICONS.locationPin} ${escapeHtml(job.location)}</div>
             </div>
           </div>
           <div class="card-skills-wrap">
@@ -297,10 +309,10 @@ type TrackerState = Record<string, TrackerEntry>;
         <div class="card-footer" onclick="event.stopPropagation();">
           <div class="card-action-group">
             <button type="button" class="action-icon-btn ${isSaved ? 'saved' : ''}" data-action="save" onclick="event.stopPropagation();">
-              ⭐ ${isSaved ? 'Saved' : 'Save'}
+              ${ICONS.bookmark(isSaved)} ${isSaved ? 'Saved' : 'Save'}
             </button>
             <button type="button" class="action-icon-btn ${isApplied ? 'applied' : ''}" data-action="applied" onclick="event.stopPropagation();">
-              ✅ ${isApplied ? 'Applied' : 'Applied'}
+              ${ICONS.check} ${isApplied ? 'Applied' : 'Applied'}
             </button>
           </div>
           <a href="${escapeHtml(job.url)}" target="_blank" rel="noopener noreferrer" class="btn-apply-cta" onclick="event.stopPropagation();">
@@ -318,8 +330,8 @@ type TrackerState = Record<string, TrackerEntry>;
     const initials = getInitials(job.company);
 
     const tierBadge = job.tier === 'domestic'
-      ? '<span class="badge-tier-sm badge-domestic">📍 Domestic</span>'
-      : '<span class="badge-tier-sm badge-remote">🌐 Remote</span>';
+      ? `<span class="badge-tier-sm badge-domestic">${ICONS.locationPin}Domestic</span>`
+      : `<span class="badge-tier-sm badge-remote">${ICONS.globe}Remote</span>`;
 
     return `
       <tr data-url="${escapeHtml(job.url)}">
@@ -330,7 +342,7 @@ type TrackerState = Record<string, TrackerEntry>;
             </div>
             <div>
               <div style="font-weight: 700; color: var(--text-main); font-size: 14px;">${escapeHtml(job.company)}</div>
-              ${job.isTargetCompany ? '<span style="font-size: 11px; color: var(--amber); font-weight: 700;">⭐ Priority Target</span>' : ''}
+              ${job.isTargetCompany ? `<span style="font-size: 11px; color: var(--amber); font-weight: 700;">${ICONS.star}Priority Target</span>` : ''}
             </div>
           </div>
         </td>
@@ -343,14 +355,14 @@ type TrackerState = Record<string, TrackerEntry>;
           </div>
         </td>
         <td>${tierBadge}</td>
-        <td style="color: var(--text-dim); font-size: 13px;">📍 ${escapeHtml(job.location)}</td>
+        <td style="color: var(--text-dim); font-size: 13px;">${ICONS.locationPin} ${escapeHtml(job.location)}</td>
         <td class="table-action-cell" style="text-align: right;" onclick="event.stopPropagation();">
           <div class="card-action-group" style="justify-content: flex-end;">
             <button type="button" class="action-icon-btn ${isSaved ? 'saved' : ''}" data-action="save" title="Save Role" onclick="event.stopPropagation();">
-              ⭐
+              ${ICONS.bookmark(isSaved)}
             </button>
             <button type="button" class="action-icon-btn ${isApplied ? 'applied' : ''}" data-action="applied" title="Mark as Applied" onclick="event.stopPropagation();">
-              ✅
+              ${ICONS.check}
             </button>
             <a href="${escapeHtml(job.url)}" target="_blank" rel="noopener noreferrer" class="btn-apply-cta" onclick="event.stopPropagation();">
               Apply ↗
@@ -369,10 +381,10 @@ type TrackerState = Record<string, TrackerEntry>;
 
     if (action === 'save') {
       state[url].saved = !state[url].saved;
-      showToast(state[url].saved ? 'Saved role to bookmarks ⭐' : 'Removed from saved roles', '⭐');
+      showToast(state[url].saved ? 'Saved role to bookmarks' : 'Removed from saved roles', ICONS.bookmark(state[url].saved));
     } else if (action === 'applied') {
       state[url].applied = !state[url].applied;
-      showToast(state[url].applied ? 'Marked role as applied ✅' : 'Removed applied status', '✅');
+      showToast(state[url].applied ? 'Marked role as applied' : 'Removed applied status', ICONS.check);
     }
 
     setTrackerState(state);
@@ -395,13 +407,17 @@ type TrackerState = Record<string, TrackerEntry>;
       if (saveBtn) {
         saveBtn.classList.toggle('saved', isSaved);
         if (saveBtn.textContent && saveBtn.textContent.includes('Save')) {
-          saveBtn.textContent = isSaved ? '⭐ Saved' : '⭐ Save';
+          saveBtn.innerHTML = `${ICONS.bookmark(isSaved)} ${isSaved ? 'Saved' : 'Save'}`;
+        } else {
+          saveBtn.innerHTML = ICONS.bookmark(isSaved);
         }
       }
       if (appliedBtn) {
         appliedBtn.classList.toggle('applied', isApplied);
         if (appliedBtn.textContent && appliedBtn.textContent.includes('Applied')) {
-          appliedBtn.textContent = isApplied ? '✅ Applied' : '✅ Applied';
+          appliedBtn.innerHTML = `${ICONS.check} ${isApplied ? 'Applied' : 'Applied'}`;
+        } else {
+          appliedBtn.innerHTML = ICONS.check;
         }
       }
     });
@@ -411,11 +427,11 @@ type TrackerState = Record<string, TrackerEntry>;
       const drawerApplied = document.getElementById('drawer-applied-btn');
       if (drawerSave) {
         drawerSave.classList.toggle('saved', isSaved);
-        drawerSave.textContent = isSaved ? '⭐ Saved' : '⭐ Save';
+        drawerSave.innerHTML = `${ICONS.bookmark(isSaved)} ${isSaved ? 'Saved' : 'Save'}`;
       }
       if (drawerApplied) {
         drawerApplied.classList.toggle('applied', isApplied);
-        drawerApplied.textContent = isApplied ? '✅ Applied' : '✅ Applied';
+        drawerApplied.innerHTML = `${ICONS.check} ${isApplied ? 'Applied' : 'Applied'}`;
       }
     }
   }
@@ -560,7 +576,12 @@ type TrackerState = Record<string, TrackerEntry>;
     if (filtered.length === 0) {
       container.innerHTML = `
         <div class="empty-state">
-          <div class="empty-icon">☀️</div>
+          <div class="empty-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.7;">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </div>
           <h3 style="font-size: 18px; color: var(--text-main); font-weight: 700; margin-bottom: 6px;">No Matching Opportunities</h3>
           <p>Try clearing your search query or selecting "All Dates" / "All Regions".</p>
         </div>
@@ -581,7 +602,7 @@ type TrackerState = Record<string, TrackerEntry>;
           <div class="region-section-block">
             <div class="tier-header-bar tier-domestic" role="button" tabindex="0" aria-expanded="true" aria-label="Toggle Domestic Region Section">
               <div class="tier-title-wrap">
-                <span>📍 Domestic &amp; Regional Priority (LinkedIn, Naukri &amp; Corporate Boards)</span>
+                <span>${ICONS.locationPin}Domestic &amp; Regional Priority (LinkedIn, Naukri &amp; Corporate Boards)</span>
                 <span class="collapse-chevron">▾</span>
               </div>
               <span class="tier-count-badge badge-domestic">${domesticJobs.length} Verified</span>
@@ -601,7 +622,7 @@ type TrackerState = Record<string, TrackerEntry>;
           <div class="region-section-block">
             <div class="tier-header-bar tier-remote" role="button" tabindex="0" aria-expanded="true" aria-label="Toggle Global Remote Section">
               <div class="tier-title-wrap">
-                <span>🌐 Curated Global &amp; Remote Opportunities</span>
+                <span>${ICONS.globe}Curated Global &amp; Remote Opportunities</span>
                 <span class="collapse-chevron">▾</span>
               </div>
               <span class="tier-count-badge badge-remote">${remoteJobs.length} Roles</span>

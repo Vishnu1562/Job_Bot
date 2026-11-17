@@ -437,6 +437,20 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Single-tier hierarchy reduces visual clutter, eliminates nested accordion confusion, and delivers a sleek, flat SaaS layout.
 - **Final State**: Clear, immediate distinction between Domestic Priority and Remote roles.
 
+#### [HF-049] Professional SVG Vector Icon Suite Across Portal KPI Cards & Toolbars
+- **Preconditions**: Web portal loaded in modern desktop or mobile browser.
+- **Action**:
+  1. Replace cartoonish OS emojis in KPI summary cards with responsive, crisp inline SVG icons:
+     - Total Roles: Briefcase SVG vector icon.
+     - Today's Batch: Lightning Zap SVG vector icon.
+     - Domestic Priority: Geometric Map-Pin SVG vector icon.
+     - Saved Roles: Clean Bookmark / Ribbon SVG vector icon.
+  2. Search input uses crisp SVG search loupe icon instead of `🔍`.
+  3. Regional filter chips and headers use crisp Map-Pin and Globe SVG icons instead of `📍` and `🌐`.
+  4. SVGs inherit CSS `currentColor` dynamically with high-definition rendering on retina/high-DPI screens.
+- **Expected Result**: Unified, professional SaaS visual design language with zero external font dependencies.
+- **Final State**: Enterprise-grade UI aesthetics with crisp vector lines.
+
 ---
 
 ### Negative Flows
