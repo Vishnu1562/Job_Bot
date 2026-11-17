@@ -471,20 +471,7 @@ type TrackerState = Record<string, TrackerEntry>;
       });
     });
 
-    // Section Collapsible Handlers (HF-047)
-    document.querySelectorAll('.date-header').forEach(header => {
-      header.addEventListener('click', function () {
-        toggleSectionCollapse(this as HTMLElement, '.date-section-block');
-      });
-      header.addEventListener('keydown', function (e: Event) {
-        const keyEvent = e as KeyboardEvent;
-        if (keyEvent.key === 'Enter' || keyEvent.key === ' ') {
-          keyEvent.preventDefault();
-          toggleSectionCollapse(this as HTMLElement, '.date-section-block');
-        }
-      });
-    });
-
+    // Regional Section Collapsible Handlers (HF-047 & HF-048)
     document.querySelectorAll('.tier-header-bar').forEach(tierHeader => {
       tierHeader.addEventListener('click', function () {
         toggleSectionCollapse(this as HTMLElement, '.region-section-block');
@@ -581,93 +568,72 @@ type TrackerState = Record<string, TrackerEntry>;
       return;
     }
 
-    // Group by Date Label
-    const dateGroups: Record<string, JobItem[]> = {};
-    filtered.forEach(job => {
-      const label = job.dateLabel || 'Archive';
-      if (!dateGroups[label]) dateGroups[label] = [];
-      dateGroups[label].push(job);
-    });
+    // Direct Regional Partitioning (HF-048: Flat SaaS Hierarchy)
+    const domesticJobs = filtered.filter(j => j.tier === 'domestic');
+    const remoteJobs = filtered.filter(j => j.tier === 'remote');
 
     let html = '';
 
-    for (const dateLabel of Object.keys(dateGroups)) {
-      const dateJobs = dateGroups[dateLabel];
-      const domesticJobs = dateJobs.filter(j => j.tier === 'domestic');
-      const remoteJobs = dateJobs.filter(j => j.tier === 'remote');
-
-      html += `
-        <div class="date-section-block">
-          <div class="date-header" role="button" tabindex="0" aria-expanded="true" aria-label="Toggle ${escapeHtml(dateLabel)} Section">
-            <span class="date-pill">🗓️ ${escapeHtml(dateLabel)} (${dateJobs.length} Roles) <span class="collapse-chevron">▾</span></span>
-            <div class="date-divider-line"></div>
-          </div>
-          <div class="date-content-wrap">
-      `;
-
-      if (currentViewMode === 'grid') {
-        // Domestic Grid Section
-        if (domesticJobs.length > 0) {
-          html += `
-            <div class="region-section-block">
-              <div class="tier-header-bar tier-domestic" role="button" tabindex="0" aria-expanded="true" aria-label="Toggle Domestic Region Section">
-                <div class="tier-title-wrap">
-                  <span>📍 Domestic &amp; Regional Priority (LinkedIn, Naukri &amp; Corporate Boards)</span>
-                  <span class="collapse-chevron">▾</span>
-                </div>
-                <span class="tier-count-badge badge-domestic">${domesticJobs.length} Verified</span>
-              </div>
-              <div class="region-content-wrap">
-                <div class="jobs-grid">
-                  ${domesticJobs.map(j => renderCard(j, trackerState[j.url] || {})).join('')}
-                </div>
-              </div>
-            </div>
-          `;
-        }
-
-        // Remote Grid Section
-        if (remoteJobs.length > 0) {
-          html += `
-            <div class="region-section-block">
-              <div class="tier-header-bar tier-remote" role="button" tabindex="0" aria-expanded="true" aria-label="Toggle Global Remote Section">
-                <div class="tier-title-wrap">
-                  <span>🌐 Curated Global &amp; Remote Opportunities</span>
-                  <span class="collapse-chevron">▾</span>
-                </div>
-                <span class="tier-count-badge badge-remote">${remoteJobs.length} Roles</span>
-              </div>
-              <div class="region-content-wrap">
-                <div class="jobs-grid">
-                  ${remoteJobs.map(j => renderCard(j, trackerState[j.url] || {})).join('')}
-                </div>
-              </div>
-            </div>
-          `;
-        }
-      } else {
-        // High-Density Table List View (HF-040)
+    if (currentViewMode === 'grid') {
+      // Domestic Grid Section
+      if (domesticJobs.length > 0) {
         html += `
-          <div class="table-view-container">
-            <table class="jobs-table">
-              <thead>
-                <tr>
-                  <th>Company</th>
-                  <th>Role &amp; Stack</th>
-                  <th>Region</th>
-                  <th>Location</th>
-                  <th style="text-align: right;">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${dateJobs.map(j => renderTableRow(j, trackerState[j.url] || {})).join('')}
-              </tbody>
-            </table>
+          <div class="region-section-block">
+            <div class="tier-header-bar tier-domestic" role="button" tabindex="0" aria-expanded="true" aria-label="Toggle Domestic Region Section">
+              <div class="tier-title-wrap">
+                <span>📍 Domestic &amp; Regional Priority (LinkedIn, Naukri &amp; Corporate Boards)</span>
+                <span class="collapse-chevron">▾</span>
+              </div>
+              <span class="tier-count-badge badge-domestic">${domesticJobs.length} Verified</span>
+            </div>
+            <div class="region-content-wrap">
+              <div class="jobs-grid">
+                ${domesticJobs.map(j => renderCard(j, trackerState[j.url] || {})).join('')}
+              </div>
+            </div>
           </div>
         `;
       }
 
-      html += '</div></div>';
+      // Remote Grid Section
+      if (remoteJobs.length > 0) {
+        html += `
+          <div class="region-section-block">
+            <div class="tier-header-bar tier-remote" role="button" tabindex="0" aria-expanded="true" aria-label="Toggle Global Remote Section">
+              <div class="tier-title-wrap">
+                <span>🌐 Curated Global &amp; Remote Opportunities</span>
+                <span class="collapse-chevron">▾</span>
+              </div>
+              <span class="tier-count-badge badge-remote">${remoteJobs.length} Roles</span>
+            </div>
+            <div class="region-content-wrap">
+              <div class="jobs-grid">
+                ${remoteJobs.map(j => renderCard(j, trackerState[j.url] || {})).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+      }
+    } else {
+      // High-Density Table List View (HF-040)
+      html += `
+        <div class="table-view-container">
+          <table class="jobs-table">
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Role &amp; Stack</th>
+                <th>Region</th>
+                <th>Location</th>
+                <th style="text-align: right;">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${filtered.map(j => renderTableRow(j, trackerState[j.url] || {})).join('')}
+            </tbody>
+          </table>
+        </div>
+      `;
     }
 
     container.innerHTML = html;

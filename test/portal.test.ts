@@ -216,6 +216,9 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
         assert.ok(jsContent.includes('<th>Region</th>'), 'Table header must display Region instead of Tier (HF-045)');
         assert.ok(!jsContent.includes('<th>Tier</th>'), 'Table header must not display Tier');
         assert.ok(jsContent.includes('collapse-chevron') || jsContent.includes('toggleSectionCollapse'), 'app.js must contain section collapse handlers (HF-047)');
+        assert.ok(!jsContent.includes('class="date-header"'), 'app.js must not contain redundant date-header divider bars (HF-048)');
+        assert.ok(!jsContent.includes('class="date-section-block"'), 'app.js must not contain date-section-block dividers (HF-048)');
+        assert.ok(jsContent.includes('region-section-block'), 'app.js must organize feed directly under regional blocks (HF-048)');
 
         const jsonContent = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
         assert.strictEqual(typeof jsonContent.totalJobsCount, 'number');

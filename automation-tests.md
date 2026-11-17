@@ -425,6 +425,18 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Candidates can collapse reviewed sections or older date batches to focus on unread roles.
 - **Final State**: Clean accordion organization for high-volume browsing.
 
+#### [HF-048] Direct Regional Grouping Without Redundant Date Divider Headers
+- **Preconditions**: Portal feed contains active jobs across Domestic and Global Remote regions.
+- **Action**:
+  1. Portal feed omits outer date batch divider bars (`.date-header`, `🗓️ Today's Batch`).
+  2. Jobs are organized directly under clean top-level Regional sections:
+     - `📍 Domestic & Regional Priority (LinkedIn, Naukri & Corporate Boards)` with count badge.
+     - `🌐 Curated Global & Remote Opportunities` with count badge.
+  3. Each regional section features an interactive accordion collapse toggle with rotating chevron (`▾`/`▸`).
+  4. Top filter toolbar retains Timeline chips (`All Dates`, `Today's Batch`, `Yesterday`) for date scoping without DOM nesting.
+- **Expected Result**: Single-tier hierarchy reduces visual clutter, eliminates nested accordion confusion, and delivers a sleek, flat SaaS layout.
+- **Final State**: Clear, immediate distinction between Domestic Priority and Remote roles.
+
 ---
 
 ### Negative Flows
