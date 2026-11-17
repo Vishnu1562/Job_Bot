@@ -2,8 +2,8 @@ name: Power Platform Job Radar
 
 on:
   schedule:
-    # Runs every morning at 8:30 AM IST (03:00 UTC)
-    - cron: '0 3 * * *'
+    # Runs every morning at 8:35 AM IST (03:05 UTC) - off-peak minute to avoid GitHub runner queue delays
+    - cron: '5 3 * * *'
   workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
 
 permissions:
