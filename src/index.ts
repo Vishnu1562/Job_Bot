@@ -14,10 +14,12 @@ async function main() {
   const dbPath = process.env.DB_PATH || 'jobs.db';
 
   console.log('=====================================================');
-  console.log('🚀 Multi-Profile Job Radar • Morning Automated Scan');
+  console.log('🚀 Multi-Profile Job Radar • Automated Scan');
   console.log(`⏰ Time: ${new Date().toISOString()}`);
   console.log(`💾 Database: ${dbPath}`);
   console.log(`⚙️  Mode: ${isDryRun ? 'DRY RUN (no emails sent)' : 'PRODUCTION'}`);
+  const hasRapidApi = Boolean(process.env.RAPIDAPI_KEY?.trim());
+  console.log(`🔑 RapidAPI Key: ${hasRapidApi ? `Detected (${process.env.RAPIDAPI_KEY?.trim().slice(0, 5)}...)` : '❌ NOT CONFIGURED (JSearch live LinkedIn/Naukri will be skipped)'}`);
   console.log('=====================================================');
 
   const profiles = getProfiles();
