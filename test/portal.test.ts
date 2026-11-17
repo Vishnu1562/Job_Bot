@@ -208,12 +208,14 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
 
         const cssContent = fs.readFileSync(cssPath, 'utf-8');
         assert.ok(cssContent.includes(':root') && cssContent.includes('.job-drawer'), 'styles.css must contain CSS rules');
+        assert.ok(cssContent.includes('.collapse-chevron') || cssContent.includes('.date-section-block.collapsed'), 'styles.css must contain collapse accordion styles (HF-047)');
 
         const jsContent = fs.readFileSync(jsPath, 'utf-8');
         assert.ok(jsContent.includes('localStorage'), 'app.js must contain tracker persistence logic');
         assert.ok(jsContent.includes('stopPropagation'), 'app.js must contain action event isolation (HF-043)');
         assert.ok(jsContent.includes('<th>Region</th>'), 'Table header must display Region instead of Tier (HF-045)');
         assert.ok(!jsContent.includes('<th>Tier</th>'), 'Table header must not display Tier');
+        assert.ok(jsContent.includes('collapse-chevron') || jsContent.includes('toggleSectionCollapse'), 'app.js must contain section collapse handlers (HF-047)');
 
         const jsonContent = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
         assert.strictEqual(typeof jsonContent.totalJobsCount, 'number');

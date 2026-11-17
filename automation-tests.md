@@ -415,6 +415,16 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Crisp high-DPI browser tab branding and polished visual identity.
 - **Final State**: Complete visual finish across browser chrome and page viewport.
 
+#### [HF-047] Collapsible Date and Region Section Accordions
+- **Preconditions**: Portal feed rendered with Date groups (Today's Batch, Yesterday, Archive) and Region sections (Domestic Priority, Global Remote).
+- **Action**:
+  1. User clicks any `.date-header` -> Toggles collapsed/expanded state of that entire date batch.
+  2. User clicks any `.tier-header-bar` -> Toggles collapsed/expanded state of that specific regional section.
+  3. Rotating chevron indicator (`▾` expanded / `▸` collapsed) visually confirms section state.
+  4. Cursor changes to `pointer` with subtle hover glow indicating interactivity.
+- **Expected Result**: Candidates can collapse reviewed sections or older date batches to focus on unread roles.
+- **Final State**: Clean accordion organization for high-volume browsing.
+
 ---
 
 ### Negative Flows

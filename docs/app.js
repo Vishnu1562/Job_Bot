@@ -420,7 +420,16 @@
     }
   }
 
-  // 11. Event Delegations & Bindings (HF-043 Guard)
+  // 10b. Collapsible Accordion Controller (HF-047)
+  function toggleSectionCollapse(element             , targetSelector        )       {
+    const target = element.closest(targetSelector);
+    if (target) {
+      const isCollapsed = target.classList.toggle('collapsed');
+      element.setAttribute('aria-expanded', isCollapsed ? 'false' : 'true');
+    }
+  }
+
+  // 11. Event Delegations & Bindings (HF-043 Guard & HF-047 Collapse)
   function bindJobEvents()       {
     // Card & Table Row Click -> Opens Detail Drawer ONLY when clicking card body
     document.querySelectorAll('.job-card, .jobs-table tbody tr').forEach(item => {
@@ -458,6 +467,33 @@
         const action = this.getAttribute('data-action')                      ;
         if (url && (action === 'save' || action === 'applied')) {
           toggleAction(url, action);
+        }
+      });
+    });
+
+    // Section Collapsible Handlers (HF-047)
+    document.querySelectorAll('.date-header').forEach(header => {
+      header.addEventListener('click', function () {
+        toggleSectionCollapse(this               , '.date-section-block');
+      });
+      header.addEventListener('keydown', function (e       ) {
+        const keyEvent = e                 ;
+        if (keyEvent.key === 'Enter' || keyEvent.key === ' ') {
+          keyEvent.preventDefault();
+          toggleSectionCollapse(this               , '.date-section-block');
+        }
+      });
+    });
+
+    document.querySelectorAll('.tier-header-bar').forEach(tierHeader => {
+      tierHeader.addEventListener('click', function () {
+        toggleSectionCollapse(this               , '.region-section-block');
+      });
+      tierHeader.addEventListener('keydown', function (e       ) {
+        const keyEvent = e                 ;
+        if (keyEvent.key === 'Enter' || keyEvent.key === ' ') {
+          keyEvent.preventDefault();
+          toggleSectionCollapse(this               , '.region-section-block');
         }
       });
     });
@@ -562,24 +598,30 @@
 
       html += `
         <div class="date-section-block">
-          <div class="date-header">
-            <span class="date-pill">🗓️ ${escapeHtml(dateLabel)} (${dateJobs.length} Roles)</span>
+          <div class="date-header" role="button" tabindex="0" aria-expanded="true" aria-label="Toggle ${escapeHtml(dateLabel)} Section">
+            <span class="date-pill">🗓️ ${escapeHtml(dateLabel)} (${dateJobs.length} Roles) <span class="collapse-chevron">▾</span></span>
             <div class="date-divider-line"></div>
           </div>
+          <div class="date-content-wrap">
       `;
 
       if (currentViewMode === 'grid') {
         // Domestic Grid Section
         if (domesticJobs.length > 0) {
           html += `
-            <div class="tier-header-bar tier-domestic">
-              <div class="tier-title-wrap">
-                <span>📍 Domestic &amp; Regional Priority (LinkedIn, Naukri &amp; Corporate Boards)</span>
+            <div class="region-section-block">
+              <div class="tier-header-bar tier-domestic" role="button" tabindex="0" aria-expanded="true" aria-label="Toggle Domestic Region Section">
+                <div class="tier-title-wrap">
+                  <span>📍 Domestic &amp; Regional Priority (LinkedIn, Naukri &amp; Corporate Boards)</span>
+                  <span class="collapse-chevron">▾</span>
+                </div>
+                <span class="tier-count-badge badge-domestic">${domesticJobs.length} Verified</span>
               </div>
-              <span class="tier-count-badge badge-domestic">${domesticJobs.length} Verified</span>
-            </div>
-            <div class="jobs-grid">
-              ${domesticJobs.map(j => renderCard(j, trackerState[j.url] || {})).join('')}
+              <div class="region-content-wrap">
+                <div class="jobs-grid">
+                  ${domesticJobs.map(j => renderCard(j, trackerState[j.url] || {})).join('')}
+                </div>
+              </div>
             </div>
           `;
         }
@@ -587,14 +629,19 @@
         // Remote Grid Section
         if (remoteJobs.length > 0) {
           html += `
-            <div class="tier-header-bar tier-remote">
-              <div class="tier-title-wrap">
-                <span>🌐 Curated Global &amp; Remote Opportunities</span>
+            <div class="region-section-block">
+              <div class="tier-header-bar tier-remote" role="button" tabindex="0" aria-expanded="true" aria-label="Toggle Global Remote Section">
+                <div class="tier-title-wrap">
+                  <span>🌐 Curated Global &amp; Remote Opportunities</span>
+                  <span class="collapse-chevron">▾</span>
+                </div>
+                <span class="tier-count-badge badge-remote">${remoteJobs.length} Roles</span>
               </div>
-              <span class="tier-count-badge badge-remote">${remoteJobs.length} Roles</span>
-            </div>
-            <div class="jobs-grid">
-              ${remoteJobs.map(j => renderCard(j, trackerState[j.url] || {})).join('')}
+              <div class="region-content-wrap">
+                <div class="jobs-grid">
+                  ${remoteJobs.map(j => renderCard(j, trackerState[j.url] || {})).join('')}
+                </div>
+              </div>
             </div>
           `;
         }
@@ -620,7 +667,7 @@
         `;
       }
 
-      html += '</div>';
+      html += '</div></div>';
     }
 
     container.innerHTML = html;

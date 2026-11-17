@@ -432,6 +432,8 @@
       align-items: center;
       gap: 12px;
       margin-bottom: 20px;
+      cursor: pointer;
+      user-select: none;
     }
     .date-pill {
       background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(168, 85, 247, 0.15) 100%);
@@ -443,7 +445,12 @@
       border-radius: 24px;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      transition: all 0.15s ease;
+    }
+    .date-header:hover .date-pill {
+      border-color: var(--primary);
+      transform: translateY(-1px);
     }
     .date-divider-line {
       flex: 1;
@@ -451,6 +458,31 @@
       background: var(--card-border);
     }
 
+    /* Collapsible Section Accordion Styles (HF-047) */
+    .collapse-chevron {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      line-height: 1;
+      margin-left: 6px;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0.85;
+    }
+    .date-section-block.collapsed .date-header .collapse-chevron,
+    .region-section-block.collapsed .tier-header-bar .collapse-chevron {
+      transform: rotate(-90deg);
+    }
+    .date-section-block.collapsed .date-content-wrap {
+      display: none;
+    }
+    .region-section-block.collapsed .region-content-wrap {
+      display: none;
+    }
+
+    .region-section-block {
+      margin-bottom: 24px;
+    }
     .tier-header-bar {
       display: flex;
       justify-content: space-between;
@@ -460,6 +492,14 @@
       margin: 20px 0 14px;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.15s ease;
+    }
+    .tier-header-bar:hover {
+      border-color: var(--card-hover-border);
+      background: rgba(30, 41, 59, 0.6);
+      transform: translateY(-1px);
     }
     .tier-title-wrap {
       display: flex;
