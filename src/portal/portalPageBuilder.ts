@@ -723,9 +723,13 @@ export function generateWebPortal(
 
   const indexPath = path.join(outputDir, 'index.html');
   const jsonPath = path.join(outputDir, 'jobs.json');
+  const nojekyllPath = path.join(outputDir, '.nojekyll');
 
   fs.writeFileSync(indexPath, html, 'utf-8');
   fs.writeFileSync(jsonPath, JSON.stringify(portalData, null, 2), 'utf-8');
+  if (!fs.existsSync(nojekyllPath)) {
+    fs.writeFileSync(nojekyllPath, '', 'utf-8');
+  }
 
   return { portalData, indexPath, jsonPath };
 }

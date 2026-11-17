@@ -172,9 +172,11 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
 
         const indexPath = path.join(testOutputDir, 'index.html');
         const jsonPath = path.join(testOutputDir, 'jobs.json');
+        const nojekyllPath = path.join(testOutputDir, '.nojekyll');
 
         assert.ok(fs.existsSync(indexPath), 'docs/index.html must be generated');
         assert.ok(fs.existsSync(jsonPath), 'docs/jobs.json must be generated');
+        assert.ok(fs.existsSync(nojekyllPath), 'docs/.nojekyll must be generated to bypass Jekyll');
 
         const indexContent = fs.readFileSync(indexPath, 'utf-8');
         assert.ok(indexContent.length > 500, 'index.html must not be empty');
