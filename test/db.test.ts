@@ -150,4 +150,45 @@ describe('[HF-003, ST-001, REG-001] SQLite Deduplication Database', () => {
     assert.ok(remainingUrls.includes('https://example.com/job-queue-4'));
     assert.ok(remainingUrls.includes('https://example.com/job-queue-5'));
   });
+
+  it('expires unemailed jobs older than threshold (e.g. 48 hours) (HF-028)', () => {
+    // Insert job 1 (simulated 50 hours old)
+    db.saveJobIfNew({
+      id: 'job-old',
+      title: 'Old Stale Role',
+      company: 'OldCo',
+      location: 'India',
+      url: 'https://example.com/job-old',
+      tags: ['[Java]'],
+      source: 'remotive',
+      description: ''
+    }, 'java-backend');
+
+    // Manually push scraped_at timestamp back 50 hours
+    // @ts-ignore
+    db['db'].prepare(`UPDATE jobs SET scraped_at = datetime('now', '-50 hours') WHERE id = 'job-old'`).run();
+
+    // Insert job 2 (fresh current timestamp)
+    db.saveJobIfNew({
+      id: 'job-fresh',
+      title: 'Fresh Today Role',
+      company: 'FreshCo',
+      location: 'India',
+      url: 'https://example.com/job-fresh',
+      tags: ['[Java]'],
+      source: 'remotive',
+      description: ''
+    }, 'java-backend');
+
+    assert.strictEqual(db.getUnemailedJobs('java-backend').length, 2);
+
+    // Expire jobs older than 48 hours
+    const expiredCount = db.expireOldUnemailedJobs(48, 'java-backend');
+    assert.strictEqual(expiredCount, 1, 'Should expire exactly 1 old unemailed role');
+
+    // Verify only the fresh job remains in active queue
+    const activeQueue = db.getUnemailedJobs('java-backend');
+    assert.strictEqual(activeQueue.length, 1);
+    assert.strictEqual(activeQueue[0].id, 'job-fresh');
+  });
 });

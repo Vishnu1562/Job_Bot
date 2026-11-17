@@ -255,6 +255,20 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Pipeline delivers digest to default recipient without failing, throwing errors, or inserting invalid recipient syntax.
 - **Final State**: Resilient delivery ensuring notifications never fail due to missing profile-specific email variables.
 
+#### [HF-027] Dedicated Email Sections (Domestic vs Global Remote)
+- **Preconditions**: Queue containing both regional/domestic listings (JSearch LinkedIn, Naukri, Indeed, Adzuna) and global remote listings (RemoteOK, Remotive, Jobicy, Arbeitnow).
+- **Action**: Email digest partitions candidate jobs into two distinct visual sections:
+  1. `📍 Domestic & Regional Priority (LinkedIn, Naukri & Corporate Boards)` (up to 10–12 slots).
+  2. `🌐 Curated Global & Remote Opportunities` (capped at 3–5 slots).
+- **Expected Result**: High visual clarity separating verified domestic Indian openings from international remote contracts. If either section has 0 jobs, its header is omitted cleanly.
+- **Final State**: Candidate sees domestic jobs immediately without dilution from global remote feeds.
+
+#### [HF-028] 48-Hour Backlog Expiry & Queue Maintenance
+- **Preconditions**: Jobs in SQLite database where `emailed_at IS NULL` and `scraped_at < datetime('now', '-48 hours')`.
+- **Action**: Database maintenance function `expireOldUnemailedJobs(48, profileId)` marks stale unemailed jobs as expired (`emailed_at = 'EXPIRED'`).
+- **Expected Result**: Prevents stale jobs from piling up indefinitely and prevents artificial inflation of queue counts.
+- **Final State**: Only active, fresh listings (≤ 48 hours) remain in the dispatch queue.
+
 ---
 
 ### Negative Flows
@@ -384,6 +398,18 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Action**: Recipient resolver deduplicates case-insensitively and trims extraneous whitespace and characters.
 - **Expected Result**: Email is sent to a single recipient (`user@example.com`), avoiding duplicate deliveries to the same inbox.
 - **Final State**: Clean, deduplicated `to` header.
+
+#### [EC-014] Freshness-First Priority within Tiers
+- **Preconditions**: Both today's newly scraped jobs and yesterday's rolled-over jobs exist within the same tier (e.g. JSearch).
+- **Action**: Within the same priority tier, sorter orders jobs by `scrapedAt DESC`.
+- **Expected Result**: Today's freshest openings always display ahead of older unemailed backlog.
+- **Final State**: Freshest roles appear first in digest.
+
+#### [EC-015] Dynamic Section Fill (Domestic Cap with Global Remote Backfill)
+- **Preconditions**: One category has fewer jobs than its default allotment (e.g. domestic has only 3 jobs, or 0 jobs on weekends).
+- **Action**: Sorter dynamically allows the other category to backfill up to the total email cap (15 jobs).
+- **Expected Result**: Candidate receives a full, high-quality digest without empty slots or dead sections.
+- **Final State**: Robust digest rendering across all volume scenarios.
 
 ---
 

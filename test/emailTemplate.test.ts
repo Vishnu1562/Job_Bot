@@ -302,5 +302,104 @@ describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {
       // Tier 2 (Target Company) must appear before Tier 3 (Generic remote feed)
       assert.ok(targetPos < genericPos, 'Tier 2 (Target Company) must appear before Tier 3 (Generic remote feed)');
     });
+
+    it('renders dedicated visual sections for Domestic Priority vs Global Remote (HF-027)', () => {
+      const domesticJob: Job = {
+        id: 'jsearch-1',
+        title: 'Power Platform Developer (LinkedIn India)',
+        company: 'Bangalore Tech',
+        location: 'Bangalore, India',
+        url: 'https://in.linkedin.com/jobs/view/1',
+        tags: ['[Power Apps]'],
+        source: 'linkedin',
+        description: 'LinkedIn India job'
+      };
+      const remoteJob: Job = {
+        id: 'remoteok-1',
+        title: 'Full Stack Engineer (Worldwide Remote)',
+        company: 'Global Inc',
+        location: 'Worldwide Remote',
+        url: 'https://remoteok.com/jobs/1',
+        tags: ['[React]'],
+        source: 'remoteok',
+        description: 'Global remote job'
+      };
+
+      const { html } = generateEmailDigestHtml([domesticJob, remoteJob], 'Power Platform Job Radar', '#742774', 'Celine');
+
+      assert.ok(html.includes('Domestic &amp; Regional Priority') || html.includes('Domestic & Regional Priority'));
+      assert.ok(html.includes('Curated Global &amp; Remote') || html.includes('Curated Global & Remote'));
+      assert.ok(html.includes('LinkedIn India'));
+      assert.ok(html.includes('Worldwide Remote'));
+    });
+
+    it('prioritizes newest scraped jobs within the same tier (EC-014)', () => {
+      const olderJob: Job = {
+        id: 'jsearch-old',
+        title: 'Yesterday Domestic Job',
+        company: 'Old Corp',
+        location: 'Pune, India',
+        url: 'https://example.com/old',
+        tags: ['[Java]'],
+        source: 'linkedin',
+        description: '',
+        scrapedAt: new Date(Date.now() - 24 * 3600 * 1000).toISOString()
+      };
+      const newerJob: Job = {
+        id: 'jsearch-new',
+        title: 'Today Domestic Job',
+        company: 'Fresh Corp',
+        location: 'Kochi, India',
+        url: 'https://example.com/new',
+        tags: ['[Java]'],
+        source: 'linkedin',
+        description: '',
+        scrapedAt: new Date().toISOString()
+      };
+
+      const { html } = generateEmailDigestHtml([olderJob, newerJob]);
+      const newPos = html.indexOf('Today Domestic Job');
+      const oldPos = html.indexOf('Yesterday Domestic Job');
+      assert.ok(newPos < oldPos, 'Freshest job must be displayed first within same tier');
+    });
+
+    it('caps generic remote jobs to 5 slots and allows domestic roles to fill up to 12-15 slots (EC-015)', () => {
+      const domesticJobs: Job[] = Array.from({ length: 12 }, (_, i) => ({
+        id: `jsearch-${i + 1}`,
+        title: `Domestic Job ${i + 1}`,
+        company: `Domestic Co ${i + 1}`,
+        location: 'India',
+        url: `https://example.com/domestic-${i + 1}`,
+        tags: ['[Full Stack]'],
+        source: 'linkedin',
+        description: ''
+      }));
+
+      const remoteJobs: Job[] = Array.from({ length: 8 }, (_, i) => ({
+        id: `remote-${i + 1}`,
+        title: `Remote Job ${i + 1}`,
+        company: `Remote Co ${i + 1}`,
+        location: 'Worldwide Remote',
+        url: `https://example.com/remote-${i + 1}`,
+        tags: ['[Full Stack]'],
+        source: 'remoteok',
+        description: ''
+      }));
+
+      const { displayedJobs } = generateEmailDigestHtml(
+        [...domesticJobs, ...remoteJobs],
+        'Full Stack Developer Job Radar',
+        '#0284c7',
+        'Vishnu',
+        15
+      );
+
+      assert.strictEqual(displayedJobs.length, 15);
+      const displayedDomestic = displayedJobs.filter((j) => j.source === 'linkedin');
+      const displayedRemote = displayedJobs.filter((j) => j.source === 'remoteok');
+
+      assert.strictEqual(displayedDomestic.length, 12, 'Must display all 12 domestic jobs');
+      assert.strictEqual(displayedRemote.length, 3, 'Must cap remote jobs so total is 15');
+    });
   });
 });

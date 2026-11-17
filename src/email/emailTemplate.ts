@@ -10,6 +10,86 @@ export function escapeHtml(unsafe: string): string {
     .replace(/'/g, '&#039;');
 }
 
+function renderJobCard(job: Job, accentColor: string): string {
+  const title = escapeHtml(job.title);
+  const company = escapeHtml(job.company || 'Confidential Company');
+  const location = escapeHtml(job.location || 'India / Remote');
+  const source = escapeHtml(job.source ? job.source.toUpperCase() : 'JOB FEED');
+  const targetBadge = job.isTargetCompany
+    ? `<span style="display: inline-block; background-color: #fef08a; color: #854d0e; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; border: 1px solid #fde047; margin-left: 8px;">⭐ Priority Target</span>`
+    : '';
+  const tagsHtml = job.tags
+    .map(
+      (tag) => `
+    <span style="display: inline-block; background-color: #f1f5f9; color: #475569; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px; margin-right: 6px; margin-bottom: 6px; border: 1px solid #e2e8f0;">
+      ${escapeHtml(tag)}
+    </span>`
+    )
+    .join('');
+
+  return `
+  <!-- Job Card -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 18px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); overflow: hidden;">
+    <tr>
+      <td style="padding: 24px 20px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td>
+              <span style="font-size: 11px; font-weight: 700; color: ${accentColor}; text-transform: uppercase; letter-spacing: 0.5px;">${source}</span>${targetBadge}
+              <h3 style="margin: 6px 0 4px 0; font-size: 18px; font-weight: 700; color: #0f172a; line-height: 1.3;">${title}</h3>
+              <p style="margin: 0 0 14px 0; font-size: 14px; color: #475569; font-weight: 500;">
+                <strong style="color: #1e293b;">${company}</strong> &bull; 
+                <span style="display: inline-block; background-color: #f0fdf4; color: #166534; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 4px; border: 1px solid #bbf7d0;">📍 ${location}</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 4px 0 16px 0;">
+              ${tagsHtml}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="${escapeHtml(job.url)}" target="_blank" style="display: inline-block; background-color: ${accentColor}; color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 700; padding: 10px 22px; border-radius: 8px; letter-spacing: 0.3px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);">
+                Apply Now ↗
+              </a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>`;
+}
+
+function renderSectionHeader(
+  title: string,
+  subtitle: string,
+  icon: string,
+  badgeText: string,
+  badgeColor: string,
+  badgeBg: string
+): string {
+  return `
+  <!-- Section Header -->
+  <div style="margin: 22px 0 14px 0; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td>
+          <span style="font-size: 15px; font-weight: 800; color: #0f172a; letter-spacing: -0.2px;">
+            ${icon} ${escapeHtml(title)}
+          </span>
+          <span style="display: inline-block; background-color: ${badgeBg}; color: ${badgeColor}; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 12px; margin-left: 8px;">
+            ${escapeHtml(badgeText)}
+          </span>
+          <p style="margin: 4px 0 0 0; font-size: 12px; color: #64748b; font-weight: 500;">
+            ${escapeHtml(subtitle)}
+          </p>
+        </td>
+      </tr>
+    </table>
+  </div>`;
+}
+
 export function generateEmailDigestHtml(
   jobs: Job[],
   profileName: string = 'Power Platform Job Radar',
@@ -48,24 +128,37 @@ export function generateEmailDigestHtml(
     );
   };
 
-  const getJobTier = (job: Job): number => {
-    const isJSearch = isJSearchOrDomestic(job);
-    if (isJSearch) {
-      // Tier 1: Live domestic JSearch/LinkedIn/Naukri/Indeed postings (Target Companies within JSearch rank at top)
-      return job.isTargetCompany ? 0 : 1;
-    }
-    if (job.isTargetCompany) {
-      // Tier 2: Priority Target Companies from other feeds
-      return 2;
-    }
-    // Tier 3: Generic remote boards
-    return 3;
+  const sortComparator = (a: Job, b: Job): number => {
+    // 1. Target company first
+    const aTarget = a.isTargetCompany ? 0 : 1;
+    const bTarget = b.isTargetCompany ? 0 : 1;
+    if (aTarget !== bTarget) return aTarget - bTarget;
+
+    // 2. Freshness first: newest scraped_at timestamp first
+    const aTime = a.scrapedAt ? new Date(a.scrapedAt).getTime() : 0;
+    const bTime = b.scrapedAt ? new Date(b.scrapedAt).getTime() : 0;
+    if (aTime !== bTime) return bTime - aTime;
+
+    return 0;
   };
 
-  const sortedJobs = [...jobs].sort((a, b) => getJobTier(a) - getJobTier(b));
+  const allDomestic = jobs.filter(isJSearchOrDomestic).sort(sortComparator);
+  const allRemote = jobs.filter((j) => !isJSearchOrDomestic(j)).sort(sortComparator);
 
-  const displayedJobs = sortedJobs.slice(0, maxJobs);
-  const overflowCount = sortedJobs.length - displayedJobs.length;
+  const maxDomesticAllotment = Math.max(0, maxJobs - 3); // e.g. 12
+  let domesticCount = Math.min(allDomestic.length, maxDomesticAllotment);
+  let remoteSlotsRemaining = maxJobs - domesticCount;
+  let remoteCount = Math.min(allRemote.length, remoteSlotsRemaining);
+
+  // If remote didn't fill its quota, allow domestic to take the remaining slots
+  if (remoteCount < remoteSlotsRemaining && allDomestic.length > domesticCount) {
+    domesticCount = Math.min(allDomestic.length, maxJobs - remoteCount);
+  }
+
+  const displayedDomestic = allDomestic.slice(0, domesticCount);
+  const displayedRemote = allRemote.slice(0, remoteCount);
+  const displayedJobs = [...displayedDomestic, ...displayedRemote];
+  const overflowCount = jobs.length - displayedJobs.length;
 
   let contentHtml = '';
 
@@ -95,58 +188,33 @@ export function generateEmailDigestHtml(
       </div>
     `;
 
-    const jobCardsHtml = displayedJobs
-      .map((job) => {
-        const title = escapeHtml(job.title);
-        const company = escapeHtml(job.company || 'Confidential Company');
-        const location = escapeHtml(job.location || 'India / Remote');
-        const source = escapeHtml(job.source ? job.source.toUpperCase() : 'JOB FEED');
-        const targetBadge = job.isTargetCompany
-          ? `<span style="display: inline-block; background-color: #fef08a; color: #854d0e; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; border: 1px solid #fde047; margin-left: 8px;">⭐ Priority Target</span>`
-          : '';
-        const tagsHtml = job.tags
-          .map(
-            (tag) => `
-          <span style="display: inline-block; background-color: #f1f5f9; color: #475569; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px; margin-right: 6px; margin-bottom: 6px; border: 1px solid #e2e8f0;">
-            ${escapeHtml(tag)}
-          </span>`
-          )
-          .join('');
+    let sectionsHtml = '';
 
-        return `
-        <!-- Job Card -->
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 18px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); overflow: hidden;">
-          <tr>
-            <td style="padding: 24px 20px;">
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td>
-                    <span style="font-size: 11px; font-weight: 700; color: ${accentColor}; text-transform: uppercase; letter-spacing: 0.5px;">${source}</span>${targetBadge}
-                    <h3 style="margin: 6px 0 4px 0; font-size: 18px; font-weight: 700; color: #0f172a; line-height: 1.3;">${title}</h3>
-                    <p style="margin: 0 0 14px 0; font-size: 14px; color: #475569; font-weight: 500;">
-                      <strong style="color: #1e293b;">${company}</strong> &bull; 
-                      <span style="display: inline-block; background-color: #f0fdf4; color: #166534; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 4px; border: 1px solid #bbf7d0;">📍 ${location}</span>
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 4px 0 16px 0;">
-                    ${tagsHtml}
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="${escapeHtml(job.url)}" target="_blank" style="display: inline-block; background-color: ${accentColor}; color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 700; padding: 10px 22px; border-radius: 8px; letter-spacing: 0.3px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);">
-                      Apply Now ↗
-                    </a>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>`;
-      })
-      .join('');
+    if (displayedDomestic.length > 0) {
+      const domesticCards = displayedDomestic.map((j) => renderJobCard(j, accentColor)).join('');
+      const header = renderSectionHeader(
+        'Domestic & Regional Priority (LinkedIn, Naukri & Corporate Boards)',
+        'Direct openings from Indian IT hubs & regional offices',
+        '📍',
+        `${displayedDomestic.length} Verified`,
+        '#166534',
+        '#dcfce7'
+      );
+      sectionsHtml += `${header}\n${domesticCards}\n`;
+    }
+
+    if (displayedRemote.length > 0) {
+      const remoteCards = displayedRemote.map((j) => renderJobCard(j, accentColor)).join('');
+      const header = renderSectionHeader(
+        'Curated Global & Remote Opportunities',
+        'Worldwide remote engineering roles open to candidates from India',
+        '🌐',
+        `${displayedRemote.length} Roles`,
+        '#1e40af',
+        '#dbeafe'
+      );
+      sectionsHtml += `${header}\n${remoteCards}\n`;
+    }
 
     const overflowHtml =
       overflowCount > 0
@@ -159,7 +227,7 @@ export function generateEmailDigestHtml(
       </div>`
         : '';
 
-    contentHtml = `${greetingHtml}\n${jobCardsHtml}\n${overflowHtml}`;
+    contentHtml = `${greetingHtml}\n${sectionsHtml}${overflowHtml}`;
   }
 
   let text = '';

@@ -58,6 +58,11 @@ async function main() {
             return true;
           });
         } else {
+          // Expire unemailed jobs older than 48 hours to prevent queue backlog bloat
+          const expiredCount = db.expireOldUnemailedJobs(48, profile.id);
+          if (expiredCount > 0) {
+            console.log(`[Queue] Archived ${expiredCount} stale role(s) older than 48 hours for profile "${profile.id}".`);
+          }
           db.filterAndSaveNewJobs(scrapedJobs, profile.id);
           unemailedJobs = db.getUnemailedJobs(profile.id);
         }

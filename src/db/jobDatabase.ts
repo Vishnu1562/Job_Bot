@@ -155,8 +155,33 @@ export class JobDatabase {
       url: row.url,
       tags: typeof row.tags === 'string' ? JSON.parse(row.tags) : [],
       source: row.source,
-      description: row.description
+      description: row.description,
+      scrapedAt: row.scraped_at
     }));
+  }
+
+  public expireOldUnemailedJobs(hours: number = 48, profileId?: string): number {
+    let stmt;
+    if (profileId) {
+      stmt = this.db.prepare(`
+        UPDATE jobs
+        SET emailed_at = 'EXPIRED'
+        WHERE emailed_at IS NULL
+          AND profile_id = ?
+          AND scraped_at < datetime('now', '-' || ? || ' hours')
+      `);
+      const info = stmt.run(profileId, hours);
+      return Number(info.changes || 0);
+    } else {
+      stmt = this.db.prepare(`
+        UPDATE jobs
+        SET emailed_at = 'EXPIRED'
+        WHERE emailed_at IS NULL
+          AND scraped_at < datetime('now', '-' || ? || ' hours')
+      `);
+      const info = stmt.run(hours);
+      return Number(info.changes || 0);
+    }
   }
 
   public markJobsAsEmailed(urls: string[], profileId: string = 'power-platform'): void {
