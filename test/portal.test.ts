@@ -3,7 +3,7 @@ import assert from 'node:assert';
 import fs from 'node:fs';
 import path from 'node:path';
 import { JobDatabase } from '../src/db/jobDatabase.ts';
-import { exportPortalData } from '../src/portal/portalDataExporter.ts';
+import { exportPortalData, isDomesticJob } from '../src/portal/portalDataExporter.ts';
 import { generateWebPortal, buildPortalHtml } from '../src/portal/portalPageBuilder.ts';
 import type { Job, JobProfile } from '../src/types.ts';
 
@@ -221,6 +221,20 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
         assert.ok(!jsContent.includes('class="date-header"'), 'app.js must not contain redundant date-header divider bars (HF-048)');
         assert.ok(!jsContent.includes('class="date-section-block"'), 'app.js must not contain date-section-block dividers (HF-048)');
         assert.ok(jsContent.includes('region-section-block'), 'app.js must organize feed directly under regional blocks (HF-048)');
+        assert.ok(!jsContent.includes('Domestic Priority</span>'), 'Job cards must not contain redundant Domestic Priority badge (HF-050)');
+        assert.ok(!jsContent.includes('Global Remote</span>'), 'Job cards must not contain redundant Global Remote badge (HF-050)');
+
+        // HF-050: isDomesticJob classification accuracy
+        assert.strictEqual(
+          isDomesticJob({ id: 'jsearch-abc', title: 'Developer', company: 'Co', location: 'India', url: 'https://x.com', tags: [], source: 'shine' }),
+          true,
+          'JSearch jobs must be classified as domestic regardless of scraper aggregator site (HF-050)'
+        );
+        assert.strictEqual(
+          isDomesticJob({ id: 'feed-1', title: 'Developer', company: 'Co', location: 'Bengaluru, India', url: 'https://x.com', tags: [], source: 'custom' }),
+          true,
+          'India location jobs must be classified as domestic (HF-050)'
+        );
 
         const jsonContent = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
         assert.strictEqual(typeof jsonContent.totalJobsCount, 'number');

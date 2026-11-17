@@ -214,14 +214,11 @@
     if (locationElem) locationElem.innerHTML = `${ICONS.locationPin} <span>${escapeHtml(job.location || 'Location Not Specified')}</span>`;
 
     if (badgesElem) {
-      const tierBadge = job.tier === 'domestic'
-        ? `<span class="badge-tier-sm badge-domestic">${ICONS.locationPin}Domestic Priority</span>`
-        : `<span class="badge-tier-sm badge-remote">${ICONS.globe}Global Remote</span>`;
       const targetBadge = job.isTargetCompany
         ? `<span class="badge-priority-target">${ICONS.star}Priority Target Company</span>`
         : '';
       const dateBadge = `<span class="date-pill" style="font-size: 11px;">${ICONS.calendar}${escapeHtml(job.dateLabel || 'Archive')}</span>`;
-      badgesElem.innerHTML = tierBadge + targetBadge + dateBadge;
+      badgesElem.innerHTML = targetBadge + dateBadge;
     }
 
     if (skillsElem) {
@@ -274,9 +271,6 @@
     const monogramColor = getMonogramColor(job.company);
     const initials = getInitials(job.company);
 
-    const tierBadge = job.tier === 'domestic'
-      ? `<span class="badge-tier-sm badge-domestic">${ICONS.locationPin}Domestic Priority</span>`
-      : `<span class="badge-tier-sm badge-remote">${ICONS.globe}Global Remote</span>`;
     const targetBadge = job.isTargetCompany
       ? `<span class="badge-priority-target">${ICONS.star}Priority Target</span>`
       : '';
@@ -293,10 +287,7 @@
               ${initials}
             </div>
             <div class="card-header-content">
-              <div class="card-badges-row">
-                ${tierBadge}
-                ${targetBadge}
-              </div>
+              ${targetBadge ? `<div class="card-badges-row">${targetBadge}</div>` : ''}
               <h3 class="card-title">${escapeHtml(job.title)}</h3>
               <div class="card-company">${escapeHtml(job.company)}</div>
               <div class="card-location">${ICONS.locationPin} ${escapeHtml(job.location)}</div>

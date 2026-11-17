@@ -451,6 +451,16 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Unified, professional SaaS visual design language with zero external font dependencies.
 - **Final State**: Enterprise-grade UI aesthetics with crisp vector lines.
 
+#### [HF-050] Removal of Redundant In-Card Regional Badges
+- **Preconditions**: Portal renders jobs organized within dedicated Regional section separators (`Domestic & Regional Priority` and `Curated Global & Remote`).
+- **Action**:
+  1. Remove duplicate `DOMESTIC PRIORITY` and `GLOBAL REMOTE` badges from inside each individual job card.
+  2. The parent regional section header provides the definitive contextual grouping, avoiding badge redundancy.
+  3. Priority target company badge (`⭐ Priority Target`) is preserved in card headers when applicable.
+  4. Accuracy fix: `isDomesticJob` in data exporter classifies JSearch and all India-based roles under Domestic Priority without feed bleeding.
+- **Expected Result**: Cleaner card interface, reduced vertical card bulk, eliminating repetitive badge noise.
+- **Final State**: Streamlined cards where roles and companies are prioritized visually.
+
 ---
 
 ### Negative Flows

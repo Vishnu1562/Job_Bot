@@ -36,12 +36,16 @@ export interface PortalData {
 
 export function isDomesticJob(job: Job): boolean {
   const src = (job.source || '').toLowerCase();
+  const id = (job.id || '').toLowerCase();
+  const loc = (job.location || '').toLowerCase();
   return (
+    id.startsWith('jsearch') ||
     src.includes('jsearch') ||
     src.includes('adzuna') ||
     src.includes('linkedin') ||
     src.includes('naukri') ||
-    src.includes('indeed')
+    src.includes('indeed') ||
+    loc.includes('india')
   );
 }
 
