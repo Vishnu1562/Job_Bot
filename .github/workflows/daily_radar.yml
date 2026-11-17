@@ -2,8 +2,8 @@ name: Multi-Profile Job Radar
 
 on:
   schedule:
-    # Runs twice daily: Morning at 8:35 AM IST (03:05 UTC) & Evening at 6:35 PM IST (13:05 UTC)
-    - cron: '5 3,13 * * *'
+    # Runs daily in the morning at 8:35 AM IST (03:05 UTC)
+    - cron: '5 3 * * *'
   workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
 
 permissions:

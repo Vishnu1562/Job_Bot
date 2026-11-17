@@ -356,7 +356,7 @@ export function buildPortalHtml(data: PortalData): string {
         <div class="badge-live">● Live Sync • Updated Daily</div>
       </div>
       <p class="subtitle">
-        Interactive Job Feed & Backlog • Total <strong id="total-count-label">${data.totalJobsCount}</strong> active roles across profiles.
+        Live Curated Job Feed • Total <strong id="total-count-label">${data.totalJobsCount}</strong> active roles across profiles.
       </p>
     </header>
 
