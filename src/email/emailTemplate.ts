@@ -183,7 +183,7 @@ export function generateEmailDigestHtml(
 
   let text = '';
   if (count === 0) {
-    text = `⚡ ${dispatchEdition} • ${profileName}\n\nHey ${displayName}, it's completely fine!\nNo worries at all if today was a bit quiet on new postings — good opportunities take time, but your skills and hard work speak for themselves. You will find the right fit!\n\nWe'll keep scanning fresh feeds every day and alert you the second an exciting role drops. Keep your head high and stay confident!\n\n🌐 Browse 60-Day Web Portal Archive: ${portalUrl}\n\nCurated with care • Stay confident and keep going! ✨`;
+    text = `⚡ ${dispatchEdition} • ${profileName}\n\nHey ${displayName}, it's completely fine!\nNo worries at all if today was a bit quiet on new postings — good opportunities take time, but your skills and hard work speak for themselves. You will find the right fit!\n\nWe'll keep scanning fresh feeds every day and alert you the second an exciting role drops. Keep your head high and stay confident!\n\n🌐 Browse Web Portal Archive: ${portalUrl}\n\nCurated with care • Stay confident and keep going! ✨`;
   } else {
     const jobLines = displayedJobs
       .map((j, idx) => {
@@ -197,7 +197,7 @@ export function generateEmailDigestHtml(
         ? `\n\n+ ${overflowCount} additional role(s) identified today • Top ${displayedJobs.length} priority matches displayed above`
         : '';
 
-    text = `⚡ ${dispatchEdition} • ${profileName}\n\nHey ${displayName}! Take a deep breath — the job hunt is a journey, but you're doing great and you will find the right role!\nHere are today's ${count} curated opportunities:\n\n${jobLines}${overflowText}\n\n🌐 View Full 60-Day Web Portal & Tracker: ${portalUrl}\n\nCurated with care • Stay confident and keep going! ✨\nCustom job alerts for ${displayName} • Delivered daily`;
+    text = `⚡ ${dispatchEdition} • ${profileName}\n\nHey ${displayName}! Take a deep breath — the job hunt is a journey, but you're doing great and you will find the right role!\nHere are today's ${count} curated opportunities:\n\n${jobLines}${overflowText}\n\n🌐 Open Web Portal & Tracker: ${portalUrl}\n\nCurated with care • Stay confident and keep going! ✨\nCustom job alerts for ${displayName} • Delivered daily`;
   }
 
   const html = renderTemplate(loadEmailTemplate(), {

@@ -356,7 +356,7 @@ export function buildPortalHtml(data: PortalData): string {
         <div class="badge-live">● Live Sync • Updated Daily</div>
       </div>
       <p class="subtitle">
-        Interactive 60-Day Rolling Job Feed & Backlog • Total <strong id="total-count-label">${data.totalJobsCount}</strong> active roles across profiles.
+        Interactive Job Feed & Backlog • Total <strong id="total-count-label">${data.totalJobsCount}</strong> active roles across profiles.
       </p>
     </header>
 
@@ -389,7 +389,7 @@ export function buildPortalHtml(data: PortalData): string {
       <!-- Secondary Filters: Date & Tier -->
       <div class="toolbar-row">
         <div class="action-btn-group" id="date-filters">
-          <button class="filter-btn active" data-date="all">All Dates (60-Day)</button>
+          <button class="filter-btn active" data-date="all">All Dates</button>
           <button class="filter-btn" data-date="today">Today's Batch</button>
           <button class="filter-btn" data-date="yesterday">Yesterday</button>
         </div>
