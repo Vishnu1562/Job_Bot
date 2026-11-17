@@ -252,4 +252,33 @@ describe('[HF-007, HF-008, HF-009, EC-004] Multi-Profile Configuration & Matchin
       assert.ok(tags.includes('[Copilot Studio]'));
     });
   });
+
+  describe('[REG-003] Modular Domain Architecture Subfile Isolation', () => {
+    it('allows independent import and customization of individual profiles from subfiles', async () => {
+      const { getPowerPlatformProfile } = await import('../src/profiles/powerPlatform.ts');
+      const { getFullStackProfile } = await import('../src/profiles/fullStack.ts');
+      const { getJavaBackendProfile } = await import('../src/profiles/javaBackend.ts');
+      const { DEFAULT_TARGET_COMPANIES } = await import('../src/profiles/targetCompanies.ts');
+
+      const customEnv = {
+        RECIPIENT_EMAIL: 'default@test.com',
+        RECIPIENT_EMAIL_POWERPLATFORM: 'celine@test.com',
+        RECIPIENT_EMAIL_FULLSTACK: 'vishnu@test.com',
+        RECIPIENT_EMAIL_JAVA: 'aswin@test.com'
+      };
+
+      const pp = getPowerPlatformProfile(customEnv);
+      const fs = getFullStackProfile(customEnv);
+      const java = getJavaBackendProfile(customEnv);
+
+      assert.strictEqual(pp.candidateName, 'Celine');
+      assert.strictEqual(pp.recipientEmail, 'celine@test.com');
+      assert.strictEqual(fs.candidateName, 'Vishnu');
+      assert.strictEqual(fs.recipientEmail, 'vishnu@test.com');
+      assert.strictEqual(java.candidateName, 'Aswin');
+      assert.strictEqual(java.recipientEmail, 'aswin@test.com');
+
+      assert.ok(DEFAULT_TARGET_COMPANIES.length >= 20, 'Should load common target companies');
+    });
+  });
 });

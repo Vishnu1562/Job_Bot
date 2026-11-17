@@ -1,0 +1,38 @@
+export const DEFAULT_TARGET_COMPANIES: (string | RegExp)[] = [
+  // Global Tech Majors
+  /\bmicrosoft\b/i,
+  /\bgoogle\b/i,
+  /\bamazon\b/i,
+  /\boracle\b/i,
+  /\bcisco\b/i,
+  /\badobe\b/i,
+  /\bsalesforce\b/i,
+  /\bmeta\b/i,
+  /\bapple\b/i,
+  // Top Consultancies & IT Giants
+  /\baccenture\b/i,
+  /\binfosys\b/i,
+  /\bcognizant\b/i,
+  /\bcapgemini\b/i,
+  /\bdeloitte\b/i,
+  /\bibm\b/i,
+  /\bpwc\b/i,
+  /\bhcl\b/i,
+  /\bhcltech\b/i,
+  /\bltimindtree\b/i,
+  // Kochi Infopark & SmartCity Tech Majors
+  /(?:^|\b)ust(?:\s*global)?(?:\b|$)/i,
+  /\bibs\s*software\b/i,
+  /\bqburst\b/i,
+  /\btata\s*elxsi\b/i,
+  /\bexperion(?:\s*technologies)?\b/i,
+  /\bfingent\b/i,
+  /\bnest\s*digital\b/i,
+  /\bnest\s*technologies\b/i,
+  /\bkeyvalue(?:\s*software)?\b/i,
+  /\btech\s*mahindra\b/i,
+  /\bsutherland\b/i,
+  /\bgeojit\b/i,
+  /\bignitho\b/i,
+  /\brapidvalue\b/i
+];

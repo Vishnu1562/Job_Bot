@@ -384,3 +384,4 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 ### Regression Requirements
 - `REG-001`: Consecutive pipeline execution with identical feed data must yield 0 new jobs on the second run and send the 0-job status digest.
 - `REG-002`: Multi-profile pipeline execution across all configured profiles (Power Platform, Full Stack, Java Backend) maintains independent deduplication state.
+- `REG-003`: Modular Domain Architecture & Backward Compatibility: Codebase is organized into clean domain modules (`src/profiles/`, `src/scrapers/`, `src/filters/`, `src/email/`, `src/db/`) with individual profile definitions (`powerPlatform.ts`, `fullStack.ts`, `javaBackend.ts`) aggregated via `src/profiles/index.ts`. All barrel exports maintain 100% backward compatibility with existing test suites, CLI entry points, and workflows.

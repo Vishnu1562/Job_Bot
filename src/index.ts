@@ -1,11 +1,10 @@
 import 'dotenv/config';
 import fs from 'node:fs';
 import path from 'node:path';
-import { getProfiles } from './config/profiles.ts';
-import { fetchJobsForProfile } from './scraper.ts';
-import { JobDatabase } from './db.ts';
-import { generateEmailDigestHtml } from './emailTemplate.ts';
-import { sendDigestEmail } from './mailer.ts';
+import { getProfiles } from './profiles/index.ts';
+import { fetchJobsForProfile } from './scrapers/index.ts';
+import { JobDatabase } from './db/index.ts';
+import { generateEmailDigestHtml, sendDigestEmail } from './email/index.ts';
 
 async function main() {
   const isDryRun = process.argv.includes('--dry-run');
