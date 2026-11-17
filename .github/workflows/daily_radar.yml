@@ -56,6 +56,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore(radar): update jobs.db and web portal dashboard [skip ci]"
+            git commit -m "chore(radar): update jobs.db and web portal dashboard"
             git push
           fi

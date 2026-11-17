@@ -169,6 +169,21 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
       // 5. Verify Offline Bootstrap Data Embedded ([EC-021])
       assert.ok(html.includes('id="portal-data"'), 'Must include embedded JSON bootstrap for offline/file:// resilience');
       assert.ok(html.includes('job-test-1'), 'Embedded JSON must contain ingested jobs');
+
+      // 6. Verify Modern UI Redesign: KPI Stats Bar & Theme Toggle (HF-038)
+      assert.ok(html.includes('id="kpi-stats-bar"'), 'Must include KPI summary stats bar');
+      assert.ok(html.includes('id="theme-toggle"'), 'Must include Dark/Light theme toggle');
+      assert.ok(html.includes('company-monogram') || html.includes('getMonogramColor'), 'Must include company monogram avatars');
+
+      // 7. Verify Slide-over Job Detail Drawer (HF-039)
+      assert.ok(html.includes('id="job-drawer"'), 'Must include slide-over job detail drawer');
+      assert.ok(html.includes('id="drawer-overlay"'), 'Must include drawer backdrop overlay');
+
+      // 8. Verify View Mode Switcher: Grid vs Table (HF-040)
+      assert.ok(html.includes('data-view="grid"') && html.includes('data-view="table"'), 'Must include View Mode switcher buttons');
+
+      // 9. Verify Toast Notifications (HF-041)
+      assert.ok(html.includes('id="toast-notification"'), 'Must include toast notification container');
     });
 
     it('writes index.html and jobs.json to destination folder without error', () => {

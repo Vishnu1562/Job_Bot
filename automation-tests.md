@@ -334,6 +334,41 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Recipients can click through to browse 100% of today's listings and 60-day backlog on the web board.
 - **Final State**: Tight loop connecting push email notifications to interactive web exploration.
 
+#### [HF-038] Linear / Raycast Modern Pro UI Aesthetics & KPI Bar
+- **Preconditions**: Web portal loaded in modern desktop or mobile browser.
+- **Action**: Portal initializes with Linear/Raycast design language:
+  1. Sticky frosted glass navigation bar (`backdrop-filter: blur(16px)`).
+  2. Ambient gradient glowing cards with elevation micro-interactions.
+  3. Dynamic company monogram avatars with deterministic color coding.
+  4. Live KPI stats bar showing `Total Active`, `🔥 Found Today`, `📍 Domestic Priority`, and `⭐ Saved`.
+  5. Dual Light & Dark Mode toggle with preference persisted in `localStorage`.
+- **Expected Result**: Clean, polished, visually stunning user interface matching top developer products.
+- **Final State**: High visual appeal with zero CSS framework bloat.
+
+#### [HF-039] Slide-Over Job Detail Drawer
+- **Preconditions**: Job listings rendered on portal page.
+- **Action**: User clicks on a job card or table row:
+  1. Smooth slide-over drawer animates from right edge without navigating away.
+  2. Renders company monogram avatar, title, company, location, tier badge, skills, full description, and direct CTA button.
+  3. Closes on Escape key, clicking outside overlay, or clicking close button.
+- **Expected Result**: Seamless job inspection without opening and switching between multiple browser tabs.
+- **Final State**: Fluid, modern single-page experience.
+
+#### [HF-040] Interactive View Mode Switcher (Grid Cards vs Compact Table)
+- **Preconditions**: User browsing job listings.
+- **Action**: User clicks the Grid / Table view toggle icon:
+  1. Grid mode renders visual responsive 3-column cards.
+  2. Table mode renders high-density rows for rapid scanning of 50+ roles with columns for Company, Title, Tier, Location, Date, and Actions.
+  3. Preference is persisted in `localStorage`.
+- **Expected Result**: Flexible reading mode tailored to user's browsing preference.
+- **Final State**: Professional power-user workflow.
+
+#### [HF-041] Interactive Feedback Toast Notifications
+- **Preconditions**: User marks a job as **⭐ Save** or **✅ Applied**.
+- **Action**: A non-intrusive animated toast pill slides in at the bottom right.
+- **Expected Result**: Instant positive confirmation of saved status with auto-dismiss in 2.5 seconds.
+- **Final State**: Responsive, tactile user feedback.
+
 ---
 
 ### Negative Flows
@@ -400,6 +435,12 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Action**: Portal exporter and page builder execute.
 - **Expected Result**: Generates a clean, friendly empty state with helpful status indicators rather than throwing null-reference or file generation errors.
 - **Final State**: Graceful zero-data handling.
+
+#### [NF-011] Slide-Over Drawer Escape & Overlay Trap Resilience
+- **Preconditions**: Drawer open displaying job details.
+- **Action**: User presses Escape key or clicks anywhere on dark backdrop overlay.
+- **Expected Result**: Drawer smoothly dismisses and unfreezes body scroll without throwing JavaScript runtime errors.
+- **Final State**: Robust modal state lifecycle.
 
 ---
 
@@ -511,6 +552,16 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Action**: Data exporter groups listings by date (`scraped_at`), prioritizing Today's roles at the top, and partitions each date into Domestic Priority vs Global Remote tiers.
 - **Expected Result**: Today's jobs are indexed first, and each date view renders dedicated domestic vs remote sections.
 - **Final State**: Perfect mirror of email tier hierarchy across the entire 60-day historical window.
+
+#### [EC-024] High-Density Mobile & Responsive Viewport Adaptability
+- **Preconditions**: Mobile device or small screen viewport (< 640px).
+- **Action**: Responsive CSS adjusts layout seamlessly:
+  1. Sticky navigation wraps controls cleanly into a touch-friendly toolbar.
+  2. Grid cards scale to full width (1-column).
+  3. Detail drawer expands to 100% full screen with sticky bottom CTA.
+  4. Table list view scrolls horizontally or cleanly formats to cards.
+- **Expected Result**: 100% responsive without horizontal layout breakages or clipped text.
+- **Final State**: Flawless experience on mobile, tablet, and desktop.
 
 ---
 
