@@ -245,5 +245,60 @@ describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {
       assert.ok(linkedInIndex < firstWwrIndex, 'LinkedIn job must appear before generic WeWorkRemotely jobs');
       assert.ok(naukriIndex < firstWwrIndex, 'Naukri job must appear before generic WeWorkRemotely jobs');
     });
+
+    it('prioritizes JSearch LinkedIn/Naukri jobs (Tier 1) ahead of generic feed Target Companies (Tier 2) (HF-023)', () => {
+      const genericTargetCompanyJob: Job = {
+        id: 'wwr-target-1',
+        title: 'Lead Architect',
+        company: 'Microsoft',
+        location: 'Remote Worldwide',
+        url: 'https://weworkremotely.com/jobs/ms-1',
+        tags: ['[Java]'],
+        source: 'weworkremotely',
+        description: 'Target company on generic remote feed',
+        isTargetCompany: true
+      };
+
+      const jsearchLinkedInJob: Job = {
+        id: 'jsearch-li-202',
+        title: 'Full Stack Engineer (LinkedIn India)',
+        company: 'Kochi Tech Ventures',
+        location: 'Kochi Infopark, Kerala',
+        url: 'https://in.linkedin.com/jobs/view/202',
+        tags: ['[React]', '[Node.js]'],
+        source: 'linkedin',
+        description: 'LinkedIn domestic job',
+        isTargetCompany: false
+      };
+
+      const genericRemoteJob: Job = {
+        id: 'wwr-generic-3',
+        title: 'Frontend Developer',
+        company: 'Startup Inc',
+        location: 'Remote Worldwide',
+        url: 'https://weworkremotely.com/jobs/startup-3',
+        tags: ['[React]'],
+        source: 'weworkremotely',
+        description: 'Generic remote job',
+        isTargetCompany: false
+      };
+
+      // Pass generic target first, then LinkedIn, then generic remote
+      const { html } = generateEmailDigestHtml(
+        [genericTargetCompanyJob, jsearchLinkedInJob, genericRemoteJob],
+        'Full Stack Developer Job Radar',
+        '#0284c7',
+        'Vishnu'
+      );
+
+      const linkedInPos = html.indexOf('Full Stack Engineer (LinkedIn India)');
+      const targetPos = html.indexOf('Lead Architect');
+      const genericPos = html.indexOf('Frontend Developer');
+
+      // Tier 1 (JSearch) must appear before Tier 2 (Target company on generic feed)
+      assert.ok(linkedInPos < targetPos, 'Tier 1 (JSearch / LinkedIn) must appear before Tier 2 (Target Company on generic feed)');
+      // Tier 2 (Target Company) must appear before Tier 3 (Generic remote feed)
+      assert.ok(targetPos < genericPos, 'Tier 2 (Target Company) must appear before Tier 3 (Generic remote feed)');
+    });
   });
 });

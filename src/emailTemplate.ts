@@ -45,19 +45,21 @@ export function generateEmailDigestHtml(
     );
   };
 
-  const sortedJobs = [...jobs].sort((a, b) => {
-    // 1. Priority Target Companies first
-    if (a.isTargetCompany && !b.isTargetCompany) return -1;
-    if (!a.isTargetCompany && b.isTargetCompany) return 1;
+  const getJobTier = (job: Job): number => {
+    const isJSearch = isJSearchOrDomestic(job);
+    if (isJSearch) {
+      // Tier 1: Live domestic JSearch/LinkedIn/Naukri/Indeed postings (Target Companies within JSearch rank at top)
+      return job.isTargetCompany ? 0 : 1;
+    }
+    if (job.isTargetCompany) {
+      // Tier 2: Priority Target Companies from other feeds
+      return 2;
+    }
+    // Tier 3: Generic remote boards
+    return 3;
+  };
 
-    // 2. JSearch live postings (LinkedIn, Naukri, Indeed, Glassdoor) next
-    const aIsJSearch = isJSearchOrDomestic(a);
-    const bIsJSearch = isJSearchOrDomestic(b);
-    if (aIsJSearch && !bIsJSearch) return -1;
-    if (!aIsJSearch && bIsJSearch) return 1;
-
-    return 0;
-  });
+  const sortedJobs = [...jobs].sort((a, b) => getJobTier(a) - getJobTier(b));
 
   const displayedJobs = sortedJobs.slice(0, maxJobs);
   const overflowCount = sortedJobs.length - displayedJobs.length;

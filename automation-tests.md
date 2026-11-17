@@ -220,13 +220,13 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Final State**: Live domestic Indian jobs available in daily digest.
 
 #### [HF-023] JSearch & LinkedIn / Naukri Feed Prioritization
-- **Preconditions**: Ingestion pool containing both generic remote feeds (WeWorkRemotely, RemoteOK, Remotive) and JSearch feeds (LinkedIn, Naukri, Indeed, Glassdoor).
-- **Action**: Email digest generator prioritizes jobs in ranked tiers before taking the Top 15 cap:
-  1. Priority Target companies (`isTargetCompany: true`)
-  2. JSearch / LinkedIn / Naukri / Indeed domestic roles (`source: 'linkedin'`, `'naukri'`, `'indeed'`, `'glassdoor'`, or ID prefixed with `jsearch-`)
-  3. Generic international remote boards (WeWorkRemotely, RemoteOK, Remotive, Jobicy)
-- **Expected Result**: LinkedIn, Naukri, and Indeed roles are rendered ahead of WeWorkRemotely and generic remote boards, ensuring local/domestic opportunities are guaranteed within the Top 15 email slots.
-- **Final State**: Candidates see actionable domestic LinkedIn/Naukri jobs first.
+- **Preconditions**: Ingestion pool containing generic remote feeds (WeWorkRemotely, RemoteOK, Remotive), Target Company jobs, and JSearch feeds (LinkedIn, Naukri, Indeed, Glassdoor).
+- **Action**: Email digest generator prioritizes jobs in strictly ordered tiers before taking the Top 15 cap:
+  1. **Tier 1 (Top Priority)**: Live JSearch postings (`LinkedIn`, `Naukri`, `Indeed`, `Glassdoor`, or ID prefixed with `jsearch-`). If also a target company, ranked at the very top.
+  2. **Tier 2**: Priority Target Companies from other feeds (`isTargetCompany: true`, e.g. Microsoft, Google, UST, IBS, QBurst on generic feeds).
+  3. **Tier 3**: Generic international remote boards (WeWorkRemotely, RemoteOK, Remotive, Jobicy).
+- **Expected Result**: All LinkedIn, Naukri, and Indeed roles appear first at the top of the email digest, followed by target company openings, followed by generic remote postings.
+- **Final State**: Candidates see actionable domestic LinkedIn/Naukri jobs first, followed by target companies, preventing generic remote feeds from taking the top slots.
 
 ---
 
