@@ -243,6 +243,18 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Clean, direct ingestion of live LinkedIn, Naukri, and corporate listings with zero probing overhead or 404 retries.
 - **Final State**: Clean, robust, production-grade JSearch v5 integration.
 
+#### [HF-025] Dual Recipient Dispatch (Default + Profile Email)
+- **Preconditions**: `RECIPIENT_EMAIL` is set in environment (e.g. `default@example.com`), and a profile-specific recipient is also set (e.g. `RECIPIENT_EMAIL_POWERPLATFORM=celine@example.com` or `RECIPIENT_EMAIL_JAVA=aswin@example.com`).
+- **Action**: Profile recipient resolver combines both default and profile-specific email into comma-delimited list for nodemailer's `to` field (`"default@example.com, celine@example.com"`).
+- **Expected Result**: Single email digest is sent addressed to BOTH default and candidate email addresses. Both parties receive the digest.
+- **Final State**: Default email receives digests for all profiles, while candidates also receive their respective profile's digest.
+
+#### [HF-026] Graceful Fallback When Profile Recipient Is Missing
+- **Preconditions**: `RECIPIENT_EMAIL` is set in environment, but a profile-specific recipient (e.g. `RECIPIENT_EMAIL_FULLSTACK`) is not provided, is undefined, or is empty whitespace.
+- **Action**: Profile recipient resolver safely falls back to only `RECIPIENT_EMAIL`.
+- **Expected Result**: Pipeline delivers digest to default recipient without failing, throwing errors, or inserting invalid recipient syntax.
+- **Final State**: Resilient delivery ensuring notifications never fail due to missing profile-specific email variables.
+
 ---
 
 ### Negative Flows
@@ -366,6 +378,12 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
   - Excludes "TCS" and "Tata Consultancy Services" without falsely matching unrelated words.
   - Excludes "Wipro" and "Wipro Limited".
 - **Final State**: Precise company matching without false positive drops.
+
+#### [EC-013] Recipient Deduplication and Formatting
+- **Preconditions**: `RECIPIENT_EMAIL` and `RECIPIENT_EMAIL_<PROFILE>` are identical or differ only in casing/whitespace (e.g. `user@example.com` and `USER@example.com`).
+- **Action**: Recipient resolver deduplicates case-insensitively and trims extraneous whitespace and characters.
+- **Expected Result**: Email is sent to a single recipient (`user@example.com`), avoiding duplicate deliveries to the same inbox.
+- **Final State**: Clean, deduplicated `to` header.
 
 ---
 

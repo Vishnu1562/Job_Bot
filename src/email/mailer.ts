@@ -3,7 +3,11 @@ import type { MailerConfig } from '../types.ts';
 
 function cleanEmail(val: string): string {
   if (!val) return '';
-  return val.replace(/[<>"]/g, '').trim();
+  return val
+    .split(',')
+    .map((e) => e.replace(/[<>"]/g, '').trim())
+    .filter(Boolean)
+    .join(', ');
 }
 
 export function validateMailerConfig(env: Record<string, string | undefined> = process.env): MailerConfig {

@@ -1,5 +1,6 @@
 import type { JobProfile } from '../types.ts';
 import { DEFAULT_TARGET_COMPANIES } from './targetCompanies.ts';
+import { resolveProfileRecipients } from './recipientResolver.ts';
 
 export function getFullStackProfile(
   env: Record<string, string | undefined> = process.env
@@ -10,7 +11,7 @@ export function getFullStackProfile(
     id: 'full-stack',
     name: 'Full Stack Developer Job Radar',
     candidateName: 'Vishnu',
-    recipientEmail: env.RECIPIENT_EMAIL_FULLSTACK || defaultRecipient,
+    recipientEmail: resolveProfileRecipients(defaultRecipient, env.RECIPIENT_EMAIL_FULLSTACK),
     excludedCompanies: [/(?:^|\b)(?:ey|ernst\s*&\s*young|ernst\s*and\s*young)(?:\b|$)/i],
     excludedTitleKeywords: [
       'magento',

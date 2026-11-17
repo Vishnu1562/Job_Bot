@@ -1,5 +1,6 @@
 import type { JobProfile } from '../types.ts';
 import { DEFAULT_TARGET_COMPANIES } from './targetCompanies.ts';
+import { resolveProfileRecipients } from './recipientResolver.ts';
 
 export function getPowerPlatformProfile(
   env: Record<string, string | undefined> = process.env
@@ -10,7 +11,7 @@ export function getPowerPlatformProfile(
     id: 'power-platform',
     name: 'Power Platform Job Radar',
     candidateName: 'Celine',
-    recipientEmail: env.RECIPIENT_EMAIL_POWERPLATFORM || defaultRecipient,
+    recipientEmail: resolveProfileRecipients(defaultRecipient, env.RECIPIENT_EMAIL_POWERPLATFORM),
     excludedCompanies: [/\bwipro\b/i],
     excludedTitleKeywords: [
       'magento',

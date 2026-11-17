@@ -8,6 +8,7 @@ export { getPowerPlatformProfile } from './powerPlatformProfile.ts';
 export { getFullStackProfile } from './fullStackProfile.ts';
 export { getJavaBackendProfile } from './javaBackendProfile.ts';
 export { isJobMatchingProfile, extractProfileSkillTags } from './jobMatcher.ts';
+export { resolveProfileRecipients } from './recipientResolver.ts';
 
 export function getProfiles(env: Record<string, string | undefined> = process.env): JobProfile[] {
   return [

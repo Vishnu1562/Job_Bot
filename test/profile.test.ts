@@ -96,7 +96,51 @@ describe('[HF-007, HF-008, HF-009, EC-004] Multi-Profile Configuration & Matchin
         RECIPIENT_EMAIL_JAVA: 'aswinmsuthan333@gmail.com'
       });
       const customJava = customProfiles.find((p) => p.id === 'java-backend');
-      assert.strictEqual(customJava?.recipientEmail, 'aswinmsuthan333@gmail.com');
+      assert.strictEqual(customJava?.recipientEmail, 'default@example.com, aswinmsuthan333@gmail.com');
+    });
+
+    it('resolves dual recipients for Power Platform and Full Stack profiles (HF-025)', () => {
+      const customProfiles = getProfiles({
+        RECIPIENT_EMAIL: 'admin@company.com',
+        RECIPIENT_EMAIL_POWERPLATFORM: 'celine@company.com',
+        RECIPIENT_EMAIL_FULLSTACK: 'vishnu@company.com'
+      });
+
+      const pp = customProfiles.find((p) => p.id === 'power-platform');
+      const fs = customProfiles.find((p) => p.id === 'full-stack');
+
+      assert.strictEqual(pp?.recipientEmail, 'admin@company.com, celine@company.com');
+      assert.strictEqual(fs?.recipientEmail, 'admin@company.com, vishnu@company.com');
+    });
+
+    it('gracefully falls back to default recipient when profile recipient is missing or empty (HF-026)', () => {
+      const customProfiles = getProfiles({
+        RECIPIENT_EMAIL: 'admin@company.com',
+        RECIPIENT_EMAIL_POWERPLATFORM: '',
+        RECIPIENT_EMAIL_FULLSTACK: '   '
+      });
+
+      const pp = customProfiles.find((p) => p.id === 'power-platform');
+      const fs = customProfiles.find((p) => p.id === 'full-stack');
+      const java = customProfiles.find((p) => p.id === 'java-backend');
+
+      assert.strictEqual(pp?.recipientEmail, 'admin@company.com');
+      assert.strictEqual(fs?.recipientEmail, 'admin@company.com');
+      assert.strictEqual(java?.recipientEmail, 'admin@company.com');
+    });
+
+    it('deduplicates case-insensitively when profile recipient matches default recipient (EC-013)', () => {
+      const customProfiles = getProfiles({
+        RECIPIENT_EMAIL: 'admin@company.com',
+        RECIPIENT_EMAIL_POWERPLATFORM: 'ADMIN@COMPANY.COM',
+        RECIPIENT_EMAIL_FULLSTACK: ' admin@company.com '
+      });
+
+      const pp = customProfiles.find((p) => p.id === 'power-platform');
+      const fs = customProfiles.find((p) => p.id === 'full-stack');
+
+      assert.strictEqual(pp?.recipientEmail, 'admin@company.com');
+      assert.strictEqual(fs?.recipientEmail, 'admin@company.com');
     });
 
     it('matches Java backend developer jobs (HF-013)', () => {
@@ -272,11 +316,11 @@ describe('[HF-007, HF-008, HF-009, EC-004] Multi-Profile Configuration & Matchin
       const java = getJavaBackendProfile(customEnv);
 
       assert.strictEqual(pp.candidateName, 'Celine');
-      assert.strictEqual(pp.recipientEmail, 'celine@test.com');
+      assert.strictEqual(pp.recipientEmail, 'default@test.com, celine@test.com');
       assert.strictEqual(fs.candidateName, 'Vishnu');
-      assert.strictEqual(fs.recipientEmail, 'vishnu@test.com');
+      assert.strictEqual(fs.recipientEmail, 'default@test.com, vishnu@test.com');
       assert.strictEqual(java.candidateName, 'Aswin');
-      assert.strictEqual(java.recipientEmail, 'aswin@test.com');
+      assert.strictEqual(java.recipientEmail, 'default@test.com, aswin@test.com');
 
       assert.ok(DEFAULT_TARGET_COMPANIES.length >= 20, 'Should load common target companies');
     });

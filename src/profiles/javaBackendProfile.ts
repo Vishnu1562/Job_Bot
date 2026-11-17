@@ -1,5 +1,6 @@
 import type { JobProfile } from '../types.ts';
 import { DEFAULT_TARGET_COMPANIES } from './targetCompanies.ts';
+import { resolveProfileRecipients } from './recipientResolver.ts';
 
 export function getJavaBackendProfile(
   env: Record<string, string | undefined> = process.env
@@ -10,7 +11,7 @@ export function getJavaBackendProfile(
     id: 'java-backend',
     name: 'Java & Spring Boot Developer Job Radar',
     candidateName: 'Aswin',
-    recipientEmail: env.RECIPIENT_EMAIL_JAVA || defaultRecipient,
+    recipientEmail: resolveProfileRecipients(defaultRecipient, env.RECIPIENT_EMAIL_JAVA),
     excludedCompanies: [/(?:^|\b)(?:tcs|tata\s*consultancy(?:\s*services)?)(?:\b|$)/i],
     excludedTitleKeywords: [
       'magento',
