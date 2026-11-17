@@ -1,4 +1,5 @@
 import { processCandidateJob, fetchWithTimeout } from './scraperUtils.ts';
+import { API_ENDPOINTS } from '../constants/apiEndpoints.ts';
 import type { Job, RawJobListing, JobProfile } from '../types.ts';
 
 export function parseJSearchJob(raw: any, profile?: JobProfile): Job | null {
@@ -80,7 +81,7 @@ export async function fetchJSearchJobs(
   for (const q of profile.queryTerms.slice(0, 2)) {
     try {
       const searchQuery = `${q} in India`;
-      const jsearchUrl = `https://jsearch.p.rapidapi.com/search?query=${encodeURIComponent(
+      const jsearchUrl = `${API_ENDPOINTS.JSEARCH}?query=${encodeURIComponent(
         searchQuery
       )}&page=1&num_pages=1&date_posted=all`;
       console.log(`[Scraper][JSearch] Requesting: "${searchQuery}"`);
@@ -121,7 +122,7 @@ export async function fetchAdzunaJobs(
 
   for (const q of profile.queryTerms.slice(0, 2)) {
     try {
-      const adzunaUrl = `https://api.adzuna.com/v1/api/jobs/in/search/1?app_id=${appId}&app_key=${appKey}&what=${encodeURIComponent(
+      const adzunaUrl = `${API_ENDPOINTS.ADZUNA_INDIA}?app_id=${appId}&app_key=${appKey}&what=${encodeURIComponent(
         q
       )}&where=India&content-type=application/json`;
       const res = await fetchWithTimeout(adzunaUrl, 10000);

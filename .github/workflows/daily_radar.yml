@@ -1,4 +1,4 @@
-name: Power Platform Job Radar
+name: Multi-Profile Job Radar
 
 on:
   schedule:

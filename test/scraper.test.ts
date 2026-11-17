@@ -196,4 +196,23 @@ describe('[HF-001] Scraper Normalizers & Parsers', () => {
       assert.strictEqual(job?.isTargetCompany, true, 'UST Global is target company');
     });
   });
+
+  describe('[REG-004] Centralized API Endpoints & Feeds Registry', () => {
+    it('verifies all API and RSS endpoints are defined and are valid HTTPS URLs', async () => {
+      const { API_ENDPOINTS, RSS_FEEDS } = await import('../src/constants/apiEndpoints.ts');
+
+      assert.ok(API_ENDPOINTS.JSEARCH.startsWith('https://'));
+      assert.ok(API_ENDPOINTS.ADZUNA_INDIA.startsWith('https://'));
+      assert.ok(API_ENDPOINTS.REMOTIVE.startsWith('https://'));
+      assert.ok(API_ENDPOINTS.JOBICY.startsWith('https://'));
+      assert.ok(API_ENDPOINTS.ARBEITNOW.startsWith('https://'));
+      assert.ok(API_ENDPOINTS.REMOTEOK.startsWith('https://'));
+
+      assert.ok(RSS_FEEDS.length >= 6);
+      for (const feed of RSS_FEEDS) {
+        assert.ok(feed.url.startsWith('https://'), `Feed URL must be https: ${feed.url}`);
+        assert.ok(feed.source && feed.source.length > 0, `Feed must have source: ${feed.source}`);
+      }
+    });
+  });
 });

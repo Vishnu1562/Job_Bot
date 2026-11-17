@@ -1,5 +1,6 @@
 import { XMLParser } from 'fast-xml-parser';
 import { processCandidateJob, fetchWithTimeout } from './scraperUtils.ts';
+import { API_ENDPOINTS, RSS_FEEDS } from '../constants/apiEndpoints.ts';
 import type { Job, RawJobListing, JobProfile } from '../types.ts';
 
 export function parseRemotiveJob(raw: any, profile?: JobProfile): Job | null {
@@ -118,7 +119,7 @@ export async function fetchRemoteBoardJobs(
       for (const q of profile.queryTerms) {
         try {
           const res = await fetchWithTimeout(
-            `https://remotive.com/api/remote-jobs?search=${encodeURIComponent(q)}`
+            `${API_ENDPOINTS.REMOTIVE}?search=${encodeURIComponent(q)}`
           );
           if (res.ok) {
             const data: any = await res.json();
@@ -139,7 +140,7 @@ export async function fetchRemoteBoardJobs(
       for (const q of profile.queryTerms.slice(0, 3)) {
         try {
           const res = await fetchWithTimeout(
-            `https://jobicy.com/api/v2/remote-jobs?count=50&tag=${encodeURIComponent(q)}`
+            `${API_ENDPOINTS.JOBICY}?count=50&tag=${encodeURIComponent(q)}`
           );
           if (res.ok) {
             const data: any = await res.json();
@@ -158,7 +159,7 @@ export async function fetchRemoteBoardJobs(
     // 3. Arbeitnow API
     async () => {
       try {
-        const res = await fetchWithTimeout('https://www.arbeitnow.com/api/job-board-api');
+        const res = await fetchWithTimeout(API_ENDPOINTS.ARBEITNOW);
         if (res.ok) {
           const data: any = await res.json();
           if (Array.isArray(data.data)) {
@@ -175,7 +176,7 @@ export async function fetchRemoteBoardJobs(
     // 4. RemoteOK API
     async () => {
       try {
-        const res = await fetchWithTimeout('https://remoteok.com/api');
+        const res = await fetchWithTimeout(API_ENDPOINTS.REMOTEOK);
         if (res.ok) {
           const data: any = await res.json();
           if (Array.isArray(data)) {
@@ -191,16 +192,7 @@ export async function fetchRemoteBoardJobs(
 
     // 5. Public RSS Feeds (WeWorkRemotely, Himalayas, NoDesk)
     async () => {
-      const feeds = [
-        { url: 'https://weworkremotely.com/categories/remote-programming-jobs.rss', source: 'weworkremotely' },
-        { url: 'https://weworkremotely.com/categories/remote-back-end-programming-jobs.rss', source: 'weworkremotely' },
-        { url: 'https://weworkremotely.com/categories/remote-full-stack-programming-jobs.rss', source: 'weworkremotely' },
-        { url: 'https://weworkremotely.com/categories/remote-front-end-programming-jobs.rss', source: 'weworkremotely' },
-        { url: 'https://himalayas.app/jobs/rss', source: 'himalayas' },
-        { url: 'https://nodesk.co/remote-jobs/index.xml', source: 'nodesk' }
-      ];
-
-      for (const feed of feeds) {
+      for (const feed of RSS_FEEDS) {
         try {
           const res = await fetchWithTimeout(feed.url);
           if (res.ok) {
