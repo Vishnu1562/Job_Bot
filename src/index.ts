@@ -58,11 +58,18 @@ async function main() {
             return true;
           });
         } else {
-          // Expire unemailed jobs older than 48 hours to prevent queue backlog bloat
+          // 1. Expire unemailed jobs older than 48 hours to prevent queue backlog bloat
           const expiredCount = db.expireOldUnemailedJobs(48, profile.id);
           if (expiredCount > 0) {
             console.log(`[Queue] Archived ${expiredCount} stale role(s) older than 48 hours for profile "${profile.id}".`);
           }
+
+          // 2. 60-day rolling retention: prune old sent/expired records and compact descriptions
+          const prunedCount = db.pruneHistoricalJobs(60, profile.id);
+          if (prunedCount > 0) {
+            console.log(`[Retention] Pruned ${prunedCount} historical role(s) older than 60 days for profile "${profile.id}".`);
+          }
+
           db.filterAndSaveNewJobs(scrapedJobs, profile.id);
           unemailedJobs = db.getUnemailedJobs(profile.id);
         }
@@ -120,6 +127,9 @@ async function main() {
       }
     }
 
+    if (!isDryRun) {
+      db.vacuum();
+    }
     console.log('\n=====================================================');
     console.log('✅ All Job Radar profiles completed.');
     console.log('=====================================================');

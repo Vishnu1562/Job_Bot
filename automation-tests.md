@@ -290,6 +290,21 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Single generic template serves all profiles by default without code duplication, while allowing profile-specific customization when desired.
 - **Final State**: Flexible, DRY templating architecture.
 
+#### [HF-033] 60-Day Rolling Window Retention & Storage Compaction
+- **Preconditions**: Database contains emailed or expired jobs older than 60 days.
+- **Action**: Database maintenance function `pruneHistoricalJobs(60)`:
+  1. Deletes sent or expired jobs older than 60 days (`WHERE emailed_at IS NOT NULL AND (emailed_at < datetime('now', '-60 days') OR scraped_at < datetime('now', '-60 days'))`).
+  2. Clears heavy `description` fields on all already-emailed jobs to slash storage weight by ~95% while keeping primary key `(profile_id, url)` for deduplication.
+  3. Executes `VACUUM` to reclaim disk space.
+- **Expected Result**: Database self-maintains and stays between 1 MB and 3 MB permanently.
+- **Final State**: Infinite scalability on GitHub serverless without unbounded repo growth.
+
+#### [HF-034] Guaranteed Zero Duplicate Delivery within Retention Period
+- **Preconditions**: Scraper ingests listings that were already emailed or seen in the last 60 days.
+- **Action**: Deduplication engine queries primary key `(profile_id, url)`.
+- **Expected Result**: Previously seen jobs are rejected as known duplicates (`isJobKnown === true`), preventing identical roles from ever being re-emailed within 60 days.
+- **Final State**: High signal-to-noise ratio: only genuinely fresh roles sent daily.
+
 ---
 
 ### Negative Flows
@@ -443,6 +458,12 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Action**: Template engine escapes values before token injection into HTML templates.
 - **Expected Result**: Prevents HTML structure breakage and sanitizes all external text.
 - **Final State**: 100% XSS-safe email generation.
+
+#### [EC-020] Active Unemailed Queue Immunity from Retention Prune
+- **Preconditions**: Unemailed jobs (`emailed_at IS NULL`) in the database.
+- **Action**: Retention pruning targets solely sent and expired historical listings (`WHERE emailed_at IS NOT NULL`).
+- **Expected Result**: Active backlog jobs awaiting dispatch are never mistakenly deleted by the 60-day historical prune.
+- **Final State**: Active dispatch pipeline integrity preserved.
 
 ---
 

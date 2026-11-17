@@ -184,6 +184,59 @@ export class JobDatabase {
     }
   }
 
+  public pruneHistoricalJobs(days: number = 60, profileId?: string): number {
+    let deleteStmt;
+    let compactStmt;
+
+    if (profileId) {
+      deleteStmt = this.db.prepare(`
+        DELETE FROM jobs
+        WHERE emailed_at IS NOT NULL
+          AND profile_id = ?
+          AND (
+            emailed_at < datetime('now', '-' || ? || ' days')
+            OR scraped_at < datetime('now', '-' || ? || ' days')
+          )
+      `);
+      compactStmt = this.db.prepare(`
+        UPDATE jobs
+        SET description = NULL
+        WHERE emailed_at IS NOT NULL
+          AND profile_id = ?
+          AND description IS NOT NULL
+      `);
+      const info = deleteStmt.run(profileId, days, days);
+      compactStmt.run(profileId);
+      return Number(info.changes || 0);
+    } else {
+      deleteStmt = this.db.prepare(`
+        DELETE FROM jobs
+        WHERE emailed_at IS NOT NULL
+          AND (
+            emailed_at < datetime('now', '-' || ? || ' days')
+            OR scraped_at < datetime('now', '-' || ? || ' days')
+          )
+      `);
+      compactStmt = this.db.prepare(`
+        UPDATE jobs
+        SET description = NULL
+        WHERE emailed_at IS NOT NULL
+          AND description IS NOT NULL
+      `);
+      const info = deleteStmt.run(days, days);
+      compactStmt.run();
+      return Number(info.changes || 0);
+    }
+  }
+
+  public vacuum(): void {
+    try {
+      this.db.exec('VACUUM;');
+    } catch {
+      // Ignored if in-memory or locked
+    }
+  }
+
   public markJobsAsEmailed(urls: string[], profileId: string = 'power-platform'): void {
     if (urls.length === 0) return;
     const stmt = this.db.prepare(`

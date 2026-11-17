@@ -191,4 +191,98 @@ describe('[HF-003, ST-001, REG-001] SQLite Deduplication Database', () => {
     assert.strictEqual(activeQueue.length, 1);
     assert.strictEqual(activeQueue[0].id, 'job-fresh');
   });
+
+  describe('[HF-033, HF-034, EC-020] 60-Day Rolling Window Retention & Deduplication', () => {
+    it('prunes sent/expired jobs older than 60 days while compacting descriptions (HF-033 & EC-020)', () => {
+      // 1. Emailed job 70 days ago (should be deleted)
+      db.saveJobIfNew({
+        id: 'job-70-days',
+        title: '70 Day Old Role',
+        company: 'Old Corp',
+        location: 'India',
+        url: 'https://example.com/job-70-days',
+        tags: ['[Java]'],
+        source: 'linkedin',
+        description: 'Large job description text'
+      }, 'java-backend');
+      // @ts-ignore
+      db['db'].prepare(`UPDATE jobs SET scraped_at = datetime('now', '-70 days'), emailed_at = datetime('now', '-65 days') WHERE id = 'job-70-days'`).run();
+
+      // 2. Emailed job 10 days ago (should be kept for deduplication, but description compacted)
+      db.saveJobIfNew({
+        id: 'job-10-days',
+        title: '10 Day Old Role',
+        company: 'Recent Corp',
+        location: 'India',
+        url: 'https://example.com/job-10-days',
+        tags: ['[Java]'],
+        source: 'linkedin',
+        description: 'Large job description text to be compacted'
+      }, 'java-backend');
+      // @ts-ignore
+      db['db'].prepare(`UPDATE jobs SET scraped_at = datetime('now', '-10 days'), emailed_at = datetime('now', '-10 days') WHERE id = 'job-10-days'`).run();
+
+      // 3. Unemailed job in active queue (must be immune from prune - EC-020)
+      db.saveJobIfNew({
+        id: 'job-unemailed',
+        title: 'Active Queue Role',
+        company: 'Active Corp',
+        location: 'India',
+        url: 'https://example.com/job-active',
+        tags: ['[Java]'],
+        source: 'linkedin',
+        description: 'Active description'
+      }, 'java-backend');
+
+      assert.strictEqual(db.getTotalJobCount('java-backend'), 3);
+
+      const prunedCount = db.pruneHistoricalJobs(60);
+      assert.strictEqual(prunedCount, 1, 'Should prune exactly 1 job older than 60 days');
+
+      // Total count should now be 2
+      assert.strictEqual(db.getTotalJobCount('java-backend'), 2);
+
+      // 70 day old job is gone
+      assert.strictEqual(db.isJobKnown('https://example.com/job-70-days', 'java-backend'), false);
+
+      // 10 day old job is retained for deduplication (HF-034)
+      assert.strictEqual(db.isJobKnown('https://example.com/job-10-days', 'java-backend'), true);
+      // Description is compacted to NULL to save space
+      // @ts-ignore
+      const retainedJob = db['db'].prepare(`SELECT description FROM jobs WHERE id = 'job-10-days'`).get() as { description: string | null };
+      assert.strictEqual(retainedJob.description, null, 'Emailed job description should be cleared to conserve SQLite storage');
+
+      // Active unemailed job is preserved intact (EC-020)
+      assert.strictEqual(db.isJobKnown('https://example.com/job-active', 'java-backend'), true);
+      const queue = db.getUnemailedJobs('java-backend');
+      assert.strictEqual(queue.length, 1);
+      assert.strictEqual(queue[0].id, 'job-unemailed');
+      assert.strictEqual(queue[0].description, 'Active description');
+    });
+
+    it('guarantees zero duplicate re-ingestion for jobs seen within retention window (HF-034)', () => {
+      // Ingest a job and mark as sent
+      const job: Job = {
+        id: 'job-unique-1',
+        title: 'Senior Developer',
+        company: 'Prime Tech',
+        location: 'Bangalore, India',
+        url: 'https://example.com/prime-101',
+        tags: ['[Java]'],
+        source: 'linkedin',
+        description: ''
+      };
+
+      assert.strictEqual(db.saveJobIfNew(job, 'java-backend'), true);
+      db.markJobsAsEmailed([job.url], 'java-backend');
+
+      // Attempting to re-ingest identical job on subsequent days
+      const isNewSecondDay = db.saveJobIfNew(job, 'java-backend');
+      assert.strictEqual(isNewSecondDay, false, 'Must reject previously emailed jobs as duplicates');
+
+      // Verify it is not re-queued
+      const queue = db.getUnemailedJobs('java-backend');
+      assert.strictEqual(queue.length, 0, 'Emailed job must never appear in unemailed queue');
+    });
+  });
 });
