@@ -1,5 +1,5 @@
 import type { Job } from '../types.ts';
-import { loadTemplate, renderTemplate } from './templateLoader.ts';
+import { loadEmailTemplate, getTemplateSnippet, renderTemplate } from './templateLoader.ts';
 
 export function escapeHtml(unsafe: string): string {
   if (!unsafe) return '';
@@ -25,7 +25,7 @@ function renderJobCard(job: Job, accentColor: string): string {
     )
     .join('');
 
-  return renderTemplate(loadTemplate('job-card.html'), {
+  return renderTemplate(getTemplateSnippet('jobCard'), {
     accentColor,
     source: escapeHtml(job.source ? job.source.toUpperCase() : 'JOB FEED'),
     targetBadge,
@@ -45,7 +45,7 @@ function renderSectionHeader(
   badgeColor: string,
   badgeBg: string
 ): string {
-  return renderTemplate(loadTemplate('section-header.html'), {
+  return renderTemplate(getTemplateSnippet('sectionHeader'), {
     icon,
     title: escapeHtml(title),
     badgeBg,
@@ -128,11 +128,11 @@ export function generateEmailDigestHtml(
   let contentHtml = '';
 
   if (count === 0) {
-    contentHtml = renderTemplate(loadTemplate('empty-state.html'), {
+    contentHtml = renderTemplate(getTemplateSnippet('emptyState'), {
       displayName: escapeHtml(displayName)
     });
   } else {
-    const greetingHtml = renderTemplate(loadTemplate('greeting-card.html'), {
+    const greetingHtml = renderTemplate(getTemplateSnippet('greetingCard'), {
       displayName: escapeHtml(displayName),
       accentColor
     });
@@ -167,7 +167,7 @@ export function generateEmailDigestHtml(
 
     const overflowHtml =
       overflowCount > 0
-        ? renderTemplate(loadTemplate('overflow-card.html'), {
+        ? renderTemplate(getTemplateSnippet('overflowCard'), {
             overflowCount,
             roleWord: overflowCount === 1 ? 'role' : 'roles',
             displayedCount: displayedJobs.length
@@ -196,7 +196,7 @@ export function generateEmailDigestHtml(
     text = `⚡ ${dispatchEdition} • ${profileName}\n\nHey ${displayName}! Take a deep breath — the job hunt is a journey, but you're doing great and you will find the right role!\nHere are today's ${count} curated opportunities:\n\n${jobLines}${overflowText}\n\nCurated with care • Stay confident and keep going! ✨\nCustom job alerts for ${displayName} • Delivered daily`;
   }
 
-  const html = renderTemplate(loadTemplate('layout.html'), {
+  const html = renderTemplate(loadEmailTemplate(), {
     title: escapeHtml(subject),
     accentColor,
     dispatchEdition: escapeHtml(dispatchEdition),

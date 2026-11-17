@@ -5,38 +5,66 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const TEMPLATES_DIR = path.resolve(__dirname, 'templates');
+const MASTER_TEMPLATE_NAME = 'emailDigest.html';
 
-// In-memory cache for fast template access
-const templateCache = new Map<string, string>();
+// Cache for raw template files and extracted snippets
+let masterTemplateRaw: string | null = null;
+const snippetCache = new Map<string, string>();
+
+function getMasterTemplateContent(profileId?: string): string {
+  if (profileId) {
+    const profileSpecificPath = path.join(TEMPLATES_DIR, 'profiles', `${profileId}.html`);
+    if (fs.existsSync(profileSpecificPath)) {
+      return fs.readFileSync(profileSpecificPath, 'utf-8');
+    }
+  }
+
+  const genericPath = path.join(TEMPLATES_DIR, MASTER_TEMPLATE_NAME);
+  if (!masterTemplateRaw) {
+    if (fs.existsSync(genericPath)) {
+      masterTemplateRaw = fs.readFileSync(genericPath, 'utf-8');
+    } else {
+      throw new Error(`Master template not found: ${genericPath}`);
+    }
+  }
+  return masterTemplateRaw;
+}
 
 /**
- * Loads a standalone HTML template file from src/email/templates/.
- * If a profileId is specified, checks if a profile-specific template exists first
- * (e.g., templates/profiles/${profileId}/${templateName}),
- * falling back cleanly to the generic shared template.
+ * Extracts a sub-component snippet from emailDigest.html by comment markers.
  */
-export function loadTemplate(templateName: string, profileId?: string): string {
-  if (profileId) {
-    const profileSpecificPath = path.join(TEMPLATES_DIR, 'profiles', profileId, templateName);
-    if (fs.existsSync(profileSpecificPath)) {
-      const cacheKey = `${profileId}:${templateName}`;
-      if (!templateCache.has(cacheKey)) {
-        templateCache.set(cacheKey, fs.readFileSync(profileSpecificPath, 'utf-8'));
-      }
-      return templateCache.get(cacheKey)!;
-    }
+export function getTemplateSnippet(
+  snippetKey: 'jobCard' | 'sectionHeader' | 'greetingCard' | 'emptyState' | 'overflowCard',
+  profileId?: string
+): string {
+  const cacheKey = `${profileId || 'default'}:${snippetKey}`;
+  if (snippetCache.has(cacheKey)) {
+    return snippetCache.get(cacheKey)!;
   }
 
-  const genericPath = path.join(TEMPLATES_DIR, templateName);
-  if (!templateCache.has(templateName)) {
-    if (fs.existsSync(genericPath)) {
-      templateCache.set(templateName, fs.readFileSync(genericPath, 'utf-8'));
-    } else {
-      throw new Error(`Template not found: ${templateName} at ${genericPath}`);
-    }
+  const content = getMasterTemplateContent(profileId);
+  const tagKey = snippetKey.replace(/([A-Z])/g, '_$1').toUpperCase(); // e.g. jobCard -> JOB_CARD
+  const regex = new RegExp(`<!--\\s*${tagKey}_START\\s*-->([\\s\\S]*?)<!--\\s*${tagKey}_END\\s*-->`, 'i');
+  const match = content.match(regex);
+
+  if (!match) {
+    throw new Error(`Template snippet "${snippetKey}" (tag: ${tagKey}) not found in ${MASTER_TEMPLATE_NAME}`);
   }
 
-  return templateCache.get(templateName)!;
+  const snippet = match[1].trim();
+  snippetCache.set(cacheKey, snippet);
+  return snippet;
+}
+
+/**
+ * Loads the master email digest layout with template snippet definition blocks stripped out.
+ */
+export function loadEmailTemplate(profileId?: string): string {
+  const content = getMasterTemplateContent(profileId);
+  const cleanLayout = content
+    .replace(/<!--\s*TEMPLATE_SNIPPETS_START\s*-->[\s\S]*?<!--\s*TEMPLATE_SNIPPETS_END\s*-->/i, '')
+    .trim();
+  return cleanLayout;
 }
 
 /**

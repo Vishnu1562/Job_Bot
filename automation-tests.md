@@ -269,23 +269,25 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Prevents stale jobs from piling up indefinitely and prevents artificial inflation of queue counts.
 - **Final State**: Only active, fresh listings (≤ 48 hours) remain in the dispatch queue.
 
-#### [HF-029] Dedicated Standalone HTML Templates & Generic Loader
+#### [HF-029] Single Unified Standalone HTML Template (`emailDigest.html`)
 - **Preconditions**: Email digest generator called to produce HTML output.
-- **Action**: Template engine loads pure standalone `.html` files from `src/email/templates/`:
-  - `layout.html` (main responsive email shell)
-  - `job-card.html` (single job card presentation)
-  - `section-header.html` (section divider and badges)
-  - `greeting-card.html` (motivational greeting card)
-  - `empty-state.html` (0 jobs status card)
-  - `overflow-card.html` (backlog indicator card)
-  Injects values into `{{token}}` placeholders safely with HTML escaping.
-- **Expected Result**: Clean separation between TypeScript business logic and HTML presentation. Zero raw HTML strings in `.ts` files.
-- **Final State**: Modular, maintainable HTML templates with native editor syntax highlighting and reusable generic components.
+- **Action**: Template engine loads a single unified `.html` file from `src/email/templates/emailDigest.html`:
+  - Contains the complete responsive email shell (header gradient, container, footer).
+  - Contains cleanly defined snippet blocks for dynamic sections:
+    - `<!-- JOB_CARD_START -->...<!-- JOB_CARD_END -->`
+    - `<!-- SECTION_HEADER_START -->...<!-- SECTION_HEADER_END -->`
+    - `<!-- GREETING_CARD_START -->...<!-- GREETING_CARD_END -->`
+    - `<!-- EMPTY_STATE_START -->...<!-- EMPTY_STATE_END -->`
+    - `<!-- OVERFLOW_CARD_START -->...<!-- OVERFLOW_CARD_END -->`
+  - Injects values into `{{token}}` placeholders safely with HTML escaping.
+  - Can be opened directly in any browser for immediate visual design preview.
+- **Expected Result**: 1 single template file instead of 6 fragmented files. Zero clutter in the file tree, zero raw HTML in `.ts` files, and instant browser previewability.
+- **Final State**: Clean, cohesive, unified HTML template architecture.
 
 #### [HF-030] Per-Profile Custom Template Override Resolution
 - **Preconditions**: Profile configured with custom layout needs or optional dedicated template file.
-- **Action**: Template loader checks for profile-specific template overrides (e.g. `templates/profiles/${profileId}.html`), falling back cleanly to generic `layout.html`.
-- **Expected Result**: Generic templates serve all services by default without code duplication, while allowing profile-specific customization when desired.
+- **Action**: Template loader checks for profile-specific template overrides (e.g. `templates/profiles/${profileId}.html`), falling back cleanly to generic `emailDigest.html`.
+- **Expected Result**: Single generic template serves all profiles by default without code duplication, while allowing profile-specific customization when desired.
 - **Final State**: Flexible, DRY templating architecture.
 
 ---

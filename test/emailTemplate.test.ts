@@ -402,14 +402,32 @@ describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {
       assert.strictEqual(displayedRemote.length, 3, 'Must cap remote jobs so total is 15');
     });
 
-    describe('[HF-029, HF-030, EC-016] Dedicated HTML Template Files & Engine', () => {
-      it('loads standalone .html files and substitutes tokens cleanly (HF-029)', async () => {
-        const { loadTemplate, renderTemplate } = await import('../src/email/templateLoader.ts');
-        const layoutHtml = loadTemplate('layout.html');
-        assert.ok(layoutHtml.includes('{{content}}'), 'layout.html must contain {{content}} placeholder');
-        assert.ok(layoutHtml.includes('{{title}}'), 'layout.html must contain {{title}} placeholder');
+    describe('[HF-029, HF-030, EC-016] Unified Single HTML Template Architecture', () => {
+      it('loads unified emailDigest.html and extracts snippet components cleanly (HF-029)', async () => {
+        const { loadEmailTemplate, getTemplateSnippet, renderTemplate } = await import('../src/email/templateLoader.ts');
+        const masterHtml = loadEmailTemplate();
+        assert.ok(masterHtml.includes('{{content}}'), 'emailDigest.html must contain {{content}} placeholder');
+        assert.ok(masterHtml.includes('{{title}}'), 'emailDigest.html must contain {{title}} placeholder');
 
-        const rendered = renderTemplate(layoutHtml, {
+        // Verify snippet extraction
+        const jobCardSnippet = getTemplateSnippet('jobCard');
+        assert.ok(jobCardSnippet.includes('{{title}}'), 'jobCard snippet must contain {{title}}');
+        assert.ok(jobCardSnippet.includes('{{company}}'), 'jobCard snippet must contain {{company}}');
+
+        const sectionHeaderSnippet = getTemplateSnippet('sectionHeader');
+        assert.ok(sectionHeaderSnippet.includes('{{title}}'));
+        assert.ok(sectionHeaderSnippet.includes('{{badgeText}}'));
+
+        const greetingSnippet = getTemplateSnippet('greetingCard');
+        assert.ok(greetingSnippet.includes('{{displayName}}'));
+
+        const emptyStateSnippet = getTemplateSnippet('emptyState');
+        assert.ok(emptyStateSnippet.includes('{{displayName}}'));
+
+        const overflowSnippet = getTemplateSnippet('overflowCard');
+        assert.ok(overflowSnippet.includes('{{overflowCount}}'));
+
+        const rendered = renderTemplate(masterHtml, {
           title: 'Custom Digest',
           content: '<p>Test Content</p>',
           accentColor: '#123456',
@@ -432,9 +450,8 @@ describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {
       });
 
       it('supports per-profile custom template overrides with generic fallback (HF-030)', async () => {
-        const { loadTemplate } = await import('../src/email/templateLoader.ts');
-        // When requesting with unknown or default profile, falls back to generic template
-        const genericLayout = loadTemplate('layout.html', 'non-existent-profile');
+        const { loadEmailTemplate } = await import('../src/email/templateLoader.ts');
+        const genericLayout = loadEmailTemplate('non-existent-profile');
         assert.ok(genericLayout.includes('{{content}}'));
       });
     });

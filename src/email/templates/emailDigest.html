@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; color: #1e293b;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f8fafc; padding: 30px 15px;">
+    <tr>
+      <td align="center">
+        <!-- Main Container -->
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width: 620px;">
+          <!-- Header Banner -->
+          <tr>
+            <td style="background: linear-gradient(135deg, {{accentColor}} 0%, #0f172a 100%); border-radius: 14px 14px 0 0; padding: 32px 28px; text-align: left; color: #ffffff;">
+              <div style="display: inline-block; background-color: rgba(255, 255, 255, 0.15); padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">
+                ⚡ {{dispatchEdition}}
+              </div>
+              <h1 style="margin: 0 0 8px 0; font-size: 24px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px;">
+                {{profileName}}
+              </h1>
+              <p style="margin: 0; font-size: 14px; color: #e2e8f0; font-weight: 500;">
+                {{count}} fresh role{{pluralS}} identified for India &bull; {{today}}
+              </p>
+            </td>
+          </tr>
+          <!-- Body Content -->
+          <tr>
+            <td style="background-color: #f8fafc; padding: 24px 0;">
+              {{content}}
+            </td>
+          </tr>
+          <!-- Footer -->
+          <tr>
+            <td style="padding: 24px 20px; text-align: center; color: #64748b; font-size: 13px; line-height: 1.6;">
+              <p style="margin: 0 0 6px 0; font-weight: 600; color: #334155;">
+                Curated with care &bull; Stay confident and keep going! ✨
+              </p>
+              <p style="margin: 0; font-size: 11px; color: #94a3b8;">
+                Custom job alerts for {{displayName}} &bull; Delivered daily
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <!-- ============================================================== -->
+  <!-- REUSABLE TEMPLATE SNIPPETS (EXTRACTED AT RUNTIME)              -->
+  <!-- ============================================================== -->
+  <!-- TEMPLATE_SNIPPETS_START -->
+  <template id="template-snippets" style="display: none;">
+
+    <!-- GREETING_CARD_START -->
+    <div style="background-color: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-left: 4px solid {{accentColor}}; padding: 18px 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.04);">
+      <p style="margin: 0 0 6px 0; font-size: 15px; font-weight: 700; color: #0f172a;">
+        Hey {{displayName}}! 👋
+      </p>
+      <p style="margin: 0; font-size: 13px; color: #475569; line-height: 1.5;">
+        Take a deep breath &mdash; the job hunt is a journey, but you're doing great and you will find the right role! Here are today's top curated opportunities for you:
+      </p>
+    </div>
+    <!-- GREETING_CARD_END -->
+
+    <!-- SECTION_HEADER_START -->
+    <div style="margin: 22px 0 14px 0; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>
+            <span style="font-size: 15px; font-weight: 800; color: #0f172a; letter-spacing: -0.2px;">
+              {{icon}} {{title}}
+            </span>
+            <span style="display: inline-block; background-color: {{badgeBg}}; color: {{badgeColor}}; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 12px; margin-left: 8px;">
+              {{badgeText}}
+            </span>
+            <p style="margin: 4px 0 0 0; font-size: 12px; color: #64748b; font-weight: 500;">
+              {{subtitle}}
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!-- SECTION_HEADER_END -->
+
+    <!-- JOB_CARD_START -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 18px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); overflow: hidden;">
+      <tr>
+        <td style="padding: 24px 20px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td>
+                <span style="font-size: 11px; font-weight: 700; color: {{accentColor}}; text-transform: uppercase; letter-spacing: 0.5px;">{{source}}</span>{{targetBadge}}
+                <h3 style="margin: 6px 0 4px 0; font-size: 18px; font-weight: 700; color: #0f172a; line-height: 1.3;">{{title}}</h3>
+                <p style="margin: 0 0 14px 0; font-size: 14px; color: #475569; font-weight: 500;">
+                  <strong style="color: #1e293b;">{{company}}</strong> &bull; 
+                  <span style="display: inline-block; background-color: #f0fdf4; color: #166534; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 4px; border: 1px solid #bbf7d0;">📍 {{location}}</span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 4px 0 16px 0;">
+                {{tagsHtml}}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="{{url}}" target="_blank" style="display: inline-block; background-color: {{accentColor}}; color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 700; padding: 10px 22px; border-radius: 8px; letter-spacing: 0.3px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);">
+                  Apply Now ↗
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <!-- JOB_CARD_END -->
+
+    <!-- OVERFLOW_CARD_START -->
+    <div style="background-color: #ffffff; border-radius: 12px; border: 1px dashed #cbd5e1; padding: 18px 20px; text-align: center; margin-bottom: 20px;">
+      <p style="margin: 0; font-size: 13px; color: #475569; font-weight: 600;">
+        ⚡ +{{overflowCount}} additional {{roleWord}} identified today &bull; Top {{displayedCount}} priority matches displayed above
+      </p>
+    </div>
+    <!-- OVERFLOW_CARD_END -->
+
+    <!-- EMPTY_STATE_START -->
+    <div style="background-color: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; padding: 32px 24px; text-align: center; margin-bottom: 24px;">
+      <div style="font-size: 40px; margin-bottom: 12px;">🌟</div>
+      <h3 style="margin: 0 0 8px 0; font-size: 18px; color: #1e293b; font-weight: 700;">Hey {{displayName}}, it's completely fine!</h3>
+      <p style="margin: 0 0 12px 0; font-size: 14px; color: #475569; line-height: 1.6;">
+        No worries at all if today was a bit quiet on new postings &mdash; good opportunities take time, but your skills and hard work speak for themselves. You <strong>will</strong> find the right fit!
+      </p>
+      <p style="margin: 0; font-size: 13px; color: #64748b; line-height: 1.5;">
+        We'll keep scanning fresh feeds every morning and alert you the second an exciting role drops. Keep your head high and stay confident! 💪
+      </p>
+    </div>
+    <!-- EMPTY_STATE_END -->
+
+  </template>
+  <!-- TEMPLATE_SNIPPETS_END -->
+</body>
+</html>
