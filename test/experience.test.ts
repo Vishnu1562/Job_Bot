@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert';
-import { extractRequiredExperience, isExperienceMatching } from '../src/experience.ts';
+import { extractRequiredExperience, isExperienceMatching } from '../src/filters/experienceFilter.ts';
 import type { JobProfile, RawJobListing } from '../src/types.ts';
 
 describe('[HF-014, HF-015, NF-005, NF-006, EC-007] Experience Level Parsing & Filtering', () => {

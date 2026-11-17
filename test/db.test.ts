@@ -1,6 +1,6 @@
 import { describe, it, beforeEach } from 'node:test';
 import assert from 'node:assert';
-import { JobDatabase } from '../src/db.ts';
+import { JobDatabase } from '../src/db/jobDatabase.ts';
 import type { Job } from '../src/types.ts';
 
 describe('[HF-003, ST-001, REG-001] SQLite Deduplication Database', () => {

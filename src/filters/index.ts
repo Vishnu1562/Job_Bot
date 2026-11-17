@@ -2,27 +2,27 @@ export {
   isIndiaLocation,
   INDIA_LOCATION_KEYWORDS,
   EXCLUDED_REGIONS
-} from './location.ts';
+} from './locationFilter.ts';
 
 export {
   validateJob,
   containsNegativeKeywords,
   normalizeUrl,
   NEGATIVE_KEYWORDS
-} from './spam.ts';
+} from './spamFilter.ts';
 
 export {
   isCompanyExcluded,
   isTargetCompany
-} from './company.ts';
+} from './companyFilter.ts';
 
 export {
   isPowerPlatformJob,
   POWER_PLATFORM_KEYWORDS
-} from './powerPlatform.ts';
+} from './powerPlatformFilter.ts';
 
 export {
   extractRequiredExperience,
   isExperienceMatching,
   type ExperienceRange
-} from './experience.ts';
+} from './experienceFilter.ts';

@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert';
-import { generateEmailDigestHtml } from '../src/emailTemplate.ts';
+import { generateEmailDigestHtml } from '../src/email/emailTemplate.ts';
 import type { Job } from '../src/types.ts';
 
 describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {

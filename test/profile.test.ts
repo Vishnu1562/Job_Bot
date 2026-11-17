@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert';
-import { getProfiles, extractProfileSkillTags, isJobMatchingProfile } from '../src/config/profiles.ts';
+import { getProfiles, extractProfileSkillTags, isJobMatchingProfile } from '../src/profiles/profileRegistry.ts';
 import type { RawJobListing } from '../src/types.ts';
 
 describe('[HF-007, HF-008, HF-009, EC-004] Multi-Profile Configuration & Matching', () => {
@@ -255,9 +255,9 @@ describe('[HF-007, HF-008, HF-009, EC-004] Multi-Profile Configuration & Matchin
 
   describe('[REG-003] Modular Domain Architecture Subfile Isolation', () => {
     it('allows independent import and customization of individual profiles from subfiles', async () => {
-      const { getPowerPlatformProfile } = await import('../src/profiles/powerPlatform.ts');
-      const { getFullStackProfile } = await import('../src/profiles/fullStack.ts');
-      const { getJavaBackendProfile } = await import('../src/profiles/javaBackend.ts');
+      const { getPowerPlatformProfile } = await import('../src/profiles/powerPlatformProfile.ts');
+      const { getFullStackProfile } = await import('../src/profiles/fullStackProfile.ts');
+      const { getJavaBackendProfile } = await import('../src/profiles/javaBackendProfile.ts');
       const { DEFAULT_TARGET_COMPANIES } = await import('../src/profiles/targetCompanies.ts');
 
       const customEnv = {

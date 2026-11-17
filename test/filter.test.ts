@@ -8,8 +8,8 @@ import {
   validateJob,
   isCompanyExcluded,
   isTargetCompany
-} from '../src/filter.ts';
-import { getProfiles } from '../src/config/profiles.ts';
+} from '../src/filters/index.ts';
+import { getProfiles } from '../src/profiles/profileRegistry.ts';
 import type { RawJobListing } from '../src/types.ts';
 
 describe('Job Filters & Normalization', () => {

@@ -8,8 +8,8 @@ import {
   parseRssItem,
   parseJSearchJob,
   parseAdzunaJob
-} from '../src/scraper.ts';
-import { getProfiles } from '../src/config/profiles.ts';
+} from '../src/scrapers/scraperCoordinator.ts';
+import { getProfiles } from '../src/profiles/profileRegistry.ts';
 
 describe('[HF-001] Scraper Normalizers & Parsers', () => {
   it('correctly maps Remotive job structure', () => {

@@ -1,6 +1,6 @@
-import { getProfiles } from '../profiles/index.ts';
-import { fetchJSearchJobs, fetchAdzunaJobs } from './jsearch.ts';
-import { fetchRemoteBoardJobs } from './remoteBoards.ts';
+import { getProfiles } from '../profiles/profileRegistry.ts';
+import { fetchJSearchJobs, fetchAdzunaJobs } from './jsearchScraper.ts';
+import { fetchRemoteBoardJobs } from './remoteBoardsScraper.ts';
 import type { Job, JobProfile } from '../types.ts';
 
 export {
@@ -9,21 +9,21 @@ export {
   parseArbeitnowJob,
   parseRemoteOkJob,
   parseRssItem
-} from './remoteBoards.ts';
+} from './remoteBoardsScraper.ts';
 
 export {
   parseJSearchJob,
   parseAdzunaJob,
   fetchJSearchJobs,
   fetchAdzunaJobs
-} from './jsearch.ts';
+} from './jsearchScraper.ts';
 
 export {
   generateJobId,
   processCandidateJob,
   fetchWithTimeout,
   USER_AGENT
-} from './common.ts';
+} from './scraperUtils.ts';
 
 export async function fetchJobsForProfile(profile: JobProfile): Promise<Job[]> {
   const jobs: Job[] = [];

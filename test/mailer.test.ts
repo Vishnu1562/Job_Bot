@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert';
-import { validateMailerConfig } from '../src/mailer.ts';
+import { validateMailerConfig } from '../src/email/mailer.ts';
 
 describe('[NF-003 & AUTH-001] Mailer Configuration Validation', () => {
   it('throws descriptive error if SENDER_EMAIL is missing', () => {

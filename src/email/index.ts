@@ -6,4 +6,4 @@ export {
 export {
   generateEmailDigestHtml,
   escapeHtml
-} from './template.ts';
+} from './emailTemplate.ts';

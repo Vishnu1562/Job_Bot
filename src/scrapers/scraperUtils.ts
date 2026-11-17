@@ -9,7 +9,7 @@ import {
   isExperienceMatching
 } from '../filters/index.ts';
 import { extractSkillTags } from '../tagger.ts';
-import { isJobMatchingProfile, extractProfileSkillTags } from '../profiles/index.ts';
+import { isJobMatchingProfile, extractProfileSkillTags } from '../profiles/profileRegistry.ts';
 import type { Job, RawJobListing, JobProfile } from '../types.ts';
 
 export const USER_AGENT = 'PowerPlatformJobRadar/1.0 (+https://github.com/Vishnu1562/Job_Bot)';

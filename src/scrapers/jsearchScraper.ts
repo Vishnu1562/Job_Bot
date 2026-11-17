@@ -1,4 +1,4 @@
-import { processCandidateJob, fetchWithTimeout } from './common.ts';
+import { processCandidateJob, fetchWithTimeout } from './scraperUtils.ts';
 import type { Job, RawJobListing, JobProfile } from '../types.ts';
 
 export function parseJSearchJob(raw: any, profile?: JobProfile): Job | null {
