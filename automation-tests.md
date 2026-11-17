@@ -388,6 +388,15 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Description drawer DOES NOT open when saving or marking a job as applied. Drawer ONLY opens when clicking on the card body, title, company, or row content.
 - **Final State**: Polished, bug-free interaction without unexpected drawer popups.
 
+#### [HF-044] Modern Segmented Profile Tabs & Scalable Unified Filter Strip (Option 2)
+- **Preconditions**: Web portal loaded with single or multiple active candidate profiles.
+- **Action**: Filter deck renders with clean Option 2 architecture:
+  1. **Top Profile Tab Strip**: Horizontal scrollable segmented bar with accent color dots, concise labels (stripping redundant "Job Radar" suffixes), role counts, and smooth scroll overflow for 10+ profiles.
+  2. **Unified Command & Filter Toolbar**: Search bar seamlessly integrated with compact quick-filter chips for Status (`⭐ Saved`, `✅ Applied`), Timeline (`All Dates`, `Today's Batch`), and Tier (`📍 Domestic`, `🌐 Remote`).
+  3. **One-Click Reset**: A quick reset button appears when non-default filters are active.
+- **Expected Result**: Reduces vertical height by ~50%, looks visually stunning, and scales gracefully to unlimited future profiles without wrapping.
+- **Final State**: Clean, developer-grade command deck matching Linear / Raycast standards.
+
 ---
 
 ### Negative Flows

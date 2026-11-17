@@ -81,43 +81,57 @@
       </div>
     </div>
 
-    <!-- Controls & Multi-Filters -->
+    <!-- Controls & Multi-Filters (Option 2: Segmented Profile Tabs + Unified Filter Strip) -->
     <div class="controls-deck">
-      <!-- Search Input -->
-      <div class="search-row">
+      <!-- 1. Top Profile Tab Strip (Scalable & Scrollable) -->
+      <div class="profile-tabs-wrapper">
+        <div class="profile-tabs-strip" id="profile-tabs-strip">
+          <button class="profile-tab-btn active" data-profile="all">
+            <span class="tab-dot" style="background-color: var(--primary);"></span>
+            <span class="tab-title">All Roles</span>
+            <span class="tab-count">{{TOTAL_JOBS_COUNT}}</span>
+          </button>
+          {{PROFILE_PILLS}}
+        </div>
+      </div>
+
+      <!-- 2. Unified Command & Filter Toolbar -->
+      <div class="filter-toolbar" id="filter-toolbar">
+        <!-- Integrated Search Bar -->
         <div class="search-input-wrapper">
           <span class="search-icon">🔍</span>
           <input type="text" id="search-input" placeholder="Search by title, company, skills, or city...">
           <span class="kbd-shortcut">/</span>
         </div>
-      </div>
 
-      <!-- Profile Segmented Pills -->
-      <div class="filter-pills-row" id="profile-filters">
-        <span class="filter-label">Profile:</span>
-        <button class="pill-btn active" data-profile="all">All Roles ({{TOTAL_JOBS_COUNT}})</button>
-        {{PROFILE_PILLS}}
-      </div>
+        <!-- Quick Filter Chips -->
+        <div class="filter-chips-group">
+          <!-- Status Chips -->
+          <div class="segmented-chip-group" id="status-filters">
+            <button class="chip-btn active" data-status="all">All Active</button>
+            <button class="chip-btn" data-status="saved">⭐ Saved (<span id="status-saved-badge">0</span>)</button>
+            <button class="chip-btn" data-status="applied">✅ Applied (<span id="status-applied-badge">0</span>)</button>
+          </div>
 
-      <!-- Candidate Status Tracker Filters -->
-      <div class="filter-pills-row" id="status-filters">
-        <span class="filter-label">Status:</span>
-        <button class="pill-btn active" data-status="all">All Active</button>
-        <button class="pill-btn" data-status="saved">⭐ Saved (<span id="status-saved-badge">0</span>)</button>
-        <button class="pill-btn" data-status="applied">✅ Applied (<span id="status-applied-badge">0</span>)</button>
-      </div>
+          <!-- Tier Chips -->
+          <div class="segmented-chip-group" id="tier-filters">
+            <button class="chip-btn active" data-tier="all">All Tiers</button>
+            <button class="chip-btn" data-tier="domestic">📍 Domestic</button>
+            <button class="chip-btn" data-tier="remote">🌐 Remote</button>
+          </div>
 
-      <!-- Secondary Filters: Date & Tier -->
-      <div class="filter-pills-row" id="date-and-tier-filters">
-        <span class="filter-label">Timeline:</span>
-        <button class="pill-btn active" data-date="all">All Dates</button>
-        <button class="pill-btn" data-date="today">Today's Batch</button>
-        <button class="pill-btn" data-date="yesterday">Yesterday</button>
+          <!-- Timeline Chips -->
+          <div class="segmented-chip-group" id="date-filters">
+            <button class="chip-btn active" data-date="all">All Dates</button>
+            <button class="chip-btn" data-date="today">Today's Batch</button>
+            <button class="chip-btn" data-date="yesterday">Yesterday</button>
+          </div>
 
-        <span class="filter-label" style="margin-left: 12px;">Tier:</span>
-        <button class="pill-btn active" data-tier="all">All Tiers</button>
-        <button class="pill-btn" data-tier="domestic">📍 Domestic Priority</button>
-        <button class="pill-btn" data-tier="remote">🌐 Global Remote</button>
+          <!-- Reset Filter Button -->
+          <button class="chip-reset-btn" id="filter-reset-btn" title="Reset all filters" style="display: none;">
+            ✕ Reset
+          </button>
+        </div>
       </div>
     </div>
   </div>

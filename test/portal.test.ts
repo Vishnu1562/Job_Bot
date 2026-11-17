@@ -156,9 +156,11 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
       assert.ok(!html.includes('<style>\n    :root') && !html.includes('<style>:root'), 'Must NOT have monolithic inline <style> block');
       assert.ok(html.includes('<!-- @portal:app -->') || html.includes('id="app"'), 'Must have root container');
 
-      // 2. Verify Profile Tabs & Filters in Template
-      assert.ok(html.includes('Power Platform Radar'), 'Must render Power Platform tab');
-      assert.ok(html.includes('Java Backend Radar'), 'Must render Java Backend tab');
+      // 2. Verify Modern Profile Tab Strip & Unified Filter Strip (HF-044)
+      assert.ok(html.includes('id="profile-tabs-strip"') || html.includes('class="profile-tabs-strip"'), 'Must render scalable profile tabs strip');
+      assert.ok(html.includes('data-profile="power-platform"'), 'Must render Power Platform tab');
+      assert.ok(html.includes('data-profile="java-backend"'), 'Must render Java Backend tab');
+      assert.ok(html.includes('id="filter-toolbar"') || html.includes('class="filter-toolbar"'), 'Must render unified filter toolbar');
 
       // 3. Verify Offline Bootstrap Data Embedded ([EC-021])
       assert.ok(html.includes('id="portal-data"'), 'Must include embedded JSON bootstrap for offline/file:// resilience');

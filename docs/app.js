@@ -463,8 +463,48 @@
     });
   }
 
+  function updateFilterResetVisibility()       {
+    const resetBtn = document.getElementById('filter-reset-btn');
+    if (!resetBtn) return;
+    const isFiltered =
+      Boolean(searchQuery.trim()) ||
+      selectedProfile !== 'all' ||
+      selectedStatus !== 'all' ||
+      selectedDate !== 'all' ||
+      selectedTier !== 'all';
+    resetBtn.style.display = isFiltered ? 'inline-flex' : 'none';
+  }
+
+  function resetAllFilters()       {
+    searchQuery = '';
+    selectedProfile = 'all';
+    selectedStatus = 'all';
+    selectedDate = 'all';
+    selectedTier = 'all';
+
+    const searchInput = document.getElementById('search-input')                           ;
+    if (searchInput) searchInput.value = '';
+
+    document.querySelectorAll('#profile-tabs-strip button').forEach(b => {
+      b.classList.toggle('active', b.getAttribute('data-profile') === 'all');
+    });
+    document.querySelectorAll('#status-filters button').forEach(b => {
+      b.classList.toggle('active', b.getAttribute('data-status') === 'all');
+    });
+    document.querySelectorAll('#tier-filters button').forEach(b => {
+      b.classList.toggle('active', b.getAttribute('data-tier') === 'all');
+    });
+    document.querySelectorAll('#date-filters button').forEach(b => {
+      b.classList.toggle('active', b.getAttribute('data-date') === 'all');
+    });
+
+    showToast('Reset all filters', '🔄');
+    render();
+  }
+
   // 12. Main Render Engine
   function render()       {
+    updateFilterResetVisibility();
     const container = document.getElementById('listings-container');
     if (!container) return;
 
@@ -645,17 +685,17 @@
       });
     }
 
-    // Profile Pills
-    document.querySelectorAll('#profile-filters button').forEach(btn => {
+    // Profile Tab Strip (Option 2: Scalable Tab Strip)
+    document.querySelectorAll('#profile-tabs-strip button, #profile-filters button').forEach(btn => {
       btn.addEventListener('click', function (                       ) {
-        document.querySelectorAll('#profile-filters button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('#profile-tabs-strip button, #profile-filters button').forEach(b => b.classList.remove('active'));
         this.classList.add('active');
         selectedProfile = this.getAttribute('data-profile') || 'all';
         render();
       });
     });
 
-    // Status Pills
+    // Status Filter Chips
     document.querySelectorAll('#status-filters button').forEach(btn => {
       btn.addEventListener('click', function (                       ) {
         document.querySelectorAll('#status-filters button').forEach(b => b.classList.remove('active'));
@@ -665,25 +705,33 @@
       });
     });
 
-    // Date Pills
-    document.querySelectorAll('#date-and-tier-filters button[data-date]').forEach(btn => {
+    // Tier Filter Chips
+    document.querySelectorAll('#tier-filters button').forEach(btn => {
       btn.addEventListener('click', function (                       ) {
-        document.querySelectorAll('#date-and-tier-filters button[data-date]').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('#tier-filters button').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        selectedTier = this.getAttribute('data-tier') || 'all';
+        render();
+      });
+    });
+
+    // Date / Timeline Filter Chips
+    document.querySelectorAll('#date-filters button, #date-and-tier-filters button[data-date]').forEach(btn => {
+      btn.addEventListener('click', function (                       ) {
+        document.querySelectorAll('#date-filters button, #date-and-tier-filters button[data-date]').forEach(b => b.classList.remove('active'));
         this.classList.add('active');
         selectedDate = this.getAttribute('data-date') || 'all';
         render();
       });
     });
 
-    // Tier Pills
-    document.querySelectorAll('#date-and-tier-filters button[data-tier]').forEach(btn => {
-      btn.addEventListener('click', function (                       ) {
-        document.querySelectorAll('#date-and-tier-filters button[data-tier]').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        selectedTier = this.getAttribute('data-tier') || 'all';
-        render();
+    // Reset Filters Button
+    const resetBtn = document.getElementById('filter-reset-btn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        resetAllFilters();
       });
-    });
+    }
   }
 
   // 15. Initial Bootstrap

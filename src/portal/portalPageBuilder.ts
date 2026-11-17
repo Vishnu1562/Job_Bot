@@ -33,17 +33,29 @@ export function getPortalJs(): string {
   return tsContent;
 }
 
+export function formatProfileShortName(name: string): string {
+  if (!name) return '';
+  return name
+    .replace(/\s+(Developer\s+)?Job\s+Radar$/i, '')
+    .replace(/\s+Radar$/i, '')
+    .trim();
+}
+
 export function buildPortalHtml(data: PortalData): string {
   const templatePath = path.join(__dirname, 'template.html');
   const template = fs.readFileSync(templatePath, 'utf-8');
 
   const profilePillsHtml = data.profiles
-    .map(
-      p => `
-        <button class="pill-btn" data-profile="${escapeHtml(p.id)}">
-          ${escapeHtml(p.name)} (${p.jobsCount})
-        </button>`
-    )
+    .map(p => {
+      const shortName = formatProfileShortName(p.name);
+      const dotColor = p.accentColor || '#6366f1';
+      return `
+        <button class="profile-tab-btn" data-profile="${escapeHtml(p.id)}">
+          <span class="tab-dot" style="background-color: ${escapeHtml(dotColor)};"></span>
+          <span class="tab-title">${escapeHtml(shortName)}</span>
+          <span class="tab-count">${p.jobsCount}</span>
+        </button>`;
+    })
     .join('');
 
   const jsonString = JSON.stringify(data);
