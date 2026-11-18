@@ -1,28 +1,85 @@
 {
-  "generatedAt": "2026-11-18T03:23:52.503Z",
-  "totalJobsCount": 147,
+  "generatedAt": "2026-11-18T09:02:12.874Z",
+  "totalJobsCount": 154,
   "profiles": [
     {
       "id": "power-platform",
       "name": "Power Platform Job Radar",
       "accentColor": "#742774",
-      "jobsCount": 22
+      "jobsCount": 25
     },
     {
       "id": "full-stack",
       "name": "Full Stack Developer Job Radar",
       "accentColor": "#0284c7",
-      "jobsCount": 82
+      "jobsCount": 85
     },
     {
       "id": "java-backend",
       "name": "Java & Spring Boot Developer Job Radar",
       "accentColor": "#ea580c",
-      "jobsCount": 43
+      "jobsCount": 44
     }
   ],
   "jobsByProfile": {
     "power-platform": [
+      {
+        "id": "jsearch-TUZ6YVVnZk9rdjRmZ1JrMEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVlpqYURsaGMxWm9OR0ZCY25NNGIyeDZTa3hmZFRrMVJXdHZUR1V6YjA5UmNWZHJUemN5WjJKRVEyVTBlVUZXU1ZOcE5VNXJja1ZPZG5sTE5EUXdWVTVMUkdaQ2VFcFRTMHhGT0ZCMldVRlZXVEEwVUZVMFlVdHBRekZoWTBocFRXOURVV2R4V0RoclVrOUNPVlV0Y1RCaExVOVBUa2w1UzFsNGJtVlZha2gwZW1sSVVWY1NGMmR0YmpsaGNGOU5SRjlpUVhKbVkxQjFZV0pPYTBGVkdpSkJTRTR3UlRkR05FRkZYelkyVHkxUGNtVmpPVTh5UW5WMllXRTVPSFkzZUUxUjpkNzY4ZTA3OA",
+        "profileId": "power-platform",
+        "title": "DevOps Engineer - Power Platform, MS Power",
+        "company": "REIS Staffing & HR Services Pvt Ltd",
+        "location": "Pune, Maharashtra, India",
+        "url": "https://www.shine.com/jobs/devops-engineer-power-platform-ms-power/reis-staffing-hr-services-pvt-ltd/20084013?jobtype=rs&position_in_results=17",
+        "tags": [
+          "[Power Apps Developer]"
+        ],
+        "source": "shine",
+        "description": "The Opportunity\nIn the first few months, you'll establish robust CI/CD pipelines and optimize deployment processes to drive efficiency.\n\nYour Day-to-Day\n- Design and implement continuous integration and continuous deployment pipelines that automate t",
+        "scrapedAt": "2026-11-18 09:01:56",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-UEJrODF5ZDNsMzVoOXU4aEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVmRZYmtwWlZqQXRRM1pTZDFBd1RIUnRhamxvYm5Bd01GOUxZVVo0Tm1KcVExOXNaVmRuTjFZeE1uTlpMV1ZSZUdKWWJtRjBOMW81Y1RoTGVFZDNhVkptWVZGcldGSjJPSHBaV214alRub3RWM1I1UW1aZk9IWmphV3RsYkZOeFRrbGZOM0ppWkVWYVYyaDJhMDF6Y1c5MWNsOUNWbXd3Ym1STFUwRklMVWRCUkRSdGRGUVNGMmR0YmpsaGNGOU5SRjlpUVhKbVkxQjFZV0pPYTBGVkdpSkJTRTR3UlRkR01Hc3pXbUkyVWpoS1JqSmhVekV5VDFoVlUzUkhXRFZ2YkdWMzowOTBiZjUyYg",
+        "profileId": "power-platform",
+        "title": "Power Platform Admin",
+        "company": "Cognizant",
+        "location": "Chennai, Tamil Nadu, India",
+        "url": "https://careers.cognizant.com/global-en/jobs/00070650441/power-platform-admin/",
+        "tags": [
+          "[Power Automate]"
+        ],
+        "source": "cognizant careers",
+        "description": "Job Summary\n\nPower Platform Administration\n\nResponsibilities\nUnattended Bot Management\n\n· Configure, monitor, and troubleshoot unattended Power Automate bots across RDS-enabled Microsoft servers.\n\n· Optimize bot concurrency and resource allocation fo",
+        "scrapedAt": "2026-11-18 09:01:56",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-N0xmMGNuN1VDLTIyYUk0MEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZazF5VDBwVFlqVkJPSEJ0UkZCNlRIVlpaVVpXVlU1NWRYZEdlVzVmWVdnelRVRnFSUzB6TVVWeVVEVktjbkExVlVoWWFrNWZWVXN4VEdaV1gwUnFNVzlxYzB4SVltRkpjRWxvYm5WSlpWRXpXVFJwYTJWME1rdG1WWGhUYlV4TWFIbERjVmhvVkhaRFVYUnFTMUYwVkZoVVdHTkJSV3N6U0hwaU56WkhkM2RxWkRWbVMxRVNGMmR0YmpsaGNGOU5SRjlpUVhKbVkxQjFZV0pPYTBGVkdpSkJTRTR3UlRkSVREQnlOM1pMV1c1alpERlZNazFaV2xkME1UbHpUSHBxY21WUjplN2UyZWI0Zg",
+        "profileId": "power-platform",
+        "title": "Power Platform Administrator - RDT Engineering Excellence & Experience",
+        "company": "Roche",
+        "location": "Hyderabad, Telangana, India",
+        "url": "https://in.linkedin.com/jobs/view/power-platform-administrator-rdt-engineering-excellence-experience-at-roche-4491712105",
+        "tags": [
+          "[Power Automate]",
+          "[SharePoint Online]",
+          "[M365 / PL-400]",
+          "[Copilot Studio]"
+        ],
+        "source": "linkedin",
+        "description": "At Roche you can show up as yourself, embraced for the unique qualities you bring. Our culture encourages personal expression, open dialogue, and genuine connections, where you are valued, accepted and respected for who you are, allowing you to thriv",
+        "scrapedAt": "2026-11-18 09:01:55",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
       {
         "id": "jsearch-NGNnVlVvbHQyNlhpck9kT0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXaTFWV1VkNFpERm5TbWwwYmxNM1FsWnNSMWRNVkZsb09YUlNZVU4xUm5CeVpFVm1UVTVaYlRJMWJERmFOVU5pWkVaaVZIUmtURUZVTW0xc2REZEdVMjE1Y1d0cVRVRlJTWGN6YW1RMGNtaHhUMlZ3TW1GaVRGSk5ZVXBqYzBKUGFHTllNMU51ZGpOWFpqaFVUMFpSVEdKdFgyVnlRekZvWXkxNVMyNXFhSFZuYmpOQ1Zrb1NGMHRvY2psaGNIcEVUa3d0VjNObFRWQXliMkZLYzBGckdpSkJTRTR3UlRkSFYyVlhORkZVU25rd2JubDJWWFZ0WDFaVFQyVklVVlZ5TFZGbjplNTJiYjVhYQ",
         "profileId": "power-platform",
@@ -39,7 +96,7 @@
           "[Model-Driven]"
         ],
         "source": "linkedin",
-        "description": "About CIBC:\n\nCIBC is a leading North American bank, with a history of more than 150 years of living our purpose - to help make your ambition a reality. Client relationships are at the center of our strategy, and our growth is enabled by a highly enga",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:36",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -59,7 +116,7 @@
           "[Copilot Studio]"
         ],
         "source": "linkedin",
-        "description": "Rockwell Automation is a global technology leader focused on helping the world’s manufacturers be more productive, sustainable, and agile. With more than 28,000 employees who make the world better every day, we know we have something special. Behind ",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:36",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -104,7 +161,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -127,7 +184,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -147,7 +204,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -167,7 +224,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -188,7 +245,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -210,7 +267,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -234,7 +291,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -256,7 +313,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -279,7 +336,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -301,7 +358,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -327,7 +384,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -349,7 +406,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -371,7 +428,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -392,7 +449,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -414,7 +471,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -437,7 +494,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -459,7 +516,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -483,7 +540,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -504,12 +561,71 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:21",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       }
     ],
     "full-stack": [
+      {
+        "id": "jobicy-153449",
+        "profileId": "full-stack",
+        "title": "Software Engineer - Auth",
+        "company": "Supabase",
+        "location": "Anywhere",
+        "url": "https://jobicy.com/jobs/153449-software-engineer-auth",
+        "tags": [
+          "[PostgreSQL]",
+          "[GitHub]"
+        ],
+        "source": "jobicy",
+        "description": "<h3><strong>About Supabase</strong></h3>\r\n<p>Supabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including Database, Auth, Storage, Edge Functions, Realtime, and Vector Search. All",
+        "scrapedAt": "2026-11-18 09:02:09",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-VEtDR0g4X0VPM1VFZUJNM0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVTV3YUdjdGRWbGtSa2MwY1VKVWJVVnFhMmxuZDJVMlEySkNOMXBHYkRRNFluRklXa0Z2UzFod09IQmhTVmhmVUZCS1UzcHZOMHhOY0hKcFVWUmpjekp6YzI0eExVRnphR052U2twMVlsTnhjblU1Y1dkbFEyUnNXVWN3YUU1QmRIUkJValUzWDNodVEwRjFlQzFwTTNSR2VFZDVNM2d4VjNSWk9FeDFkblJXUWpSSVdVY1NGMnRIYmpsaGNHNXlTVXRUVldoMlkxQndjblp2TmxGRkdpSkJTRTR3UlRkR1dEaE9SM3BKV2tGSmRGQlBTMjFUYUV0VE5ISkxNbXhwTUMxQjpmMTFmNjcwYw",
+        "profileId": "full-stack",
+        "title": "T&T- Customer- M&C - Senior Consultant | Angular Developer | Pune",
+        "company": "deloitte",
+        "location": "Pune, Maharashtra, India",
+        "url": "https://southasiacareers.deloitte.com/job/Pune-T&T-Customer-M&C-Senior-Consultant-Angular-Developer-Pune/58550344/",
+        "tags": [
+          "[Angular]",
+          "[PostgreSQL]",
+          "[MSSQL]",
+          "[Azure DevOps]",
+          "[GitHub]"
+        ],
+        "source": "deloitte south asia careers",
+        "description": "T&T- Customer- M&C - Senior Consultant | Angular Developer | Pune\n• Job requisition ID : 110373\n• Location: Pune\n• Entity: Deloitte South Asia LLP\n\nThe team:\n\nCustomer has to do much more than keep the wheels turning; it is the engine that drives fun",
+        "scrapedAt": "2026-11-18 09:02:09",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-WEZEZE9HdTkySl9UVm54VEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbnBNWDJ0eWRFbElZMmhrYkVaR1RXeEVNM2gyTWpoUlVXaHRORlpuT0VrdFpsbERSakZLUkVaWFNYTjFMV040VkdVNWMydE1NRUZITFhWcVJHaHNibFIxVldreFlsZHdRWEpJYVZKaVJtRk9USGhTWDI1cE56WjNOa3d4Um10bmVWbE1XVzExVVU0emJsOVRTREpNYkdGMVNreHpZbms1UjA0dFV6ZHliSEZJVHprMlRVRVNGMnRIYmpsaGNHNXlTVXRUVldoMlkxQndjblp2TmxGRkdpSkJTRTR3UlRkSFlYcGFjV3gzU1dsU09HUnBRV3h4U1hGdlRFUmtVazAzVEdObjo2NjUyZGFhOA",
+        "profileId": "full-stack",
+        "title": "Java and Angular Full Stack Developer",
+        "company": "CITI",
+        "location": "Pune, Maharashtra, India",
+        "url": "https://jobs.citi.com/job/pune/java-and-angular-full-stack-developer/287/102541187040",
+        "tags": [
+          "[Angular]"
+        ],
+        "source": "citi careers",
+        "description": "About the Role:\n\nWe are seeking a highly motivated and skilled Java Full Stack Developer to join our team. This role will be instrumental in designing, developing, and maintaining Trade Finance applications using the latest technologies. The ideal ca",
+        "scrapedAt": "2026-11-18 09:02:09",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
       {
         "id": "job-6930cd8f",
         "profileId": "full-stack",
@@ -575,7 +691,7 @@
           "[GitHub]"
         ],
         "source": "weworkremotely",
-        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6817/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Elvoro\n    &lt;br /&gt;&lt;strong&gt;",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -593,7 +709,7 @@
           "[PostgreSQL]"
         ],
         "source": "jobicy",
-        "description": "<h3><strong>About the Role</strong></h3>\n<p>We are seeking a platform engineer to join our Compute team. This team owns the critical systems that power project provisioning, scaling, and the compute that our users rely on every day.</p>\n<p>You’ll wor",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -611,7 +727,7 @@
           "[GitHub]"
         ],
         "source": "weworkremotely",
-        "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://www.careerflow.ai\"&gt;https://www.careerflow.ai&lt;/a&gt;\n&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;About the Role:&lt",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -629,7 +745,7 @@
           "[PostgreSQL]"
         ],
         "source": "linkedin",
-        "description": "Required Skills\n• Java: Strong hands-on experience with Core Java and object-oriented programming.\n• Spring Boot: Experience developing REST APIs and backend applications.\n• Microservices: Understanding of microservices architecture and service-to-se",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -648,7 +764,7 @@
           "[PostgreSQL]"
         ],
         "source": "société générale careers",
-        "description": "ResponsibilitiesPrimary SkillsJava, Spring Boot, PostgreSQL, Angular, TypeScript, JavaScript, Node.jsRole OverviewWe are looking for a skilled Full Stack Developer to design, develop, and maintain end-to-end web applications using modern front-end an",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -666,7 +782,7 @@
           "[Angular]"
         ],
         "source": "linkedin",
-        "description": "Summary\nAt Apple, we rely on our employees diverse set of backgrounds and perspectives to champion innovation through extraordinary ideas to surprise and delight our customers. These ideas can come from anywhere. Will that next phenomenal idea come f",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -684,7 +800,7 @@
           "[Angular]"
         ],
         "source": "linkedin",
-        "description": "About RoboMQ\n\nRoboMQ is a fast-growing SaaS company delivering disruptive Identity Governance and Administration (IGA) solutions to mid-market enterprise customers. Our flagship product, Hire2Retire, automates the employee identity lifecycle by integ",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -702,7 +818,7 @@
           "[.NET]"
         ],
         "source": "iitjobs",
-        "description": "Must-Have Skills*:\n\n- Strong experience in .NET Core\n\n- Hands-on experience with React.js\n\n- Strong SQL skills\n\n- Experience with Microsoft Azure frameworks and services\n\n- Good understanding of full-stack development and application architecture\n\nGo",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -722,7 +838,7 @@
           "[GitHub]"
         ],
         "source": "corehrx",
-        "description": "We are looking for a skilled and enthusiastic Full Stack Developer responsible for designing, developing, and maintaining both frontend and backend applications. The candidate should have good knowledge of frontend technologies, backend programming l",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -740,7 +856,7 @@
           "[PostgreSQL]"
         ],
         "source": "linkedin",
-        "description": "Job Title: Developer full stack for Cardif API Store\n\nDepartment: ETO Strategic Protection Platform (IT Tribe Business Platforms)\n\nAbout Business Line/Function\n\nBNP Paribas Cardif is a world leader in bancassurance partnerships, providing its custome",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -760,7 +876,7 @@
           "[GitHub]"
         ],
         "source": "amgen",
-        "description": "Job Description\n\nThe role is responsible for designing, developing, and maintaining software solutions for Research scientists. Additionally, it involves automating operations, monitoring system health, and responding to incidents to minimize downtim",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -780,7 +896,7 @@
           "[MSSQL]"
         ],
         "source": "nexthire",
-        "description": "Contribute to the development and maintenance of web applications by leading a team of developers. The role involves collaborating with cross functional teams to understand requirements, design system architecture, and ensure high-quality code delive",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -798,7 +914,7 @@
           "[Angular]"
         ],
         "source": "simplyhired",
-        "description": "We are looking for a skilled and experienced Frontend Developer with at least 3 years of experience in frontend development to join our team in Zirakpur (Mohali). The ideal candidate should have strong expertise in AngularJS 14+, along with a solid u",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -818,7 +934,7 @@
           "[GitHub]"
         ],
         "source": "linkedin",
-        "description": "Position Type\n\nFull time\n\nType Of Hire\n\nExperienced (relevant combo of work and education)\n\n• Net Full Stack with Angular, TypeScript, Microservices, Docker, and Container Developer - Pune\n\nAbout The Role\n\nAs a Senior Full Stack Engineer, you will de",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -836,7 +952,7 @@
           "[Angular]"
         ],
         "source": "shine",
-        "description": "Angular Js Developer - Bengaluru\n\nCompany: Infosys\nJob Location: Bengaluru, Karnataka, India\nEmployment Type: Full-time\n\nTechnical and Professional Requirements:\n\nPrimary skills:Technology->->UI & Markup Language->Angular ->Nodejs\n\nPreferred Skills:\n",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -875,7 +991,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:28",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -893,7 +1009,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:28",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -911,7 +1027,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:28",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -929,7 +1045,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:28",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -948,7 +1064,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:28",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -968,7 +1084,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:28",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -990,7 +1106,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:28",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1010,7 +1126,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:28",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1029,7 +1145,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:28",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1047,7 +1163,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:28",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1065,7 +1181,7 @@
         "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n&lt;/p&gt;\n\n&lt;h1&gt;Unity Developer&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Job Title:&lt;/strong&gt; Unity Developer&lt;br&gt;&lt;strong&gt;Location:&lt;/strong&gt; United States (Remot",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1083,7 +1199,7 @@
         "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n&lt;/p&gt;\n\n&lt;ol&gt;&lt;li&gt;&lt;p&gt;Game UI Engineer&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;strong&gt;Job Title:&lt;/strong&gt; Game UI Engineer&lt;br&gt;&lt;strong&gt;Loc",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1102,7 +1218,7 @@
         "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6743/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; India\n    &lt;br /&gt;&lt;strong&gt;U",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1120,7 +1236,7 @@
         "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n&lt;/p&gt;\n\n&lt;h1&gt;Blockchain Developer&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Job Title:&lt;/strong&gt; Blockchain Developer&lt;br&gt;&lt;strong&gt;Location:&lt;/strong&gt; United Sta",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1140,7 +1256,7 @@
         "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n&lt;/p&gt;\n\n&lt;ol&gt;&lt;li&gt;&lt;p&gt;GIS Software Engineer&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;strong&gt;Job Title:&lt;/strong&gt; GIS Software Engineer&lt;br&gt;&lt;str",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1158,7 +1274,7 @@
         "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6715/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Seattle\n    &lt;br /&gt;&lt;strong&gt",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1176,7 +1292,7 @@
         "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6701/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; US, Remote\n    &lt;br /&gt;&lt;strong",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1194,7 +1310,7 @@
         "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=fc2a6c7e-ef54-4ed9-8c04-d5aca23f99e3\"&",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1213,7 +1329,7 @@
         "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0017/0601/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Europe (DK)\n    &lt;br /&gt;&lt;stron",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1231,7 +1347,7 @@
         "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6677/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Atlanta, Georgia\n    &lt;br /&gt;&lt;",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1249,7 +1365,7 @@
         "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; San Francisco, CA or Remote (U.S.)\n&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: This role is remote in the United States, Canada, or some countries in South America.&lt;/p&gt;\n&lt;",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1267,7 +1383,7 @@
         "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Remote - MX\n&lt;/p&gt;\n\n&lt;div class=\"content-intro\"&gt;&lt;h2&gt;&lt;span&gt;Who We Are&lt;/span&gt;&lt;/h2&gt;\n&lt;p&gt;&lt;span&gt;Oportun (Nasdaq: OPRT) is a mission-driven financial service",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1285,7 +1401,7 @@
         "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/1089/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;str",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1303,7 +1419,7 @@
         "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Remote\n&lt;/p&gt;\n\n&lt;p&gt;PlanetScale is growing rapidly and reinventing the database space. The PlanetScale platform delivers a fully managed, multi-cloud Postgres service designed for the mos",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1321,7 +1437,7 @@
         "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Remote\n&lt;/p&gt;\n\n&lt;div class=\"content-intro\"&gt;&lt;p&gt;&lt;strong&gt;About Carrot: &lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"https://c212.net/c/link/?t=0&amp;amp;l=en&amp;amp;o=4420559",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1340,7 +1456,7 @@
         "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0161/6774/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Australia\n    &lt;br /&gt;&lt;strong&",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1358,7 +1474,7 @@
         "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0071/4151/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; NYC and TLV\n    &lt;br /&gt;&lt;stron",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1376,7 +1492,7 @@
         "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0066/7400/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; NYC and TLV\n    &lt;br /&gt;&lt;stron",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1394,7 +1510,7 @@
         "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6653/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; New York, NY\n    &lt;br /&gt;&lt;stro",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1412,7 +1528,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1430,7 +1546,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1449,7 +1565,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1467,7 +1583,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1485,7 +1601,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1504,7 +1620,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1522,7 +1638,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1540,7 +1656,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1558,7 +1674,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1577,7 +1693,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1596,7 +1712,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1614,7 +1730,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1634,7 +1750,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1653,7 +1769,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1671,7 +1787,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1689,7 +1805,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1709,7 +1825,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1727,7 +1843,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1745,7 +1861,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1763,7 +1879,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1782,7 +1898,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1801,7 +1917,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1819,7 +1935,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1839,7 +1955,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1857,7 +1973,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1875,7 +1991,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1893,7 +2009,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1913,7 +2029,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1931,7 +2047,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1949,7 +2065,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1967,7 +2083,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1985,7 +2101,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -2003,7 +2119,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -2021,12 +2137,38 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:40",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       }
     ],
     "java-backend": [
+      {
+        "id": "jsearch-YzRNREF3WlFMOHpOcDVCcEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbUZTUjJNMVpFeHhVR2xIUkY5SE9GODBTa2RGZVhWM1gzRnZSbmM1T0VkNlJGb3lNMGxFTkdKSGNVYzNUa1JEY21oQ1RuaFZVVjkyVG1sMmVFMVliVlJOUzJ4WVYyMXJiVWM1ZUd0MFluaHdkMVJtYjB0U1pVeElVek5KUjNwS1dtbHhTa05aVGxKSWJFZG9jamgwY3pjelFuQlFVekZtYm1sbGRrcHRabEk1Y3pGQk0wRVNGMnR0YmpsaGNrZDBSRTE1ZURWT2IxQnVXVTl3ZDFFNEdpSkJTRTR3UlRkSVQxUXhXWGwzV0dkYU5qZFJWV3RqVFdoTFNYQkdWMVZaTVdoMzpiZTU5ZGFkMA",
+        "profileId": "java-backend",
+        "title": "Full Stack Engineer (Java + AI- Pune/ Chennai)",
+        "company": "Creospan Inc.",
+        "location": "Pune, Maharashtra, India",
+        "url": "https://in.linkedin.com/jobs/view/full-stack-engineer-java-%2B-ai-pune-chennai-at-creospan-inc-4491162519",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]",
+          "[Microservices]",
+          "[REST APIs]",
+          "[Oracle SQL]",
+          "[PostgreSQL]",
+          "[Docker]",
+          "[React]",
+          "[Python / Shell]"
+        ],
+        "source": "linkedin",
+        "description": "Required Skills\n• Java: Strong hands-on experience with Core Java and object-oriented programming.\n• Spring Boot: Experience developing REST APIs and backend applications.\n• Microservices: Understanding of microservices architecture and service-to-se",
+        "scrapedAt": "2026-11-18 09:02:12",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
       {
         "id": "job-555c7764",
         "profileId": "java-backend",
@@ -2039,7 +2181,7 @@
           "[React]"
         ],
         "source": "himalayas",
-        "description": "The client is a software supply chain security company, that provides the world’s best end-to-end software supply chain security solution, combining the only proactive protection against malicious open source, the only enterprise grade SBOM managemen",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -2062,7 +2204,7 @@
           "[Docker]"
         ],
         "source": "linkedin",
-        "description": "We have an opportunity with Headway Tek on Java Developer - Telecom/ 4-8 Years/ Full Time/ PAN India.\n\nKey Responsibilities:\n\n1). Design and develop Java-based microservices with a focus on performance and scalability.\n\n2). Work with Kubernetes and D",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -2080,7 +2222,7 @@
           "[Java]"
         ],
         "source": "linkedin",
-        "description": "Job opportunity with Headway Tek on Java Production Support L2/L3 with Development experience/ 5+ Years/ Full Time.\n\nJava L3 Support Analyst JD:\n\n• Java Production Support professional with 5+ years of experience supporting mission-critical enterpris",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -2103,7 +2245,7 @@
           "[Oracle SQL]"
         ],
         "source": "linkedin",
-        "description": "Hiring: Java Developer with Spring boot and Restful\n\nLocation: Vijayawada\n\nExperience: 3 - 12 Years\n\nEmployment Type: Full-Time\n\nRegistration is Mandatory\n\nInterested candidates can register using the below link:\n\nRegister Here: https://forms.cloud.m",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -2130,7 +2272,7 @@
           "[React]"
         ],
         "source": "cognizant careers",
-        "description": "a { text-decoration: none; color: #464feb; } tr th, tr td { border: 1px solid #e6e6e6; } tr th { background-color: #f5f5f5; }\na { text-decoration: none; color: #464feb; } tr th, tr td { border: 1px solid #e6e6e6; } tr th { background-color: #f5f5f5; ",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -2153,7 +2295,7 @@
           "[PostgreSQL]"
         ],
         "source": "corehrx",
-        "description": "We are looking for a skilled and enthusiastic Java Developer to design, develop, test, and maintain Java-based software applications. The candidate should have strong programming knowledge, problem-solving abilities, and an understanding of backend d",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -2174,7 +2316,7 @@
           "[Docker]"
         ],
         "source": "simplyhired",
-        "description": "Ready to take your career global?\n\nMake your mark at one of the biggest names in payments. We’re looking for Software Engineer to join our ever-evolving Apex team and help shape the future of global commerce.\n\nWhat you’ll own\n\nWe are looking to hire ",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -2197,7 +2339,7 @@
           "[Python / Shell]"
         ],
         "source": "myinternships.in",
-        "description": "Synechron is hiring for the role of Java GenAI Developer – Spring Boot, Microservices, RAG & LLMs in Bengaluru, India.\n\nJob Summary\nSynechron is seeking a Java Developer with Generative AI expertise to design, develop, and integrate AI-powered applic",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -2217,7 +2359,7 @@
           "[PostgreSQL]"
         ],
         "source": "jobleads",
-        "description": "Engineering Manager – Java / Spring Boot, AI-first Fintech\n\nLocation: Bengaluru | Full-time | Work from office\n\nCompensation: ₹40–55 LPA base · Up to ₹75 LPA total compensation\n\nExperience: 8–12 years, including 2+ years managing engineers\n\nReports t",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -2240,7 +2382,7 @@
           "[React]"
         ],
         "source": "shine",
-        "description": "The Opportunity\nIn the first few months, you'll contribute to the development of high-quality Java applications and collaborate effectively with front-end developers.\n\nYour Day-to-Day\n- Develop and maintain applications using Java with Spring Boot, S",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -2263,7 +2405,7 @@
           "[Python / Shell]"
         ],
         "source": "smart recruiters jobs",
-        "description": "Company Description\n\nJob Description\n\nWe are seeking a Software Engineer with solid technical depth to deliver scalable services and guide junior engineers, working with Java, Spring Boot, Python (NumPy), REST APIs, Flask APIs, and Azure/GCP.\n\nRespon",
+        "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -2314,7 +2456,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:34",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -2337,7 +2479,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 08:05:34",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -2358,7 +2500,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -2379,7 +2521,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2402,7 +2544,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2422,7 +2564,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2446,7 +2588,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2472,7 +2614,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2494,7 +2636,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2513,7 +2655,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2533,7 +2675,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2556,7 +2698,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2579,7 +2721,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2598,7 +2740,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2623,7 +2765,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2644,7 +2786,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2668,7 +2810,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2689,7 +2831,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -2709,7 +2851,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -2731,7 +2873,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -2751,7 +2893,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -2771,7 +2913,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -2790,7 +2932,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -2808,7 +2950,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -2826,7 +2968,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -2844,7 +2986,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -2862,7 +3004,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -2882,7 +3024,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -2901,7 +3043,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -2924,7 +3066,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -2945,13 +3087,155 @@
         "description": "",
         "scrapedAt": "2026-11-17 07:45:48",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       }
     ]
   },
   "allJobs": [
+    {
+      "id": "jsearch-YzRNREF3WlFMOHpOcDVCcEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbUZTUjJNMVpFeHhVR2xIUkY5SE9GODBTa2RGZVhWM1gzRnZSbmM1T0VkNlJGb3lNMGxFTkdKSGNVYzNUa1JEY21oQ1RuaFZVVjkyVG1sMmVFMVliVlJOUzJ4WVYyMXJiVWM1ZUd0MFluaHdkMVJtYjB0U1pVeElVek5KUjNwS1dtbHhTa05aVGxKSWJFZG9jamgwY3pjelFuQlFVekZtYm1sbGRrcHRabEk1Y3pGQk0wRVNGMnR0YmpsaGNrZDBSRTE1ZURWT2IxQnVXVTl3ZDFFNEdpSkJTRTR3UlRkSVQxUXhXWGwzV0dkYU5qZFJWV3RqVFdoTFNYQkdWMVZaTVdoMzpiZTU5ZGFkMA",
+      "profileId": "java-backend",
+      "title": "Full Stack Engineer (Java + AI- Pune/ Chennai)",
+      "company": "Creospan Inc.",
+      "location": "Pune, Maharashtra, India",
+      "url": "https://in.linkedin.com/jobs/view/full-stack-engineer-java-%2B-ai-pune-chennai-at-creospan-inc-4491162519",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]",
+        "[Microservices]",
+        "[REST APIs]",
+        "[Oracle SQL]",
+        "[PostgreSQL]",
+        "[Docker]",
+        "[React]",
+        "[Python / Shell]"
+      ],
+      "source": "linkedin",
+      "description": "Required Skills\n• Java: Strong hands-on experience with Core Java and object-oriented programming.\n• Spring Boot: Experience developing REST APIs and backend applications.\n• Microservices: Understanding of microservices architecture and service-to-se",
+      "scrapedAt": "2026-11-18 09:02:12",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jobicy-153449",
+      "profileId": "full-stack",
+      "title": "Software Engineer - Auth",
+      "company": "Supabase",
+      "location": "Anywhere",
+      "url": "https://jobicy.com/jobs/153449-software-engineer-auth",
+      "tags": [
+        "[PostgreSQL]",
+        "[GitHub]"
+      ],
+      "source": "jobicy",
+      "description": "<h3><strong>About Supabase</strong></h3>\r\n<p>Supabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including Database, Auth, Storage, Edge Functions, Realtime, and Vector Search. All",
+      "scrapedAt": "2026-11-18 09:02:09",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-VEtDR0g4X0VPM1VFZUJNM0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVTV3YUdjdGRWbGtSa2MwY1VKVWJVVnFhMmxuZDJVMlEySkNOMXBHYkRRNFluRklXa0Z2UzFod09IQmhTVmhmVUZCS1UzcHZOMHhOY0hKcFVWUmpjekp6YzI0eExVRnphR052U2twMVlsTnhjblU1Y1dkbFEyUnNXVWN3YUU1QmRIUkJValUzWDNodVEwRjFlQzFwTTNSR2VFZDVNM2d4VjNSWk9FeDFkblJXUWpSSVdVY1NGMnRIYmpsaGNHNXlTVXRUVldoMlkxQndjblp2TmxGRkdpSkJTRTR3UlRkR1dEaE9SM3BKV2tGSmRGQlBTMjFUYUV0VE5ISkxNbXhwTUMxQjpmMTFmNjcwYw",
+      "profileId": "full-stack",
+      "title": "T&T- Customer- M&C - Senior Consultant | Angular Developer | Pune",
+      "company": "deloitte",
+      "location": "Pune, Maharashtra, India",
+      "url": "https://southasiacareers.deloitte.com/job/Pune-T&T-Customer-M&C-Senior-Consultant-Angular-Developer-Pune/58550344/",
+      "tags": [
+        "[Angular]",
+        "[PostgreSQL]",
+        "[MSSQL]",
+        "[Azure DevOps]",
+        "[GitHub]"
+      ],
+      "source": "deloitte south asia careers",
+      "description": "T&T- Customer- M&C - Senior Consultant | Angular Developer | Pune\n• Job requisition ID : 110373\n• Location: Pune\n• Entity: Deloitte South Asia LLP\n\nThe team:\n\nCustomer has to do much more than keep the wheels turning; it is the engine that drives fun",
+      "scrapedAt": "2026-11-18 09:02:09",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-WEZEZE9HdTkySl9UVm54VEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbnBNWDJ0eWRFbElZMmhrYkVaR1RXeEVNM2gyTWpoUlVXaHRORlpuT0VrdFpsbERSakZLUkVaWFNYTjFMV040VkdVNWMydE1NRUZITFhWcVJHaHNibFIxVldreFlsZHdRWEpJYVZKaVJtRk9USGhTWDI1cE56WjNOa3d4Um10bmVWbE1XVzExVVU0emJsOVRTREpNYkdGMVNreHpZbms1UjA0dFV6ZHliSEZJVHprMlRVRVNGMnRIYmpsaGNHNXlTVXRUVldoMlkxQndjblp2TmxGRkdpSkJTRTR3UlRkSFlYcGFjV3gzU1dsU09HUnBRV3h4U1hGdlRFUmtVazAzVEdObjo2NjUyZGFhOA",
+      "profileId": "full-stack",
+      "title": "Java and Angular Full Stack Developer",
+      "company": "CITI",
+      "location": "Pune, Maharashtra, India",
+      "url": "https://jobs.citi.com/job/pune/java-and-angular-full-stack-developer/287/102541187040",
+      "tags": [
+        "[Angular]"
+      ],
+      "source": "citi careers",
+      "description": "About the Role:\n\nWe are seeking a highly motivated and skilled Java Full Stack Developer to join our team. This role will be instrumental in designing, developing, and maintaining Trade Finance applications using the latest technologies. The ideal ca",
+      "scrapedAt": "2026-11-18 09:02:09",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-TUZ6YVVnZk9rdjRmZ1JrMEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVlpqYURsaGMxWm9OR0ZCY25NNGIyeDZTa3hmZFRrMVJXdHZUR1V6YjA5UmNWZHJUemN5WjJKRVEyVTBlVUZXU1ZOcE5VNXJja1ZPZG5sTE5EUXdWVTVMUkdaQ2VFcFRTMHhGT0ZCMldVRlZXVEEwVUZVMFlVdHBRekZoWTBocFRXOURVV2R4V0RoclVrOUNPVlV0Y1RCaExVOVBUa2w1UzFsNGJtVlZha2gwZW1sSVVWY1NGMmR0YmpsaGNGOU5SRjlpUVhKbVkxQjFZV0pPYTBGVkdpSkJTRTR3UlRkR05FRkZYelkyVHkxUGNtVmpPVTh5UW5WMllXRTVPSFkzZUUxUjpkNzY4ZTA3OA",
+      "profileId": "power-platform",
+      "title": "DevOps Engineer - Power Platform, MS Power",
+      "company": "REIS Staffing & HR Services Pvt Ltd",
+      "location": "Pune, Maharashtra, India",
+      "url": "https://www.shine.com/jobs/devops-engineer-power-platform-ms-power/reis-staffing-hr-services-pvt-ltd/20084013?jobtype=rs&position_in_results=17",
+      "tags": [
+        "[Power Apps Developer]"
+      ],
+      "source": "shine",
+      "description": "The Opportunity\nIn the first few months, you'll establish robust CI/CD pipelines and optimize deployment processes to drive efficiency.\n\nYour Day-to-Day\n- Design and implement continuous integration and continuous deployment pipelines that automate t",
+      "scrapedAt": "2026-11-18 09:01:56",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-UEJrODF5ZDNsMzVoOXU4aEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVmRZYmtwWlZqQXRRM1pTZDFBd1RIUnRhamxvYm5Bd01GOUxZVVo0Tm1KcVExOXNaVmRuTjFZeE1uTlpMV1ZSZUdKWWJtRjBOMW81Y1RoTGVFZDNhVkptWVZGcldGSjJPSHBaV214alRub3RWM1I1UW1aZk9IWmphV3RsYkZOeFRrbGZOM0ppWkVWYVYyaDJhMDF6Y1c5MWNsOUNWbXd3Ym1STFUwRklMVWRCUkRSdGRGUVNGMmR0YmpsaGNGOU5SRjlpUVhKbVkxQjFZV0pPYTBGVkdpSkJTRTR3UlRkR01Hc3pXbUkyVWpoS1JqSmhVekV5VDFoVlUzUkhXRFZ2YkdWMzowOTBiZjUyYg",
+      "profileId": "power-platform",
+      "title": "Power Platform Admin",
+      "company": "Cognizant",
+      "location": "Chennai, Tamil Nadu, India",
+      "url": "https://careers.cognizant.com/global-en/jobs/00070650441/power-platform-admin/",
+      "tags": [
+        "[Power Automate]"
+      ],
+      "source": "cognizant careers",
+      "description": "Job Summary\n\nPower Platform Administration\n\nResponsibilities\nUnattended Bot Management\n\n· Configure, monitor, and troubleshoot unattended Power Automate bots across RDS-enabled Microsoft servers.\n\n· Optimize bot concurrency and resource allocation fo",
+      "scrapedAt": "2026-11-18 09:01:56",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-N0xmMGNuN1VDLTIyYUk0MEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZazF5VDBwVFlqVkJPSEJ0UkZCNlRIVlpaVVpXVlU1NWRYZEdlVzVmWVdnelRVRnFSUzB6TVVWeVVEVktjbkExVlVoWWFrNWZWVXN4VEdaV1gwUnFNVzlxYzB4SVltRkpjRWxvYm5WSlpWRXpXVFJwYTJWME1rdG1WWGhUYlV4TWFIbERjVmhvVkhaRFVYUnFTMUYwVkZoVVdHTkJSV3N6U0hwaU56WkhkM2RxWkRWbVMxRVNGMmR0YmpsaGNGOU5SRjlpUVhKbVkxQjFZV0pPYTBGVkdpSkJTRTR3UlRkSVREQnlOM1pMV1c1alpERlZNazFaV2xkME1UbHpUSHBxY21WUjplN2UyZWI0Zg",
+      "profileId": "power-platform",
+      "title": "Power Platform Administrator - RDT Engineering Excellence & Experience",
+      "company": "Roche",
+      "location": "Hyderabad, Telangana, India",
+      "url": "https://in.linkedin.com/jobs/view/power-platform-administrator-rdt-engineering-excellence-experience-at-roche-4491712105",
+      "tags": [
+        "[Power Automate]",
+        "[SharePoint Online]",
+        "[M365 / PL-400]",
+        "[Copilot Studio]"
+      ],
+      "source": "linkedin",
+      "description": "At Roche you can show up as yourself, embraced for the unique qualities you bring. Our culture encourages personal expression, open dialogue, and genuine connections, where you are valued, accepted and respected for who you are, allowing you to thriv",
+      "scrapedAt": "2026-11-18 09:01:55",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
     {
       "id": "job-555c7764",
       "profileId": "java-backend",
@@ -2964,7 +3248,7 @@
         "[React]"
       ],
       "source": "himalayas",
-      "description": "The client is a software supply chain security company, that provides the world’s best end-to-end software supply chain security solution, combining the only proactive protection against malicious open source, the only enterprise grade SBOM managemen",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -2987,7 +3271,7 @@
         "[Docker]"
       ],
       "source": "linkedin",
-      "description": "We have an opportunity with Headway Tek on Java Developer - Telecom/ 4-8 Years/ Full Time/ PAN India.\n\nKey Responsibilities:\n\n1). Design and develop Java-based microservices with a focus on performance and scalability.\n\n2). Work with Kubernetes and D",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3005,7 +3289,7 @@
         "[Java]"
       ],
       "source": "linkedin",
-      "description": "Job opportunity with Headway Tek on Java Production Support L2/L3 with Development experience/ 5+ Years/ Full Time.\n\nJava L3 Support Analyst JD:\n\n• Java Production Support professional with 5+ years of experience supporting mission-critical enterpris",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3028,7 +3312,7 @@
         "[Oracle SQL]"
       ],
       "source": "linkedin",
-      "description": "Hiring: Java Developer with Spring boot and Restful\n\nLocation: Vijayawada\n\nExperience: 3 - 12 Years\n\nEmployment Type: Full-Time\n\nRegistration is Mandatory\n\nInterested candidates can register using the below link:\n\nRegister Here: https://forms.cloud.m",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3055,7 +3339,7 @@
         "[React]"
       ],
       "source": "cognizant careers",
-      "description": "a { text-decoration: none; color: #464feb; } tr th, tr td { border: 1px solid #e6e6e6; } tr th { background-color: #f5f5f5; }\na { text-decoration: none; color: #464feb; } tr th, tr td { border: 1px solid #e6e6e6; } tr th { background-color: #f5f5f5; ",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3078,7 +3362,7 @@
         "[PostgreSQL]"
       ],
       "source": "corehrx",
-      "description": "We are looking for a skilled and enthusiastic Java Developer to design, develop, test, and maintain Java-based software applications. The candidate should have strong programming knowledge, problem-solving abilities, and an understanding of backend d",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3099,7 +3383,7 @@
         "[Docker]"
       ],
       "source": "simplyhired",
-      "description": "Ready to take your career global?\n\nMake your mark at one of the biggest names in payments. We’re looking for Software Engineer to join our ever-evolving Apex team and help shape the future of global commerce.\n\nWhat you’ll own\n\nWe are looking to hire ",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3122,7 +3406,7 @@
         "[Python / Shell]"
       ],
       "source": "myinternships.in",
-      "description": "Synechron is hiring for the role of Java GenAI Developer – Spring Boot, Microservices, RAG & LLMs in Bengaluru, India.\n\nJob Summary\nSynechron is seeking a Java Developer with Generative AI expertise to design, develop, and integrate AI-powered applic",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3142,7 +3426,7 @@
         "[PostgreSQL]"
       ],
       "source": "jobleads",
-      "description": "Engineering Manager – Java / Spring Boot, AI-first Fintech\n\nLocation: Bengaluru | Full-time | Work from office\n\nCompensation: ₹40–55 LPA base · Up to ₹75 LPA total compensation\n\nExperience: 8–12 years, including 2+ years managing engineers\n\nReports t",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3165,7 +3449,7 @@
         "[React]"
       ],
       "source": "shine",
-      "description": "The Opportunity\nIn the first few months, you'll contribute to the development of high-quality Java applications and collaborate effectively with front-end developers.\n\nYour Day-to-Day\n- Develop and maintain applications using Java with Spring Boot, S",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3188,7 +3472,7 @@
         "[Python / Shell]"
       ],
       "source": "smart recruiters jobs",
-      "description": "Company Description\n\nJob Description\n\nWe are seeking a Software Engineer with solid technical depth to deliver scalable services and guide junior engineers, working with Java, Spring Boot, Python (NumPy), REST APIs, Flask APIs, and Azure/GCP.\n\nRespon",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3260,7 +3544,7 @@
         "[GitHub]"
       ],
       "source": "weworkremotely",
-      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6817/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Elvoro\n    &lt;br /&gt;&lt;strong&gt;",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3278,7 +3562,7 @@
         "[PostgreSQL]"
       ],
       "source": "jobicy",
-      "description": "<h3><strong>About the Role</strong></h3>\n<p>We are seeking a platform engineer to join our Compute team. This team owns the critical systems that power project provisioning, scaling, and the compute that our users rely on every day.</p>\n<p>You’ll wor",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3296,7 +3580,7 @@
         "[GitHub]"
       ],
       "source": "weworkremotely",
-      "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://www.careerflow.ai\"&gt;https://www.careerflow.ai&lt;/a&gt;\n&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;About the Role:&lt",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3314,7 +3598,7 @@
         "[PostgreSQL]"
       ],
       "source": "linkedin",
-      "description": "Required Skills\n• Java: Strong hands-on experience with Core Java and object-oriented programming.\n• Spring Boot: Experience developing REST APIs and backend applications.\n• Microservices: Understanding of microservices architecture and service-to-se",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3333,7 +3617,7 @@
         "[PostgreSQL]"
       ],
       "source": "société générale careers",
-      "description": "ResponsibilitiesPrimary SkillsJava, Spring Boot, PostgreSQL, Angular, TypeScript, JavaScript, Node.jsRole OverviewWe are looking for a skilled Full Stack Developer to design, develop, and maintain end-to-end web applications using modern front-end an",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3351,7 +3635,7 @@
         "[Angular]"
       ],
       "source": "linkedin",
-      "description": "Summary\nAt Apple, we rely on our employees diverse set of backgrounds and perspectives to champion innovation through extraordinary ideas to surprise and delight our customers. These ideas can come from anywhere. Will that next phenomenal idea come f",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3369,7 +3653,7 @@
         "[Angular]"
       ],
       "source": "linkedin",
-      "description": "About RoboMQ\n\nRoboMQ is a fast-growing SaaS company delivering disruptive Identity Governance and Administration (IGA) solutions to mid-market enterprise customers. Our flagship product, Hire2Retire, automates the employee identity lifecycle by integ",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3387,7 +3671,7 @@
         "[.NET]"
       ],
       "source": "iitjobs",
-      "description": "Must-Have Skills*:\n\n- Strong experience in .NET Core\n\n- Hands-on experience with React.js\n\n- Strong SQL skills\n\n- Experience with Microsoft Azure frameworks and services\n\n- Good understanding of full-stack development and application architecture\n\nGo",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3407,7 +3691,7 @@
         "[GitHub]"
       ],
       "source": "corehrx",
-      "description": "We are looking for a skilled and enthusiastic Full Stack Developer responsible for designing, developing, and maintaining both frontend and backend applications. The candidate should have good knowledge of frontend technologies, backend programming l",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3425,7 +3709,7 @@
         "[PostgreSQL]"
       ],
       "source": "linkedin",
-      "description": "Job Title: Developer full stack for Cardif API Store\n\nDepartment: ETO Strategic Protection Platform (IT Tribe Business Platforms)\n\nAbout Business Line/Function\n\nBNP Paribas Cardif is a world leader in bancassurance partnerships, providing its custome",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3445,7 +3729,7 @@
         "[GitHub]"
       ],
       "source": "amgen",
-      "description": "Job Description\n\nThe role is responsible for designing, developing, and maintaining software solutions for Research scientists. Additionally, it involves automating operations, monitoring system health, and responding to incidents to minimize downtim",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3465,7 +3749,7 @@
         "[MSSQL]"
       ],
       "source": "nexthire",
-      "description": "Contribute to the development and maintenance of web applications by leading a team of developers. The role involves collaborating with cross functional teams to understand requirements, design system architecture, and ensure high-quality code delive",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3483,7 +3767,7 @@
         "[Angular]"
       ],
       "source": "simplyhired",
-      "description": "We are looking for a skilled and experienced Frontend Developer with at least 3 years of experience in frontend development to join our team in Zirakpur (Mohali). The ideal candidate should have strong expertise in AngularJS 14+, along with a solid u",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3503,7 +3787,7 @@
         "[GitHub]"
       ],
       "source": "linkedin",
-      "description": "Position Type\n\nFull time\n\nType Of Hire\n\nExperienced (relevant combo of work and education)\n\n• Net Full Stack with Angular, TypeScript, Microservices, Docker, and Container Developer - Pune\n\nAbout The Role\n\nAs a Senior Full Stack Engineer, you will de",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3521,7 +3805,7 @@
         "[Angular]"
       ],
       "source": "shine",
-      "description": "Angular Js Developer - Bengaluru\n\nCompany: Infosys\nJob Location: Bengaluru, Karnataka, India\nEmployment Type: Full-time\n\nTechnical and Professional Requirements:\n\nPrimary skills:Technology->->UI & Markup Language->Angular ->Nodejs\n\nPreferred Skills:\n",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3544,7 +3828,7 @@
         "[Model-Driven]"
       ],
       "source": "linkedin",
-      "description": "About CIBC:\n\nCIBC is a leading North American bank, with a history of more than 150 years of living our purpose - to help make your ambition a reality. Client relationships are at the center of our strategy, and our growth is enabled by a highly enga",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:36",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3564,7 +3848,7 @@
         "[Copilot Studio]"
       ],
       "source": "linkedin",
-      "description": "Rockwell Automation is a global technology leader focused on helping the world’s manufacturers be more productive, sustainable, and agile. With more than 28,000 employees who make the world better every day, we know we have something special. Behind ",
+      "description": "",
       "scrapedAt": "2026-11-18 03:23:36",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -3653,7 +3937,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:34",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -3676,7 +3960,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:34",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -3694,7 +3978,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:28",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -3712,7 +3996,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:28",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -3730,7 +4014,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:28",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -3748,7 +4032,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:28",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -3767,7 +4051,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:28",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -3787,7 +4071,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:28",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -3809,7 +4093,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:28",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -3829,7 +4113,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:28",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -3848,7 +4132,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:28",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -3866,7 +4150,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:28",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -3888,7 +4172,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -3911,7 +4195,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -3931,7 +4215,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -3951,7 +4235,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -3972,7 +4256,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -3994,7 +4278,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4018,7 +4302,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4040,7 +4324,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4063,7 +4347,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4085,7 +4369,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 08:05:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4106,7 +4390,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4127,7 +4411,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4150,7 +4434,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4170,7 +4454,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4194,7 +4478,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4220,7 +4504,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4242,7 +4526,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4261,7 +4545,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4281,7 +4565,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4304,7 +4588,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4327,7 +4611,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4346,7 +4630,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4371,7 +4655,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4392,7 +4676,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4416,7 +4700,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4437,7 +4721,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4457,7 +4741,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4479,7 +4763,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4499,7 +4783,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4519,7 +4803,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4538,7 +4822,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4556,7 +4840,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4574,7 +4858,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4592,7 +4876,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4610,7 +4894,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4630,7 +4914,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4649,7 +4933,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4672,7 +4956,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4693,7 +4977,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:48",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4711,7 +4995,7 @@
       "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n&lt;/p&gt;\n\n&lt;h1&gt;Unity Developer&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Job Title:&lt;/strong&gt; Unity Developer&lt;br&gt;&lt;strong&gt;Location:&lt;/strong&gt; United States (Remot",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4729,7 +5013,7 @@
       "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n&lt;/p&gt;\n\n&lt;ol&gt;&lt;li&gt;&lt;p&gt;Game UI Engineer&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;strong&gt;Job Title:&lt;/strong&gt; Game UI Engineer&lt;br&gt;&lt;strong&gt;Loc",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4748,7 +5032,7 @@
       "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6743/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; India\n    &lt;br /&gt;&lt;strong&gt;U",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4766,7 +5050,7 @@
       "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n&lt;/p&gt;\n\n&lt;h1&gt;Blockchain Developer&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Job Title:&lt;/strong&gt; Blockchain Developer&lt;br&gt;&lt;strong&gt;Location:&lt;/strong&gt; United Sta",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4786,7 +5070,7 @@
       "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n&lt;/p&gt;\n\n&lt;ol&gt;&lt;li&gt;&lt;p&gt;GIS Software Engineer&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;strong&gt;Job Title:&lt;/strong&gt; GIS Software Engineer&lt;br&gt;&lt;str",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4804,7 +5088,7 @@
       "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6715/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Seattle\n    &lt;br /&gt;&lt;strong&gt",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4822,7 +5106,7 @@
       "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6701/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; US, Remote\n    &lt;br /&gt;&lt;strong",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4840,7 +5124,7 @@
       "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=fc2a6c7e-ef54-4ed9-8c04-d5aca23f99e3\"&",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4859,7 +5143,7 @@
       "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0017/0601/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Europe (DK)\n    &lt;br /&gt;&lt;stron",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4877,7 +5161,7 @@
       "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6677/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Atlanta, Georgia\n    &lt;br /&gt;&lt;",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4895,7 +5179,7 @@
       "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; San Francisco, CA or Remote (U.S.)\n&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: This role is remote in the United States, Canada, or some countries in South America.&lt;/p&gt;\n&lt;",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4913,7 +5197,7 @@
       "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Remote - MX\n&lt;/p&gt;\n\n&lt;div class=\"content-intro\"&gt;&lt;h2&gt;&lt;span&gt;Who We Are&lt;/span&gt;&lt;/h2&gt;\n&lt;p&gt;&lt;span&gt;Oportun (Nasdaq: OPRT) is a mission-driven financial service",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4931,7 +5215,7 @@
       "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/1089/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;str",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4949,7 +5233,7 @@
       "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Remote\n&lt;/p&gt;\n\n&lt;p&gt;PlanetScale is growing rapidly and reinventing the database space. The PlanetScale platform delivers a fully managed, multi-cloud Postgres service designed for the mos",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4967,7 +5251,7 @@
       "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Remote\n&lt;/p&gt;\n\n&lt;div class=\"content-intro\"&gt;&lt;p&gt;&lt;strong&gt;About Carrot: &lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"https://c212.net/c/link/?t=0&amp;amp;l=en&amp;amp;o=4420559",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4986,7 +5270,7 @@
       "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0161/6774/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Australia\n    &lt;br /&gt;&lt;strong&",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5004,7 +5288,7 @@
       "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0071/4151/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; NYC and TLV\n    &lt;br /&gt;&lt;stron",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5022,7 +5306,7 @@
       "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0066/7400/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; NYC and TLV\n    &lt;br /&gt;&lt;stron",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5040,7 +5324,7 @@
       "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6653/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; New York, NY\n    &lt;br /&gt;&lt;stro",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5058,7 +5342,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5076,7 +5360,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5095,7 +5379,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5113,7 +5397,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5131,7 +5415,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5150,7 +5434,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5168,7 +5452,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5186,7 +5470,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5204,7 +5488,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5223,7 +5507,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5242,7 +5526,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5260,7 +5544,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5280,7 +5564,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5299,7 +5583,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5317,7 +5601,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5335,7 +5619,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5355,7 +5639,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5373,7 +5657,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5391,7 +5675,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5409,7 +5693,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5428,7 +5712,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5447,7 +5731,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5465,7 +5749,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5485,7 +5769,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5503,7 +5787,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5521,7 +5805,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5539,7 +5823,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5559,7 +5843,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5577,7 +5861,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5595,7 +5879,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5613,7 +5897,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5631,7 +5915,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5649,7 +5933,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5667,7 +5951,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:40",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5693,7 +5977,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5715,7 +5999,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5737,7 +6021,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5758,7 +6042,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5780,7 +6064,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5803,7 +6087,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5825,7 +6109,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5849,7 +6133,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5870,7 +6154,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 07:45:21",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     }
