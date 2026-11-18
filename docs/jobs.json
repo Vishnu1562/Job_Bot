@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-11-18T09:02:12.874Z",
-  "totalJobsCount": 154,
+  "generatedAt": "2026-11-18T11:28:40.116Z",
+  "totalJobsCount": 159,
   "profiles": [
     {
       "id": "power-platform",
       "name": "Power Platform Job Radar",
       "accentColor": "#742774",
-      "jobsCount": 25
+      "jobsCount": 26
     },
     {
       "id": "full-stack",
       "name": "Full Stack Developer Job Radar",
       "accentColor": "#0284c7",
-      "jobsCount": 85
+      "jobsCount": 89
     },
     {
       "id": "java-backend",
@@ -23,6 +23,32 @@
   ],
   "jobsByProfile": {
     "power-platform": [
+      {
+        "id": "jsearch-OUFiUko1YmRhMVhSQmJaZkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXamxuTkZKSlRIUTJhekY2VjBOUVowWjFWMFpuWnpkNldrRTRaSE5wYVVwWk9EaDJWamR3VUdKMVJIaENTVU4zTkhkaldHNUpMV00xWlZsRVVtZEtUbTB6VWxWR1VGTkVRak4xTlVkUFJ6aEJhbkl6UVZaRVowbENkalZNZUVkVldFZ3RkSGN4WW5BelpGVmxaMmhMUnpKVlFXdGtTMkpyYUhsbFkwOXJja3RNVTFkelNFRVNGekJKZGpsaGNVUktRblJsZW5KMVJWQjVaamRwYVVFd0dpSkJTRTR3UlRkSGVISnVWMGg2YlRFd09UUkVORk00UTJWcGRFbDRNM2xwVUhSMzpjNjE5YWEwMA",
+        "profileId": "power-platform",
+        "title": "Application Developer – Dynamics 365 & Power Platform (India)",
+        "company": "Jobgether",
+        "location": "India",
+        "url": "https://in.jobrapido.com/jobpreview/68965665335148544",
+        "tags": [
+          "[Canvas Apps]",
+          "[Power Automate]",
+          "[Dataverse]",
+          "[M365 / PL-400]",
+          "[Copilot Studio]",
+          "[Model-Driven]",
+          "[Power Pages]",
+          "[PCF]",
+          "[Dynamics 365]"
+        ],
+        "source": "jobrapido.com",
+        "description": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for an Application Developer – Dynamics 365 & Power Platform based in India.\n\nWe are looking for an experienced Application De",
+        "scrapedAt": "2026-11-18 11:28:20",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
       {
         "id": "jsearch-TUZ6YVVnZk9rdjRmZ1JrMEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVlpqYURsaGMxWm9OR0ZCY25NNGIyeDZTa3hmZFRrMVJXdHZUR1V6YjA5UmNWZHJUemN5WjJKRVEyVTBlVUZXU1ZOcE5VNXJja1ZPZG5sTE5EUXdWVTVMUkdaQ2VFcFRTMHhGT0ZCMldVRlZXVEEwVUZVMFlVdHBRekZoWTBocFRXOURVV2R4V0RoclVrOUNPVlV0Y1RCaExVOVBUa2w1UzFsNGJtVlZha2gwZW1sSVVWY1NGMmR0YmpsaGNGOU5SRjlpUVhKbVkxQjFZV0pPYTBGVkdpSkJTRTR3UlRkR05FRkZYelkyVHkxUGNtVmpPVTh5UW5WMllXRTVPSFkzZUUxUjpkNzY4ZTA3OA",
         "profileId": "power-platform",
@@ -139,7 +165,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 10:09:33",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -568,6 +594,80 @@
     ],
     "full-stack": [
       {
+        "id": "jsearch-NWZXZ19VYUF2cDJwUEhvakFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVXhLZVRSM2FITTRXVUpZVDJ4WWJUbDNWV2RaVFdSSmVtUTVNQzFyZVVadVZFdGFNM2Q1VlZsSE5XYzNNM05TY1ZKcGJIZDBaVVZmZDNrM2NYQklSRFZsWVROUVkyRjJSMGM0WDFFMFRXaE1aMVUxVkdKTFVrdHBjRGxrVmtRd1ZtZG5SMUpyWldkUWVrZEhXRlZmTlVkd05WOVdRV2hZZVhKTFZqRlZWM05KTkVabVVIWVNGekZKZGpsaGNETmFUV0pJUlhKMVJWQTVUWG94Y1VGTkdpSkJTRTR3UlRkSE4zTkxOa3gwUjNkWFRuVkNkMmhHTUhOc0xXcEdZVk5TY25OUjoyYWIzODhhOQ",
+        "profileId": "full-stack",
+        "title": "Software Engineer (Full Stack and Cloud), Noida",
+        "company": "Gentrac Labs",
+        "location": "Noida, Uttar Pradesh, India",
+        "url": "https://in.linkedin.com/jobs/view/software-engineer-full-stack-and-cloud-noida-at-gentrac-labs-4491805702",
+        "tags": [
+          "[PostgreSQL]"
+        ],
+        "source": "linkedin",
+        "description": "At Gentrac Labs, we’re building HbPRISM Ocular. It’s a smartphone Clinical AI tool that estimates hemoglobin and bilirubin from a photograph of the eye. Our clinical study starts in March 2027, and we need an engineer to make the software study-ready",
+        "scrapedAt": "2026-11-18 11:28:35",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-c2IzU19XNDVrX3JuaU9ZeUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVVJyUVZNNUxVbHBObWd4TFdKM016SlpSemhqY1V0Uk1WaElabTVTVURNeFgxTkdjMU5hVmxSalpGZHNUbkkyU1VGNlEyWjRaRTV0UlZVNVRrZEJZbWc1YWxkZk1tbFdNMUZqYVdWVVFWcDBXSE5uWTFCUFVWcHdkMUpYUWpKMkxWOVVkRTlaZEUxbVQyZG9aazFyWTFKeFFrSkxTRUpMWDNjeVZIZHlkbUUxVG0xVWVrb1NGekZKZGpsaGNETmFUV0pJUlhKMVJWQTVUWG94Y1VGTkdpSkJTRTR3UlRkSVIyZG1TV1p1ZEhoS1oyVlpXVEozYlRCcE5XNWpORlJFYkRabjo5OTNkYzJiYg",
+        "profileId": "full-stack",
+        "title": "Fullstack Web Developer",
+        "company": "Tekskills Inc.",
+        "location": "Mumbai, Maharashtra, India",
+        "url": "https://www.shine.com/jobs/fullstack-web-developer/tekskills-inc/20089834?jobtype=cr&position_in_results=12",
+        "tags": [
+          "[Angular]"
+        ],
+        "source": "shine",
+        "description": "Fullstack Web Developer\n\nCompany: Tekskills Inc.\nJob Location: Mumbai, Maharashtra, India\nEmployment Type: Full-time\n\nJob highlights\n\nExperience with React JS, Angular, JavaScript, HTML5, CSS3, Node.js, RDBMS, and AWS services\nDevelop and maintain UI",
+        "scrapedAt": "2026-11-18 11:28:35",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-TnRXNi0wbVhwNWhRLXhtS0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVk10UVV4UFZFd3dlVzFsYzJSQmRuTmlSVk14UkVWSmRYTjZORVU0TXpCeFF6ZzVNbEZmVkdNeFgySjVkVFZoWlVvek5GSkpWazVuVTBsek9DMXBaelpsZGtkUk9XZDBjRWMxT0V0QlJHc3lVREZWV2xkeFpEVmtZVEZQWTBkTmIxSlNhVzFSY3pVNU1HVnVMVzF3VWs1bVozcGZhVmMwV2s1RlMybDZVVk5GVkhsbVRUQVNGekZKZGpsaGNETmFUV0pJUlhKMVJWQTVUWG94Y1VGTkdpSkJTRTR3UlRkSFRqYzNhbDk1VkRKV1F5MXRZV0ZEUnpSNFNuazNiWFp0YW14UjoyNTc1NzcxZA",
+        "profileId": "full-stack",
+        "title": "Java Fullstack Developer",
+        "company": "CITI",
+        "location": "Chennai, Tamil Nadu, India",
+        "url": "https://jobs.citi.com/job/chennai/java-fullstack-developer/287/102455421408",
+        "tags": [
+          "[Angular]",
+          "[PostgreSQL]",
+          "[GitHub]"
+        ],
+        "source": "citi careers",
+        "description": "We are seeking a talented and motivated Full Stack Developer with 2 to 4 years of experience in building scalable, robust web applications using Java (Spring Boot) and Angular. In this role, you will be responsible for designing, developing, and main",
+        "scrapedAt": "2026-11-18 11:28:35",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-bjBQT1RGU1AxSmVoSnhaSUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZV3hQTldOS2EwYzBjVlJOTXpSd1ZrOVhSVzV3UlZvd2IzVmhVamRXVTBoUFFXZGtRVlJQUzIxQk0yWTFTVUprYkVWNFJtTkxhMGhYY0ZNeE1XeFdiSGxMWlZkVFRFazVTVVpzVjFaa2EydFFNVWRaY21rNU9GTTNaRWQ1TjNRNFZUbDZSa2xuTUY5c1JEZHhUbkZmWm5nNVZ6bEhkRkI1ZG5KNUxYSjNVRXRxVTNOWk56Z1NGekZKZGpsaGNETmFUV0pJUlhKMVJWQTVUWG94Y1VGTkdpSkJTRTR3UlRkR1IwcGtRM2t5ZFhCWlNHbHVYMWxZYldNMVExUlZURWxTWjJKMzoxYzcyYzA4MA",
+        "profileId": "full-stack",
+        "title": "Full Stack Developer Software Engineer",
+        "company": "Procter & Gamble",
+        "location": "Nanakramguda, Telangana, India",
+        "url": "https://www.pgcareers.com/de/en/job/R000162157/Full-Stack-Developer-Software-Engineer",
+        "tags": [
+          "[Angular]"
+        ],
+        "source": "p&g careers",
+        "description": "Job Location\nHYDERABAD OFFICE APAC PSC GDOP\n\nJob Description\n\nP&G was founded over 180 years ago as a simple soap and candle company. Today, we're the world’s largest consumer goods company and home to iconic, trusted brands that make life a little b",
+        "scrapedAt": "2026-11-18 11:28:35",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
         "id": "jobicy-153449",
         "profileId": "full-stack",
         "title": "Software Engineer - Auth",
@@ -973,7 +1073,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 10:09:46",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2433,7 +2533,7 @@
         "description": "",
         "scrapedAt": "2026-11-17 10:09:55",
         "dateGroup": "2026-11-17",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3094,6 +3194,106 @@
     ]
   },
   "allJobs": [
+    {
+      "id": "jsearch-NWZXZ19VYUF2cDJwUEhvakFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVXhLZVRSM2FITTRXVUpZVDJ4WWJUbDNWV2RaVFdSSmVtUTVNQzFyZVVadVZFdGFNM2Q1VlZsSE5XYzNNM05TY1ZKcGJIZDBaVVZmZDNrM2NYQklSRFZsWVROUVkyRjJSMGM0WDFFMFRXaE1aMVUxVkdKTFVrdHBjRGxrVmtRd1ZtZG5SMUpyWldkUWVrZEhXRlZmTlVkd05WOVdRV2hZZVhKTFZqRlZWM05KTkVabVVIWVNGekZKZGpsaGNETmFUV0pJUlhKMVJWQTVUWG94Y1VGTkdpSkJTRTR3UlRkSE4zTkxOa3gwUjNkWFRuVkNkMmhHTUhOc0xXcEdZVk5TY25OUjoyYWIzODhhOQ",
+      "profileId": "full-stack",
+      "title": "Software Engineer (Full Stack and Cloud), Noida",
+      "company": "Gentrac Labs",
+      "location": "Noida, Uttar Pradesh, India",
+      "url": "https://in.linkedin.com/jobs/view/software-engineer-full-stack-and-cloud-noida-at-gentrac-labs-4491805702",
+      "tags": [
+        "[PostgreSQL]"
+      ],
+      "source": "linkedin",
+      "description": "At Gentrac Labs, we’re building HbPRISM Ocular. It’s a smartphone Clinical AI tool that estimates hemoglobin and bilirubin from a photograph of the eye. Our clinical study starts in March 2027, and we need an engineer to make the software study-ready",
+      "scrapedAt": "2026-11-18 11:28:35",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-c2IzU19XNDVrX3JuaU9ZeUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVVJyUVZNNUxVbHBObWd4TFdKM016SlpSemhqY1V0Uk1WaElabTVTVURNeFgxTkdjMU5hVmxSalpGZHNUbkkyU1VGNlEyWjRaRTV0UlZVNVRrZEJZbWc1YWxkZk1tbFdNMUZqYVdWVVFWcDBXSE5uWTFCUFVWcHdkMUpYUWpKMkxWOVVkRTlaZEUxbVQyZG9aazFyWTFKeFFrSkxTRUpMWDNjeVZIZHlkbUUxVG0xVWVrb1NGekZKZGpsaGNETmFUV0pJUlhKMVJWQTVUWG94Y1VGTkdpSkJTRTR3UlRkSVIyZG1TV1p1ZEhoS1oyVlpXVEozYlRCcE5XNWpORlJFYkRabjo5OTNkYzJiYg",
+      "profileId": "full-stack",
+      "title": "Fullstack Web Developer",
+      "company": "Tekskills Inc.",
+      "location": "Mumbai, Maharashtra, India",
+      "url": "https://www.shine.com/jobs/fullstack-web-developer/tekskills-inc/20089834?jobtype=cr&position_in_results=12",
+      "tags": [
+        "[Angular]"
+      ],
+      "source": "shine",
+      "description": "Fullstack Web Developer\n\nCompany: Tekskills Inc.\nJob Location: Mumbai, Maharashtra, India\nEmployment Type: Full-time\n\nJob highlights\n\nExperience with React JS, Angular, JavaScript, HTML5, CSS3, Node.js, RDBMS, and AWS services\nDevelop and maintain UI",
+      "scrapedAt": "2026-11-18 11:28:35",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-TnRXNi0wbVhwNWhRLXhtS0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVk10UVV4UFZFd3dlVzFsYzJSQmRuTmlSVk14UkVWSmRYTjZORVU0TXpCeFF6ZzVNbEZmVkdNeFgySjVkVFZoWlVvek5GSkpWazVuVTBsek9DMXBaelpsZGtkUk9XZDBjRWMxT0V0QlJHc3lVREZWV2xkeFpEVmtZVEZQWTBkTmIxSlNhVzFSY3pVNU1HVnVMVzF3VWs1bVozcGZhVmMwV2s1RlMybDZVVk5GVkhsbVRUQVNGekZKZGpsaGNETmFUV0pJUlhKMVJWQTVUWG94Y1VGTkdpSkJTRTR3UlRkSFRqYzNhbDk1VkRKV1F5MXRZV0ZEUnpSNFNuazNiWFp0YW14UjoyNTc1NzcxZA",
+      "profileId": "full-stack",
+      "title": "Java Fullstack Developer",
+      "company": "CITI",
+      "location": "Chennai, Tamil Nadu, India",
+      "url": "https://jobs.citi.com/job/chennai/java-fullstack-developer/287/102455421408",
+      "tags": [
+        "[Angular]",
+        "[PostgreSQL]",
+        "[GitHub]"
+      ],
+      "source": "citi careers",
+      "description": "We are seeking a talented and motivated Full Stack Developer with 2 to 4 years of experience in building scalable, robust web applications using Java (Spring Boot) and Angular. In this role, you will be responsible for designing, developing, and main",
+      "scrapedAt": "2026-11-18 11:28:35",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-bjBQT1RGU1AxSmVoSnhaSUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZV3hQTldOS2EwYzBjVlJOTXpSd1ZrOVhSVzV3UlZvd2IzVmhVamRXVTBoUFFXZGtRVlJQUzIxQk0yWTFTVUprYkVWNFJtTkxhMGhYY0ZNeE1XeFdiSGxMWlZkVFRFazVTVVpzVjFaa2EydFFNVWRaY21rNU9GTTNaRWQ1TjNRNFZUbDZSa2xuTUY5c1JEZHhUbkZmWm5nNVZ6bEhkRkI1ZG5KNUxYSjNVRXRxVTNOWk56Z1NGekZKZGpsaGNETmFUV0pJUlhKMVJWQTVUWG94Y1VGTkdpSkJTRTR3UlRkR1IwcGtRM2t5ZFhCWlNHbHVYMWxZYldNMVExUlZURWxTWjJKMzoxYzcyYzA4MA",
+      "profileId": "full-stack",
+      "title": "Full Stack Developer Software Engineer",
+      "company": "Procter & Gamble",
+      "location": "Nanakramguda, Telangana, India",
+      "url": "https://www.pgcareers.com/de/en/job/R000162157/Full-Stack-Developer-Software-Engineer",
+      "tags": [
+        "[Angular]"
+      ],
+      "source": "p&g careers",
+      "description": "Job Location\nHYDERABAD OFFICE APAC PSC GDOP\n\nJob Description\n\nP&G was founded over 180 years ago as a simple soap and candle company. Today, we're the world’s largest consumer goods company and home to iconic, trusted brands that make life a little b",
+      "scrapedAt": "2026-11-18 11:28:35",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-OUFiUko1YmRhMVhSQmJaZkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXamxuTkZKSlRIUTJhekY2VjBOUVowWjFWMFpuWnpkNldrRTRaSE5wYVVwWk9EaDJWamR3VUdKMVJIaENTVU4zTkhkaldHNUpMV00xWlZsRVVtZEtUbTB6VWxWR1VGTkVRak4xTlVkUFJ6aEJhbkl6UVZaRVowbENkalZNZUVkVldFZ3RkSGN4WW5BelpGVmxaMmhMUnpKVlFXdGtTMkpyYUhsbFkwOXJja3RNVTFkelNFRVNGekJKZGpsaGNVUktRblJsZW5KMVJWQjVaamRwYVVFd0dpSkJTRTR3UlRkSGVISnVWMGg2YlRFd09UUkVORk00UTJWcGRFbDRNM2xwVUhSMzpjNjE5YWEwMA",
+      "profileId": "power-platform",
+      "title": "Application Developer – Dynamics 365 & Power Platform (India)",
+      "company": "Jobgether",
+      "location": "India",
+      "url": "https://in.jobrapido.com/jobpreview/68965665335148544",
+      "tags": [
+        "[Canvas Apps]",
+        "[Power Automate]",
+        "[Dataverse]",
+        "[M365 / PL-400]",
+        "[Copilot Studio]",
+        "[Model-Driven]",
+        "[Power Pages]",
+        "[PCF]",
+        "[Dynamics 365]"
+      ],
+      "source": "jobrapido.com",
+      "description": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for an Application Developer – Dynamics 365 & Power Platform based in India.\n\nWe are looking for an experienced Application De",
+      "scrapedAt": "2026-11-18 11:28:20",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
     {
       "id": "jsearch-YzRNREF3WlFMOHpOcDVCcEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbUZTUjJNMVpFeHhVR2xIUkY5SE9GODBTa2RGZVhWM1gzRnZSbmM1T0VkNlJGb3lNMGxFTkdKSGNVYzNUa1JEY21oQ1RuaFZVVjkyVG1sMmVFMVliVlJOUzJ4WVYyMXJiVWM1ZUd0MFluaHdkMVJtYjB0U1pVeElVek5KUjNwS1dtbHhTa05aVGxKSWJFZG9jamgwY3pjelFuQlFVekZtYm1sbGRrcHRabEk1Y3pGQk0wRVNGMnR0YmpsaGNrZDBSRTE1ZURWT2IxQnVXVTl3ZDFFNEdpSkJTRTR3UlRkSVQxUXhXWGwzV0dkYU5qZFJWV3RqVFdoTFNYQkdWMVZaTVdoMzpiZTU5ZGFkMA",
       "profileId": "java-backend",
@@ -3876,7 +4076,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 10:09:55",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -3894,7 +4094,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 10:09:46",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -3914,7 +4114,7 @@
       "description": "",
       "scrapedAt": "2026-11-17 10:09:33",
       "dateGroup": "2026-11-17",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
