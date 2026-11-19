@@ -1,28 +1,97 @@
 {
-  "generatedAt": "2026-11-19T03:23:00.475Z",
-  "totalJobsCount": 183,
+  "generatedAt": "2026-11-19T09:25:10.786Z",
+  "totalJobsCount": 191,
   "profiles": [
     {
       "id": "power-platform",
       "name": "Power Platform Job Radar",
       "accentColor": "#742774",
-      "jobsCount": 30
+      "jobsCount": 33
     },
     {
       "id": "full-stack",
       "name": "Full Stack Developer Job Radar",
       "accentColor": "#0284c7",
-      "jobsCount": 99
+      "jobsCount": 100
     },
     {
       "id": "java-backend",
       "name": "Java & Spring Boot Developer Job Radar",
       "accentColor": "#ea580c",
-      "jobsCount": 54
+      "jobsCount": 58
     }
   ],
   "jobsByProfile": {
     "power-platform": [
+      {
+        "id": "jsearch-OUFiUko1YmRhMVhSQmJaZkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVVp4V0VwbGNFRnpVVWN4VVhCT1owOTVZVEpqVEdkb1pGVkRkV2hoY1dOcFYwMWxWV2RET1MxWVdIVkZlbEJ0Y0hWWmFESk9XRVJIT1d0emIwaDJka0pzTFZnMWRHaGZTMk41ZFZodk5FVTBSR3B0VDBKRlpsZzBlSEJZWTBkb2IyZHBXVWRhV1haUFgyUjViVFZ2TmtWa04wSlpWblZZUTJaUk0xVm5SazkzZFdwWVkzRVNGMWxOUkMxaGNtWk1SVXRmWlRKeWIxQnpjMmx0TmtGUkdpSkJTRTR3UlRkRk5sTkRVRXRvTnpsQmNEQmFPR05yUzJwT1FtVTJSVkZST1hKbjpjNGQ1YzJjMg",
+        "profileId": "power-platform",
+        "title": "Application Developer – Dynamics 365 & Power Platform",
+        "company": "Jobgether",
+        "location": "India (Remote)",
+        "url": "https://www.jobleads.com/in/job/application-developer-dynamics-365-power-platform--india--ecc2cf1ce29de162d7fba4dd186ab70b1",
+        "tags": [
+          "[Canvas Apps]",
+          "[Power Automate]",
+          "[Dataverse]",
+          "[M365 / PL-400]",
+          "[Copilot Studio]",
+          "[Model-Driven]",
+          "[Power Pages]",
+          "[PCF]",
+          "[Dynamics 365]"
+        ],
+        "source": "jobleads",
+        "description": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for an Application Developer – Dynamics 365 & Power Platform based in India.\n\nWe are looking for an experienced Application De",
+        "scrapedAt": "2026-11-19 09:24:56",
+        "dateGroup": "2026-11-19",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-VTY1dVp3WHpPRTVfQXVyOUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVVZCVkhScGEzZENURkpFWDBaVVkyYzRXRFJUVFZobVVFbE5NVXQ0TTFGeFJFcENNbmxYYzA1eFVsOURaamRCV0dsbllUTTFkVUY0TVZsWFNEWlhRV05EY1RNeVFXdFVORjh0WjFRMFZGRnJiRzV6VHprMmIwSmZhekZyTWpsVVRsUlZhRTVYY3pKb1owZHpUbWt5VkZGUWRuYzNVbVZyTjJObVREUnNlRk4zYW1ObFVqVVNGMWxOUkMxaGNtWk1SVXRmWlRKeWIxQnpjMmx0TmtGUkdpSkJTRTR3UlRkSVltSTVkalJ3YjFCQ1gzTlliV3hwUWpKMkxUZE5lRjlCYkZwUjpiZmQ0N2JkYQ",
+        "profileId": "power-platform",
+        "title": "Power Apps Module Lead",
+        "company": "Sopra Steria India",
+        "location": "Noida, Uttar Pradesh, India",
+        "url": "https://careers.soprasteria.in/job/power-apps-module-lead-in-noida-uttar-pradesh-india-jid-9474",
+        "tags": [
+          "[Canvas Apps]",
+          "[Power Automate]",
+          "[Dataverse]",
+          "[SharePoint Online]",
+          "[M365 / PL-400]",
+          "[Copilot Studio]",
+          "[Model-Driven]",
+          "[PCF]"
+        ],
+        "source": "sopra steria india",
+        "description": "Company Description\n\nAbout Sopra Steria\n\nSopra Steria, a major Tech player in Europe with 51,000 employees in nearly 30 countries, is recognised for its consulting, digital services and solutions. It helps its clients drive their digital transformati",
+        "scrapedAt": "2026-11-19 09:24:56",
+        "dateGroup": "2026-11-19",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-ZzdYNGtoakNEa1hKOXhobkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVzVLZFhwR05HSkZhSEpqUWtKUVEzRXhhRmQ0UWxCaE1GSldabXBmVGsxNGNFNUJPRGxPWDI1ME5FWlpiVzB5ZVdsMlh6VlRWV1JJYlVkQ2JVVm9VbkJ6WDJScmNWcDRRM2RxUkZkb1Z6WllZbUpJTmtOd00zQnFWa05CVkdkcmVtazBSVGxHZDFnd2JVUllWa2x0V1hkS2FrTklRMEV4Y1dwRFUyOVBhRzR3TkZkUVdYb1NGMWxOUkMxaGNtWk1SVXRmWlRKeWIxQnpjMmx0TmtGUkdpSkJTRTR3UlRkRlRqRkVhR0o1U0U5Wk5sWnJNRzB3V2t4bVpHOHdWbkl3YTNoMzo3ODg0NDExMw",
+        "profileId": "power-platform",
+        "title": "Power Apps Platform – Senior Developer | 8+ YoE | Immediate joiners",
+        "company": "UST",
+        "location": "Bengaluru, Karnataka, India",
+        "url": "https://www.jobleads.com/in/job/power-apps-platform-senior-developer-8-yoe-immediate-joiners--bengaluru--e42482f8155fc58dd627b5cecdd36e68a",
+        "tags": [
+          "[Power Automate]"
+        ],
+        "source": "jobleads",
+        "description": "• Design, develop, enhance, and maintain applications using Microsoft Power Apps.\n• Build solutions using:\n• Design and implement automated business processes and approval workflows using Power Automate.\n• Work directly with business and functional s",
+        "scrapedAt": "2026-11-19 09:24:56",
+        "dateGroup": "2026-11-19",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
       {
         "id": "jsearch-bG1vdXBJVzk4UF94Qks3d0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZV3d0UkV4TmFFbGZOMlk0VjFVMVgwTnJVemxLTFVNeWJHVlBVRk5IWDBNeE1YUlFNRTV2TTNSS2RsOW5NRk5yYWtVM1ExQXhlVWQwTm5BM04yVnpVV0pqZURkVmNsUmhZa0oyVW1Rd1IwRTVSRkl4UlhCclZEZE9Na3hxTTBOS1pHbDJXV1UxVDJ4TFJXSlFSMDV1UWpsbk9EYzNNVE5xTjAxTVEzVjZhMDExVlV0UFRWUVNGMk15ZGkxaGRESnZTbUpUZFhCMFVWQnpOQzB0YzFGbkdpSkJTRTR3UlRkR2FHTk9ZVTVpVVdnM2FFOWFRMDFvTVhCdU1XMHhMV2RxT1VsMzoyNzVlMGVjOQ",
         "profileId": "power-platform",
@@ -36,7 +105,7 @@
           "[Model-Driven]"
         ],
         "source": "prepterview",
-        "description": "About Persistent\nWe are an AI-led, platform-driven Digital Engineering and Enterprise Modernization partner, combining deep technical expertise and industry experience to help our clients anticipate what's next. Our offerings and proven solutions cre",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:35",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -57,7 +126,7 @@
           "[Model-Driven]"
         ],
         "source": "cognizant careers",
-        "description": "Job Summary\n\nThis hybrid Sr Developer role focuses on building robust automation and low code solutions using PD and PM Ui Path and Power Apps for enterprise clients in automotive and industrial manufacturing domains. The professional will design sca",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:35",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -79,7 +148,7 @@
           "[Model-Driven]"
         ],
         "source": "linkedin",
-        "description": "Creating passion: your responsibilities\nRoles & Responsibilities :\n• Design and develop solutions using Microsoft Power Platform (Power Apps, Power Automate)\n• Collaborate with Business Analysts and stakeholders to gather and refine requirements\n• Ex",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:35",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -99,7 +168,7 @@
           "[M365 / PL-400]"
         ],
         "source": "career at crowe",
-        "description": "Your Journey at Crowe Starts Here:\n\nAt Crowe, you can build a meaningful and rewarding career. With real flexibility to balance work with life moments, you’re trusted to deliver results and make an impact. We embrace you for who you are, care for you",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:35",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -125,7 +194,7 @@
           "[Dynamics 365]"
         ],
         "source": "jobrapido.com",
-        "description": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for an Application Developer – Dynamics 365 & Power Platform based in India.\n\nWe are looking for an experienced Application De",
+        "description": "",
         "scrapedAt": "2026-11-18 11:28:20",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -143,10 +212,10 @@
           "[Power Apps Developer]"
         ],
         "source": "shine",
-        "description": "The Opportunity\nIn the first few months, you'll establish robust CI/CD pipelines and optimize deployment processes to drive efficiency.\n\nYour Day-to-Day\n- Design and implement continuous integration and continuous deployment pipelines that automate t",
+        "description": "",
         "scrapedAt": "2026-11-18 09:01:56",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -161,10 +230,10 @@
           "[Power Automate]"
         ],
         "source": "cognizant careers",
-        "description": "Job Summary\n\nPower Platform Administration\n\nResponsibilities\nUnattended Bot Management\n\n· Configure, monitor, and troubleshoot unattended Power Automate bots across RDS-enabled Microsoft servers.\n\n· Optimize bot concurrency and resource allocation fo",
+        "description": "",
         "scrapedAt": "2026-11-18 09:01:56",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -182,10 +251,10 @@
           "[Copilot Studio]"
         ],
         "source": "linkedin",
-        "description": "At Roche you can show up as yourself, embraced for the unique qualities you bring. Our culture encourages personal expression, open dialogue, and genuine connections, where you are valued, accepted and respected for who you are, allowing you to thriv",
+        "description": "",
         "scrapedAt": "2026-11-18 09:01:55",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -208,7 +277,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:36",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -228,7 +297,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:36",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -677,6 +746,24 @@
     ],
     "full-stack": [
       {
+        "id": "jsearch-RDhZczRvN25TbzFvOFJkQkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXakZvTkVwa2NYRnhRMUJxV0dnd2FGVTVYMUU1TkZSaVZUYzJRazlpZUhNNWEyWmhWRkZVVW5WdmVHMWZZVEI2U25kNFVFRTBWWFJSTkRGU2JtUkVjbTFUVUZOR05XRlFkSGszU0U1dlRWcE9URGt0YzFSVlVrUkZUMDlyU2w5VGNsTjNWMGd4ZHpRNWNHaHFXWGhXTlZwRlFVRTJVWGxMYkc5eVVqRjNNMWxOWjNONFNGb1NGMkpqUkMxaGRTMWtTRGwxUWpKeWIxQjJaR1ZhTFZGbkdpSkJTRTR3UlRkRmRGSlBVVTVXUkRCamREVjFURTlsTlZGMVoyeG5kMjFYYkdOQjo4NmZmMDIzOQ",
+        "profileId": "full-stack",
+        "title": "Angular Developer (Male Candidate Only)",
+        "company": "Samcom Technobrains",
+        "location": "Ahmedabad, Gujarat, India",
+        "url": "https://samcomtechnobrains.com/job/angular-developer",
+        "tags": [
+          "[Angular]"
+        ],
+        "source": "samcom technobrains",
+        "description": "Description\n• Male candidates only as per project needs\n• Ahmedabad/Gujarat based candidates only\n• Only shortlisted candidates will be contacted\n• Immediate joiners preferred\n• Interview Mode will be In-person only\nResponsibilities\n• Develop, enhanc",
+        "scrapedAt": "2026-11-19 09:25:05",
+        "dateGroup": "2026-11-19",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
         "id": "job-217cf732",
         "profileId": "full-stack",
         "title": "Senior Software Engineer (Turkey)",
@@ -687,7 +774,7 @@
           "[PostgreSQL]"
         ],
         "source": "weworkremotely",
-        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6823/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Turkey\n    &lt;br /&gt;&lt;strong&gt;",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -705,7 +792,7 @@
           "[Full Stack]"
         ],
         "source": "weworkremotely",
-        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6822/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Manila, Metro Manila, Philippines\n   ",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -723,7 +810,7 @@
           "[PostgreSQL]"
         ],
         "source": "weworkremotely",
-        "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; North Macedonia\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://jobs.workable.com/company/jzo8hYoyQi6MffQtCgXykk/jobs-at-workmotion\"&gt;https://jobs.workable.com/company/jzo",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -741,7 +828,7 @@
           "[PostgreSQL]"
         ],
         "source": "hitachi careers",
-        "description": "Our Company\n\nWe’re Hitachi Vantara, the data foundation trusted by the world’s innovators. Our resilient, high-performance data infrastructure means that customers – from banks to theme parks – can focus on achieving the incredible with data.\n\nIf you",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -759,7 +846,7 @@
           "[Angular]"
         ],
         "source": "citi careers",
-        "description": "The Applications Development Programmer Analyst is an intermediate level position responsible for participation in the establishment and implementation of new or revised application systems and programs in coordination with the Technology team. The o",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -777,7 +864,7 @@
           "[Angular]"
         ],
         "source": "linkedin",
-        "description": "The Applications Development Programmer Analyst is an intermediate level position responsible for participation in the establishment and implementation of new or revised application systems and programs in coordination with the Technology team. The o",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -795,7 +882,7 @@
           "[Angular]"
         ],
         "source": "shine",
-        "description": "Sr.Angular Developer - Airline Domain (Bengaluru)\n\nCompany: Qcentrio\nJob Location: Bengaluru, Karnataka, India\nEmployment Type: Full-time\n\nJob highlights\n\nUG: Any Graduate Mandatory Skill: Airline Domain,Coding Standards,Frontend Development,Angular ",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -813,7 +900,7 @@
           "[Angular]"
         ],
         "source": "jobrapido.com",
-        "description": "Job Description\n– Lead Angular Developer About Innefu Labs Innefu Labs is a technology-driven organization focused on developing cutting-edge, AI-powered solutions for national security, intelligence, and enterprise requirements. We build advanced te",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -831,7 +918,7 @@
           "[Angular]"
         ],
         "source": "citi careers",
-        "description": "The Applications Development Programmer Analyst is an intermediate level position responsible for participation in the establishment and implementation of new or revised application systems and programs in coordination with the Technology team. The o",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -849,7 +936,7 @@
           "[Angular]"
         ],
         "source": "careers - xoriant",
-        "description": "Job Requirements\n• Very strong experience on Java, Spring Boot, Microservices\n• Very good experience on Angular, HTML 5, CSS 3, JavaScript\n• Java work will be around 70% and Angular around 30%\n• Experience on any RDBMS database",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -867,7 +954,7 @@
           "[PostgreSQL]"
         ],
         "source": "linkedin",
-        "description": "At Gentrac Labs, we’re building HbPRISM Ocular. It’s a smartphone Clinical AI tool that estimates hemoglobin and bilirubin from a photograph of the eye. Our clinical study starts in March 2027, and we need an engineer to make the software study-ready",
+        "description": "",
         "scrapedAt": "2026-11-18 11:28:35",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -885,7 +972,7 @@
           "[Angular]"
         ],
         "source": "shine",
-        "description": "Fullstack Web Developer\n\nCompany: Tekskills Inc.\nJob Location: Mumbai, Maharashtra, India\nEmployment Type: Full-time\n\nJob highlights\n\nExperience with React JS, Angular, JavaScript, HTML5, CSS3, Node.js, RDBMS, and AWS services\nDevelop and maintain UI",
+        "description": "",
         "scrapedAt": "2026-11-18 11:28:35",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -905,7 +992,7 @@
           "[GitHub]"
         ],
         "source": "citi careers",
-        "description": "We are seeking a talented and motivated Full Stack Developer with 2 to 4 years of experience in building scalable, robust web applications using Java (Spring Boot) and Angular. In this role, you will be responsible for designing, developing, and main",
+        "description": "",
         "scrapedAt": "2026-11-18 11:28:35",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -923,7 +1010,7 @@
           "[Angular]"
         ],
         "source": "p&g careers",
-        "description": "Job Location\nHYDERABAD OFFICE APAC PSC GDOP\n\nJob Description\n\nP&G was founded over 180 years ago as a simple soap and candle company. Today, we're the world’s largest consumer goods company and home to iconic, trusted brands that make life a little b",
+        "description": "",
         "scrapedAt": "2026-11-18 11:28:35",
         "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
@@ -945,7 +1032,7 @@
         "description": "<h3><strong>About Supabase</strong></h3>\r\n<p>Supabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including Database, Auth, Storage, Edge Functions, Realtime, and Vector Search. All",
         "scrapedAt": "2026-11-18 09:02:09",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -963,7 +1050,7 @@
         "description": "About the Role:\n\nWe are seeking a highly motivated and skilled Java Full Stack Developer to join our team. This role will be instrumental in designing, developing, and maintaining Trade Finance applications using the latest technologies. The ideal ca",
         "scrapedAt": "2026-11-18 09:02:09",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -982,10 +1069,10 @@
           "[GitHub]"
         ],
         "source": "deloitte south asia careers",
-        "description": "T&T- Customer- M&C - Senior Consultant | Angular Developer | Pune\n• Job requisition ID : 110373\n• Location: Pune\n• Entity: Deloitte South Asia LLP\n\nThe team:\n\nCustomer has to do much more than keep the wheels turning; it is the engine that drives fun",
+        "description": "",
         "scrapedAt": "2026-11-18 09:02:09",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -1003,7 +1090,7 @@
         "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://www.careerflow.ai\"&gt;https://www.careerflow.ai&lt;/a&gt;\n&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;About the Role:&lt",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1021,7 +1108,7 @@
         "description": "The client is a software supply chain security company, that provides the world’s best end-to-end software supply chain security solution, combining the only proactive protection against malicious open source, the only enterprise grade SBOM managemen",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1039,7 +1126,7 @@
         "description": "NeoSOFT is looking for an experienced Angular Developer with hands-on Angular 17 experience to join our team in Pune! Good understanding of NgRx, Monorepo, and Microfrontend architecture.\n\nCompany: Not publicly disclosed\nLocation: Pune\nExperience: 4-",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1057,7 +1144,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1075,7 +1162,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1093,7 +1180,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1111,7 +1198,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1130,7 +1217,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1148,7 +1235,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -1166,7 +1253,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1184,7 +1271,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1204,7 +1291,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1222,7 +1309,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1242,7 +1329,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1262,7 +1349,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -1280,7 +1367,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1300,7 +1387,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1318,7 +1405,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -1528,353 +1615,6 @@
         "dateGroup": "2026-11-17",
         "dateLabel": "Nov 17, 2026",
         "tier": "domestic",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-5d4cece8",
-        "profileId": "full-stack",
-        "title": "Unity Developer",
-        "company": "EdgeQ Technologies Private Limited",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-unity-developer",
-        "tags": [
-          "[Full Stack]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n&lt;/p&gt;\n\n&lt;h1&gt;Unity Developer&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Job Title:&lt;/strong&gt; Unity Developer&lt;br&gt;&lt;strong&gt;Location:&lt;/strong&gt; United States (Remot",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-36ad1147",
-        "profileId": "full-stack",
-        "title": "Game UI Engineer",
-        "company": "EdgeQ Technologies Private Limited",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-game-ui-engineer",
-        "tags": [
-          "[Full Stack]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n&lt;/p&gt;\n\n&lt;ol&gt;&lt;li&gt;&lt;p&gt;Game UI Engineer&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;strong&gt;Job Title:&lt;/strong&gt; Game UI Engineer&lt;br&gt;&lt;strong&gt;Loc",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-6be08479",
-        "profileId": "full-stack",
-        "title": "Data Platform Architect",
-        "company": "ProArch",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/proarch-data-platform-architect",
-        "tags": [
-          "[PostgreSQL]",
-          "[MSSQL]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6743/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; India\n    &lt;br /&gt;&lt;strong&gt;U",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-1eb05455",
-        "profileId": "full-stack",
-        "title": "Blockchain Developer",
-        "company": "EdgeQ Technologies Private Limited",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-blockchain-developer",
-        "tags": [
-          "[GitHub]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n&lt;/p&gt;\n\n&lt;h1&gt;Blockchain Developer&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Job Title:&lt;/strong&gt; Blockchain Developer&lt;br&gt;&lt;strong&gt;Location:&lt;/strong&gt; United Sta",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-c19ec01",
-        "profileId": "full-stack",
-        "title": "GIS  Software Engineer",
-        "company": "EdgeQ Technologies Private Limited",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-gis-software-engineer",
-        "tags": [
-          "[PostgreSQL]",
-          "[MSSQL]",
-          "[GitHub]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n&lt;/p&gt;\n\n&lt;ol&gt;&lt;li&gt;&lt;p&gt;GIS Software Engineer&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;strong&gt;Job Title:&lt;/strong&gt; GIS Software Engineer&lt;br&gt;&lt;str",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-68985b15",
-        "profileId": "full-stack",
-        "title": "Software Engineer Interviewer",
-        "company": "Karat",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/karat-software-engineer-interviewer",
-        "tags": [
-          "[Full Stack]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6715/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Seattle\n    &lt;br /&gt;&lt;strong&gt",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-a10b253",
-        "profileId": "full-stack",
-        "title": "Staff Technical Support Engineer (Web App)",
-        "company": "Horizon3",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/horizon3-staff-technical-support-engineer-web-app",
-        "tags": [
-          "[Full Stack]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6701/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; US, Remote\n    &lt;br /&gt;&lt;strong",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-d86d075",
-        "profileId": "full-stack",
-        "title": "Senior Software Engineer",
-        "company": "DRFIRST COM INC",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/drfirst-com-inc-senior-software-engineer",
-        "tags": [
-          "[GitHub]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=fc2a6c7e-ef54-4ed9-8c04-d5aca23f99e3\"&",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-2d5d896a",
-        "profileId": "full-stack",
-        "title": "Senior Full-Stack Web Developer (.NET/C#/MongoDB/Angular/Redux) – AI-First, with GDPR Experience",
-        "company": "Secure Privacy",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/secure-privacy-senior-full-stack-web-developer-net-c-mongodb-angular-redux-ai-first-with-gdpr-experience",
-        "tags": [
-          "[Angular]",
-          "[.NET]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0017/0601/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Europe (DK)\n    &lt;br /&gt;&lt;stron",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-101776c5",
-        "profileId": "full-stack",
-        "title": "Senior Software Engineer",
-        "company": "WelcomeHome Software",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/welcomehome-software-senior-software-engineer",
-        "tags": [
-          "[PostgreSQL]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6677/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Atlanta, Georgia\n    &lt;br /&gt;&lt;",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-3f11c0dc",
-        "profileId": "full-stack",
-        "title": "Senior Software Engineer, Data",
-        "company": "Doximity",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/doximity-senior-software-engineer-data",
-        "tags": [
-          "[GitHub]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; San Francisco, CA or Remote (U.S.)\n&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: This role is remote in the United States, Canada, or some countries in South America.&lt;/p&gt;\n&lt;",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-7648fb",
-        "profileId": "full-stack",
-        "title": "Sr DataOps Engineer (R14334)",
-        "company": "Oportun",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/oportun-sr-dataops-engineer-r14334",
-        "tags": [
-          "[GitHub]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Remote - MX\n&lt;/p&gt;\n\n&lt;div class=\"content-intro\"&gt;&lt;h2&gt;&lt;span&gt;Who We Are&lt;/span&gt;&lt;/h2&gt;\n&lt;p&gt;&lt;span&gt;Oportun (Nasdaq: OPRT) is a mission-driven financial service",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-140d6984",
-        "profileId": "full-stack",
-        "title": "Senior Software Engineer",
-        "company": "Vested, Inc.",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/vested-inc-senior-software-engineer-1",
-        "tags": [
-          "[Full Stack]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/1089/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;str",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-28998714",
-        "profileId": "full-stack",
-        "title": "Software Engineer - PlanetScale Postgres",
-        "company": "PlanetScale",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/planetscale-software-engineer-planetscale-postgres",
-        "tags": [
-          "[PostgreSQL]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Remote\n&lt;/p&gt;\n\n&lt;p&gt;PlanetScale is growing rapidly and reinventing the database space. The PlanetScale platform delivers a fully managed, multi-cloud Postgres service designed for the mos",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-12fad36b",
-        "profileId": "full-stack",
-        "title": "Lead Product Management",
-        "company": "Carrot",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/carrot-lead-product-management",
-        "tags": [
-          "[Full Stack]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Remote\n&lt;/p&gt;\n\n&lt;div class=\"content-intro\"&gt;&lt;p&gt;&lt;strong&gt;About Carrot: &lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"https://c212.net/c/link/?t=0&amp;amp;l=en&amp;amp;o=4420559",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-2eeb79e2",
-        "profileId": "full-stack",
-        "title": "FULL TIME: Software Engineer Position - React and Rest",
-        "company": "Yooli",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/yooli-full-time-software-engineer-position-react-and-rest-1",
-        "tags": [
-          "[NestJS]",
-          "[PostgreSQL]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0161/6774/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Australia\n    &lt;br /&gt;&lt;strong&",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-cc61add",
-        "profileId": "full-stack",
-        "title": "Senior Independent AI Engineer / Architect",
-        "company": "A.Team",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/a-team-senior-independent-ai-engineer-architect",
-        "tags": [
-          "[Full Stack]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0071/4151/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; NYC and TLV\n    &lt;br /&gt;&lt;stron",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-23bbafd3",
-        "profileId": "full-stack",
-        "title": "Senior Independent Software Developer ($90-$170/hr)",
-        "company": "A.Team",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/a-team-senior-independent-software-developer-90-170-hr",
-        "tags": [
-          "[Full Stack]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0066/7400/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; NYC and TLV\n    &lt;br /&gt;&lt;stron",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "job-2c005fd4",
-        "profileId": "full-stack",
-        "title": "Front-End Developer",
-        "company": "Cambridge Information Group Inc",
-        "location": "Remote Worldwide",
-        "url": "https://weworkremotely.com/remote-jobs/cambridge-information-group-inc-front-end-developer",
-        "tags": [
-          "[GitHub]"
-        ],
-        "source": "weworkremotely",
-        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6653/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; New York, NY\n    &lt;br /&gt;&lt;stro",
-        "scrapedAt": "2026-11-17 07:45:40",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 17, 2026",
-        "tier": "remote",
         "isTargetCompany": false
       },
       {
@@ -2503,9 +2243,436 @@
         "dateLabel": "Nov 17, 2026",
         "tier": "remote",
         "isTargetCompany": false
+      },
+      {
+        "id": "job-5d4cece8",
+        "profileId": "full-stack",
+        "title": "Unity Developer",
+        "company": "EdgeQ Technologies Private Limited",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-unity-developer",
+        "tags": [
+          "[Full Stack]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-36ad1147",
+        "profileId": "full-stack",
+        "title": "Game UI Engineer",
+        "company": "EdgeQ Technologies Private Limited",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-game-ui-engineer",
+        "tags": [
+          "[Full Stack]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-6be08479",
+        "profileId": "full-stack",
+        "title": "Data Platform Architect",
+        "company": "ProArch",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/proarch-data-platform-architect",
+        "tags": [
+          "[PostgreSQL]",
+          "[MSSQL]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-1eb05455",
+        "profileId": "full-stack",
+        "title": "Blockchain Developer",
+        "company": "EdgeQ Technologies Private Limited",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-blockchain-developer",
+        "tags": [
+          "[GitHub]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-c19ec01",
+        "profileId": "full-stack",
+        "title": "GIS  Software Engineer",
+        "company": "EdgeQ Technologies Private Limited",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-gis-software-engineer",
+        "tags": [
+          "[PostgreSQL]",
+          "[MSSQL]",
+          "[GitHub]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-68985b15",
+        "profileId": "full-stack",
+        "title": "Software Engineer Interviewer",
+        "company": "Karat",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/karat-software-engineer-interviewer",
+        "tags": [
+          "[Full Stack]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-a10b253",
+        "profileId": "full-stack",
+        "title": "Staff Technical Support Engineer (Web App)",
+        "company": "Horizon3",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/horizon3-staff-technical-support-engineer-web-app",
+        "tags": [
+          "[Full Stack]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-d86d075",
+        "profileId": "full-stack",
+        "title": "Senior Software Engineer",
+        "company": "DRFIRST COM INC",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/drfirst-com-inc-senior-software-engineer",
+        "tags": [
+          "[GitHub]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-2d5d896a",
+        "profileId": "full-stack",
+        "title": "Senior Full-Stack Web Developer (.NET/C#/MongoDB/Angular/Redux) – AI-First, with GDPR Experience",
+        "company": "Secure Privacy",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/secure-privacy-senior-full-stack-web-developer-net-c-mongodb-angular-redux-ai-first-with-gdpr-experience",
+        "tags": [
+          "[Angular]",
+          "[.NET]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-101776c5",
+        "profileId": "full-stack",
+        "title": "Senior Software Engineer",
+        "company": "WelcomeHome Software",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/welcomehome-software-senior-software-engineer",
+        "tags": [
+          "[PostgreSQL]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-3f11c0dc",
+        "profileId": "full-stack",
+        "title": "Senior Software Engineer, Data",
+        "company": "Doximity",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/doximity-senior-software-engineer-data",
+        "tags": [
+          "[GitHub]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-7648fb",
+        "profileId": "full-stack",
+        "title": "Sr DataOps Engineer (R14334)",
+        "company": "Oportun",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/oportun-sr-dataops-engineer-r14334",
+        "tags": [
+          "[GitHub]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-140d6984",
+        "profileId": "full-stack",
+        "title": "Senior Software Engineer",
+        "company": "Vested, Inc.",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/vested-inc-senior-software-engineer-1",
+        "tags": [
+          "[Full Stack]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-28998714",
+        "profileId": "full-stack",
+        "title": "Software Engineer - PlanetScale Postgres",
+        "company": "PlanetScale",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/planetscale-software-engineer-planetscale-postgres",
+        "tags": [
+          "[PostgreSQL]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-12fad36b",
+        "profileId": "full-stack",
+        "title": "Lead Product Management",
+        "company": "Carrot",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/carrot-lead-product-management",
+        "tags": [
+          "[Full Stack]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-2eeb79e2",
+        "profileId": "full-stack",
+        "title": "FULL TIME: Software Engineer Position - React and Rest",
+        "company": "Yooli",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/yooli-full-time-software-engineer-position-react-and-rest-1",
+        "tags": [
+          "[NestJS]",
+          "[PostgreSQL]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-cc61add",
+        "profileId": "full-stack",
+        "title": "Senior Independent AI Engineer / Architect",
+        "company": "A.Team",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/a-team-senior-independent-ai-engineer-architect",
+        "tags": [
+          "[Full Stack]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-23bbafd3",
+        "profileId": "full-stack",
+        "title": "Senior Independent Software Developer ($90-$170/hr)",
+        "company": "A.Team",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/a-team-senior-independent-software-developer-90-170-hr",
+        "tags": [
+          "[Full Stack]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-2c005fd4",
+        "profileId": "full-stack",
+        "title": "Front-End Developer",
+        "company": "Cambridge Information Group Inc",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/cambridge-information-group-inc-front-end-developer",
+        "tags": [
+          "[GitHub]"
+        ],
+        "source": "weworkremotely",
+        "description": "",
+        "scrapedAt": "2026-11-17 07:45:40",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 17, 2026",
+        "tier": "remote",
+        "isTargetCompany": false
       }
     ],
     "java-backend": [
+      {
+        "id": "job-29dc395d",
+        "profileId": "java-backend",
+        "title": "Senior Software Engineer, Query",
+        "company": "CircleCI",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/circleci-senior-software-engineer-query",
+        "tags": [
+          "[Microservices]",
+          "[React]"
+        ],
+        "source": "weworkremotely",
+        "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Canada (Remote), United States (Remote), United Kingdom (Remote) Mexico City, Mexico - Hybrid\n&lt;/p&gt;\n\n\n&lt;h3&gt;About CircleCI Engineering&lt;/h3&gt;\n&lt;p&gt;CI/CD has been solved. Now it's",
+        "scrapedAt": "2026-11-19 09:25:10",
+        "dateGroup": "2026-11-19",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-518ea17b",
+        "profileId": "java-backend",
+        "title": "Senior Software Engineer (Java, SQL, RESTful APIs) -Remote - US",
+        "company": "Tech Company",
+        "location": "Remote Worldwide",
+        "url": "https://himalayas.app/companies/ellucian-company-llc/jobs/senior-software-engineer-java-sql-restful-apis-remote-us",
+        "tags": [
+          "[Java]",
+          "[REST APIs]"
+        ],
+        "source": "himalayas",
+        "description": "About Ellucian Ellucian powers innovation for higher education, partnering with approximately 3,000 customers across 50 countries, serving more than 21 million students.",
+        "scrapedAt": "2026-11-19 09:25:10",
+        "dateGroup": "2026-11-19",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-V043QXYwUUNZazdFVUZqSUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbEpMWlhOMU0xVnljMVpNUjI0eldWVldOVTVQVEVGUU5HTXdlRlJNUzNwNU4wMW5aVVpKZDFWeVJHTk9SbEEwYzJSdlRIbEtWV1IyUTBOclpHVjZRbU5yWlRVMmRVcFhVMUkyTmtSaGFrTXhUMlZsZEhaWWJXMWlVMFZrU21OMFpGWm1TbXczUzAxdVJsOWtObU5GWW5wWk5YVkVOazQ1VkcxR2MwNVJjRWxOV1hjNU5uVVNGMk5qUkMxaGNISlRUM0pQVUhWeU9GQXlZVXhhT0VGVkdpSkJTRTR3UlRkR2NXTlVZelJNWjFsTlZYSkdlV1UxYkhJd01tRkRaRVZUUlUxUjoxMDU2MzQ1Mg",
+        "profileId": "java-backend",
+        "title": "Java developer with Production support Experience | 5+ years Mandatory | Bangalore | F2F Interview | Immediate to 15 days only",
+        "company": "Headway Tek Inc",
+        "location": "Bengaluru, Karnataka, India",
+        "url": "https://in.linkedin.com/jobs/view/java-developer-with-production-support-experience-5%2B-years-mandatory-bangalore-f2f-interview-immediate-to-15-days-only-at-headway-tek-inc-4491363751",
+        "tags": [
+          "[Java]"
+        ],
+        "source": "linkedin",
+        "description": "🚀 We're Hiring | Java developer with Production Support Experience\n\nWe are looking for skilled Java Developers with Production Support experience for one of our reputed clients.\n\n📌 Job Details:\n• Role: Java Developer with Production Support\n• Exper",
+        "scrapedAt": "2026-11-19 09:25:10",
+        "dateGroup": "2026-11-19",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-TjJTVFZQSHl5cFRNVEMwRkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVmxRTWpscmFtOXllWHBzWTFSZk1taHBjMkpmUVVGSk5rVXpiVWhCUlZWck1VWnBRVlJJVEU1ZlRFNVBWREpNU1MwdGJYTjRVSFpUYVVOdE56QmpXbVJ6YTNvelZYRTFVek14VjNGblRuTjFWVE5ZVDNka1pFRXhPVXAzUjB0Uk1YQmplVWR5Y1Zab1ZXZHZSVzlrZFZSNFIwVTJSWFJZWmxwa2FVMUplak41ZVRKU1Qwc1NGMlJOUkMxaGRreDZSblo2UWpWUFZWQnhaazlJT0ZGSkdpSkJTRTR3UlRkRlNVTXpRbFJKUXpGV04ydE9SMlJ2VmtrdFZtOXlNWHBOWDJsMzpkNzkyMjkwNg",
+        "profileId": "java-backend",
+        "title": "Software Engineer (Core Java, spring boot, restAPI, microservices development, design patterns)",
+        "company": "NielsenIQ",
+        "location": "Chennai, Tamil Nadu, India",
+        "url": "https://jobs.smartrecruiters.com/NielsenIQ/744000161831836-software-engineer-core-java-spring-boot-restapi-microservices-development-design-patterns-",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]",
+          "[Microservices]",
+          "[REST APIs]",
+          "[Docker]",
+          "[Spring Security / JWT]",
+          "[Python / Shell]"
+        ],
+        "source": "smartrecruiters job search",
+        "description": "Company Description\n\nJob Description\n\nSoftware Engineer (T5)\n\nWe are seeking a Software Engineer with solid technical depth to deliver scalable services and guide junior engineers, working with Java, Spring Boot, Python (NumPy), REST APIs, Flask APIs",
+        "scrapedAt": "2026-11-19 09:25:10",
+        "dateGroup": "2026-11-19",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
       {
         "id": "jsearch-WmxmZzY5Uy1obmVsWkgtQkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZak5PTUdSQlgxcFRObFJKTld0YWNrUjFSVWxPYm10R05ETTFYMkpwUWxwRU1FbFRSekpMZVROWVFqSlFUVVJzUjNoQllubDJaMHBCZEhCeVJFNWhiVEV3WDJSa05qRmlWa2RSZFV4c1FsUlVla2RzYzJVMmRqSndkWFpwZUY5bWVYSTVVV281U0d3NVJHUktkVkpoZGxJNWMzSkdSSFZZVjFCdFVFRmxRVXBDWlhaVkxXOFNGMm95ZGkxaGRpMTBSRTVQTW5GMGMxQndZa1J2ZDFGbkdpSkJTRTR3UlRkR2ExUTFhVFpUUTA4MFFXRk1aVXB6U2todlkya3pObmRRU2xSbjo4YWNkZDdkNQ",
         "profileId": "java-backend",
@@ -2519,7 +2686,7 @@
           "[Hibernate/JPA]"
         ],
         "source": "nexthire",
-        "description": "We are currently seeking an experienced professional to join our team in the role of Consultant Specialist.\n\nIn this role, you will:\n• Contribute across the full software development lifecycle from requirements through to release\n• Design, build and ",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:58",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -2542,7 +2709,7 @@
           "[React]"
         ],
         "source": "workday",
-        "description": "Employment Type Permanent Closing Date 27 Nov 2026 11:59pm Job Title Software Engineer II - Full Stack - Java, Springboot, React Job Summary Job Description Who We Are We're an iconic Aussie brand with a global footprint. Our purpose is to build a co",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:58",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -2565,7 +2732,7 @@
           "[Docker]"
         ],
         "source": "shine",
-        "description": "Java Spring Boot Expert Bengaluru (India)\n\nCompany: Soul AI\nJob Location: Bengaluru, Karnataka, India\nEmployment Type: Full-time\nExperience Required: 2+ years\n\nWe are hiring a Java-Spring Boot Developer to work on enterprise-grade backend services.\n\n",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:58",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -2589,7 +2756,7 @@
           "[Spring Security / JWT]"
         ],
         "source": "myinternships.in",
-        "description": "Synechron is hiring for the role of Java Developer – Spring Boot, Microservices, Kafka & REST APIs in Hyderabad, India.\n\nJob Summary\nSynechron is seeking a Java Developer with experience in Java, Java EE, Spring Boot, microservices, Kafka, and OBMA-r",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:58",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -2613,7 +2780,7 @@
           "[React]"
         ],
         "source": "weworkremotely",
-        "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; North Macedonia\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://jobs.workable.com/company/jzo8hYoyQi6MffQtCgXykk/jobs-at-workmotion\"&gt;https://jobs.workable.com/company/jzo",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -2631,7 +2798,7 @@
           "[Java]"
         ],
         "source": "himalayas",
-        "description": "📋 Tasks and responsibilities You will work as a Senior Java Developer and integration engineer on a health information project that is evolving from KMEHR to a FHIR-based environment.",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -2650,7 +2817,7 @@
           "[Python / Shell]"
         ],
         "source": "shine",
-        "description": "JAVA Developers (Freshers only) (Indore)\n\nCompany: Endeavor IT Solution\nJob Location: Indore, Madhya Pradesh, India\nEmployment Type: Full-time\n\nJob highlights\n\nExperience in doing database design for enterprise systems. Job Type: Full Time . MCA/ BE ",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -2672,7 +2839,7 @@
           "[Python / Shell]"
         ],
         "source": "linkedin",
-        "description": "Summary of This Role\n\nWorks throughout the software development life cycle and performs in a utility capacity to create, design, code, debug, maintain, test, implement and validate applications with a broad understanding of a variety of languages and",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -2694,7 +2861,7 @@
           "[Python / Shell]"
         ],
         "source": "indeed",
-        "description": "Summary of This Role\n\nWorks throughout the software development life cycle and performs in a utility capacity to create, design, code, debug, maintain, test, implement and validate applications with a broad understanding of a variety of languages and",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -2716,7 +2883,7 @@
           "[Python / Shell]"
         ],
         "source": "simplyhired",
-        "description": "Summary of This Role\n\nWorks throughout the software development life cycle and performs in a utility capacity to create, design, code, debug, maintain, test, implement and validate applications with a broad understanding of a variety of languages and",
+        "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -2742,10 +2909,10 @@
           "[Python / Shell]"
         ],
         "source": "linkedin",
-        "description": "Required Skills\n• Java: Strong hands-on experience with Core Java and object-oriented programming.\n• Spring Boot: Experience developing REST APIs and backend applications.\n• Microservices: Understanding of microservices architecture and service-to-se",
+        "description": "",
         "scrapedAt": "2026-11-18 09:02:12",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2764,7 +2931,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -2787,7 +2954,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2805,7 +2972,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2828,7 +2995,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -2855,7 +3022,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -2878,7 +3045,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2899,7 +3066,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2922,7 +3089,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2942,7 +3109,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2965,7 +3132,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -2988,7 +3155,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3675,6 +3842,173 @@
   },
   "allJobs": [
     {
+      "id": "job-29dc395d",
+      "profileId": "java-backend",
+      "title": "Senior Software Engineer, Query",
+      "company": "CircleCI",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/circleci-senior-software-engineer-query",
+      "tags": [
+        "[Microservices]",
+        "[React]"
+      ],
+      "source": "weworkremotely",
+      "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Canada (Remote), United States (Remote), United Kingdom (Remote) Mexico City, Mexico - Hybrid\n&lt;/p&gt;\n\n\n&lt;h3&gt;About CircleCI Engineering&lt;/h3&gt;\n&lt;p&gt;CI/CD has been solved. Now it's",
+      "scrapedAt": "2026-11-19 09:25:10",
+      "dateGroup": "2026-11-19",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-518ea17b",
+      "profileId": "java-backend",
+      "title": "Senior Software Engineer (Java, SQL, RESTful APIs) -Remote - US",
+      "company": "Tech Company",
+      "location": "Remote Worldwide",
+      "url": "https://himalayas.app/companies/ellucian-company-llc/jobs/senior-software-engineer-java-sql-restful-apis-remote-us",
+      "tags": [
+        "[Java]",
+        "[REST APIs]"
+      ],
+      "source": "himalayas",
+      "description": "About Ellucian Ellucian powers innovation for higher education, partnering with approximately 3,000 customers across 50 countries, serving more than 21 million students.",
+      "scrapedAt": "2026-11-19 09:25:10",
+      "dateGroup": "2026-11-19",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-V043QXYwUUNZazdFVUZqSUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbEpMWlhOMU0xVnljMVpNUjI0eldWVldOVTVQVEVGUU5HTXdlRlJNUzNwNU4wMW5aVVpKZDFWeVJHTk9SbEEwYzJSdlRIbEtWV1IyUTBOclpHVjZRbU5yWlRVMmRVcFhVMUkyTmtSaGFrTXhUMlZsZEhaWWJXMWlVMFZrU21OMFpGWm1TbXczUzAxdVJsOWtObU5GWW5wWk5YVkVOazQ1VkcxR2MwNVJjRWxOV1hjNU5uVVNGMk5qUkMxaGNISlRUM0pQVUhWeU9GQXlZVXhhT0VGVkdpSkJTRTR3UlRkR2NXTlVZelJNWjFsTlZYSkdlV1UxYkhJd01tRkRaRVZUUlUxUjoxMDU2MzQ1Mg",
+      "profileId": "java-backend",
+      "title": "Java developer with Production support Experience | 5+ years Mandatory | Bangalore | F2F Interview | Immediate to 15 days only",
+      "company": "Headway Tek Inc",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://in.linkedin.com/jobs/view/java-developer-with-production-support-experience-5%2B-years-mandatory-bangalore-f2f-interview-immediate-to-15-days-only-at-headway-tek-inc-4491363751",
+      "tags": [
+        "[Java]"
+      ],
+      "source": "linkedin",
+      "description": "🚀 We're Hiring | Java developer with Production Support Experience\n\nWe are looking for skilled Java Developers with Production Support experience for one of our reputed clients.\n\n📌 Job Details:\n• Role: Java Developer with Production Support\n• Exper",
+      "scrapedAt": "2026-11-19 09:25:10",
+      "dateGroup": "2026-11-19",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-TjJTVFZQSHl5cFRNVEMwRkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVmxRTWpscmFtOXllWHBzWTFSZk1taHBjMkpmUVVGSk5rVXpiVWhCUlZWck1VWnBRVlJJVEU1ZlRFNVBWREpNU1MwdGJYTjRVSFpUYVVOdE56QmpXbVJ6YTNvelZYRTFVek14VjNGblRuTjFWVE5ZVDNka1pFRXhPVXAzUjB0Uk1YQmplVWR5Y1Zab1ZXZHZSVzlrZFZSNFIwVTJSWFJZWmxwa2FVMUplak41ZVRKU1Qwc1NGMlJOUkMxaGRreDZSblo2UWpWUFZWQnhaazlJT0ZGSkdpSkJTRTR3UlRkRlNVTXpRbFJKUXpGV04ydE9SMlJ2VmtrdFZtOXlNWHBOWDJsMzpkNzkyMjkwNg",
+      "profileId": "java-backend",
+      "title": "Software Engineer (Core Java, spring boot, restAPI, microservices development, design patterns)",
+      "company": "NielsenIQ",
+      "location": "Chennai, Tamil Nadu, India",
+      "url": "https://jobs.smartrecruiters.com/NielsenIQ/744000161831836-software-engineer-core-java-spring-boot-restapi-microservices-development-design-patterns-",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]",
+        "[Microservices]",
+        "[REST APIs]",
+        "[Docker]",
+        "[Spring Security / JWT]",
+        "[Python / Shell]"
+      ],
+      "source": "smartrecruiters job search",
+      "description": "Company Description\n\nJob Description\n\nSoftware Engineer (T5)\n\nWe are seeking a Software Engineer with solid technical depth to deliver scalable services and guide junior engineers, working with Java, Spring Boot, Python (NumPy), REST APIs, Flask APIs",
+      "scrapedAt": "2026-11-19 09:25:10",
+      "dateGroup": "2026-11-19",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-RDhZczRvN25TbzFvOFJkQkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXakZvTkVwa2NYRnhRMUJxV0dnd2FGVTVYMUU1TkZSaVZUYzJRazlpZUhNNWEyWmhWRkZVVW5WdmVHMWZZVEI2U25kNFVFRTBWWFJSTkRGU2JtUkVjbTFUVUZOR05XRlFkSGszU0U1dlRWcE9URGt0YzFSVlVrUkZUMDlyU2w5VGNsTjNWMGd4ZHpRNWNHaHFXWGhXTlZwRlFVRTJVWGxMYkc5eVVqRjNNMWxOWjNONFNGb1NGMkpqUkMxaGRTMWtTRGwxUWpKeWIxQjJaR1ZhTFZGbkdpSkJTRTR3UlRkRmRGSlBVVTVXUkRCamREVjFURTlsTlZGMVoyeG5kMjFYYkdOQjo4NmZmMDIzOQ",
+      "profileId": "full-stack",
+      "title": "Angular Developer (Male Candidate Only)",
+      "company": "Samcom Technobrains",
+      "location": "Ahmedabad, Gujarat, India",
+      "url": "https://samcomtechnobrains.com/job/angular-developer",
+      "tags": [
+        "[Angular]"
+      ],
+      "source": "samcom technobrains",
+      "description": "Description\n• Male candidates only as per project needs\n• Ahmedabad/Gujarat based candidates only\n• Only shortlisted candidates will be contacted\n• Immediate joiners preferred\n• Interview Mode will be In-person only\nResponsibilities\n• Develop, enhanc",
+      "scrapedAt": "2026-11-19 09:25:05",
+      "dateGroup": "2026-11-19",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-OUFiUko1YmRhMVhSQmJaZkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVVp4V0VwbGNFRnpVVWN4VVhCT1owOTVZVEpqVEdkb1pGVkRkV2hoY1dOcFYwMWxWV2RET1MxWVdIVkZlbEJ0Y0hWWmFESk9XRVJIT1d0emIwaDJka0pzTFZnMWRHaGZTMk41ZFZodk5FVTBSR3B0VDBKRlpsZzBlSEJZWTBkb2IyZHBXVWRhV1haUFgyUjViVFZ2TmtWa04wSlpWblZZUTJaUk0xVm5SazkzZFdwWVkzRVNGMWxOUkMxaGNtWk1SVXRmWlRKeWIxQnpjMmx0TmtGUkdpSkJTRTR3UlRkRk5sTkRVRXRvTnpsQmNEQmFPR05yUzJwT1FtVTJSVkZST1hKbjpjNGQ1YzJjMg",
+      "profileId": "power-platform",
+      "title": "Application Developer – Dynamics 365 & Power Platform",
+      "company": "Jobgether",
+      "location": "India (Remote)",
+      "url": "https://www.jobleads.com/in/job/application-developer-dynamics-365-power-platform--india--ecc2cf1ce29de162d7fba4dd186ab70b1",
+      "tags": [
+        "[Canvas Apps]",
+        "[Power Automate]",
+        "[Dataverse]",
+        "[M365 / PL-400]",
+        "[Copilot Studio]",
+        "[Model-Driven]",
+        "[Power Pages]",
+        "[PCF]",
+        "[Dynamics 365]"
+      ],
+      "source": "jobleads",
+      "description": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for an Application Developer – Dynamics 365 & Power Platform based in India.\n\nWe are looking for an experienced Application De",
+      "scrapedAt": "2026-11-19 09:24:56",
+      "dateGroup": "2026-11-19",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-VTY1dVp3WHpPRTVfQXVyOUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVVZCVkhScGEzZENURkpFWDBaVVkyYzRXRFJUVFZobVVFbE5NVXQ0TTFGeFJFcENNbmxYYzA1eFVsOURaamRCV0dsbllUTTFkVUY0TVZsWFNEWlhRV05EY1RNeVFXdFVORjh0WjFRMFZGRnJiRzV6VHprMmIwSmZhekZyTWpsVVRsUlZhRTVYY3pKb1owZHpUbWt5VkZGUWRuYzNVbVZyTjJObVREUnNlRk4zYW1ObFVqVVNGMWxOUkMxaGNtWk1SVXRmWlRKeWIxQnpjMmx0TmtGUkdpSkJTRTR3UlRkSVltSTVkalJ3YjFCQ1gzTlliV3hwUWpKMkxUZE5lRjlCYkZwUjpiZmQ0N2JkYQ",
+      "profileId": "power-platform",
+      "title": "Power Apps Module Lead",
+      "company": "Sopra Steria India",
+      "location": "Noida, Uttar Pradesh, India",
+      "url": "https://careers.soprasteria.in/job/power-apps-module-lead-in-noida-uttar-pradesh-india-jid-9474",
+      "tags": [
+        "[Canvas Apps]",
+        "[Power Automate]",
+        "[Dataverse]",
+        "[SharePoint Online]",
+        "[M365 / PL-400]",
+        "[Copilot Studio]",
+        "[Model-Driven]",
+        "[PCF]"
+      ],
+      "source": "sopra steria india",
+      "description": "Company Description\n\nAbout Sopra Steria\n\nSopra Steria, a major Tech player in Europe with 51,000 employees in nearly 30 countries, is recognised for its consulting, digital services and solutions. It helps its clients drive their digital transformati",
+      "scrapedAt": "2026-11-19 09:24:56",
+      "dateGroup": "2026-11-19",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-ZzdYNGtoakNEa1hKOXhobkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVzVLZFhwR05HSkZhSEpqUWtKUVEzRXhhRmQ0UWxCaE1GSldabXBmVGsxNGNFNUJPRGxPWDI1ME5FWlpiVzB5ZVdsMlh6VlRWV1JJYlVkQ2JVVm9VbkJ6WDJScmNWcDRRM2RxUkZkb1Z6WllZbUpJTmtOd00zQnFWa05CVkdkcmVtazBSVGxHZDFnd2JVUllWa2x0V1hkS2FrTklRMEV4Y1dwRFUyOVBhRzR3TkZkUVdYb1NGMWxOUkMxaGNtWk1SVXRmWlRKeWIxQnpjMmx0TmtGUkdpSkJTRTR3UlRkRlRqRkVhR0o1U0U5Wk5sWnJNRzB3V2t4bVpHOHdWbkl3YTNoMzo3ODg0NDExMw",
+      "profileId": "power-platform",
+      "title": "Power Apps Platform – Senior Developer | 8+ YoE | Immediate joiners",
+      "company": "UST",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://www.jobleads.com/in/job/power-apps-platform-senior-developer-8-yoe-immediate-joiners--bengaluru--e42482f8155fc58dd627b5cecdd36e68a",
+      "tags": [
+        "[Power Automate]"
+      ],
+      "source": "jobleads",
+      "description": "• Design, develop, enhance, and maintain applications using Microsoft Power Apps.\n• Build solutions using:\n• Design and implement automated business processes and approval workflows using Power Automate.\n• Work directly with business and functional s",
+      "scrapedAt": "2026-11-19 09:24:56",
+      "dateGroup": "2026-11-19",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
       "id": "jsearch-WmxmZzY5Uy1obmVsWkgtQkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZak5PTUdSQlgxcFRObFJKTld0YWNrUjFSVWxPYm10R05ETTFYMkpwUWxwRU1FbFRSekpMZVROWVFqSlFUVVJzUjNoQllubDJaMHBCZEhCeVJFNWhiVEV3WDJSa05qRmlWa2RSZFV4c1FsUlVla2RzYzJVMmRqSndkWFpwZUY5bWVYSTVVV281U0d3NVJHUktkVkpoZGxJNWMzSkdSSFZZVjFCdFVFRmxRVXBDWlhaVkxXOFNGMm95ZGkxaGRpMTBSRTVQTW5GMGMxQndZa1J2ZDFGbkdpSkJTRTR3UlRkR2ExUTFhVFpUUTA4MFFXRk1aVXB6U2todlkya3pObmRRU2xSbjo4YWNkZDdkNQ",
       "profileId": "java-backend",
       "title": "Core Java, Spring Boot, MQ Consultant Specialist",
@@ -3687,7 +4021,7 @@
         "[Hibernate/JPA]"
       ],
       "source": "nexthire",
-      "description": "We are currently seeking an experienced professional to join our team in the role of Consultant Specialist.\n\nIn this role, you will:\n• Contribute across the full software development lifecycle from requirements through to release\n• Design, build and ",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:58",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -3710,7 +4044,7 @@
         "[React]"
       ],
       "source": "workday",
-      "description": "Employment Type Permanent Closing Date 27 Nov 2026 11:59pm Job Title Software Engineer II - Full Stack - Java, Springboot, React Job Summary Job Description Who We Are We're an iconic Aussie brand with a global footprint. Our purpose is to build a co",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:58",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -3733,7 +4067,7 @@
         "[Docker]"
       ],
       "source": "shine",
-      "description": "Java Spring Boot Expert Bengaluru (India)\n\nCompany: Soul AI\nJob Location: Bengaluru, Karnataka, India\nEmployment Type: Full-time\nExperience Required: 2+ years\n\nWe are hiring a Java-Spring Boot Developer to work on enterprise-grade backend services.\n\n",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:58",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -3757,7 +4091,7 @@
         "[Spring Security / JWT]"
       ],
       "source": "myinternships.in",
-      "description": "Synechron is hiring for the role of Java Developer – Spring Boot, Microservices, Kafka & REST APIs in Hyderabad, India.\n\nJob Summary\nSynechron is seeking a Java Developer with experience in Java, Java EE, Spring Boot, microservices, Kafka, and OBMA-r",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:58",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -3781,7 +4115,7 @@
         "[React]"
       ],
       "source": "weworkremotely",
-      "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; North Macedonia\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://jobs.workable.com/company/jzo8hYoyQi6MffQtCgXykk/jobs-at-workmotion\"&gt;https://jobs.workable.com/company/jzo",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -3799,7 +4133,7 @@
         "[Java]"
       ],
       "source": "himalayas",
-      "description": "📋 Tasks and responsibilities You will work as a Senior Java Developer and integration engineer on a health information project that is evolving from KMEHR to a FHIR-based environment.",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -3818,7 +4152,7 @@
         "[Python / Shell]"
       ],
       "source": "shine",
-      "description": "JAVA Developers (Freshers only) (Indore)\n\nCompany: Endeavor IT Solution\nJob Location: Indore, Madhya Pradesh, India\nEmployment Type: Full-time\n\nJob highlights\n\nExperience in doing database design for enterprise systems. Job Type: Full Time . MCA/ BE ",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -3840,7 +4174,7 @@
         "[Python / Shell]"
       ],
       "source": "linkedin",
-      "description": "Summary of This Role\n\nWorks throughout the software development life cycle and performs in a utility capacity to create, design, code, debug, maintain, test, implement and validate applications with a broad understanding of a variety of languages and",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -3862,7 +4196,7 @@
         "[Python / Shell]"
       ],
       "source": "indeed",
-      "description": "Summary of This Role\n\nWorks throughout the software development life cycle and performs in a utility capacity to create, design, code, debug, maintain, test, implement and validate applications with a broad understanding of a variety of languages and",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -3884,7 +4218,7 @@
         "[Python / Shell]"
       ],
       "source": "simplyhired",
-      "description": "Summary of This Role\n\nWorks throughout the software development life cycle and performs in a utility capacity to create, design, code, debug, maintain, test, implement and validate applications with a broad understanding of a variety of languages and",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -3902,7 +4236,7 @@
         "[PostgreSQL]"
       ],
       "source": "weworkremotely",
-      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6823/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Turkey\n    &lt;br /&gt;&lt;strong&gt;",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -3920,7 +4254,7 @@
         "[Full Stack]"
       ],
       "source": "weworkremotely",
-      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6822/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Manila, Metro Manila, Philippines\n   ",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -3938,7 +4272,7 @@
         "[PostgreSQL]"
       ],
       "source": "weworkremotely",
-      "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; North Macedonia\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://jobs.workable.com/company/jzo8hYoyQi6MffQtCgXykk/jobs-at-workmotion\"&gt;https://jobs.workable.com/company/jzo",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -3956,7 +4290,7 @@
         "[PostgreSQL]"
       ],
       "source": "hitachi careers",
-      "description": "Our Company\n\nWe’re Hitachi Vantara, the data foundation trusted by the world’s innovators. Our resilient, high-performance data infrastructure means that customers – from banks to theme parks – can focus on achieving the incredible with data.\n\nIf you",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -3974,7 +4308,7 @@
         "[Angular]"
       ],
       "source": "citi careers",
-      "description": "The Applications Development Programmer Analyst is an intermediate level position responsible for participation in the establishment and implementation of new or revised application systems and programs in coordination with the Technology team. The o",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -3992,7 +4326,7 @@
         "[Angular]"
       ],
       "source": "linkedin",
-      "description": "The Applications Development Programmer Analyst is an intermediate level position responsible for participation in the establishment and implementation of new or revised application systems and programs in coordination with the Technology team. The o",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -4010,7 +4344,7 @@
         "[Angular]"
       ],
       "source": "shine",
-      "description": "Sr.Angular Developer - Airline Domain (Bengaluru)\n\nCompany: Qcentrio\nJob Location: Bengaluru, Karnataka, India\nEmployment Type: Full-time\n\nJob highlights\n\nUG: Any Graduate Mandatory Skill: Airline Domain,Coding Standards,Frontend Development,Angular ",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -4028,7 +4362,7 @@
         "[Angular]"
       ],
       "source": "jobrapido.com",
-      "description": "Job Description\n– Lead Angular Developer About Innefu Labs Innefu Labs is a technology-driven organization focused on developing cutting-edge, AI-powered solutions for national security, intelligence, and enterprise requirements. We build advanced te",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -4046,7 +4380,7 @@
         "[Angular]"
       ],
       "source": "citi careers",
-      "description": "The Applications Development Programmer Analyst is an intermediate level position responsible for participation in the establishment and implementation of new or revised application systems and programs in coordination with the Technology team. The o",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -4064,7 +4398,7 @@
         "[Angular]"
       ],
       "source": "careers - xoriant",
-      "description": "Job Requirements\n• Very strong experience on Java, Spring Boot, Microservices\n• Very good experience on Angular, HTML 5, CSS 3, JavaScript\n• Java work will be around 70% and Angular around 30%\n• Experience on any RDBMS database",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -4084,7 +4418,7 @@
         "[Model-Driven]"
       ],
       "source": "prepterview",
-      "description": "About Persistent\nWe are an AI-led, platform-driven Digital Engineering and Enterprise Modernization partner, combining deep technical expertise and industry experience to help our clients anticipate what's next. Our offerings and proven solutions cre",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:35",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -4105,7 +4439,7 @@
         "[Model-Driven]"
       ],
       "source": "cognizant careers",
-      "description": "Job Summary\n\nThis hybrid Sr Developer role focuses on building robust automation and low code solutions using PD and PM Ui Path and Power Apps for enterprise clients in automotive and industrial manufacturing domains. The professional will design sca",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:35",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -4127,7 +4461,7 @@
         "[Model-Driven]"
       ],
       "source": "linkedin",
-      "description": "Creating passion: your responsibilities\nRoles & Responsibilities :\n• Design and develop solutions using Microsoft Power Platform (Power Apps, Power Automate)\n• Collaborate with Business Analysts and stakeholders to gather and refine requirements\n• Ex",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:35",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -4147,7 +4481,7 @@
         "[M365 / PL-400]"
       ],
       "source": "career at crowe",
-      "description": "Your Journey at Crowe Starts Here:\n\nAt Crowe, you can build a meaningful and rewarding career. With real flexibility to balance work with life moments, you’re trusted to deliver results and make an impact. We embrace you for who you are, care for you",
+      "description": "",
       "scrapedAt": "2026-11-19 03:22:35",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -4165,7 +4499,7 @@
         "[PostgreSQL]"
       ],
       "source": "linkedin",
-      "description": "At Gentrac Labs, we’re building HbPRISM Ocular. It’s a smartphone Clinical AI tool that estimates hemoglobin and bilirubin from a photograph of the eye. Our clinical study starts in March 2027, and we need an engineer to make the software study-ready",
+      "description": "",
       "scrapedAt": "2026-11-18 11:28:35",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -4183,7 +4517,7 @@
         "[Angular]"
       ],
       "source": "shine",
-      "description": "Fullstack Web Developer\n\nCompany: Tekskills Inc.\nJob Location: Mumbai, Maharashtra, India\nEmployment Type: Full-time\n\nJob highlights\n\nExperience with React JS, Angular, JavaScript, HTML5, CSS3, Node.js, RDBMS, and AWS services\nDevelop and maintain UI",
+      "description": "",
       "scrapedAt": "2026-11-18 11:28:35",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -4203,7 +4537,7 @@
         "[GitHub]"
       ],
       "source": "citi careers",
-      "description": "We are seeking a talented and motivated Full Stack Developer with 2 to 4 years of experience in building scalable, robust web applications using Java (Spring Boot) and Angular. In this role, you will be responsible for designing, developing, and main",
+      "description": "",
       "scrapedAt": "2026-11-18 11:28:35",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -4221,7 +4555,7 @@
         "[Angular]"
       ],
       "source": "p&g careers",
-      "description": "Job Location\nHYDERABAD OFFICE APAC PSC GDOP\n\nJob Description\n\nP&G was founded over 180 years ago as a simple soap and candle company. Today, we're the world’s largest consumer goods company and home to iconic, trusted brands that make life a little b",
+      "description": "",
       "scrapedAt": "2026-11-18 11:28:35",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -4247,7 +4581,7 @@
         "[Dynamics 365]"
       ],
       "source": "jobrapido.com",
-      "description": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for an Application Developer – Dynamics 365 & Power Platform based in India.\n\nWe are looking for an experienced Application De",
+      "description": "",
       "scrapedAt": "2026-11-18 11:28:20",
       "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
@@ -4273,10 +4607,10 @@
         "[Python / Shell]"
       ],
       "source": "linkedin",
-      "description": "Required Skills\n• Java: Strong hands-on experience with Core Java and object-oriented programming.\n• Spring Boot: Experience developing REST APIs and backend applications.\n• Microservices: Understanding of microservices architecture and service-to-se",
+      "description": "",
       "scrapedAt": "2026-11-18 09:02:12",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4295,7 +4629,7 @@
       "description": "<h3><strong>About Supabase</strong></h3>\r\n<p>Supabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including Database, Auth, Storage, Edge Functions, Realtime, and Vector Search. All",
       "scrapedAt": "2026-11-18 09:02:09",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4313,7 +4647,7 @@
       "description": "About the Role:\n\nWe are seeking a highly motivated and skilled Java Full Stack Developer to join our team. This role will be instrumental in designing, developing, and maintaining Trade Finance applications using the latest technologies. The ideal ca",
       "scrapedAt": "2026-11-18 09:02:09",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4332,10 +4666,10 @@
         "[GitHub]"
       ],
       "source": "deloitte south asia careers",
-      "description": "T&T- Customer- M&C - Senior Consultant | Angular Developer | Pune\n• Job requisition ID : 110373\n• Location: Pune\n• Entity: Deloitte South Asia LLP\n\nThe team:\n\nCustomer has to do much more than keep the wheels turning; it is the engine that drives fun",
+      "description": "",
       "scrapedAt": "2026-11-18 09:02:09",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -4350,10 +4684,10 @@
         "[Power Apps Developer]"
       ],
       "source": "shine",
-      "description": "The Opportunity\nIn the first few months, you'll establish robust CI/CD pipelines and optimize deployment processes to drive efficiency.\n\nYour Day-to-Day\n- Design and implement continuous integration and continuous deployment pipelines that automate t",
+      "description": "",
       "scrapedAt": "2026-11-18 09:01:56",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4368,10 +4702,10 @@
         "[Power Automate]"
       ],
       "source": "cognizant careers",
-      "description": "Job Summary\n\nPower Platform Administration\n\nResponsibilities\nUnattended Bot Management\n\n· Configure, monitor, and troubleshoot unattended Power Automate bots across RDS-enabled Microsoft servers.\n\n· Optimize bot concurrency and resource allocation fo",
+      "description": "",
       "scrapedAt": "2026-11-18 09:01:56",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -4389,10 +4723,10 @@
         "[Copilot Studio]"
       ],
       "source": "linkedin",
-      "description": "At Roche you can show up as yourself, embraced for the unique qualities you bring. Our culture encourages personal expression, open dialogue, and genuine connections, where you are valued, accepted and respected for who you are, allowing you to thriv",
+      "description": "",
       "scrapedAt": "2026-11-18 09:01:55",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4411,7 +4745,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4434,7 +4768,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4452,7 +4786,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4475,7 +4809,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -4502,7 +4836,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -4525,7 +4859,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4546,7 +4880,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4569,7 +4903,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4589,7 +4923,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4612,7 +4946,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4635,7 +4969,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4653,7 +4987,7 @@
       "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://www.careerflow.ai\"&gt;https://www.careerflow.ai&lt;/a&gt;\n&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;About the Role:&lt",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4671,7 +5005,7 @@
       "description": "The client is a software supply chain security company, that provides the world’s best end-to-end software supply chain security solution, combining the only proactive protection against malicious open source, the only enterprise grade SBOM managemen",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4689,7 +5023,7 @@
       "description": "NeoSOFT is looking for an experienced Angular Developer with hands-on Angular 17 experience to join our team in Pune! Good understanding of NgRx, Monorepo, and Microfrontend architecture.\n\nCompany: Not publicly disclosed\nLocation: Pune\nExperience: 4-",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4707,7 +5041,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4725,7 +5059,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4743,7 +5077,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -4761,7 +5095,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4780,7 +5114,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4798,7 +5132,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -4816,7 +5150,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4834,7 +5168,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4854,7 +5188,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4872,7 +5206,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4892,7 +5226,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4912,7 +5246,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -4930,7 +5264,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4950,7 +5284,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4968,7 +5302,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -4991,7 +5325,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:36",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5011,7 +5345,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 03:23:36",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6142,353 +6476,6 @@
       "isTargetCompany": false
     },
     {
-      "id": "job-5d4cece8",
-      "profileId": "full-stack",
-      "title": "Unity Developer",
-      "company": "EdgeQ Technologies Private Limited",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-unity-developer",
-      "tags": [
-        "[Full Stack]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n&lt;/p&gt;\n\n&lt;h1&gt;Unity Developer&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Job Title:&lt;/strong&gt; Unity Developer&lt;br&gt;&lt;strong&gt;Location:&lt;/strong&gt; United States (Remot",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-36ad1147",
-      "profileId": "full-stack",
-      "title": "Game UI Engineer",
-      "company": "EdgeQ Technologies Private Limited",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-game-ui-engineer",
-      "tags": [
-        "[Full Stack]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n&lt;/p&gt;\n\n&lt;ol&gt;&lt;li&gt;&lt;p&gt;Game UI Engineer&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;strong&gt;Job Title:&lt;/strong&gt; Game UI Engineer&lt;br&gt;&lt;strong&gt;Loc",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-6be08479",
-      "profileId": "full-stack",
-      "title": "Data Platform Architect",
-      "company": "ProArch",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/proarch-data-platform-architect",
-      "tags": [
-        "[PostgreSQL]",
-        "[MSSQL]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6743/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; India\n    &lt;br /&gt;&lt;strong&gt;U",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-1eb05455",
-      "profileId": "full-stack",
-      "title": "Blockchain Developer",
-      "company": "EdgeQ Technologies Private Limited",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-blockchain-developer",
-      "tags": [
-        "[GitHub]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n&lt;/p&gt;\n\n&lt;h1&gt;Blockchain Developer&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Job Title:&lt;/strong&gt; Blockchain Developer&lt;br&gt;&lt;strong&gt;Location:&lt;/strong&gt; United Sta",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-c19ec01",
-      "profileId": "full-stack",
-      "title": "GIS  Software Engineer",
-      "company": "EdgeQ Technologies Private Limited",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-gis-software-engineer",
-      "tags": [
-        "[PostgreSQL]",
-        "[MSSQL]",
-        "[GitHub]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n&lt;/p&gt;\n\n&lt;ol&gt;&lt;li&gt;&lt;p&gt;GIS Software Engineer&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;strong&gt;Job Title:&lt;/strong&gt; GIS Software Engineer&lt;br&gt;&lt;str",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-68985b15",
-      "profileId": "full-stack",
-      "title": "Software Engineer Interviewer",
-      "company": "Karat",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/karat-software-engineer-interviewer",
-      "tags": [
-        "[Full Stack]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6715/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Seattle\n    &lt;br /&gt;&lt;strong&gt",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-a10b253",
-      "profileId": "full-stack",
-      "title": "Staff Technical Support Engineer (Web App)",
-      "company": "Horizon3",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/horizon3-staff-technical-support-engineer-web-app",
-      "tags": [
-        "[Full Stack]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6701/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; US, Remote\n    &lt;br /&gt;&lt;strong",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-d86d075",
-      "profileId": "full-stack",
-      "title": "Senior Software Engineer",
-      "company": "DRFIRST COM INC",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/drfirst-com-inc-senior-software-engineer",
-      "tags": [
-        "[GitHub]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=fc2a6c7e-ef54-4ed9-8c04-d5aca23f99e3\"&",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-2d5d896a",
-      "profileId": "full-stack",
-      "title": "Senior Full-Stack Web Developer (.NET/C#/MongoDB/Angular/Redux) – AI-First, with GDPR Experience",
-      "company": "Secure Privacy",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/secure-privacy-senior-full-stack-web-developer-net-c-mongodb-angular-redux-ai-first-with-gdpr-experience",
-      "tags": [
-        "[Angular]",
-        "[.NET]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0017/0601/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Europe (DK)\n    &lt;br /&gt;&lt;stron",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-101776c5",
-      "profileId": "full-stack",
-      "title": "Senior Software Engineer",
-      "company": "WelcomeHome Software",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/welcomehome-software-senior-software-engineer",
-      "tags": [
-        "[PostgreSQL]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6677/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Atlanta, Georgia\n    &lt;br /&gt;&lt;",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-3f11c0dc",
-      "profileId": "full-stack",
-      "title": "Senior Software Engineer, Data",
-      "company": "Doximity",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/doximity-senior-software-engineer-data",
-      "tags": [
-        "[GitHub]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; San Francisco, CA or Remote (U.S.)\n&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: This role is remote in the United States, Canada, or some countries in South America.&lt;/p&gt;\n&lt;",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-7648fb",
-      "profileId": "full-stack",
-      "title": "Sr DataOps Engineer (R14334)",
-      "company": "Oportun",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/oportun-sr-dataops-engineer-r14334",
-      "tags": [
-        "[GitHub]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Remote - MX\n&lt;/p&gt;\n\n&lt;div class=\"content-intro\"&gt;&lt;h2&gt;&lt;span&gt;Who We Are&lt;/span&gt;&lt;/h2&gt;\n&lt;p&gt;&lt;span&gt;Oportun (Nasdaq: OPRT) is a mission-driven financial service",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-140d6984",
-      "profileId": "full-stack",
-      "title": "Senior Software Engineer",
-      "company": "Vested, Inc.",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/vested-inc-senior-software-engineer-1",
-      "tags": [
-        "[Full Stack]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/1089/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;str",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-28998714",
-      "profileId": "full-stack",
-      "title": "Software Engineer - PlanetScale Postgres",
-      "company": "PlanetScale",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/planetscale-software-engineer-planetscale-postgres",
-      "tags": [
-        "[PostgreSQL]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Remote\n&lt;/p&gt;\n\n&lt;p&gt;PlanetScale is growing rapidly and reinventing the database space. The PlanetScale platform delivers a fully managed, multi-cloud Postgres service designed for the mos",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-12fad36b",
-      "profileId": "full-stack",
-      "title": "Lead Product Management",
-      "company": "Carrot",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/carrot-lead-product-management",
-      "tags": [
-        "[Full Stack]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Remote\n&lt;/p&gt;\n\n&lt;div class=\"content-intro\"&gt;&lt;p&gt;&lt;strong&gt;About Carrot: &lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;a href=\"https://c212.net/c/link/?t=0&amp;amp;l=en&amp;amp;o=4420559",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-2eeb79e2",
-      "profileId": "full-stack",
-      "title": "FULL TIME: Software Engineer Position - React and Rest",
-      "company": "Yooli",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/yooli-full-time-software-engineer-position-react-and-rest-1",
-      "tags": [
-        "[NestJS]",
-        "[PostgreSQL]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0161/6774/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Australia\n    &lt;br /&gt;&lt;strong&",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-cc61add",
-      "profileId": "full-stack",
-      "title": "Senior Independent AI Engineer / Architect",
-      "company": "A.Team",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/a-team-senior-independent-ai-engineer-architect",
-      "tags": [
-        "[Full Stack]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0071/4151/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; NYC and TLV\n    &lt;br /&gt;&lt;stron",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-23bbafd3",
-      "profileId": "full-stack",
-      "title": "Senior Independent Software Developer ($90-$170/hr)",
-      "company": "A.Team",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/a-team-senior-independent-software-developer-90-170-hr",
-      "tags": [
-        "[Full Stack]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0066/7400/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; NYC and TLV\n    &lt;br /&gt;&lt;stron",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "job-2c005fd4",
-      "profileId": "full-stack",
-      "title": "Front-End Developer",
-      "company": "Cambridge Information Group Inc",
-      "location": "Remote Worldwide",
-      "url": "https://weworkremotely.com/remote-jobs/cambridge-information-group-inc-front-end-developer",
-      "tags": [
-        "[GitHub]"
-      ],
-      "source": "weworkremotely",
-      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6653/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; New York, NY\n    &lt;br /&gt;&lt;stro",
-      "scrapedAt": "2026-11-17 07:45:40",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 17, 2026",
-      "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
       "id": "remotive-2091165",
       "profileId": "full-stack",
       "title": "Full-Stack Developer",
@@ -7104,6 +7091,353 @@
       "company": "Life360",
       "location": "Remote Worldwide",
       "url": "https://weworkremotely.com/remote-jobs/life360-senior-software-engineer-verticals-ai-native",
+      "tags": [
+        "[GitHub]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-5d4cece8",
+      "profileId": "full-stack",
+      "title": "Unity Developer",
+      "company": "EdgeQ Technologies Private Limited",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-unity-developer",
+      "tags": [
+        "[Full Stack]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-36ad1147",
+      "profileId": "full-stack",
+      "title": "Game UI Engineer",
+      "company": "EdgeQ Technologies Private Limited",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-game-ui-engineer",
+      "tags": [
+        "[Full Stack]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-6be08479",
+      "profileId": "full-stack",
+      "title": "Data Platform Architect",
+      "company": "ProArch",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/proarch-data-platform-architect",
+      "tags": [
+        "[PostgreSQL]",
+        "[MSSQL]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-1eb05455",
+      "profileId": "full-stack",
+      "title": "Blockchain Developer",
+      "company": "EdgeQ Technologies Private Limited",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-blockchain-developer",
+      "tags": [
+        "[GitHub]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-c19ec01",
+      "profileId": "full-stack",
+      "title": "GIS  Software Engineer",
+      "company": "EdgeQ Technologies Private Limited",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-gis-software-engineer",
+      "tags": [
+        "[PostgreSQL]",
+        "[MSSQL]",
+        "[GitHub]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-68985b15",
+      "profileId": "full-stack",
+      "title": "Software Engineer Interviewer",
+      "company": "Karat",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/karat-software-engineer-interviewer",
+      "tags": [
+        "[Full Stack]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-a10b253",
+      "profileId": "full-stack",
+      "title": "Staff Technical Support Engineer (Web App)",
+      "company": "Horizon3",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/horizon3-staff-technical-support-engineer-web-app",
+      "tags": [
+        "[Full Stack]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-d86d075",
+      "profileId": "full-stack",
+      "title": "Senior Software Engineer",
+      "company": "DRFIRST COM INC",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/drfirst-com-inc-senior-software-engineer",
+      "tags": [
+        "[GitHub]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-2d5d896a",
+      "profileId": "full-stack",
+      "title": "Senior Full-Stack Web Developer (.NET/C#/MongoDB/Angular/Redux) – AI-First, with GDPR Experience",
+      "company": "Secure Privacy",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/secure-privacy-senior-full-stack-web-developer-net-c-mongodb-angular-redux-ai-first-with-gdpr-experience",
+      "tags": [
+        "[Angular]",
+        "[.NET]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-101776c5",
+      "profileId": "full-stack",
+      "title": "Senior Software Engineer",
+      "company": "WelcomeHome Software",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/welcomehome-software-senior-software-engineer",
+      "tags": [
+        "[PostgreSQL]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-3f11c0dc",
+      "profileId": "full-stack",
+      "title": "Senior Software Engineer, Data",
+      "company": "Doximity",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/doximity-senior-software-engineer-data",
+      "tags": [
+        "[GitHub]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-7648fb",
+      "profileId": "full-stack",
+      "title": "Sr DataOps Engineer (R14334)",
+      "company": "Oportun",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/oportun-sr-dataops-engineer-r14334",
+      "tags": [
+        "[GitHub]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-140d6984",
+      "profileId": "full-stack",
+      "title": "Senior Software Engineer",
+      "company": "Vested, Inc.",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/vested-inc-senior-software-engineer-1",
+      "tags": [
+        "[Full Stack]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-28998714",
+      "profileId": "full-stack",
+      "title": "Software Engineer - PlanetScale Postgres",
+      "company": "PlanetScale",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/planetscale-software-engineer-planetscale-postgres",
+      "tags": [
+        "[PostgreSQL]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-12fad36b",
+      "profileId": "full-stack",
+      "title": "Lead Product Management",
+      "company": "Carrot",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/carrot-lead-product-management",
+      "tags": [
+        "[Full Stack]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-2eeb79e2",
+      "profileId": "full-stack",
+      "title": "FULL TIME: Software Engineer Position - React and Rest",
+      "company": "Yooli",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/yooli-full-time-software-engineer-position-react-and-rest-1",
+      "tags": [
+        "[NestJS]",
+        "[PostgreSQL]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-cc61add",
+      "profileId": "full-stack",
+      "title": "Senior Independent AI Engineer / Architect",
+      "company": "A.Team",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/a-team-senior-independent-ai-engineer-architect",
+      "tags": [
+        "[Full Stack]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-23bbafd3",
+      "profileId": "full-stack",
+      "title": "Senior Independent Software Developer ($90-$170/hr)",
+      "company": "A.Team",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/a-team-senior-independent-software-developer-90-170-hr",
+      "tags": [
+        "[Full Stack]"
+      ],
+      "source": "weworkremotely",
+      "description": "",
+      "scrapedAt": "2026-11-17 07:45:40",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 17, 2026",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-2c005fd4",
+      "profileId": "full-stack",
+      "title": "Front-End Developer",
+      "company": "Cambridge Information Group Inc",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/cambridge-information-group-inc-front-end-developer",
       "tags": [
         "[GitHub]"
       ],
