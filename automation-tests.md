@@ -473,6 +473,16 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Guaranteed daily execution with zero duplicate email dispatches.
 - **Final State**: Robust self-healing pipeline with complete visibility.
 
+#### [HF-052] Punctual External Dispatch Trigger & Native Cron Decommissioning
+- **Preconditions**: External webhook trigger (e.g. cron-job.org) configured to dispatch workflow at 8:35 AM IST via GitHub REST API (`workflow_dispatch`).
+- **Action**:
+  1. Remove internal GitHub `schedule:` cron blocks (`35 1 * * *` and `5 3 * * *`) from `.github/workflows/daily_radar.yml`.
+  2. Maintain `workflow_dispatch:` as the primary execution trigger for automated external webhooks and manual runs.
+  3. Retain `inputs.force_dispatch` parameter so users can force email dispatches anytime.
+  4. Retain `dispatch_history` and `hasDispatchedToday(profileId)` guards in `JobDatabase` for idempotent runs.
+- **Expected Result**: Eliminates 7-8 hour delayed afternoon ghost runs caused by GitHub Actions shared queue delays, prevents unnecessary runner minutes consumption, and ensures punctual morning execution.
+- **Final State**: Deterministic, punctual single-trigger architecture with zero ghost runs.
+
 ---
 
 ### Negative Flows

@@ -1,12 +1,7 @@
 name: Multi-Profile Job Radar
 
 on:
-  schedule:
-    # 1. Primary Morning Dispatch: 7:05 AM IST (01:35 UTC) - Off-peak low-traffic window
-    - cron: '35 1 * * *'
-    # 2. Safety Watchdog / Self-Healing Backup: 8:35 AM IST (03:05 UTC) - Catches delayed/missed runs
-    - cron: '5 3 * * *'
-  workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
+  workflow_dispatch: # Punctual daily trigger via external webhook (cron-job.org at 8:35 AM IST) & manual UI runs
     inputs:
       force_dispatch:
         description: 'Force email dispatch even if already sent today'
