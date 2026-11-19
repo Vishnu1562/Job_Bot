@@ -1,28 +1,46 @@
 {
-  "generatedAt": "2026-11-19T11:13:10.245Z",
-  "totalJobsCount": 195,
+  "generatedAt": "2026-11-19T11:16:53.176Z",
+  "totalJobsCount": 199,
   "profiles": [
     {
       "id": "power-platform",
       "name": "Power Platform Job Radar",
       "accentColor": "#742774",
-      "jobsCount": 35
+      "jobsCount": 36
     },
     {
       "id": "full-stack",
       "name": "Full Stack Developer Job Radar",
       "accentColor": "#0284c7",
-      "jobsCount": 102
+      "jobsCount": 104
     },
     {
       "id": "java-backend",
       "name": "Java & Spring Boot Developer Job Radar",
       "accentColor": "#ea580c",
-      "jobsCount": 58
+      "jobsCount": 59
     }
   ],
   "jobsByProfile": {
     "power-platform": [
+      {
+        "id": "job-f33e083",
+        "profileId": "power-platform",
+        "title": "Lead Engineer, Software Enterprise Solutions",
+        "company": "Tech Company",
+        "location": "Remote Worldwide",
+        "url": "https://himalayas.app/companies/vuori-inc/jobs/lead-engineer-software-enterprise-solutions",
+        "tags": [
+          "[Dynamics 365]"
+        ],
+        "source": "himalayas",
+        "description": "We are seeking a seasoned and strategic Lead Engineer for Microsoft Dynamics 365 Finance & Operations.",
+        "scrapedAt": "2026-11-19 11:16:42",
+        "dateGroup": "2026-11-19",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
       {
         "id": "jsearch-T1piWXgtbXZfV2pSdFlyLUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbWxuY2pGclYwNXBZVzlNWmtJMFdGVnZha3BvWW1GS05Vb3ljR3hCTkRRMlFWY3hTWGhLTlRsVmJUSlRkR0o1TUdSaVJGSnRVRFZPY3pCV1ZuaHhPVWRLZDB4YUxVbHFTblJvVFdadGNEVTJXR0ZaUVMxeWF6TlhOR0Z6ZEVFNVYwZFRYMDl6YTJkcFYyNU5iREpUTTJvMmNsZGlNbVp1TUZJNGJVdHpWV0kyZDFNeFkxVVNGM05rYmkxaGNUZG1SMlJJU210UVNWQXlaa056YVZGakdpSkJTRTR3UlRkSWVVMUtVWEZsT0c1c1pYZHNXVU5pVjJFeWFEUnhNbUpHZFZCMzoyNWU0NjkyYQ",
         "profileId": "power-platform",
@@ -790,6 +808,44 @@
       }
     ],
     "full-stack": [
+      {
+        "id": "jsearch-ekZhNVZ3QTFWYjM3SjRVaUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVWt5VFZWcU5sZzJNMWRXTVVoV1RIRXlhME5NWnpKMWRIUm5aa0ZRUTJvMk4ySlVSMGRFYjFsdWJqSnphbE4zU1RCdFpHcDJNR1ozZDNKSlprbG9aMVpJVTBkb1NUUkpjVVZJYmtRMmFFSktkRFV6YW1SNmNrbHNTVTFrY1ZGSFVTMTBTSFpYTmpOVE5HRktXQzF3ZVhKMFdYSktaVGxyWmpSV2NFbzVkMVozZUZWVFdYZ1NGMjA1Y2kxaGRWUk5RVFZITjNGMGMxQnJZVGMyTmtGbkdpSkJTRTR3UlRkSFJVeFFORmR5TW1zeFJHTm9SRzlITTI4d2VEQnVWbWx3YUVKQjoyNTc1NzcxZA",
+        "profileId": "full-stack",
+        "title": "Java Fullstack Developer",
+        "company": "Kumaran Systems",
+        "location": "Madhavaram, Telangana, India",
+        "url": "https://in.linkedin.com/jobs/view/java-fullstack-developer-at-kumaran-systems-4492064899",
+        "tags": [
+          "[Angular]",
+          "[PostgreSQL]"
+        ],
+        "source": "linkedin",
+        "description": "About Us\n\nKumaran Systems: Engineering Future-Ready Transformations Since 1992, Kumaran Systems has been helping enterprises bridge the past and the future, reimagining legacy systems and embracing AI-led possibilities. With over 34 years of delivery",
+        "scrapedAt": "2026-11-19 11:16:48",
+        "dateGroup": "2026-11-19",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-bnNxTlhfN3FZaXFXczVRdEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZWGRKYXpseFN6bFZMVE5UVVdsUUxYbGZUREpmTW1ocWFIQkhiMDU1TW1Oa1dYaElRUzAzWVdSWlZXNTRkRkY0VkY5V2FXdFBRVEoxT1haVFMyaGFabWxMTVhOaU1sSlNTMkZ5VGtaaVRWRnlUVmQyWDBGa2JsZzJNbmx0YTFaNVdsUnBialpMWTA1V1YyVjFXVTEzYTBaNk0yOHRZMFZtYWpodlIySjJXVXRoUTJsUFMyRVNGMjA1Y2kxaGRWUk5RVFZITjNGMGMxQnJZVGMyTmtGbkdpSkJTRTR3UlRkR2FYQTNZbkIwUzJGU1ZERlBMVWx1VUUxZlkzUkJlRE5yVEZSbjo5NWViYWI5MQ",
+        "profileId": "full-stack",
+        "title": "Senior Full Stack Developer (React Native)",
+        "company": "Ordrio",
+        "location": "Udupi, Karnataka, India",
+        "url": "https://www.nexthireconsulting.com/jobs/view/senior-full-stack-developer-react-native-at-ordrio-udupi-w6rwx5bbco/",
+        "tags": [
+          "[NestJS]",
+          "[PostgreSQL]"
+        ],
+        "source": "nexthire",
+        "description": "We are looking for a Senior Full Stack Developer (React Native) to design, develop, and maintain mobile and web applications. The ideal candidate should have strong expertise in React Native, Next.js, NestJS, and PostgreSQL, along with the ability to",
+        "scrapedAt": "2026-11-19 11:16:48",
+        "dateGroup": "2026-11-19",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
       {
         "id": "job-316fab21",
         "profileId": "full-stack",
@@ -2675,6 +2731,30 @@
     ],
     "java-backend": [
       {
+        "id": "jsearch-YmxoLUQtZWVicFZtQk4tRUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZWFpxWWpaSGFWVmpVMmhNT0RKUVRVcGtaVzUwUzFKU1JYazNOV0ZMVkVwelZVUnNSRTlSTTNCNU5XbHlXSEZKZDFoS1gzTnVXVEZqZUVoSFgzaDBaMEpxTFc5T2NFWTVVbU5MY0hWVVlUbHlUVlIwT1dvMWNsQndUSFJ0WW0xWmRsWlpUV05TT0RaVE5XUllWbXBNV25reU5qTjBZVVJZYVRCNk5VOVJVVzE1YVdab09WSVNGMjkwY2kxaGNWOUNTMTloY25KMVJWQjJkVWhrWjBGUkdpSkJTRTR3UlRkSWVVdHFXSEpmZVZOT1R6RmtkMmhrTnprNFFVVlJjMjlCVUc1Ujo5OTZiZTNhMA",
+        "profileId": "java-backend",
+        "title": "Software Engineer_Java_SpringBoot_Microservices_ReactJS",
+        "company": "Lowes",
+        "location": "Bengaluru, Karnataka, India",
+        "url": "https://talent.lowes.com/in/en/job/JR-02685686/Software-Engineer-Java-SpringBoot-Microservices-ReactJS",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]",
+          "[Microservices]",
+          "[REST APIs]",
+          "[PostgreSQL]",
+          "[Docker]",
+          "[React]"
+        ],
+        "source": "lowe's careers",
+        "description": "Innovate in Bengaluru\n\nThis position is based at our on-site office in Bengaluru. Lowe's offers an ultramodern work environment, complete with cutting-edge technology, collaborative workspaces, an on-site gym and clinic, and other perks to enhance yo",
+        "scrapedAt": "2026-11-19 11:16:53",
+        "dateGroup": "2026-11-19",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
         "id": "job-29dc395d",
         "profileId": "java-backend",
         "title": "Senior Software Engineer, Query",
@@ -3922,6 +4002,86 @@
     ]
   },
   "allJobs": [
+    {
+      "id": "jsearch-YmxoLUQtZWVicFZtQk4tRUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZWFpxWWpaSGFWVmpVMmhNT0RKUVRVcGtaVzUwUzFKU1JYazNOV0ZMVkVwelZVUnNSRTlSTTNCNU5XbHlXSEZKZDFoS1gzTnVXVEZqZUVoSFgzaDBaMEpxTFc5T2NFWTVVbU5MY0hWVVlUbHlUVlIwT1dvMWNsQndUSFJ0WW0xWmRsWlpUV05TT0RaVE5XUllWbXBNV25reU5qTjBZVVJZYVRCNk5VOVJVVzE1YVdab09WSVNGMjkwY2kxaGNWOUNTMTloY25KMVJWQjJkVWhrWjBGUkdpSkJTRTR3UlRkSWVVdHFXSEpmZVZOT1R6RmtkMmhrTnprNFFVVlJjMjlCVUc1Ujo5OTZiZTNhMA",
+      "profileId": "java-backend",
+      "title": "Software Engineer_Java_SpringBoot_Microservices_ReactJS",
+      "company": "Lowes",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://talent.lowes.com/in/en/job/JR-02685686/Software-Engineer-Java-SpringBoot-Microservices-ReactJS",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]",
+        "[Microservices]",
+        "[REST APIs]",
+        "[PostgreSQL]",
+        "[Docker]",
+        "[React]"
+      ],
+      "source": "lowe's careers",
+      "description": "Innovate in Bengaluru\n\nThis position is based at our on-site office in Bengaluru. Lowe's offers an ultramodern work environment, complete with cutting-edge technology, collaborative workspaces, an on-site gym and clinic, and other perks to enhance yo",
+      "scrapedAt": "2026-11-19 11:16:53",
+      "dateGroup": "2026-11-19",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-ekZhNVZ3QTFWYjM3SjRVaUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVWt5VFZWcU5sZzJNMWRXTVVoV1RIRXlhME5NWnpKMWRIUm5aa0ZRUTJvMk4ySlVSMGRFYjFsdWJqSnphbE4zU1RCdFpHcDJNR1ozZDNKSlprbG9aMVpJVTBkb1NUUkpjVVZJYmtRMmFFSktkRFV6YW1SNmNrbHNTVTFrY1ZGSFVTMTBTSFpYTmpOVE5HRktXQzF3ZVhKMFdYSktaVGxyWmpSV2NFbzVkMVozZUZWVFdYZ1NGMjA1Y2kxaGRWUk5RVFZITjNGMGMxQnJZVGMyTmtGbkdpSkJTRTR3UlRkSFJVeFFORmR5TW1zeFJHTm9SRzlITTI4d2VEQnVWbWx3YUVKQjoyNTc1NzcxZA",
+      "profileId": "full-stack",
+      "title": "Java Fullstack Developer",
+      "company": "Kumaran Systems",
+      "location": "Madhavaram, Telangana, India",
+      "url": "https://in.linkedin.com/jobs/view/java-fullstack-developer-at-kumaran-systems-4492064899",
+      "tags": [
+        "[Angular]",
+        "[PostgreSQL]"
+      ],
+      "source": "linkedin",
+      "description": "About Us\n\nKumaran Systems: Engineering Future-Ready Transformations Since 1992, Kumaran Systems has been helping enterprises bridge the past and the future, reimagining legacy systems and embracing AI-led possibilities. With over 34 years of delivery",
+      "scrapedAt": "2026-11-19 11:16:48",
+      "dateGroup": "2026-11-19",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-bnNxTlhfN3FZaXFXczVRdEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZWGRKYXpseFN6bFZMVE5UVVdsUUxYbGZUREpmTW1ocWFIQkhiMDU1TW1Oa1dYaElRUzAzWVdSWlZXNTRkRkY0VkY5V2FXdFBRVEoxT1haVFMyaGFabWxMTVhOaU1sSlNTMkZ5VGtaaVRWRnlUVmQyWDBGa2JsZzJNbmx0YTFaNVdsUnBialpMWTA1V1YyVjFXVTEzYTBaNk0yOHRZMFZtYWpodlIySjJXVXRoUTJsUFMyRVNGMjA1Y2kxaGRWUk5RVFZITjNGMGMxQnJZVGMyTmtGbkdpSkJTRTR3UlRkR2FYQTNZbkIwUzJGU1ZERlBMVWx1VUUxZlkzUkJlRE5yVEZSbjo5NWViYWI5MQ",
+      "profileId": "full-stack",
+      "title": "Senior Full Stack Developer (React Native)",
+      "company": "Ordrio",
+      "location": "Udupi, Karnataka, India",
+      "url": "https://www.nexthireconsulting.com/jobs/view/senior-full-stack-developer-react-native-at-ordrio-udupi-w6rwx5bbco/",
+      "tags": [
+        "[NestJS]",
+        "[PostgreSQL]"
+      ],
+      "source": "nexthire",
+      "description": "We are looking for a Senior Full Stack Developer (React Native) to design, develop, and maintain mobile and web applications. The ideal candidate should have strong expertise in React Native, Next.js, NestJS, and PostgreSQL, along with the ability to",
+      "scrapedAt": "2026-11-19 11:16:48",
+      "dateGroup": "2026-11-19",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-f33e083",
+      "profileId": "power-platform",
+      "title": "Lead Engineer, Software Enterprise Solutions",
+      "company": "Tech Company",
+      "location": "Remote Worldwide",
+      "url": "https://himalayas.app/companies/vuori-inc/jobs/lead-engineer-software-enterprise-solutions",
+      "tags": [
+        "[Dynamics 365]"
+      ],
+      "source": "himalayas",
+      "description": "We are seeking a seasoned and strategic Lead Engineer for Microsoft Dynamics 365 Finance & Operations.",
+      "scrapedAt": "2026-11-19 11:16:42",
+      "dateGroup": "2026-11-19",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
     {
       "id": "job-316fab21",
       "profileId": "full-stack",
