@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T17:08:40.865Z",
+  "generatedAt": "2026-11-19T17:17:03.681Z",
   "totalJobsCount": 199,
   "profiles": [
     {
@@ -19,6 +19,12 @@
       "name": "Java & Spring Boot Developer Job Radar",
       "accentColor": "#ea580c",
       "jobsCount": 59
+    },
+    {
+      "id": "plsql-developer",
+      "name": "PL/SQL Developer Job Radar",
+      "accentColor": "#0d9488",
+      "jobsCount": 0
     }
   ],
   "jobsByProfile": {
@@ -3999,7 +4005,8 @@
         "tier": "remote",
         "isTargetCompany": false
       }
-    ]
+    ],
+    "plsql-developer": []
   },
   "allJobs": [
     {

@@ -66,6 +66,28 @@ export function isJobMatchingProfile(job: RawJobListing, profile: JobProfile): b
     return hasJavaCore;
   }
 
+  // For PL/SQL Developer, ensure tech role AND matches PL/SQL or Oracle database keywords
+  if (profile.id === 'plsql-developer') {
+    const isTechRole =
+      combined.includes('developer') ||
+      combined.includes('engineer') ||
+      combined.includes('analyst') ||
+      combined.includes('programmer') ||
+      combined.includes('consultant') ||
+      combined.includes('specialist');
+
+    if (!isTechRole) return false;
+
+    const hasPlsqlCore =
+      combined.includes('pl/sql') ||
+      combined.includes('plsql') ||
+      combined.includes('oracle') ||
+      combined.includes('adf') ||
+      combined.includes('sql developer');
+
+    return hasPlsqlCore;
+  }
+
   // Standard matching for other profiles
   return profile.keywords.some((kw) => {
     if (typeof kw === 'string') {

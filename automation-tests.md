@@ -549,6 +549,24 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Zero redundancy with region headers and status filters below; modern, high-impact summary deck.
 - **Final State**: Minimalist, symmetrical velocity dashboard.
 
+#### [HF-059] PL/SQL Developer Search Profile (Minnu - Resume-based)
+- **Preconditions**: Candidate resume provided for Dilshada Sabnam (candidateName "Minnu") with 4 years experience at Cognizant in PL/SQL, Oracle SQL, Oracle ADF, Java, Power BI, Python.
+- **Action**:
+  1. Define `plsql-developer` profile in `src/profiles/plsqlProfile.ts`:
+     - `id`: `plsql-developer`
+     - `name`: `PL/SQL Developer Job Radar`
+     - `candidateName`: `Minnu`
+     - `recipientEmail`: `RECIPIENT_EMAIL_PLSQL` -> `dilshadashabnam@gmail.com` -> default recipient.
+     - `excludedCompanies`: Excludes current employer `Cognizant` / `CTS`.
+     - `experience`: `2 to 6 years` (excluding director, vp, intern, fresher, manager, engineering manager).
+     - `queryTerms`: `['plsql developer in India', 'oracle pl sql in India', 'oracle developer in India', 'oracle adf developer in India']`.
+     - `skills`: Tags `[PL/SQL]`, `[Oracle SQL]`, `[Oracle ADF]`, `[Power BI]`, `[Java]`, `[Python]`.
+     - `accentColor`: `#0d9488`.
+  2. Register profile in `src/profiles/profileRegistry.ts` so `getProfiles()` provides 4 active radar profiles.
+  3. Enforce matching in `jobMatcher.ts` ensuring PL/SQL / Oracle developer roles match while excluding conflicting mobile/frontend stacks (Magento, Shopify, iOS, Android).
+- **Expected Result**: Tailored, high-trust PL/SQL radar matching Minnu's 4-year experience profile with Cognizant exclusion.
+- **Final State**: 4-profile multi-tenant Job Radar ecosystem with personalized candidate greetings and web portal integration.
+
 ---
 
 ### Negative Flows

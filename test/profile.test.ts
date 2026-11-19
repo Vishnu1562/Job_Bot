@@ -297,23 +297,82 @@ describe('[HF-007, HF-008, HF-009, EC-004] Multi-Profile Configuration & Matchin
     });
   });
 
+  describe('[HF-059] PL/SQL Developer Search Profile (Minnu - Resume-based)', () => {
+    it('loads PL/SQL profile and resolves candidate name as Minnu', () => {
+      const profiles = getProfiles({ RECIPIENT_EMAIL: 'default@test.com' });
+      const plsql = profiles.find((p) => p.id === 'plsql-developer');
+      assert.ok(plsql, 'PL/SQL profile must be registered');
+      assert.strictEqual(plsql.candidateName, 'Minnu');
+      assert.strictEqual(plsql.name, 'PL/SQL Developer Job Radar');
+      assert.ok(plsql.recipientEmail.includes('dilshadashabnam@gmail.com') || plsql.recipientEmail.includes('default@test.com'));
+    });
+
+    it('sets experience bounds to 2-6 years matching 4-yr profile and excludes Cognizant', () => {
+      const profiles = getProfiles();
+      const plsql = profiles.find((p) => p.id === 'plsql-developer')!;
+      assert.strictEqual(plsql.experience?.minYears, 2);
+      assert.strictEqual(plsql.experience?.maxYears, 6);
+      assert.ok(plsql.excludedCompanies.some(r => r.test('Cognizant') || r.test('CTS')), 'Must exclude current employer Cognizant');
+    });
+
+    it('matches PL/SQL and Oracle Developer jobs and tags resume skills', () => {
+      const profiles = getProfiles();
+      const plsql = profiles.find((p) => p.id === 'plsql-developer')!;
+
+      const job: RawJobListing = {
+        title: 'Senior PL/SQL Developer (Oracle ADF)',
+        company: 'Infosys',
+        location: 'Kochi, Kerala',
+        description: 'Requires strong experience in Oracle PL/SQL, stored procedures, packages, triggers, Oracle ADF with JDeveloper, Java backing beans, and Power BI reporting.',
+        url: 'https://example.com/job-plsql-1'
+      };
+
+      assert.strictEqual(isJobMatchingProfile(job, plsql), true);
+
+      const tags = extractProfileSkillTags(job.title, job.description, plsql);
+      assert.ok(tags.includes('[PL/SQL]'));
+      assert.ok(tags.includes('[Oracle SQL]'));
+      assert.ok(tags.includes('[Oracle ADF]'));
+      assert.ok(tags.includes('[Power BI]'));
+      assert.ok(tags.includes('[Java]'));
+    });
+
+    it('rejects conflicting tech stack titles for PL/SQL profile', () => {
+      const profiles = getProfiles();
+      const plsql = profiles.find((p) => p.id === 'plsql-developer')!;
+
+      const mobileJob: RawJobListing = {
+        title: 'Senior iOS & Flutter Developer',
+        company: 'AppCo',
+        location: 'Bangalore',
+        description: 'Requires Swift, Flutter, and some Oracle database queries.',
+        url: 'https://example.com/job-ios'
+      };
+
+      assert.strictEqual(isJobMatchingProfile(mobileJob, plsql), false);
+    });
+  });
+
   describe('[REG-003] Modular Domain Architecture Subfile Isolation', () => {
     it('allows independent import and customization of individual profiles from subfiles', async () => {
       const { getPowerPlatformProfile } = await import('../src/profiles/powerPlatformProfile.ts');
       const { getFullStackProfile } = await import('../src/profiles/fullStackProfile.ts');
       const { getJavaBackendProfile } = await import('../src/profiles/javaBackendProfile.ts');
+      const { getPlsqlProfile } = await import('../src/profiles/plsqlProfile.ts');
       const { DEFAULT_TARGET_COMPANIES } = await import('../src/profiles/targetCompanies.ts');
 
       const customEnv = {
         RECIPIENT_EMAIL: 'default@test.com',
         RECIPIENT_EMAIL_POWERPLATFORM: 'celine@test.com',
         RECIPIENT_EMAIL_FULLSTACK: 'vishnu@test.com',
-        RECIPIENT_EMAIL_JAVA: 'aswin@test.com'
+        RECIPIENT_EMAIL_JAVA: 'aswin@test.com',
+        RECIPIENT_EMAIL_PLSQL: 'minnu@test.com'
       };
 
       const pp = getPowerPlatformProfile(customEnv);
       const fs = getFullStackProfile(customEnv);
       const java = getJavaBackendProfile(customEnv);
+      const plsql = getPlsqlProfile(customEnv);
 
       assert.strictEqual(pp.candidateName, 'Celine');
       assert.strictEqual(pp.recipientEmail, 'default@test.com, celine@test.com');
@@ -321,6 +380,8 @@ describe('[HF-007, HF-008, HF-009, EC-004] Multi-Profile Configuration & Matchin
       assert.strictEqual(fs.recipientEmail, 'default@test.com, vishnu@test.com');
       assert.strictEqual(java.candidateName, 'Aswin');
       assert.strictEqual(java.recipientEmail, 'default@test.com, aswin@test.com');
+      assert.strictEqual(plsql.candidateName, 'Minnu');
+      assert.strictEqual(plsql.recipientEmail, 'default@test.com, minnu@test.com');
 
       assert.ok(DEFAULT_TARGET_COMPANIES.length >= 20, 'Should load common target companies');
     });
