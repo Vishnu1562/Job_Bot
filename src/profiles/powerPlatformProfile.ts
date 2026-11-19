@@ -5,7 +5,7 @@ import { resolveProfileRecipients } from './recipientResolver.ts';
 export function getPowerPlatformProfile(
   env: Record<string, string | undefined> = process.env
 ): JobProfile {
-  const defaultRecipient = env.RECIPIENT_EMAIL || 'user@example.com';
+  const defaultRecipient = env.RECIPIENT_EMAIL || '';
 
   return {
     id: 'power-platform',

@@ -556,7 +556,7 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
      - `id`: `plsql-developer`
      - `name`: `PL/SQL Developer Job Radar`
      - `candidateName`: `Minnu`
-     - `recipientEmail`: `RECIPIENT_EMAIL_PLSQL` -> `dilshadashabnam@gmail.com` -> default recipient.
+     - `recipientEmail`: `resolveProfileRecipients(env.RECIPIENT_EMAIL, env.RECIPIENT_EMAIL_PLSQL)` — strictly driven by repository secrets without hardcoded email fallbacks.
      - `excludedCompanies`: Excludes current employer `Cognizant` / `CTS`.
      - `experience`: `2 to 6 years` (excluding director, vp, intern, fresher, manager, engineering manager).
      - `queryTerms`: `['plsql developer in India', 'oracle pl sql in India', 'oracle developer in India', 'oracle adf developer in India']`.

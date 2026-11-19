@@ -298,13 +298,28 @@ describe('[HF-007, HF-008, HF-009, EC-004] Multi-Profile Configuration & Matchin
   });
 
   describe('[HF-059] PL/SQL Developer Search Profile (Minnu - Resume-based)', () => {
-    it('loads PL/SQL profile and resolves candidate name as Minnu', () => {
+    it('loads PL/SQL profile, resolves candidate name as Minnu, and uses secrets without hardcoded email', () => {
       const profiles = getProfiles({ RECIPIENT_EMAIL: 'default@test.com' });
       const plsql = profiles.find((p) => p.id === 'plsql-developer');
       assert.ok(plsql, 'PL/SQL profile must be registered');
       assert.strictEqual(plsql.candidateName, 'Minnu');
       assert.strictEqual(plsql.name, 'PL/SQL Developer Job Radar');
-      assert.ok(plsql.recipientEmail.includes('dilshadashabnam@gmail.com') || plsql.recipientEmail.includes('default@test.com'));
+      assert.strictEqual(plsql.recipientEmail, 'default@test.com');
+      assert.strictEqual(plsql.recipientEmail.includes('dilshadashabnam'), false, 'Must NOT contain hardcoded resume email');
+
+      const customProfiles = getProfiles({
+        RECIPIENT_EMAIL: 'default@test.com',
+        RECIPIENT_EMAIL_PLSQL: 'secret-minnu@test.com'
+      });
+      const customPlsql = customProfiles.find((p) => p.id === 'plsql-developer');
+      assert.strictEqual(customPlsql?.recipientEmail, 'default@test.com, secret-minnu@test.com');
+    });
+
+    it('does not contain hardcoded default email fallbacks in any profile', () => {
+      const profiles = getProfiles({});
+      for (const p of profiles) {
+        assert.strictEqual(p.recipientEmail, '', `Profile ${p.id} must have empty recipient when no secret is passed`);
+      }
     });
 
     it('sets experience bounds to 2-6 years matching 4-yr profile and excludes Cognizant', () => {

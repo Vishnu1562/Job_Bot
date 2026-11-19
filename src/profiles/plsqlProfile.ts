@@ -5,8 +5,8 @@ import { resolveProfileRecipients } from './recipientResolver.ts';
 export function getPlsqlProfile(
   env: Record<string, string | undefined> = process.env
 ): JobProfile {
-  const defaultRecipient = env.RECIPIENT_EMAIL || 'user@example.com';
-  const profileRecipient = env.RECIPIENT_EMAIL_PLSQL || 'dilshadashabnam@gmail.com';
+  const defaultRecipient = env.RECIPIENT_EMAIL || '';
+  const profileRecipient = env.RECIPIENT_EMAIL_PLSQL || '';
 
   return {
     id: 'plsql-developer',
