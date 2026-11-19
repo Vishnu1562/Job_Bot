@@ -354,14 +354,8 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Seamless job inspection without opening and switching between multiple browser tabs.
 - **Final State**: Fluid, modern single-page experience.
 
-#### [HF-040] Interactive View Mode Switcher (Grid Cards vs Compact Table)
-- **Preconditions**: User browsing job listings.
-- **Action**: User clicks the Grid / Table view toggle icon:
-  1. Grid mode renders visual responsive 3-column cards.
-  2. Table mode renders high-density rows for rapid scanning of 50+ roles with columns for Company, Title, Tier, Location, Date, and Actions.
-  3. Preference is persisted in `localStorage`.
-- **Expected Result**: Flexible reading mode tailored to user's browsing preference.
-- **Final State**: Professional power-user workflow.
+#### [HF-040] (Superseded by HF-057) Interactive View Mode Switcher
+- *Note: Superseded by [HF-057] to deliver a streamlined, clutter-free grid-only card experience.*
 
 #### [HF-041] Interactive Feedback Toast Notifications
 - **Preconditions**: User marks a job as **⭐ Save** or **✅ Applied**.
@@ -533,6 +527,16 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
   5. Interacting with the company select invokes `event.stopPropagation()` so the section accordion does not toggle.
 - **Expected Result**: Independent, granular company filtering per section driven by distinct listed jobs.
 - **Final State**: Zero-clutter, dynamic company filtering directly within region headers.
+
+#### [HF-057] Streamlined Grid-Only Architecture & View Toggle Removal
+- **Preconditions**: Web portal loaded.
+- **Action**:
+  1. Deprecate and remove View Mode Switcher (`#view-mode-toggle`, `.view-mode-toggle`, `data-view="grid"`, `data-view="table"`) from the top navigation bar.
+  2. Streamline the portal presentation to exclusively render responsive visual Grid cards.
+  3. Navbar now cleanly displays brand identity and synchronization status on the left, and theme toggle on the right.
+  4. Any legacy `job_radar_view_mode` in localStorage is safely ignored or cleared.
+- **Expected Result**: Clean, unencumbered navbar and focused visual card browsing experience.
+- **Final State**: Zero clutter, pure grid-first candidate experience.
 
 ---
 

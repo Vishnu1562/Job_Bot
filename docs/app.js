@@ -52,7 +52,6 @@
   // 2. LocalStorage Persistence Keys
   const TRACKER_KEY = 'job_radar_tracker_v1';
   const THEME_KEY = 'job_radar_theme';
-  const VIEW_KEY = 'job_radar_view_mode';
 
   function getTrackerState()               {
     try {
@@ -110,7 +109,6 @@
   let selectedDate = 'all';
   let selectedTier = 'all';
   let sectionCompanyFilter                                       = { domestic: 'all', remote: 'all' };
-  let currentViewMode = localStorage.getItem(VIEW_KEY) || 'grid';
   let searchQuery = '';
   let activeDrawerJob                 = null;
 
@@ -323,56 +321,6 @@
     `;
   }
 
-  function renderTableRow(job         , status              )         {
-    const isSaved = Boolean(status.saved);
-    const isApplied = Boolean(status.applied);
-    const monogramColor = getMonogramColor(job.company);
-    const initials = getInitials(job.company);
-
-    const tierBadge = job.tier === 'domestic'
-      ? `<span class="badge-tier-sm badge-domestic">${ICONS.locationPin}Domestic</span>`
-      : `<span class="badge-tier-sm badge-remote">${ICONS.globe}Remote</span>`;
-
-    return `
-      <tr data-url="${escapeHtml(job.url)}">
-        <td>
-          <div class="table-company-cell">
-            <div class="monogram-sm" style="background-color: ${monogramColor};">
-              ${initials}
-            </div>
-            <div>
-              <div style="font-weight: 700; color: var(--text-main); font-size: 14px;">${escapeHtml(job.company)}</div>
-              ${job.isTargetCompany ? `<span style="font-size: 11px; color: var(--amber); font-weight: 700;">${ICONS.star}Priority Target</span>` : ''}
-            </div>
-          </div>
-        </td>
-        <td>
-          <div style="font-weight: 700; font-size: 14px; color: var(--text-main); margin-bottom: 4px;">
-            ${escapeHtml(job.title)}
-          </div>
-          <div style="display: flex; gap: 4px; flex-wrap: wrap;">
-            ${(job.tags || []).slice(0, 3).map(t => '<span class="skill-tag-pill" style="font-size: 10px; padding: 2px 7px;">' + escapeHtml(t) + '</span>').join('')}
-          </div>
-        </td>
-        <td>${tierBadge}</td>
-        <td style="color: var(--text-dim); font-size: 13px;">${ICONS.locationPin} ${escapeHtml(job.location)}</td>
-        <td class="table-action-cell" style="text-align: right;" onclick="event.stopPropagation();">
-          <div class="card-action-group" style="justify-content: flex-end;">
-            <button type="button" class="action-icon-btn ${isSaved ? 'saved' : ''}" data-action="save" title="Save Role" onclick="event.stopPropagation();">
-              ${ICONS.bookmark(isSaved)}
-            </button>
-            <button type="button" class="action-icon-btn ${isApplied ? 'applied' : ''}" data-action="applied" title="Mark as Applied" onclick="event.stopPropagation();">
-              ${ICONS.check}
-            </button>
-            <a href="${escapeHtml(job.url)}" target="_blank" rel="noopener noreferrer" class="btn-apply-cta" onclick="event.stopPropagation();">
-              Apply ↗
-            </a>
-          </div>
-        </td>
-      </tr>
-    `;
-  }
-
   // 10. Action Controller (HF-043: Isolated Event Handling)
   function toggleAction(url        , action                    )       {
     if (!url || !action) return;
@@ -447,8 +395,8 @@
 
   // 11. Event Delegations & Bindings (HF-043 Guard & HF-047 Collapse)
   function bindJobEvents()       {
-    // Card & Table Row Click -> Opens Detail Drawer ONLY when clicking card body
-    document.querySelectorAll('.job-card, .jobs-table tbody tr').forEach(item => {
+    // Card Click -> Opens Detail Drawer ONLY when clicking card body
+    document.querySelectorAll('.job-card').forEach(item => {
       item.addEventListener('click', function (e) {
         const target = e.target                      ;
         if (!target) return;
@@ -458,7 +406,6 @@
           target.closest('.card-footer') ||
           target.closest('.card-action-group') ||
           target.closest('.action-icon-btn') ||
-          target.closest('.table-action-cell') ||
           target.closest('button') ||
           target.closest('a')
         ) {
@@ -660,91 +607,68 @@
 
     let html = '';
 
-    if (currentViewMode === 'grid') {
-      // Domestic Grid Section
-      if (domesticJobs.length > 0) {
-        html += `
-          <div class="region-section-block">
-            <div class="tier-header-bar tier-domestic" role="button" tabindex="0" aria-expanded="true" aria-label="Toggle Domestic Region Section">
-              <div class="tier-title-wrap">
-                <span>${ICONS.locationPin}Domestic &amp; Regional (LinkedIn, Naukri &amp; Corporate Boards)</span>
-                <span class="collapse-chevron">▾</span>
-              </div>
-              <div class="tier-actions-wrap" onclick="event.stopPropagation();">
-                <select class="section-company-select" data-section="domestic" aria-label="Filter Domestic jobs by company">
-                  <option value="all">All Companies (${domesticJobs.length})</option>
-                  ${domesticCompanies.map(c => `
-                    <option value="${escapeHtml(c)}" ${sectionCompanyFilter.domestic.toLowerCase() === c.toLowerCase() ? 'selected' : ''}>
-                      ${escapeHtml(c)} (${domesticCompanyCounts[c]})
-                    </option>
-                  `).join('')}
-                </select>
-                <span class="tier-count-badge badge-domestic">${displayedDomesticJobs.length} Verified</span>
-              </div>
-            </div>
-            <div class="region-content-wrap">
-              <div class="jobs-grid">
-                ${displayedDomesticJobs.length > 0
-                  ? displayedDomesticJobs.map(j => renderCard(j, trackerState[j.url] || {})).join('')
-                  : `<div style="grid-column: 1 / -1; padding: 24px; text-align: center; color: var(--text-muted); font-size: 13px;">No jobs found for selected company in Domestic.</div>`
-                }
-              </div>
-            </div>
-          </div>
-        `;
-      }
-
-      // Remote Grid Section
-      if (remoteJobs.length > 0) {
-        html += `
-          <div class="region-section-block">
-            <div class="tier-header-bar tier-remote" role="button" tabindex="0" aria-expanded="true" aria-label="Toggle Global Remote Section">
-              <div class="tier-title-wrap">
-                <span>${ICONS.globe}Curated Global &amp; Remote Opportunities</span>
-                <span class="collapse-chevron">▾</span>
-              </div>
-              <div class="tier-actions-wrap" onclick="event.stopPropagation();">
-                <select class="section-company-select" data-section="remote" aria-label="Filter Remote jobs by company">
-                  <option value="all">All Companies (${remoteJobs.length})</option>
-                  ${remoteCompanies.map(c => `
-                    <option value="${escapeHtml(c)}" ${sectionCompanyFilter.remote.toLowerCase() === c.toLowerCase() ? 'selected' : ''}>
-                      ${escapeHtml(c)} (${remoteCompanyCounts[c]})
-                    </option>
-                  `).join('')}
-                </select>
-                <span class="tier-count-badge badge-remote">${displayedRemoteJobs.length} Roles</span>
-              </div>
-            </div>
-            <div class="region-content-wrap">
-              <div class="jobs-grid">
-                ${displayedRemoteJobs.length > 0
-                  ? displayedRemoteJobs.map(j => renderCard(j, trackerState[j.url] || {})).join('')
-                  : `<div style="grid-column: 1 / -1; padding: 24px; text-align: center; color: var(--text-muted); font-size: 13px;">No jobs found for selected company in Remote.</div>`
-                }
-              </div>
-            </div>
-          </div>
-        `;
-      }
-    } else {
-      // High-Density Table List View (HF-040)
-      const displayedTableJobs = [...displayedDomesticJobs, ...displayedRemoteJobs];
+    // Domestic Grid Section
+    if (domesticJobs.length > 0) {
       html += `
-        <div class="table-view-container">
-          <table class="jobs-table">
-            <thead>
-              <tr>
-                <th>Company</th>
-                <th>Role &amp; Stack</th>
-                <th>Region</th>
-                <th>Location</th>
-                <th style="text-align: right;">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${displayedTableJobs.map(j => renderTableRow(j, trackerState[j.url] || {})).join('')}
-            </tbody>
-          </table>
+        <div class="region-section-block">
+          <div class="tier-header-bar tier-domestic" role="button" tabindex="0" aria-expanded="true" aria-label="Toggle Domestic Region Section">
+            <div class="tier-title-wrap">
+              <span>${ICONS.locationPin}Domestic &amp; Regional (LinkedIn, Naukri &amp; Corporate Boards)</span>
+              <span class="collapse-chevron">▾</span>
+            </div>
+            <div class="tier-actions-wrap" onclick="event.stopPropagation();">
+              <select class="section-company-select" data-section="domestic" aria-label="Filter Domestic jobs by company">
+                <option value="all">All Companies (${domesticJobs.length})</option>
+                ${domesticCompanies.map(c => `
+                  <option value="${escapeHtml(c)}" ${sectionCompanyFilter.domestic.toLowerCase() === c.toLowerCase() ? 'selected' : ''}>
+                    ${escapeHtml(c)} (${domesticCompanyCounts[c]})
+                  </option>
+                `).join('')}
+              </select>
+              <span class="tier-count-badge badge-domestic">${displayedDomesticJobs.length} Verified</span>
+            </div>
+          </div>
+          <div class="region-content-wrap">
+            <div class="jobs-grid">
+              ${displayedDomesticJobs.length > 0
+                ? displayedDomesticJobs.map(j => renderCard(j, trackerState[j.url] || {})).join('')
+                : `<div style="grid-column: 1 / -1; padding: 24px; text-align: center; color: var(--text-muted); font-size: 13px;">No jobs found for selected company in Domestic.</div>`
+              }
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Remote Grid Section
+    if (remoteJobs.length > 0) {
+      html += `
+        <div class="region-section-block">
+          <div class="tier-header-bar tier-remote" role="button" tabindex="0" aria-expanded="true" aria-label="Toggle Global Remote Section">
+            <div class="tier-title-wrap">
+              <span>${ICONS.globe}Curated Global &amp; Remote Opportunities</span>
+              <span class="collapse-chevron">▾</span>
+            </div>
+            <div class="tier-actions-wrap" onclick="event.stopPropagation();">
+              <select class="section-company-select" data-section="remote" aria-label="Filter Remote jobs by company">
+                <option value="all">All Companies (${remoteJobs.length})</option>
+                ${remoteCompanies.map(c => `
+                  <option value="${escapeHtml(c)}" ${sectionCompanyFilter.remote.toLowerCase() === c.toLowerCase() ? 'selected' : ''}>
+                    ${escapeHtml(c)} (${remoteCompanyCounts[c]})
+                  </option>
+                `).join('')}
+              </select>
+              <span class="tier-count-badge badge-remote">${displayedRemoteJobs.length} Roles</span>
+            </div>
+          </div>
+          <div class="region-content-wrap">
+            <div class="jobs-grid">
+              ${displayedRemoteJobs.length > 0
+                ? displayedRemoteJobs.map(j => renderCard(j, trackerState[j.url] || {})).join('')
+                : `<div style="grid-column: 1 / -1; padding: 24px; text-align: center; color: var(--text-muted); font-size: 13px;">No jobs found for selected company in Remote.</div>`
+              }
+            </div>
+          </div>
         </div>
       `;
     }
@@ -792,22 +716,6 @@
       searchInput.addEventListener('input', function (                      ) {
         searchQuery = this.value;
         render();
-      });
-    }
-
-    // View Mode Switcher
-    document.querySelectorAll('#view-mode-toggle button').forEach(btn => {
-      btn.addEventListener('click', function (                       ) {
-        document.querySelectorAll('#view-mode-toggle button').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-        currentViewMode = this.getAttribute('data-view') || 'grid';
-        localStorage.setItem(VIEW_KEY, currentViewMode);
-        render();
-      });
-    });
-    if (currentViewMode === 'table') {
-      document.querySelectorAll('#view-mode-toggle button').forEach(b => {
-        b.classList.toggle('active', b.getAttribute('data-view') === 'table');
       });
     }
 

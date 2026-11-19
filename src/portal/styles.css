@@ -167,32 +167,6 @@
       border-color: var(--primary);
       transform: translateY(-1px);
     }
-    .view-mode-toggle {
-      display: flex;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 10px;
-      padding: 3px;
-    }
-    .view-btn {
-      background: transparent;
-      border: none;
-      color: var(--text-muted);
-      padding: 6px 12px;
-      border-radius: 7px;
-      font-size: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      transition: all 0.15s ease;
-    }
-    .view-btn.active {
-      background: var(--primary);
-      color: #fff;
-      box-shadow: 0 2px 6px var(--primary-glow);
-    }
 
     /* Hero / KPI Stats Bar */
     .hero-container {

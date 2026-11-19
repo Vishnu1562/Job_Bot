@@ -171,7 +171,8 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
       assert.ok(html.includes('id="theme-toggle"'), 'Must include Dark/Light theme toggle');
       assert.ok(html.includes('id="job-drawer"'), 'Must include slide-over job detail drawer');
       assert.ok(html.includes('id="drawer-overlay"'), 'Must include drawer backdrop overlay');
-      assert.ok(html.includes('data-view="grid"') && html.includes('data-view="table"'), 'Must include View Mode switcher buttons');
+      assert.strictEqual(html.includes('view-mode-toggle'), false, 'Must NOT include view mode toggle in navbar (HF-057)');
+      assert.strictEqual(html.includes('data-view="table"'), false, 'Must NOT include table view button (HF-057)');
       assert.ok(html.includes('id="toast-notification"'), 'Must include toast notification container');
 
       // 5. Verify User-Facing Region Terminology (HF-045)
@@ -217,8 +218,10 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
         const jsContent = fs.readFileSync(jsPath, 'utf-8');
         assert.ok(jsContent.includes('localStorage'), 'app.js must contain tracker persistence logic');
         assert.ok(jsContent.includes('stopPropagation'), 'app.js must contain action event isolation (HF-043)');
-        assert.ok(jsContent.includes('<th>Region</th>'), 'Table header must display Region instead of Tier (HF-045)');
-        assert.ok(!jsContent.includes('<th>Tier</th>'), 'Table header must not display Tier');
+        // HF-057: Grid-Only Architecture & View Toggle Removal
+        assert.strictEqual(indexContent.includes('view-mode-toggle'), false, 'index.html must not contain view-mode-toggle (HF-057)');
+        assert.strictEqual(jsContent.includes('table-view-container'), false, 'app.js must not render table-view-container (HF-057)');
+        assert.strictEqual(jsContent.includes('#view-mode-toggle'), false, 'app.js must not contain view-mode-toggle listener (HF-057)');
         assert.ok(jsContent.includes('collapse-chevron') || jsContent.includes('toggleSectionCollapse'), 'app.js must contain section collapse handlers (HF-047)');
         assert.ok(!jsContent.includes('class="date-header"'), 'app.js must not contain redundant date-header divider bars (HF-048)');
         assert.ok(!jsContent.includes('class="date-section-block"'), 'app.js must not contain date-section-block dividers (HF-048)');
