@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-11-19T09:25:10.786Z",
-  "totalJobsCount": 191,
+  "generatedAt": "2026-11-19T11:13:10.245Z",
+  "totalJobsCount": 195,
   "profiles": [
     {
       "id": "power-platform",
       "name": "Power Platform Job Radar",
       "accentColor": "#742774",
-      "jobsCount": 33
+      "jobsCount": 35
     },
     {
       "id": "full-stack",
       "name": "Full Stack Developer Job Radar",
       "accentColor": "#0284c7",
-      "jobsCount": 100
+      "jobsCount": 102
     },
     {
       "id": "java-backend",
@@ -23,6 +23,51 @@
   ],
   "jobsByProfile": {
     "power-platform": [
+      {
+        "id": "jsearch-T1piWXgtbXZfV2pSdFlyLUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbWxuY2pGclYwNXBZVzlNWmtJMFdGVnZha3BvWW1GS05Vb3ljR3hCTkRRMlFWY3hTWGhLTlRsVmJUSlRkR0o1TUdSaVJGSnRVRFZPY3pCV1ZuaHhPVWRLZDB4YUxVbHFTblJvVFdadGNEVTJXR0ZaUVMxeWF6TlhOR0Z6ZEVFNVYwZFRYMDl6YTJkcFYyNU5iREpUTTJvMmNsZGlNbVp1TUZJNGJVdHpWV0kyZDFNeFkxVVNGM05rYmkxaGNUZG1SMlJJU210UVNWQXlaa056YVZGakdpSkJTRTR3UlRkSWVVMUtVWEZsT0c1c1pYZHNXVU5pVjJFeWFEUnhNbUpHZFZCMzoyNWU0NjkyYQ",
+        "profileId": "power-platform",
+        "title": "Application Developer - Microsoft Power Platform (Digital Workplace) (COT)",
+        "company": "Liebherr CMCtec India Private Limited",
+        "location": "Pune, Maharashtra, India",
+        "url": "https://www.liebherr.com/en-int/j/careers/job-vacancies/82228-en-5370610",
+        "tags": [
+          "[Canvas Apps]",
+          "[Power Automate]",
+          "[SharePoint Online]",
+          "[M365 / PL-400]",
+          "[Model-Driven]"
+        ],
+        "source": "liebherr",
+        "description": "Creating passion: your responsibilities\n\nRoles & Responsibilities :\n• Design and develop solutions using Microsoft Power Platform (Power Apps, Power Automate)\n• Collaborate with Business Analysts and stakeholders to gather and refine requirements\n• E",
+        "scrapedAt": "2026-11-19 11:12:56",
+        "dateGroup": "2026-11-19",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-NVZxSXBYQXItUUVBWFJfOEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVGROTm1FemRsRkxkbEJtZGtSWlkwMDVaMnRaVVRaeE4zWjFkakl4WjNoSFh5MDViMXA1WTBNMWREaE5SVTl5WlZaR1ZYVk9XbFpNYm1sRFlWSTFUR0puVkRCVmRHa3pSa3hOWjNSU09HODJjekYxUWt4RVMyVXdaV0pVVGxGM1VUWXhaMUEzYzJGWFJVbDBWelJGYUd4c1R6bFBUVFpxZVVsd1FTMTRTRmh6UkhNeFEyTVNGM1IwYmkxaGNVZDJSR05oVXpoTU1GQTJObkZKYlVFMEdpSkJTRTR3UlRkRlRYcEhSR3RXUVhnM1VtWXdTbVZDVlRaaU1HSjFiazFwTURoQjo0MzZlODE4Yw",
+        "profileId": "power-platform",
+        "title": "Power Platform Engineer",
+        "company": "Document IT LLC",
+        "location": "India",
+        "url": "https://www.foundit.in/job/power-platform-engineer-document-it-llc-india-69809582",
+        "tags": [
+          "[Canvas Apps]",
+          "[Power Automate]",
+          "[Dataverse]",
+          "[SharePoint Online]",
+          "[M365 / PL-400]",
+          "[Model-Driven]"
+        ],
+        "source": "foundit",
+        "description": "We're Hiring: Power Platform Engineer\n\nRemote, India | Contract\n\nWe're looking for a hands-on Power Platform Engineer to design, build and support secure, scalable business applications and workflow automation in a large enterprise environment.\n\nWhat",
+        "scrapedAt": "2026-11-19 11:12:56",
+        "dateGroup": "2026-11-19",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
       {
         "id": "jsearch-OUFiUko1YmRhMVhSQmJaZkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVVp4V0VwbGNFRnpVVWN4VVhCT1owOTVZVEpqVEdkb1pGVkRkV2hoY1dOcFYwMWxWV2RET1MxWVdIVkZlbEJ0Y0hWWmFESk9XRVJIT1d0emIwaDJka0pzTFZnMWRHaGZTMk41ZFZodk5FVTBSR3B0VDBKRlpsZzBlSEJZWTBkb2IyZHBXVWRhV1haUFgyUjViVFZ2TmtWa04wSlpWblZZUTJaUk0xVm5SazkzZFdwWVkzRVNGMWxOUkMxaGNtWk1SVXRmWlRKeWIxQnpjMmx0TmtGUkdpSkJTRTR3UlRkRk5sTkRVRXRvTnpsQmNEQmFPR05yUzJwT1FtVTJSVkZST1hKbjpjNGQ1YzJjMg",
         "profileId": "power-platform",
@@ -745,6 +790,42 @@
       }
     ],
     "full-stack": [
+      {
+        "id": "job-316fab21",
+        "profileId": "full-stack",
+        "title": "Senior .NET Developer – Digital Payments & Subscription Commerce",
+        "company": "Tech Company",
+        "location": "Remote Worldwide",
+        "url": "https://himalayas.app/companies/gulf-coast-automation-group/jobs/senior-net-developer-digital-payments-subscription-commerce",
+        "tags": [
+          "[.NET]"
+        ],
+        "source": "himalayas",
+        "description": "Job Title: Senior . NET Developer – Digital Payments & Subscription Commerce Primary Location: Lisle, IL Position Type: Contract Overview TalentFish is casting a line for a Senior / Lead .",
+        "scrapedAt": "2026-11-19 11:13:03",
+        "dateGroup": "2026-11-19",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-dEZDU3dBSEpNXzFUQUM0dkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXWEZ1VFZwa1JrbHVRMHBCV1RZM01UWlhNSG95UkU1V1lqaG9TVTVHTjJaeVFtMUhTVk5YU0dSMWJVTm1kSEI0VUdvNE1HSkhNSGhCUTFsVGRVZzFRbkZJU2pOQlIzRXhNV2hxU0ZBd2JGTk5SRWszY1RWUmVXMHdiRUp4VDJGd1RFUXlOMmsxVGsxMVZteDJVMDAwZEVFM1praElNbVZrU0ROT1NIUjRNRms1VG1rMVRHRVNGM1pPYmkxaGIybFNUVGd5YlhGMGMxQjBUVmhxWjFGSkdpSkJTRTR3UlRkR2F6ZEdVMUZJU0RVMWVXTjBaRjlmVDBaSFlreHJOSEpoYjJSbjoxMWIwYWZhNA",
+        "profileId": "full-stack",
+        "title": "Java Full Stack with Angular",
+        "company": "Capgemini",
+        "location": "Bengaluru, Karnataka, India",
+        "url": "https://www.capgemini.com/in-en/jobs/566873-en_GB+sap_btp",
+        "tags": [
+          "[Angular]"
+        ],
+        "source": "capgemini",
+        "description": "Job DescriptionJob Description - Grade SpecificIs fully competent in its own area and has a deep understanding of related programming concepts software design and software development principles. Works autonomously with minimal supervision. Able to a",
+        "scrapedAt": "2026-11-19 11:13:03",
+        "dateGroup": "2026-11-19",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
       {
         "id": "jsearch-RDhZczRvN25TbzFvOFJkQkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXakZvTkVwa2NYRnhRMUJxV0dnd2FGVTVYMUU1TkZSaVZUYzJRazlpZUhNNWEyWmhWRkZVVW5WdmVHMWZZVEI2U25kNFVFRTBWWFJSTkRGU2JtUkVjbTFUVUZOR05XRlFkSGszU0U1dlRWcE9URGt0YzFSVlVrUkZUMDlyU2w5VGNsTjNWMGd4ZHpRNWNHaHFXWGhXTlZwRlFVRTJVWGxMYkc5eVVqRjNNMWxOWjNONFNGb1NGMkpqUkMxaGRTMWtTRGwxUWpKeWIxQjJaR1ZhTFZGbkdpSkJTRTR3UlRkRmRGSlBVVTVXUkRCamREVjFURTlsTlZGMVoyeG5kMjFYYkdOQjo4NmZmMDIzOQ",
         "profileId": "full-stack",
@@ -3841,6 +3922,87 @@
     ]
   },
   "allJobs": [
+    {
+      "id": "job-316fab21",
+      "profileId": "full-stack",
+      "title": "Senior .NET Developer – Digital Payments & Subscription Commerce",
+      "company": "Tech Company",
+      "location": "Remote Worldwide",
+      "url": "https://himalayas.app/companies/gulf-coast-automation-group/jobs/senior-net-developer-digital-payments-subscription-commerce",
+      "tags": [
+        "[.NET]"
+      ],
+      "source": "himalayas",
+      "description": "Job Title: Senior . NET Developer – Digital Payments & Subscription Commerce Primary Location: Lisle, IL Position Type: Contract Overview TalentFish is casting a line for a Senior / Lead .",
+      "scrapedAt": "2026-11-19 11:13:03",
+      "dateGroup": "2026-11-19",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-dEZDU3dBSEpNXzFUQUM0dkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXWEZ1VFZwa1JrbHVRMHBCV1RZM01UWlhNSG95UkU1V1lqaG9TVTVHTjJaeVFtMUhTVk5YU0dSMWJVTm1kSEI0VUdvNE1HSkhNSGhCUTFsVGRVZzFRbkZJU2pOQlIzRXhNV2hxU0ZBd2JGTk5SRWszY1RWUmVXMHdiRUp4VDJGd1RFUXlOMmsxVGsxMVZteDJVMDAwZEVFM1praElNbVZrU0ROT1NIUjRNRms1VG1rMVRHRVNGM1pPYmkxaGIybFNUVGd5YlhGMGMxQjBUVmhxWjFGSkdpSkJTRTR3UlRkR2F6ZEdVMUZJU0RVMWVXTjBaRjlmVDBaSFlreHJOSEpoYjJSbjoxMWIwYWZhNA",
+      "profileId": "full-stack",
+      "title": "Java Full Stack with Angular",
+      "company": "Capgemini",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://www.capgemini.com/in-en/jobs/566873-en_GB+sap_btp",
+      "tags": [
+        "[Angular]"
+      ],
+      "source": "capgemini",
+      "description": "Job DescriptionJob Description - Grade SpecificIs fully competent in its own area and has a deep understanding of related programming concepts software design and software development principles. Works autonomously with minimal supervision. Able to a",
+      "scrapedAt": "2026-11-19 11:13:03",
+      "dateGroup": "2026-11-19",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-T1piWXgtbXZfV2pSdFlyLUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbWxuY2pGclYwNXBZVzlNWmtJMFdGVnZha3BvWW1GS05Vb3ljR3hCTkRRMlFWY3hTWGhLTlRsVmJUSlRkR0o1TUdSaVJGSnRVRFZPY3pCV1ZuaHhPVWRLZDB4YUxVbHFTblJvVFdadGNEVTJXR0ZaUVMxeWF6TlhOR0Z6ZEVFNVYwZFRYMDl6YTJkcFYyNU5iREpUTTJvMmNsZGlNbVp1TUZJNGJVdHpWV0kyZDFNeFkxVVNGM05rYmkxaGNUZG1SMlJJU210UVNWQXlaa056YVZGakdpSkJTRTR3UlRkSWVVMUtVWEZsT0c1c1pYZHNXVU5pVjJFeWFEUnhNbUpHZFZCMzoyNWU0NjkyYQ",
+      "profileId": "power-platform",
+      "title": "Application Developer - Microsoft Power Platform (Digital Workplace) (COT)",
+      "company": "Liebherr CMCtec India Private Limited",
+      "location": "Pune, Maharashtra, India",
+      "url": "https://www.liebherr.com/en-int/j/careers/job-vacancies/82228-en-5370610",
+      "tags": [
+        "[Canvas Apps]",
+        "[Power Automate]",
+        "[SharePoint Online]",
+        "[M365 / PL-400]",
+        "[Model-Driven]"
+      ],
+      "source": "liebherr",
+      "description": "Creating passion: your responsibilities\n\nRoles & Responsibilities :\n• Design and develop solutions using Microsoft Power Platform (Power Apps, Power Automate)\n• Collaborate with Business Analysts and stakeholders to gather and refine requirements\n• E",
+      "scrapedAt": "2026-11-19 11:12:56",
+      "dateGroup": "2026-11-19",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-NVZxSXBYQXItUUVBWFJfOEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVGROTm1FemRsRkxkbEJtZGtSWlkwMDVaMnRaVVRaeE4zWjFkakl4WjNoSFh5MDViMXA1WTBNMWREaE5SVTl5WlZaR1ZYVk9XbFpNYm1sRFlWSTFUR0puVkRCVmRHa3pSa3hOWjNSU09HODJjekYxUWt4RVMyVXdaV0pVVGxGM1VUWXhaMUEzYzJGWFJVbDBWelJGYUd4c1R6bFBUVFpxZVVsd1FTMTRTRmh6UkhNeFEyTVNGM1IwYmkxaGNVZDJSR05oVXpoTU1GQTJObkZKYlVFMEdpSkJTRTR3UlRkRlRYcEhSR3RXUVhnM1VtWXdTbVZDVlRaaU1HSjFiazFwTURoQjo0MzZlODE4Yw",
+      "profileId": "power-platform",
+      "title": "Power Platform Engineer",
+      "company": "Document IT LLC",
+      "location": "India",
+      "url": "https://www.foundit.in/job/power-platform-engineer-document-it-llc-india-69809582",
+      "tags": [
+        "[Canvas Apps]",
+        "[Power Automate]",
+        "[Dataverse]",
+        "[SharePoint Online]",
+        "[M365 / PL-400]",
+        "[Model-Driven]"
+      ],
+      "source": "foundit",
+      "description": "We're Hiring: Power Platform Engineer\n\nRemote, India | Contract\n\nWe're looking for a hands-on Power Platform Engineer to design, build and support secure, scalable business applications and workflow automation in a large enterprise environment.\n\nWhat",
+      "scrapedAt": "2026-11-19 11:12:56",
+      "dateGroup": "2026-11-19",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
     {
       "id": "job-29dc395d",
       "profileId": "java-backend",
