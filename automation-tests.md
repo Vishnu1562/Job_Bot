@@ -510,6 +510,30 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Ingests direct official career listings straight from company ATS systems with zero API keys required.
 - **Final State**: High-trust official career listings directly populated into morning digests and web portal.
 
+#### [HF-055] Dropdown Filter Controls in Toolbar & Deprecation of "Priority" Word
+- **Preconditions**: Web portal loaded with active job listings across multiple profiles, dates, regions, and tracker states.
+- **Action**:
+  1. Replace horizontal role tab strip and segmented filter buttons with cohesive dropdown select controls in the toolbar:
+     - Role Selector: `<select id="role-select">` (`All Roles (total)` + per-profile options).
+     - Status Selector: `<select id="status-select">` (`All Active`, `Saved`, `Applied`).
+     - Region Selector: `<select id="tier-select">` (`All Regions`, `Domestic`, `Remote`).
+     - Timeline Selector: `<select id="date-select">` (`All Dates`, `Today's Batch`, `Yesterday`).
+  2. Deprecate the word "Priority" across all Domestic section headers and region options (e.g. `Domestic & Regional`, `Domestic`).
+  3. Reset button resets all dropdowns back to `'all'` and clears search input.
+- **Expected Result**: Compact, responsive, single-tier toolbar with seamless reactive filtering.
+- **Final State**: Modern SaaS dropdown controls with clean naming.
+
+#### [HF-056] Dynamic In-Section Distinct Company Filter Dropdowns
+- **Preconditions**: Domestic and Remote section header bars rendered in Grid view mode.
+- **Action**:
+  1. Compute the distinct list of company names present among the jobs in that section.
+  2. Embed `<select class="section-company-select" data-section="...">` directly in the section header bar.
+  3. Populate options with `All Companies ([Section Count])` and alphabetically sorted distinct companies with per-company job counts.
+  4. Selecting a company filters only that specific section's displayed cards.
+  5. Interacting with the company select invokes `event.stopPropagation()` so the section accordion does not toggle.
+- **Expected Result**: Independent, granular company filtering per section driven by distinct listed jobs.
+- **Final State**: Zero-clutter, dynamic company filtering directly within region headers.
+
 ---
 
 ### Negative Flows

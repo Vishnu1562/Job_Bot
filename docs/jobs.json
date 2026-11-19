@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T11:16:53.176Z",
+  "generatedAt": "2026-11-19T16:52:13.500Z",
   "totalJobsCount": 199,
   "profiles": [
     {
@@ -170,7 +170,7 @@
         "source": "prepterview",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:35",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -191,7 +191,7 @@
         "source": "cognizant careers",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:35",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": true
@@ -213,7 +213,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:35",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -233,7 +233,7 @@
         "source": "career at crowe",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:35",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -260,7 +260,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 11:28:20",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -339,8 +339,8 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:36",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -359,8 +359,8 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:36",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -913,7 +913,7 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -931,7 +931,7 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -949,7 +949,7 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -967,7 +967,7 @@
         "source": "hitachi careers",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -985,7 +985,7 @@
         "source": "citi careers",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1003,7 +1003,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1021,7 +1021,7 @@
         "source": "shine",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1039,7 +1039,7 @@
         "source": "jobrapido.com",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1057,7 +1057,7 @@
         "source": "citi careers",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1075,7 +1075,7 @@
         "source": "careers - xoriant",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1094,7 +1094,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 11:28:35",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1112,7 +1112,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 11:28:35",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1132,7 +1132,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 11:28:35",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1150,7 +1150,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 11:28:35",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1226,8 +1226,8 @@
         "source": "weworkremotely",
         "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://www.careerflow.ai\"&gt;https://www.careerflow.ai&lt;/a&gt;\n&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;About the Role:&lt",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1244,8 +1244,8 @@
         "source": "himalayas",
         "description": "The client is a software supply chain security company, that provides the world’s best end-to-end software supply chain security solution, combining the only proactive protection against malicious open source, the only enterprise grade SBOM managemen",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1262,8 +1262,8 @@
         "source": "my career solution",
         "description": "NeoSOFT is looking for an experienced Angular Developer with hands-on Angular 17 experience to join our team in Pune! Good understanding of NgRx, Monorepo, and Microfrontend architecture.\n\nCompany: Not publicly disclosed\nLocation: Pune\nExperience: 4-",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1280,8 +1280,8 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1298,8 +1298,8 @@
         "source": "jobicy",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1316,8 +1316,8 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1334,8 +1334,8 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1353,8 +1353,8 @@
         "source": "société générale careers",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1371,8 +1371,8 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -1389,8 +1389,8 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1407,8 +1407,8 @@
         "source": "iitjobs",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1427,8 +1427,8 @@
         "source": "corehrx",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1445,8 +1445,8 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1465,8 +1465,8 @@
         "source": "amgen",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1485,8 +1485,8 @@
         "source": "nexthire",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -1503,8 +1503,8 @@
         "source": "simplyhired",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1523,8 +1523,8 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1541,8 +1541,8 @@
         "source": "shine",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -1788,7 +1788,7 @@
         "dateGroup": "2026-11-17",
         "dateLabel": "Nov 17, 2026",
         "tier": "remote",
-        "isTargetCompany": false
+        "isTargetCompany": true
       },
       {
         "id": "job-23f67196",
@@ -2849,7 +2849,7 @@
         "source": "nexthire",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:58",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -2872,7 +2872,7 @@
         "source": "workday",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:58",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -2895,7 +2895,7 @@
         "source": "shine",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:58",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -2919,7 +2919,7 @@
         "source": "myinternships.in",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:58",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -2943,7 +2943,7 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -2961,7 +2961,7 @@
         "source": "himalayas",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -2980,7 +2980,7 @@
         "source": "shine",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3002,7 +3002,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3024,7 +3024,7 @@
         "source": "indeed",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3046,7 +3046,7 @@
         "source": "simplyhired",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-19",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3091,8 +3091,8 @@
         "source": "himalayas",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -3114,8 +3114,8 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3132,8 +3132,8 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3155,8 +3155,8 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -3182,8 +3182,8 @@
         "source": "cognizant careers",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -3205,8 +3205,8 @@
         "source": "corehrx",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3226,8 +3226,8 @@
         "source": "simplyhired",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3249,8 +3249,8 @@
         "source": "myinternships.in",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3269,8 +3269,8 @@
         "source": "jobleads",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3292,8 +3292,8 @@
         "source": "shine",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3315,8 +3315,8 @@
         "source": "smart recruiters jobs",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateGroup": "2026-11-17",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -4345,7 +4345,7 @@
       "source": "nexthire",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:58",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4368,7 +4368,7 @@
       "source": "workday",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:58",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4391,7 +4391,7 @@
       "source": "shine",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:58",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4415,7 +4415,7 @@
       "source": "myinternships.in",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:58",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4439,7 +4439,7 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -4457,7 +4457,7 @@
       "source": "himalayas",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -4476,7 +4476,7 @@
       "source": "shine",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4498,7 +4498,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4520,7 +4520,7 @@
       "source": "indeed",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4542,7 +4542,7 @@
       "source": "simplyhired",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4560,7 +4560,7 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -4578,7 +4578,7 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -4596,7 +4596,7 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -4614,7 +4614,7 @@
       "source": "hitachi careers",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4632,7 +4632,7 @@
       "source": "citi careers",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4650,7 +4650,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4668,7 +4668,7 @@
       "source": "shine",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4686,7 +4686,7 @@
       "source": "jobrapido.com",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4704,7 +4704,7 @@
       "source": "citi careers",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4722,7 +4722,7 @@
       "source": "careers - xoriant",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4742,7 +4742,7 @@
       "source": "prepterview",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:35",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4763,7 +4763,7 @@
       "source": "cognizant careers",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:35",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": true
@@ -4785,7 +4785,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:35",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4805,7 +4805,7 @@
       "source": "career at crowe",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:35",
-      "dateGroup": "2026-11-19",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4824,7 +4824,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 11:28:35",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4842,7 +4842,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 11:28:35",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4862,7 +4862,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 11:28:35",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4880,7 +4880,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 11:28:35",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4906,7 +4906,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 11:28:20",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5066,8 +5066,8 @@
       "source": "himalayas",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5089,8 +5089,8 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5107,8 +5107,8 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5130,8 +5130,8 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -5157,8 +5157,8 @@
       "source": "cognizant careers",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -5180,8 +5180,8 @@
       "source": "corehrx",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5201,8 +5201,8 @@
       "source": "simplyhired",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5224,8 +5224,8 @@
       "source": "myinternships.in",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5244,8 +5244,8 @@
       "source": "jobleads",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5267,8 +5267,8 @@
       "source": "shine",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5290,8 +5290,8 @@
       "source": "smart recruiters jobs",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5308,8 +5308,8 @@
       "source": "weworkremotely",
       "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://www.careerflow.ai\"&gt;https://www.careerflow.ai&lt;/a&gt;\n&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;About the Role:&lt",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5326,8 +5326,8 @@
       "source": "himalayas",
       "description": "The client is a software supply chain security company, that provides the world’s best end-to-end software supply chain security solution, combining the only proactive protection against malicious open source, the only enterprise grade SBOM managemen",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5344,8 +5344,8 @@
       "source": "my career solution",
       "description": "NeoSOFT is looking for an experienced Angular Developer with hands-on Angular 17 experience to join our team in Pune! Good understanding of NgRx, Monorepo, and Microfrontend architecture.\n\nCompany: Not publicly disclosed\nLocation: Pune\nExperience: 4-",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5362,8 +5362,8 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5380,8 +5380,8 @@
       "source": "jobicy",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5398,8 +5398,8 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -5416,8 +5416,8 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5435,8 +5435,8 @@
       "source": "société générale careers",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5453,8 +5453,8 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -5471,8 +5471,8 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5489,8 +5489,8 @@
       "source": "iitjobs",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5509,8 +5509,8 @@
       "source": "corehrx",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5527,8 +5527,8 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5547,8 +5547,8 @@
       "source": "amgen",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5567,8 +5567,8 @@
       "source": "nexthire",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -5585,8 +5585,8 @@
       "source": "simplyhired",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5605,8 +5605,8 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5623,8 +5623,8 @@
       "source": "shine",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -5646,8 +5646,8 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:36",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5666,8 +5666,8 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:36",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateGroup": "2026-11-17",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6831,7 +6831,7 @@
       "dateGroup": "2026-11-17",
       "dateLabel": "Nov 17, 2026",
       "tier": "remote",
-      "isTargetCompany": false
+      "isTargetCompany": true
     },
     {
       "id": "job-23f67196",

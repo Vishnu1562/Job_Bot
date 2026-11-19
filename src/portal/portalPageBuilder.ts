@@ -63,6 +63,13 @@ export function buildPortalHtml(data: PortalData): string {
     })
     .join('');
 
+  const profileOptionsHtml = data.profiles
+    .map(p => {
+      const shortName = formatProfileShortName(p.name);
+      return `<option value="${escapeHtml(p.id)}">${escapeHtml(shortName)} (${p.jobsCount})</option>`;
+    })
+    .join('');
+
   const jsonString = JSON.stringify(data);
 
   let lastSyncedFormatted = 'Just now';
@@ -84,6 +91,7 @@ export function buildPortalHtml(data: PortalData): string {
     .replace(/\{\{TOTAL_JOBS_COUNT\}\}/g, String(data.totalJobsCount))
     .replace(/\{\{LAST_SYNCED_TIME\}\}/g, lastSyncedFormatted)
     .replace(/\{\{PROFILE_PILLS\}\}/g, profilePillsHtml)
+    .replace(/\{\{PROFILE_OPTIONS\}\}/g, profileOptionsHtml)
     .replace(/\{\{PORTAL_DATA_JSON\}\}/g, jsonString);
 }
 

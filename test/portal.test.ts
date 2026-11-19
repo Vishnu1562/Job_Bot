@@ -156,10 +156,10 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
       assert.ok(!html.includes('<style>\n    :root') && !html.includes('<style>:root'), 'Must NOT have monolithic inline <style> block');
       assert.ok(html.includes('<!-- @portal:app -->') || html.includes('id="app"'), 'Must have root container');
 
-      // 2. Verify Modern Profile Tab Strip & Unified Filter Strip (HF-044)
-      assert.ok(html.includes('id="profile-tabs-strip"') || html.includes('class="profile-tabs-strip"'), 'Must render scalable profile tabs strip');
-      assert.ok(html.includes('data-profile="power-platform"'), 'Must render Power Platform tab');
-      assert.ok(html.includes('data-profile="java-backend"'), 'Must render Java Backend tab');
+      // 2. Verify Modern Role Dropdown Selector & Unified Filter Toolbar (HF-044 & HF-055)
+      assert.ok(html.includes('id="role-select"'), 'Must render scalable role select dropdown (HF-055)');
+      assert.ok(html.includes('value="power-platform"'), 'Must render Power Platform role option');
+      assert.ok(html.includes('value="java-backend"'), 'Must render Java Backend role option');
       assert.ok(html.includes('id="filter-toolbar"') || html.includes('class="filter-toolbar"'), 'Must render unified filter toolbar');
 
       // 3. Verify Offline Bootstrap Data Embedded ([EC-021])
@@ -225,6 +225,23 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
         assert.ok(jsContent.includes('region-section-block'), 'app.js must organize feed directly under regional blocks (HF-048)');
         assert.ok(!jsContent.includes('Domestic Priority</span>'), 'Job cards must not contain redundant Domestic Priority badge (HF-050)');
         assert.ok(!jsContent.includes('Global Remote</span>'), 'Job cards must not contain redundant Global Remote badge (HF-050)');
+
+        // HF-055: Dropdown Select Controls & Deprecation of "Priority" Word
+        assert.ok(indexContent.includes('id="role-select"'), 'index.html must contain role-select dropdown (HF-055)');
+        assert.ok(indexContent.includes('id="status-select"'), 'index.html must contain status-select dropdown (HF-055)');
+        assert.ok(indexContent.includes('id="tier-select"'), 'index.html must contain tier-select dropdown (HF-055)');
+        assert.ok(indexContent.includes('id="date-select"'), 'index.html must contain date-select dropdown (HF-055)');
+        assert.strictEqual(indexContent.includes('Domestic Priority'), false, 'index.html must not contain "Domestic Priority" (HF-055)');
+
+        // HF-056: In-Section Distinct Company Filter Dropdowns & StopPropagation
+        assert.ok(jsContent.includes('section-company-select'), 'app.js must render section-company-select dropdown (HF-056)');
+        assert.ok(jsContent.includes('data-section="domestic"'), 'app.js must support domestic section company filter (HF-056)');
+        assert.ok(jsContent.includes('data-section="remote"'), 'app.js must support remote section company filter (HF-056)');
+        assert.strictEqual(jsContent.includes('Domestic &amp; Regional Priority'), false, 'app.js must not contain Priority in Domestic header (HF-055)');
+        assert.ok(jsContent.includes('Domestic &amp; Regional (LinkedIn, Naukri &amp; Corporate Boards)'), 'app.js must render clean Domestic header without Priority (HF-055)');
+        assert.ok(jsContent.includes('tier-actions-wrap'), 'app.js must wrap section actions with stopPropagation (HF-056)');
+        assert.ok(cssContent.includes('.section-company-select'), 'styles.css must style section-company-select (HF-056)');
+        assert.ok(cssContent.includes('.tier-actions-wrap'), 'styles.css must style tier-actions-wrap (HF-056)');
 
         // HF-050: isDomesticJob classification accuracy
         assert.strictEqual(

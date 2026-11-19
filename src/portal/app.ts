@@ -109,6 +109,7 @@ type TrackerState = Record<string, TrackerEntry>;
   let selectedStatus = 'all';
   let selectedDate = 'all';
   let selectedTier = 'all';
+  let sectionCompanyFilter: { domestic: string; remote: string } = { domestic: 'all', remote: 'all' };
   let currentViewMode = localStorage.getItem(VIEW_KEY) || 'grid';
   let searchQuery = '';
   let activeDrawerJob: JobItem | null = null;
@@ -182,6 +183,14 @@ type TrackerState = Record<string, TrackerEntry>;
     if (kpiSaved) kpiSaved.textContent = String(savedCount);
     if (statusSavedBadge) statusSavedBadge.textContent = String(savedCount);
     if (statusAppliedBadge) statusAppliedBadge.textContent = String(appliedCount);
+
+    const statusSelect = document.getElementById('status-select') as HTMLSelectElement | null;
+    if (statusSelect) {
+      const optSaved = statusSelect.querySelector('option[value="saved"]');
+      if (optSaved) optSaved.textContent = `Saved (${savedCount})`;
+      const optApplied = statusSelect.querySelector('option[value="applied"]');
+      if (optApplied) optApplied.textContent = `Applied (${appliedCount})`;
+    }
   }
 
   // 8. Drawer Sheet Engine
@@ -480,7 +489,11 @@ type TrackerState = Record<string, TrackerEntry>;
 
     // Regional Section Collapsible Handlers (HF-047 & HF-048)
     document.querySelectorAll('.tier-header-bar').forEach(tierHeader => {
-      tierHeader.addEventListener('click', function () {
+      tierHeader.addEventListener('click', function (e) {
+        const target = e.target as HTMLElement | null;
+        if (target && (target.closest('.tier-actions-wrap') || target.closest('.section-company-select'))) {
+          return;
+        }
         toggleSectionCollapse(this as HTMLElement, '.region-section-block');
       });
       tierHeader.addEventListener('keydown', function (e: Event) {
@@ -488,6 +501,21 @@ type TrackerState = Record<string, TrackerEntry>;
         if (keyEvent.key === 'Enter' || keyEvent.key === ' ') {
           keyEvent.preventDefault();
           toggleSectionCollapse(this as HTMLElement, '.region-section-block');
+        }
+      });
+    });
+
+    // In-Section Distinct Company Filter Handlers (HF-056)
+    document.querySelectorAll('.section-company-select').forEach(selectElem => {
+      selectElem.addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
+      selectElem.addEventListener('change', function (this: HTMLSelectElement, e: Event) {
+        e.stopPropagation();
+        const section = this.getAttribute('data-section') as 'domestic' | 'remote';
+        if (section && (section === 'domestic' || section === 'remote')) {
+          sectionCompanyFilter[section] = this.value;
+          render();
         }
       });
     });
@@ -501,7 +529,9 @@ type TrackerState = Record<string, TrackerEntry>;
       selectedProfile !== 'all' ||
       selectedStatus !== 'all' ||
       selectedDate !== 'all' ||
-      selectedTier !== 'all';
+      selectedTier !== 'all' ||
+      sectionCompanyFilter.domestic !== 'all' ||
+      sectionCompanyFilter.remote !== 'all';
     resetBtn.style.display = isFiltered ? 'inline-flex' : 'none';
   }
 
@@ -511,9 +541,22 @@ type TrackerState = Record<string, TrackerEntry>;
     selectedStatus = 'all';
     selectedDate = 'all';
     selectedTier = 'all';
+    sectionCompanyFilter = { domestic: 'all', remote: 'all' };
 
     const searchInput = document.getElementById('search-input') as HTMLInputElement | null;
     if (searchInput) searchInput.value = '';
+
+    const roleSelect = document.getElementById('role-select') as HTMLSelectElement | null;
+    if (roleSelect) roleSelect.value = 'all';
+
+    const statusSelect = document.getElementById('status-select') as HTMLSelectElement | null;
+    if (statusSelect) statusSelect.value = 'all';
+
+    const tierSelect = document.getElementById('tier-select') as HTMLSelectElement | null;
+    if (tierSelect) tierSelect.value = 'all';
+
+    const dateSelect = document.getElementById('date-select') as HTMLSelectElement | null;
+    if (dateSelect) dateSelect.value = 'all';
 
     document.querySelectorAll('#profile-tabs-strip button').forEach(b => {
       b.classList.toggle('active', b.getAttribute('data-profile') === 'all');
@@ -584,6 +627,37 @@ type TrackerState = Record<string, TrackerEntry>;
     const domesticJobs = filtered.filter(j => j.tier === 'domestic');
     const remoteJobs = filtered.filter(j => j.tier === 'remote');
 
+    // In-Section Distinct Company Computation (HF-056)
+    const domesticCompanyCounts: Record<string, number> = {};
+    domesticJobs.forEach(j => {
+      const c = (j.company || '').trim();
+      if (c) domesticCompanyCounts[c] = (domesticCompanyCounts[c] || 0) + 1;
+    });
+    const domesticCompanies = Object.keys(domesticCompanyCounts).sort((a, b) => a.localeCompare(b));
+
+    const remoteCompanyCounts: Record<string, number> = {};
+    remoteJobs.forEach(j => {
+      const c = (j.company || '').trim();
+      if (c) remoteCompanyCounts[c] = (remoteCompanyCounts[c] || 0) + 1;
+    });
+    const remoteCompanies = Object.keys(remoteCompanyCounts).sort((a, b) => a.localeCompare(b));
+
+    // Preserve company filter if valid, otherwise reset to 'all'
+    if (sectionCompanyFilter.domestic !== 'all' && !domesticCompanies.some(c => c.toLowerCase() === sectionCompanyFilter.domestic.toLowerCase())) {
+      sectionCompanyFilter.domestic = 'all';
+    }
+    if (sectionCompanyFilter.remote !== 'all' && !remoteCompanies.some(c => c.toLowerCase() === sectionCompanyFilter.remote.toLowerCase())) {
+      sectionCompanyFilter.remote = 'all';
+    }
+
+    const displayedDomesticJobs = sectionCompanyFilter.domestic === 'all'
+      ? domesticJobs
+      : domesticJobs.filter(j => (j.company || '').trim().toLowerCase() === sectionCompanyFilter.domestic.toLowerCase());
+
+    const displayedRemoteJobs = sectionCompanyFilter.remote === 'all'
+      ? remoteJobs
+      : remoteJobs.filter(j => (j.company || '').trim().toLowerCase() === sectionCompanyFilter.remote.toLowerCase());
+
     let html = '';
 
     if (currentViewMode === 'grid') {
@@ -593,14 +667,27 @@ type TrackerState = Record<string, TrackerEntry>;
           <div class="region-section-block">
             <div class="tier-header-bar tier-domestic" role="button" tabindex="0" aria-expanded="true" aria-label="Toggle Domestic Region Section">
               <div class="tier-title-wrap">
-                <span>${ICONS.locationPin}Domestic &amp; Regional Priority (LinkedIn, Naukri &amp; Corporate Boards)</span>
+                <span>${ICONS.locationPin}Domestic &amp; Regional (LinkedIn, Naukri &amp; Corporate Boards)</span>
                 <span class="collapse-chevron">▾</span>
               </div>
-              <span class="tier-count-badge badge-domestic">${domesticJobs.length} Verified</span>
+              <div class="tier-actions-wrap" onclick="event.stopPropagation();">
+                <select class="section-company-select" data-section="domestic" aria-label="Filter Domestic jobs by company">
+                  <option value="all">All Companies (${domesticJobs.length})</option>
+                  ${domesticCompanies.map(c => `
+                    <option value="${escapeHtml(c)}" ${sectionCompanyFilter.domestic.toLowerCase() === c.toLowerCase() ? 'selected' : ''}>
+                      ${escapeHtml(c)} (${domesticCompanyCounts[c]})
+                    </option>
+                  `).join('')}
+                </select>
+                <span class="tier-count-badge badge-domestic">${displayedDomesticJobs.length} Verified</span>
+              </div>
             </div>
             <div class="region-content-wrap">
               <div class="jobs-grid">
-                ${domesticJobs.map(j => renderCard(j, trackerState[j.url] || {})).join('')}
+                ${displayedDomesticJobs.length > 0
+                  ? displayedDomesticJobs.map(j => renderCard(j, trackerState[j.url] || {})).join('')
+                  : `<div style="grid-column: 1 / -1; padding: 24px; text-align: center; color: var(--text-muted); font-size: 13px;">No jobs found for selected company in Domestic.</div>`
+                }
               </div>
             </div>
           </div>
@@ -616,11 +703,24 @@ type TrackerState = Record<string, TrackerEntry>;
                 <span>${ICONS.globe}Curated Global &amp; Remote Opportunities</span>
                 <span class="collapse-chevron">▾</span>
               </div>
-              <span class="tier-count-badge badge-remote">${remoteJobs.length} Roles</span>
+              <div class="tier-actions-wrap" onclick="event.stopPropagation();">
+                <select class="section-company-select" data-section="remote" aria-label="Filter Remote jobs by company">
+                  <option value="all">All Companies (${remoteJobs.length})</option>
+                  ${remoteCompanies.map(c => `
+                    <option value="${escapeHtml(c)}" ${sectionCompanyFilter.remote.toLowerCase() === c.toLowerCase() ? 'selected' : ''}>
+                      ${escapeHtml(c)} (${remoteCompanyCounts[c]})
+                    </option>
+                  `).join('')}
+                </select>
+                <span class="tier-count-badge badge-remote">${displayedRemoteJobs.length} Roles</span>
+              </div>
             </div>
             <div class="region-content-wrap">
               <div class="jobs-grid">
-                ${remoteJobs.map(j => renderCard(j, trackerState[j.url] || {})).join('')}
+                ${displayedRemoteJobs.length > 0
+                  ? displayedRemoteJobs.map(j => renderCard(j, trackerState[j.url] || {})).join('')
+                  : `<div style="grid-column: 1 / -1; padding: 24px; text-align: center; color: var(--text-muted); font-size: 13px;">No jobs found for selected company in Remote.</div>`
+                }
               </div>
             </div>
           </div>
@@ -628,6 +728,7 @@ type TrackerState = Record<string, TrackerEntry>;
       }
     } else {
       // High-Density Table List View (HF-040)
+      const displayedTableJobs = [...displayedDomesticJobs, ...displayedRemoteJobs];
       html += `
         <div class="table-view-container">
           <table class="jobs-table">
@@ -641,7 +742,7 @@ type TrackerState = Record<string, TrackerEntry>;
               </tr>
             </thead>
             <tbody>
-              ${filtered.map(j => renderTableRow(j, trackerState[j.url] || {})).join('')}
+              ${displayedTableJobs.map(j => renderTableRow(j, trackerState[j.url] || {})).join('')}
             </tbody>
           </table>
         </div>
@@ -749,6 +850,39 @@ type TrackerState = Record<string, TrackerEntry>;
         render();
       });
     });
+
+    // Dropdown Select Controls (HF-055)
+    const roleSelect = document.getElementById('role-select') as HTMLSelectElement | null;
+    if (roleSelect) {
+      roleSelect.addEventListener('change', function (this: HTMLSelectElement) {
+        selectedProfile = this.value;
+        render();
+      });
+    }
+
+    const statusSelect = document.getElementById('status-select') as HTMLSelectElement | null;
+    if (statusSelect) {
+      statusSelect.addEventListener('change', function (this: HTMLSelectElement) {
+        selectedStatus = this.value;
+        render();
+      });
+    }
+
+    const tierSelect = document.getElementById('tier-select') as HTMLSelectElement | null;
+    if (tierSelect) {
+      tierSelect.addEventListener('change', function (this: HTMLSelectElement) {
+        selectedTier = this.value;
+        render();
+      });
+    }
+
+    const dateSelect = document.getElementById('date-select') as HTMLSelectElement | null;
+    if (dateSelect) {
+      dateSelect.addEventListener('change', function (this: HTMLSelectElement) {
+        selectedDate = this.value;
+        render();
+      });
+    }
 
     // Reset Filters Button
     const resetBtn = document.getElementById('filter-reset-btn');
