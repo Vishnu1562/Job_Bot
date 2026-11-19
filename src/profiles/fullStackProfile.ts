@@ -40,7 +40,9 @@ export function getFullStackProfile(
         'head of',
         'intern',
         'internship',
-        'fresher'
+        'fresher',
+        'manager',
+        'engineering manager'
       ]
     },
     queryTerms: ['full stack', 'angular', 'nestjs', 'dotnet', '.net developer'],

@@ -1,6 +1,7 @@
 import { getProfiles } from '../profiles/profileRegistry.ts';
 import { fetchJSearchJobs, fetchAdzunaJobs } from './jsearchScraper.ts';
 import { fetchRemoteBoardJobs } from './remoteBoardsScraper.ts';
+import { fetchDirectAtsJobs } from './atsScraper.ts';
 import type { Job, JobProfile } from '../types.ts';
 
 export {
@@ -17,6 +18,13 @@ export {
   fetchJSearchJobs,
   fetchAdzunaJobs
 } from './jsearchScraper.ts';
+
+export {
+  parseGreenhouseJob,
+  parseLeverJob,
+  parseSmartRecruitersJob,
+  fetchDirectAtsJobs
+} from './atsScraper.ts';
 
 export {
   generateJobId,
@@ -39,7 +47,8 @@ export async function fetchJobsForProfile(profile: JobProfile): Promise<Job[]> {
   await Promise.allSettled([
     fetchRemoteBoardJobs(profile, addUnique),
     fetchJSearchJobs(profile, addUnique),
-    fetchAdzunaJobs(profile, addUnique)
+    fetchAdzunaJobs(profile, addUnique),
+    fetchDirectAtsJobs(profile, addUnique)
   ]);
 
   console.log(`[Scraper][${profile.name}] Total matching jobs collected: ${jobs.length}`);

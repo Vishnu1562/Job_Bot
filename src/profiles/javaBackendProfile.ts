@@ -42,7 +42,9 @@ export function getJavaBackendProfile(
         'intern',
         'internship',
         'fresher',
-        'entry level'
+        'entry level',
+        'manager',
+        'engineering manager'
       ]
     },
     queryTerms: ['java developer', 'spring boot', 'java backend', 'java engineer'],

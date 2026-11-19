@@ -35,7 +35,9 @@ export function getPowerPlatformProfile(
         'intern',
         'internship',
         'fresher',
-        'entry level'
+        'entry level',
+        'manager',
+        'engineering manager'
       ]
     },
     queryTerms: [

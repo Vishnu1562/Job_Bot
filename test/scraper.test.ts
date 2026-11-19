@@ -174,6 +174,78 @@ describe('[HF-001] Scraper Normalizers & Parsers', () => {
       assert.strictEqual(job?.isTargetCompany, true, 'Cognizant is target company');
     });
 
+    it('prioritizes direct employer career portal link from apply_options over LinkedIn/Indeed (HF-053)', () => {
+      const rawWithDirect = {
+        job_id: 'jsearch-777',
+        job_title: 'Senior Power Apps Developer',
+        employer_name: 'Deloitte',
+        job_city: 'Hyderabad',
+        job_state: 'Telangana',
+        job_country: 'IN',
+        job_is_remote: false,
+        job_apply_link: 'https://in.linkedin.com/jobs/view/999888',
+        job_publisher: 'LinkedIn',
+        job_description: 'Power Platform Canvas Apps and Dataverse development with 4-6 years experience.',
+        apply_options: [
+          {
+            publisher: 'LinkedIn',
+            apply_link: 'https://in.linkedin.com/jobs/view/999888',
+            is_direct: false
+          },
+          {
+            publisher: 'Deloitte Careers',
+            apply_link: 'https://careers.deloitte.com/job/deloitte-senior-power-apps-developer-777',
+            is_direct: true
+          }
+        ]
+      };
+
+      const powerProfile = profiles.find((p) => p.id === 'power-platform')!;
+      const job = parseJSearchJob(rawWithDirect, powerProfile);
+      assert.ok(job);
+      assert.strictEqual(
+        job?.url,
+        'https://careers.deloitte.com/job/deloitte-senior-power-apps-developer-777',
+        'Must prioritize direct career portal URL over aggregator'
+      );
+      assert.strictEqual(
+        job?.source.toLowerCase().includes('careers') || job?.source.toLowerCase().includes('deloitte'),
+        true,
+        'Source must reflect direct employer careers portal'
+      );
+    });
+
+    it('prioritizes corporate ATS domains in apply_options even without explicit is_direct flag (HF-053)', () => {
+      const rawWithAts = {
+        job_id: 'jsearch-888',
+        job_title: 'Java Backend Specialist',
+        employer_name: 'Crowe',
+        job_city: 'Bengaluru',
+        job_country: 'IN',
+        job_apply_link: 'https://in.indeed.com/viewjob?jk=indeed123',
+        job_publisher: 'Indeed',
+        job_description: 'Enterprise Java and Spring Boot with Docker and Microservices.',
+        apply_options: [
+          {
+            publisher: 'Indeed',
+            apply_link: 'https://in.indeed.com/viewjob?jk=indeed123'
+          },
+          {
+            publisher: 'Workday',
+            apply_link: 'https://crowe.wd3.myworkdayjobs.com/en-US/Crowe_Careers/job/R-1234'
+          }
+        ]
+      };
+
+      const job = parseJSearchJob(rawWithAts, javaProfile);
+      assert.ok(job);
+      assert.strictEqual(
+        job?.url,
+        'https://crowe.wd3.myworkdayjobs.com/en-US/Crowe_Careers/job/R-1234',
+        'Must detect and prioritize corporate Workday ATS URL'
+      );
+    });
+
     it('correctly maps Adzuna India job item', () => {
       const rawAdzuna = {
         id: 'adzuna-999',

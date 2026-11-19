@@ -483,6 +483,33 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Eliminates 7-8 hour delayed afternoon ghost runs caused by GitHub Actions shared queue delays, prevents unnecessary runner minutes consumption, and ensures punctual morning execution.
 - **Final State**: Deterministic, punctual single-trigger architecture with zero ghost runs.
 
+#### [HF-053] Direct-Career First URL Resolver in JSearch (Official Career Portals)
+- **Preconditions**: Job listings returned by JSearch with `apply_options` containing direct employer career links (`is_direct: true` or matching corporate ATS domains: Workday, Greenhouse, Lever, SmartRecruiters, Taleo, Ashby, iCIMS, Phenom, Eightfold, or company `careers.*` / `jobs.*` domains).
+- **Action**:
+  1. Inspect `raw.apply_options` for any direct application option marked `is_direct: true` or corporate ATS domain.
+  2. If found, overwrite the job's `url` with the official direct career portal link instead of aggregator URLs (LinkedIn/Indeed).
+  3. Set `source` to the company's official careers designation (e.g., `Deloitte Careers`, `Cognizant Careers`, `PwC Careers`, `Workday Direct`).
+  4. If no direct career link is present in `apply_options`, fall back safely to `raw.job_apply_link`.
+- **Expected Result**: Job seekers are sent directly to the official company career portal to apply without intermediate aggregator friction.
+- **Final State**: Clean direct employer career links prioritized across all profiles.
+
+#### [HF-054] Direct ATS API Connectors (Greenhouse, Lever, SmartRecruiters)
+- **Preconditions**: Public corporate career boards powered by Greenhouse, Lever, or SmartRecruiters (e.g. Big 4, UST Global, IBS Software, Cognizant, Postman, Razorpay, BrowserStack, Atlassian, GitLab, etc.).
+- **Action**:
+  1. Maintain a centralized registry `src/config/targetCompanies.ts` with company names, ATS platforms, and board slugs.
+  2. Query public JSON endpoints with timeout protection:
+     - Greenhouse: `https://boards-api.greenhouse.io/v1/boards/{slug}/jobs?content=true`
+     - Lever: `https://api.lever.co/v0/postings/{slug}?mode=json`
+     - SmartRecruiters: `https://api.smartrecruiters.com/v1/companies/{slug}/postings`
+  3. Extract job title, location, description, direct application URL, and publication timestamp.
+  4. Run each candidate through standard profile matching (`processCandidateJob`):
+     - Filter for India locations (Bangalore, Hyderabad, Pune, Mumbai, Gurgaon, Noida, Chennai, Kochi, etc.) or Worldwide / Remote.
+     - Match experience bounds against candidate profile.
+     - Skill tag via `tagSkills`.
+  5. Deduplicate and persist in `jobs.db`.
+- **Expected Result**: Ingests direct official career listings straight from company ATS systems with zero API keys required.
+- **Final State**: High-trust official career listings directly populated into morning digests and web portal.
+
 ---
 
 ### Negative Flows

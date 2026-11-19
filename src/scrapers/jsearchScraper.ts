@@ -48,6 +48,95 @@ export interface JSearchApiResponse {
   };
 }
 
+const PURE_AGGREGATORS = [
+  'linkedin.com',
+  'indeed.com',
+  'glassdoor.com',
+  'naukri.com',
+  'shine.com',
+  'foundit.in',
+  'simplyhired.com',
+  'ziprecruiter.com',
+  'jobrapido.com',
+  'talent.com',
+  'monster.com',
+  'hirist.com'
+];
+
+const KNOWN_DIRECT_ATS_DOMAINS = [
+  'myworkdayjobs.com',
+  'workday.com',
+  'greenhouse.io',
+  'lever.co',
+  'smartrecruiters.com',
+  'taleo.net',
+  'ashbyhq.com',
+  'icims.com',
+  'phenom',
+  'eightfold.ai',
+  'brassring.com',
+  'successfactors.com'
+];
+
+export function isDirectCareerUrl(testUrl: string): boolean {
+  if (!testUrl || typeof testUrl !== 'string') return false;
+  const lower = testUrl.toLowerCase();
+  if (PURE_AGGREGATORS.some((agg) => lower.includes(agg))) return false;
+  if (KNOWN_DIRECT_ATS_DOMAINS.some((ats) => lower.includes(ats))) return true;
+  return (
+    lower.includes('careers.') ||
+    lower.includes('jobs.') ||
+    lower.includes('/careers') ||
+    lower.includes('/jobs') ||
+    lower.includes('/job/')
+  );
+}
+
+export function resolveDirectApplyOption(
+  raw: any,
+  companyName: string
+): { url: string; publisher: string } {
+  if (Array.isArray(raw?.apply_options) && raw.apply_options.length > 0) {
+    // 1. Prioritize explicit is_direct: true (and not a pure aggregator)
+    const explicitDirect = raw.apply_options.find(
+      (opt: any) =>
+        opt &&
+        opt.apply_link &&
+        opt.is_direct === true &&
+        !PURE_AGGREGATORS.some((agg) => opt.apply_link.toLowerCase().includes(agg))
+    );
+    if (explicitDirect) {
+      return {
+        url: explicitDirect.apply_link.trim(),
+        publisher: (explicitDirect.publisher || `${companyName} Careers`).toLowerCase()
+      };
+    }
+
+    // 2. Prioritize corporate ATS domains or company careers portal URLs
+    const atsDirect = raw.apply_options.find(
+      (opt: any) => opt && opt.apply_link && isDirectCareerUrl(opt.apply_link)
+    );
+    if (atsDirect) {
+      return {
+        url: atsDirect.apply_link.trim(),
+        publisher: (atsDirect.publisher || `${companyName} Careers`).toLowerCase()
+      };
+    }
+  }
+
+  // Fallback to default JSearch apply link
+  const defaultUrl = (
+    raw.job_apply_link ||
+    raw.job_google_link ||
+    raw.apply_link ||
+    raw.url ||
+    ''
+  ).trim();
+  const defaultPublisher = (raw.job_publisher || raw.publisher || 'linkedin').toLowerCase();
+
+  return { url: defaultUrl, publisher: defaultPublisher };
+}
+
 export function parseJSearchJob(raw: any, profile?: JobProfile): Job | null {
   if (!raw || typeof raw !== 'object') return null;
   const title = (raw.job_title || raw.title || '').trim();
@@ -63,14 +152,13 @@ export function parseJSearchJob(raw: any, profile?: JobProfile): Job | null {
     location = `${location} (Remote)`;
   }
 
-  const url = (raw.job_apply_link || raw.job_google_link || raw.apply_link || raw.url || '').trim();
+  const company = (raw.employer_name || raw.company_name || raw.company || 'Tech Company').trim();
+  const { url, publisher } = resolveDirectApplyOption(raw, company);
   if (!url) return null;
-
-  const publisher = (raw.job_publisher || raw.publisher || 'linkedin').toLowerCase();
 
   const rawListing: RawJobListing = {
     title,
-    company: (raw.employer_name || raw.company_name || raw.company || 'Tech Company').trim(),
+    company,
     location,
     description: (raw.job_description || raw.description || '').trim(),
     url,
