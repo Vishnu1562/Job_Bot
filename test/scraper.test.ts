@@ -369,7 +369,7 @@ describe('[HF-001] Scraper Normalizers & Parsers', () => {
 
   describe('[REG-004] Centralized API Endpoints & Feeds Registry', () => {
     it('verifies all API and RSS endpoints are defined and are valid HTTPS URLs', async () => {
-      const { API_ENDPOINTS, RSS_FEEDS } = await import('../src/constants/apiEndpoints.ts');
+      const { API_ENDPOINTS, RSS_FEEDS, TARGET_CAREER_PORTALS } = await import('../src/constants/apiEndpoints.ts');
 
       assert.ok(API_ENDPOINTS.JSEARCH.startsWith('https://'));
       assert.ok(API_ENDPOINTS.ADZUNA_INDIA.startsWith('https://'));
@@ -377,6 +377,15 @@ describe('[HF-001] Scraper Normalizers & Parsers', () => {
       assert.ok(API_ENDPOINTS.JOBICY.startsWith('https://'));
       assert.ok(API_ENDPOINTS.ARBEITNOW.startsWith('https://'));
       assert.ok(API_ENDPOINTS.REMOTEOK.startsWith('https://'));
+      assert.ok(API_ENDPOINTS.GREENHOUSE_BOARDS.startsWith('https://'));
+      assert.ok(API_ENDPOINTS.LEVER_POSTINGS.startsWith('https://'));
+      assert.ok(API_ENDPOINTS.SMARTRECRUITERS_POSTINGS.startsWith('https://'));
+      assert.ok(API_ENDPOINTS.SMARTRECRUITERS_JOBS.startsWith('https://'));
+
+      assert.ok(Object.keys(TARGET_CAREER_PORTALS).length >= 10);
+      for (const [key, portalUrl] of Object.entries(TARGET_CAREER_PORTALS)) {
+        assert.ok(portalUrl.startsWith('https://'), `Career portal ${key} must be https: ${portalUrl}`);
+      }
 
       assert.ok(RSS_FEEDS.length >= 6);
       for (const feed of RSS_FEEDS) {

@@ -4,6 +4,8 @@
  * with their respective ATS platforms and public endpoints for direct career ingestion.
  */
 
+import { TARGET_CAREER_PORTALS } from '../constants/apiEndpoints.ts';
+
 export type AtsPlatform = 'greenhouse' | 'lever' | 'smartrecruiters' | 'workday' | 'direct';
 
 export interface TargetCompany {
@@ -16,21 +18,21 @@ export interface TargetCompany {
 
 export const TARGET_COMPANIES: TargetCompany[] = [
   // --- Big 4 & Advisory Firms ---
-  { name: 'Deloitte', ats: 'direct', slug: 'deloitte', careersUrl: 'https://careers.deloitte.com', category: 'big4' },
-  { name: 'PwC', ats: 'workday', slug: 'pwc', careersUrl: 'https://pwc.wd3.myworkdayjobs.com', category: 'big4' },
-  { name: 'EY', ats: 'direct', slug: 'ey', careersUrl: 'https://careers.ey.com', category: 'big4' },
-  { name: 'KPMG', ats: 'smartrecruiters', slug: 'KPMG', careersUrl: 'https://kpmg.com/careers', category: 'big4' },
+  { name: 'Deloitte', ats: 'direct', slug: 'deloitte', careersUrl: TARGET_CAREER_PORTALS.DELOITTE, category: 'big4' },
+  { name: 'PwC', ats: 'workday', slug: 'pwc', careersUrl: TARGET_CAREER_PORTALS.PWC, category: 'big4' },
+  { name: 'EY', ats: 'direct', slug: 'ey', careersUrl: TARGET_CAREER_PORTALS.EY, category: 'big4' },
+  { name: 'KPMG', ats: 'smartrecruiters', slug: 'KPMG', careersUrl: TARGET_CAREER_PORTALS.KPMG, category: 'big4' },
 
   // --- Enterprise IT & Global Consultancies ---
-  { name: 'IBM', ats: 'direct', slug: 'ibm', careersUrl: 'https://www.ibm.com/careers', category: 'enterprise_it' },
-  { name: 'UST', ats: 'smartrecruiters', slug: 'UST', careersUrl: 'https://www.ust.com/en/careers', category: 'enterprise_it' },
-  { name: 'IBS Software', ats: 'smartrecruiters', slug: 'IBS_Software', careersUrl: 'https://www.ibsplc.com/careers', category: 'enterprise_it' },
-  { name: 'Cognizant', ats: 'smartrecruiters', slug: 'Cognizant', careersUrl: 'https://careers.cognizant.com', category: 'enterprise_it' },
-  { name: 'Accenture', ats: 'direct', slug: 'accenture', careersUrl: 'https://www.accenture.com/in-en/careers', category: 'enterprise_it' },
-  { name: 'Capgemini', ats: 'smartrecruiters', slug: 'Capgemini', careersUrl: 'https://www.capgemini.com/in-en/careers', category: 'enterprise_it' },
-  { name: 'Infosys', ats: 'direct', slug: 'infosys', careersUrl: 'https://www.infosys.com/careers', category: 'enterprise_it' },
-  { name: 'TCS', ats: 'direct', slug: 'tcs', careersUrl: 'https://www.tcs.com/careers', category: 'enterprise_it' },
-  { name: 'Wipro', ats: 'direct', slug: 'wipro', careersUrl: 'https://careers.wipro.com', category: 'enterprise_it' },
+  { name: 'IBM', ats: 'direct', slug: 'ibm', careersUrl: TARGET_CAREER_PORTALS.IBM, category: 'enterprise_it' },
+  { name: 'UST', ats: 'smartrecruiters', slug: 'UST', careersUrl: TARGET_CAREER_PORTALS.UST, category: 'enterprise_it' },
+  { name: 'IBS Software', ats: 'smartrecruiters', slug: 'IBS_Software', careersUrl: TARGET_CAREER_PORTALS.IBS_SOFTWARE, category: 'enterprise_it' },
+  { name: 'Cognizant', ats: 'smartrecruiters', slug: 'Cognizant', careersUrl: TARGET_CAREER_PORTALS.COGNIZANT, category: 'enterprise_it' },
+  { name: 'Accenture', ats: 'direct', slug: 'accenture', careersUrl: TARGET_CAREER_PORTALS.ACCENTURE, category: 'enterprise_it' },
+  { name: 'Capgemini', ats: 'smartrecruiters', slug: 'Capgemini', careersUrl: TARGET_CAREER_PORTALS.CAPGEMINI, category: 'enterprise_it' },
+  { name: 'Infosys', ats: 'direct', slug: 'infosys', careersUrl: TARGET_CAREER_PORTALS.INFOSYS, category: 'enterprise_it' },
+  { name: 'TCS', ats: 'direct', slug: 'tcs', careersUrl: TARGET_CAREER_PORTALS.TCS, category: 'enterprise_it' },
+  { name: 'Wipro', ats: 'direct', slug: 'wipro', careersUrl: TARGET_CAREER_PORTALS.WIPRO, category: 'enterprise_it' },
 
   // --- High-Growth Indian Tech & Unicorns ---
   { name: 'Postman', ats: 'greenhouse', slug: 'postman', category: 'tech_unicorn' },

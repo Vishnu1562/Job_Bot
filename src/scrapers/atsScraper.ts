@@ -1,5 +1,6 @@
 import { fetchWithTimeout, processCandidateJob } from './scraperUtils.ts';
 import { TARGET_COMPANIES, type TargetCompany } from '../config/targetCompanies.ts';
+import { API_ENDPOINTS } from '../constants/apiEndpoints.ts';
 import type { Job, JobProfile, RawJobListing } from '../types.ts';
 
 function stripHtml(html: string): string {
@@ -127,7 +128,7 @@ export function parseSmartRecruitersJob(
   if (!isEligibleCandidateLocation(location)) return null;
 
   const companySlug = companyName.replace(/\s+/g, '');
-  const url = `https://jobs.smartrecruiters.com/${companySlug}/${raw.id}`;
+  const url = `${API_ENDPOINTS.SMARTRECRUITERS_JOBS}/${companySlug}/${raw.id}`;
   const desc = raw.jobAd?.sections?.jobDescription?.text || title;
 
   const rawListing: RawJobListing = {
@@ -157,7 +158,7 @@ export async function fetchDirectAtsJobs(
   const atsTasks = TARGET_COMPANIES.map(async (company) => {
     try {
       if (company.ats === 'greenhouse') {
-        const ghUrl = `https://boards-api.greenhouse.io/v1/boards/${company.slug}/jobs?content=true`;
+        const ghUrl = `${API_ENDPOINTS.GREENHOUSE_BOARDS}/${company.slug}/jobs?content=true`;
         const res = await fetchWithTimeout(ghUrl, 4000);
         if (res.ok) {
           const data = (await res.json()) as any;
@@ -171,7 +172,7 @@ export async function fetchDirectAtsJobs(
           }
         }
       } else if (company.ats === 'lever') {
-        const leverUrl = `https://api.lever.co/v0/postings/${company.slug}?mode=json`;
+        const leverUrl = `${API_ENDPOINTS.LEVER_POSTINGS}/${company.slug}?mode=json`;
         const res = await fetchWithTimeout(leverUrl, 4000);
         if (res.ok) {
           const jobs = (await res.json()) as any[];
@@ -186,7 +187,7 @@ export async function fetchDirectAtsJobs(
           }
         }
       } else if (company.ats === 'smartrecruiters') {
-        const srUrl = `https://api.smartrecruiters.com/v1/companies/${company.slug}/postings?limit=25`;
+        const srUrl = `${API_ENDPOINTS.SMARTRECRUITERS_POSTINGS}/${company.slug}/postings?limit=25`;
         const res = await fetchWithTimeout(srUrl, 4000);
         if (res.ok) {
           const data = (await res.json()) as any;

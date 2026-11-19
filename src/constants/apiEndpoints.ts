@@ -1,9 +1,5 @@
 /**
- * Centralized registry of all external job board APIs, aggregators, and RSS feeds.
- */
-
-/**
- * Centralized registry of all external job board APIs, aggregators, and RSS feeds.
+ * Centralized registry of all external job board APIs, aggregators, ATS platforms, and RSS feeds.
  */
 export const API_ENDPOINTS = {
   /** RapidAPI JSearch v5 Google for Jobs aggregator (LinkedIn, Naukri, Indeed, Glassdoor) */
@@ -22,7 +18,38 @@ export const API_ENDPOINTS = {
   ARBEITNOW: 'https://www.arbeitnow.com/api/job-board-api',
 
   /** RemoteOK developer job board API */
-  REMOTEOK: 'https://remoteok.com/api'
+  REMOTEOK: 'https://remoteok.com/api',
+
+  /** Greenhouse public job board API */
+  GREENHOUSE_BOARDS: 'https://boards-api.greenhouse.io/v1/boards',
+
+  /** Lever public postings API */
+  LEVER_POSTINGS: 'https://api.lever.co/v0/postings',
+
+  /** SmartRecruiters public postings API */
+  SMARTRECRUITERS_POSTINGS: 'https://api.smartrecruiters.com/v1/companies',
+
+  /** SmartRecruiters public job application web URL */
+  SMARTRECRUITERS_JOBS: 'https://jobs.smartrecruiters.com'
+} as const;
+
+/**
+ * Official career portal base URLs for top enterprise and Big 4 consultancies.
+ */
+export const TARGET_CAREER_PORTALS = {
+  DELOITTE: 'https://careers.deloitte.com',
+  PWC: 'https://pwc.wd3.myworkdayjobs.com',
+  EY: 'https://careers.ey.com',
+  KPMG: 'https://kpmg.com/careers',
+  IBM: 'https://www.ibm.com/careers',
+  UST: 'https://www.ust.com/en/careers',
+  IBS_SOFTWARE: 'https://www.ibsplc.com/careers',
+  COGNIZANT: 'https://careers.cognizant.com',
+  ACCENTURE: 'https://www.accenture.com/in-en/careers',
+  CAPGEMINI: 'https://www.capgemini.com/in-en/careers',
+  INFOSYS: 'https://www.infosys.com/careers',
+  TCS: 'https://www.tcs.com/careers',
+  WIPRO: 'https://careers.wipro.com'
 } as const;
 
 export interface RssFeedConfig {
