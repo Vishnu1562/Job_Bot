@@ -538,6 +538,17 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Clean, unencumbered navbar and focused visual card browsing experience.
 - **Final State**: Zero clutter, pure grid-first candidate experience.
 
+#### [HF-058] Minimalist 2-Card KPI Velocity Bar
+- **Preconditions**: Web portal loaded.
+- **Action**:
+  1. Remove redundant "Domestic Roles" and "My Saved Roles" cards from the hero KPI summary bar.
+  2. Focus exclusively on the two essential velocity metrics:
+     - `Total Active Roles` (`#kpi-total-jobs`)
+     - `New in Today's Batch` (`#kpi-today-jobs`)
+  3. The `.kpi-grid` renders a balanced 2-column layout that avoids duplicating the in-section Domestic counts and Status dropdown.
+- **Expected Result**: Zero redundancy with region headers and status filters below; modern, high-impact summary deck.
+- **Final State**: Minimalist, symmetrical velocity dashboard.
+
 ---
 
 ### Negative Flows

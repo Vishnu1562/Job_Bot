@@ -168,6 +168,10 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
 
       // 4. Verify Modern UI Component Skeletons
       assert.ok(html.includes('id="kpi-stats-bar"'), 'Must include KPI summary stats bar');
+      assert.ok(html.includes('id="kpi-total-jobs"'), 'Must include total jobs KPI card (HF-058)');
+      assert.ok(html.includes('id="kpi-today-jobs"'), 'Must include today jobs KPI card (HF-058)');
+      assert.strictEqual(html.includes('id="kpi-domestic-jobs"'), false, 'Must NOT include redundant domestic jobs KPI card (HF-058)');
+      assert.strictEqual(html.includes('id="kpi-saved-jobs"'), false, 'Must NOT include redundant saved jobs KPI card (HF-058)');
       assert.ok(html.includes('id="theme-toggle"'), 'Must include Dark/Light theme toggle');
       assert.ok(html.includes('id="job-drawer"'), 'Must include slide-over job detail drawer');
       assert.ok(html.includes('id="drawer-overlay"'), 'Must include drawer backdrop overlay');
@@ -245,6 +249,12 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
         assert.ok(jsContent.includes('tier-actions-wrap'), 'app.js must wrap section actions with stopPropagation (HF-056)');
         assert.ok(cssContent.includes('.section-company-select'), 'styles.css must style section-company-select (HF-056)');
         assert.ok(cssContent.includes('.tier-actions-wrap'), 'styles.css must style tier-actions-wrap (HF-056)');
+
+        // HF-058: Minimalist 2-Card KPI Velocity Bar
+        assert.ok(indexContent.includes('id="kpi-total-jobs"'), 'index.html must contain total jobs KPI card (HF-058)');
+        assert.ok(indexContent.includes('id="kpi-today-jobs"'), 'index.html must contain today jobs KPI card (HF-058)');
+        assert.strictEqual(indexContent.includes('id="kpi-domestic-jobs"'), false, 'index.html must not contain domestic KPI card (HF-058)');
+        assert.strictEqual(indexContent.includes('id="kpi-saved-jobs"'), false, 'index.html must not contain saved KPI card (HF-058)');
 
         // HF-050: isDomesticJob classification accuracy
         assert.strictEqual(

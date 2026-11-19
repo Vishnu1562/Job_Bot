@@ -151,18 +151,16 @@
     }
   }
 
-  // 7. Live KPI Summary Bar Calculations
+  // 7. Live KPI Summary Bar Calculations (HF-058: 2-Card Velocity Deck)
   function updateMetrics()       {
     const tracker = getTrackerState();
     let totalCount = portalData.allJobs.length;
     let todayCount = 0;
-    let domesticCount = 0;
     let savedCount = 0;
     let appliedCount = 0;
 
     portalData.allJobs.forEach(job => {
       if (job.dateLabel === "Today's Batch") todayCount++;
-      if (job.tier === 'domestic') domesticCount++;
       const st = tracker[job.url];
       if (st && st.saved) savedCount++;
       if (st && st.applied) appliedCount++;
@@ -170,15 +168,11 @@
 
     const kpiTotal = document.getElementById('kpi-total-jobs');
     const kpiToday = document.getElementById('kpi-today-jobs');
-    const kpiDomestic = document.getElementById('kpi-domestic-jobs');
-    const kpiSaved = document.getElementById('kpi-saved-jobs');
     const statusSavedBadge = document.getElementById('status-saved-badge');
     const statusAppliedBadge = document.getElementById('status-applied-badge');
 
     if (kpiTotal) kpiTotal.textContent = String(totalCount);
     if (kpiToday) kpiToday.textContent = String(todayCount);
-    if (kpiDomestic) kpiDomestic.textContent = String(domesticCount);
-    if (kpiSaved) kpiSaved.textContent = String(savedCount);
     if (statusSavedBadge) statusSavedBadge.textContent = String(savedCount);
     if (statusAppliedBadge) statusAppliedBadge.textContent = String(appliedCount);
 
