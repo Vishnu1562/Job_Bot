@@ -48,6 +48,7 @@ jobs:
           RECIPIENT_EMAIL_POWERPLATFORM: ${{ secrets.RECIPIENT_EMAIL_POWERPLATFORM }}
           RECIPIENT_EMAIL_FULLSTACK: ${{ secrets.RECIPIENT_EMAIL_FULLSTACK }}
           RECIPIENT_EMAIL_JAVA: ${{ secrets.RECIPIENT_EMAIL_JAVA }}
+          RECIPIENT_EMAIL_PLSQL: ${{ secrets.RECIPIENT_EMAIL_PLSQL }}
           RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
           FORCE_DISPATCH: ${{ inputs.force_dispatch || 'false' }}
         run: npm start
