@@ -280,11 +280,29 @@
     activeDrawerJob = null;
   }
 
+  function decodeHtmlEntities(str        )         {
+    if (!str) return '';
+    return str
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'")
+      .replace(/&#039;/g, "'")
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&amp;/g, '&');
+  }
+
   function cleanJobDescription(text        )         {
     if (!text) return '';
-    return text
+    let str = text;
+    if (str.includes('&lt;') || str.includes('&gt;') || str.includes('&quot;') || str.includes('&#39;') || str.includes('&#039;')) {
+      str = decodeHtmlEntities(str);
+    }
+    return str
       .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
       .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+      .replace(/<br\s*\/?>/gi, '\n')
+      .replace(/<\/(p|div|h[1-6]|li|blockquote|tr)>/gi, '\n')
       .replace(/<[^>]+>/g, ' ')
       .replace(/(?:[#.]?[a-zA-Z0-9_\-\s,:>+~*]+|\bbody|\bdiv|\ba|\bbutton|\bspan|\bp)\s*\{[^}]*\}/g, ' ')
       .replace(/(?:[#.]?[a-zA-Z0-9_\-\s,:>+~*]+|\bbody|\bdiv|\ba|\bbutton|\bspan|\bp)\s*\{[^\n]*(?:\n[^\n]+)*(?=\n\n|$)/g, ' ')

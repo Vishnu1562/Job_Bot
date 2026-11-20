@@ -818,17 +818,19 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Zero background scrolling and zero white canvas artifact; the blurred dark/light listing feed remains cleanly visible behind the modal overlay regardless of scroll depth.
 - **Final State**: High-fidelity mobile modal sheet UX adhering to iOS/Android design standards.
 
-#### [EC-025] CSS and Markup Sanitation in Job Descriptions
-- **Preconditions**: Feeds or aggregators (e.g. Shine via JSearch) return job descriptions containing inline `<style>` tags, tracking scripts, or raw CSS selector rules (e.g. `# { display: inline; }`, `.buttontext... a { ... }`).
+#### [EC-025] CSS, HTML Entity, and Markup Sanitation in Job Descriptions
+- **Preconditions**: Feeds or ATS aggregators (e.g. Greenhouse API for Stripe/Elastic, or Shine via JSearch) return job descriptions containing inline `<style>` tags, tracking scripts, raw CSS selector rules (e.g. `# { display: inline; }`, `.buttontext... a { ... }`), or HTML entity-encoded markup (e.g. `&lt;h2 id=&quot;who-we-are&quot;&gt;`, `&lt;div class=&quot;content-intro&quot;&gt;`, `&#39;`, `&quot;`).
 - **Action**:
   1. Utility `cleanJobDescription` sanitizes description strings by:
+     - Detecting and decoding HTML entities (`&quot;`, `&#39;`, `&#039;`, `&lt;`, `&gt;`, `&nbsp;`, `&amp;`) to their real characters.
      - Stripping `<style[^>]*>[\s\S]*?<\/style>` blocks and their contents.
      - Stripping `<script[^>]*>[\s\S]*?<\/script>` blocks and their contents.
+     - Converting block-level closing tags (`</p>`, `</div>`, `</h2>`, `<br/>`, etc.) to natural line breaks.
      - Stripping remaining HTML tags (`<[^>]+>`).
      - Stripping stray CSS selector declarations (`[#.]?[\w-]+\s*\{[^}]*\}`).
      - Normalizing spacing and blank lines.
-  2. Applied in normalizers, data exporter, and client-side detail drawer renderer.
-- **Expected Result**: Job descriptions display clean human-readable prose free of leaked CSS stylesheet rules and broken code blocks.
+  2. Applied in ATS normalizers (Greenhouse, Lever, SmartRecruiters), aggregator scrapers (JSearch, Adzuna), portal data exporter, and client-side detail drawer renderer.
+- **Expected Result**: Job descriptions display clean human-readable prose free of leaked CSS stylesheet rules, HTML entity artifacts (`&lt;`, `&gt;`, `&quot;`, `&#39;`), and broken code blocks.
 - **Final State**: Pristine job description readability across portal drawer and email digests.
 
 #### [EC-024] High-Density Mobile & Responsive Viewport Adaptability

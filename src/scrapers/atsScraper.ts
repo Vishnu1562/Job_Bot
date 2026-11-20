@@ -1,11 +1,12 @@
 import { fetchWithTimeout, processCandidateJob } from './scraperUtils.ts';
 import { TARGET_COMPANIES, type TargetCompany } from '../config/targetCompanies.ts';
 import { API_ENDPOINTS } from '../constants/apiEndpoints.ts';
+import { cleanJobDescription } from '../portal/portalDataExporter.ts';
 import type { Job, JobProfile, RawJobListing } from '../types.ts';
 
 function stripHtml(html: string): string {
   if (!html) return '';
-  return html.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+  return cleanJobDescription(html);
 }
 
 /**

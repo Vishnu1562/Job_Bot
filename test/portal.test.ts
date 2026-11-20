@@ -390,5 +390,27 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
       assert.ok(cleaned.includes('Location:'), 'Must preserve location header');
       assert.ok(cleaned.includes('Must have 4+ years of PL/SQL experience.'), 'Must preserve job requirements');
     });
+
+    it('decodes HTML entities and strips encoded HTML tags from Greenhouse ATS feeds (Stripe & Elastic)', async () => {
+      const { cleanJobDescription } = await import('../src/portal/portalDataExporter.ts');
+
+      const stripeDirty = '&lt;h2 id=&quot;who-we-are&quot;&gt;Who we are&lt;/h2&gt; &lt;h3 id=&quot;about-stripe&quot;&gt;About Stripe&lt;/h3&gt; &lt;p&gt;Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world&#39;s largest enterpri';
+      const elasticDirty = '&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale — unleashing the potential of businesses and people. The Elastic Search AI';
+
+      const stripeCleaned = cleanJobDescription(stripeDirty);
+      assert.strictEqual(stripeCleaned.includes('&lt;'), false, 'Must not contain &lt;');
+      assert.strictEqual(stripeCleaned.includes('&gt;'), false, 'Must not contain &gt;');
+      assert.strictEqual(stripeCleaned.includes('&quot;'), false, 'Must not contain &quot;');
+      assert.strictEqual(stripeCleaned.includes('&#39;'), false, 'Must not contain &#39;');
+      assert.strictEqual(stripeCleaned.includes('<h2'), false, 'Must strip decoded h2 tags');
+      assert.ok(stripeCleaned.includes("world's largest"), "Must decode &#39; into apostrophe");
+      assert.ok(stripeCleaned.includes('Who we are'), 'Must preserve header text');
+      assert.ok(stripeCleaned.includes('Stripe is a financial infrastructure platform'), 'Must preserve prose');
+
+      const elasticCleaned = cleanJobDescription(elasticDirty);
+      assert.strictEqual(elasticCleaned.includes('&lt;'), false, 'Must not contain &lt;');
+      assert.strictEqual(elasticCleaned.includes('<div'), false, 'Must strip decoded div tags');
+      assert.ok(elasticCleaned.includes('Elastic, the Search AI Company'), 'Must preserve prose');
+    });
   });
 });
