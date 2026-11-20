@@ -145,7 +145,7 @@ export function generateEmailDigestHtml(
     if (displayedDomestic.length > 0) {
       const domesticCards = displayedDomestic.map((j) => renderJobCard(j, accentColor)).join('');
       const header = renderSectionHeader(
-        'Domestic & Regional Priority (LinkedIn, Naukri & Corporate Boards)',
+        'Domestic & Regional (LinkedIn, Naukri & Corporate Boards)',
         'Direct openings from Indian IT hubs & regional offices',
         '📍',
         `${displayedDomestic.length} Verified`,

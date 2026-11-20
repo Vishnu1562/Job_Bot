@@ -327,7 +327,9 @@ describe('[HF-004, HF-005, EC-002] Responsive Email Template Generator', () => {
 
       const { html } = generateEmailDigestHtml([domesticJob, remoteJob], 'Power Platform Job Radar', '#742774', 'Celine');
 
-      assert.ok(html.includes('Domestic &amp; Regional Priority') || html.includes('Domestic & Regional Priority'));
+      assert.strictEqual(html.includes('Domestic &amp; Regional Priority'), false, 'Email digest must not contain Priority in Domestic header');
+      assert.strictEqual(html.includes('Domestic & Regional Priority'), false, 'Email digest must not contain Priority in Domestic header');
+      assert.ok(html.includes('Domestic &amp; Regional (LinkedIn, Naukri &amp; Corporate Boards)') || html.includes('Domestic & Regional (LinkedIn, Naukri & Corporate Boards)'), 'Must render clean Domestic & Regional header');
       assert.ok(html.includes('Curated Global &amp; Remote') || html.includes('Curated Global & Remote'));
       assert.ok(html.includes('LinkedIn India'));
       assert.ok(html.includes('Worldwide Remote'));

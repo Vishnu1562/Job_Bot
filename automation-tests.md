@@ -258,9 +258,9 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 #### [HF-027] Dedicated Email Sections (Domestic vs Global Remote)
 - **Preconditions**: Queue containing both regional/domestic listings (JSearch LinkedIn, Naukri, Indeed, Adzuna) and global remote listings (RemoteOK, Remotive, Jobicy, Arbeitnow).
 - **Action**: Email digest partitions candidate jobs into two distinct visual sections:
-  1. `📍 Domestic & Regional Priority (LinkedIn, Naukri & Corporate Boards)` (up to 10–12 slots).
+  1. `📍 Domestic & Regional (LinkedIn, Naukri & Corporate Boards)` (up to 10–12 slots).
   2. `🌐 Curated Global & Remote Opportunities` (capped at 3–5 slots).
-- **Expected Result**: High visual clarity separating verified domestic Indian openings from international remote contracts. If either section has 0 jobs, its header is omitted cleanly.
+- **Expected Result**: High visual clarity separating verified domestic Indian openings from international remote contracts. The word "Priority" is deprecated from the domestic header. If either section has 0 jobs, its header is omitted cleanly.
 - **Final State**: Candidate sees domestic jobs immediately without dilution from global remote feeds.
 
 #### [HF-028] 48-Hour Backlog Expiry & Queue Maintenance
@@ -310,7 +310,7 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Action**: Module `src/portal/portalDataExporter.ts` queries all active jobs within retention window:
   1. Sorts chronologically with Today's newest jobs at the top (`scraped_at DESC`), followed by Yesterday and historical dates.
   2. Divides listings into dedicated tier sections matching the email hierarchy:
-     - 📍 **Domestic & Regional Priority (LinkedIn, Naukri & Corporate Boards)**
+     - 📍 **Domestic & Regional (LinkedIn, Naukri & Corporate Boards)**
      - 🌐 **Curated Global & Remote Opportunities**
   3. Tags priority target companies with `⭐ Priority Target`.
   4. Omits private candidate names (`candidateName`) from public portal payloads to ensure candidate privacy on public web deployment.
