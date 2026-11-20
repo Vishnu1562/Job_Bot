@@ -833,6 +833,22 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Job descriptions display clean human-readable prose free of leaked CSS stylesheet rules, HTML entity artifacts (`&lt;`, `&gt;`, `&quot;`, `&#39;`), and broken code blocks.
 - **Final State**: Pristine job description readability across portal drawer and email digests.
 
+#### [EC-026] Generic Multi-Source Text & Description Sanitation Engine
+- **Preconditions**: Feeds from diverse job boards (Greenhouse, Lever, SmartRecruiters, RemoteOK, Remotive, Jobicy, Arbeitnow, JSearch, Adzuna, RSS) contain inconsistent encoding, raw HTML, HTML entities (named, decimal, hex), Mojibake (UTF-8 parsed as Latin-1), CSS styles, and broken tags from string truncation.
+- **Action**:
+  1. Centralized engine `src/utils/textSanitizer.ts` provides:
+     - `decodeHtmlEntities(text)`: Decodes all named entities (`&amp;`, `&quot;`, `&apos;`, `&ndash;`, `&mdash;`, `&bull;`, `&hellip;`, `&trade;`, `&copy;`, `&reg;`, `&euro;`, etc.), decimal entities (`&#39;`, `&#8217;`, etc.), and hex entities (`&#x27;`, etc.). Supports double-encoded entities.
+     - `fixMojibake(text)`: Reconstructs corrupted UTF-8 byte sequences (`â€”` -> `—`, `â€™` -> `'`, `â€œ` -> `"`, `â€¦` -> `…`, `â€¢` -> `•`, etc.).
+     - `cleanText(text)`: Sanitizes single-line fields (job titles, company names, locations) by decoding entities, fixing Mojibake, stripping HTML tags, and collapsing whitespace.
+     - `cleanJobDescription(text)`: Sanitizes multi-line job descriptions by decoding entities, fixing Mojibake, stripping `<style>` and `<script>` blocks (with content), converting block tags (`</p>`, `</div>`, `</h2>`, `<br/>`) and list items (`<li>`) to natural line breaks and bullets, stripping CSS rules and selectors, and normalizing paragraph breaks.
+     - `safeTruncate(text, maxLength)`: Truncates descriptions on word boundaries without cutting words in half, and cleanly strips any dangling unclosed HTML tags (`<str`, `<div class=`) or partial entities (`&lt`, `&amp`) caused by slicing.
+  2. Applied generically at:
+     - The central scraper intake gate (`processCandidateJob` in `scraperUtils.ts`) for all current and future scrapers.
+     - The portal data exporter (`exportPortalData` in `portalDataExporter.ts`).
+     - The client-side detail drawer renderer (`app.ts`).
+- **Expected Result**: 100% clean human-readable prose across all titles, companies, locations, and descriptions regardless of upstream feed format or truncation.
+- **Final State**: Zero raw HTML tags, zero entity codes, zero Mojibake, and zero dangling fragments anywhere in the portal or email digests.
+
 #### [EC-024] High-Density Mobile & Responsive Viewport Adaptability
 - **Preconditions**: Mobile device or small screen viewport (< 640px).
 - **Action**: Responsive CSS adjusts layout seamlessly:

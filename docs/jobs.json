@@ -41,7 +41,7 @@
           "[Dynamics 365]"
         ],
         "source": "weworkremotely",
-        "description": "Headquarters: Pune, Maharashtra, India\n <br /",
+        "description": "Headquarters: Pune, Maharashtra, India",
         "scrapedAt": "2026-11-20 03:05:31",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -1030,7 +1030,7 @@
           "[GitHub]"
         ],
         "source": "weworkremotely",
-        "description": "Headquarters: United States - Remote\n\n Tebra only initiates contact with candidates via email from an official Tebra email address (@<a class=\"c-link\" hre",
+        "description": "Headquarters: United States - Remote\n\nTebra only initiates contact with candidates via email from an official Tebra email address (@",
         "scrapedAt": "2026-11-20 03:05:39",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -1048,7 +1048,7 @@
           "[Full Stack]"
         ],
         "source": "weworkremotely",
-        "description": "Headquarters: United States\n \n<str",
+        "description": "Headquarters: United States",
         "scrapedAt": "2026-11-20 03:05:39",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -1066,7 +1066,7 @@
           "[Full Stack]"
         ],
         "source": "weworkremotely",
-        "description": "Headquarters: Australia\n \n<strong&",
+        "description": "Headquarters: Australia",
         "scrapedAt": "2026-11-20 03:05:39",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -1084,7 +1084,7 @@
           "[Full Stack]"
         ],
         "source": "weworkremotely",
-        "description": "Headquarters: Netherlands\n \n<stron",
+        "description": "Headquarters: Netherlands",
         "scrapedAt": "2026-11-20 03:05:39",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -1102,7 +1102,7 @@
           "[Full Stack]"
         ],
         "source": "weworkremotely",
-        "description": "Headquarters: India\n \n U",
+        "description": "Headquarters: India\n\nU",
         "scrapedAt": "2026-11-20 03:05:39",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -1121,7 +1121,7 @@
           "[.NET]"
         ],
         "source": "weworkremotely",
-        "description": "Headquarters: New York, NY\n \n<stro",
+        "description": "Headquarters: New York, NY",
         "scrapedAt": "2026-11-20 03:05:39",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -1242,7 +1242,7 @@
       {
         "id": "jsearch-UFZKcmJHMjJhLVZuZ2V3REFBQUFBQT09OkVzc0JDb3dCUVVSRVlsZGxZakJ5UVdjMFEzQTJOWE5TTjB0VlkzQjNZV3Q1YXpKSE5raG1TSE5OTlVwbWVUQjNlalEzU1hwTVpqTjZOVFZpTUhwTldtdERSR0ZoZW5GVE5taE5ZamRZWjFGS09VWkhPRUZMZG1rME5XcEZTVmgxVm5CdE1HZHpRekJuVURsdFQyNXVVVlZvTUZCalNIQTFUelZsVW1GWFRHeFVZbVJOWjE5aFFWOUtWMmRRTWtRMFNYUVNGa0ZpYmw5aGRWOXZRamRQZW0xMGExQTJXbnBqUlVFYUlrRklUakJGTjBWa2JETkJWbGR4TkVaYVprZzRPRFZvY1cwd1pETk5lSE5YWkdjOmRlZWY4ZmNm",
         "profileId": "full-stack",
-        "title": "Application Developer - Java  Angular",
+        "title": "Application Developer - Java Angular",
         "company": "Citi",
         "location": "India",
         "url": "https://in.linkedin.com/jobs/view/application-developer-java-angular-at-citi-4492517588",
@@ -1260,7 +1260,7 @@
       {
         "id": "jsearch-ZmMyYmZOZjRUb3RtdmluY0FBQUFBQT09OkVzc0JDb3dCUVVSRVlsZGxXWGREYTFWTFFrVkhSRnBSVmpkd1owWlZhV1JFYVRsUmRIQndjMHhYWlhSaVptNUNRVUpFVjNCWmVHVk5TRkV4ZHpZMFNURjNTRnBzYjFSR09VeEZXRXRxU0dreFNFeFFZM1JSTW5Ka1NWRkRjMDE2ZWtSZlMwTXlhME5sUWxkbVRWTmxWbE41ZWtaRFpHWmtZbEpJUzNWZlNUVllaMjF3WXpWU2JsOVplRGhDV1dsUVRYWVNGa0ZpYmw5aGRWOXZRamRQZW0xMGExQTJXbnBqUlVFYUlrRklUakJGTjBoalQycDZRa2M1TjFwRmExaDNjR0ZMU0doUGIxcFZabk5IZFVFOmRlZWY4ZmNm",
         "profileId": "full-stack",
-        "title": "Application Developer - Java  Angular",
+        "title": "Application Developer - Java Angular",
         "company": "CITI",
         "location": "Pune, Maharashtra, India",
         "url": "https://jobs.citi.com/job/pune/application-developer-java-angular/287/103508753280",
@@ -1653,7 +1653,7 @@
           "[GitHub]"
         ],
         "source": "jobicy",
-        "description": "About Supabase \n Supabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including Database, Auth, Storage, Edge Functions, Realtime, and Vector Search. All",
+        "description": "About Supabase\nSupabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including Database, Auth, Storage, Edge Functions, Realtime, and Vector Search. All",
         "scrapedAt": "2026-11-18 09:02:09",
         "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
@@ -1711,7 +1711,7 @@
           "[GitHub]"
         ],
         "source": "weworkremotely",
-        "description": "Headquarters: United States\n \n URL: https://www.careerflow.ai \n\n About the Role:&lt",
+        "description": "Headquarters: United States\n\nURL: https://www.careerflow.ai\n\nAbout the Role:",
         "scrapedAt": "2026-11-18 03:23:44",
         "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
@@ -2521,7 +2521,7 @@
       {
         "id": "job-17e9dee8",
         "profileId": "full-stack",
-        "title": "Backend / Platform Developer Consultant (Temporal &amp; Kubernetes)",
+        "title": "Backend / Platform Developer Consultant (Temporal & Kubernetes)",
         "company": "Bitovi",
         "location": "Remote Worldwide",
         "url": "https://weworkremotely.com/remote-jobs/bitovi-backend-platform-developer-consultant-temporal-kubernetes",
@@ -2944,7 +2944,7 @@
       {
         "id": "job-c19ec01",
         "profileId": "full-stack",
-        "title": "GIS  Software Engineer",
+        "title": "GIS Software Engineer",
         "company": "EdgeQ Technologies Private Limited",
         "location": "Remote Worldwide",
         "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-gis-software-engineer",
@@ -3249,7 +3249,7 @@
           "[Java]"
         ],
         "source": "stripe careers",
-        "description": "Who we are \n About Stripe \n Stripe is a technology company focused on improving the conditions for economic growth and prosperity. We build progr",
+        "description": "Who we are\nAbout Stripe\nStripe is a technology company focused on improving the conditions for economic growth and prosperity. We build progr",
         "scrapedAt": "2026-11-20 03:05:47",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -3399,7 +3399,7 @@
           "[React]"
         ],
         "source": "weworkremotely",
-        "description": "Headquarters: Canada (Remote), United States (Remote), United Kingdom (Remote) Mexico City, Mexico - Hybrid\n\n About CircleCI Engineering\n\n CI/CD has been solved. Now it's",
+        "description": "Headquarters: Canada (Remote), United States (Remote), United Kingdom (Remote) Mexico City, Mexico - Hybrid\n\nAbout CircleCI Engineering\n\nCI/CD has been solved. Now it's",
         "scrapedAt": "2026-11-19 09:25:10",
         "dateGroup": "2026-11-19",
         "dateLabel": "Yesterday",
@@ -3602,7 +3602,7 @@
       {
         "id": "jsearch-MGdrWmFyNUV5UGg2SmJmZUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbDlwYTFoeVMxRndiME4zV1dVelFtSnFNR1JDVDNCU1FuVk5TbFIwVVZsTE9GZHViM1JQZDNFd01rOUlkMHMxVDAxS1JWZFpWMjFFVEdwM1ZrRkRhV1kwZDFWZlQyMHdRVE5PZDNCTFltUk9NRWxUUTBaSFJHVlRSV3RpTTI0MGMwRjFTMmhPUm5kQ2VXbEllVGRFVjB4bE5uVmZTVmxCVkhsek4ybDVjbTlUTVdGTldEY1NGMmt5ZGkxaGNXcGtTbVo1UVRKeWIxQjBTbmxEY1VFd0dpSkJTRTR3UlRkSWFHaE1ObHBDYjNKTk4xZHRSMFJUWVhCb1YxazBiREpDTWs5UjphYWFhNWVjYg",
         "profileId": "java-backend",
-        "title": "JAVA Developers  (Freshers only) (Indore)",
+        "title": "JAVA Developers (Freshers only) (Indore)",
         "company": "Endeavor IT Solution",
         "location": "Indore, Madhya Pradesh, India",
         "url": "https://www.shine.com/jobs/java-developers-freshers-only-indore/endeavor-it-solution/20094013",
@@ -3796,7 +3796,7 @@
       {
         "id": "jsearch-ZFFQNld4MU1CT3VDNlBfX0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZalZ4VkhkUk9XbE5ibFV4WlhOdk1FcG1iM1JSTkhKME4zZzFSbTlwVFY5MVdEWkJXV1Z4TUZodFlYSlBlRzgxWkZGM09IcG9ZME16YkZKMlpucFFWRk15TjFVMU1YVjZWV2c1Y2xveFVFdEJjbkJRVVhZdGNubG9jREZrZG14blIzbHpWRjlGWlU1RVNVUnFkMHhHTXpkUmJqVlNkbmxCZG5oMFoxTlFWbXRDWjFKM1RFTVNGMUpDY2psaGNsOW9TVzh5Y1doaVNWQjFPRk50YVZGckdpSkJTRTR3UlRkR2JGZERhbmMwVDA5dFRFeHhjMkpXYTJwR2MwUnVMVmhEYjJsbjphZDVjMjRjYw",
         "profileId": "java-backend",
-        "title": "Java  Developer -Bangalore",
+        "title": "Java Developer -Bangalore",
         "company": "Cognizant",
         "location": "Bengaluru, Karnataka, India",
         "url": "https://careers.cognizant.com/india-en/jobs/00070562472/java-developer-bangalore/",
@@ -4113,7 +4113,7 @@
         "id": "jsearch-QUhfM3N5MFdpd0hxcGNWU0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZa0oyUTJsUVJYQk1iMGxFYXpaR05WQXhjazUyT1ZsUVJGWmpVbVE0WkhCaFZqZFdVMmR6VHpaSGIzWTJRMlpvWnkxcWVWcHllbk5QYmxRdE9HMTFWa3BEUVZnMFNYaGFPSFJTTmxrNWIyOTFURkV0ZGprMlJuY3pYME5YV21Vd2RYVTFZVmRVVERodVRESnlkMHhUTW5veGQwOXRNbEJZVkV4eGFGVnhOUzFUYm5KV1ltVVNGMHRCWWpoaGNXRXRSMkpJTmpWUFZWQXRjWFZrTFVGbkdpSkJTRTR3UlRkR01qUlJOblI1UWt3dFkwcElRVlJVYTB4RlpGUjNaamxmVTI1MzpjZjEyMTgzZg",
         "profileId": "java-backend",
         "title": "Java Lead / Senior Java Developer",
-        "company": "Xohani  Solutions",
+        "company": "Xohani Solutions",
         "location": "Mumbai, Maharashtra, India",
         "url": "https://wellfound.com/jobs/5035425-java-lead-senior-java-developer",
         "tags": [
@@ -4334,7 +4334,7 @@
       {
         "id": "jsearch-MG9BUmNPVllTcC1ISS1TTEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbmRPWWtGYVVuZ3dWVE01YTNsRWMxRjNZazVUUjI1cWFFUndPRGszTjI0emNsUnNhWE52WWxCSGNHTlFhUzB4ZWtwTlYwVTVNMkpMTVZCS2RUUm9PRnB6WHkxQmRYZExZMU5sVlVkM1dHNXBZa3hHUjFSUmRtMTVaQzFFU25ST2QwaDVXSHBIUlV0bmFEQlFTbGhmUmxSdmJETnVWMUJ6WDBRd0xUSjRiakZQVTBSdmVuSVNGMHRuWWpoaGRYcGpUV1JNWTNCMFVWQTFYMkpYYTFFNEdpSkJTRTR3UlRkSVVIaHJjVWx1WmsxUWNWSlNjbXRxVjJoUmRsSktRMmd6TW1wQjpmNmRlMTUyNg",
         "profileId": "java-backend",
-        "title": "Lead Software Engineer - Java, Spring, Springboot, Kafka, Cryptography, Session Key Derivation,  HSM",
+        "title": "Lead Software Engineer - Java, Spring, Springboot, Kafka, Cryptography, Session Key Derivation, HSM",
         "company": "Mastercard",
         "location": "Pune, Maharashtra, India",
         "url": "https://careers.mastercard.com/us/en/job/R-281270/Lead-Software-Engineer-Java-Spring-Springboot-Kafka-Cryptography-Session-Key-Derivation-HSM",
@@ -4399,7 +4399,7 @@
       {
         "id": "job-17e9dee8",
         "profileId": "java-backend",
-        "title": "Backend / Platform Developer Consultant (Temporal &amp; Kubernetes)",
+        "title": "Backend / Platform Developer Consultant (Temporal & Kubernetes)",
         "company": "Bitovi",
         "location": "Remote Worldwide",
         "url": "https://weworkremotely.com/remote-jobs/bitovi-backend-platform-developer-consultant-temporal-kubernetes",
@@ -4646,7 +4646,7 @@
           "[Power BI]"
         ],
         "source": "weworkremotely",
-        "description": "Headquarters: Pune, Maharashtra, India\n <br /",
+        "description": "Headquarters: Pune, Maharashtra, India",
         "scrapedAt": "2026-11-20 03:05:55",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -4666,7 +4666,7 @@
           "[CI/CD & Git]"
         ],
         "source": "weworkremotely",
-        "description": "Headquarters: United States\n \n URL: <a href=\"https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=fc2a6c7e-ef54-4ed9-8c04-d5aca23f99e3\"&",
+        "description": "Headquarters: United States\n\nURL:",
         "scrapedAt": "2026-11-20 03:05:55",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -4684,7 +4684,7 @@
           "[Oracle ADF]"
         ],
         "source": "remoteok",
-        "description": "We believe that the way people interact with their finances will drastically improve in the next few years. Weâre dedicated to empowering this transformation by building the tools and experiences that thousands of develo",
+        "description": "We believe that the way people interact with their finances will drastically improve in the next few years. We're dedicated to empowering this transformation by building the tools and experiences that thousands of develo",
         "scrapedAt": "2026-11-20 03:05:55",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -4694,7 +4694,7 @@
       {
         "id": "remoteok-1137155",
         "profileId": "plsql-developer",
-        "title": "Oracle Fusion Cloud Lead â Logistics & Supply Chain Management",
+        "title": "Oracle Fusion Cloud Lead — Logistics & Supply Chain Management",
         "company": "Tessera Labs",
         "location": "Worldwide Remote",
         "url": "https://remoteok.com/remote-jobs/remote-oracle-fusion-cloud-lead-logistics-supply-chain-management-tessera-labs-1137155",
@@ -4702,7 +4702,7 @@
           "[Oracle SQL]"
         ],
         "source": "remoteok",
-        "description": "Oracle Fusion Cloud Lead â Logistics &amp; Supply Chain Management Greenfield Oracle Fusion Implementation Company T",
+        "description": "Oracle Fusion Cloud Lead — Logistics & Supply Chain Management Greenfield Oracle Fusion Implementation Company T",
         "scrapedAt": "2026-11-20 03:05:55",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -4720,7 +4720,7 @@
           "[Oracle SQL]"
         ],
         "source": "stripe careers",
-        "description": "Who we are \n About Stripe \n Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enter",
+        "description": "Who we are\nAbout Stripe\nStripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enter",
         "scrapedAt": "2026-11-20 03:05:55",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -4740,7 +4740,7 @@
           "[Python]"
         ],
         "source": "stripe careers",
-        "description": "Who we are\n About Stripe\n Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enterpri",
+        "description": "Who we are\nAbout Stripe\nStripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enterpri",
         "scrapedAt": "2026-11-20 03:05:55",
         "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
@@ -4846,7 +4846,7 @@
         "id": "jsearch-eVFyMWprR2JnWGRwZ2pwdUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVTVHT1ZsVlNsQnVNVEZpYUZkZmFGVjFlbk4wV2poSWIyZEZNMkpaUTJsWGNIcExiWEpzV1dWV1RqQnZVMUZyWldNMmFuQjFWMlZOTnkxeFdqbEVRMU5HUm1KM1lteHhUM2h4UTJOMVNGbFFSRFpqY1VJMGJsazNSbVozWW5sRGFHWkNSRWx3WDIweVlsUjFhVmRpTUdOR2JuWkdWR2hpVFhCVFlqTnhVazFhWmxCR2NtUVNGMFJ5Ymw5aGNUTXpTalpQZEhGMGMxQnNUbkY2Y1ZGdkdpSkJTRTR3UlRkRk5rZE9RVFJXZVhCaE56SllSVVJHVkZoNlMxaGtVR0V3YmsxUjo5YmQ3Y2UxYQ",
         "profileId": "plsql-developer",
         "title": "PL/SQL Developer",
-        "company": "Terrabit  Consulting",
+        "company": "Terrabit Consulting",
         "location": "Chennai, Tamil Nadu, India",
         "url": "https://www.iitjobs.com/job/plsql-developer-chennai-tamil-nadu-india-482487",
         "tags": [
@@ -4975,7 +4975,7 @@
         "[Power BI]"
       ],
       "source": "weworkremotely",
-      "description": "Headquarters: Pune, Maharashtra, India\n <br /",
+      "description": "Headquarters: Pune, Maharashtra, India",
       "scrapedAt": "2026-11-20 03:05:55",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -4995,7 +4995,7 @@
         "[CI/CD & Git]"
       ],
       "source": "weworkremotely",
-      "description": "Headquarters: United States\n \n URL: <a href=\"https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=fc2a6c7e-ef54-4ed9-8c04-d5aca23f99e3\"&",
+      "description": "Headquarters: United States\n\nURL:",
       "scrapedAt": "2026-11-20 03:05:55",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -5013,7 +5013,7 @@
         "[Oracle ADF]"
       ],
       "source": "remoteok",
-      "description": "We believe that the way people interact with their finances will drastically improve in the next few years. Weâre dedicated to empowering this transformation by building the tools and experiences that thousands of develo",
+      "description": "We believe that the way people interact with their finances will drastically improve in the next few years. We're dedicated to empowering this transformation by building the tools and experiences that thousands of develo",
       "scrapedAt": "2026-11-20 03:05:55",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -5023,7 +5023,7 @@
     {
       "id": "remoteok-1137155",
       "profileId": "plsql-developer",
-      "title": "Oracle Fusion Cloud Lead â Logistics & Supply Chain Management",
+      "title": "Oracle Fusion Cloud Lead — Logistics & Supply Chain Management",
       "company": "Tessera Labs",
       "location": "Worldwide Remote",
       "url": "https://remoteok.com/remote-jobs/remote-oracle-fusion-cloud-lead-logistics-supply-chain-management-tessera-labs-1137155",
@@ -5031,7 +5031,7 @@
         "[Oracle SQL]"
       ],
       "source": "remoteok",
-      "description": "Oracle Fusion Cloud Lead â Logistics &amp; Supply Chain Management Greenfield Oracle Fusion Implementation Company T",
+      "description": "Oracle Fusion Cloud Lead — Logistics & Supply Chain Management Greenfield Oracle Fusion Implementation Company T",
       "scrapedAt": "2026-11-20 03:05:55",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -5049,7 +5049,7 @@
         "[Oracle SQL]"
       ],
       "source": "stripe careers",
-      "description": "Who we are \n About Stripe \n Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enter",
+      "description": "Who we are\nAbout Stripe\nStripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enter",
       "scrapedAt": "2026-11-20 03:05:55",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -5069,7 +5069,7 @@
         "[Python]"
       ],
       "source": "stripe careers",
-      "description": "Who we are\n About Stripe\n Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enterpri",
+      "description": "Who we are\nAbout Stripe\nStripe is a financial infrastructure platform for businesses. Millions of companies—from the world's largest enterpri",
       "scrapedAt": "2026-11-20 03:05:55",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -5175,7 +5175,7 @@
       "id": "jsearch-eVFyMWprR2JnWGRwZ2pwdUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVTVHT1ZsVlNsQnVNVEZpYUZkZmFGVjFlbk4wV2poSWIyZEZNMkpaUTJsWGNIcExiWEpzV1dWV1RqQnZVMUZyWldNMmFuQjFWMlZOTnkxeFdqbEVRMU5HUm1KM1lteHhUM2h4UTJOMVNGbFFSRFpqY1VJMGJsazNSbVozWW5sRGFHWkNSRWx3WDIweVlsUjFhVmRpTUdOR2JuWkdWR2hpVFhCVFlqTnhVazFhWmxCR2NtUVNGMFJ5Ymw5aGNUTXpTalpQZEhGMGMxQnNUbkY2Y1ZGdkdpSkJTRTR3UlRkRk5rZE9RVFJXZVhCaE56SllSVVJHVkZoNlMxaGtVR0V3YmsxUjo5YmQ3Y2UxYQ",
       "profileId": "plsql-developer",
       "title": "PL/SQL Developer",
-      "company": "Terrabit  Consulting",
+      "company": "Terrabit Consulting",
       "location": "Chennai, Tamil Nadu, India",
       "url": "https://www.iitjobs.com/job/plsql-developer-chennai-tamil-nadu-india-482487",
       "tags": [
@@ -5321,7 +5321,7 @@
         "[Java]"
       ],
       "source": "stripe careers",
-      "description": "Who we are \n About Stripe \n Stripe is a technology company focused on improving the conditions for economic growth and prosperity. We build progr",
+      "description": "Who we are\nAbout Stripe\nStripe is a technology company focused on improving the conditions for economic growth and prosperity. We build progr",
       "scrapedAt": "2026-11-20 03:05:47",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -5518,7 +5518,7 @@
         "[GitHub]"
       ],
       "source": "weworkremotely",
-      "description": "Headquarters: United States - Remote\n\n Tebra only initiates contact with candidates via email from an official Tebra email address (@<a class=\"c-link\" hre",
+      "description": "Headquarters: United States - Remote\n\nTebra only initiates contact with candidates via email from an official Tebra email address (@",
       "scrapedAt": "2026-11-20 03:05:39",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -5536,7 +5536,7 @@
         "[Full Stack]"
       ],
       "source": "weworkremotely",
-      "description": "Headquarters: United States\n \n<str",
+      "description": "Headquarters: United States",
       "scrapedAt": "2026-11-20 03:05:39",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -5554,7 +5554,7 @@
         "[Full Stack]"
       ],
       "source": "weworkremotely",
-      "description": "Headquarters: Australia\n \n<strong&",
+      "description": "Headquarters: Australia",
       "scrapedAt": "2026-11-20 03:05:39",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -5572,7 +5572,7 @@
         "[Full Stack]"
       ],
       "source": "weworkremotely",
-      "description": "Headquarters: Netherlands\n \n<stron",
+      "description": "Headquarters: Netherlands",
       "scrapedAt": "2026-11-20 03:05:39",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -5590,7 +5590,7 @@
         "[Full Stack]"
       ],
       "source": "weworkremotely",
-      "description": "Headquarters: India\n \n U",
+      "description": "Headquarters: India\n\nU",
       "scrapedAt": "2026-11-20 03:05:39",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -5609,7 +5609,7 @@
         "[.NET]"
       ],
       "source": "weworkremotely",
-      "description": "Headquarters: New York, NY\n \n<stro",
+      "description": "Headquarters: New York, NY",
       "scrapedAt": "2026-11-20 03:05:39",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -5730,7 +5730,7 @@
     {
       "id": "jsearch-UFZKcmJHMjJhLVZuZ2V3REFBQUFBQT09OkVzc0JDb3dCUVVSRVlsZGxZakJ5UVdjMFEzQTJOWE5TTjB0VlkzQjNZV3Q1YXpKSE5raG1TSE5OTlVwbWVUQjNlalEzU1hwTVpqTjZOVFZpTUhwTldtdERSR0ZoZW5GVE5taE5ZamRZWjFGS09VWkhPRUZMZG1rME5XcEZTVmgxVm5CdE1HZHpRekJuVURsdFQyNXVVVlZvTUZCalNIQTFUelZsVW1GWFRHeFVZbVJOWjE5aFFWOUtWMmRRTWtRMFNYUVNGa0ZpYmw5aGRWOXZRamRQZW0xMGExQTJXbnBqUlVFYUlrRklUakJGTjBWa2JETkJWbGR4TkVaYVprZzRPRFZvY1cwd1pETk5lSE5YWkdjOmRlZWY4ZmNm",
       "profileId": "full-stack",
-      "title": "Application Developer - Java  Angular",
+      "title": "Application Developer - Java Angular",
       "company": "Citi",
       "location": "India",
       "url": "https://in.linkedin.com/jobs/view/application-developer-java-angular-at-citi-4492517588",
@@ -5748,7 +5748,7 @@
     {
       "id": "jsearch-ZmMyYmZOZjRUb3RtdmluY0FBQUFBQT09OkVzc0JDb3dCUVVSRVlsZGxXWGREYTFWTFFrVkhSRnBSVmpkd1owWlZhV1JFYVRsUmRIQndjMHhYWlhSaVptNUNRVUpFVjNCWmVHVk5TRkV4ZHpZMFNURjNTRnBzYjFSR09VeEZXRXRxU0dreFNFeFFZM1JSTW5Ka1NWRkRjMDE2ZWtSZlMwTXlhME5sUWxkbVRWTmxWbE41ZWtaRFpHWmtZbEpJUzNWZlNUVllaMjF3WXpWU2JsOVplRGhDV1dsUVRYWVNGa0ZpYmw5aGRWOXZRamRQZW0xMGExQTJXbnBqUlVFYUlrRklUakJGTjBoalQycDZRa2M1TjFwRmExaDNjR0ZMU0doUGIxcFZabk5IZFVFOmRlZWY4ZmNm",
       "profileId": "full-stack",
-      "title": "Application Developer - Java  Angular",
+      "title": "Application Developer - Java Angular",
       "company": "CITI",
       "location": "Pune, Maharashtra, India",
       "url": "https://jobs.citi.com/job/pune/application-developer-java-angular/287/103508753280",
@@ -5795,7 +5795,7 @@
         "[Dynamics 365]"
       ],
       "source": "weworkremotely",
-      "description": "Headquarters: Pune, Maharashtra, India\n <br /",
+      "description": "Headquarters: Pune, Maharashtra, India",
       "scrapedAt": "2026-11-20 03:05:31",
       "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
@@ -6089,7 +6089,7 @@
         "[React]"
       ],
       "source": "weworkremotely",
-      "description": "Headquarters: Canada (Remote), United States (Remote), United Kingdom (Remote) Mexico City, Mexico - Hybrid\n\n About CircleCI Engineering\n\n CI/CD has been solved. Now it's",
+      "description": "Headquarters: Canada (Remote), United States (Remote), United Kingdom (Remote) Mexico City, Mexico - Hybrid\n\nAbout CircleCI Engineering\n\nCI/CD has been solved. Now it's",
       "scrapedAt": "2026-11-19 09:25:10",
       "dateGroup": "2026-11-19",
       "dateLabel": "Yesterday",
@@ -6379,7 +6379,7 @@
     {
       "id": "jsearch-MGdrWmFyNUV5UGg2SmJmZUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbDlwYTFoeVMxRndiME4zV1dVelFtSnFNR1JDVDNCU1FuVk5TbFIwVVZsTE9GZHViM1JQZDNFd01rOUlkMHMxVDAxS1JWZFpWMjFFVEdwM1ZrRkRhV1kwZDFWZlQyMHdRVE5PZDNCTFltUk9NRWxUUTBaSFJHVlRSV3RpTTI0MGMwRjFTMmhPUm5kQ2VXbEllVGRFVjB4bE5uVmZTVmxCVkhsek4ybDVjbTlUTVdGTldEY1NGMmt5ZGkxaGNXcGtTbVo1UVRKeWIxQjBTbmxEY1VFd0dpSkJTRTR3UlRkSWFHaE1ObHBDYjNKTk4xZHRSMFJUWVhCb1YxazBiREpDTWs5UjphYWFhNWVjYg",
       "profileId": "java-backend",
-      "title": "JAVA Developers  (Freshers only) (Indore)",
+      "title": "JAVA Developers (Freshers only) (Indore)",
       "company": "Endeavor IT Solution",
       "location": "Indore, Madhya Pradesh, India",
       "url": "https://www.shine.com/jobs/java-developers-freshers-only-indore/endeavor-it-solution/20094013",
@@ -6862,7 +6862,7 @@
         "[GitHub]"
       ],
       "source": "jobicy",
-      "description": "About Supabase \n Supabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including Database, Auth, Storage, Edge Functions, Realtime, and Vector Search. All",
+      "description": "About Supabase\nSupabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including Database, Auth, Storage, Edge Functions, Realtime, and Vector Search. All",
       "scrapedAt": "2026-11-18 09:02:09",
       "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
@@ -7052,7 +7052,7 @@
     {
       "id": "jsearch-ZFFQNld4MU1CT3VDNlBfX0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZalZ4VkhkUk9XbE5ibFV4WlhOdk1FcG1iM1JSTkhKME4zZzFSbTlwVFY5MVdEWkJXV1Z4TUZodFlYSlBlRzgxWkZGM09IcG9ZME16YkZKMlpucFFWRk15TjFVMU1YVjZWV2c1Y2xveFVFdEJjbkJRVVhZdGNubG9jREZrZG14blIzbHpWRjlGWlU1RVNVUnFkMHhHTXpkUmJqVlNkbmxCZG5oMFoxTlFWbXRDWjFKM1RFTVNGMUpDY2psaGNsOW9TVzh5Y1doaVNWQjFPRk50YVZGckdpSkJTRTR3UlRkR2JGZERhbmMwVDA5dFRFeHhjMkpXYTJwR2MwUnVMVmhEYjJsbjphZDVjMjRjYw",
       "profileId": "java-backend",
-      "title": "Java  Developer -Bangalore",
+      "title": "Java Developer -Bangalore",
       "company": "Cognizant",
       "location": "Bengaluru, Karnataka, India",
       "url": "https://careers.cognizant.com/india-en/jobs/00070562472/java-developer-bangalore/",
@@ -7220,7 +7220,7 @@
         "[GitHub]"
       ],
       "source": "weworkremotely",
-      "description": "Headquarters: United States\n \n URL: https://www.careerflow.ai \n\n About the Role:&lt",
+      "description": "Headquarters: United States\n\nURL: https://www.careerflow.ai\n\nAbout the Role:",
       "scrapedAt": "2026-11-18 03:23:44",
       "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
@@ -8192,7 +8192,7 @@
       "id": "jsearch-QUhfM3N5MFdpd0hxcGNWU0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZa0oyUTJsUVJYQk1iMGxFYXpaR05WQXhjazUyT1ZsUVJGWmpVbVE0WkhCaFZqZFdVMmR6VHpaSGIzWTJRMlpvWnkxcWVWcHllbk5QYmxRdE9HMTFWa3BEUVZnMFNYaGFPSFJTTmxrNWIyOTFURkV0ZGprMlJuY3pYME5YV21Vd2RYVTFZVmRVVERodVRESnlkMHhUTW5veGQwOXRNbEJZVkV4eGFGVnhOUzFUYm5KV1ltVVNGMHRCWWpoaGNXRXRSMkpJTmpWUFZWQXRjWFZrTFVGbkdpSkJTRTR3UlRkR01qUlJOblI1UWt3dFkwcElRVlJVYTB4RlpGUjNaamxmVTI1MzpjZjEyMTgzZg",
       "profileId": "java-backend",
       "title": "Java Lead / Senior Java Developer",
-      "company": "Xohani  Solutions",
+      "company": "Xohani Solutions",
       "location": "Mumbai, Maharashtra, India",
       "url": "https://wellfound.com/jobs/5035425-java-lead-senior-java-developer",
       "tags": [
@@ -8413,7 +8413,7 @@
     {
       "id": "jsearch-MG9BUmNPVllTcC1ISS1TTEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbmRPWWtGYVVuZ3dWVE01YTNsRWMxRjNZazVUUjI1cWFFUndPRGszTjI0emNsUnNhWE52WWxCSGNHTlFhUzB4ZWtwTlYwVTVNMkpMTVZCS2RUUm9PRnB6WHkxQmRYZExZMU5sVlVkM1dHNXBZa3hHUjFSUmRtMTVaQzFFU25ST2QwaDVXSHBIUlV0bmFEQlFTbGhmUmxSdmJETnVWMUJ6WDBRd0xUSjRiakZQVTBSdmVuSVNGMHRuWWpoaGRYcGpUV1JNWTNCMFVWQTFYMkpYYTFFNEdpSkJTRTR3UlRkSVVIaHJjVWx1WmsxUWNWSlNjbXRxVjJoUmRsSktRMmd6TW1wQjpmNmRlMTUyNg",
       "profileId": "java-backend",
-      "title": "Lead Software Engineer - Java, Spring, Springboot, Kafka, Cryptography, Session Key Derivation,  HSM",
+      "title": "Lead Software Engineer - Java, Spring, Springboot, Kafka, Cryptography, Session Key Derivation, HSM",
       "company": "Mastercard",
       "location": "Pune, Maharashtra, India",
       "url": "https://careers.mastercard.com/us/en/job/R-281270/Lead-Software-Engineer-Java-Spring-Springboot-Kafka-Cryptography-Session-Key-Derivation-HSM",
@@ -8478,7 +8478,7 @@
     {
       "id": "job-17e9dee8",
       "profileId": "java-backend",
-      "title": "Backend / Platform Developer Consultant (Temporal &amp; Kubernetes)",
+      "title": "Backend / Platform Developer Consultant (Temporal & Kubernetes)",
       "company": "Bitovi",
       "location": "Remote Worldwide",
       "url": "https://weworkremotely.com/remote-jobs/bitovi-backend-platform-developer-consultant-temporal-kubernetes",
@@ -8991,7 +8991,7 @@
     {
       "id": "job-17e9dee8",
       "profileId": "full-stack",
-      "title": "Backend / Platform Developer Consultant (Temporal &amp; Kubernetes)",
+      "title": "Backend / Platform Developer Consultant (Temporal & Kubernetes)",
       "company": "Bitovi",
       "location": "Remote Worldwide",
       "url": "https://weworkremotely.com/remote-jobs/bitovi-backend-platform-developer-consultant-temporal-kubernetes",
@@ -9414,7 +9414,7 @@
     {
       "id": "job-c19ec01",
       "profileId": "full-stack",
-      "title": "GIS  Software Engineer",
+      "title": "GIS Software Engineer",
       "company": "EdgeQ Technologies Private Limited",
       "location": "Remote Worldwide",
       "url": "https://weworkremotely.com/remote-jobs/edgeq-technologies-private-limited-gis-software-engineer",

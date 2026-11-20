@@ -1,6 +1,21 @@
 import type { Job, JobProfile } from '../types.ts';
 import { JobDatabase } from '../db/jobDatabase.ts';
 import { isTargetCompany } from '../filters/companyFilter.ts';
+import {
+  decodeHtmlEntities,
+  fixMojibake,
+  cleanText,
+  cleanJobDescription,
+  safeTruncate
+} from '../utils/textSanitizer.ts';
+
+export {
+  decodeHtmlEntities,
+  fixMojibake,
+  cleanText,
+  cleanJobDescription,
+  safeTruncate
+};
 
 export interface PortalJobItem {
   id: string;
@@ -17,40 +32,6 @@ export interface PortalJobItem {
   dateLabel: string; // e.g. "Today's Batch", "Yesterday", "Nov 15, 2026"
   tier: 'domestic' | 'remote';
   isTargetCompany?: boolean;
-}
-
-export function decodeHtmlEntities(str: string): string {
-  if (!str) return '';
-  return str
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&#039;/g, "'")
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&amp;/g, '&');
-}
-
-export function cleanJobDescription(text: string): string {
-  if (!text) return '';
-  let str = text;
-  if (str.includes('&lt;') || str.includes('&gt;') || str.includes('&quot;') || str.includes('&#39;') || str.includes('&#039;')) {
-    str = decodeHtmlEntities(str);
-  }
-  return str
-    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
-    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
-    .replace(/<br\s*\/?>/gi, '\n')
-    .replace(/<\/(p|div|h[1-6]|li|blockquote|tr)>/gi, '\n')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/(?:[#.]?[a-zA-Z0-9_\-\s,:>+~*]+|\bbody|\bdiv|\ba|\bbutton|\bspan|\bp)\s*\{[^}]*\}/g, ' ')
-    .replace(/(?:[#.]?[a-zA-Z0-9_\-\s,:>+~*]+|\bbody|\bdiv|\ba|\bbutton|\bspan|\bp)\s*\{[^\n]*(?:\n[^\n]+)*(?=\n\n|$)/g, ' ')
-    .replace(/\b(?:display|color|background|border|margin|padding|font-size|line-height|width|height)\s*:[^;\n]+;?/gi, ' ')
-    .replace(/!important/gi, ' ')
-    .replace(/\r\n/g, '\n')
-    .replace(/[ \t]+/g, ' ')
-    .replace(/\n\s*\n\s*\n+/g, '\n\n')
-    .trim();
 }
 
 export interface PortalProfileData {
@@ -132,13 +113,13 @@ export function exportPortalData(db: JobDatabase, profiles: JobProfile[]): Porta
       const item: PortalJobItem = {
         id: j.id || j.url,
         profileId: profile.id,
-        title: j.title,
-        company: j.company || 'Confidential Company',
-        location: j.location || 'India / Remote',
+        title: cleanText(j.title),
+        company: cleanText(j.company || 'Confidential Company'),
+        location: cleanText(j.location || 'India / Remote'),
         url: j.url,
         tags: j.tags || [],
         source: j.source || 'job feed',
-        description: cleanJobDescription(j.description || '').slice(0, 500),
+        description: safeTruncate(j.description || '', 500),
         scrapedAt: j.scrapedAt || new Date().toISOString(),
         dateGroup,
         dateLabel,

@@ -10,6 +10,7 @@ import {
 } from '../filters/index.ts';
 import { extractSkillTags } from '../tagger.ts';
 import { isJobMatchingProfile, extractProfileSkillTags } from '../profiles/profileRegistry.ts';
+import { cleanText, cleanJobDescription } from '../utils/textSanitizer.ts';
 import type { Job, RawJobListing, JobProfile } from '../types.ts';
 
 export const USER_AGENT = 'PowerPlatformJobRadar/1.0 (+https://github.com/Vishnu1562/Job_Bot)';
@@ -53,13 +54,13 @@ export function processCandidateJob(
   return {
     id,
     profileId: profile?.id,
-    title: raw.title.trim(),
-    company: raw.company.trim(),
-    location: raw.location.trim(),
+    title: cleanText(raw.title),
+    company: cleanText(raw.company),
+    location: cleanText(raw.location),
     url: cleanUrl,
     tags,
     source,
-    description: raw.description?.trim() || '',
+    description: cleanJobDescription(raw.description || ''),
     publishedAt: raw.publishedAt,
     isTargetCompany: isTarget
   };

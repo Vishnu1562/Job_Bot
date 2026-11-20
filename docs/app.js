@@ -280,38 +280,128 @@
     activeDrawerJob = null;
   }
 
+  const NAMED_ENTITIES                         = {
+    '&quot;': '"',
+    '&apos;': "'",
+    '&lsquo;': "'",
+    '&rsquo;': "'",
+    '&sbquo;': "'",
+    '&ldquo;': '"',
+    '&rdquo;': '"',
+    '&bdquo;': '"',
+    '&lt;': '<',
+    '&gt;': '>',
+    '&amp;': '&',
+    '&nbsp;': ' ',
+    '&ensp;': ' ',
+    '&emsp;': ' ',
+    '&thinsp;': ' ',
+    '&ndash;': '–',
+    '&mdash;': '—',
+    '&hyphen;': '-',
+    '&bull;': '•',
+    '&middot;': '·',
+    '&hellip;': '…',
+    '&trade;': '™',
+    '&copy;': '©',
+    '&reg;': '®',
+    '&cent;': '¢',
+    '&pound;': '£',
+    '&euro;': '€',
+    '&yen;': '¥'
+  };
+
+  const MOJIBAKE_MAP                     = [
+    [/\u00e2\u0080\u0099/g, "'"],
+    [/\u00e2\u0080\u0098/g, "'"],
+    [/\u00e2\u0080\u009c/g, '"'],
+    [/\u00e2\u0080\u009d/g, '"'],
+    [/\u00e2\u0080\u0094/g, '—'],
+    [/\u00e2\u0080\u0093/g, '–'],
+    [/\u00e2\u0080\u00a6/g, '…'],
+    [/\u00e2\u0080\u00a2/g, '•'],
+    [/\u00c2\u00a0/g, ' '],
+    [/\u00e2\u0084\u00a2/g, '™'],
+    [/â€™/g, "'"],
+    [/â€˜/g, "'"],
+    [/â€œ/g, '"'],
+    [/â€ /g, '"'],
+    [/â€”/g, '—'],
+    [/â€“/g, '–'],
+    [/â€¦/g, '…'],
+    [/â€¢/g, '•'],
+    [/Â /g, ' '],
+    [/Â/g, ''],
+    [/â€/g, '"']
+  ];
+
   function decodeHtmlEntities(str        )         {
     if (!str) return '';
-    return str
-      .replace(/&quot;/g, '"')
-      .replace(/&#39;/g, "'")
-      .replace(/&#039;/g, "'")
-      .replace(/&lt;/g, '<')
-      .replace(/&gt;/g, '>')
-      .replace(/&nbsp;/g, ' ')
-      .replace(/&amp;/g, '&');
+    let res = str;
+    for (let pass = 0; pass < 2; pass++) {
+      if (!res.includes('&')) break;
+      for (const [entity, replacement] of Object.entries(NAMED_ENTITIES)) {
+        if (res.includes(entity)) {
+          res = res.replaceAll(entity, replacement);
+        }
+      }
+      res = res.replace(/&#([0-9]{1,7});/g, (match, numStr) => {
+        try {
+          return String.fromCodePoint(parseInt(numStr, 10));
+        } catch {
+          return match;
+        }
+      });
+      res = res.replace(/&#x([0-9a-fA-F]{1,6});/g, (match, hexStr) => {
+        try {
+          return String.fromCodePoint(parseInt(hexStr, 16));
+        } catch {
+          return match;
+        }
+      });
+    }
+    return res;
+  }
+
+  function fixMojibake(str        )         {
+    if (!str) return '';
+    let res = str;
+    for (const [pattern, replacement] of MOJIBAKE_MAP) {
+      res = res.replace(pattern, replacement);
+    }
+    return res;
   }
 
   function cleanJobDescription(text        )         {
     if (!text) return '';
     let str = text;
-    if (str.includes('&lt;') || str.includes('&gt;') || str.includes('&quot;') || str.includes('&#39;') || str.includes('&#039;')) {
-      str = decodeHtmlEntities(str);
-    }
-    return str
-      .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
-      .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
-      .replace(/<br\s*\/?>/gi, '\n')
-      .replace(/<\/(p|div|h[1-6]|li|blockquote|tr)>/gi, '\n')
-      .replace(/<[^>]+>/g, ' ')
-      .replace(/(?:[#.]?[a-zA-Z0-9_\-\s,:>+~*]+|\bbody|\bdiv|\ba|\bbutton|\bspan|\bp)\s*\{[^}]*\}/g, ' ')
-      .replace(/(?:[#.]?[a-zA-Z0-9_\-\s,:>+~*]+|\bbody|\bdiv|\ba|\bbutton|\bspan|\bp)\s*\{[^\n]*(?:\n[^\n]+)*(?=\n\n|$)/g, ' ')
-      .replace(/\b(?:display|color|background|border|margin|padding|font-size|line-height|width|height)\s*:[^;\n]+;?/gi, ' ')
-      .replace(/!important/gi, ' ')
-      .replace(/\r\n/g, '\n')
-      .replace(/[ \t]+/g, ' ')
-      .replace(/\n\s*\n\s*\n+/g, '\n\n')
-      .trim();
+
+    str = decodeHtmlEntities(str);
+    str = fixMojibake(str);
+
+    str = str.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, ' ');
+    str = str.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, ' ');
+    str = str.replace(/<!--[\s\S]*?-->/g, ' ');
+
+    str = str.replace(/<br\s*\/?>/gi, '\n');
+    str = str.replace(/<\/(p|div|h[1-6]|tr|blockquote|section|article)>/gi, '\n');
+    str = str.replace(/<li>/gi, '\n• ');
+    str = str.replace(/<\/li>/gi, '');
+
+    str = str.replace(/<[^>]+>/g, ' ');
+    str = str.replace(/<[a-zA-Z\/][^>]*$/g, '');
+
+    str = str.replace(/(?:[#.]?[a-zA-Z0-9_\-\s,:>+~*]+|\bbody|\bdiv|\ba|\bbutton|\bspan|\bp)\s*\{[^}]*\}/g, ' ');
+    str = str.replace(/(?:[#.]?[a-zA-Z0-9_\-\s,:>+~*]+|\bbody|\bdiv|\ba|\bbutton|\bspan|\bp)\s*\{[^\n]*(?:\n[^\n]+)*(?=\n\n|$)/g, ' ');
+    str = str.replace(/\b(?:display|color|background|border|margin|padding|font-size|line-height|width|height)\s*:[^;\n]+;?/gi, ' ');
+    str = str.replace(/!important/gi, ' ');
+
+    str = str.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+    str = str.replace(/[ \t]+/g, ' ');
+    str = str.replace(/^[ \t]+|[ \t]+$/gm, '');
+    str = str.replace(/\n\s*\n\s*\n+/g, '\n\n');
+
+    return str.trim();
   }
 
   function escapeHtml(str        )         {
