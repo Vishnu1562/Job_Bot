@@ -1,34 +1,167 @@
 {
-  "generatedAt": "2026-11-19T17:25:39.790Z",
-  "totalJobsCount": 199,
+  "generatedAt": "2026-11-20T03:05:56.689Z",
+  "totalJobsCount": 248,
   "profiles": [
     {
       "id": "power-platform",
       "name": "Power Platform Job Radar",
       "accentColor": "#742774",
-      "jobsCount": 36
+      "jobsCount": 42
     },
     {
       "id": "full-stack",
       "name": "Full Stack Developer Job Radar",
       "accentColor": "#0284c7",
-      "jobsCount": 104
+      "jobsCount": 123
     },
     {
       "id": "java-backend",
       "name": "Java & Spring Boot Developer Job Radar",
       "accentColor": "#ea580c",
-      "jobsCount": 59
+      "jobsCount": 66
     },
     {
       "id": "plsql-developer",
       "name": "PL/SQL Developer Job Radar",
       "accentColor": "#0d9488",
-      "jobsCount": 0
+      "jobsCount": 17
     }
   ],
   "jobsByProfile": {
     "power-platform": [
+      {
+        "id": "job-30a8629d",
+        "profileId": "power-platform",
+        "title": "Power BI Technical Consultant",
+        "company": "Unify Dots",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/unify-dots-power-bi-technical-consultant",
+        "tags": [
+          "[Dataverse]",
+          "[Dynamics 365]"
+        ],
+        "source": "weworkremotely",
+        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6872/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Pune, Maharashtra, India\n    &lt;br /",
+        "scrapedAt": "2026-11-20 03:05:31",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-SGIydTRDelFESkw3ODNXaEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVTFyUWpWeVozaEhNMEZCUlZFMlVtd3piMUIwVjI5VE9UaFdibWx0ZG1keE9XTklRbW80ZEVOWGNtVlpiblkyVnpGTVppMUVlVVk0U21sSVExUjBkVGw1VGpsSmFWaFBSazFJY0RkVU4xWlBabkI2VkdGdE5WbENjMXAyUjJGcVRsbE1lVUZIYkROTVpIcDVaREpNZWxkUmRGOU9jRFZNY1RKTGEyZ3lSV3RHU0dNNFNXZ1NGemx5YWw5aGRYcERSSEZ4Y1RWT2IxQnJZelo1T0VGckdpSkJTRTR3UlRkR1VGODNkVkpzUVc5MVVtVlBTRXQ0ZWpsVFVqQlZTMDF6Wm1SQjoyZDk3MzgxMA",
+        "profileId": "power-platform",
+        "title": "PowerApps",
+        "company": "capco",
+        "location": "India",
+        "url": "https://www.jobleads.com/in/job/powerapps--india--ed751aa52cd7e5c0bb3efc10862d513fd",
+        "tags": [
+          "[Canvas Apps]",
+          "[Power Automate]",
+          "[Dataverse]",
+          "[SharePoint Online]",
+          "[M365 / PL-400]",
+          "[Model-Driven]"
+        ],
+        "source": "jobleads",
+        "description": "Key Responsibilities:\n• Design, develop, and deploy applications using Microsoft Power Apps (Canvas Apps & Model-Driven Apps).\n• Build and automate business processes using Power Automate .\n• Integrate Power Apps with SharePoint, Dataverse, SQL Serve",
+        "scrapedAt": "2026-11-20 03:05:31",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-Mi1qc0dlWVRFSWdZYTdSNEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVFU1Y25aVVZrVXRiRU5mVFhoTE4zWmpOekZLYkY5eFZHSTFUREJST0dodGRETkVhSHBrWlY5VmNWcFViRXR3ZUU1Q1pIQjRiRVJRTWtOWFJXZDNTRTVZWDJkV1NrUlNaV0pYWlRCeE9YUTNWRUpOTm5kb2EwTkNaV0UxVDJWV2N6QlhOSHA1WlVwbk1GVTJRMWxaVEZkM1Z6VXhjRUUzVEdGSGVGVXpaa05VYVRGR1NHZ1NGemx5YWw5aGRYcERSSEZ4Y1RWT2IxQnJZelo1T0VGckdpSkJTRTR3UlRkRlRrcHJUMjFIVXpad2IyRXdPWGszTTBweVVESnZka3BwZG1wUjoxNTJiZTI2Mg",
+        "profileId": "power-platform",
+        "title": "Application Developer Dynamics 365 And Power Platform",
+        "company": "Centrilogic",
+        "location": "Hyderabad, Telangana, India",
+        "url": "https://www.jobleads.com/in/job/application-developer-dynamics-365-and-power-platform--hyderabad--e5ce8394f0203fc5b9dcf9fd8f8e9fad8",
+        "tags": [
+          "[Canvas Apps]",
+          "[Power Automate]",
+          "[Dataverse]",
+          "[Model-Driven]",
+          "[Power Pages]",
+          "[PCF]",
+          "[Dynamics 365]"
+        ],
+        "source": "jobleads",
+        "description": "Centrilogic in Hyderabad, India, seeks an experienced Dynamics 365 CRM/Power Platform developer to design, implement, and maintain scalable business apps and automations. You will craft model-driven and canvas Power Apps, integrate with REST/SOAP ser",
+        "scrapedAt": "2026-11-20 03:05:31",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-dk44dEJwTm1qcXRiTFpVUUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVXRHY1c5T2RuTTFZVXBIV1hOeVZFeHBVRE4zWmxoQlExYzNjbEV6VGpsNVJVZG9ZalJqTW1wQ01Ea3ROVVp4ZW1OR1VtaGFXa1ppWmtSSFpXTnlObXhUYW5rMWJWRXhlbmRCVkdnM1pIa3dMUzFWVFVwMVJXWnZiR0ZhY1dOTWVtMTZWRUU0UkVKbmVrMU9hMlE1VEdwUVpXUkphakZ1T1hkTU0zZHVaMlF6TTFGS1QwOFNGeTFNYWw5aGRFZDNTVGhRYXpWT2IxQndOWHBtY1VFMEdpSkJTRTR3UlRkSFVVd3hRek5DTFdSUmNsTllTRmxoYldOWlVGSkJaRFpZYmpoUjpjZDVkOGMxZg",
+        "profileId": "power-platform",
+        "title": "POWER PLATFORM ENGINEER (JUNIOR / SENIOR)",
+        "company": "VRINDA INTERNATIONAL",
+        "location": "Erode, Tamil Nadu, India",
+        "url": "https://in.linkedin.com/jobs/view/power-platform-engineer-junior-senior-at-vrinda-international-4492403032",
+        "tags": [
+          "[Canvas Apps]",
+          "[Power Automate]",
+          "[Dataverse]",
+          "[SharePoint Online]",
+          "[M365 / PL-400]",
+          "[Model-Driven]"
+        ],
+        "source": "linkedin",
+        "description": "Summary\nWe are seeking a dynamic Power Platform Engineer to join our IT Services team, operating at either a junior or senior level depending on experience. This pivotal role focuses on leveraging Microsoft's low-code ecosystem to design, develop, an",
+        "scrapedAt": "2026-11-20 03:05:31",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-ZFQ4WDh3UkhqU3pJSjJmZ0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXa0pCUTFwdWRsOHlUV0pLYjFkbGFURXRTMlZETVRGc1FWWjNjVWR0Y20xUlVUWkxVRzQ0YjBVM09WOVVaMmRoT1cxT1gwRjBiRFpWYVhCd1MweDBiMGhNWXpVNFZVSTJabHBDYTNGS09IQkxNalZ1YlZnek5GSjFWRXRuUW1rM1UzTnlVSGt4TlUxd2VEUlhWVWhoZDNWM1VYbEVhazFaU1V4NWFIRlBhV3BCVm1kcFgxQVNGeTFNYWw5aGRFZDNTVGhRYXpWT2IxQndOWHBtY1VFMEdpSkJTRTR3UlRkRldtOHlXamRLYVc5MlZXRlJibm96UjBkVldIcGFkMlp2WVRObjoxMWQwNjE3ZQ",
+        "profileId": "power-platform",
+        "title": "Power Platform Architect - Power Automate, Power Apps, Copilot",
+        "company": "MEEDEN LABS PRIVATE LIMITED",
+        "location": "Hyderabad, Telangana, India",
+        "url": "https://www.shine.com/jobs/power-platform-architect-power-automate-power-apps-copilot/meeden-labs-private-limited/20085405",
+        "tags": [
+          "[Power Automate]",
+          "[Copilot Studio]"
+        ],
+        "source": "shine",
+        "description": "As a Power Platform Architect, you will lead the design and implementation of innovative solutions using Microsoft Power Platform technologies, significantly impacting business efficiency and process optimization. Your contributions will guide the in",
+        "scrapedAt": "2026-11-20 03:05:31",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-LUh1ekpiLUNQQ1o2TmVUOEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVjlOU1dndFVrdElNRWwyVlhwdVptNXpZVFptVFZoS1VuTmpPRXRsVlVRMWRtUXhkVzFDUlRRNWJYQklNMU5pUzJVNWJYTjNWVXBNWlVReE9XbEZWblF3V1RWWGNVaFpjbmxZVUhKQmR6UnBTemRhTlZGbVRtaFNNRlV5WVhBMFNYTjRRWGxYZVhSb1NIQlRSWGhZUWtka2FuRnhWRVY0VVdOblgwb3pOWFZqYW13d1ZXZ1NGeTFNYWw5aGRFZDNTVGhRYXpWT2IxQndOWHBtY1VFMEdpSkJTRTR3UlRkR1l6VnJXRzFPWDFoZlZHVXlaVVJ0U1MwNU9IaFNXa1V4Y0hsbjpiODk4NDZmYw",
+        "profileId": "power-platform",
+        "title": "Truetech - Functional Lead - Power Platform",
+        "company": "Truetech Solutions Private Limited",
+        "location": "India",
+        "url": "https://in.talent.com/view?id=646534399880923666",
+        "tags": [
+          "[Canvas Apps]",
+          "[Power Automate]",
+          "[Dataverse]",
+          "[SharePoint Online]",
+          "[M365 / PL-400]",
+          "[Model-Driven]",
+          "[Power Pages]",
+          "[Dynamics 365]"
+        ],
+        "source": "talent.com",
+        "description": "Job Description:\n\nWe are looking for an experienced Power Platform Developer with 7+ years of experience in designing, developing, and implementing business applications and workflow automation using Power Apps and Power Automate.\n\nKey Responsibiliti",
+        "scrapedAt": "2026-11-20 03:05:31",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
       {
         "id": "job-f33e083",
         "profileId": "power-platform",
@@ -176,7 +309,7 @@
         "source": "prepterview",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:35",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -197,7 +330,7 @@
         "source": "cognizant careers",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:35",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": true
@@ -219,7 +352,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:35",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -239,7 +372,7 @@
         "source": "career at crowe",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:35",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -266,7 +399,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 11:28:20",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -284,7 +417,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 09:01:56",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -302,7 +435,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 09:01:56",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -323,7 +456,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 09:01:55",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -345,7 +478,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:36",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -365,7 +498,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:36",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -815,6 +948,354 @@
     ],
     "full-stack": [
       {
+        "id": "gh-gitlab-8775136002",
+        "profileId": "full-stack",
+        "title": "Staff Backend Engineer, India",
+        "company": "GitLab",
+        "location": "Bangalore, India",
+        "url": "https://job-boards.greenhouse.io/gitlab/jobs/8775136002",
+        "tags": [
+          "[PostgreSQL]"
+        ],
+        "source": "gitlab careers",
+        "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "gh-gitlab-8781299002",
+        "profileId": "full-stack",
+        "title": "Staff Software Engineer - NLP",
+        "company": "GitLab",
+        "location": "Bangalore, India",
+        "url": "https://job-boards.greenhouse.io/gitlab/jobs/8781299002",
+        "tags": [
+          "[PostgreSQL]"
+        ],
+        "source": "gitlab careers",
+        "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "gh-gitlab-8632446002",
+        "profileId": "full-stack",
+        "title": "Staff Software Engineer, Security Foundations",
+        "company": "GitLab",
+        "location": "Bangalore, India",
+        "url": "https://job-boards.greenhouse.io/gitlab/jobs/8632446002",
+        "tags": [
+          "[PostgreSQL]"
+        ],
+        "source": "gitlab careers",
+        "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "remoteok-1137805",
+        "profileId": "full-stack",
+        "title": "SEO Full Stack Engineer",
+        "company": "Treatwell",
+        "location": "Worldwide Remote",
+        "url": "https://remoteok.com/remote-jobs/remote-seo-full-stack-engineer-treatwell-1137805",
+        "tags": [
+          "[PostgreSQL]"
+        ],
+        "source": "remoteok",
+        "description": "<p>We're looking for a full-stack engineer to join our Product Engineering team, reporting to one of the Engineering Managers of the Marketplace area, with a dotted line to the Marketing SEO Manager, focused on supporting the Growth and Marketing are",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-136e8147",
+        "profileId": "full-stack",
+        "title": "Senior Analytics Engineer",
+        "company": "Tebra",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/tebra-senior-analytics-engineer",
+        "tags": [
+          "[GitHub]"
+        ],
+        "source": "weworkremotely",
+        "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States - Remote\n&lt;/p&gt;\n\n&lt;div class=\"content-intro\"&gt;&lt;p&gt;Tebra only initiates contact with candidates via email from an official Tebra email address (@&lt;a class=\"c-link\" hre",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-63cda4a9",
+        "profileId": "full-stack",
+        "title": "Solutions Engineer",
+        "company": "Backblaze External Website",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/backblaze-external-website-solutions-engineer",
+        "tags": [
+          "[Full Stack]"
+        ],
+        "source": "weworkremotely",
+        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6875/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;str",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-12c160d7",
+        "profileId": "full-stack",
+        "title": "Finance Systems Engineer",
+        "company": "Go1 Australia",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/go1-australia-finance-systems-engineer",
+        "tags": [
+          "[Full Stack]"
+        ],
+        "source": "weworkremotely",
+        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6874/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Australia\n    &lt;br /&gt;&lt;strong&",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": true
+      },
+      {
+        "id": "job-1085b01a",
+        "profileId": "full-stack",
+        "title": "Staff Software Engineer, OS Integration",
+        "company": "Mozilla",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/mozilla-staff-software-engineer-os-integration",
+        "tags": [
+          "[Full Stack]"
+        ],
+        "source": "weworkremotely",
+        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6873/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Netherlands\n    &lt;br /&gt;&lt;stron",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-22de9c98",
+        "profileId": "full-stack",
+        "title": "PLM Analyst",
+        "company": "ChargePoint",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/chargepoint-plm-analyst",
+        "tags": [
+          "[Full Stack]"
+        ],
+        "source": "weworkremotely",
+        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6869/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; India\n    &lt;br /&gt;&lt;strong&gt;U",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-5be2fb1d",
+        "profileId": "full-stack",
+        "title": "Senior React Full-stack Developer",
+        "company": "Lemon.io",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/lemon-io-senior-react-full-stack-developer-8",
+        "tags": [
+          "[Angular]",
+          "[.NET]"
+        ],
+        "source": "weworkremotely",
+        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/5989/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; New York, NY\n    &lt;br /&gt;&lt;stro",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "gh-gitlab-8775507002",
+        "profileId": "full-stack",
+        "title": "Intermediate Backend Engineer, India",
+        "company": "GitLab",
+        "location": "Bangalore, India",
+        "url": "https://job-boards.greenhouse.io/gitlab/jobs/8775507002",
+        "tags": [
+          "[PostgreSQL]"
+        ],
+        "source": "gitlab careers",
+        "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "gh-gitlab-8716143002",
+        "profileId": "full-stack",
+        "title": "Senior Backend Engineer, India",
+        "company": "GitLab",
+        "location": "Bangalore, India",
+        "url": "https://job-boards.greenhouse.io/gitlab/jobs/8716143002",
+        "tags": [
+          "[PostgreSQL]"
+        ],
+        "source": "gitlab careers",
+        "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "gh-gitlab-8916232002",
+        "profileId": "full-stack",
+        "title": "Software Engineer, Delivery : Release",
+        "company": "GitLab",
+        "location": "Bangalore, India",
+        "url": "https://job-boards.greenhouse.io/gitlab/jobs/8916232002",
+        "tags": [
+          "[Full Stack]"
+        ],
+        "source": "gitlab careers",
+        "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-R3phZmw0SzYtbUlXNVV1SUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVmg2YUZSSUxYSkJXQzFvTXpoYVRWWjVOVzlGVG1GemFISkRTWGhrTFUwNFVIQmlOWGh1T0ROaVIydE5iRk55ZGs1eVRXUkNkRnBKYW1KU2Ewa3RTakI2YjBsdFpUWTFNbWhFYTNodWF6UkhTalY2V0ZaQlZHVmtWRUk0TjNWSFVuaE5WbEEzUWswM1ZUSmZOa05ZWm1SMVNUZEdTa3BzUnpoQmJuUXRWMU16Vm1aQ01GY1NGMTl5YWw5aGRVaGZTMkpUTUhKMVJWQm5VQzFqTmxGakdpSkJTRTR3UlRkSFNFNDNObkptY0VNMU9HbzNMVmR1ZUc0MU9YZEZSVWxGTkZCMzpjNTMxNTdlNg",
+        "profileId": "full-stack",
+        "title": "Application Developer-Cloud FullStack",
+        "company": "IBM",
+        "location": "Gurugram, Haryana, India",
+        "url": "https://in.linkedin.com/jobs/view/application-developer-cloud-fullstack-at-ibm-4491396803",
+        "tags": [
+          "[Angular]"
+        ],
+        "source": "linkedin",
+        "description": "Introduction\n\nA career in IBM Consulting is built on long-term client relationships and close collaboration worldwide. You'll work with leading companies across industries, helping them shape their hybrid cloud and AI journeys. With support from our ",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-TVMtYzA5cU54aVE3ZHRQaUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVXBKVUZaVllVeDZjakJRZVVKcmVVRTJZWFZZZVhCUVMwcGFiazVoVG14T1NHb3dXSFpmUlRaUWJHMXJiRTVYWDNwMlFuRjVZa0p6VmtaVkxVTnVkbWt4V1VkYU5HUnhPRE5VYWpsS1ZHNTZaa1o1TVVwUlNIcGxTa2RLZFhORWFVbHpaVEphYm5SMmNIQldOSEJvTUhsWWRGbzJNa0ZJV2pNeVZqSlNXRGxrU2xsMGFsVVNGMTl5YWw5aGRVaGZTMkpUTUhKMVJWQm5VQzFqTmxGakdpSkJTRTR3UlRkRlJXa3haV3R0V1d3M1dYaE1jM1pGVGtjNExWOVRTazExTms1UjowYTQyYTJjYQ",
+        "profileId": "full-stack",
+        "title": "AI Product Developer – Full Stack",
+        "company": "Teamware Solutions",
+        "location": "Bengaluru, Karnataka, India",
+        "url": "https://in.linkedin.com/jobs/view/ai-product-developer-%E2%80%93-full-stack-at-teamware-solutions-4492294898",
+        "tags": [
+          "[Angular]",
+          "[.NET]",
+          "[GitHub]"
+        ],
+        "source": "linkedin",
+        "description": "AI Product Developer – Full Stack\n\nMandatory Skills: Full stack developer, Python, Rest API, RAG, LLM, AI\n\nExperience: 4–7 years\n\nProduct Developer\n\nRequired experience: 5-7 years building, deploying, and supporting modern enterprise web applications",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-X19UM2pYank4NWhRUW1kdEFBQUFBQT09OkVzc0JDb3dCUVVSRVlsZGxZVEYyWVcwMVdsOVhSREZMYjNrdFlWODFNV2RYYUZCVmNYaHVOalJKUW1FeGNtODVUVFIxVVdaVVkxcEJWbU5LT1haR2NXUTVkRXg2TjA5S1MwbDJjRFJ0WDFkRGNuRldkVGh0WjFrM1JUQnBPWFZzUTFFeE9VMUpaa2c1UlhSUU1VSk1aVVJtZFVGaVZHYzVZVkZyV0ZZMlVIbGpjekpoZFRGS04yVkliV2x0YkdjMFIza1NGa0ZpYmw5aGRWOXZRamRQZW0xMGExQTJXbnBqUlVFYUlrRklUakJGTjBocmNFdFpVREZUZFdaa2FWZERUSEZSUlY4NVdUTXhRMVo0WjFFOmM0ZWNjMDkw",
+        "profileId": "full-stack",
+        "title": "Angular Developer",
+        "company": "Agdova Technologies",
+        "location": "Faridabad, Haryana, India",
+        "url": "https://in.linkedin.com/jobs/view/angular-developer-at-agdova-technologies-4491647515",
+        "tags": [
+          "[Angular]",
+          "[.NET]"
+        ],
+        "source": "linkedin",
+        "description": "Experience- 2 To 5 Yrs.\n\nIndustry- IT-Software / Software Services\n\nJob Brief\n\nDesigning and developing user interfaces using Angular 7,8,9 best practices. Adapting interface for modern internet applications using the latest front-end technologies. W",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-UFZKcmJHMjJhLVZuZ2V3REFBQUFBQT09OkVzc0JDb3dCUVVSRVlsZGxZakJ5UVdjMFEzQTJOWE5TTjB0VlkzQjNZV3Q1YXpKSE5raG1TSE5OTlVwbWVUQjNlalEzU1hwTVpqTjZOVFZpTUhwTldtdERSR0ZoZW5GVE5taE5ZamRZWjFGS09VWkhPRUZMZG1rME5XcEZTVmgxVm5CdE1HZHpRekJuVURsdFQyNXVVVlZvTUZCalNIQTFUelZsVW1GWFRHeFVZbVJOWjE5aFFWOUtWMmRRTWtRMFNYUVNGa0ZpYmw5aGRWOXZRamRQZW0xMGExQTJXbnBqUlVFYUlrRklUakJGTjBWa2JETkJWbGR4TkVaYVprZzRPRFZvY1cwd1pETk5lSE5YWkdjOmRlZWY4ZmNm",
+        "profileId": "full-stack",
+        "title": "Application Developer - Java  Angular",
+        "company": "Citi",
+        "location": "India",
+        "url": "https://in.linkedin.com/jobs/view/application-developer-java-angular-at-citi-4492517588",
+        "tags": [
+          "[Angular]"
+        ],
+        "source": "linkedin",
+        "description": "The Applications Development Senior Programmer Analyst is an intermediate level position responsible for participation in the establishment and implementation of new or revised application systems and programs in coordination with the Technology team",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-ZmMyYmZOZjRUb3RtdmluY0FBQUFBQT09OkVzc0JDb3dCUVVSRVlsZGxXWGREYTFWTFFrVkhSRnBSVmpkd1owWlZhV1JFYVRsUmRIQndjMHhYWlhSaVptNUNRVUpFVjNCWmVHVk5TRkV4ZHpZMFNURjNTRnBzYjFSR09VeEZXRXRxU0dreFNFeFFZM1JSTW5Ka1NWRkRjMDE2ZWtSZlMwTXlhME5sUWxkbVRWTmxWbE41ZWtaRFpHWmtZbEpJUzNWZlNUVllaMjF3WXpWU2JsOVplRGhDV1dsUVRYWVNGa0ZpYmw5aGRWOXZRamRQZW0xMGExQTJXbnBqUlVFYUlrRklUakJGTjBoalQycDZRa2M1TjFwRmExaDNjR0ZMU0doUGIxcFZabk5IZFVFOmRlZWY4ZmNm",
+        "profileId": "full-stack",
+        "title": "Application Developer - Java  Angular",
+        "company": "CITI",
+        "location": "Pune, Maharashtra, India",
+        "url": "https://jobs.citi.com/job/pune/application-developer-java-angular/287/103508753280",
+        "tags": [
+          "[Angular]"
+        ],
+        "source": "citi careers",
+        "description": "The Applications Development Senior Programmer Analyst is an intermediate level position responsible for participation in the establishment and implementation of new or revised application systems and programs in coordination with the Technology team",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-cm4zNC1YV1dpVUh4Z0JMN0FBQUFBQT09OkVzc0JDb3dCUVVSRVlsZGxZVzlQYTNWTlMwdHVNVVEzVTNCbmNHWnJNRXM0ZEdkUllYSnBSRXBGWjJkMVZVUlBXa2hGVEhaWVNHSjNhbEJmTFVsNFRVNW5iRTVmV0ZweVoxWkZjazFSVkhoVFUyMXJaVzF2TTI1YVdGWTRSVFY0Ym10cGRHZElWVVI0TkZSTVYxTlRhREpOY2w5RWRIQnZiMnhTYkRaTFNYUmFUek0zYzBKblMwa3RObTB5WkZGbmIyVVNGa0ZpYmw5aGRWOXZRamRQZW0xMGExQTJXbnBqUlVFYUlrRklUakJGTjBWSk1rcHRWWFJOVFU5elVWcGFibVJ6UzJOVFZXbGpVSGx6Wm1jOjA2MTYxN2Q5",
+        "profileId": "full-stack",
+        "title": "Full Stack Developer - Angular, .net Core, Azure Functions",
+        "company": "Shine Demo Account",
+        "location": "Pune, Maharashtra, India",
+        "url": "https://www.shine.com/jobs/full-stack-developer-angular-net-core-azure-functions/shine-demo-account/20098425",
+        "tags": [
+          "[Angular]",
+          "[.NET]",
+          "[MSSQL]"
+        ],
+        "source": "shine",
+        "description": "The Opportunity\nAs a Full Stack Developer, your contributions will directly impact our ability to deliver robust web applications to our clients. You will play a key role in both front-end and back-end development to enhance the overall user experien",
+        "scrapedAt": "2026-11-20 03:05:39",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
         "id": "jsearch-ekZhNVZ3QTFWYjM3SjRVaUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVWt5VFZWcU5sZzJNMWRXTVVoV1RIRXlhME5NWnpKMWRIUm5aa0ZRUTJvMk4ySlVSMGRFYjFsdWJqSnphbE4zU1RCdFpHcDJNR1ozZDNKSlprbG9aMVpJVTBkb1NUUkpjVVZJYmtRMmFFSktkRFV6YW1SNmNrbHNTVTFrY1ZGSFVTMTBTSFpYTmpOVE5HRktXQzF3ZVhKMFdYSktaVGxyWmpSV2NFbzVkMVozZUZWVFdYZ1NGMjA1Y2kxaGRWUk5RVFZITjNGMGMxQnJZVGMyTmtGbkdpSkJTRTR3UlRkSFJVeFFORmR5TW1zeFJHTm9SRzlITTI4d2VEQnVWbWx3YUVKQjoyNTc1NzcxZA",
         "profileId": "full-stack",
         "title": "Java Fullstack Developer",
@@ -919,7 +1400,7 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -937,7 +1418,7 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -955,7 +1436,7 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -973,7 +1454,7 @@
         "source": "hitachi careers",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -991,7 +1472,7 @@
         "source": "citi careers",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1009,7 +1490,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1027,7 +1508,7 @@
         "source": "shine",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1045,7 +1526,7 @@
         "source": "jobrapido.com",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1063,7 +1544,7 @@
         "source": "citi careers",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1081,7 +1562,7 @@
         "source": "careers - xoriant",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1100,7 +1581,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 11:28:35",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1118,7 +1599,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 11:28:35",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1138,7 +1619,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 11:28:35",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1156,7 +1637,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 11:28:35",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1175,26 +1656,8 @@
         "description": "<h3><strong>About Supabase</strong></h3>\r\n<p>Supabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including Database, Auth, Storage, Edge Functions, Realtime, and Vector Search. All",
         "scrapedAt": "2026-11-18 09:02:09",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 18, 2026",
         "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "jsearch-WEZEZE9HdTkySl9UVm54VEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbnBNWDJ0eWRFbElZMmhrYkVaR1RXeEVNM2gyTWpoUlVXaHRORlpuT0VrdFpsbERSakZLUkVaWFNYTjFMV040VkdVNWMydE1NRUZITFhWcVJHaHNibFIxVldreFlsZHdRWEpJYVZKaVJtRk9USGhTWDI1cE56WjNOa3d4Um10bmVWbE1XVzExVVU0emJsOVRTREpNYkdGMVNreHpZbms1UjA0dFV6ZHliSEZJVHprMlRVRVNGMnRIYmpsaGNHNXlTVXRUVldoMlkxQndjblp2TmxGRkdpSkJTRTR3UlRkSFlYcGFjV3gzU1dsU09HUnBRV3h4U1hGdlRFUmtVazAzVEdObjo2NjUyZGFhOA",
-        "profileId": "full-stack",
-        "title": "Java and Angular Full Stack Developer",
-        "company": "CITI",
-        "location": "Pune, Maharashtra, India",
-        "url": "https://jobs.citi.com/job/pune/java-and-angular-full-stack-developer/287/102541187040",
-        "tags": [
-          "[Angular]"
-        ],
-        "source": "citi careers",
-        "description": "About the Role:\n\nWe are seeking a highly motivated and skilled Java Full Stack Developer to join our team. This role will be instrumental in designing, developing, and maintaining Trade Finance applications using the latest technologies. The ideal ca",
-        "scrapedAt": "2026-11-18 09:02:09",
-        "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
-        "tier": "domestic",
         "isTargetCompany": false
       },
       {
@@ -1215,9 +1678,27 @@
         "description": "",
         "scrapedAt": "2026-11-18 09:02:09",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-WEZEZE9HdTkySl9UVm54VEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbnBNWDJ0eWRFbElZMmhrYkVaR1RXeEVNM2gyTWpoUlVXaHRORlpuT0VrdFpsbERSakZLUkVaWFNYTjFMV040VkdVNWMydE1NRUZITFhWcVJHaHNibFIxVldreFlsZHdRWEpJYVZKaVJtRk9USGhTWDI1cE56WjNOa3d4Um10bmVWbE1XVzExVVU0emJsOVRTREpNYkdGMVNreHpZbms1UjA0dFV6ZHliSEZJVHprMlRVRVNGMnRIYmpsaGNHNXlTVXRUVldoMlkxQndjblp2TmxGRkdpSkJTRTR3UlRkSFlYcGFjV3gzU1dsU09HUnBRV3h4U1hGdlRFUmtVazAzVEdObjo2NjUyZGFhOA",
+        "profileId": "full-stack",
+        "title": "Java and Angular Full Stack Developer",
+        "company": "CITI",
+        "location": "Pune, Maharashtra, India",
+        "url": "https://jobs.citi.com/job/pune/java-and-angular-full-stack-developer/287/102541187040",
+        "tags": [
+          "[Angular]"
+        ],
+        "source": "citi careers",
+        "description": "About the Role:\n\nWe are seeking a highly motivated and skilled Java Full Stack Developer to join our team. This role will be instrumental in designing, developing, and maintaining Trade Finance applications using the latest technologies. The ideal ca",
+        "scrapedAt": "2026-11-18 09:02:09",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 18, 2026",
+        "tier": "domestic",
+        "isTargetCompany": false
       },
       {
         "id": "job-6930cd8f",
@@ -1232,7 +1713,7 @@
         "source": "weworkremotely",
         "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://www.careerflow.ai\"&gt;https://www.careerflow.ai&lt;/a&gt;\n&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;About the Role:&lt",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "remote",
         "isTargetCompany": false
@@ -1250,27 +1731,9 @@
         "source": "himalayas",
         "description": "The client is a software supply chain security company, that provides the world’s best end-to-end software supply chain security solution, combining the only proactive protection against malicious open source, the only enterprise grade SBOM managemen",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "remote",
-        "isTargetCompany": false
-      },
-      {
-        "id": "jsearch-ZnJXY25DMVJnaXgxcVRkdUFBQUFBQT09OkVzc0JDb3dCUVVSRVlsZGxXbGhqTUVOQmEzVnZVRFl0YUd0eGIyeFpaRFJCWVcxVGNFUk9lVmRmY21wclVuVnZVVmx6VWxoUE9HOHhiRGRWTVVkck1GcHZVa2R3V0c5Vk5rMW5NME4yYUc5NlEwWjJTMWhoTm04dE9FVTRRekpGUzNwcE1taFljbmxhYUhOaVRXVnBkRmM1TlY5TU5sWnhlWGN6VkVaTE5tbHFaMnRWYUdaQ1VsOTBNa3h0WDNkeFpHd1NGbEI0Y2psaGRqSnNSMk16VG5kUVFWQXdZV0pxVTFFYUlrRklUakJGTjBabk1EWkZXbVpZYVhacGJFRmxSbDlOZUdaRVZFWnhaRTFPTTJjOmFlNmVlOTlh",
-        "profileId": "full-stack",
-        "title": "Alert | Angular Developer | NeoSOFT Technologies",
-        "company": "Confidential",
-        "location": "Pune, Maharashtra, India",
-        "url": "https://mycareersolution.com/jobs/alert-angular-developer-neosoft-technologies-pune-6af95e13bf2cfd18ec4c2e74",
-        "tags": [
-          "[Angular]"
-        ],
-        "source": "my career solution",
-        "description": "NeoSOFT is looking for an experienced Angular Developer with hands-on Angular 17 experience to join our team in Pune! Good understanding of NgRx, Monorepo, and Microfrontend architecture.\n\nCompany: Not publicly disclosed\nLocation: Pune\nExperience: 4-",
-        "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
-        "dateLabel": "Nov 18, 2026",
-        "tier": "domestic",
         "isTargetCompany": false
       },
       {
@@ -1286,7 +1749,7 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "remote",
         "isTargetCompany": false
@@ -1304,7 +1767,7 @@
         "source": "jobicy",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "remote",
         "isTargetCompany": false
@@ -1322,7 +1785,7 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "remote",
         "isTargetCompany": false
@@ -1340,7 +1803,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1359,7 +1822,7 @@
         "source": "société générale careers",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1377,7 +1840,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": true
@@ -1395,7 +1858,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1413,7 +1876,7 @@
         "source": "iitjobs",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1433,7 +1896,7 @@
         "source": "corehrx",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1451,7 +1914,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1471,7 +1934,7 @@
         "source": "amgen",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1491,7 +1954,7 @@
         "source": "nexthire",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": true
@@ -1509,7 +1972,7 @@
         "source": "simplyhired",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1529,7 +1992,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1547,10 +2010,28 @@
         "source": "shine",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-ZnJXY25DMVJnaXgxcVRkdUFBQUFBQT09OkVzc0JDb3dCUVVSRVlsZGxXbGhqTUVOQmEzVnZVRFl0YUd0eGIyeFpaRFJCWVcxVGNFUk9lVmRmY21wclVuVnZVVmx6VWxoUE9HOHhiRGRWTVVkck1GcHZVa2R3V0c5Vk5rMW5NME4yYUc5NlEwWjJTMWhoTm04dE9FVTRRekpGUzNwcE1taFljbmxhYUhOaVRXVnBkRmM1TlY5TU5sWnhlWGN6VkVaTE5tbHFaMnRWYUdaQ1VsOTBNa3h0WDNkeFpHd1NGbEI0Y2psaGRqSnNSMk16VG5kUVFWQXdZV0pxVTFFYUlrRklUakJGTjBabk1EWkZXbVpZYVhacGJFRmxSbDlOZUdaRVZFWnhaRTFPTTJjOmFlNmVlOTlh",
+        "profileId": "full-stack",
+        "title": "Alert | Angular Developer | NeoSOFT Technologies",
+        "company": "Confidential",
+        "location": "Pune, Maharashtra, India",
+        "url": "https://mycareersolution.com/jobs/alert-angular-developer-neosoft-technologies-pune-6af95e13bf2cfd18ec4c2e74",
+        "tags": [
+          "[Angular]"
+        ],
+        "source": "my career solution",
+        "description": "NeoSOFT is looking for an experienced Angular Developer with hands-on Angular 17 experience to join our team in Pune! Good understanding of NgRx, Monorepo, and Microfrontend architecture.\n\nCompany: Not publicly disclosed\nLocation: Pune\nExperience: 4-",
+        "scrapedAt": "2026-11-18 03:23:44",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 18, 2026",
+        "tier": "domestic",
+        "isTargetCompany": false
       },
       {
         "id": "jsearch-UFIxOWQ0TnpFSHNIbnRrekFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbGxaWmtoVWRITjZhbkJTZWxWMGJFSnpla04zTW1sQ2VIcG9la3RFVDIxMVJERTBkVkY0VWxrM2MwaHVWelF4UlZwVE5HUkhRbWRaY1dkSWRHczJRMEo1WWxSb0xWOXhUMlJQTkU0MmVWaG1NR04zT1ZoR2JIaEpSMFJITTBKelkwOTBXVEk1TkhBMlgzUmFOa1ZqTm1wa1VTMVRSMnhOUW1KclgzRm9kSGszVUV0M1RHWVNGelpUWmpoaGRtVlNSbVZ4YTJoMlkxQmZObVZVYTFGRkdpSkJTRTR3UlRkR2NXMHRYM2w0VnpCak1rbHlZM2RvVjB4bU5HSkdaRXN4UXpsQjphYzE4ZWZiZQ",
@@ -2737,6 +3218,152 @@
     ],
     "java-backend": [
       {
+        "id": "remoteok-1137805",
+        "profileId": "java-backend",
+        "title": "SEO Full Stack Engineer",
+        "company": "Treatwell",
+        "location": "Worldwide Remote",
+        "url": "https://remoteok.com/remote-jobs/remote-seo-full-stack-engineer-treatwell-1137805",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]",
+          "[PostgreSQL]",
+          "[React]"
+        ],
+        "source": "remoteok",
+        "description": "<p>We're looking for a full-stack engineer to join our Product Engineering team, reporting to one of the Engineering Managers of the Marketplace area, with a dotted line to the Marketing SEO Manager, focused on supporting the Growth and Marketing are",
+        "scrapedAt": "2026-11-20 03:05:47",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "gh-stripe-8130876",
+        "profileId": "java-backend",
+        "title": "Software Engineer, New Grad",
+        "company": "Stripe",
+        "location": "Bangalore",
+        "url": "https://stripe.com/jobs/search?gh_jid=8130876",
+        "tags": [
+          "[Java]"
+        ],
+        "source": "stripe careers",
+        "description": "&lt;h2&gt;&lt;strong&gt;Who we are&lt;/strong&gt;&lt;/h2&gt; &lt;h3&gt;&lt;strong&gt;About Stripe&lt;/strong&gt;&lt;/h3&gt; &lt;p&gt;Stripe is a technology company focused on improving the conditions for economic growth and prosperity. We build progr",
+        "scrapedAt": "2026-11-20 03:05:47",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": true
+      },
+      {
+        "id": "gh-elastic-8362973",
+        "profileId": "java-backend",
+        "title": "Senior Support Engineer",
+        "company": "Elastic",
+        "location": "Bangalore, India",
+        "url": "https://jobs.elastic.co/jobs?gh_jid=8362973&gh_jid=8362973",
+        "tags": [
+          "[Java]",
+          "[Microservices]",
+          "[Docker]",
+          "[Python / Shell]"
+        ],
+        "source": "elastic careers",
+        "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale — unleashing the potential of businesses and people. The Elastic Search AI",
+        "scrapedAt": "2026-11-20 03:05:47",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-ekZhNVZ3QTFWYjM3SjRVaUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVGR5V0haS1IwdHdhemhpZWpGaWN6QjBZM05xVm5WNFMycG5WM1JEY0ZGcWRIbExNRmRVVGs5SVpYZHZUbWhKZW5kc1FtcDFUbmxHVDFOQlJ6WTVYelZYWjJSeVEyRldUaTE0U1hWaGFGZzFiRXRmU200eU1rOVhVelZaVUdkSmJWcHFVV1ZTWld0Vk1rNVBZWFZ1VkY5NU5GZDVNRU5SVVRSVFdtMDNYMlJKTVVWRWVYZ1NGMEkzYmw5aGRXbHNRWFUzYzIxTVVWQXlkR3B5ZVZGSkdpSkJTRTR3UlRkSWJtTnJSWE5ETW5KSU5XNVBaMDFPTTBwSlIzazRiMjFRTVVaMzoyNTc1NzcxZA",
+        "profileId": "java-backend",
+        "title": "Java Fullstack Developer",
+        "company": "Kumaran Systems",
+        "location": "Madhavaram, Telangana, India",
+        "url": "https://in.linkedin.com/jobs/view/java-fullstack-developer-at-kumaran-systems-4492064899",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]",
+          "[Microservices]",
+          "[REST APIs]",
+          "[PostgreSQL]",
+          "[Docker]"
+        ],
+        "source": "linkedin",
+        "description": "About Us\n\nKumaran Systems: Engineering Future-Ready Transformations Since 1992, Kumaran Systems has been helping enterprises bridge the past and the future, reimagining legacy systems and embracing AI-led possibilities. With over 34 years of delivery",
+        "scrapedAt": "2026-11-20 03:05:47",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-aml4bndrSThWQnVXemxVOUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVXh1ZGt4SWVUQjBSSGhEYnprMlRtczVSQzFmUWxKSllrbEJNWFp2ZEdWcGRrdGtja2xSUkdsd01rMTZRVEZqWTI1TlIwWlNiRUV6VkRack5FaENhVFUyZVZaNVMxTnNNa05TYmtNemJUTkNPV3g2Y0VveU0zRTFkbk13VlRCSk56Tk1aa010WTBSdmJYbFRka1JZV1ZVM01XWjRkVlI2VG5CSGVFNVBWRzh3ZFZWeVFYUVNGMEkzYmw5aGRXbHNRWFUzYzIxTVVWQXlkR3B5ZVZGSkdpSkJTRTR3UlRkSE4wTk9hVzg0VFdGcWNFcE9WREZIVlRCWE1WZDVWMGxYWVdobjo4ZjRlYjk2MA",
+        "profileId": "java-backend",
+        "title": "Advanced Java Backend Developer",
+        "company": "Xoriant",
+        "location": "Pune, Maharashtra, India",
+        "url": "https://careers.xoriant.com/in/en/job/XAAXAAGBXOR2600001861EXTERNALENIN/Advanced-Java-Backend-Developer",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]",
+          "[Microservices]",
+          "[PostgreSQL]",
+          "[Docker]",
+          "[Spring Security / JWT]"
+        ],
+        "source": "careers - xoriant",
+        "description": "JD:\n\nAs an Advanced Java Backend Developer at Hilti, you will independently design and deliver high-complexity backend services for the On!Track asset management platform. You will lead technical initiatives, influence service architecture, optimize ",
+        "scrapedAt": "2026-11-20 03:05:47",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-M0VOQjVQMFJLOUN0a0l0b0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbUpNTkVVeU1tTTNWM1ppUjB0WmJqVkZNM1ZYYzBkRVZsSldVbWhpV2t0bmVFZ3liMUF0VW1KbU1WWjNMV0Z5V21oU2R6ZFVaRUkzUVhRM2IyTXdMVlJ2U1VOQlVWQktNVXRhZWpkSmVrNUNUMWxNU25WT09FWlNNMTlHVWt0Mk1UZHJWVzh5ZGxKR1VrMWtiM0pRTXkxUlJrNVFOWEZzYkRKM2VYSXhTVVZxZWxwUk0ySVNGME5pYmw5aGRTMTRSamRIZWpWT2IxQXdjRkJKTUZGWkdpSkJTRTR3UlRkRldUZHpPRGRuUm1vMVVXbDFlV0kxU2tvMk9WTm1iMFZwTkVSMzo3YmY0ZjU5NA",
+        "profileId": "java-backend",
+        "title": "Spring Boot & Terraform Video Game Developer for Retail",
+        "company": "Hartworth Heaford Recruitment",
+        "location": "Puri, Odisha, India",
+        "url": "https://www.shine.com/jobs/spring-boot-terraform-video-game-developer-for-retail/hartworth-heaford-recruitment/20092694?jobtype=cr&position_in_results=19",
+        "tags": [
+          "[Spring Boot]"
+        ],
+        "source": "shine",
+        "description": "Spring Boot & Terraform Video Game Developer for Retail\n\nCompany: Hartworth Heaford Recruitment\nJob Location: Puri, Odisha, India\nEmployment Type: Full-time\nSalary: 55.5L71L a year\n\nHartworth Heaford Recruitment is hiring a Spring Boot & Terraform Vi",
+        "scrapedAt": "2026-11-20 03:05:47",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-TUQ3UnJwaWdhWW9FRzJnQUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXazlFVjNsQmNVRllZVWhtVTFWbk1EUkViak5EUkdKaVoxUXdRM2xtVFVzelkwZzNRMDAxWlVkSmNtWlNZMUZhZEZsT1ZXdEZUSGhGVVU5SWVIZEdjWEF0WkhwaFNtWkJkMlJaY1VSRmFtOVVPRVF0Y0c0NGRrbDRVRUpEZW5OR2IzVk9kbmx5Y1VjeE0ydDNPWGhOZFVsZlRWRnVVUzF2VjNVdFdYVTViMGMzVm5WVWF6SVNGME5pYmw5aGRTMTRSamRIZWpWT2IxQXdjRkJKTUZGWkdpSkJTRTR3UlRkRlQybFVlVE5OWlhodlUyZzRhM2hJUTFsa1JVTnZlVzFXUlROQjpiZDRiY2I3OA",
+        "profileId": "java-backend",
+        "title": "Spring Boot Technical Lead - Hibernate",
+        "company": "HCLTech",
+        "location": "India",
+        "url": "https://www.glassdoor.co.in/job-listing/jv?jl=1010292506806",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]",
+          "[Hibernate/JPA]",
+          "[Microservices]",
+          "[Docker]"
+        ],
+        "source": "glassdoor",
+        "description": "Job Summary\n\nOVERVIEW OF THE ROLE\n\nAs a Java Microservices Developer at HCLTech, you will play a critical role in designing, developing, and maintaining scalable enterprise applications using modern Java technologies. Your expertise will contribute d",
+        "scrapedAt": "2026-11-20 03:05:47",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
         "id": "jsearch-YmxoLUQtZWVicFZtQk4tRUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZWFpxWWpaSGFWVmpVMmhNT0RKUVRVcGtaVzUwUzFKU1JYazNOV0ZMVkVwelZVUnNSRTlSTTNCNU5XbHlXSEZKZDFoS1gzTnVXVEZqZUVoSFgzaDBaMEpxTFc5T2NFWTVVbU5MY0hWVVlUbHlUVlIwT1dvMWNsQndUSFJ0WW0xWmRsWlpUV05TT0RaVE5XUllWbXBNV25reU5qTjBZVVJZYVRCNk5VOVJVVzE1YVdab09WSVNGMjkwY2kxaGNWOUNTMTloY25KMVJWQjJkVWhrWjBGUkdpSkJTRTR3UlRkSWVVdHFXSEpmZVZOT1R6RmtkMmhrTnprNFFVVlJjMjlCVUc1Ujo5OTZiZTNhMA",
         "profileId": "java-backend",
         "title": "Software Engineer_Java_SpringBoot_Microservices_ReactJS",
@@ -2855,7 +3482,7 @@
         "source": "nexthire",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:58",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -2878,7 +3505,7 @@
         "source": "workday",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:58",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -2901,7 +3528,7 @@
         "source": "shine",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:58",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -2925,7 +3552,7 @@
         "source": "myinternships.in",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:58",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -2949,7 +3576,7 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -2967,7 +3594,7 @@
         "source": "himalayas",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -2986,7 +3613,7 @@
         "source": "shine",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3008,7 +3635,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3030,7 +3657,7 @@
         "source": "indeed",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3052,7 +3679,7 @@
         "source": "simplyhired",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3079,7 +3706,7 @@
         "description": "",
         "scrapedAt": "2026-11-18 09:02:12",
         "dateGroup": "2026-11-18",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3097,7 +3724,7 @@
         "source": "himalayas",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "remote",
         "isTargetCompany": false
@@ -3120,7 +3747,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3138,7 +3765,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3161,7 +3788,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": true
@@ -3188,7 +3815,7 @@
         "source": "cognizant careers",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": true
@@ -3211,7 +3838,7 @@
         "source": "corehrx",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3232,7 +3859,7 @@
         "source": "simplyhired",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3255,7 +3882,7 @@
         "source": "myinternships.in",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3275,7 +3902,7 @@
         "source": "jobleads",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3298,7 +3925,7 @@
         "source": "shine",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3321,7 +3948,7 @@
         "source": "smart recruiters jobs",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-17",
+        "dateGroup": "2026-11-18",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -4006,9 +4633,1289 @@
         "isTargetCompany": false
       }
     ],
-    "plsql-developer": []
+    "plsql-developer": [
+      {
+        "id": "job-30a8629d",
+        "profileId": "plsql-developer",
+        "title": "Power BI Technical Consultant",
+        "company": "Unify Dots",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/unify-dots-power-bi-technical-consultant",
+        "tags": [
+          "[Oracle ADF]",
+          "[Power BI]"
+        ],
+        "source": "weworkremotely",
+        "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6872/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Pune, Maharashtra, India\n    &lt;br /",
+        "scrapedAt": "2026-11-20 03:05:55",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-d86d075",
+        "profileId": "plsql-developer",
+        "title": "Senior Software Engineer",
+        "company": "DRFIRST COM INC",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/drfirst-com-inc-senior-software-engineer",
+        "tags": [
+          "[Oracle SQL]",
+          "[Java]",
+          "[CI/CD & Git]"
+        ],
+        "source": "weworkremotely",
+        "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=fc2a6c7e-ef54-4ed9-8c04-d5aca23f99e3\"&",
+        "scrapedAt": "2026-11-20 03:05:55",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "remoteok-1137554",
+        "profileId": "plsql-developer",
+        "title": "Accounting Operations",
+        "company": "Plaid",
+        "location": "Worldwide Remote",
+        "url": "https://remoteok.com/remote-jobs/remote-accounting-operations-plaid-1137554",
+        "tags": [
+          "[Oracle ADF]"
+        ],
+        "source": "remoteok",
+        "description": "<p style=\"min-height:1.5em\">We believe that the way people interact with their finances will drastically improve in the next few years. Weâre dedicated to empowering this transformation by building the tools and experiences that thousands of develo",
+        "scrapedAt": "2026-11-20 03:05:55",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "remoteok-1137155",
+        "profileId": "plsql-developer",
+        "title": "Oracle Fusion Cloud Lead â Logistics & Supply Chain Management",
+        "company": "Tessera Labs",
+        "location": "Worldwide Remote",
+        "url": "https://remoteok.com/remote-jobs/remote-oracle-fusion-cloud-lead-logistics-supply-chain-management-tessera-labs-1137155",
+        "tags": [
+          "[Oracle SQL]"
+        ],
+        "source": "remoteok",
+        "description": "<p style=\"min-height:1.5em\"><strong>Oracle Fusion Cloud Lead â Logistics &amp; Supply Chain Management</strong></p><p style=\"min-height:1.5em\"><strong>Greenfield Oracle Fusion Implementation</strong></p><p style=\"min-height:1.5em\">Company <strong>T",
+        "scrapedAt": "2026-11-20 03:05:55",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "gh-stripe-8273713",
+        "profileId": "plsql-developer",
+        "title": "Corporate Accounting Analyst (Bangalore)",
+        "company": "Stripe",
+        "location": "Bengaluru",
+        "url": "https://stripe.com/jobs/search?gh_jid=8273713",
+        "tags": [
+          "[Oracle SQL]"
+        ],
+        "source": "stripe careers",
+        "description": "&lt;h2&gt;&lt;strong&gt;Who we are &lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;&lt;strong&gt;About Stripe&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world&#39;s largest enter",
+        "scrapedAt": "2026-11-20 03:05:55",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": true
+      },
+      {
+        "id": "gh-stripe-8324207",
+        "profileId": "plsql-developer",
+        "title": "Processing Cost Analyst",
+        "company": "Stripe",
+        "location": "IN-Bengaluru",
+        "url": "https://stripe.com/jobs/search?gh_jid=8324207",
+        "tags": [
+          "[Oracle SQL]",
+          "[Power BI]",
+          "[Python]"
+        ],
+        "source": "stripe careers",
+        "description": "&lt;h2 id=&quot;who-we-are&quot;&gt;Who we are&lt;/h2&gt; &lt;h3 id=&quot;about-stripe&quot;&gt;About Stripe&lt;/h3&gt; &lt;p&gt;Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world&#39;s largest enterpri",
+        "scrapedAt": "2026-11-20 03:05:55",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-Y1A2bl9NM1NadGg0TVRxY0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVVpYVW5wUk9WVlJRMlU1Tmw5TWJqQkhhRlJ4VERabFN6ZFVRM3B1V0c1TVoxVXhWMWRyUlY5MlkxTjZSSEJuZVc1SU1ucEtMVGRMWkhac2NreHZlRkl0VXpCQ1ZYZHhhbEk0VmpWM1VHSktOQzFvTkdVdFVVUldOQzFMVVVadk15MWxWRjlNWnkweWNXVlpTbVZLTVRCUlVtTnBURUpMYTBRMFIyMVlUMGt5U1V4cWFFSVNGMFJ5Ymw5aGNUTXpTalpQZEhGMGMxQnNUbkY2Y1ZGdkdpSkJTRTR3UlRkR01rbGFXREIwUW0xNkxVMU9NRWhhZEc0eVNWOTJNa0V5U1hWbjo5YmQ3Y2UxYQ",
+        "profileId": "plsql-developer",
+        "title": "PL/SQL Developer",
+        "company": "Tata Consultancy Services",
+        "location": "Bengaluru, Karnataka, India",
+        "url": "https://in.linkedin.com/jobs/view/pl-sql-developer-at-tata-consultancy-services-4482917931",
+        "tags": [
+          "[PL/SQL]",
+          "[Oracle SQL]"
+        ],
+        "source": "linkedin",
+        "description": "Greetings from TCS!\n\nTCS is hiring for PL/SQL Developer\n\nDesired Experience Range: 5 + Years\n\nJob Location: Bangalore\n\nMust-Have**\n\n(Ideally should not be more than 3-5)\n• At least 10 years of development work experience in Oracle PLSQL based Data wa",
+        "scrapedAt": "2026-11-20 03:05:55",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-bDlKVzVZTHY3Z2xnZXUxWUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVTEyZVdObVZXaGphVFpTUlZwNE1rSlliMDB3WDFoVGJGUjZkMlEwVlhsdmMyNWxWMGs1Ukc5bFdXaHlOVGRSVW5KeU4yMW9XalV4UVdwQk1qSmxWMWhUYVRndE4zaFJkVkp6ZDFVeE0zRlhSbmh6TTI1bk4zRnJNVXQxVWxkRFVWOWZOblZCVDBNNFZYbHpTVUZFYmpsRlpVRnVVM2x4VVdwVWVrdzViRzFpU0hoblpYRVNGMFJ5Ymw5aGNUTXpTalpQZEhGMGMxQnNUbkY2Y1ZGdkdpSkJTRTR3UlRkR2FURm9WREZhVm1WaVFpMVdPVUpwTjA5SWRXWmtlVEZEV2sxUjo5MzEzMjBkMg",
+        "profileId": "plsql-developer",
+        "title": "PL/SQL Developer | Remote | Jobs In India",
+        "company": "DigitalXNode",
+        "location": "India",
+        "url": "https://digitalxnode.com/jobs/plsql-developer-jobs-india-remote/",
+        "tags": [
+          "[PL/SQL]",
+          "[Oracle SQL]",
+          "[CI/CD & Git]"
+        ],
+        "source": "digitalxnode",
+        "description": "Company Overview\n\nDigitalXnode helps companies find the right people for their technology and business needs. We connect clients with skilled professionals for permanent hiring and staff augmentation across different projects.\n\nJob Summary\n\nWe are lo",
+        "scrapedAt": "2026-11-20 03:05:55",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-TUVMTGIyN0k0blBJRmotcUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVGhrTTFaSlIwSTBNVEJHWVZoTGRraHBaVXhvYldGQk9XTXRRVXMzUVhGWFVIQmZPSGhFYmtvNFdtOVNaMkphYzJ0NGJYUkpWRnA1ZVU1SVRra3lTRlV0VUdaV1kyNWtkM2hSUkZoaUxWRnRNRXgyWTBKUVprRmhibkIyUkhKS1lrZFJObFpZU1VoWGFGVkZSWHBGT0ZCWE5FYzRhVkZKVjNKTVowdFFVRGQ1WlVKUGFEZ1NGMFJ5Ymw5aGNUTXpTalpQZEhGMGMxQnNUbkY2Y1ZGdkdpSkJTRTR3UlRkR2VVeHhXbTlOWVU5RFdXVjVkVXh1Wm1wYU1HeHRRMVZHYmw5bjozN2FkNDcyNg",
+        "profileId": "plsql-developer",
+        "title": "PLSQL Developer with unix script",
+        "company": "Infosys",
+        "location": "India",
+        "url": "https://www.shine.com/jobs/plsql-developer-with-unix-script/infosys/19903645",
+        "tags": [
+          "[PL/SQL]",
+          "[Oracle SQL]"
+        ],
+        "source": "shine",
+        "description": "PLSQL Developer with unix script\n\nCompany: Infosys\nJob Location: India\nEmployment Type: Full-time\n\nRole & responsibilities\n\nDesign, develop, test, and maintain complex PL/SQL packages, procedures, functions, triggers, and views.\nDevelop and optimize ",
+        "scrapedAt": "2026-11-20 03:05:55",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-WGZQa0RVLXN6aERNQlU1WEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZamRxZUhKNVkwWmFaRFpTUm5WRVRqZ3RjVTFwYVRNdE9GWjVWV2hoYTJoWWJERllkMlZIVlc0eVJEaGZPVWQ0VjFwWlRsbHZTa0prYldWMWVVWmtkRFI2V2tOcmNEaFpheTFZY0hCVGFGVTBSSHB6WHpaak1uaFFhbkF4TVVsNVNEQXhkRlZuWkUxdVNHOXFUVXMxYlZWWVdVbGFabk15Tms4eGFVMVFSMk54T1U5RVgxUVNGMFJ5Ymw5aGNUTXpTalpQZEhGMGMxQnNUbkY2Y1ZGdkdpSkJTRTR3UlRkSUxWb3pjbWgzWVROaFVUSkZORVpWVEU1dFZuQmtOa2x2YkRGMzo5YmQ3Y2UxYQ",
+        "profileId": "plsql-developer",
+        "title": "PL SQL Developer",
+        "company": "Capgemini",
+        "location": "Secunderabad, Telangana, India",
+        "url": "https://www.foundit.in/job/pl-sql-developer-capgemini-hyderabad-secunderabad-telangana-67630793",
+        "tags": [
+          "[PL/SQL]",
+          "[Oracle SQL]"
+        ],
+        "source": "foundit",
+        "description": "Choosing Capgemini means choosing a company where you will be empowered to shape your career in the way you'd like, where you'll be supported and inspired by a collaborative community of colleagues around the world, and where you'll be able to reimag",
+        "scrapedAt": "2026-11-20 03:05:55",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-eG8waWtDN3FYVzJobEM2V0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbkJoTkMxMVluaE5WR0YyTmxsQlZETlJTRFoyUWtSZlVXUTRkemsyZDNKSVJrVk1kelZEYjBGYVdtNVVkM2hGY1RKNkxXeDNTaTB6U0ZWd1N6UktkV1phUkRCeU9UZFlTMGR0T0ZvMmJYcExkRmhaVVVJMVRIVkRVWFEwVDFVemJWbFBhVjkzU0dWWE1EQlFNalZUYjJWR1JrSnJOMUpmYldsQlNrNXFlbkZuTTBSVlRYTVNGMFJ5Ymw5aGNUTXpTalpQZEhGMGMxQnNUbkY2Y1ZGdkdpSkJTRTR3UlRkSVVHTlpOWFZVWTIxRlQyTnBhRXRsVkVwdWNuaHpOR0pCTVc5QjoyNTY1ZjEzYg",
+        "profileId": "plsql-developer",
+        "title": "SQL Developer",
+        "company": "Platinus Technologies",
+        "location": "Bhubaneswar, Odisha, India",
+        "url": "https://www.shine.com/jobs/sql-developer/platinus-technologies/20090728",
+        "tags": [
+          "[PL/SQL Developer]"
+        ],
+        "source": "shine",
+        "description": "SQL Developer\n\nCompany: Platinus Technologies\nJob Location: Bhubaneswar, Odisha, India\nEmployment Type: Full-time\n\nJob highlights\n\nExperience in T-SQL and database management\n\nDevelop and optimize SQL procedures, analyze queries, build reports, and s",
+        "scrapedAt": "2026-11-20 03:05:55",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-eVFyMWprR2JnWGRwZ2pwdUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVTVHT1ZsVlNsQnVNVEZpYUZkZmFGVjFlbk4wV2poSWIyZEZNMkpaUTJsWGNIcExiWEpzV1dWV1RqQnZVMUZyWldNMmFuQjFWMlZOTnkxeFdqbEVRMU5HUm1KM1lteHhUM2h4UTJOMVNGbFFSRFpqY1VJMGJsazNSbVozWW5sRGFHWkNSRWx3WDIweVlsUjFhVmRpTUdOR2JuWkdWR2hpVFhCVFlqTnhVazFhWmxCR2NtUVNGMFJ5Ymw5aGNUTXpTalpQZEhGMGMxQnNUbkY2Y1ZGdkdpSkJTRTR3UlRkRk5rZE9RVFJXZVhCaE56SllSVVJHVkZoNlMxaGtVR0V3YmsxUjo5YmQ3Y2UxYQ",
+        "profileId": "plsql-developer",
+        "title": "PL/SQL Developer",
+        "company": "Terrabit  Consulting",
+        "location": "Chennai, Tamil Nadu, India",
+        "url": "https://www.iitjobs.com/job/plsql-developer-chennai-tamil-nadu-india-482487",
+        "tags": [
+          "[PL/SQL]",
+          "[Oracle SQL]"
+        ],
+        "source": "iitjobs",
+        "description": "You will develop and manage database logic using Oracle and PostgreSQL.\n\nThis role is on-site.\nResponsibilities\n• Write complex stored procedures, packages, functions, and triggers.\n• Manage large volumes of data using cursors and advanced bulk colle",
+        "scrapedAt": "2026-11-20 03:05:55",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-S2lmSnh4SUJaYloyVkNjUkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVlZ6YlROWGQxOWtaRTFVVEZwS1gwdFZZMGc1UzFGb0xXdExNMHRmWHpCZk9YbFhXa1pwWVVKaFVrRkZSMTlCZFV0V01YcHBhR2htWlVFNGVITk1aRXBuWmw5aFNscE1aVVJqWmpoUVZtTlZWVXhtYmtWUU9FMUJiM1F6VVRSeVNrcHlabXMyVlVwcWEwcG9Oa1JrV2kxRGFVTTFTaTFJVmw5WVQzQlRjMkYyUjJkck5rMFNGMFJ5Ymw5aGNUTXpTalpQZEhGMGMxQnNUbkY2Y1ZGdkdpSkJTRTR3UlRkSU1GcDJlSFUzWTBSM1JsUlVSRVJGV1daZmNYWkZiVzVXY0VSUjowMWFhYTRhYQ",
+        "profileId": "plsql-developer",
+        "title": "PS Technical Consultant III-PL/SQL Dev Cum DBA",
+        "company": "NCR Atleos",
+        "location": "Hyderabad, Telangana, India",
+        "url": "https://in.linkedin.com/jobs/view/ps-technical-consultant-iii-pl-sql-dev-cum-dba-at-ncr-atleos-4475263435",
+        "tags": [
+          "[PL/SQL]",
+          "[Oracle SQL]"
+        ],
+        "source": "linkedin",
+        "description": "About NCR Atleos\n\nNCR Atleos, headquartered in Atlanta, is a leader in expanding financial access. Our dedicated 20,000 employees optimize the branch, improve operational efficiency and maximize self-service availability for financial institutions an",
+        "scrapedAt": "2026-11-20 03:05:55",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-Zmk0cDRKcFJQcUlVY0czZkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbmRRVURKUGRWZHVYMUV4TlZaNE5GWlNXV1I1VWxVNVJGaENhR1V5Y1hnMFkwWlRkelI1Y2pOeU1FVlllVFpNY25nM1NuVm9kRlIzYVVwRldYWkphbWN6YTNsc2FWcHBMV3B6YldWQ2FYWkxZVlZXZVV4VVQybzJTa1UyWWtWeGRYUjBXalF0ZHpSNmMzcHFTVGsyUjFvM1gycGxSRkoxUmpJelRXcFFhRTl5WWpGVVZEY1NGMFZpYmw5aGMySnNSMDlsTmpRdFJWQnFVRU5MWjBGUkdpSkJTRTR3UlRkRmFIVjBXRWt5Tkc5cVdFWjROazkyYTJaRVkzVkthM2xDUWxWbjphMzAzODM5ZQ",
+        "profileId": "plsql-developer",
+        "title": "29502-Oracle, PLSQL, Unix L2 (2.1-5 years)-CHN",
+        "company": "CGI",
+        "location": "Chennai, Tamil Nadu, India",
+        "url": "https://in.linkedin.com/jobs/view/29502-oracle-plsql-unix-l2-2-1-5-years-chn-at-cgi-4484098626",
+        "tags": [
+          "[PL/SQL]",
+          "[Oracle SQL]",
+          "[Python]",
+          "[CI/CD & Git]"
+        ],
+        "source": "linkedin",
+        "description": "Position Description\n\nCompany Profile:\n\nFounded in 1976, CGI is among the largest independent IT and business consulting services firms in the world. With 94,000 consultants and professionals across the globe, CGI delivers an end-to-end portfolio of ",
+        "scrapedAt": "2026-11-20 03:05:55",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-WkU1TTFVdVhWajFNbVZLQUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXakJSV2s5YVRXRkZabUpLT0haVU0wdHFSbGxUVVU1eE5WcHBaMlJzVWxJMlJVSlNRbGR2TTFFdGVXRnBTSEJMWkZOMVJsZ3pVRkJMTUd0cFJtOTRPVlV4VGpnekxYQTFWR05hZDJOMGIyRjJVRkpvUlU4dE9USkxXVmxVY25KcWFYaEthelJmU0RGMFpEbFlWSEo1Y1RGNk5HZDNSbkJsYjJGRWVsVTRlRmwzTmswd00yWVNGMFZpYmw5aGMySnNSMDlsTmpRdFJWQnFVRU5MWjBGUkdpSkJTRTR3UlRkR1VYaGhhV1pKVTNKelprdDBRWFJXZGxOaE1reEplbkJNVm5aMzo1NDY5YzkzNA",
+        "profileId": "plsql-developer",
+        "title": "Java, Microservices and Oracle PL SQL Developer (India)",
+        "company": "12542 Citicorp Services India Private",
+        "location": "India",
+        "url": "https://in.jobrapido.com/jobpreview/2618993920561905664",
+        "tags": [
+          "[Oracle SQL]",
+          "[Java]"
+        ],
+        "source": "jobrapido.com",
+        "description": "Overview of Citi:\n\nCiti, the world’s leading global bank, has approximately 200 million customer accounts and a presence in more than 160 countries and jurisdictions worldwide. Citi provides consumers, corporations, governments, and institutions with",
+        "scrapedAt": "2026-11-20 03:05:55",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-ZHVzODBrOVBKbVJNTC1SRkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZV0pXU1ZsaVFreHhZMFJtY1VOak1ETlpWVmhVZURKR1ZEVkJTMUZsVEd0SFRXcENRMDlLYkMxUWQwSnpaemR6VW1Vek5GWnhPVmgwYTE5ZlQzZGZZbWczT0dSWWNsZE5aVEJUYTFKblgyeHlMWE5zV2xGdk1URmhlSE51YzJ4SFpYQXdRelJrUTBkRlJWUklUVGx4TVZSS1ozbFhTVE10VkRkek1uaHBOMHRwVWxwRWREa1NGMFZpYmw5aGMySnNSMDlsTmpRdFJWQnFVRU5MWjBGUkdpSkJTRTR3UlRkSVNEWlpPVGt3YmxJelRtcHJSek5qVkZwVVdIaDFPRnBJUVU1bjphMWNkNDE2Zg",
+        "profileId": "plsql-developer",
+        "title": "Oracle,PLSQL,ProC majors",
+        "company": "Qloron Pvt Ltd",
+        "location": "Bengaluru, Karnataka, India",
+        "url": "https://in.linkedin.com/jobs/view/oracle-plsql-proc-majors-at-qloron-pvt-ltd-4474655280",
+        "tags": [
+          "[PL/SQL]",
+          "[Oracle SQL]",
+          "[CI/CD & Git]"
+        ],
+        "source": "linkedin",
+        "description": "QT-KRS-10-501\n\nPosition\n\nOracle PL/SQL & Pro*C Developer\n\nLocation\n\nBangalore\n\nExperience\n\n5+ Years\n\nJob Summary\n\nWe are seeking a skilled Oracle PL/SQL & Pro*C Developer with 5+ years of experience in enterprise application development. The ideal ca",
+        "scrapedAt": "2026-11-20 03:05:55",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-a0JHbWZzdDJOTGI2VU5kYUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbVJRWW5OR1FUSnVhME5tVHpaU01sbDNkWGQzTWxsRVpqUXliV3A0VG5VMWRGbGFWRE0yY2kwM1VYRm5UVWxoVURBeU1XMHpZMlE1ZGxKRFVqZEdTWEZGYjNZelkwVmtlREpUWTB4aVRHSmxSVEZ0WnpCek5IRnFaSE5VU0dsWGRIVjJaMXA2VjB0dFZVaEdSVkUyWVRKcVZtd3llR3hNTjA1V1lUWnJjRlZIYkZFd2FYUVNGMFZpYmw5aGMySnNSMDlsTmpRdFJWQnFVRU5MWjBGUkdpSkJTRTR3UlRkSVpXeG5hSEJVVERkWVRFRlhaRlpLT1ZkSE1uUkNaRVEzZGxWMzowYzU4MjBkYQ",
+        "profileId": "plsql-developer",
+        "title": "Consultant - Oracle PL/SQL (India)",
+        "company": "Yash Technologies",
+        "location": "India",
+        "url": "https://www.shine.com/jobs/consultant-oracle-pl-sql-india/yash-technologies/19577606",
+        "tags": [
+          "[PL/SQL]",
+          "[Oracle SQL]",
+          "[CI/CD & Git]"
+        ],
+        "source": "shine",
+        "description": "Date: Sep 11, 2026\nJob Requisition Id: 65899\n\nLocation:\nPune, IN Pune, MH, IN\n\n# { display: inline; }\n.buttontext47d030a40eb4ac5c a{ border: 1px solid transparent; } .buttontext47d030a40eb4ac5c a: focus{ border: 1px dashed #2b97ef !important; outline",
+        "scrapedAt": "2026-11-20 03:05:55",
+        "dateGroup": "2026-11-20",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      }
+    ]
   },
   "allJobs": [
+    {
+      "id": "job-30a8629d",
+      "profileId": "plsql-developer",
+      "title": "Power BI Technical Consultant",
+      "company": "Unify Dots",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/unify-dots-power-bi-technical-consultant",
+      "tags": [
+        "[Oracle ADF]",
+        "[Power BI]"
+      ],
+      "source": "weworkremotely",
+      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6872/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Pune, Maharashtra, India\n    &lt;br /",
+      "scrapedAt": "2026-11-20 03:05:55",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-d86d075",
+      "profileId": "plsql-developer",
+      "title": "Senior Software Engineer",
+      "company": "DRFIRST COM INC",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/drfirst-com-inc-senior-software-engineer",
+      "tags": [
+        "[Oracle SQL]",
+        "[Java]",
+        "[CI/CD & Git]"
+      ],
+      "source": "weworkremotely",
+      "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=fc2a6c7e-ef54-4ed9-8c04-d5aca23f99e3\"&",
+      "scrapedAt": "2026-11-20 03:05:55",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "remoteok-1137554",
+      "profileId": "plsql-developer",
+      "title": "Accounting Operations",
+      "company": "Plaid",
+      "location": "Worldwide Remote",
+      "url": "https://remoteok.com/remote-jobs/remote-accounting-operations-plaid-1137554",
+      "tags": [
+        "[Oracle ADF]"
+      ],
+      "source": "remoteok",
+      "description": "<p style=\"min-height:1.5em\">We believe that the way people interact with their finances will drastically improve in the next few years. Weâre dedicated to empowering this transformation by building the tools and experiences that thousands of develo",
+      "scrapedAt": "2026-11-20 03:05:55",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "remoteok-1137155",
+      "profileId": "plsql-developer",
+      "title": "Oracle Fusion Cloud Lead â Logistics & Supply Chain Management",
+      "company": "Tessera Labs",
+      "location": "Worldwide Remote",
+      "url": "https://remoteok.com/remote-jobs/remote-oracle-fusion-cloud-lead-logistics-supply-chain-management-tessera-labs-1137155",
+      "tags": [
+        "[Oracle SQL]"
+      ],
+      "source": "remoteok",
+      "description": "<p style=\"min-height:1.5em\"><strong>Oracle Fusion Cloud Lead â Logistics &amp; Supply Chain Management</strong></p><p style=\"min-height:1.5em\"><strong>Greenfield Oracle Fusion Implementation</strong></p><p style=\"min-height:1.5em\">Company <strong>T",
+      "scrapedAt": "2026-11-20 03:05:55",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "gh-stripe-8273713",
+      "profileId": "plsql-developer",
+      "title": "Corporate Accounting Analyst (Bangalore)",
+      "company": "Stripe",
+      "location": "Bengaluru",
+      "url": "https://stripe.com/jobs/search?gh_jid=8273713",
+      "tags": [
+        "[Oracle SQL]"
+      ],
+      "source": "stripe careers",
+      "description": "&lt;h2&gt;&lt;strong&gt;Who we are &lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;&lt;strong&gt;About Stripe&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world&#39;s largest enter",
+      "scrapedAt": "2026-11-20 03:05:55",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": true
+    },
+    {
+      "id": "gh-stripe-8324207",
+      "profileId": "plsql-developer",
+      "title": "Processing Cost Analyst",
+      "company": "Stripe",
+      "location": "IN-Bengaluru",
+      "url": "https://stripe.com/jobs/search?gh_jid=8324207",
+      "tags": [
+        "[Oracle SQL]",
+        "[Power BI]",
+        "[Python]"
+      ],
+      "source": "stripe careers",
+      "description": "&lt;h2 id=&quot;who-we-are&quot;&gt;Who we are&lt;/h2&gt; &lt;h3 id=&quot;about-stripe&quot;&gt;About Stripe&lt;/h3&gt; &lt;p&gt;Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world&#39;s largest enterpri",
+      "scrapedAt": "2026-11-20 03:05:55",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-Y1A2bl9NM1NadGg0TVRxY0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVVpYVW5wUk9WVlJRMlU1Tmw5TWJqQkhhRlJ4VERabFN6ZFVRM3B1V0c1TVoxVXhWMWRyUlY5MlkxTjZSSEJuZVc1SU1ucEtMVGRMWkhac2NreHZlRkl0VXpCQ1ZYZHhhbEk0VmpWM1VHSktOQzFvTkdVdFVVUldOQzFMVVVadk15MWxWRjlNWnkweWNXVlpTbVZLTVRCUlVtTnBURUpMYTBRMFIyMVlUMGt5U1V4cWFFSVNGMFJ5Ymw5aGNUTXpTalpQZEhGMGMxQnNUbkY2Y1ZGdkdpSkJTRTR3UlRkR01rbGFXREIwUW0xNkxVMU9NRWhhZEc0eVNWOTJNa0V5U1hWbjo5YmQ3Y2UxYQ",
+      "profileId": "plsql-developer",
+      "title": "PL/SQL Developer",
+      "company": "Tata Consultancy Services",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://in.linkedin.com/jobs/view/pl-sql-developer-at-tata-consultancy-services-4482917931",
+      "tags": [
+        "[PL/SQL]",
+        "[Oracle SQL]"
+      ],
+      "source": "linkedin",
+      "description": "Greetings from TCS!\n\nTCS is hiring for PL/SQL Developer\n\nDesired Experience Range: 5 + Years\n\nJob Location: Bangalore\n\nMust-Have**\n\n(Ideally should not be more than 3-5)\n• At least 10 years of development work experience in Oracle PLSQL based Data wa",
+      "scrapedAt": "2026-11-20 03:05:55",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-bDlKVzVZTHY3Z2xnZXUxWUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVTEyZVdObVZXaGphVFpTUlZwNE1rSlliMDB3WDFoVGJGUjZkMlEwVlhsdmMyNWxWMGs1Ukc5bFdXaHlOVGRSVW5KeU4yMW9XalV4UVdwQk1qSmxWMWhUYVRndE4zaFJkVkp6ZDFVeE0zRlhSbmh6TTI1bk4zRnJNVXQxVWxkRFVWOWZOblZCVDBNNFZYbHpTVUZFYmpsRlpVRnVVM2x4VVdwVWVrdzViRzFpU0hoblpYRVNGMFJ5Ymw5aGNUTXpTalpQZEhGMGMxQnNUbkY2Y1ZGdkdpSkJTRTR3UlRkR2FURm9WREZhVm1WaVFpMVdPVUpwTjA5SWRXWmtlVEZEV2sxUjo5MzEzMjBkMg",
+      "profileId": "plsql-developer",
+      "title": "PL/SQL Developer | Remote | Jobs In India",
+      "company": "DigitalXNode",
+      "location": "India",
+      "url": "https://digitalxnode.com/jobs/plsql-developer-jobs-india-remote/",
+      "tags": [
+        "[PL/SQL]",
+        "[Oracle SQL]",
+        "[CI/CD & Git]"
+      ],
+      "source": "digitalxnode",
+      "description": "Company Overview\n\nDigitalXnode helps companies find the right people for their technology and business needs. We connect clients with skilled professionals for permanent hiring and staff augmentation across different projects.\n\nJob Summary\n\nWe are lo",
+      "scrapedAt": "2026-11-20 03:05:55",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-TUVMTGIyN0k0blBJRmotcUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVGhrTTFaSlIwSTBNVEJHWVZoTGRraHBaVXhvYldGQk9XTXRRVXMzUVhGWFVIQmZPSGhFYmtvNFdtOVNaMkphYzJ0NGJYUkpWRnA1ZVU1SVRra3lTRlV0VUdaV1kyNWtkM2hSUkZoaUxWRnRNRXgyWTBKUVprRmhibkIyUkhKS1lrZFJObFpZU1VoWGFGVkZSWHBGT0ZCWE5FYzRhVkZKVjNKTVowdFFVRGQ1WlVKUGFEZ1NGMFJ5Ymw5aGNUTXpTalpQZEhGMGMxQnNUbkY2Y1ZGdkdpSkJTRTR3UlRkR2VVeHhXbTlOWVU5RFdXVjVkVXh1Wm1wYU1HeHRRMVZHYmw5bjozN2FkNDcyNg",
+      "profileId": "plsql-developer",
+      "title": "PLSQL Developer with unix script",
+      "company": "Infosys",
+      "location": "India",
+      "url": "https://www.shine.com/jobs/plsql-developer-with-unix-script/infosys/19903645",
+      "tags": [
+        "[PL/SQL]",
+        "[Oracle SQL]"
+      ],
+      "source": "shine",
+      "description": "PLSQL Developer with unix script\n\nCompany: Infosys\nJob Location: India\nEmployment Type: Full-time\n\nRole & responsibilities\n\nDesign, develop, test, and maintain complex PL/SQL packages, procedures, functions, triggers, and views.\nDevelop and optimize ",
+      "scrapedAt": "2026-11-20 03:05:55",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-WGZQa0RVLXN6aERNQlU1WEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZamRxZUhKNVkwWmFaRFpTUm5WRVRqZ3RjVTFwYVRNdE9GWjVWV2hoYTJoWWJERllkMlZIVlc0eVJEaGZPVWQ0VjFwWlRsbHZTa0prYldWMWVVWmtkRFI2V2tOcmNEaFpheTFZY0hCVGFGVTBSSHB6WHpaak1uaFFhbkF4TVVsNVNEQXhkRlZuWkUxdVNHOXFUVXMxYlZWWVdVbGFabk15Tms4eGFVMVFSMk54T1U5RVgxUVNGMFJ5Ymw5aGNUTXpTalpQZEhGMGMxQnNUbkY2Y1ZGdkdpSkJTRTR3UlRkSUxWb3pjbWgzWVROaFVUSkZORVpWVEU1dFZuQmtOa2x2YkRGMzo5YmQ3Y2UxYQ",
+      "profileId": "plsql-developer",
+      "title": "PL SQL Developer",
+      "company": "Capgemini",
+      "location": "Secunderabad, Telangana, India",
+      "url": "https://www.foundit.in/job/pl-sql-developer-capgemini-hyderabad-secunderabad-telangana-67630793",
+      "tags": [
+        "[PL/SQL]",
+        "[Oracle SQL]"
+      ],
+      "source": "foundit",
+      "description": "Choosing Capgemini means choosing a company where you will be empowered to shape your career in the way you'd like, where you'll be supported and inspired by a collaborative community of colleagues around the world, and where you'll be able to reimag",
+      "scrapedAt": "2026-11-20 03:05:55",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-eG8waWtDN3FYVzJobEM2V0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbkJoTkMxMVluaE5WR0YyTmxsQlZETlJTRFoyUWtSZlVXUTRkemsyZDNKSVJrVk1kelZEYjBGYVdtNVVkM2hGY1RKNkxXeDNTaTB6U0ZWd1N6UktkV1phUkRCeU9UZFlTMGR0T0ZvMmJYcExkRmhaVVVJMVRIVkRVWFEwVDFVemJWbFBhVjkzU0dWWE1EQlFNalZUYjJWR1JrSnJOMUpmYldsQlNrNXFlbkZuTTBSVlRYTVNGMFJ5Ymw5aGNUTXpTalpQZEhGMGMxQnNUbkY2Y1ZGdkdpSkJTRTR3UlRkSVVHTlpOWFZVWTIxRlQyTnBhRXRsVkVwdWNuaHpOR0pCTVc5QjoyNTY1ZjEzYg",
+      "profileId": "plsql-developer",
+      "title": "SQL Developer",
+      "company": "Platinus Technologies",
+      "location": "Bhubaneswar, Odisha, India",
+      "url": "https://www.shine.com/jobs/sql-developer/platinus-technologies/20090728",
+      "tags": [
+        "[PL/SQL Developer]"
+      ],
+      "source": "shine",
+      "description": "SQL Developer\n\nCompany: Platinus Technologies\nJob Location: Bhubaneswar, Odisha, India\nEmployment Type: Full-time\n\nJob highlights\n\nExperience in T-SQL and database management\n\nDevelop and optimize SQL procedures, analyze queries, build reports, and s",
+      "scrapedAt": "2026-11-20 03:05:55",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-eVFyMWprR2JnWGRwZ2pwdUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVTVHT1ZsVlNsQnVNVEZpYUZkZmFGVjFlbk4wV2poSWIyZEZNMkpaUTJsWGNIcExiWEpzV1dWV1RqQnZVMUZyWldNMmFuQjFWMlZOTnkxeFdqbEVRMU5HUm1KM1lteHhUM2h4UTJOMVNGbFFSRFpqY1VJMGJsazNSbVozWW5sRGFHWkNSRWx3WDIweVlsUjFhVmRpTUdOR2JuWkdWR2hpVFhCVFlqTnhVazFhWmxCR2NtUVNGMFJ5Ymw5aGNUTXpTalpQZEhGMGMxQnNUbkY2Y1ZGdkdpSkJTRTR3UlRkRk5rZE9RVFJXZVhCaE56SllSVVJHVkZoNlMxaGtVR0V3YmsxUjo5YmQ3Y2UxYQ",
+      "profileId": "plsql-developer",
+      "title": "PL/SQL Developer",
+      "company": "Terrabit  Consulting",
+      "location": "Chennai, Tamil Nadu, India",
+      "url": "https://www.iitjobs.com/job/plsql-developer-chennai-tamil-nadu-india-482487",
+      "tags": [
+        "[PL/SQL]",
+        "[Oracle SQL]"
+      ],
+      "source": "iitjobs",
+      "description": "You will develop and manage database logic using Oracle and PostgreSQL.\n\nThis role is on-site.\nResponsibilities\n• Write complex stored procedures, packages, functions, and triggers.\n• Manage large volumes of data using cursors and advanced bulk colle",
+      "scrapedAt": "2026-11-20 03:05:55",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-S2lmSnh4SUJaYloyVkNjUkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVlZ6YlROWGQxOWtaRTFVVEZwS1gwdFZZMGc1UzFGb0xXdExNMHRmWHpCZk9YbFhXa1pwWVVKaFVrRkZSMTlCZFV0V01YcHBhR2htWlVFNGVITk1aRXBuWmw5aFNscE1aVVJqWmpoUVZtTlZWVXhtYmtWUU9FMUJiM1F6VVRSeVNrcHlabXMyVlVwcWEwcG9Oa1JrV2kxRGFVTTFTaTFJVmw5WVQzQlRjMkYyUjJkck5rMFNGMFJ5Ymw5aGNUTXpTalpQZEhGMGMxQnNUbkY2Y1ZGdkdpSkJTRTR3UlRkSU1GcDJlSFUzWTBSM1JsUlVSRVJGV1daZmNYWkZiVzVXY0VSUjowMWFhYTRhYQ",
+      "profileId": "plsql-developer",
+      "title": "PS Technical Consultant III-PL/SQL Dev Cum DBA",
+      "company": "NCR Atleos",
+      "location": "Hyderabad, Telangana, India",
+      "url": "https://in.linkedin.com/jobs/view/ps-technical-consultant-iii-pl-sql-dev-cum-dba-at-ncr-atleos-4475263435",
+      "tags": [
+        "[PL/SQL]",
+        "[Oracle SQL]"
+      ],
+      "source": "linkedin",
+      "description": "About NCR Atleos\n\nNCR Atleos, headquartered in Atlanta, is a leader in expanding financial access. Our dedicated 20,000 employees optimize the branch, improve operational efficiency and maximize self-service availability for financial institutions an",
+      "scrapedAt": "2026-11-20 03:05:55",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-Zmk0cDRKcFJQcUlVY0czZkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbmRRVURKUGRWZHVYMUV4TlZaNE5GWlNXV1I1VWxVNVJGaENhR1V5Y1hnMFkwWlRkelI1Y2pOeU1FVlllVFpNY25nM1NuVm9kRlIzYVVwRldYWkphbWN6YTNsc2FWcHBMV3B6YldWQ2FYWkxZVlZXZVV4VVQybzJTa1UyWWtWeGRYUjBXalF0ZHpSNmMzcHFTVGsyUjFvM1gycGxSRkoxUmpJelRXcFFhRTl5WWpGVVZEY1NGMFZpYmw5aGMySnNSMDlsTmpRdFJWQnFVRU5MWjBGUkdpSkJTRTR3UlRkRmFIVjBXRWt5Tkc5cVdFWjROazkyYTJaRVkzVkthM2xDUWxWbjphMzAzODM5ZQ",
+      "profileId": "plsql-developer",
+      "title": "29502-Oracle, PLSQL, Unix L2 (2.1-5 years)-CHN",
+      "company": "CGI",
+      "location": "Chennai, Tamil Nadu, India",
+      "url": "https://in.linkedin.com/jobs/view/29502-oracle-plsql-unix-l2-2-1-5-years-chn-at-cgi-4484098626",
+      "tags": [
+        "[PL/SQL]",
+        "[Oracle SQL]",
+        "[Python]",
+        "[CI/CD & Git]"
+      ],
+      "source": "linkedin",
+      "description": "Position Description\n\nCompany Profile:\n\nFounded in 1976, CGI is among the largest independent IT and business consulting services firms in the world. With 94,000 consultants and professionals across the globe, CGI delivers an end-to-end portfolio of ",
+      "scrapedAt": "2026-11-20 03:05:55",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-WkU1TTFVdVhWajFNbVZLQUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXakJSV2s5YVRXRkZabUpLT0haVU0wdHFSbGxUVVU1eE5WcHBaMlJzVWxJMlJVSlNRbGR2TTFFdGVXRnBTSEJMWkZOMVJsZ3pVRkJMTUd0cFJtOTRPVlV4VGpnekxYQTFWR05hZDJOMGIyRjJVRkpvUlU4dE9USkxXVmxVY25KcWFYaEthelJmU0RGMFpEbFlWSEo1Y1RGNk5HZDNSbkJsYjJGRWVsVTRlRmwzTmswd00yWVNGMFZpYmw5aGMySnNSMDlsTmpRdFJWQnFVRU5MWjBGUkdpSkJTRTR3UlRkR1VYaGhhV1pKVTNKelprdDBRWFJXZGxOaE1reEplbkJNVm5aMzo1NDY5YzkzNA",
+      "profileId": "plsql-developer",
+      "title": "Java, Microservices and Oracle PL SQL Developer (India)",
+      "company": "12542 Citicorp Services India Private",
+      "location": "India",
+      "url": "https://in.jobrapido.com/jobpreview/2618993920561905664",
+      "tags": [
+        "[Oracle SQL]",
+        "[Java]"
+      ],
+      "source": "jobrapido.com",
+      "description": "Overview of Citi:\n\nCiti, the world’s leading global bank, has approximately 200 million customer accounts and a presence in more than 160 countries and jurisdictions worldwide. Citi provides consumers, corporations, governments, and institutions with",
+      "scrapedAt": "2026-11-20 03:05:55",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-ZHVzODBrOVBKbVJNTC1SRkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZV0pXU1ZsaVFreHhZMFJtY1VOak1ETlpWVmhVZURKR1ZEVkJTMUZsVEd0SFRXcENRMDlLYkMxUWQwSnpaemR6VW1Vek5GWnhPVmgwYTE5ZlQzZGZZbWczT0dSWWNsZE5aVEJUYTFKblgyeHlMWE5zV2xGdk1URmhlSE51YzJ4SFpYQXdRelJrUTBkRlJWUklUVGx4TVZSS1ozbFhTVE10VkRkek1uaHBOMHRwVWxwRWREa1NGMFZpYmw5aGMySnNSMDlsTmpRdFJWQnFVRU5MWjBGUkdpSkJTRTR3UlRkSVNEWlpPVGt3YmxJelRtcHJSek5qVkZwVVdIaDFPRnBJUVU1bjphMWNkNDE2Zg",
+      "profileId": "plsql-developer",
+      "title": "Oracle,PLSQL,ProC majors",
+      "company": "Qloron Pvt Ltd",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://in.linkedin.com/jobs/view/oracle-plsql-proc-majors-at-qloron-pvt-ltd-4474655280",
+      "tags": [
+        "[PL/SQL]",
+        "[Oracle SQL]",
+        "[CI/CD & Git]"
+      ],
+      "source": "linkedin",
+      "description": "QT-KRS-10-501\n\nPosition\n\nOracle PL/SQL & Pro*C Developer\n\nLocation\n\nBangalore\n\nExperience\n\n5+ Years\n\nJob Summary\n\nWe are seeking a skilled Oracle PL/SQL & Pro*C Developer with 5+ years of experience in enterprise application development. The ideal ca",
+      "scrapedAt": "2026-11-20 03:05:55",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-a0JHbWZzdDJOTGI2VU5kYUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbVJRWW5OR1FUSnVhME5tVHpaU01sbDNkWGQzTWxsRVpqUXliV3A0VG5VMWRGbGFWRE0yY2kwM1VYRm5UVWxoVURBeU1XMHpZMlE1ZGxKRFVqZEdTWEZGYjNZelkwVmtlREpUWTB4aVRHSmxSVEZ0WnpCek5IRnFaSE5VU0dsWGRIVjJaMXA2VjB0dFZVaEdSVkUyWVRKcVZtd3llR3hNTjA1V1lUWnJjRlZIYkZFd2FYUVNGMFZpYmw5aGMySnNSMDlsTmpRdFJWQnFVRU5MWjBGUkdpSkJTRTR3UlRkSVpXeG5hSEJVVERkWVRFRlhaRlpLT1ZkSE1uUkNaRVEzZGxWMzowYzU4MjBkYQ",
+      "profileId": "plsql-developer",
+      "title": "Consultant - Oracle PL/SQL (India)",
+      "company": "Yash Technologies",
+      "location": "India",
+      "url": "https://www.shine.com/jobs/consultant-oracle-pl-sql-india/yash-technologies/19577606",
+      "tags": [
+        "[PL/SQL]",
+        "[Oracle SQL]",
+        "[CI/CD & Git]"
+      ],
+      "source": "shine",
+      "description": "Date: Sep 11, 2026\nJob Requisition Id: 65899\n\nLocation:\nPune, IN Pune, MH, IN\n\n# { display: inline; }\n.buttontext47d030a40eb4ac5c a{ border: 1px solid transparent; } .buttontext47d030a40eb4ac5c a: focus{ border: 1px dashed #2b97ef !important; outline",
+      "scrapedAt": "2026-11-20 03:05:55",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "remoteok-1137805",
+      "profileId": "java-backend",
+      "title": "SEO Full Stack Engineer",
+      "company": "Treatwell",
+      "location": "Worldwide Remote",
+      "url": "https://remoteok.com/remote-jobs/remote-seo-full-stack-engineer-treatwell-1137805",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]",
+        "[PostgreSQL]",
+        "[React]"
+      ],
+      "source": "remoteok",
+      "description": "<p>We're looking for a full-stack engineer to join our Product Engineering team, reporting to one of the Engineering Managers of the Marketplace area, with a dotted line to the Marketing SEO Manager, focused on supporting the Growth and Marketing are",
+      "scrapedAt": "2026-11-20 03:05:47",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "gh-stripe-8130876",
+      "profileId": "java-backend",
+      "title": "Software Engineer, New Grad",
+      "company": "Stripe",
+      "location": "Bangalore",
+      "url": "https://stripe.com/jobs/search?gh_jid=8130876",
+      "tags": [
+        "[Java]"
+      ],
+      "source": "stripe careers",
+      "description": "&lt;h2&gt;&lt;strong&gt;Who we are&lt;/strong&gt;&lt;/h2&gt; &lt;h3&gt;&lt;strong&gt;About Stripe&lt;/strong&gt;&lt;/h3&gt; &lt;p&gt;Stripe is a technology company focused on improving the conditions for economic growth and prosperity. We build progr",
+      "scrapedAt": "2026-11-20 03:05:47",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": true
+    },
+    {
+      "id": "gh-elastic-8362973",
+      "profileId": "java-backend",
+      "title": "Senior Support Engineer",
+      "company": "Elastic",
+      "location": "Bangalore, India",
+      "url": "https://jobs.elastic.co/jobs?gh_jid=8362973&gh_jid=8362973",
+      "tags": [
+        "[Java]",
+        "[Microservices]",
+        "[Docker]",
+        "[Python / Shell]"
+      ],
+      "source": "elastic careers",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale — unleashing the potential of businesses and people. The Elastic Search AI",
+      "scrapedAt": "2026-11-20 03:05:47",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-ekZhNVZ3QTFWYjM3SjRVaUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVGR5V0haS1IwdHdhemhpZWpGaWN6QjBZM05xVm5WNFMycG5WM1JEY0ZGcWRIbExNRmRVVGs5SVpYZHZUbWhKZW5kc1FtcDFUbmxHVDFOQlJ6WTVYelZYWjJSeVEyRldUaTE0U1hWaGFGZzFiRXRmU200eU1rOVhVelZaVUdkSmJWcHFVV1ZTWld0Vk1rNVBZWFZ1VkY5NU5GZDVNRU5SVVRSVFdtMDNYMlJKTVVWRWVYZ1NGMEkzYmw5aGRXbHNRWFUzYzIxTVVWQXlkR3B5ZVZGSkdpSkJTRTR3UlRkSWJtTnJSWE5ETW5KSU5XNVBaMDFPTTBwSlIzazRiMjFRTVVaMzoyNTc1NzcxZA",
+      "profileId": "java-backend",
+      "title": "Java Fullstack Developer",
+      "company": "Kumaran Systems",
+      "location": "Madhavaram, Telangana, India",
+      "url": "https://in.linkedin.com/jobs/view/java-fullstack-developer-at-kumaran-systems-4492064899",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]",
+        "[Microservices]",
+        "[REST APIs]",
+        "[PostgreSQL]",
+        "[Docker]"
+      ],
+      "source": "linkedin",
+      "description": "About Us\n\nKumaran Systems: Engineering Future-Ready Transformations Since 1992, Kumaran Systems has been helping enterprises bridge the past and the future, reimagining legacy systems and embracing AI-led possibilities. With over 34 years of delivery",
+      "scrapedAt": "2026-11-20 03:05:47",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-aml4bndrSThWQnVXemxVOUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVXh1ZGt4SWVUQjBSSGhEYnprMlRtczVSQzFmUWxKSllrbEJNWFp2ZEdWcGRrdGtja2xSUkdsd01rMTZRVEZqWTI1TlIwWlNiRUV6VkRack5FaENhVFUyZVZaNVMxTnNNa05TYmtNemJUTkNPV3g2Y0VveU0zRTFkbk13VlRCSk56Tk1aa010WTBSdmJYbFRka1JZV1ZVM01XWjRkVlI2VG5CSGVFNVBWRzh3ZFZWeVFYUVNGMEkzYmw5aGRXbHNRWFUzYzIxTVVWQXlkR3B5ZVZGSkdpSkJTRTR3UlRkSE4wTk9hVzg0VFdGcWNFcE9WREZIVlRCWE1WZDVWMGxYWVdobjo4ZjRlYjk2MA",
+      "profileId": "java-backend",
+      "title": "Advanced Java Backend Developer",
+      "company": "Xoriant",
+      "location": "Pune, Maharashtra, India",
+      "url": "https://careers.xoriant.com/in/en/job/XAAXAAGBXOR2600001861EXTERNALENIN/Advanced-Java-Backend-Developer",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]",
+        "[Microservices]",
+        "[PostgreSQL]",
+        "[Docker]",
+        "[Spring Security / JWT]"
+      ],
+      "source": "careers - xoriant",
+      "description": "JD:\n\nAs an Advanced Java Backend Developer at Hilti, you will independently design and deliver high-complexity backend services for the On!Track asset management platform. You will lead technical initiatives, influence service architecture, optimize ",
+      "scrapedAt": "2026-11-20 03:05:47",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-M0VOQjVQMFJLOUN0a0l0b0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbUpNTkVVeU1tTTNWM1ppUjB0WmJqVkZNM1ZYYzBkRVZsSldVbWhpV2t0bmVFZ3liMUF0VW1KbU1WWjNMV0Z5V21oU2R6ZFVaRUkzUVhRM2IyTXdMVlJ2U1VOQlVWQktNVXRhZWpkSmVrNUNUMWxNU25WT09FWlNNMTlHVWt0Mk1UZHJWVzh5ZGxKR1VrMWtiM0pRTXkxUlJrNVFOWEZzYkRKM2VYSXhTVVZxZWxwUk0ySVNGME5pYmw5aGRTMTRSamRIZWpWT2IxQXdjRkJKTUZGWkdpSkJTRTR3UlRkRldUZHpPRGRuUm1vMVVXbDFlV0kxU2tvMk9WTm1iMFZwTkVSMzo3YmY0ZjU5NA",
+      "profileId": "java-backend",
+      "title": "Spring Boot & Terraform Video Game Developer for Retail",
+      "company": "Hartworth Heaford Recruitment",
+      "location": "Puri, Odisha, India",
+      "url": "https://www.shine.com/jobs/spring-boot-terraform-video-game-developer-for-retail/hartworth-heaford-recruitment/20092694?jobtype=cr&position_in_results=19",
+      "tags": [
+        "[Spring Boot]"
+      ],
+      "source": "shine",
+      "description": "Spring Boot & Terraform Video Game Developer for Retail\n\nCompany: Hartworth Heaford Recruitment\nJob Location: Puri, Odisha, India\nEmployment Type: Full-time\nSalary: 55.5L71L a year\n\nHartworth Heaford Recruitment is hiring a Spring Boot & Terraform Vi",
+      "scrapedAt": "2026-11-20 03:05:47",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-TUQ3UnJwaWdhWW9FRzJnQUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXazlFVjNsQmNVRllZVWhtVTFWbk1EUkViak5EUkdKaVoxUXdRM2xtVFVzelkwZzNRMDAxWlVkSmNtWlNZMUZhZEZsT1ZXdEZUSGhGVVU5SWVIZEdjWEF0WkhwaFNtWkJkMlJaY1VSRmFtOVVPRVF0Y0c0NGRrbDRVRUpEZW5OR2IzVk9kbmx5Y1VjeE0ydDNPWGhOZFVsZlRWRnVVUzF2VjNVdFdYVTViMGMzVm5WVWF6SVNGME5pYmw5aGRTMTRSamRIZWpWT2IxQXdjRkJKTUZGWkdpSkJTRTR3UlRkRlQybFVlVE5OWlhodlUyZzRhM2hJUTFsa1JVTnZlVzFXUlROQjpiZDRiY2I3OA",
+      "profileId": "java-backend",
+      "title": "Spring Boot Technical Lead - Hibernate",
+      "company": "HCLTech",
+      "location": "India",
+      "url": "https://www.glassdoor.co.in/job-listing/jv?jl=1010292506806",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]",
+        "[Hibernate/JPA]",
+        "[Microservices]",
+        "[Docker]"
+      ],
+      "source": "glassdoor",
+      "description": "Job Summary\n\nOVERVIEW OF THE ROLE\n\nAs a Java Microservices Developer at HCLTech, you will play a critical role in designing, developing, and maintaining scalable enterprise applications using modern Java technologies. Your expertise will contribute d",
+      "scrapedAt": "2026-11-20 03:05:47",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "gh-gitlab-8775136002",
+      "profileId": "full-stack",
+      "title": "Staff Backend Engineer, India",
+      "company": "GitLab",
+      "location": "Bangalore, India",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8775136002",
+      "tags": [
+        "[PostgreSQL]"
+      ],
+      "source": "gitlab careers",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "gh-gitlab-8781299002",
+      "profileId": "full-stack",
+      "title": "Staff Software Engineer - NLP",
+      "company": "GitLab",
+      "location": "Bangalore, India",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8781299002",
+      "tags": [
+        "[PostgreSQL]"
+      ],
+      "source": "gitlab careers",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "gh-gitlab-8632446002",
+      "profileId": "full-stack",
+      "title": "Staff Software Engineer, Security Foundations",
+      "company": "GitLab",
+      "location": "Bangalore, India",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8632446002",
+      "tags": [
+        "[PostgreSQL]"
+      ],
+      "source": "gitlab careers",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "remoteok-1137805",
+      "profileId": "full-stack",
+      "title": "SEO Full Stack Engineer",
+      "company": "Treatwell",
+      "location": "Worldwide Remote",
+      "url": "https://remoteok.com/remote-jobs/remote-seo-full-stack-engineer-treatwell-1137805",
+      "tags": [
+        "[PostgreSQL]"
+      ],
+      "source": "remoteok",
+      "description": "<p>We're looking for a full-stack engineer to join our Product Engineering team, reporting to one of the Engineering Managers of the Marketplace area, with a dotted line to the Marketing SEO Manager, focused on supporting the Growth and Marketing are",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-136e8147",
+      "profileId": "full-stack",
+      "title": "Senior Analytics Engineer",
+      "company": "Tebra",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/tebra-senior-analytics-engineer",
+      "tags": [
+        "[GitHub]"
+      ],
+      "source": "weworkremotely",
+      "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States - Remote\n&lt;/p&gt;\n\n&lt;div class=\"content-intro\"&gt;&lt;p&gt;Tebra only initiates contact with candidates via email from an official Tebra email address (@&lt;a class=\"c-link\" hre",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-63cda4a9",
+      "profileId": "full-stack",
+      "title": "Solutions Engineer",
+      "company": "Backblaze External Website",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/backblaze-external-website-solutions-engineer",
+      "tags": [
+        "[Full Stack]"
+      ],
+      "source": "weworkremotely",
+      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6875/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;str",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-12c160d7",
+      "profileId": "full-stack",
+      "title": "Finance Systems Engineer",
+      "company": "Go1 Australia",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/go1-australia-finance-systems-engineer",
+      "tags": [
+        "[Full Stack]"
+      ],
+      "source": "weworkremotely",
+      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6874/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Australia\n    &lt;br /&gt;&lt;strong&",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": true
+    },
+    {
+      "id": "job-1085b01a",
+      "profileId": "full-stack",
+      "title": "Staff Software Engineer, OS Integration",
+      "company": "Mozilla",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/mozilla-staff-software-engineer-os-integration",
+      "tags": [
+        "[Full Stack]"
+      ],
+      "source": "weworkremotely",
+      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6873/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Netherlands\n    &lt;br /&gt;&lt;stron",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-22de9c98",
+      "profileId": "full-stack",
+      "title": "PLM Analyst",
+      "company": "ChargePoint",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/chargepoint-plm-analyst",
+      "tags": [
+        "[Full Stack]"
+      ],
+      "source": "weworkremotely",
+      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6869/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; India\n    &lt;br /&gt;&lt;strong&gt;U",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-5be2fb1d",
+      "profileId": "full-stack",
+      "title": "Senior React Full-stack Developer",
+      "company": "Lemon.io",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/lemon-io-senior-react-full-stack-developer-8",
+      "tags": [
+        "[Angular]",
+        "[.NET]"
+      ],
+      "source": "weworkremotely",
+      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/5989/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; New York, NY\n    &lt;br /&gt;&lt;stro",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "gh-gitlab-8775507002",
+      "profileId": "full-stack",
+      "title": "Intermediate Backend Engineer, India",
+      "company": "GitLab",
+      "location": "Bangalore, India",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8775507002",
+      "tags": [
+        "[PostgreSQL]"
+      ],
+      "source": "gitlab careers",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "gh-gitlab-8716143002",
+      "profileId": "full-stack",
+      "title": "Senior Backend Engineer, India",
+      "company": "GitLab",
+      "location": "Bangalore, India",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8716143002",
+      "tags": [
+        "[PostgreSQL]"
+      ],
+      "source": "gitlab careers",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "gh-gitlab-8916232002",
+      "profileId": "full-stack",
+      "title": "Software Engineer, Delivery : Release",
+      "company": "GitLab",
+      "location": "Bangalore, India",
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8916232002",
+      "tags": [
+        "[Full Stack]"
+      ],
+      "source": "gitlab careers",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-R3phZmw0SzYtbUlXNVV1SUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVmg2YUZSSUxYSkJXQzFvTXpoYVRWWjVOVzlGVG1GemFISkRTWGhrTFUwNFVIQmlOWGh1T0ROaVIydE5iRk55ZGs1eVRXUkNkRnBKYW1KU2Ewa3RTakI2YjBsdFpUWTFNbWhFYTNodWF6UkhTalY2V0ZaQlZHVmtWRUk0TjNWSFVuaE5WbEEzUWswM1ZUSmZOa05ZWm1SMVNUZEdTa3BzUnpoQmJuUXRWMU16Vm1aQ01GY1NGMTl5YWw5aGRVaGZTMkpUTUhKMVJWQm5VQzFqTmxGakdpSkJTRTR3UlRkSFNFNDNObkptY0VNMU9HbzNMVmR1ZUc0MU9YZEZSVWxGTkZCMzpjNTMxNTdlNg",
+      "profileId": "full-stack",
+      "title": "Application Developer-Cloud FullStack",
+      "company": "IBM",
+      "location": "Gurugram, Haryana, India",
+      "url": "https://in.linkedin.com/jobs/view/application-developer-cloud-fullstack-at-ibm-4491396803",
+      "tags": [
+        "[Angular]"
+      ],
+      "source": "linkedin",
+      "description": "Introduction\n\nA career in IBM Consulting is built on long-term client relationships and close collaboration worldwide. You'll work with leading companies across industries, helping them shape their hybrid cloud and AI journeys. With support from our ",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-TVMtYzA5cU54aVE3ZHRQaUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVXBKVUZaVllVeDZjakJRZVVKcmVVRTJZWFZZZVhCUVMwcGFiazVoVG14T1NHb3dXSFpmUlRaUWJHMXJiRTVYWDNwMlFuRjVZa0p6VmtaVkxVTnVkbWt4V1VkYU5HUnhPRE5VYWpsS1ZHNTZaa1o1TVVwUlNIcGxTa2RLZFhORWFVbHpaVEphYm5SMmNIQldOSEJvTUhsWWRGbzJNa0ZJV2pNeVZqSlNXRGxrU2xsMGFsVVNGMTl5YWw5aGRVaGZTMkpUTUhKMVJWQm5VQzFqTmxGakdpSkJTRTR3UlRkRlJXa3haV3R0V1d3M1dYaE1jM1pGVGtjNExWOVRTazExTms1UjowYTQyYTJjYQ",
+      "profileId": "full-stack",
+      "title": "AI Product Developer – Full Stack",
+      "company": "Teamware Solutions",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://in.linkedin.com/jobs/view/ai-product-developer-%E2%80%93-full-stack-at-teamware-solutions-4492294898",
+      "tags": [
+        "[Angular]",
+        "[.NET]",
+        "[GitHub]"
+      ],
+      "source": "linkedin",
+      "description": "AI Product Developer – Full Stack\n\nMandatory Skills: Full stack developer, Python, Rest API, RAG, LLM, AI\n\nExperience: 4–7 years\n\nProduct Developer\n\nRequired experience: 5-7 years building, deploying, and supporting modern enterprise web applications",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-X19UM2pYank4NWhRUW1kdEFBQUFBQT09OkVzc0JDb3dCUVVSRVlsZGxZVEYyWVcwMVdsOVhSREZMYjNrdFlWODFNV2RYYUZCVmNYaHVOalJKUW1FeGNtODVUVFIxVVdaVVkxcEJWbU5LT1haR2NXUTVkRXg2TjA5S1MwbDJjRFJ0WDFkRGNuRldkVGh0WjFrM1JUQnBPWFZzUTFFeE9VMUpaa2c1UlhSUU1VSk1aVVJtZFVGaVZHYzVZVkZyV0ZZMlVIbGpjekpoZFRGS04yVkliV2x0YkdjMFIza1NGa0ZpYmw5aGRWOXZRamRQZW0xMGExQTJXbnBqUlVFYUlrRklUakJGTjBocmNFdFpVREZUZFdaa2FWZERUSEZSUlY4NVdUTXhRMVo0WjFFOmM0ZWNjMDkw",
+      "profileId": "full-stack",
+      "title": "Angular Developer",
+      "company": "Agdova Technologies",
+      "location": "Faridabad, Haryana, India",
+      "url": "https://in.linkedin.com/jobs/view/angular-developer-at-agdova-technologies-4491647515",
+      "tags": [
+        "[Angular]",
+        "[.NET]"
+      ],
+      "source": "linkedin",
+      "description": "Experience- 2 To 5 Yrs.\n\nIndustry- IT-Software / Software Services\n\nJob Brief\n\nDesigning and developing user interfaces using Angular 7,8,9 best practices. Adapting interface for modern internet applications using the latest front-end technologies. W",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-UFZKcmJHMjJhLVZuZ2V3REFBQUFBQT09OkVzc0JDb3dCUVVSRVlsZGxZakJ5UVdjMFEzQTJOWE5TTjB0VlkzQjNZV3Q1YXpKSE5raG1TSE5OTlVwbWVUQjNlalEzU1hwTVpqTjZOVFZpTUhwTldtdERSR0ZoZW5GVE5taE5ZamRZWjFGS09VWkhPRUZMZG1rME5XcEZTVmgxVm5CdE1HZHpRekJuVURsdFQyNXVVVlZvTUZCalNIQTFUelZsVW1GWFRHeFVZbVJOWjE5aFFWOUtWMmRRTWtRMFNYUVNGa0ZpYmw5aGRWOXZRamRQZW0xMGExQTJXbnBqUlVFYUlrRklUakJGTjBWa2JETkJWbGR4TkVaYVprZzRPRFZvY1cwd1pETk5lSE5YWkdjOmRlZWY4ZmNm",
+      "profileId": "full-stack",
+      "title": "Application Developer - Java  Angular",
+      "company": "Citi",
+      "location": "India",
+      "url": "https://in.linkedin.com/jobs/view/application-developer-java-angular-at-citi-4492517588",
+      "tags": [
+        "[Angular]"
+      ],
+      "source": "linkedin",
+      "description": "The Applications Development Senior Programmer Analyst is an intermediate level position responsible for participation in the establishment and implementation of new or revised application systems and programs in coordination with the Technology team",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-ZmMyYmZOZjRUb3RtdmluY0FBQUFBQT09OkVzc0JDb3dCUVVSRVlsZGxXWGREYTFWTFFrVkhSRnBSVmpkd1owWlZhV1JFYVRsUmRIQndjMHhYWlhSaVptNUNRVUpFVjNCWmVHVk5TRkV4ZHpZMFNURjNTRnBzYjFSR09VeEZXRXRxU0dreFNFeFFZM1JSTW5Ka1NWRkRjMDE2ZWtSZlMwTXlhME5sUWxkbVRWTmxWbE41ZWtaRFpHWmtZbEpJUzNWZlNUVllaMjF3WXpWU2JsOVplRGhDV1dsUVRYWVNGa0ZpYmw5aGRWOXZRamRQZW0xMGExQTJXbnBqUlVFYUlrRklUakJGTjBoalQycDZRa2M1TjFwRmExaDNjR0ZMU0doUGIxcFZabk5IZFVFOmRlZWY4ZmNm",
+      "profileId": "full-stack",
+      "title": "Application Developer - Java  Angular",
+      "company": "CITI",
+      "location": "Pune, Maharashtra, India",
+      "url": "https://jobs.citi.com/job/pune/application-developer-java-angular/287/103508753280",
+      "tags": [
+        "[Angular]"
+      ],
+      "source": "citi careers",
+      "description": "The Applications Development Senior Programmer Analyst is an intermediate level position responsible for participation in the establishment and implementation of new or revised application systems and programs in coordination with the Technology team",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-cm4zNC1YV1dpVUh4Z0JMN0FBQUFBQT09OkVzc0JDb3dCUVVSRVlsZGxZVzlQYTNWTlMwdHVNVVEzVTNCbmNHWnJNRXM0ZEdkUllYSnBSRXBGWjJkMVZVUlBXa2hGVEhaWVNHSjNhbEJmTFVsNFRVNW5iRTVmV0ZweVoxWkZjazFSVkhoVFUyMXJaVzF2TTI1YVdGWTRSVFY0Ym10cGRHZElWVVI0TkZSTVYxTlRhREpOY2w5RWRIQnZiMnhTYkRaTFNYUmFUek0zYzBKblMwa3RObTB5WkZGbmIyVVNGa0ZpYmw5aGRWOXZRamRQZW0xMGExQTJXbnBqUlVFYUlrRklUakJGTjBWSk1rcHRWWFJOVFU5elVWcGFibVJ6UzJOVFZXbGpVSGx6Wm1jOjA2MTYxN2Q5",
+      "profileId": "full-stack",
+      "title": "Full Stack Developer - Angular, .net Core, Azure Functions",
+      "company": "Shine Demo Account",
+      "location": "Pune, Maharashtra, India",
+      "url": "https://www.shine.com/jobs/full-stack-developer-angular-net-core-azure-functions/shine-demo-account/20098425",
+      "tags": [
+        "[Angular]",
+        "[.NET]",
+        "[MSSQL]"
+      ],
+      "source": "shine",
+      "description": "The Opportunity\nAs a Full Stack Developer, your contributions will directly impact our ability to deliver robust web applications to our clients. You will play a key role in both front-end and back-end development to enhance the overall user experien",
+      "scrapedAt": "2026-11-20 03:05:39",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-30a8629d",
+      "profileId": "power-platform",
+      "title": "Power BI Technical Consultant",
+      "company": "Unify Dots",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/unify-dots-power-bi-technical-consultant",
+      "tags": [
+        "[Dataverse]",
+        "[Dynamics 365]"
+      ],
+      "source": "weworkremotely",
+      "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6872/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Pune, Maharashtra, India\n    &lt;br /",
+      "scrapedAt": "2026-11-20 03:05:31",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-SGIydTRDelFESkw3ODNXaEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVTFyUWpWeVozaEhNMEZCUlZFMlVtd3piMUIwVjI5VE9UaFdibWx0ZG1keE9XTklRbW80ZEVOWGNtVlpiblkyVnpGTVppMUVlVVk0U21sSVExUjBkVGw1VGpsSmFWaFBSazFJY0RkVU4xWlBabkI2VkdGdE5WbENjMXAyUjJGcVRsbE1lVUZIYkROTVpIcDVaREpNZWxkUmRGOU9jRFZNY1RKTGEyZ3lSV3RHU0dNNFNXZ1NGemx5YWw5aGRYcERSSEZ4Y1RWT2IxQnJZelo1T0VGckdpSkJTRTR3UlRkR1VGODNkVkpzUVc5MVVtVlBTRXQ0ZWpsVFVqQlZTMDF6Wm1SQjoyZDk3MzgxMA",
+      "profileId": "power-platform",
+      "title": "PowerApps",
+      "company": "capco",
+      "location": "India",
+      "url": "https://www.jobleads.com/in/job/powerapps--india--ed751aa52cd7e5c0bb3efc10862d513fd",
+      "tags": [
+        "[Canvas Apps]",
+        "[Power Automate]",
+        "[Dataverse]",
+        "[SharePoint Online]",
+        "[M365 / PL-400]",
+        "[Model-Driven]"
+      ],
+      "source": "jobleads",
+      "description": "Key Responsibilities:\n• Design, develop, and deploy applications using Microsoft Power Apps (Canvas Apps & Model-Driven Apps).\n• Build and automate business processes using Power Automate .\n• Integrate Power Apps with SharePoint, Dataverse, SQL Serve",
+      "scrapedAt": "2026-11-20 03:05:31",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-Mi1qc0dlWVRFSWdZYTdSNEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVFU1Y25aVVZrVXRiRU5mVFhoTE4zWmpOekZLYkY5eFZHSTFUREJST0dodGRETkVhSHBrWlY5VmNWcFViRXR3ZUU1Q1pIQjRiRVJRTWtOWFJXZDNTRTVZWDJkV1NrUlNaV0pYWlRCeE9YUTNWRUpOTm5kb2EwTkNaV0UxVDJWV2N6QlhOSHA1WlVwbk1GVTJRMWxaVEZkM1Z6VXhjRUUzVEdGSGVGVXpaa05VYVRGR1NHZ1NGemx5YWw5aGRYcERSSEZ4Y1RWT2IxQnJZelo1T0VGckdpSkJTRTR3UlRkRlRrcHJUMjFIVXpad2IyRXdPWGszTTBweVVESnZka3BwZG1wUjoxNTJiZTI2Mg",
+      "profileId": "power-platform",
+      "title": "Application Developer Dynamics 365 And Power Platform",
+      "company": "Centrilogic",
+      "location": "Hyderabad, Telangana, India",
+      "url": "https://www.jobleads.com/in/job/application-developer-dynamics-365-and-power-platform--hyderabad--e5ce8394f0203fc5b9dcf9fd8f8e9fad8",
+      "tags": [
+        "[Canvas Apps]",
+        "[Power Automate]",
+        "[Dataverse]",
+        "[Model-Driven]",
+        "[Power Pages]",
+        "[PCF]",
+        "[Dynamics 365]"
+      ],
+      "source": "jobleads",
+      "description": "Centrilogic in Hyderabad, India, seeks an experienced Dynamics 365 CRM/Power Platform developer to design, implement, and maintain scalable business apps and automations. You will craft model-driven and canvas Power Apps, integrate with REST/SOAP ser",
+      "scrapedAt": "2026-11-20 03:05:31",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-dk44dEJwTm1qcXRiTFpVUUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVXRHY1c5T2RuTTFZVXBIV1hOeVZFeHBVRE4zWmxoQlExYzNjbEV6VGpsNVJVZG9ZalJqTW1wQ01Ea3ROVVp4ZW1OR1VtaGFXa1ppWmtSSFpXTnlObXhUYW5rMWJWRXhlbmRCVkdnM1pIa3dMUzFWVFVwMVJXWnZiR0ZhY1dOTWVtMTZWRUU0UkVKbmVrMU9hMlE1VEdwUVpXUkphakZ1T1hkTU0zZHVaMlF6TTFGS1QwOFNGeTFNYWw5aGRFZDNTVGhRYXpWT2IxQndOWHBtY1VFMEdpSkJTRTR3UlRkSFVVd3hRek5DTFdSUmNsTllTRmxoYldOWlVGSkJaRFpZYmpoUjpjZDVkOGMxZg",
+      "profileId": "power-platform",
+      "title": "POWER PLATFORM ENGINEER (JUNIOR / SENIOR)",
+      "company": "VRINDA INTERNATIONAL",
+      "location": "Erode, Tamil Nadu, India",
+      "url": "https://in.linkedin.com/jobs/view/power-platform-engineer-junior-senior-at-vrinda-international-4492403032",
+      "tags": [
+        "[Canvas Apps]",
+        "[Power Automate]",
+        "[Dataverse]",
+        "[SharePoint Online]",
+        "[M365 / PL-400]",
+        "[Model-Driven]"
+      ],
+      "source": "linkedin",
+      "description": "Summary\nWe are seeking a dynamic Power Platform Engineer to join our IT Services team, operating at either a junior or senior level depending on experience. This pivotal role focuses on leveraging Microsoft's low-code ecosystem to design, develop, an",
+      "scrapedAt": "2026-11-20 03:05:31",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-ZFQ4WDh3UkhqU3pJSjJmZ0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXa0pCUTFwdWRsOHlUV0pLYjFkbGFURXRTMlZETVRGc1FWWjNjVWR0Y20xUlVUWkxVRzQ0YjBVM09WOVVaMmRoT1cxT1gwRjBiRFpWYVhCd1MweDBiMGhNWXpVNFZVSTJabHBDYTNGS09IQkxNalZ1YlZnek5GSjFWRXRuUW1rM1UzTnlVSGt4TlUxd2VEUlhWVWhoZDNWM1VYbEVhazFaU1V4NWFIRlBhV3BCVm1kcFgxQVNGeTFNYWw5aGRFZDNTVGhRYXpWT2IxQndOWHBtY1VFMEdpSkJTRTR3UlRkRldtOHlXamRLYVc5MlZXRlJibm96UjBkVldIcGFkMlp2WVRObjoxMWQwNjE3ZQ",
+      "profileId": "power-platform",
+      "title": "Power Platform Architect - Power Automate, Power Apps, Copilot",
+      "company": "MEEDEN LABS PRIVATE LIMITED",
+      "location": "Hyderabad, Telangana, India",
+      "url": "https://www.shine.com/jobs/power-platform-architect-power-automate-power-apps-copilot/meeden-labs-private-limited/20085405",
+      "tags": [
+        "[Power Automate]",
+        "[Copilot Studio]"
+      ],
+      "source": "shine",
+      "description": "As a Power Platform Architect, you will lead the design and implementation of innovative solutions using Microsoft Power Platform technologies, significantly impacting business efficiency and process optimization. Your contributions will guide the in",
+      "scrapedAt": "2026-11-20 03:05:31",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-LUh1ekpiLUNQQ1o2TmVUOEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVjlOU1dndFVrdElNRWwyVlhwdVptNXpZVFptVFZoS1VuTmpPRXRsVlVRMWRtUXhkVzFDUlRRNWJYQklNMU5pUzJVNWJYTjNWVXBNWlVReE9XbEZWblF3V1RWWGNVaFpjbmxZVUhKQmR6UnBTemRhTlZGbVRtaFNNRlV5WVhBMFNYTjRRWGxYZVhSb1NIQlRSWGhZUWtka2FuRnhWRVY0VVdOblgwb3pOWFZqYW13d1ZXZ1NGeTFNYWw5aGRFZDNTVGhRYXpWT2IxQndOWHBtY1VFMEdpSkJTRTR3UlRkR1l6VnJXRzFPWDFoZlZHVXlaVVJ0U1MwNU9IaFNXa1V4Y0hsbjpiODk4NDZmYw",
+      "profileId": "power-platform",
+      "title": "Truetech - Functional Lead - Power Platform",
+      "company": "Truetech Solutions Private Limited",
+      "location": "India",
+      "url": "https://in.talent.com/view?id=646534399880923666",
+      "tags": [
+        "[Canvas Apps]",
+        "[Power Automate]",
+        "[Dataverse]",
+        "[SharePoint Online]",
+        "[M365 / PL-400]",
+        "[Model-Driven]",
+        "[Power Pages]",
+        "[Dynamics 365]"
+      ],
+      "source": "talent.com",
+      "description": "Job Description:\n\nWe are looking for an experienced Power Platform Developer with 7+ years of experience in designing, developing, and implementing business applications and workflow automation using Power Apps and Power Automate.\n\nKey Responsibiliti",
+      "scrapedAt": "2026-11-20 03:05:31",
+      "dateGroup": "2026-11-20",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
     {
       "id": "jsearch-YmxoLUQtZWVicFZtQk4tRUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZWFpxWWpaSGFWVmpVMmhNT0RKUVRVcGtaVzUwUzFKU1JYazNOV0ZMVkVwelZVUnNSRTlSTTNCNU5XbHlXSEZKZDFoS1gzTnVXVEZqZUVoSFgzaDBaMEpxTFc5T2NFWTVVbU5MY0hWVVlUbHlUVlIwT1dvMWNsQndUSFJ0WW0xWmRsWlpUV05TT0RaVE5XUllWbXBNV25reU5qTjBZVVJZYVRCNk5VOVJVVzE1YVdab09WSVNGMjkwY2kxaGNWOUNTMTloY25KMVJWQjJkVWhrWjBGUkdpSkJTRTR3UlRkSWVVdHFXSEpmZVZOT1R6RmtkMmhrTnprNFFVVlJjMjlCVUc1Ujo5OTZiZTNhMA",
       "profileId": "java-backend",
@@ -4352,7 +6259,7 @@
       "source": "nexthire",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:58",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4375,7 +6282,7 @@
       "source": "workday",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:58",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4398,7 +6305,7 @@
       "source": "shine",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:58",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4422,7 +6329,7 @@
       "source": "myinternships.in",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:58",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4446,7 +6353,7 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -4464,7 +6371,7 @@
       "source": "himalayas",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -4483,7 +6390,7 @@
       "source": "shine",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4505,7 +6412,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4527,7 +6434,7 @@
       "source": "indeed",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4549,7 +6456,7 @@
       "source": "simplyhired",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4567,7 +6474,7 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -4585,7 +6492,7 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -4603,7 +6510,7 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -4621,7 +6528,7 @@
       "source": "hitachi careers",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4639,7 +6546,7 @@
       "source": "citi careers",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4657,7 +6564,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4675,7 +6582,7 @@
       "source": "shine",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4693,7 +6600,7 @@
       "source": "jobrapido.com",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4711,7 +6618,7 @@
       "source": "citi careers",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4729,7 +6636,7 @@
       "source": "careers - xoriant",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4749,7 +6656,7 @@
       "source": "prepterview",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:35",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4770,7 +6677,7 @@
       "source": "cognizant careers",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:35",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": true
@@ -4792,7 +6699,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:35",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4812,7 +6719,7 @@
       "source": "career at crowe",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:35",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -4831,7 +6738,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 11:28:35",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4849,7 +6756,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 11:28:35",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4869,7 +6776,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 11:28:35",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4887,7 +6794,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 11:28:35",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4913,7 +6820,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 11:28:20",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4939,7 +6846,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 09:02:12",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -4958,26 +6865,8 @@
       "description": "<h3><strong>About Supabase</strong></h3>\r\n<p>Supabase is the Postgres development platform, built by developers for developers. We provide a complete backend solution including Database, Auth, Storage, Edge Functions, Realtime, and Vector Search. All",
       "scrapedAt": "2026-11-18 09:02:09",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 18, 2026",
       "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "jsearch-WEZEZE9HdTkySl9UVm54VEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbnBNWDJ0eWRFbElZMmhrYkVaR1RXeEVNM2gyTWpoUlVXaHRORlpuT0VrdFpsbERSakZLUkVaWFNYTjFMV040VkdVNWMydE1NRUZITFhWcVJHaHNibFIxVldreFlsZHdRWEpJYVZKaVJtRk9USGhTWDI1cE56WjNOa3d4Um10bmVWbE1XVzExVVU0emJsOVRTREpNYkdGMVNreHpZbms1UjA0dFV6ZHliSEZJVHprMlRVRVNGMnRIYmpsaGNHNXlTVXRUVldoMlkxQndjblp2TmxGRkdpSkJTRTR3UlRkSFlYcGFjV3gzU1dsU09HUnBRV3h4U1hGdlRFUmtVazAzVEdObjo2NjUyZGFhOA",
-      "profileId": "full-stack",
-      "title": "Java and Angular Full Stack Developer",
-      "company": "CITI",
-      "location": "Pune, Maharashtra, India",
-      "url": "https://jobs.citi.com/job/pune/java-and-angular-full-stack-developer/287/102541187040",
-      "tags": [
-        "[Angular]"
-      ],
-      "source": "citi careers",
-      "description": "About the Role:\n\nWe are seeking a highly motivated and skilled Java Full Stack Developer to join our team. This role will be instrumental in designing, developing, and maintaining Trade Finance applications using the latest technologies. The ideal ca",
-      "scrapedAt": "2026-11-18 09:02:09",
-      "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
-      "tier": "domestic",
       "isTargetCompany": false
     },
     {
@@ -4998,9 +6887,27 @@
       "description": "",
       "scrapedAt": "2026-11-18 09:02:09",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-WEZEZE9HdTkySl9UVm54VEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbnBNWDJ0eWRFbElZMmhrYkVaR1RXeEVNM2gyTWpoUlVXaHRORlpuT0VrdFpsbERSakZLUkVaWFNYTjFMV040VkdVNWMydE1NRUZITFhWcVJHaHNibFIxVldreFlsZHdRWEpJYVZKaVJtRk9USGhTWDI1cE56WjNOa3d4Um10bmVWbE1XVzExVVU0emJsOVRTREpNYkdGMVNreHpZbms1UjA0dFV6ZHliSEZJVHprMlRVRVNGMnRIYmpsaGNHNXlTVXRUVldoMlkxQndjblp2TmxGRkdpSkJTRTR3UlRkSFlYcGFjV3gzU1dsU09HUnBRV3h4U1hGdlRFUmtVazAzVEdObjo2NjUyZGFhOA",
+      "profileId": "full-stack",
+      "title": "Java and Angular Full Stack Developer",
+      "company": "CITI",
+      "location": "Pune, Maharashtra, India",
+      "url": "https://jobs.citi.com/job/pune/java-and-angular-full-stack-developer/287/102541187040",
+      "tags": [
+        "[Angular]"
+      ],
+      "source": "citi careers",
+      "description": "About the Role:\n\nWe are seeking a highly motivated and skilled Java Full Stack Developer to join our team. This role will be instrumental in designing, developing, and maintaining Trade Finance applications using the latest technologies. The ideal ca",
+      "scrapedAt": "2026-11-18 09:02:09",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 18, 2026",
+      "tier": "domestic",
+      "isTargetCompany": false
     },
     {
       "id": "jsearch-TUZ6YVVnZk9rdjRmZ1JrMEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVlpqYURsaGMxWm9OR0ZCY25NNGIyeDZTa3hmZFRrMVJXdHZUR1V6YjA5UmNWZHJUemN5WjJKRVEyVTBlVUZXU1ZOcE5VNXJja1ZPZG5sTE5EUXdWVTVMUkdaQ2VFcFRTMHhGT0ZCMldVRlZXVEEwVUZVMFlVdHBRekZoWTBocFRXOURVV2R4V0RoclVrOUNPVlV0Y1RCaExVOVBUa2w1UzFsNGJtVlZha2gwZW1sSVVWY1NGMmR0YmpsaGNGOU5SRjlpUVhKbVkxQjFZV0pPYTBGVkdpSkJTRTR3UlRkR05FRkZYelkyVHkxUGNtVmpPVTh5UW5WMllXRTVPSFkzZUUxUjpkNzY4ZTA3OA",
@@ -5016,7 +6923,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 09:01:56",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5034,7 +6941,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 09:01:56",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -5055,7 +6962,7 @@
       "description": "",
       "scrapedAt": "2026-11-18 09:01:55",
       "dateGroup": "2026-11-18",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -5073,7 +6980,7 @@
       "source": "himalayas",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "remote",
       "isTargetCompany": false
@@ -5096,7 +7003,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5114,7 +7021,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5137,7 +7044,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": true
@@ -5164,7 +7071,7 @@
       "source": "cognizant careers",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": true
@@ -5187,7 +7094,7 @@
       "source": "corehrx",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5208,7 +7115,7 @@
       "source": "simplyhired",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5231,7 +7138,7 @@
       "source": "myinternships.in",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5251,7 +7158,7 @@
       "source": "jobleads",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5274,7 +7181,7 @@
       "source": "shine",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5297,7 +7204,7 @@
       "source": "smart recruiters jobs",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5315,7 +7222,7 @@
       "source": "weworkremotely",
       "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://www.careerflow.ai\"&gt;https://www.careerflow.ai&lt;/a&gt;\n&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;About the Role:&lt",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "remote",
       "isTargetCompany": false
@@ -5333,27 +7240,9 @@
       "source": "himalayas",
       "description": "The client is a software supply chain security company, that provides the world’s best end-to-end software supply chain security solution, combining the only proactive protection against malicious open source, the only enterprise grade SBOM managemen",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "remote",
-      "isTargetCompany": false
-    },
-    {
-      "id": "jsearch-ZnJXY25DMVJnaXgxcVRkdUFBQUFBQT09OkVzc0JDb3dCUVVSRVlsZGxXbGhqTUVOQmEzVnZVRFl0YUd0eGIyeFpaRFJCWVcxVGNFUk9lVmRmY21wclVuVnZVVmx6VWxoUE9HOHhiRGRWTVVkck1GcHZVa2R3V0c5Vk5rMW5NME4yYUc5NlEwWjJTMWhoTm04dE9FVTRRekpGUzNwcE1taFljbmxhYUhOaVRXVnBkRmM1TlY5TU5sWnhlWGN6VkVaTE5tbHFaMnRWYUdaQ1VsOTBNa3h0WDNkeFpHd1NGbEI0Y2psaGRqSnNSMk16VG5kUVFWQXdZV0pxVTFFYUlrRklUakJGTjBabk1EWkZXbVpZYVhacGJFRmxSbDlOZUdaRVZFWnhaRTFPTTJjOmFlNmVlOTlh",
-      "profileId": "full-stack",
-      "title": "Alert | Angular Developer | NeoSOFT Technologies",
-      "company": "Confidential",
-      "location": "Pune, Maharashtra, India",
-      "url": "https://mycareersolution.com/jobs/alert-angular-developer-neosoft-technologies-pune-6af95e13bf2cfd18ec4c2e74",
-      "tags": [
-        "[Angular]"
-      ],
-      "source": "my career solution",
-      "description": "NeoSOFT is looking for an experienced Angular Developer with hands-on Angular 17 experience to join our team in Pune! Good understanding of NgRx, Monorepo, and Microfrontend architecture.\n\nCompany: Not publicly disclosed\nLocation: Pune\nExperience: 4-",
-      "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
-      "dateLabel": "Nov 18, 2026",
-      "tier": "domestic",
       "isTargetCompany": false
     },
     {
@@ -5369,7 +7258,7 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "remote",
       "isTargetCompany": false
@@ -5387,7 +7276,7 @@
       "source": "jobicy",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "remote",
       "isTargetCompany": false
@@ -5405,7 +7294,7 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "remote",
       "isTargetCompany": false
@@ -5423,7 +7312,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5442,7 +7331,7 @@
       "source": "société générale careers",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5460,7 +7349,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": true
@@ -5478,7 +7367,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5496,7 +7385,7 @@
       "source": "iitjobs",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5516,7 +7405,7 @@
       "source": "corehrx",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5534,7 +7423,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5554,7 +7443,7 @@
       "source": "amgen",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5574,7 +7463,7 @@
       "source": "nexthire",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": true
@@ -5592,7 +7481,7 @@
       "source": "simplyhired",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5612,7 +7501,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5630,10 +7519,28 @@
       "source": "shine",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-ZnJXY25DMVJnaXgxcVRkdUFBQUFBQT09OkVzc0JDb3dCUVVSRVlsZGxXbGhqTUVOQmEzVnZVRFl0YUd0eGIyeFpaRFJCWVcxVGNFUk9lVmRmY21wclVuVnZVVmx6VWxoUE9HOHhiRGRWTVVkck1GcHZVa2R3V0c5Vk5rMW5NME4yYUc5NlEwWjJTMWhoTm04dE9FVTRRekpGUzNwcE1taFljbmxhYUhOaVRXVnBkRmM1TlY5TU5sWnhlWGN6VkVaTE5tbHFaMnRWYUdaQ1VsOTBNa3h0WDNkeFpHd1NGbEI0Y2psaGRqSnNSMk16VG5kUVFWQXdZV0pxVTFFYUlrRklUakJGTjBabk1EWkZXbVpZYVhacGJFRmxSbDlOZUdaRVZFWnhaRTFPTTJjOmFlNmVlOTlh",
+      "profileId": "full-stack",
+      "title": "Alert | Angular Developer | NeoSOFT Technologies",
+      "company": "Confidential",
+      "location": "Pune, Maharashtra, India",
+      "url": "https://mycareersolution.com/jobs/alert-angular-developer-neosoft-technologies-pune-6af95e13bf2cfd18ec4c2e74",
+      "tags": [
+        "[Angular]"
+      ],
+      "source": "my career solution",
+      "description": "NeoSOFT is looking for an experienced Angular Developer with hands-on Angular 17 experience to join our team in Pune! Good understanding of NgRx, Monorepo, and Microfrontend architecture.\n\nCompany: Not publicly disclosed\nLocation: Pune\nExperience: 4-",
+      "scrapedAt": "2026-11-18 03:23:44",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 18, 2026",
+      "tier": "domestic",
+      "isTargetCompany": false
     },
     {
       "id": "jsearch-NGNnVlVvbHQyNlhpck9kT0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXaTFWV1VkNFpERm5TbWwwYmxNM1FsWnNSMWRNVkZsb09YUlNZVU4xUm5CeVpFVm1UVTVaYlRJMWJERmFOVU5pWkVaaVZIUmtURUZVTW0xc2REZEdVMjE1Y1d0cVRVRlJTWGN6YW1RMGNtaHhUMlZ3TW1GaVRGSk5ZVXBqYzBKUGFHTllNMU51ZGpOWFpqaFVUMFpSVEdKdFgyVnlRekZvWXkxNVMyNXFhSFZuYmpOQ1Zrb1NGMHRvY2psaGNIcEVUa3d0VjNObFRWQXliMkZLYzBGckdpSkJTRTR3UlRkSFYyVlhORkZVU25rd2JubDJWWFZ0WDFaVFQyVklVVlZ5TFZGbjplNTJiYjVhYQ",
@@ -5653,7 +7560,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:36",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5673,7 +7580,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:36",
-      "dateGroup": "2026-11-17",
+      "dateGroup": "2026-11-18",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
