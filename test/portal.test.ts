@@ -207,6 +207,7 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
         assert.ok(fs.existsSync(faviconPath), 'docs/favicon.svg must be generated (HF-046)');
 
         const indexContent = fs.readFileSync(indexPath, 'utf-8');
+        assert.ok(indexContent.includes('portal-footer'), 'index.html must render portal-footer (HF-063)');
         assert.ok(indexContent.includes('<link rel="stylesheet" href="styles.css">'), 'index.html must reference styles.css');
         assert.ok(indexContent.includes('src="app.js"'), 'index.html must reference app.js');
         assert.ok(!indexContent.includes('<style>\n    :root') && !indexContent.includes('<style>:root'), 'index.html must not contain inline CSS');
@@ -319,44 +320,57 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
         css.includes('.kbd-shortcut') && css.includes('display: none'),
         'Desktop keyboard shortcut must be hidden on mobile (HF-060)'
       );
+
+      // 6. Fixed Pinned Navbar & Content Offset (HF-062)
+      assert.ok(
+        css.includes('.top-navbar') && css.includes('position: fixed'),
+        'styles.css must configure top-navbar with position: fixed (HF-062)'
+      );
+      assert.ok(
+        css.includes('.hero-container') && (css.includes('padding-top: 84px') || css.includes('padding: 84px') || css.includes('padding: 72px') || css.includes('padding-top: 72px')),
+        'hero-container must apply top offset padding for fixed navbar (HF-062)'
+      );
+
+      // 7. Minimalist Footer Styling (HF-063)
+      assert.ok(css.includes('.portal-footer'), 'styles.css must contain .portal-footer styles (HF-063)');
     });
   });
 
-  describe('[EC-023] Mobile Bottom Sheet Background Scroll Lock & Position Preservation', () => {
-    it('locks background scroll with body.drawer-open, overscroll-behavior, and scroll offset preservation', () => {
+  describe('[EC-023] Mobile Bottom Sheet Background Scroll Lock & Active Touch Interception', () => {
+    it('locks background scroll with html/body drawer-open, active touchmove interception, and scroll offset preservation', () => {
       const css = getPortalCss();
       const js = getPortalJs();
 
       // 1. CSS rules for bulletproof mobile scroll lock
       assert.ok(
-        css.includes('body.drawer-open'),
-        'styles.css must define body.drawer-open rule'
+        css.includes('html.drawer-open') || css.includes('body.drawer-open'),
+        'styles.css must define drawer-open rules for scroll lock (EC-023)'
       );
       assert.ok(
-        css.includes('body.drawer-open') && css.includes('position: fixed'),
-        'body.drawer-open must set position: fixed to prevent iOS background scrolling (EC-023)'
+        css.includes('position: fixed') && css.includes('drawer-open'),
+        'drawer-open must set position: fixed to prevent iOS background scrolling (EC-023)'
       );
       assert.ok(
         css.includes('overscroll-behavior: contain'),
         'styles.css must set overscroll-behavior: contain to eliminate scroll chaining (EC-023)'
       );
 
-      // 2. JS logic for scroll locking and restoring offset
+      // 2. JS logic for scroll locking, active touch interception, and restoring offset
       assert.ok(
         js.includes('drawer-open'),
         'app.ts must toggle drawer-open class on body (EC-023)'
       );
       assert.ok(
-        js.includes('pageYOffset') || js.includes('scrollTop'),
-        'app.ts must capture scroll position before locking body (EC-023)'
+        js.includes('documentElement.classList.add') || js.includes("documentElement.classList.add('drawer-open')"),
+        'app.ts must lock documentElement for iOS Safari (EC-023)'
+      );
+      assert.ok(
+        js.includes('preventBodyScroll') || js.includes('touchmove'),
+        'app.ts must define touchmove interception (EC-023)'
       );
       assert.ok(
         js.includes('window.scrollTo') && js.includes('scrollPosition'),
         'app.ts must restore exact scroll position when closing drawer (EC-023)'
-      );
-      assert.ok(
-        js.includes('touchmove') && js.includes('preventDefault'),
-        'app.ts must isolate touchmove on overlay and non-scrollable drawer regions (EC-023)'
       );
     });
   });

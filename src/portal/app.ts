@@ -187,6 +187,13 @@ type TrackerState = Record<string, TrackerEntry>;
   }
 
   // 8. Drawer Sheet Engine
+  function preventBodyScroll(e: TouchEvent): void {
+    const target = e.target as HTMLElement | null;
+    if (!target || !target.closest('.drawer-body')) {
+      e.preventDefault();
+    }
+  }
+
   function openDrawer(job: JobItem): void {
     activeDrawerJob = job;
     const drawer = document.getElementById('job-drawer');
@@ -250,7 +257,11 @@ type TrackerState = Record<string, TrackerEntry>;
     // Lock background scroll and preserve exact page offset (EC-023)
     scrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
     document.body.style.top = `-${scrollPosition}px`;
+    document.documentElement.classList.add('drawer-open');
     document.body.classList.add('drawer-open');
+
+    // Add active touch interceptor to prevent touch scroll-chaining on background (EC-023)
+    document.addEventListener('touchmove', preventBodyScroll, { passive: false });
 
     overlay.classList.add('open');
     drawer.classList.add('open');
@@ -263,9 +274,12 @@ type TrackerState = Record<string, TrackerEntry>;
     if (overlay) overlay.classList.remove('open');
 
     // Restore background scroll and restore exact offset (EC-023)
+    document.documentElement.classList.remove('drawer-open');
     document.body.classList.remove('drawer-open');
     document.body.style.top = '';
     window.scrollTo(0, scrollPosition);
+
+    document.removeEventListener('touchmove', preventBodyScroll);
 
     activeDrawerJob = null;
   }
@@ -701,6 +715,19 @@ type TrackerState = Record<string, TrackerEntry>;
       }
       if (footer) {
         footer.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false });
+      }
+      const drawerBody = drawer.querySelector('.drawer-body') as HTMLElement | null;
+      if (drawerBody) {
+        drawerBody.addEventListener('touchstart', () => {
+          const top = drawerBody.scrollTop;
+          const totalScroll = drawerBody.scrollHeight;
+          const currentScroll = top + drawerBody.offsetHeight;
+          if (top === 0) {
+            drawerBody.scrollTop = 1;
+          } else if (currentScroll === totalScroll) {
+            drawerBody.scrollTop = top - 1;
+          }
+        }, { passive: true });
       }
     }
 

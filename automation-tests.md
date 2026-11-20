@@ -604,6 +604,24 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Installable PWA with home screen badge, standalone window presentation, and resilient offline capability.
 - **Final State**: Full Progressive Web App capability for mobile and desktop candidate usage.
 
+#### [HF-062] Fixed Pinned Navigation Header Across Viewports
+- **Preconditions**: Web portal loaded on any viewport (desktop, tablet, or mobile).
+- **Action**:
+  1. Top navigation bar (`.top-navbar`) applies `position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 90;` with frosted glass backdrop blur.
+  2. Hero container (`.hero-container`) applies top offset spacing (`padding-top: 84px` desktop, `72px` mobile) so content starts cleanly below the fixed header without overlap.
+- **Expected Result**: Header remains permanently anchored at the top of the viewport during all scrolling.
+- **Final State**: Persistent navigation accessibility across all screen sizes.
+
+#### [HF-063] Minimalist Single-Line Candidate Intelligence Footer
+- **Preconditions**: Web portal loaded.
+- **Action**:
+  1. Portal renders a small, elegant footer (`.portal-footer`) at the bottom of the page.
+  2. Displays a single clean brand line: `Job Radar Portal • Automated Candidate Intelligence`.
+  3. Omits verbose sublines and clutter.
+  4. Includes mobile safe-area padding (`env(safe-area-inset-bottom)`) and theme-adaptive glass styling.
+- **Expected Result**: Clean structural grounding for the bottom of the feed without visual clutter.
+- **Final State**: Complete, polished web application aesthetic.
+
 ---
 
 ### Negative Flows
@@ -788,16 +806,17 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Today's jobs are indexed first, and each date view renders dedicated domestic vs remote sections.
 - **Final State**: Perfect mirror of email tier hierarchy across the entire 60-day historical window.
 
-#### [EC-023] Mobile Bottom Sheet Background Scroll Lock & Position Preservation
+#### [EC-023] Mobile Bottom Sheet Background Scroll Lock & Active Touch Interception
 - **Preconditions**: Candidate opens job detail drawer/bottom sheet on mobile or touch viewport with the page scrolled down.
 - **Action**:
-  1. System locks background scroll via `drawer-open` class on `document.body` (`position: fixed; width: 100%; overflow: hidden; touch-action: none;`).
+  1. System locks background scroll via `drawer-open` class on both `document.documentElement` and `document.body` (`position: fixed; width: 100%; height: 100%; overflow: hidden; touch-action: none;`).
   2. Preserves exact scroll offset (`scrollPosition = window.pageYOffset || document.documentElement.scrollTop; document.body.style.top = -${scrollPosition}px;`).
-  3. Applies `overscroll-behavior: contain` to `.drawer-body` and `.job-drawer` to prevent touch scroll-chaining and rubber-banding.
-  4. Prevents `touchmove` events on `.drawer-overlay`, `.drawer-header`, and `.drawer-footer` so swiping outside the scrollable body never moves the background.
-  5. Upon closing drawer, removes `drawer-open`, clears `top`, and restores window scroll position (`window.scrollTo(0, scrollPosition)`).
-- **Expected Result**: Zero background scrolling or rubber-band displacement while browsing drawer content; seamless scroll restoration upon closing.
-- **Final State**: Rock-solid modal sheet interaction adhering to mobile HIG standards.
+  3. Attaches an active document-level `touchmove` listener (`{ passive: false }`) that calls `e.preventDefault()` on any touch gesture outside `.drawer-body`.
+  4. Applies rubber-band boundary clamp on `.drawer-body` touchstart to prevent iOS Safari gesture pass-through to document root.
+  5. Applies `overscroll-behavior: contain` to `.drawer-body` and `.job-drawer`.
+  6. Upon closing drawer, removes `drawer-open`, clears `document.body.style.top`, removes `touchmove` listener, and restores window scroll position (`window.scrollTo(0, scrollPosition)`).
+- **Expected Result**: 100% frozen background on iOS Safari and mobile touch browsers with zero background movement while browsing drawer content; smooth restoration upon close.
+- **Final State**: Flawless mobile modal sheet scroll containment adhering to mobile HIG standards.
 
 #### [EC-024] High-Density Mobile & Responsive Viewport Adaptability
 - **Preconditions**: Mobile device or small screen viewport (< 640px).

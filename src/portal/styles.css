@@ -61,11 +61,14 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Fixed Glass Navbar */
+    /* Fixed Glass Navbar (HF-062) */
     .top-navbar {
-      position: sticky;
+      position: fixed;
       top: 0;
-      z-index: 50;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 90;
       background: var(--nav-bg);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
@@ -168,11 +171,11 @@
       transform: translateY(-1px);
     }
 
-    /* Hero / KPI Stats Bar */
+    /* Hero / KPI Stats Bar (HF-062) */
     .hero-container {
       max-width: 1300px;
-      margin: 24px auto 0;
-      padding: 0 20px;
+      margin: 0 auto;
+      padding: 84px 20px 0;
     }
     .kpi-grid {
       display: grid;
@@ -818,9 +821,11 @@
       pointer-events: auto;
     }
     /* Mobile Bottom Sheet & Drawer Scroll Lock (EC-023) */
+    html.drawer-open,
     body.drawer-open {
       position: fixed;
       width: 100%;
+      height: 100%;
       overflow: hidden;
       touch-action: none;
     }
@@ -925,6 +930,39 @@
       pointer-events: auto;
     }
 
+    /* Clean Minimalist Footer (HF-063) */
+    .portal-footer {
+      border-top: 1px solid var(--card-border);
+      background: var(--nav-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 24px 20px calc(24px + env(safe-area-inset-bottom, 0px));
+      margin-top: 40px;
+      text-align: center;
+    }
+    .footer-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .footer-brand {
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer-divider {
+      color: var(--text-dim);
+      opacity: 0.5;
+    }
+
     /* Empty state */
     .empty-state {
       background: var(--card-bg);
@@ -973,10 +1011,10 @@
         font-size: 15px;
       }
 
-      /* Hero Container & Side-by-Side 2-Column KPI Deck (HF-060) */
+      /* Hero Container & Side-by-Side 2-Column KPI Deck (HF-060 & HF-062) */
       .hero-container {
-        padding: 0 12px;
-        margin-top: 14px;
+        padding: 72px 12px 0;
+        margin-top: 0;
       }
       .kpi-grid {
         grid-template-columns: repeat(2, 1fr);
