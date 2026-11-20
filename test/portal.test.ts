@@ -223,6 +223,12 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
         const jsContent = fs.readFileSync(jsPath, 'utf-8');
         assert.ok(jsContent.includes('localStorage'), 'app.js must contain tracker persistence logic');
         assert.ok(jsContent.includes('serviceWorker.register'), 'app.js must register serviceWorker (HF-061)');
+        assert.ok(jsContent.includes('cleanJobDescription'), 'app.js must clean job description (EC-025)');
+
+        const swContent = fs.readFileSync(path.join(testOutputDir, 'sw.js'), 'utf-8');
+        assert.ok(swContent.includes('job-radar-cache-v2'), 'sw.js must use v2 cache name (HF-061)');
+        assert.ok(swContent.includes('isFreshRequired'), 'sw.js must implement Network-First fresh caching (HF-061)');
+        assert.ok(swContent.includes('caches.delete(key)'), 'sw.js must purge old caches on activate (HF-061)');
         assert.ok(jsContent.includes('stopPropagation'), 'app.js must contain action event isolation (HF-043)');
         // HF-057: Grid-Only Architecture & View Toggle Removal
         assert.strictEqual(indexContent.includes('view-mode-toggle'), false, 'index.html must not contain view-mode-toggle (HF-057)');
@@ -336,42 +342,53 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
     });
   });
 
-  describe('[EC-023] Mobile Bottom Sheet Background Scroll Lock & Active Touch Interception', () => {
-    it('locks background scroll with html/body drawer-open, active touchmove interception, and scroll offset preservation', () => {
+  describe('[EC-023] Mobile Bottom Sheet Zero-Shift Background Lock & Glass Backdrop Blur', () => {
+    it('freezes background scroll with touchmove interception, sets background on html/body, and avoids position:fixed body displacement', () => {
       const css = getPortalCss();
       const js = getPortalJs();
 
-      // 1. CSS rules for bulletproof mobile scroll lock
+      // 1. CSS rules: html and body must have background-color: var(--bg) to prevent raw white canvas exposure
       assert.ok(
-        css.includes('html.drawer-open') || css.includes('body.drawer-open'),
-        'styles.css must define drawer-open rules for scroll lock (EC-023)'
+        css.includes('html, body') && css.includes('background-color: var(--bg)'),
+        'styles.css must set background-color: var(--bg) on html, body (EC-023)'
       );
-      assert.ok(
-        css.includes('position: fixed') && css.includes('drawer-open'),
-        'drawer-open must set position: fixed to prevent iOS background scrolling (EC-023)'
+      // 2. Must NOT set position: fixed on body.drawer-open to prevent off-screen body displacement
+      assert.strictEqual(
+        /body\.drawer-open\s*\{[^}]*position:\s*fixed/i.test(css),
+        false,
+        'styles.css must NOT set position: fixed on body.drawer-open to prevent off-screen body displacement (EC-023)'
       );
       assert.ok(
         css.includes('overscroll-behavior: contain'),
         'styles.css must set overscroll-behavior: contain to eliminate scroll chaining (EC-023)'
       );
 
-      // 2. JS logic for scroll locking, active touch interception, and restoring offset
+      // 3. JS logic for touchmove interception and drawer-open toggle
       assert.ok(
         js.includes('drawer-open'),
         'app.ts must toggle drawer-open class on body (EC-023)'
       );
       assert.ok(
-        js.includes('documentElement.classList.add') || js.includes("documentElement.classList.add('drawer-open')"),
-        'app.ts must lock documentElement for iOS Safari (EC-023)'
-      );
-      assert.ok(
         js.includes('preventBodyScroll') || js.includes('touchmove'),
         'app.ts must define touchmove interception (EC-023)'
       );
-      assert.ok(
-        js.includes('window.scrollTo') && js.includes('scrollPosition'),
-        'app.ts must restore exact scroll position when closing drawer (EC-023)'
-      );
+    });
+  });
+
+  describe('[EC-025] CSS and Markup Sanitation in Job Descriptions', () => {
+    it('sanitizes descriptions by stripping raw CSS blocks, style tags, and scripts', async () => {
+      const { cleanJobDescription } = await import('../src/portal/portalDataExporter.ts');
+      assert.ok(typeof cleanJobDescription === 'function', 'cleanJobDescription must be exported (EC-025)');
+
+      const dirtyDesc = `Date: Sep 11, 2026\nJob Requisition Id: 65899\n\nLocation:\nPune, IN Pune, MH, IN\n\n# { display: inline; }\n.buttontext47d030a40eb4ac5c a{ border: 1px solid transparent; } .buttontext47d030a40eb4ac5c a: focus{ border: 1px dashed #2b97ef !important; outline\n\nMust have 4+ years of PL/SQL experience.`;
+
+      const cleaned = cleanJobDescription(dirtyDesc);
+      assert.strictEqual(cleaned.includes('buttontext'), false, 'Must strip CSS class selectors');
+      assert.strictEqual(cleaned.includes('display: inline'), false, 'Must strip inline CSS declarations');
+      assert.strictEqual(cleaned.includes('#2b97ef'), false, 'Must strip color hex in CSS');
+      assert.ok(cleaned.includes('Date: Sep 11, 2026'), 'Must preserve date');
+      assert.ok(cleaned.includes('Location:'), 'Must preserve location header');
+      assert.ok(cleaned.includes('Must have 4+ years of PL/SQL experience.'), 'Must preserve job requirements');
     });
   });
 });

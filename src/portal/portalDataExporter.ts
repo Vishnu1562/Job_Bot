@@ -19,6 +19,22 @@ export interface PortalJobItem {
   isTargetCompany?: boolean;
 }
 
+export function cleanJobDescription(text: string): string {
+  if (!text) return '';
+  return text
+    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/(?:[#.]?[a-zA-Z0-9_\-\s,:>+~*]+|\bbody|\bdiv|\ba|\bbutton|\bspan|\bp)\s*\{[^}]*\}/g, ' ')
+    .replace(/(?:[#.]?[a-zA-Z0-9_\-\s,:>+~*]+|\bbody|\bdiv|\ba|\bbutton|\bspan|\bp)\s*\{[^\n]*(?:\n[^\n]+)*(?=\n\n|$)/g, ' ')
+    .replace(/\b(?:display|color|background|border|margin|padding|font-size|line-height|width|height)\s*:[^;\n]+;?/gi, ' ')
+    .replace(/!important/gi, ' ')
+    .replace(/\r\n/g, '\n')
+    .replace(/[ \t]+/g, ' ')
+    .replace(/\n\s*\n\s*\n+/g, '\n\n')
+    .trim();
+}
+
 export interface PortalProfileData {
   id: string;
   name: string;
@@ -104,7 +120,7 @@ export function exportPortalData(db: JobDatabase, profiles: JobProfile[]): Porta
         url: j.url,
         tags: j.tags || [],
         source: j.source || 'job feed',
-        description: (j.description || '').slice(0, 250),
+        description: cleanJobDescription(j.description || '').slice(0, 500),
         scrapedAt: j.scrapedAt || new Date().toISOString(),
         dateGroup,
         dateLabel,

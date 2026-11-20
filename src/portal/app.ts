@@ -237,7 +237,7 @@ type TrackerState = Record<string, TrackerEntry>;
     }
 
     if (descElem) {
-      const desc = (job.description || '').trim();
+      const desc = cleanJobDescription(job.description || '');
       descElem.textContent = desc || 'Detailed requirements and job description available on employer site.';
     }
 
@@ -254,9 +254,7 @@ type TrackerState = Record<string, TrackerEntry>;
       appliedBtn.innerHTML = `${ICONS.check} ${status.applied ? 'Applied' : 'Applied'}`;
     }
 
-    // Lock background scroll and preserve exact page offset (EC-023)
-    scrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
-    document.body.style.top = `-${scrollPosition}px`;
+    // Lock background scroll (EC-023)
     document.documentElement.classList.add('drawer-open');
     document.body.classList.add('drawer-open');
 
@@ -273,15 +271,29 @@ type TrackerState = Record<string, TrackerEntry>;
     if (drawer) drawer.classList.remove('open');
     if (overlay) overlay.classList.remove('open');
 
-    // Restore background scroll and restore exact offset (EC-023)
+    // Restore background scroll (EC-023)
     document.documentElement.classList.remove('drawer-open');
     document.body.classList.remove('drawer-open');
-    document.body.style.top = '';
-    window.scrollTo(0, scrollPosition);
 
     document.removeEventListener('touchmove', preventBodyScroll);
 
     activeDrawerJob = null;
+  }
+
+  function cleanJobDescription(text: string): string {
+    if (!text) return '';
+    return text
+      .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+      .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/(?:[#.]?[a-zA-Z0-9_\-\s,:>+~*]+|\bbody|\bdiv|\ba|\bbutton|\bspan|\bp)\s*\{[^}]*\}/g, ' ')
+      .replace(/(?:[#.]?[a-zA-Z0-9_\-\s,:>+~*]+|\bbody|\bdiv|\ba|\bbutton|\bspan|\bp)\s*\{[^\n]*(?:\n[^\n]+)*(?=\n\n|$)/g, ' ')
+      .replace(/\b(?:display|color|background|border|margin|padding|font-size|line-height|width|height)\s*:[^;\n]+;?/gi, ' ')
+      .replace(/!important/gi, ' ')
+      .replace(/\r\n/g, '\n')
+      .replace(/[ \t]+/g, ' ')
+      .replace(/\n\s*\n\s*\n+/g, '\n\n')
+      .trim();
   }
 
   function escapeHtml(str: string): string {

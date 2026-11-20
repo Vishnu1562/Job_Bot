@@ -1,5 +1,6 @@
 import { processCandidateJob, fetchWithTimeout } from './scraperUtils.ts';
 import { API_ENDPOINTS } from '../constants/apiEndpoints.ts';
+import { cleanJobDescription } from '../portal/portalDataExporter.ts';
 import type { Job, RawJobListing, JobProfile } from '../types.ts';
 
 /**
@@ -160,7 +161,7 @@ export function parseJSearchJob(raw: any, profile?: JobProfile): Job | null {
     title,
     company,
     location,
-    description: (raw.job_description || raw.description || '').trim(),
+    description: cleanJobDescription(raw.job_description || raw.description || ''),
     url,
     publishedAt: raw.job_posted_at_datetime_utc || raw.posted_at || raw.date
   };
@@ -188,7 +189,7 @@ export function parseAdzunaJob(raw: any, profile?: JobProfile): Job | null {
     title,
     company,
     location,
-    description: raw.description || '',
+    description: cleanJobDescription(raw.description || ''),
     url,
     publishedAt: raw.created
   };

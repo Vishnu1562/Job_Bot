@@ -598,7 +598,7 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
      - `<meta name="apple-mobile-web-app-title" content="Job Radar">`
      - `<link rel="apple-touch-icon" href="favicon.svg">`
      - `<link rel="manifest" href="manifest.webmanifest">`
-  3. Provide Service Worker (`sw.js`) that pre-caches app shell assets (`./`, `index.html`, `styles.css`, `app.js`, `favicon.svg`, `manifest.webmanifest`, `jobs.json`) with stale-while-revalidate / cache-first offline support.
+  3. Provide Service Worker (`sw.js`) that uses Network-First for HTML navigation (`index.html`) and jobs data (`jobs.json`) with offline cache fallback, ensuring immediate delivery of daily job updates, fresh UI changes, and footer elements without stale cache locking.
   4. Register Service Worker gracefully in `app.ts` (`'serviceWorker' in navigator && window.location.protocol.startsWith('http')`).
   5. `portalPageBuilder.ts` generates `docs/manifest.webmanifest` and `docs/sw.js` alongside existing assets.
 - **Expected Result**: Installable PWA with home screen badge, standalone window presentation, and resilient offline capability.
@@ -806,17 +806,30 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Today's jobs are indexed first, and each date view renders dedicated domestic vs remote sections.
 - **Final State**: Perfect mirror of email tier hierarchy across the entire 60-day historical window.
 
-#### [EC-023] Mobile Bottom Sheet Background Scroll Lock & Active Touch Interception
-- **Preconditions**: Candidate opens job detail drawer/bottom sheet on mobile or touch viewport with the page scrolled down.
+#### [EC-023] Mobile Bottom Sheet Zero-Shift Background Lock & Glass Backdrop Blur
+- **Preconditions**: Candidate opens job detail drawer/bottom sheet on mobile or touch viewport after scrolling down to any position in the listings.
 - **Action**:
-  1. System locks background scroll via `drawer-open` class on both `document.documentElement` and `document.body` (`position: fixed; width: 100%; height: 100%; overflow: hidden; touch-action: none;`).
-  2. Preserves exact scroll offset (`scrollPosition = window.pageYOffset || document.documentElement.scrollTop; document.body.style.top = -${scrollPosition}px;`).
+  1. System freezes background scrolling via `drawer-open` class on both `document.documentElement` and `document.body` (`overflow: hidden; touch-action: none;`).
+  2. Both `html` and `body` maintain consistent theme background color (`var(--bg)`) and natural layout positioning (strictly avoiding `position: fixed` or `top: -${scrollPosition}px` which causes the body to shift off-screen and expose raw white browser canvas).
   3. Attaches an active document-level `touchmove` listener (`{ passive: false }`) that calls `e.preventDefault()` on any touch gesture outside `.drawer-body`.
   4. Applies rubber-band boundary clamp on `.drawer-body` touchstart to prevent iOS Safari gesture pass-through to document root.
   5. Applies `overscroll-behavior: contain` to `.drawer-body` and `.job-drawer`.
-  6. Upon closing drawer, removes `drawer-open`, clears `document.body.style.top`, removes `touchmove` listener, and restores window scroll position (`window.scrollTo(0, scrollPosition)`).
-- **Expected Result**: 100% frozen background on iOS Safari and mobile touch browsers with zero background movement while browsing drawer content; smooth restoration upon close.
-- **Final State**: Flawless mobile modal sheet scroll containment adhering to mobile HIG standards.
+  6. Upon closing drawer, removes `drawer-open` and removes `touchmove` listener.
+- **Expected Result**: Zero background scrolling and zero white canvas artifact; the blurred dark/light listing feed remains cleanly visible behind the modal overlay regardless of scroll depth.
+- **Final State**: High-fidelity mobile modal sheet UX adhering to iOS/Android design standards.
+
+#### [EC-025] CSS and Markup Sanitation in Job Descriptions
+- **Preconditions**: Feeds or aggregators (e.g. Shine via JSearch) return job descriptions containing inline `<style>` tags, tracking scripts, or raw CSS selector rules (e.g. `# { display: inline; }`, `.buttontext... a { ... }`).
+- **Action**:
+  1. Utility `cleanJobDescription` sanitizes description strings by:
+     - Stripping `<style[^>]*>[\s\S]*?<\/style>` blocks and their contents.
+     - Stripping `<script[^>]*>[\s\S]*?<\/script>` blocks and their contents.
+     - Stripping remaining HTML tags (`<[^>]+>`).
+     - Stripping stray CSS selector declarations (`[#.]?[\w-]+\s*\{[^}]*\}`).
+     - Normalizing spacing and blank lines.
+  2. Applied in normalizers, data exporter, and client-side detail drawer renderer.
+- **Expected Result**: Job descriptions display clean human-readable prose free of leaked CSS stylesheet rules and broken code blocks.
+- **Final State**: Pristine job description readability across portal drawer and email digests.
 
 #### [EC-024] High-Density Mobile & Responsive Viewport Adaptability
 - **Preconditions**: Mobile device or small screen viewport (< 640px).
