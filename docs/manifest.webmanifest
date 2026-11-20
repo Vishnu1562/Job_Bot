@@ -1,0 +1,19 @@
+{
+  "name": "Job Radar Portal",
+  "short_name": "Job Radar",
+  "description": "Modern multi-profile candidate intelligence portal with live verified job openings",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#090d16",
+  "background_color": "#090d16",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

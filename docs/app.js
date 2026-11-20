@@ -795,10 +795,20 @@
     }
   }
 
+  // 14. Progressive Web App Service Worker Registration (HF-061)
+  function initServiceWorker()       {
+    if ('serviceWorker' in navigator && (window.location.protocol.startsWith('http') || window.location.protocol === 'https:')) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+      });
+    }
+  }
+
   // 15. Initial Bootstrap
   initTheme();
   setupControls();
   setupDrawerEvents();
+  initServiceWorker();
   updateMetrics();
   render();
 })();

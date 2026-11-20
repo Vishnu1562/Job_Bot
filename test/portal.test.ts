@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { JobDatabase } from '../src/db/jobDatabase.ts';
 import { exportPortalData, isDomesticJob } from '../src/portal/portalDataExporter.ts';
-import { generateWebPortal, buildPortalHtml } from '../src/portal/portalPageBuilder.ts';
+import { generateWebPortal, buildPortalHtml, getPortalCss } from '../src/portal/portalPageBuilder.ts';
 import type { Job, JobProfile } from '../src/types.ts';
 
 describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', () => {
@@ -221,6 +221,7 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
 
         const jsContent = fs.readFileSync(jsPath, 'utf-8');
         assert.ok(jsContent.includes('localStorage'), 'app.js must contain tracker persistence logic');
+        assert.ok(jsContent.includes('serviceWorker.register'), 'app.js must register serviceWorker (HF-061)');
         assert.ok(jsContent.includes('stopPropagation'), 'app.js must contain action event isolation (HF-043)');
         // HF-057: Grid-Only Architecture & View Toggle Removal
         assert.strictEqual(indexContent.includes('view-mode-toggle'), false, 'index.html must not contain view-mode-toggle (HF-057)');
@@ -275,6 +276,49 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
           fs.rmSync(testOutputDir, { recursive: true, force: true });
         }
       }
+    });
+  });
+
+  describe('[HF-060] Mobile-Optimized Responsive Viewport Architecture (< 640px)', () => {
+    it('implements 2-column KPI deck, 2x2 dropdown grid, 2-tier accordion header, and safe-area insets in styles.css', () => {
+      const css = getPortalCss();
+
+      // Mobile Media Query check
+      assert.ok(css.includes('@media (max-width: 640px)'), 'styles.css must define @media (max-width: 640px)');
+
+      // 1. KPI 2-column deck on mobile
+      assert.ok(
+        css.includes('.kpi-grid') && css.includes('grid-template-columns: repeat(2, 1fr)'),
+        'KPI grid must remain a side-by-side 2-column grid on mobile (HF-060)'
+      );
+
+      // 2. 2x2 Filter dropdown grid on mobile
+      assert.ok(
+        css.includes('.filter-dropdowns-group') && css.includes('grid-template-columns: repeat(2, 1fr)'),
+        'Filter dropdowns must arrange into a 2x2 grid on mobile (HF-060)'
+      );
+
+      // 3. 2-Tier Section Accordion Header on mobile
+      assert.ok(
+        css.includes('.tier-header-bar') && css.includes('flex-direction: column'),
+        'tier-header-bar must stack into 2 tiers on mobile (HF-060)'
+      );
+      assert.ok(
+        css.includes('.section-company-select') && (css.includes('width: 100%') || css.includes('max-width: 100%')),
+        'section-company-select must take full width on mobile (HF-060)'
+      );
+
+      // 4. Safe-area inset bottom for mobile drawer
+      assert.ok(
+        css.includes('env(safe-area-inset-bottom'),
+        'Must support env(safe-area-inset-bottom) for mobile drawer (HF-060)'
+      );
+
+      // 5. Hide keyboard shortcut on mobile
+      assert.ok(
+        css.includes('.kbd-shortcut') && css.includes('display: none'),
+        'Desktop keyboard shortcut must be hidden on mobile (HF-060)'
+      );
     });
   });
 });

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T03:05:56.689Z",
+  "generatedAt": "2026-11-20T04:43:10.329Z",
   "totalJobsCount": 248,
   "profiles": [
     {
@@ -43,7 +43,7 @@
         "source": "weworkremotely",
         "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6872/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Pune, Maharashtra, India\n    &lt;br /",
         "scrapedAt": "2026-11-20 03:05:31",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -66,7 +66,7 @@
         "source": "jobleads",
         "description": "Key Responsibilities:\n• Design, develop, and deploy applications using Microsoft Power Apps (Canvas Apps & Model-Driven Apps).\n• Build and automate business processes using Power Automate .\n• Integrate Power Apps with SharePoint, Dataverse, SQL Serve",
         "scrapedAt": "2026-11-20 03:05:31",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -90,7 +90,7 @@
         "source": "jobleads",
         "description": "Centrilogic in Hyderabad, India, seeks an experienced Dynamics 365 CRM/Power Platform developer to design, implement, and maintain scalable business apps and automations. You will craft model-driven and canvas Power Apps, integrate with REST/SOAP ser",
         "scrapedAt": "2026-11-20 03:05:31",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -113,7 +113,7 @@
         "source": "linkedin",
         "description": "Summary\nWe are seeking a dynamic Power Platform Engineer to join our IT Services team, operating at either a junior or senior level depending on experience. This pivotal role focuses on leveraging Microsoft's low-code ecosystem to design, develop, an",
         "scrapedAt": "2026-11-20 03:05:31",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -132,7 +132,7 @@
         "source": "shine",
         "description": "As a Power Platform Architect, you will lead the design and implementation of innovative solutions using Microsoft Power Platform technologies, significantly impacting business efficiency and process optimization. Your contributions will guide the in",
         "scrapedAt": "2026-11-20 03:05:31",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -157,7 +157,7 @@
         "source": "talent.com",
         "description": "Job Description:\n\nWe are looking for an experienced Power Platform Developer with 7+ years of experience in designing, developing, and implementing business applications and workflow automation using Power Apps and Power Automate.\n\nKey Responsibiliti",
         "scrapedAt": "2026-11-20 03:05:31",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -247,7 +247,7 @@
         "description": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for an Application Developer – Dynamics 365 & Power Platform based in India.\n\nWe are looking for an experienced Application De",
         "scrapedAt": "2026-11-19 09:24:56",
         "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -272,7 +272,7 @@
         "description": "Company Description\n\nAbout Sopra Steria\n\nSopra Steria, a major Tech player in Europe with 51,000 employees in nearly 30 countries, is recognised for its consulting, digital services and solutions. It helps its clients drive their digital transformati",
         "scrapedAt": "2026-11-19 09:24:56",
         "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -290,7 +290,7 @@
         "description": "• Design, develop, enhance, and maintain applications using Microsoft Power Apps.\n• Build solutions using:\n• Design and implement automated business processes and approval workflows using Power Automate.\n• Work directly with business and functional s",
         "scrapedAt": "2026-11-19 09:24:56",
         "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -309,8 +309,8 @@
         "source": "prepterview",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:35",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -330,8 +330,8 @@
         "source": "cognizant careers",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:35",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -352,8 +352,8 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:35",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -372,8 +372,8 @@
         "source": "career at crowe",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:35",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -478,7 +478,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:36",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -498,7 +498,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:36",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -960,7 +960,7 @@
         "source": "gitlab careers",
         "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": true
@@ -978,7 +978,7 @@
         "source": "gitlab careers",
         "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": true
@@ -996,7 +996,7 @@
         "source": "gitlab careers",
         "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": true
@@ -1014,7 +1014,7 @@
         "source": "remoteok",
         "description": "<p>We're looking for a full-stack engineer to join our Product Engineering team, reporting to one of the Engineering Managers of the Marketplace area, with a dotted line to the Marketing SEO Manager, focused on supporting the Growth and Marketing are",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -1032,7 +1032,7 @@
         "source": "weworkremotely",
         "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States - Remote\n&lt;/p&gt;\n\n&lt;div class=\"content-intro\"&gt;&lt;p&gt;Tebra only initiates contact with candidates via email from an official Tebra email address (@&lt;a class=\"c-link\" hre",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -1050,7 +1050,7 @@
         "source": "weworkremotely",
         "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6875/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;str",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -1068,7 +1068,7 @@
         "source": "weworkremotely",
         "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6874/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Australia\n    &lt;br /&gt;&lt;strong&",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": true
@@ -1086,7 +1086,7 @@
         "source": "weworkremotely",
         "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6873/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Netherlands\n    &lt;br /&gt;&lt;stron",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -1104,7 +1104,7 @@
         "source": "weworkremotely",
         "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6869/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; India\n    &lt;br /&gt;&lt;strong&gt;U",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -1123,7 +1123,7 @@
         "source": "weworkremotely",
         "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/5989/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; New York, NY\n    &lt;br /&gt;&lt;stro",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -1141,7 +1141,7 @@
         "source": "gitlab careers",
         "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": true
@@ -1159,7 +1159,7 @@
         "source": "gitlab careers",
         "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": true
@@ -1177,7 +1177,7 @@
         "source": "gitlab careers",
         "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": true
@@ -1195,7 +1195,7 @@
         "source": "linkedin",
         "description": "Introduction\n\nA career in IBM Consulting is built on long-term client relationships and close collaboration worldwide. You'll work with leading companies across industries, helping them shape their hybrid cloud and AI journeys. With support from our ",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": true
@@ -1215,7 +1215,7 @@
         "source": "linkedin",
         "description": "AI Product Developer – Full Stack\n\nMandatory Skills: Full stack developer, Python, Rest API, RAG, LLM, AI\n\nExperience: 4–7 years\n\nProduct Developer\n\nRequired experience: 5-7 years building, deploying, and supporting modern enterprise web applications",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1234,7 +1234,7 @@
         "source": "linkedin",
         "description": "Experience- 2 To 5 Yrs.\n\nIndustry- IT-Software / Software Services\n\nJob Brief\n\nDesigning and developing user interfaces using Angular 7,8,9 best practices. Adapting interface for modern internet applications using the latest front-end technologies. W",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1252,7 +1252,7 @@
         "source": "linkedin",
         "description": "The Applications Development Senior Programmer Analyst is an intermediate level position responsible for participation in the establishment and implementation of new or revised application systems and programs in coordination with the Technology team",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1270,7 +1270,7 @@
         "source": "citi careers",
         "description": "The Applications Development Senior Programmer Analyst is an intermediate level position responsible for participation in the establishment and implementation of new or revised application systems and programs in coordination with the Technology team",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1290,7 +1290,7 @@
         "source": "shine",
         "description": "The Opportunity\nAs a Full Stack Developer, your contributions will directly impact our ability to deliver robust web applications to our clients. You will play a key role in both front-end and back-end development to enhance the overall user experien",
         "scrapedAt": "2026-11-20 03:05:39",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1383,7 +1383,7 @@
         "description": "Description\n• Male candidates only as per project needs\n• Ahmedabad/Gujarat based candidates only\n• Only shortlisted candidates will be contacted\n• Immediate joiners preferred\n• Interview Mode will be In-person only\nResponsibilities\n• Develop, enhanc",
         "scrapedAt": "2026-11-19 09:25:05",
         "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1400,8 +1400,8 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1418,8 +1418,8 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1436,8 +1436,8 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1454,8 +1454,8 @@
         "source": "hitachi careers",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1472,8 +1472,8 @@
         "source": "citi careers",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1490,8 +1490,8 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1508,8 +1508,8 @@
         "source": "shine",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1526,8 +1526,8 @@
         "source": "jobrapido.com",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1544,8 +1544,8 @@
         "source": "citi careers",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1562,8 +1562,8 @@
         "source": "careers - xoriant",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:46",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1713,7 +1713,7 @@
         "source": "weworkremotely",
         "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://www.careerflow.ai\"&gt;https://www.careerflow.ai&lt;/a&gt;\n&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;About the Role:&lt",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "remote",
         "isTargetCompany": false
@@ -1731,7 +1731,7 @@
         "source": "himalayas",
         "description": "The client is a software supply chain security company, that provides the world’s best end-to-end software supply chain security solution, combining the only proactive protection against malicious open source, the only enterprise grade SBOM managemen",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "remote",
         "isTargetCompany": false
@@ -1749,7 +1749,7 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "remote",
         "isTargetCompany": false
@@ -1767,7 +1767,7 @@
         "source": "jobicy",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "remote",
         "isTargetCompany": false
@@ -1785,7 +1785,7 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "remote",
         "isTargetCompany": false
@@ -1803,7 +1803,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1822,7 +1822,7 @@
         "source": "société générale careers",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1840,7 +1840,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": true
@@ -1858,7 +1858,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1876,7 +1876,7 @@
         "source": "iitjobs",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1896,7 +1896,7 @@
         "source": "corehrx",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1914,7 +1914,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1934,7 +1934,7 @@
         "source": "amgen",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1954,7 +1954,7 @@
         "source": "nexthire",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": true
@@ -1972,7 +1972,7 @@
         "source": "simplyhired",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -1992,7 +1992,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -2010,7 +2010,7 @@
         "source": "shine",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": true
@@ -2028,7 +2028,7 @@
         "source": "my career solution",
         "description": "NeoSOFT is looking for an experienced Angular Developer with hands-on Angular 17 experience to join our team in Pune! Good understanding of NgRx, Monorepo, and Microfrontend architecture.\n\nCompany: Not publicly disclosed\nLocation: Pune\nExperience: 4-",
         "scrapedAt": "2026-11-18 03:23:44",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3233,7 +3233,7 @@
         "source": "remoteok",
         "description": "<p>We're looking for a full-stack engineer to join our Product Engineering team, reporting to one of the Engineering Managers of the Marketplace area, with a dotted line to the Marketing SEO Manager, focused on supporting the Growth and Marketing are",
         "scrapedAt": "2026-11-20 03:05:47",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -3251,7 +3251,7 @@
         "source": "stripe careers",
         "description": "&lt;h2&gt;&lt;strong&gt;Who we are&lt;/strong&gt;&lt;/h2&gt; &lt;h3&gt;&lt;strong&gt;About Stripe&lt;/strong&gt;&lt;/h3&gt; &lt;p&gt;Stripe is a technology company focused on improving the conditions for economic growth and prosperity. We build progr",
         "scrapedAt": "2026-11-20 03:05:47",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": true
@@ -3272,7 +3272,7 @@
         "source": "elastic careers",
         "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale — unleashing the potential of businesses and people. The Elastic Search AI",
         "scrapedAt": "2026-11-20 03:05:47",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": true
@@ -3295,7 +3295,7 @@
         "source": "linkedin",
         "description": "About Us\n\nKumaran Systems: Engineering Future-Ready Transformations Since 1992, Kumaran Systems has been helping enterprises bridge the past and the future, reimagining legacy systems and embracing AI-led possibilities. With over 34 years of delivery",
         "scrapedAt": "2026-11-20 03:05:47",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3318,7 +3318,7 @@
         "source": "careers - xoriant",
         "description": "JD:\n\nAs an Advanced Java Backend Developer at Hilti, you will independently design and deliver high-complexity backend services for the On!Track asset management platform. You will lead technical initiatives, influence service architecture, optimize ",
         "scrapedAt": "2026-11-20 03:05:47",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3336,7 +3336,7 @@
         "source": "shine",
         "description": "Spring Boot & Terraform Video Game Developer for Retail\n\nCompany: Hartworth Heaford Recruitment\nJob Location: Puri, Odisha, India\nEmployment Type: Full-time\nSalary: 55.5L71L a year\n\nHartworth Heaford Recruitment is hiring a Spring Boot & Terraform Vi",
         "scrapedAt": "2026-11-20 03:05:47",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3358,7 +3358,7 @@
         "source": "glassdoor",
         "description": "Job Summary\n\nOVERVIEW OF THE ROLE\n\nAs a Java Microservices Developer at HCLTech, you will play a critical role in designing, developing, and maintaining scalable enterprise applications using modern Java technologies. Your expertise will contribute d",
         "scrapedAt": "2026-11-20 03:05:47",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": true
@@ -3402,7 +3402,7 @@
         "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Canada (Remote), United States (Remote), United Kingdom (Remote) Mexico City, Mexico - Hybrid\n&lt;/p&gt;\n\n\n&lt;h3&gt;About CircleCI Engineering&lt;/h3&gt;\n&lt;p&gt;CI/CD has been solved. Now it's",
         "scrapedAt": "2026-11-19 09:25:10",
         "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -3421,7 +3421,7 @@
         "description": "About Ellucian Ellucian powers innovation for higher education, partnering with approximately 3,000 customers across 50 countries, serving more than 21 million students.",
         "scrapedAt": "2026-11-19 09:25:10",
         "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -3439,7 +3439,7 @@
         "description": "🚀 We're Hiring | Java developer with Production Support Experience\n\nWe are looking for skilled Java Developers with Production Support experience for one of our reputed clients.\n\n📌 Job Details:\n• Role: Java Developer with Production Support\n• Exper",
         "scrapedAt": "2026-11-19 09:25:10",
         "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3463,7 +3463,7 @@
         "description": "Company Description\n\nJob Description\n\nSoftware Engineer (T5)\n\nWe are seeking a Software Engineer with solid technical depth to deliver scalable services and guide junior engineers, working with Java, Spring Boot, Python (NumPy), REST APIs, Flask APIs",
         "scrapedAt": "2026-11-19 09:25:10",
         "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3482,8 +3482,8 @@
         "source": "nexthire",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:58",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3505,8 +3505,8 @@
         "source": "workday",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:58",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3528,8 +3528,8 @@
         "source": "shine",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:58",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3552,8 +3552,8 @@
         "source": "myinternships.in",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:58",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3576,8 +3576,8 @@
         "source": "weworkremotely",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -3594,8 +3594,8 @@
         "source": "himalayas",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -3613,8 +3613,8 @@
         "source": "shine",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3635,8 +3635,8 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3657,8 +3657,8 @@
         "source": "indeed",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3679,8 +3679,8 @@
         "source": "simplyhired",
         "description": "",
         "scrapedAt": "2026-11-19 03:22:57",
-        "dateGroup": "2026-11-19",
-        "dateLabel": "Today's Batch",
+        "dateGroup": "2026-11-18",
+        "dateLabel": "Nov 19, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -3724,7 +3724,7 @@
         "source": "himalayas",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "remote",
         "isTargetCompany": false
@@ -3747,7 +3747,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3765,7 +3765,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3788,7 +3788,7 @@
         "source": "linkedin",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": true
@@ -3815,7 +3815,7 @@
         "source": "cognizant careers",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": true
@@ -3838,7 +3838,7 @@
         "source": "corehrx",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3859,7 +3859,7 @@
         "source": "simplyhired",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3882,7 +3882,7 @@
         "source": "myinternships.in",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3902,7 +3902,7 @@
         "source": "jobleads",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3925,7 +3925,7 @@
         "source": "shine",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -3948,7 +3948,7 @@
         "source": "smart recruiters jobs",
         "description": "",
         "scrapedAt": "2026-11-18 03:23:51",
-        "dateGroup": "2026-11-18",
+        "dateGroup": "2026-11-17",
         "dateLabel": "Nov 18, 2026",
         "tier": "domestic",
         "isTargetCompany": false
@@ -4648,7 +4648,7 @@
         "source": "weworkremotely",
         "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6872/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Pune, Maharashtra, India\n    &lt;br /",
         "scrapedAt": "2026-11-20 03:05:55",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -4668,7 +4668,7 @@
         "source": "weworkremotely",
         "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=fc2a6c7e-ef54-4ed9-8c04-d5aca23f99e3\"&",
         "scrapedAt": "2026-11-20 03:05:55",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -4686,7 +4686,7 @@
         "source": "remoteok",
         "description": "<p style=\"min-height:1.5em\">We believe that the way people interact with their finances will drastically improve in the next few years. Weâre dedicated to empowering this transformation by building the tools and experiences that thousands of develo",
         "scrapedAt": "2026-11-20 03:05:55",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -4704,7 +4704,7 @@
         "source": "remoteok",
         "description": "<p style=\"min-height:1.5em\"><strong>Oracle Fusion Cloud Lead â Logistics &amp; Supply Chain Management</strong></p><p style=\"min-height:1.5em\"><strong>Greenfield Oracle Fusion Implementation</strong></p><p style=\"min-height:1.5em\">Company <strong>T",
         "scrapedAt": "2026-11-20 03:05:55",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": false
@@ -4722,7 +4722,7 @@
         "source": "stripe careers",
         "description": "&lt;h2&gt;&lt;strong&gt;Who we are &lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;&lt;strong&gt;About Stripe&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world&#39;s largest enter",
         "scrapedAt": "2026-11-20 03:05:55",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": true
@@ -4742,7 +4742,7 @@
         "source": "stripe careers",
         "description": "&lt;h2 id=&quot;who-we-are&quot;&gt;Who we are&lt;/h2&gt; &lt;h3 id=&quot;about-stripe&quot;&gt;About Stripe&lt;/h3&gt; &lt;p&gt;Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world&#39;s largest enterpri",
         "scrapedAt": "2026-11-20 03:05:55",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "remote",
         "isTargetCompany": true
@@ -4761,7 +4761,7 @@
         "source": "linkedin",
         "description": "Greetings from TCS!\n\nTCS is hiring for PL/SQL Developer\n\nDesired Experience Range: 5 + Years\n\nJob Location: Bangalore\n\nMust-Have**\n\n(Ideally should not be more than 3-5)\n• At least 10 years of development work experience in Oracle PLSQL based Data wa",
         "scrapedAt": "2026-11-20 03:05:55",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -4781,7 +4781,7 @@
         "source": "digitalxnode",
         "description": "Company Overview\n\nDigitalXnode helps companies find the right people for their technology and business needs. We connect clients with skilled professionals for permanent hiring and staff augmentation across different projects.\n\nJob Summary\n\nWe are lo",
         "scrapedAt": "2026-11-20 03:05:55",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -4800,7 +4800,7 @@
         "source": "shine",
         "description": "PLSQL Developer with unix script\n\nCompany: Infosys\nJob Location: India\nEmployment Type: Full-time\n\nRole & responsibilities\n\nDesign, develop, test, and maintain complex PL/SQL packages, procedures, functions, triggers, and views.\nDevelop and optimize ",
         "scrapedAt": "2026-11-20 03:05:55",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": true
@@ -4819,7 +4819,7 @@
         "source": "foundit",
         "description": "Choosing Capgemini means choosing a company where you will be empowered to shape your career in the way you'd like, where you'll be supported and inspired by a collaborative community of colleagues around the world, and where you'll be able to reimag",
         "scrapedAt": "2026-11-20 03:05:55",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": true
@@ -4837,7 +4837,7 @@
         "source": "shine",
         "description": "SQL Developer\n\nCompany: Platinus Technologies\nJob Location: Bhubaneswar, Odisha, India\nEmployment Type: Full-time\n\nJob highlights\n\nExperience in T-SQL and database management\n\nDevelop and optimize SQL procedures, analyze queries, build reports, and s",
         "scrapedAt": "2026-11-20 03:05:55",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -4856,7 +4856,7 @@
         "source": "iitjobs",
         "description": "You will develop and manage database logic using Oracle and PostgreSQL.\n\nThis role is on-site.\nResponsibilities\n• Write complex stored procedures, packages, functions, and triggers.\n• Manage large volumes of data using cursors and advanced bulk colle",
         "scrapedAt": "2026-11-20 03:05:55",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -4875,7 +4875,7 @@
         "source": "linkedin",
         "description": "About NCR Atleos\n\nNCR Atleos, headquartered in Atlanta, is a leader in expanding financial access. Our dedicated 20,000 employees optimize the branch, improve operational efficiency and maximize self-service availability for financial institutions an",
         "scrapedAt": "2026-11-20 03:05:55",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -4896,7 +4896,7 @@
         "source": "linkedin",
         "description": "Position Description\n\nCompany Profile:\n\nFounded in 1976, CGI is among the largest independent IT and business consulting services firms in the world. With 94,000 consultants and professionals across the globe, CGI delivers an end-to-end portfolio of ",
         "scrapedAt": "2026-11-20 03:05:55",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -4915,7 +4915,7 @@
         "source": "jobrapido.com",
         "description": "Overview of Citi:\n\nCiti, the world’s leading global bank, has approximately 200 million customer accounts and a presence in more than 160 countries and jurisdictions worldwide. Citi provides consumers, corporations, governments, and institutions with",
         "scrapedAt": "2026-11-20 03:05:55",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -4935,7 +4935,7 @@
         "source": "linkedin",
         "description": "QT-KRS-10-501\n\nPosition\n\nOracle PL/SQL & Pro*C Developer\n\nLocation\n\nBangalore\n\nExperience\n\n5+ Years\n\nJob Summary\n\nWe are seeking a skilled Oracle PL/SQL & Pro*C Developer with 5+ years of experience in enterprise application development. The ideal ca",
         "scrapedAt": "2026-11-20 03:05:55",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -4955,7 +4955,7 @@
         "source": "shine",
         "description": "Date: Sep 11, 2026\nJob Requisition Id: 65899\n\nLocation:\nPune, IN Pune, MH, IN\n\n# { display: inline; }\n.buttontext47d030a40eb4ac5c a{ border: 1px solid transparent; } .buttontext47d030a40eb4ac5c a: focus{ border: 1px dashed #2b97ef !important; outline",
         "scrapedAt": "2026-11-20 03:05:55",
-        "dateGroup": "2026-11-20",
+        "dateGroup": "2026-11-19",
         "dateLabel": "Today's Batch",
         "tier": "domestic",
         "isTargetCompany": false
@@ -4977,7 +4977,7 @@
       "source": "weworkremotely",
       "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6872/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Pune, Maharashtra, India\n    &lt;br /",
       "scrapedAt": "2026-11-20 03:05:55",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -4997,7 +4997,7 @@
       "source": "weworkremotely",
       "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=fc2a6c7e-ef54-4ed9-8c04-d5aca23f99e3\"&",
       "scrapedAt": "2026-11-20 03:05:55",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -5015,7 +5015,7 @@
       "source": "remoteok",
       "description": "<p style=\"min-height:1.5em\">We believe that the way people interact with their finances will drastically improve in the next few years. Weâre dedicated to empowering this transformation by building the tools and experiences that thousands of develo",
       "scrapedAt": "2026-11-20 03:05:55",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -5033,7 +5033,7 @@
       "source": "remoteok",
       "description": "<p style=\"min-height:1.5em\"><strong>Oracle Fusion Cloud Lead â Logistics &amp; Supply Chain Management</strong></p><p style=\"min-height:1.5em\"><strong>Greenfield Oracle Fusion Implementation</strong></p><p style=\"min-height:1.5em\">Company <strong>T",
       "scrapedAt": "2026-11-20 03:05:55",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -5051,7 +5051,7 @@
       "source": "stripe careers",
       "description": "&lt;h2&gt;&lt;strong&gt;Who we are &lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;&lt;strong&gt;About Stripe&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world&#39;s largest enter",
       "scrapedAt": "2026-11-20 03:05:55",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": true
@@ -5071,7 +5071,7 @@
       "source": "stripe careers",
       "description": "&lt;h2 id=&quot;who-we-are&quot;&gt;Who we are&lt;/h2&gt; &lt;h3 id=&quot;about-stripe&quot;&gt;About Stripe&lt;/h3&gt; &lt;p&gt;Stripe is a financial infrastructure platform for businesses. Millions of companies—from the world&#39;s largest enterpri",
       "scrapedAt": "2026-11-20 03:05:55",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": true
@@ -5090,7 +5090,7 @@
       "source": "linkedin",
       "description": "Greetings from TCS!\n\nTCS is hiring for PL/SQL Developer\n\nDesired Experience Range: 5 + Years\n\nJob Location: Bangalore\n\nMust-Have**\n\n(Ideally should not be more than 3-5)\n• At least 10 years of development work experience in Oracle PLSQL based Data wa",
       "scrapedAt": "2026-11-20 03:05:55",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5110,7 +5110,7 @@
       "source": "digitalxnode",
       "description": "Company Overview\n\nDigitalXnode helps companies find the right people for their technology and business needs. We connect clients with skilled professionals for permanent hiring and staff augmentation across different projects.\n\nJob Summary\n\nWe are lo",
       "scrapedAt": "2026-11-20 03:05:55",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5129,7 +5129,7 @@
       "source": "shine",
       "description": "PLSQL Developer with unix script\n\nCompany: Infosys\nJob Location: India\nEmployment Type: Full-time\n\nRole & responsibilities\n\nDesign, develop, test, and maintain complex PL/SQL packages, procedures, functions, triggers, and views.\nDevelop and optimize ",
       "scrapedAt": "2026-11-20 03:05:55",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": true
@@ -5148,7 +5148,7 @@
       "source": "foundit",
       "description": "Choosing Capgemini means choosing a company where you will be empowered to shape your career in the way you'd like, where you'll be supported and inspired by a collaborative community of colleagues around the world, and where you'll be able to reimag",
       "scrapedAt": "2026-11-20 03:05:55",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": true
@@ -5166,7 +5166,7 @@
       "source": "shine",
       "description": "SQL Developer\n\nCompany: Platinus Technologies\nJob Location: Bhubaneswar, Odisha, India\nEmployment Type: Full-time\n\nJob highlights\n\nExperience in T-SQL and database management\n\nDevelop and optimize SQL procedures, analyze queries, build reports, and s",
       "scrapedAt": "2026-11-20 03:05:55",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5185,7 +5185,7 @@
       "source": "iitjobs",
       "description": "You will develop and manage database logic using Oracle and PostgreSQL.\n\nThis role is on-site.\nResponsibilities\n• Write complex stored procedures, packages, functions, and triggers.\n• Manage large volumes of data using cursors and advanced bulk colle",
       "scrapedAt": "2026-11-20 03:05:55",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5204,7 +5204,7 @@
       "source": "linkedin",
       "description": "About NCR Atleos\n\nNCR Atleos, headquartered in Atlanta, is a leader in expanding financial access. Our dedicated 20,000 employees optimize the branch, improve operational efficiency and maximize self-service availability for financial institutions an",
       "scrapedAt": "2026-11-20 03:05:55",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5225,7 +5225,7 @@
       "source": "linkedin",
       "description": "Position Description\n\nCompany Profile:\n\nFounded in 1976, CGI is among the largest independent IT and business consulting services firms in the world. With 94,000 consultants and professionals across the globe, CGI delivers an end-to-end portfolio of ",
       "scrapedAt": "2026-11-20 03:05:55",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5244,7 +5244,7 @@
       "source": "jobrapido.com",
       "description": "Overview of Citi:\n\nCiti, the world’s leading global bank, has approximately 200 million customer accounts and a presence in more than 160 countries and jurisdictions worldwide. Citi provides consumers, corporations, governments, and institutions with",
       "scrapedAt": "2026-11-20 03:05:55",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5264,7 +5264,7 @@
       "source": "linkedin",
       "description": "QT-KRS-10-501\n\nPosition\n\nOracle PL/SQL & Pro*C Developer\n\nLocation\n\nBangalore\n\nExperience\n\n5+ Years\n\nJob Summary\n\nWe are seeking a skilled Oracle PL/SQL & Pro*C Developer with 5+ years of experience in enterprise application development. The ideal ca",
       "scrapedAt": "2026-11-20 03:05:55",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5284,7 +5284,7 @@
       "source": "shine",
       "description": "Date: Sep 11, 2026\nJob Requisition Id: 65899\n\nLocation:\nPune, IN Pune, MH, IN\n\n# { display: inline; }\n.buttontext47d030a40eb4ac5c a{ border: 1px solid transparent; } .buttontext47d030a40eb4ac5c a: focus{ border: 1px dashed #2b97ef !important; outline",
       "scrapedAt": "2026-11-20 03:05:55",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5305,7 +5305,7 @@
       "source": "remoteok",
       "description": "<p>We're looking for a full-stack engineer to join our Product Engineering team, reporting to one of the Engineering Managers of the Marketplace area, with a dotted line to the Marketing SEO Manager, focused on supporting the Growth and Marketing are",
       "scrapedAt": "2026-11-20 03:05:47",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -5323,7 +5323,7 @@
       "source": "stripe careers",
       "description": "&lt;h2&gt;&lt;strong&gt;Who we are&lt;/strong&gt;&lt;/h2&gt; &lt;h3&gt;&lt;strong&gt;About Stripe&lt;/strong&gt;&lt;/h3&gt; &lt;p&gt;Stripe is a technology company focused on improving the conditions for economic growth and prosperity. We build progr",
       "scrapedAt": "2026-11-20 03:05:47",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": true
@@ -5344,7 +5344,7 @@
       "source": "elastic careers",
       "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;Elastic, the Search AI Company, enables everyone to find the answers they need in real time, using all their data, at scale — unleashing the potential of businesses and people. The Elastic Search AI",
       "scrapedAt": "2026-11-20 03:05:47",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": true
@@ -5367,7 +5367,7 @@
       "source": "linkedin",
       "description": "About Us\n\nKumaran Systems: Engineering Future-Ready Transformations Since 1992, Kumaran Systems has been helping enterprises bridge the past and the future, reimagining legacy systems and embracing AI-led possibilities. With over 34 years of delivery",
       "scrapedAt": "2026-11-20 03:05:47",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5390,7 +5390,7 @@
       "source": "careers - xoriant",
       "description": "JD:\n\nAs an Advanced Java Backend Developer at Hilti, you will independently design and deliver high-complexity backend services for the On!Track asset management platform. You will lead technical initiatives, influence service architecture, optimize ",
       "scrapedAt": "2026-11-20 03:05:47",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5408,7 +5408,7 @@
       "source": "shine",
       "description": "Spring Boot & Terraform Video Game Developer for Retail\n\nCompany: Hartworth Heaford Recruitment\nJob Location: Puri, Odisha, India\nEmployment Type: Full-time\nSalary: 55.5L71L a year\n\nHartworth Heaford Recruitment is hiring a Spring Boot & Terraform Vi",
       "scrapedAt": "2026-11-20 03:05:47",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5430,7 +5430,7 @@
       "source": "glassdoor",
       "description": "Job Summary\n\nOVERVIEW OF THE ROLE\n\nAs a Java Microservices Developer at HCLTech, you will play a critical role in designing, developing, and maintaining scalable enterprise applications using modern Java technologies. Your expertise will contribute d",
       "scrapedAt": "2026-11-20 03:05:47",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": true
@@ -5448,7 +5448,7 @@
       "source": "gitlab careers",
       "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": true
@@ -5466,7 +5466,7 @@
       "source": "gitlab careers",
       "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": true
@@ -5484,7 +5484,7 @@
       "source": "gitlab careers",
       "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": true
@@ -5502,7 +5502,7 @@
       "source": "remoteok",
       "description": "<p>We're looking for a full-stack engineer to join our Product Engineering team, reporting to one of the Engineering Managers of the Marketplace area, with a dotted line to the Marketing SEO Manager, focused on supporting the Growth and Marketing are",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -5520,7 +5520,7 @@
       "source": "weworkremotely",
       "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States - Remote\n&lt;/p&gt;\n\n&lt;div class=\"content-intro\"&gt;&lt;p&gt;Tebra only initiates contact with candidates via email from an official Tebra email address (@&lt;a class=\"c-link\" hre",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -5538,7 +5538,7 @@
       "source": "weworkremotely",
       "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6875/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;str",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -5556,7 +5556,7 @@
       "source": "weworkremotely",
       "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6874/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Australia\n    &lt;br /&gt;&lt;strong&",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": true
@@ -5574,7 +5574,7 @@
       "source": "weworkremotely",
       "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6873/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Netherlands\n    &lt;br /&gt;&lt;stron",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -5592,7 +5592,7 @@
       "source": "weworkremotely",
       "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6869/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; India\n    &lt;br /&gt;&lt;strong&gt;U",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -5611,7 +5611,7 @@
       "source": "weworkremotely",
       "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/5989/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; New York, NY\n    &lt;br /&gt;&lt;stro",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -5629,7 +5629,7 @@
       "source": "gitlab careers",
       "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": true
@@ -5647,7 +5647,7 @@
       "source": "gitlab careers",
       "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": true
@@ -5665,7 +5665,7 @@
       "source": "gitlab careers",
       "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficiency, reduce security and compliance risk, ",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": true
@@ -5683,7 +5683,7 @@
       "source": "linkedin",
       "description": "Introduction\n\nA career in IBM Consulting is built on long-term client relationships and close collaboration worldwide. You'll work with leading companies across industries, helping them shape their hybrid cloud and AI journeys. With support from our ",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": true
@@ -5703,7 +5703,7 @@
       "source": "linkedin",
       "description": "AI Product Developer – Full Stack\n\nMandatory Skills: Full stack developer, Python, Rest API, RAG, LLM, AI\n\nExperience: 4–7 years\n\nProduct Developer\n\nRequired experience: 5-7 years building, deploying, and supporting modern enterprise web applications",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5722,7 +5722,7 @@
       "source": "linkedin",
       "description": "Experience- 2 To 5 Yrs.\n\nIndustry- IT-Software / Software Services\n\nJob Brief\n\nDesigning and developing user interfaces using Angular 7,8,9 best practices. Adapting interface for modern internet applications using the latest front-end technologies. W",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5740,7 +5740,7 @@
       "source": "linkedin",
       "description": "The Applications Development Senior Programmer Analyst is an intermediate level position responsible for participation in the establishment and implementation of new or revised application systems and programs in coordination with the Technology team",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5758,7 +5758,7 @@
       "source": "citi careers",
       "description": "The Applications Development Senior Programmer Analyst is an intermediate level position responsible for participation in the establishment and implementation of new or revised application systems and programs in coordination with the Technology team",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5778,7 +5778,7 @@
       "source": "shine",
       "description": "The Opportunity\nAs a Full Stack Developer, your contributions will directly impact our ability to deliver robust web applications to our clients. You will play a key role in both front-end and back-end development to enhance the overall user experien",
       "scrapedAt": "2026-11-20 03:05:39",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5797,7 +5797,7 @@
       "source": "weworkremotely",
       "description": "&lt;img src=\"https://we-work-remotely.imgix.net/logos/0171/6872/logo.gif?ixlib=rails-4.0.0&amp;w=50&amp;h=50&amp;dpr=2&amp;fit=fill&amp;auto=compress\" /&gt;\n\n&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Pune, Maharashtra, India\n    &lt;br /",
       "scrapedAt": "2026-11-20 03:05:31",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "remote",
       "isTargetCompany": false
@@ -5820,7 +5820,7 @@
       "source": "jobleads",
       "description": "Key Responsibilities:\n• Design, develop, and deploy applications using Microsoft Power Apps (Canvas Apps & Model-Driven Apps).\n• Build and automate business processes using Power Automate .\n• Integrate Power Apps with SharePoint, Dataverse, SQL Serve",
       "scrapedAt": "2026-11-20 03:05:31",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5844,7 +5844,7 @@
       "source": "jobleads",
       "description": "Centrilogic in Hyderabad, India, seeks an experienced Dynamics 365 CRM/Power Platform developer to design, implement, and maintain scalable business apps and automations. You will craft model-driven and canvas Power Apps, integrate with REST/SOAP ser",
       "scrapedAt": "2026-11-20 03:05:31",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5867,7 +5867,7 @@
       "source": "linkedin",
       "description": "Summary\nWe are seeking a dynamic Power Platform Engineer to join our IT Services team, operating at either a junior or senior level depending on experience. This pivotal role focuses on leveraging Microsoft's low-code ecosystem to design, develop, an",
       "scrapedAt": "2026-11-20 03:05:31",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5886,7 +5886,7 @@
       "source": "shine",
       "description": "As a Power Platform Architect, you will lead the design and implementation of innovative solutions using Microsoft Power Platform technologies, significantly impacting business efficiency and process optimization. Your contributions will guide the in",
       "scrapedAt": "2026-11-20 03:05:31",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -5911,7 +5911,7 @@
       "source": "talent.com",
       "description": "Job Description:\n\nWe are looking for an experienced Power Platform Developer with 7+ years of experience in designing, developing, and implementing business applications and workflow automation using Power Apps and Power Automate.\n\nKey Responsibiliti",
       "scrapedAt": "2026-11-20 03:05:31",
-      "dateGroup": "2026-11-20",
+      "dateGroup": "2026-11-19",
       "dateLabel": "Today's Batch",
       "tier": "domestic",
       "isTargetCompany": false
@@ -6092,7 +6092,7 @@
       "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; Canada (Remote), United States (Remote), United Kingdom (Remote) Mexico City, Mexico - Hybrid\n&lt;/p&gt;\n\n\n&lt;h3&gt;About CircleCI Engineering&lt;/h3&gt;\n&lt;p&gt;CI/CD has been solved. Now it's",
       "scrapedAt": "2026-11-19 09:25:10",
       "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -6111,7 +6111,7 @@
       "description": "About Ellucian Ellucian powers innovation for higher education, partnering with approximately 3,000 customers across 50 countries, serving more than 21 million students.",
       "scrapedAt": "2026-11-19 09:25:10",
       "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -6129,7 +6129,7 @@
       "description": "🚀 We're Hiring | Java developer with Production Support Experience\n\nWe are looking for skilled Java Developers with Production Support experience for one of our reputed clients.\n\n📌 Job Details:\n• Role: Java Developer with Production Support\n• Exper",
       "scrapedAt": "2026-11-19 09:25:10",
       "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6153,7 +6153,7 @@
       "description": "Company Description\n\nJob Description\n\nSoftware Engineer (T5)\n\nWe are seeking a Software Engineer with solid technical depth to deliver scalable services and guide junior engineers, working with Java, Spring Boot, Python (NumPy), REST APIs, Flask APIs",
       "scrapedAt": "2026-11-19 09:25:10",
       "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6171,7 +6171,7 @@
       "description": "Description\n• Male candidates only as per project needs\n• Ahmedabad/Gujarat based candidates only\n• Only shortlisted candidates will be contacted\n• Immediate joiners preferred\n• Interview Mode will be In-person only\nResponsibilities\n• Develop, enhanc",
       "scrapedAt": "2026-11-19 09:25:05",
       "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6197,7 +6197,7 @@
       "description": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for an Application Developer – Dynamics 365 & Power Platform based in India.\n\nWe are looking for an experienced Application De",
       "scrapedAt": "2026-11-19 09:24:56",
       "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6222,7 +6222,7 @@
       "description": "Company Description\n\nAbout Sopra Steria\n\nSopra Steria, a major Tech player in Europe with 51,000 employees in nearly 30 countries, is recognised for its consulting, digital services and solutions. It helps its clients drive their digital transformati",
       "scrapedAt": "2026-11-19 09:24:56",
       "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6240,7 +6240,7 @@
       "description": "• Design, develop, enhance, and maintain applications using Microsoft Power Apps.\n• Build solutions using:\n• Design and implement automated business processes and approval workflows using Power Automate.\n• Work directly with business and functional s",
       "scrapedAt": "2026-11-19 09:24:56",
       "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -6259,8 +6259,8 @@
       "source": "nexthire",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:58",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6282,8 +6282,8 @@
       "source": "workday",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:58",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6305,8 +6305,8 @@
       "source": "shine",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:58",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6329,8 +6329,8 @@
       "source": "myinternships.in",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:58",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6353,8 +6353,8 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -6371,8 +6371,8 @@
       "source": "himalayas",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -6390,8 +6390,8 @@
       "source": "shine",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6412,8 +6412,8 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6434,8 +6434,8 @@
       "source": "indeed",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6456,8 +6456,8 @@
       "source": "simplyhired",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:57",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6474,8 +6474,8 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -6492,8 +6492,8 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -6510,8 +6510,8 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -6528,8 +6528,8 @@
       "source": "hitachi careers",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6546,8 +6546,8 @@
       "source": "citi careers",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6564,8 +6564,8 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6582,8 +6582,8 @@
       "source": "shine",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6600,8 +6600,8 @@
       "source": "jobrapido.com",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6618,8 +6618,8 @@
       "source": "citi careers",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6636,8 +6636,8 @@
       "source": "careers - xoriant",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:46",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6656,8 +6656,8 @@
       "source": "prepterview",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:35",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6677,8 +6677,8 @@
       "source": "cognizant careers",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:35",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -6699,8 +6699,8 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:35",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6719,8 +6719,8 @@
       "source": "career at crowe",
       "description": "",
       "scrapedAt": "2026-11-19 03:22:35",
-      "dateGroup": "2026-11-19",
-      "dateLabel": "Today's Batch",
+      "dateGroup": "2026-11-18",
+      "dateLabel": "Nov 19, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -6980,7 +6980,7 @@
       "source": "himalayas",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "remote",
       "isTargetCompany": false
@@ -7003,7 +7003,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7021,7 +7021,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7044,7 +7044,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": true
@@ -7071,7 +7071,7 @@
       "source": "cognizant careers",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": true
@@ -7094,7 +7094,7 @@
       "source": "corehrx",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7115,7 +7115,7 @@
       "source": "simplyhired",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7138,7 +7138,7 @@
       "source": "myinternships.in",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7158,7 +7158,7 @@
       "source": "jobleads",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7181,7 +7181,7 @@
       "source": "shine",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7204,7 +7204,7 @@
       "source": "smart recruiters jobs",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:51",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7222,7 +7222,7 @@
       "source": "weworkremotely",
       "description": "&lt;p&gt;\n  &lt;strong&gt;Headquarters:&lt;/strong&gt; United States\n    &lt;br /&gt;&lt;strong&gt;URL:&lt;/strong&gt; &lt;a href=\"https://www.careerflow.ai\"&gt;https://www.careerflow.ai&lt;/a&gt;\n&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;About the Role:&lt",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "remote",
       "isTargetCompany": false
@@ -7240,7 +7240,7 @@
       "source": "himalayas",
       "description": "The client is a software supply chain security company, that provides the world’s best end-to-end software supply chain security solution, combining the only proactive protection against malicious open source, the only enterprise grade SBOM managemen",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "remote",
       "isTargetCompany": false
@@ -7258,7 +7258,7 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "remote",
       "isTargetCompany": false
@@ -7276,7 +7276,7 @@
       "source": "jobicy",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "remote",
       "isTargetCompany": false
@@ -7294,7 +7294,7 @@
       "source": "weworkremotely",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "remote",
       "isTargetCompany": false
@@ -7312,7 +7312,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7331,7 +7331,7 @@
       "source": "société générale careers",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7349,7 +7349,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": true
@@ -7367,7 +7367,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7385,7 +7385,7 @@
       "source": "iitjobs",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7405,7 +7405,7 @@
       "source": "corehrx",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7423,7 +7423,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7443,7 +7443,7 @@
       "source": "amgen",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7463,7 +7463,7 @@
       "source": "nexthire",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": true
@@ -7481,7 +7481,7 @@
       "source": "simplyhired",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7501,7 +7501,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7519,7 +7519,7 @@
       "source": "shine",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": true
@@ -7537,7 +7537,7 @@
       "source": "my career solution",
       "description": "NeoSOFT is looking for an experienced Angular Developer with hands-on Angular 17 experience to join our team in Pune! Good understanding of NgRx, Monorepo, and Microfrontend architecture.\n\nCompany: Not publicly disclosed\nLocation: Pune\nExperience: 4-",
       "scrapedAt": "2026-11-18 03:23:44",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7560,7 +7560,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:36",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false
@@ -7580,7 +7580,7 @@
       "source": "linkedin",
       "description": "",
       "scrapedAt": "2026-11-18 03:23:36",
-      "dateGroup": "2026-11-18",
+      "dateGroup": "2026-11-17",
       "dateLabel": "Nov 18, 2026",
       "tier": "domestic",
       "isTargetCompany": false

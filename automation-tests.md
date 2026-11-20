@@ -567,6 +567,43 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Tailored, high-trust PL/SQL radar matching Minnu's 4-year experience profile with Cognizant exclusion.
 - **Final State**: 4-profile multi-tenant Job Radar ecosystem with personalized candidate greetings and web portal integration.
 
+#### [HF-060] Mobile-Optimized Responsive Viewport Architecture (< 640px)
+- **Preconditions**: Web portal loaded on mobile viewport or touchscreen device (< 640px width, e.g. 360px–480px smartphones).
+- **Action**:
+  1. Top Navbar: Remains a single-row flex layout (`flex-direction: row; justify-content: space-between; align-items: center;`) with compact brand logo on left and `#theme-toggle` on right, avoiding vertical stacking.
+  2. Hero & KPI Deck: `.kpi-grid` renders a compact side-by-side 2-column grid (`grid-template-columns: repeat(2, 1fr)`) with streamlined padding (`12px 14px`) and 18px icons, preserving above-the-fold listing visibility.
+  3. Filter Toolbar & Dropdowns:
+     - Search input spans full width (100%), and desktop keyboard shortcut badge (`/`) is hidden on mobile.
+     - The 4 filter dropdowns (`#role-select`, `#status-select`, `#tier-select`, `#date-select`) form a balanced 2x2 grid (`grid-template-columns: repeat(2, 1fr)`) with touch-friendly minimum height (42px) and zoom-safe font sizes (≥ 13.5px / 14px) preventing iOS Safari involuntary auto-zoom.
+     - Reset filter button spans full width below the dropdown grid when active.
+  4. Regional Section Headers (`.tier-header-bar`):
+     - Stacks into a 2-tier responsive structure:
+       - Row 1: Section title, verified count badge, and collapse chevron.
+       - Row 2: In-section company dropdown (`.section-company-select`) expanding to full width (100%) with 40px+ tap height and isolated click handlers (`stopPropagation`).
+  5. Job Cards & Action Buttons:
+     - Card padding adjusted to `16px` with fluid action buttons ("Save", "Applied", "Apply Now ↗") offering min 38-42px touch targets.
+  6. Slide-Over Detail Drawer (`.job-drawer`):
+     - Transitions to a mobile bottom sheet / full-screen drawer sliding up from the bottom (`transform: translateY(...)`) with safe-area bottom padding (`env(safe-area-inset-bottom)`).
+- **Expected Result**: Thumb-friendly, fast, zero-side-sway mobile experience without awkward multiline wrapping or iOS auto-zoom glitches.
+- **Final State**: Native app-like responsive mobile candidate experience.
+
+#### [HF-061] Progressive Web App (PWA) Offline Engine & Web Manifest
+- **Preconditions**: Static web portal deployment in `docs/`.
+- **Action**:
+  1. Create Web App Manifest (`manifest.webmanifest`) declaring `name: "Job Radar Portal"`, `short_name: "Job Radar"`, `start_url: "./"`, `display: "standalone"`, `theme_color: "#090d16"`, `background_color: "#090d16"`, and SVG icon definitions.
+  2. Embed PWA meta tags in `template.html`:
+     - `<meta name="theme-color" content="#090d16">`
+     - `<meta name="apple-mobile-web-app-capable" content="yes">`
+     - `<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">`
+     - `<meta name="apple-mobile-web-app-title" content="Job Radar">`
+     - `<link rel="apple-touch-icon" href="favicon.svg">`
+     - `<link rel="manifest" href="manifest.webmanifest">`
+  3. Provide Service Worker (`sw.js`) that pre-caches app shell assets (`./`, `index.html`, `styles.css`, `app.js`, `favicon.svg`, `manifest.webmanifest`, `jobs.json`) with stale-while-revalidate / cache-first offline support.
+  4. Register Service Worker gracefully in `app.ts` (`'serviceWorker' in navigator && window.location.protocol.startsWith('http')`).
+  5. `portalPageBuilder.ts` generates `docs/manifest.webmanifest` and `docs/sw.js` alongside existing assets.
+- **Expected Result**: Installable PWA with home screen badge, standalone window presentation, and resilient offline capability.
+- **Final State**: Full Progressive Web App capability for mobile and desktop candidate usage.
+
 ---
 
 ### Negative Flows
