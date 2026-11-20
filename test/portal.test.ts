@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { JobDatabase } from '../src/db/jobDatabase.ts';
 import { exportPortalData, isDomesticJob } from '../src/portal/portalDataExporter.ts';
-import { generateWebPortal, buildPortalHtml, getPortalCss } from '../src/portal/portalPageBuilder.ts';
+import { generateWebPortal, buildPortalHtml, getPortalCss, getPortalJs } from '../src/portal/portalPageBuilder.ts';
 import type { Job, JobProfile } from '../src/types.ts';
 
 describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', () => {
@@ -318,6 +318,45 @@ describe('[HF-035, HF-036, HF-037, NF-010, EC-021, EC-022] Web Portal Engine', (
       assert.ok(
         css.includes('.kbd-shortcut') && css.includes('display: none'),
         'Desktop keyboard shortcut must be hidden on mobile (HF-060)'
+      );
+    });
+  });
+
+  describe('[EC-023] Mobile Bottom Sheet Background Scroll Lock & Position Preservation', () => {
+    it('locks background scroll with body.drawer-open, overscroll-behavior, and scroll offset preservation', () => {
+      const css = getPortalCss();
+      const js = getPortalJs();
+
+      // 1. CSS rules for bulletproof mobile scroll lock
+      assert.ok(
+        css.includes('body.drawer-open'),
+        'styles.css must define body.drawer-open rule'
+      );
+      assert.ok(
+        css.includes('body.drawer-open') && css.includes('position: fixed'),
+        'body.drawer-open must set position: fixed to prevent iOS background scrolling (EC-023)'
+      );
+      assert.ok(
+        css.includes('overscroll-behavior: contain'),
+        'styles.css must set overscroll-behavior: contain to eliminate scroll chaining (EC-023)'
+      );
+
+      // 2. JS logic for scroll locking and restoring offset
+      assert.ok(
+        js.includes('drawer-open'),
+        'app.ts must toggle drawer-open class on body (EC-023)'
+      );
+      assert.ok(
+        js.includes('pageYOffset') || js.includes('scrollTop'),
+        'app.ts must capture scroll position before locking body (EC-023)'
+      );
+      assert.ok(
+        js.includes('window.scrollTo') && js.includes('scrollPosition'),
+        'app.ts must restore exact scroll position when closing drawer (EC-023)'
+      );
+      assert.ok(
+        js.includes('touchmove') && js.includes('preventDefault'),
+        'app.ts must isolate touchmove on overlay and non-scrollable drawer regions (EC-023)'
       );
     });
   });

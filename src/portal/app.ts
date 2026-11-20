@@ -111,6 +111,7 @@ type TrackerState = Record<string, TrackerEntry>;
   let sectionCompanyFilter: { domestic: string; remote: string } = { domestic: 'all', remote: 'all' };
   let searchQuery = '';
   let activeDrawerJob: JobItem | null = null;
+  let scrollPosition = 0;
 
   // 5. Toast Feedback System
   let toastTimer: any = null;
@@ -246,9 +247,13 @@ type TrackerState = Record<string, TrackerEntry>;
       appliedBtn.innerHTML = `${ICONS.check} ${status.applied ? 'Applied' : 'Applied'}`;
     }
 
+    // Lock background scroll and preserve exact page offset (EC-023)
+    scrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.classList.add('drawer-open');
+
     overlay.classList.add('open');
     drawer.classList.add('open');
-    document.body.style.overflow = 'hidden';
   }
 
   function closeDrawer(): void {
@@ -256,7 +261,12 @@ type TrackerState = Record<string, TrackerEntry>;
     const overlay = document.getElementById('drawer-overlay');
     if (drawer) drawer.classList.remove('open');
     if (overlay) overlay.classList.remove('open');
-    document.body.style.overflow = '';
+
+    // Restore background scroll and restore exact offset (EC-023)
+    document.body.classList.remove('drawer-open');
+    document.body.style.top = '';
+    window.scrollTo(0, scrollPosition);
+
     activeDrawerJob = null;
   }
 
@@ -675,8 +685,24 @@ type TrackerState = Record<string, TrackerEntry>;
   function setupDrawerEvents(): void {
     const overlay = document.getElementById('drawer-overlay');
     const closeBtn = document.getElementById('drawer-close');
+    const drawer = document.getElementById('job-drawer');
     if (overlay) overlay.addEventListener('click', closeDrawer);
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+
+    // Isolate touchmove on backdrop and non-scrollable drawer regions (EC-023)
+    if (overlay) {
+      overlay.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false });
+    }
+    if (drawer) {
+      const header = drawer.querySelector('.drawer-header');
+      const footer = drawer.querySelector('.drawer-footer');
+      if (header) {
+        header.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false });
+      }
+      if (footer) {
+        footer.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false });
+      }
+    }
 
     window.addEventListener('keydown', e => {
       if (e.key === 'Escape') closeDrawer();

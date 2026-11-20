@@ -788,6 +788,17 @@ Each profile deduplicates via SQLite (`jobs.db`) with `profile_id` scoping, gene
 - **Expected Result**: Today's jobs are indexed first, and each date view renders dedicated domestic vs remote sections.
 - **Final State**: Perfect mirror of email tier hierarchy across the entire 60-day historical window.
 
+#### [EC-023] Mobile Bottom Sheet Background Scroll Lock & Position Preservation
+- **Preconditions**: Candidate opens job detail drawer/bottom sheet on mobile or touch viewport with the page scrolled down.
+- **Action**:
+  1. System locks background scroll via `drawer-open` class on `document.body` (`position: fixed; width: 100%; overflow: hidden; touch-action: none;`).
+  2. Preserves exact scroll offset (`scrollPosition = window.pageYOffset || document.documentElement.scrollTop; document.body.style.top = -${scrollPosition}px;`).
+  3. Applies `overscroll-behavior: contain` to `.drawer-body` and `.job-drawer` to prevent touch scroll-chaining and rubber-banding.
+  4. Prevents `touchmove` events on `.drawer-overlay`, `.drawer-header`, and `.drawer-footer` so swiping outside the scrollable body never moves the background.
+  5. Upon closing drawer, removes `drawer-open`, clears `top`, and restores window scroll position (`window.scrollTo(0, scrollPosition)`).
+- **Expected Result**: Zero background scrolling or rubber-band displacement while browsing drawer content; seamless scroll restoration upon closing.
+- **Final State**: Rock-solid modal sheet interaction adhering to mobile HIG standards.
+
 #### [EC-024] High-Density Mobile & Responsive Viewport Adaptability
 - **Preconditions**: Mobile device or small screen viewport (< 640px).
 - **Action**: Responsive CSS adjusts layout seamlessly:
