@@ -1,34 +1,98 @@
 {
-  "generatedAt": "2026-11-24T03:07:05.324Z",
-  "totalJobsCount": 367,
+  "generatedAt": "2026-11-25T03:06:51.873Z",
+  "totalJobsCount": 402,
   "profiles": [
     {
       "id": "power-platform",
       "name": "Power Platform Job Radar",
       "accentColor": "#742774",
-      "jobsCount": 57
+      "jobsCount": 60
     },
     {
       "id": "full-stack",
       "name": "Full Stack Developer Job Radar",
       "accentColor": "#0284c7",
-      "jobsCount": 174
+      "jobsCount": 182
     },
     {
       "id": "java-backend",
       "name": "Java & Spring Boot Developer Job Radar",
       "accentColor": "#ea580c",
-      "jobsCount": 102
+      "jobsCount": 117
     },
     {
       "id": "plsql-developer",
       "name": "PL/SQL Developer Job Radar",
       "accentColor": "#0d9488",
-      "jobsCount": 34
+      "jobsCount": 43
     }
   ],
   "jobsByProfile": {
     "power-platform": [
+      {
+        "id": "jsearch-aFU0YzhPMnhQaWgwVU9VX0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZakJyYkhKUFpVcDJlazVyTTBKRGNEVTNTVEF5ZWpJdFkxTXpUeTFqUXpOdE16TlFVSEZvV2pkak5URlVaRkJFTURKVmFXUmxaa0pyWnpNeVJGUTRiMnd6VjJkNkxWaHpRM00yYTBsWlRsWnNablppWlcxak1FaEhZVEUzWld0ZmMzVmlOSFZrT1Y5UVgzbENiV1JDV25oSE5VWXdjVmt6Y2xkNFJFTjBlbGRvUW5wcVRFa1NGMll4UVVkaE9FdFFSblpJY25CMFVWQjFUbTAwYjFFMEdpSkJTRTR3UlRkSFNqSnllVUV0UkVGMU1XNVJlR3h2VEdSa1JGRnVZblExV1hSMzpiNTBhOGU4Yg",
+        "profileId": "power-platform",
+        "title": "PowerApps Developer",
+        "company": "Capgemini",
+        "location": "Bengaluru, Karnataka, India",
+        "url": "https://in.linkedin.com/jobs/view/powerapps-developer-at-capgemini-4464483443",
+        "tags": [
+          "[Canvas Apps]",
+          "[Power Automate]",
+          "[Dataverse]",
+          "[SharePoint Online]",
+          "[Model-Driven]"
+        ],
+        "source": "linkedin",
+        "description": "Choosing Capgemini means choosing a company where you will be empowered to shape your career in the way you’d like, where you’ll be supported and inspired by a collaborative community of colleagues around the world, and where you’ll be able to reimagine what’s possible. Join us and help the world’s leading organizations unlock the value of technology and build a more sustainable, more inclusive world.\n\nYour Role\n\n• Developing and deploying PowerApps solutions.\n• Architecture and design of...",
+        "scrapedAt": "2026-11-25 03:05:52",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-bzc4TC1DMnR4NV9RRktxWEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVEF3YW1oV1VXTXhObWRCWW00MlFuUjVhbXhUYlZGV1RVMTNOM0Y0Y1ZSUVgxSnhTMUZxYVU4MFp6ZHRVekpDWTA4eFkxOHRVWFV3V1U1RVZuTndXbXBwWWpkV2FYVmtaWGhrUzJKV1ltbGtZVWxJWWtwd1dVeFBRMFZEU0ROWmFYSjRNVlpKWlVaS2VrSmtSVXRyTVZGM2RYQlNTVkJwWjBab2IxTmxOWGwzTW1SQ2JtSVNGMll4UVVkaE9FdFFSblpJY25CMFVWQjFUbTAwYjFFMEdpSkJTRTR3UlRkSWJHcHpiRVptZWtJeFUxUnBWbFpTV2xSRU5VZG5hSFJPU1RaUjphMDA0NTcwYQ",
+        "profileId": "power-platform",
+        "title": "India: Power Platform Developer",
+        "company": "Helmerich & Payne, Inc.",
+        "location": "Goa, India",
+        "url": "https://in.indeed.com/viewjob?jk=09f852acaba1f1c4",
+        "tags": [
+          "[Power Automate]",
+          "[Copilot Studio]"
+        ],
+        "source": "indeed",
+        "description": "At H&P, our people are our strength.\n\n• Collaborate with business units and stakeholders to understand their requirements and translate them into functional solutions using Power Platform.\n\n• Design, develop, and deploy custom applications using Power Apps to meet business needs.\n\n• Automate workflows and processes using Power Automate, integrating with various data sources and services.\n\n• Create interactive and insightful dashboards and reports using Power BI to support data-driven...",
+        "scrapedAt": "2026-11-25 03:05:52",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-Vm9ZLVVNbjFjdXFpT1JacEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXV3RDTVdoUVRrdG5jR1ZMUWpoNFRGOUtaRVV6WlVGcGFDMDFkbFoxZUhORVZYY3lSVkIyVnpreFlrVjFUWFpZTkRScVZYUklhbEpmZVdwRFVYRTFVemhTVUd0NFkzTldha3Q2YWtsclQwTjNjRFJVU0d4dmRqRkhWekJQV1Zaa1NFaEhlRGw0YkVFNVozTkNOMTlsYUhGTlozTmxlRzlJYWpOWVVWSldTRGQzUjFKSFNHUVNGMll4UVVkaE9FdFFSblpJY25CMFVWQjFUbTAwYjFFMEdpSkJTRTR3UlRkRlZtOHdhVWMzWm1jMlJUTlpXamh6ZVRSUldESktjbnB0V2poUjphMjNhMWE0YQ",
+        "profileId": "power-platform",
+        "title": "Microsoft Power Platform / Power Apps Developer | Succor Technology Services | India – 100% Remote",
+        "company": "Succor Technology Services",
+        "location": "India (Remote)",
+        "url": "https://www.jobleads.com/in/job/microsoft-power-platform-power-apps-developer-succor-technology-services-india-100-remote--india--ebf727ffec3697fb7fbbb87cb290120c1",
+        "tags": [
+          "[Canvas Apps]",
+          "[Power Automate]",
+          "[Dataverse]",
+          "[SharePoint Online]",
+          "[Model-Driven]",
+          "[PCF]"
+        ],
+        "source": "jobleads",
+        "description": "Position Summary\n\n• Succor Technology Services is seeking an accomplished Microsoft Power Platform / Power Apps Developer for an exciting 3-month contract opportunity with possible extension, operating on a 100% remote basis from India.\n\n• This role requires a seasoned technical professional with specialized expertise in enterprise low-code application development, cloud data fabrics, and workflow automation.\n\n• You will play a pivotal role in designing, building, and scaling sophisticated...",
+        "scrapedAt": "2026-11-25 03:05:52",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
       {
         "id": "jsearch-N3pmeVVOdXZJYWNUcFZ0T0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbFJ4T1ZoaVVVc3dVRWhQYkRndE5FdE9XV1JhV1d3NE5td3hSM1pvUW1GUmVHbG1ia1pyWm01MFUyaG1kMUE1U1hGcFF6SjRVMkZTZEhVM1dUVlpUekZDUWxOU0xWZzFjbkpTYmtNelRXVnFOMmxQTlhCSk5uUjVPVzgyVDBScmNpMVVhbWxsTlZBNWQySm1iblJvT1ZwSVJHWkhOR2xGWTBOWlFsQnhTMEZUVHpSVFJVRVNGMEptT0VWaFgwZEdTRXhsWnpCUVJWQjFXak4wYjFGUkdpSkJTRTR3UlRkR1pEbE9TMmh0Y1VoVVFtZ3dSbVZvVFVKQlVIYzFjbE5hVTJ0QjoyNmRlZGRkOA",
         "profileId": "power-platform",
@@ -40,10 +104,10 @@
           "[Power Automate]"
         ],
         "source": "talent.com",
-        "description": "Job Description\n\n:\n\nWe are seeking a Technical Lead with a strong background in UiPath and general software engineering principles. In this role, you will play a crucial part in developing and implementing automation solutions to optimize business processes for our clients. You will collaborate with cross-functional teams, analyse requirements, design, develop, test, and deploy RPA bots that deliver measurable improvements to our clients' operations.\n\nKey Responsibilities:\n• Design, develop...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:05:43",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -60,10 +124,10 @@
           "[Copilot Studio]"
         ],
         "source": "efinancialcareers",
-        "description": "Position Summary\n\nThe Power Platform Developer is responsible for designing, developing, and delivering secure, scalable, and business-focused automation solutions across the Microsoft Power Platform and enterprise systems. The successful candidate will combine strong platform engineering expertise with a product-oriented mindset to deliver modern cloud-based applications.\n\nExperience Level: Senior Associate - 5+ years execution software engineering experience\n\nCore Tech Stack: Power Platform...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:05:43",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -81,7 +145,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:05:37",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -102,7 +166,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:05:37",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -120,7 +184,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:05:37",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1261,6 +1325,150 @@
     ],
     "full-stack": [
       {
+        "id": "job-dba568a",
+        "profileId": "full-stack",
+        "title": "Vehicle Condition Inspector - Remote",
+        "company": "FIXD Automotive",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/fixd-automotive-vehicle-condition-inspector-remote",
+        "tags": [
+          "[Full Stack]"
+        ],
+        "source": "weworkremotely",
+        "description": "Headquarters: Atlanta, Georgia, United States\n\nURL: https://jobs.workable.com/company/p33WSu8nDxqqazwsZzRc7L/jobs-at-fixd-automotive\n\nAbout FIXD & AppraisalPRO\nAppraisalPRO is FIXD's B2B product that helps dealerships during the vehicle appraisal process. We detect any problems with trade-in vehicles, provide estimated reconditioning costs for a vehicle, and a consumer-facing condition report for use in negotiations.\n\nThe role\nDealers use AppraisalPRO's Inspect feature to take pictures of the...",
+        "scrapedAt": "2026-11-25 03:06:21",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-5c614642",
+        "profileId": "full-stack",
+        "title": "Senior Developer (.NET)",
+        "company": "Tech Company",
+        "location": "Remote Worldwide",
+        "url": "https://himalayas.app/companies/archretail/jobs/senior-developer-net",
+        "tags": [
+          "[.NET]"
+        ],
+        "source": "himalayas",
+        "description": "We're looking for an experienced Senior Developer to join our technology team and support the development, maintenance, and enhancement of a business-critical enterprise platform.",
+        "scrapedAt": "2026-11-25 03:06:21",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-LXotczFIcnp2WEU0aVFxZkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVUkzUjJaSFMySndWbmhQVDJsa1QwTjRZVmhYWldwRlUyWjZRemhXVUVOdWNYWk1RbGxJY2s4emJsbG9ibTkzTVV4Q1UwRXhkRmxmTjE5akxYWk1VV1JPVFRJMFlraFNiVTExTjJWdU5rOVdhSFpZUTBWQlVESk1VMDVKZWtjeGFGZFhWRVpVT0hwTU5qTjZNbXN5WDJGeVEydFNjRkE0ZEVoUlRVOW1jV1F3VUVFdGQxb1NGM0V4UVVkaE9YcFRTbkF5U3pkT1dWQTNYeTFpTUZFNEdpSkJTRTR3UlRkRlNsaGlURTh6VWpoTFduTTFhbDkyWlUwNU9YQnZhM2cxZVU5MzowOWZmNWIxYQ",
+        "profileId": "full-stack",
+        "title": "Full Stack Developer - Java 17+, Angular",
+        "company": "Cognizant",
+        "location": "Hyderabad, Telangana, India",
+        "url": "https://careers.cognizant.com/india-en/jobs/00070442191/full-stack-developer-java-17plus-angular/",
+        "tags": [
+          "[Angular]"
+        ],
+        "source": "cognizant careers",
+        "description": "Java Full Stack Developer (Java 17+ & Angular) | Hyderabad\n\nRole: Java Full Stack Developer\nExperience: 6 to 12 Years\nLocation: Hyderabad\nShift: 2:00 PM to 11:00 PM IST\n\nJob Description\n\nWe are seeking an experienced Java Full Stack Developer with strong expertise in Java 17+ and Angular (any version). The ideal candidate will have hands-on experience in designing, developing, and maintaining scalable web applications while following software design best practices.\n\nKey Responsibilities\n•...",
+        "scrapedAt": "2026-11-25 03:06:21",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-UlhZMFJfYnpMRGl0blRoT0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbmRVU2pSeFpEZE9iemhPUVUxb1VHRnZRekZOTXpoVFl6YzBRVGxpUlV4WlNHMVROM1pITXpWa1gwNW5jV3RzUkVKeGFIcENNV1IwVGxVMlFuSjVWRGc1VERKQlVGQmxTRGxpY21KbUxXZzFjR1l4WlRkWE4zWlJSRVIwVFdWQmJIcHZTelZqZEZFMmRHVm9ORnBwT1RVMVZqWTFORGgzTkRoaFVIWklZMjFsTWxabU1Hd1NGM0V4UVVkaE9YcFRTbkF5U3pkT1dWQTNYeTFpTUZFNEdpSkJTRTR3UlRkSU5HNHlUWFJoUzAxa2NGUlFOMWw1VlVSYWVVcHRiVVJPUlVGbjo1MDE5MGZiYQ",
+        "profileId": "full-stack",
+        "title": "Developer of Angular (REQ/HR/05) (Science City)",
+        "company": "Yama Tech",
+        "location": "India",
+        "url": "https://www.shine.com/jobs/developer-of-angular-req-hr-science-city/yama-tech/20124010",
+        "tags": [
+          "[Angular]"
+        ],
+        "source": "shine",
+        "description": "Developer of Angular (REQ/HR/05) (Science City)\n\nCompany: Yama Tech\nJob Location: India\nEmployment Type: Full-time\n\nObjective of the Position\n\nThis position will be responsible for development & designing new features for the products as well as change or amended in existing features, should also assist the IT function in day to day developmental requirements.\n\nJob Duties and Responsibilities\n\nResearching, designing, implementing, and managing software programs.\nUnderstand the project flow to...",
+        "scrapedAt": "2026-11-25 03:06:21",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-Tk1GTld3SUlFZkNMcTkzMkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXWEJsVkZoeGVETlBRMmMzZUhCVFEwVlBUVUZvU1ZSM1QzcEJiMHc0TVVKVVJXVlFSR2wxVVdNM1NXVjFiRVY2YzBaTVFUVXdSemhhVWtGb1pYRTRVbEZFUld4TlNWUlljREoxUjJscFVtbHJSRUV5TjFKeU5FWjROVEU0ZGs1V1REaFBTbVJFVURJMmFXSkZaelpqTUVGZk5EWnhYME5YV0RoNGRHaDBWRjlxYUVsNVdFY1NGM0V4UVVkaE9YcFRTbkF5U3pkT1dWQTNYeTFpTUZFNEdpSkJTRTR3UlRkRlFUbFJNRFowTFZjMFVHdzFRMHRxZWs0MWQxRlhiRzR0YVdobjpjYWYyZWE1MA",
+        "profileId": "full-stack",
+        "title": "Angular Developer | India",
+        "company": "Photon",
+        "location": "Tamil Nadu, India",
+        "url": "https://in.indeed.com/viewjob?jk=b98fc1fcc9607c50",
+        "tags": [
+          "[Angular]"
+        ],
+        "source": "indeed",
+        "description": "Front End Developer (Angular)\n\nObjectives of this Role\n\n• Create design- and user-focused experiences.\n\n• Build personalized and customized features for customers.\n\n• Maintain up-to-date knowledge of industry trends and advancements.\n\n• Develop standard code that can serve as the foundation of future projects.\n\n• Perform tasks accurately and up to our quality standard.\n\nDaily and Monthly Responsibilities\n\n• Collaborate with web designers and back-end designers to complete projects.\n\n• Create...",
+        "scrapedAt": "2026-11-25 03:06:21",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-RU04U0Z0Y1VpNE1mcGJpTUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXa3Q2VjNSWVYyOVVkSGxqZHpkSWJGZEZaa04yZFVNMVZVMVhkMlZIU2xGSVRHTlRUVlZFWWxoZlQyeGFWMWhtY0VrMFQwWmlZbUpYTW5rdE0wNDBTV2N4VUhvMFRVZG1PSFZoUkZWblltSnNOa2QzV0ZsTFRrUjNOR3N5TjFkd2VXMTRVa3Q1VFRsUE5XZFdNV2Q1ZGxGWlVqRXhWVWh5YzBkdVIyOXJjMEl6WVRkTlFrSVNGM0V4UVVkaE9YcFRTbkF5U3pkT1dWQTNYeTFpTUZFNEdpSkJTRTR3UlRkRlpVdFVjSE54YTAxclgyUkZPV1JPU25KZlYzaHZURk0xZWxkbjo4NWQzNTY3NA",
+        "profileId": "full-stack",
+        "title": "Angular (UI Developer)",
+        "company": "Rexcel IT Services",
+        "location": "India",
+        "url": "https://www.glassdoor.co.in/job-listing/angular-ui-developer-rexcel-it-services-JV_KO0,20_KE21,39.htm?jl=1006546927367",
+        "tags": [
+          "[Angular]"
+        ],
+        "source": "glassdoor",
+        "description": "Greater Noida West, Uttar Pradesh, India\n\nFull Time Employment\n\nCurrent Status : [ HOLD ]\n\nJob Summary\n\n• We are looking for an Angular Developer who thinks that great products start with user experiences. If you like turning ideas into nice and easy to use interfaces this could be the perfect job for you.\n\n• In this job you will work with designers, product teams and backend developers to make web applications that look good and are easy to use. You will not just write code, you will also help...",
+        "scrapedAt": "2026-11-25 03:06:21",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-bkZHdk52bkpOVlE0ZWtScUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVUk0UWpGME1ISlVZa2hVTWs1eGQxWjRXalJpU0dvNVprOUpXVVJYZUhOc2EzbFNkRWd6YWxFNGIzbExXR1kzVmxWd2NHRmZVR05yUTNORU1YbDJlbEZpVUd0WGJYaFpPR05YTUdrNFZUTTVRMU16VkhSdE9YZGxjekp2TmpkV2JGSjJhbDlFWHpabU1XczBiekZIVjNCclp6RnRNa2xoVVVoU1VFNDRNWEExVjB4M1VEQVNGM0V4UVVkaE9YcFRTbkF5U3pkT1dWQTNYeTFpTUZFNEdpSkJTRTR3UlRkSE9WbzBOamxNVlU0MVRWaFVkMU5tU1VSd2FWRnBiekkyU21wbjoyMWZiOTdkYw",
+        "profileId": "full-stack",
+        "title": "Frontend Developer (Angular)",
+        "company": "Mobile Programming LLC India",
+        "location": "Mumbai, Maharashtra, India",
+        "url": "https://www.shine.com/jobs/frontend-developer-angular/mobile-programming-llc-india/20122862?jobtype=cr&position_in_results=17",
+        "tags": [
+          "[Angular]"
+        ],
+        "source": "shine",
+        "description": "Frontend Developer (Angular)\n\nCompany: Mobile Programming LLC India\nJob Location: Mumbai, Maharashtra, India\nEmployment Type: Full-time\nExperience Required: 5+ years\n\nYou will design and build responsive web applications using Angular.\n\nThis role is on-site.\n\nResponsibilities\n\nDevelop, test, and maintain web applications using Angular and related technologies.\n\nTranslate wireframes and mockups from UI/UX designers into high-quality code.\n\nIntegrate data from backend services and third-party...",
+        "scrapedAt": "2026-11-25 03:06:21",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-cnIyNEduX3lScHZyUjlhaUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZV1ppZWs4NWFqQjBRM1phUzFkck4zVlZVRGhHU2pGaWQxVmZhV3hQYUhFMFEwOUhaMDlEY1U5VVdUWkNaRFV4T0hCSU5YRklTbEJMZVZoQ09YTm9jMmx4YTJ0cmIxQlZjMmhpTmtadldXMDBXVWc0V0RsbE5rRnFRM2g1VnkxMGNHWnBabWhCY0V4aGNqWjRjME4zVVhOMFh6ZGhUVXBWWVU5NU5YZHZia3N4VVdkSVZUZ1NGM0V4UVVkaE9YcFRTbkF5U3pkT1dWQTNYeTFpTUZFNEdpSkJTRTR3UlRkSU9FZHhkbXhZTm1saU9ETm1RVWRPV25aMFZEWkJWV2h4WnpGUjo4NjIyYmVmZQ",
+        "profileId": "full-stack",
+        "title": "Front End Developer (Angular) (Remote)",
+        "company": "The Hub",
+        "location": "Bengaluru, Karnataka, India",
+        "url": "https://cutshort.io/job/Front-End-Developer-Angular-Bengaluru-Bangalore-Mumbai-The-Hub-F63zMaY9",
+        "tags": [
+          "[Angular]"
+        ],
+        "source": "cutshort",
+        "description": "What will I do?\n\n• Delivering a complete front end application\n• Ensuring high performance on mobile and desktop\n• Writing tested, idiomatic, and documented JavaScript, HTML, and CSS\n• Coordinating the workflow between the graphic designer, the HTML coder, and yourself\n• Cooperating with the back-end developer in the process of building the RESTful API\n• Communicating with external web services\n• Ensure high-quality graphic standards and brand consistency\n• Stay up-to-date on emerging...",
+        "scrapedAt": "2026-11-25 03:06:21",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
         "id": "jsearch-VkRXa2U2ZXB0cktVRG9fZ0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZVzFwYjJ0SWJEaGFUVEZEUzBaUlh6RXRUMVJvYVZaaFZubDRjMVZPYUhCaE5sZHVTSFEyTTBsellrWndlV2xSTUZCb2FFVXhlRFpuYWpSNGNWSkhaakJKU0hKdlZtNVRUbU5tTmxkWVdEVkxWMkZFVG05b1MxTjVZelJQYzJzd1VuVmxXa3ROU2xsUlNsVnZjR2xQUmxwSlYxWnBMVVJ3T1haeVNVNWpkbmhPVWpaYWNGTVNGME5mT0VWaE5sOTZSVXd6VjNCMFVWQnBURWhDYjFFNEdpSkJTRTR3UlRkRlh6aDBNVEZVVWkxbFVYVjBlbEU0VUV4bE5FazRWV1ZJTVhaUjoyMzhmM2NkZA",
         "profileId": "full-stack",
         "title": "Software Engineer - Java Full Stack Developer_106233",
@@ -1271,10 +1479,10 @@
           "[Angular]"
         ],
         "source": "linkedin",
-        "description": "Key Skills: Angular, Core Java, Python, Fullstack Java, React, Java, Javascript, SQL, HTML, Spring Boot, GIT, CSS, Typescript\n\nRoles and Responsibilities:\n• Develop and maintain responsive web application features using Angular or React.\n• Build and support application components that integrate frontend experiences with backend services.\n• Use Python for basic scripting and application support tasks.\n• Investigate and resolve defects across application layers and contribute to code reviews.\n•...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:26",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1293,10 +1501,10 @@
           "[GitHub]"
         ],
         "source": "careers at exxonmobil",
-        "description": "About us\n\nAt ExxonMobil, our vision is to lead in energy innovations that advance modern living while reducing emissions. As one of the world’s largest publicly traded energy and chemical companies, we are powered by a unique and diverse workforce fueled by the pride in what we do and what we stand for.\n\nThe success of our Upstream, Product Solutions and Low Carbon Solutions businesses is the result of the talent, curiosity and drive of our people. They bring solutions every day to optimize our...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:26",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1313,10 +1521,10 @@
           "[GitHub]"
         ],
         "source": "wellfound",
-        "description": "Experience: 2-5 Years\n\nEmployment Type: Full-time\n\nWorking Days: 5 days a week\n\nWorking Hours: 2:30 PM – 11:30 PM IST\n\nLocation: Amritsar, Punjab\n\nAbout Us\n\nNinja Studio is a custom software development company with offices in San Francisco and Montreal. We build AI-powered solutions, MVPs, SaaS platforms, web and mobile apps for startup founders and early-stage companies across the US, Canada, UK, Europe, and Australia. Our clients are founders who move fast, value quality, and need a...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:26",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1332,10 +1540,10 @@
           "[GitHub]"
         ],
         "source": "cognizant careers",
-        "description": "Primary Skill: AEM FullStack (Backend+ Frontend) Developer\n\nExperience: 3-6 Years\n\nLocation : Any India Location\n\nJD:\n\nKey Responsibilities\n• Design, develop, and maintain AEM components, templates, blocks, workflows, and services using AEM Cloud Service.\n• Implement AEM Sites, Assets, Frontend Modules and Forms modules to deliver engaging digital experiences.\n• Develop and integrate custom OSGi bundles, servlets, and Sling models using Java and AEM APIs.\n• Collaborate with UX/UI designers...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:26",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -1350,10 +1558,10 @@
           "[Angular]"
         ],
         "source": "linkedin",
-        "description": "We are seeking a talented individual to join our Applications Development team, part of our Marsh Risk Tech business at Marsh. This role will be based in Pune. This is a hybrid role that has a requirement of working at least three days a week in the office.\n\nJava Full Stack Developer - Applications Development\n\nAs a Java Full Stack Developer, you will be responsible for designing, developing, and maintaining web applications using Java technologies. You will work closely with cross-functional...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:26",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1369,10 +1577,10 @@
           "[GitHub]"
         ],
         "source": "indeed",
-        "description": "Key Responsibilities\n\n• Modern Frontend Development: Build responsive, high-performance user interfaces using React.js and TypeScript .\n\n• AngularJS Enhancements & BAU: Manage ongoing feature enhancements, bug fixes, and Business As Usual (BAU) support for existing AngularJS 1.7 applications.\n\n• UI Styling: Craft clean, maintainable, and cross-browser compatible stylesheets using modern JavaScript , CSS3 , and SCSS .\n\n• Backend & Microservices: Design, build, and maintain robust RESTful APIs...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:26",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1389,10 +1597,10 @@
           "[MSSQL]"
         ],
         "source": "linkedin",
-        "description": "HCLTech is hiring .NET Full Stack, Angular, Azure Professionals with 8+ years of experience!\n\nWe are organizing an in-person Hackathon on 4 December at Trinity, Whitefield, Bengaluru.\n\nRegistration is mandatory for participation. Kindly complete your registration at the earliest to confirm your attendance:\n\n🔗 https://forms.cloud.microsoft/r/Fme93AEZ5X\n\nIf you are based in Bengaluru and looking for your next opportunity with HCLTech, we would love to meet you.\n\nIf you are originally from...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:26",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -1408,10 +1616,10 @@
           "[.NET]"
         ],
         "source": "shine",
-        "description": ".NET Full Stack Angular Developer\n\nCompany: HARP Technologies & Services Pvt Ltd\nJob Location: Chennai, Tamil Nadu, India\nEmployment Type: Full-time\nExperience Required: 5+ years\n\nAbout the Role\n\nYou will build and maintain full-stack applications using Angular, .NET Core, and Azure.\n\nThis role is hybrid.\n\nKey Responsibilities\n\nResponsibilities\n\nBuild responsive user interfaces with Angular and Type\n\nScript.\n\nDevelop backend services and Web APIs using .NET Core and C#.Manage data persistence...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:26",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1428,10 +1636,10 @@
           "[Azure DevOps]"
         ],
         "source": "dataart.team",
-        "description": "We are looking for a Middle to Senior Full Stack Developer with strong experience in .NET and Angular to build scalable cloud based applications and contribute to modern software solutions. You will collaborate with distributed teams and support communication with stakeholders with partial overlap to Singapore business hours.\n\nYou will work on a cloud based platform in the foreign exchange domain, building and enhancing applications with .NET and Angular. The project includes full stack...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:26",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1447,10 +1655,10 @@
           "[.NET]"
         ],
         "source": "iitjobs",
-        "description": "You will build and maintain web applications using .NET Core and Angular.\n\nThis role is on-site.\n\nResponsibilities\n\n• Develop and maintain web applications using .NET Core and Angular.\n\n• Write clean, scalable, and efficient code following established best practices.\n\n• Collaborate with cross-functional teams to design and implement new features.\n\n• Troubleshoot, debug, and optimize application performance.\n\n• Integrate APIs and databases with front-end frameworks to ensure seamless...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:26",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1465,10 +1673,10 @@
           "[Angular]"
         ],
         "source": "shine",
-        "description": "Angular Developer - Hiring Now (Nagpur)\n\nCompany: Important Company of the Sector\nJob Location: Nagpur, Maharashtra, India\nEmployment Type: Full-time\nExperience Required: 1+ years\n\nWe are on the lookout for a competitive Angular Developer to join our productive team at Kizora in Nagpur.\n\nGrowing your career as a Full Time Angular Developer is a fantastic opportunity to develop exceptional skills.\n\nIf you are solid in presentation, critical thinking and have the right mindset for the job, then...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:26",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1485,10 +1693,10 @@
           "[MSSQL]"
         ],
         "source": "apna jobs",
-        "description": "Angular + Java Developer We are looking for a highly skilled Angular + Java Full Stack Developer with strong experience in developing scalable web applications using Angular on the frontend and Java-based technologies on the backend. The ideal candidate should be proficient in building responsive user interfaces, developing RESTful services, and working in an Agile development environment. Key Responsibilities Design, develop, and maintain enterprise-grade web applications using Angular and...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:26",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1505,10 +1713,10 @@
           "[MSSQL]"
         ],
         "source": "iitjobs",
-        "description": "Build and maintain web applications using .NET Core and Angular, implementing RESTful APIs and managing SQL databases.\n\nThis role is hybrid.\n\nResponsibilities\n\n• Design, develop, and maintain web applications and RESTful APIs.\n\n• Collaborate with UX/UI designers to define requirements and build user interfaces.\n\n• Write efficient SQL queries and manage database structures.\n\n• Debug, troubleshoot, and conduct unit and integration testing.\n\n• Participate in Agile/Scrum ceremonies, code reviews...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:26",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1523,10 +1731,10 @@
           "[Angular]"
         ],
         "source": "weworkremotely",
-        "description": "Headquarters: US or Canada - Remote\n\nOur team is committed to enhancing physician and patient quality of life through Elation, a SaaS cloud-based clinical platform. Since inception, we’ve been focused on building an intuitive, reliable experience that empowers physicians to deliver better care to patients.\n\nElation is looking for a full-stack engineer with a deep understanding of web programming, design, and technical obstacles to join our application team focused on building and maintaining AI...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:26",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1544,7 +1752,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:15",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1566,7 +1774,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:15",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -1584,7 +1792,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:15",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1602,7 +1810,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:15",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1620,7 +1828,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:15",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -1638,7 +1846,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:15",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -4484,6 +4692,334 @@
     ],
     "java-backend": [
       {
+        "id": "jsearch-aEdQZXdHZmNwRXh4WmFIaEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbTVLTUhSUk0yaFNkbGczUlV4TFRWUlpkR0ZPYTJOVFpGTmtTMmgxYzA5M1FteGFSMWswTmsxRlpXWmtSRUYyVFdOeVdIVlNlRmg0VURCdFQyTklXVlYxVVdKVFpXMXZWbDlKVEU5aVEyNXJSbmxLY1dSNlNtaE5TeTB3ZGs5U1VWRjRZM3A2TjNZeVIzTk9ZbWgzUVdreFQwUlJTbFpGY1hCcmJYQXdUa3huVDB0MlRYb1NGM05HUVVkaE5IcG1USFp4ZURWT2IxQXpUamROYlVFNEdpSkJTRTR3UlRkSFdHYzVWV3RqV0RWQlNXdFhUVjlzTVc0MWVWUnBXREZNUkV0Qjo1YTI4MDQ1Nw",
+        "profileId": "java-backend",
+        "title": "Senior Application Developer - Java [T500-31029]",
+        "company": "CIBC India",
+        "location": "Hyderabad, Telangana, India",
+        "url": "https://in.linkedin.com/jobs/view/senior-application-developer-java-t500-31029-at-cibc-india-4494138116",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]",
+          "[Microservices]",
+          "[Docker]",
+          "[Spring Security / JWT]",
+          "[Python / Shell]"
+        ],
+        "source": "linkedin",
+        "description": "About CIBC:\n\nCIBC is a leading North American bank, with a history of more than 150 years of living our purpose - to help make your ambition a reality. Client relationships are at the center of our strategy, and our growth is enabled by a highly engaged and connected global team. From digital banking to community impact, we’re proud to drive progress for our clients and our communities. Recognized for our culture, award-winning innovation and community investment, CIBC continues to evolve by...",
+        "scrapedAt": "2026-11-25 03:06:36",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-ZlVNT3E2WmtCdDRkZUlhVEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZalJMYTFSWFZISnNSMk5sZURkS2RYWXdNWGhPVFdoSlExZHNNblpLTjNrd1p6WkhjREpMVVhWVFltbGtXRGRJWjI1clltWmFiMjVGZUZCblgyOVdYMGxNZFVvd0xXZzJaMmx2UkZCQlRFcHZRa2hNVFdWcGVqTmhaMkp1Ym5SVGRVeG9ZbTA0Tm5WaVoxZEpWazFpV1ZWQ1IzRnBYM1ZZY1VrMGFFdEhZVWRWWkRsMVYzUVNGM05HUVVkaE5IcG1USFp4ZURWT2IxQXpUamROYlVFNEdpSkJTRTR3UlRkRk56VlJjMFJGU0dKVWRIcFpkVnAyVW1NMlpVRmZTR2RSYmxobjpjNTYzZWQ4ZQ",
+        "profileId": "java-backend",
+        "title": "Backend Engineer - Java",
+        "company": "Lenskart.com",
+        "location": "Bengaluru, Karnataka, India",
+        "url": "https://in.linkedin.com/jobs/view/backend-engineer-java-at-lenskart-com-4492371979",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]",
+          "[Microservices]",
+          "[REST APIs]",
+          "[Docker]"
+        ],
+        "source": "linkedin",
+        "description": "Key Responsibilities\n\n1. Backend Development & Engineering\n• Translate complex business and functional requirements into robust technical solutions.\n• Design, develop, test, deploy, and maintain scalable backend systems and services.\n• Own the complete Software Development Life Cycle (SDLC), from requirement analysis to production deployment.\n• Build high-quality, extensible, and maintainable applications while ensuring timely delivery.\n\n2. Engineering Best Practices\n• Drive the adoption and...",
+        "scrapedAt": "2026-11-25 03:06:36",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-WFlERC1fSDRFUElfQWhxbEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVzR4Wlhrd2NXcFpRVEpOU0ZGNFpVbEhWV3BVTWtkRWRYTTFaMmRaYVdwb2VqZENXVk5IY3pCWk4ycFNObWRCVlhWeVdtSTRTWFpvYmtjMWVVOXdhVXAzY0VOaGVIQk1aVXhMYzJOMUxXRjVVVXhFT0doaFgyeDVRVXhzWW5Oa1dXUnFRbWRNVVVGS1ZtTTFiSGxPYkdKRFJXMTRPRTFGTmxvMFlua3hZMEZPZGxKNFlYb1NGM05HUVVkaE5IcG1USFp4ZURWT2IxQXpUamROYlVFNEdpSkJTRTR3UlRkR1pFRldhbVJKTkhNMlRGVkdaV1l4YW1Sa1p6bGFWa052VFZkMzoyZWY2M2QxNQ",
+        "profileId": "java-backend",
+        "title": "Senior Java Backend Developer (J2EE, Docker) (4 to 6 Years)- Pune/Bangalore",
+        "company": "FIS",
+        "location": "Pimpri-Chinchwad, Maharashtra, India",
+        "url": "https://in.linkedin.com/jobs/view/senior-java-backend-developer-j2ee-docker-4-to-6-years-pune-bangalore-at-fis-4493694088",
+        "tags": [
+          "[Java]",
+          "[Hibernate/JPA]",
+          "[Microservices]",
+          "[REST APIs]",
+          "[Oracle SQL]",
+          "[Docker]"
+        ],
+        "source": "linkedin",
+        "description": "Position Type\n\nFull time\n\nType Of Hire\n\nExperienced (relevant combo of work and education)\n\nJob Description For Java Developer (Banking / Payments)\n\nAre you curious, motivated, and forward-thinking? At FIS you’ll have the opportunity to work on some of the most challenging and relevant issues in financial services and technology. Our talented people empower us, and we believe in being part of a team that is open, collaborative, entrepreneurial, passionate and above all fun.\n\nAbout The...",
+        "scrapedAt": "2026-11-25 03:06:36",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-ckpJMU11NGVqblNuN3V1WEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZV0Z5V1cxU2FITmhhMFExWmxZMFlqaEtSbTEwYm5ORGMxOVZNVGhLVm5NMGNqQmpaM1o0V1cxRFNXODFhelkwUlVVelFsa3hiVTR5VERSVVJURnVlVEZaTjI1Q2VWSnRZMHcyVkZOc2RrVXhOVWxFUXpKalRrUXhSVlJ3UTNGclVFb3ROWFJHZVRGaGRVbDBhRWxGY1VGa1RuZGlYM1ZHZEZwS1psWjRaM0JGZFRSRWNHa1NGM05HUVVkaE5IcG1USFp4ZURWT2IxQXpUamROYlVFNEdpSkJTRTR3UlRkSFVYUjNkbEZFYUZadmFYaGplRWRJTFRsRlVIcHFUREpqVmtKMzpmZDc4NWUxMQ",
+        "profileId": "java-backend",
+        "title": "Java Fullstack Developer with AWS & React",
+        "company": "Cognizant",
+        "location": "Chennai, Tamil Nadu, India",
+        "url": "https://careers.cognizant.com/india-en/jobs/00070659271/java-fullstack-developer-with-aws-react/",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]",
+          "[React]"
+        ],
+        "source": "cognizant careers",
+        "description": "Experience: Minimum 6+ years in Java Development\n\nMust have Skills: Java, SpringBoot, AWS and React\n\nJob Summary\n\nLead Developer role in a global organization responsible for designing building and enhancing secure scalable applications using React Js, AWS and Java. The role focuses on delivering high quality solutions in a hybrid work model day shift environment supporting asset and wealth management platforms while driving technical excellence and measurable business...",
+        "scrapedAt": "2026-11-25 03:06:36",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-bWpFOGtFSUIyUWFLYUhNMUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVnBqVkRZMU1uSTBSa3B0TFVkWlQyRndRakpLZFVWdk1VeEpXRnAzVWtoeFFqTkVSVzQwYTFaaVdVeEhTbTVRUmt4NFRsRmxlR2xITTFwVFprNWFNek5PY210UU5HZGpTVlY2ZFVkRlEzaE1hblJsWDB4RFZqUkhaMEo2TlhrdFZYRnNUWGRwWDBKVGIwNUtUMnhUVlMxaExXbHdRVlI2UWs1TlpVOWpXR1JXYzA5cWJtSVNGM05HUVVkaE5IcG1USFp4ZURWT2IxQXpUamROYlVFNEdpSkJTRTR3UlRkSVJXNWFPVTlZV1RBeVFtNWtaWFZpVlZCSWRURmxVMlp2VjA5bjo3YjkxNzQzNg",
+        "profileId": "java-backend",
+        "title": "Senior Software Engineer (Java Full Stack Developer)",
+        "company": "Caterpillar",
+        "location": "Chennai, Tamil Nadu, India",
+        "url": "https://careers.caterpillar.com/en/jobs/r0000391829/senior-software-engineer-java-full-stack-developer/",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]",
+          "[Hibernate/JPA]",
+          "[Microservices]",
+          "[REST APIs]",
+          "[Docker]"
+        ],
+        "source": "caterpillar careers",
+        "description": "Career Area:\nTechnology, Digital and Data\n\nJob Description:\n\nYour Work Shapes the World at Caterpillar Inc.\n\nWhen you join Caterpillar, you're joining a global team who cares not just about the work we do – but also about each other. We are the makers, problem solvers, and future world builders who are creating stronger, more sustainable communities. We don't just talk about progress and innovation here – we make it happen, with our customers, where we work and live. Together, we are building a...",
+        "scrapedAt": "2026-11-25 03:06:36",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-NzNsOTlGTm5lY2V0SnhOa0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbmwzTVZkRWFEVjVXRVkxTmxSdmJFRTRaa0YxU201aU1FcFhZa2RmT0ZWU1FreHdYemRLVkZReU5FaFpPV1pVYVZsck9VZHNSMjVxWTBaRFlUbHVOMHB6VVZoUmNYcDZjVWw0WTFveVlXMUVNakZOVVVFNVlYVldORVIyVVVSMFlrNUhjVUpaUVcxeFpIYzRSbk42T1RKbmVXWk9WakZSVUZkNU9XTXlOVXRDTm1VMWFXRVNGM014UVVkaExWOUtSVXQ2YWpGbE9GQmZOVXh0TWxGSkdpSkJTRTR3UlRkSGEyRlZXbEZIUTJrdGNFZzRNVVpaWjIwM04yVldka3hYU2pWUjozZTJlZjk4ZA",
+        "profileId": "java-backend",
+        "title": "JAVA Fullstack Developer(JAVA, springboot, microservices, Reactjs)",
+        "company": "UST",
+        "location": "Bengaluru, Karnataka, India",
+        "url": "https://in.linkedin.com/jobs/view/java-fullstack-developer-java-springboot-microservices-reactjs-at-ust-4483427907",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]",
+          "[Hibernate/JPA]",
+          "[Microservices]",
+          "[React]"
+        ],
+        "source": "linkedin",
+        "description": "Role Description\n\nJava Full-Stack Developer — 5+ Years of Experience\n\n• Strong proficiency in Core Java, including Java 17 and Java 21 features.\n• Strong experience with React.js.\n• Strong experience with Spring Framework, Spring Boot, and JPA.\n• Strong understanding of microservices architecture.\n• Working knowledge of SonarQube, Jenkins, JFrog, and Maven.\n\nSkills\n\nJAVA, Springboot, Microservices, Reactjs",
+        "scrapedAt": "2026-11-25 03:06:36",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-TDFSOFpETEgyTVhkdU44VUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZa3RNWjJkUWMwZ3dZME4xVkhOQ01XNTVUWFZKTmxGTVdWOXhjRTlwVnprdFRERktkMDVKUm1JMk1YbEhRblEyYUZSM1NHbEZSalF5TFZReFpFMUdRbXhVTVVVMmRrTm1XbHBuTFRWcFIwZEpWeTFOYUhGb2FXNXBkSE5aYzBaMmEzaDFhazF6VVUwemNXaHNlRGhKYmtOQ1NqWXlTekZhVmpScExUVjRaVWRoTmt0WVltSVNGM014UVVkaExWOUtSVXQ2YWpGbE9GQmZOVXh0TWxGSkdpSkJTRTR3UlRkRmNWVjJaMWN5TVhCRGJHbEpaVmt5Y1VVeVNHeG9NVnBqUjJ0QjpjNjMyOTZhMg",
+        "profileId": "java-backend",
+        "title": "IN_ Senior Associate_ Java Springboot+React.js +ReactNative Developer_AppTech_Advisory_ MUMBAI only (Immediate joiners)",
+        "company": "PwC India",
+        "location": "India",
+        "url": "https://in.linkedin.com/jobs/view/in-senior-associate-java-springboot%2Breact-js-%2Breactnative-developer-apptech-advisory-mumbai-only-immediate-joiners-at-pwc-india-4492673543",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]",
+          "[Microservices]",
+          "[REST APIs]",
+          "[Docker]",
+          "[React]"
+        ],
+        "source": "linkedin",
+        "description": "Job Description & Summary: A career within Technology Consulting services will provide you with the opportunity to bring our clients a competitive advantage through defining their technology objectives, assessing solution options, and devising architectural solutions that help them achieve both strategic goals and meet operational requirements. We help build software and design data platforms, manage large volumes of client data, develop compliance procedures for data management, and...",
+        "scrapedAt": "2026-11-25 03:06:36",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-c0dDRUpEU2VzejhkSmNrSEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXalkyZEVwTGVHVnNlWE5pTTBaRVNITlVTa3g1TTFGR2QxUndaRFpLWVRkaVZWSnhSM2c0WjJKVWJEbHNORzVLT1dSVVEwTXRibXQ1TkVWRFdXNWZSRlIyZUZGVE1XaGtjRGhPV0c5d1RGQm1XbTlwWTFSMFYwWk5ObEEwTjFKRVlqUktia1EyWmtzNU1WUkhOa2RvU2taVlRWOVJjRmRYYkdaVFJHNHhjRzFhWkVGUFkwUVNGM014UVVkaExWOUtSVXQ2YWpGbE9GQmZOVXh0TWxGSkdpSkJTRTR3UlRkSFdtbzBjVzk1VFdGTE9XUnpMVVYxWmpab1JHVTVjMHhEZGxGQjowMWI0ZjcxYQ",
+        "profileId": "java-backend",
+        "title": "Software Developer Jr. - Java Angular Java Springboot",
+        "company": "Sails Software",
+        "location": "Vijayawada, Andhra Pradesh, India",
+        "url": "https://www.shine.com/jobs/software-developer-jr-java-angular-java-springboot/sails-software/20117648",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]",
+          "[Hibernate/JPA]",
+          "[REST APIs]",
+          "[PostgreSQL]"
+        ],
+        "source": "shine",
+        "description": "Software Developer Jr. - Java Angular Java Springboot\n\nCompany: Sails Software\nJob Location: Visakhapatnam, Andhra Pradesh, India\nEmployment Type: Internship\n\nCompany Name: Sails Software Inc\n\nJob Title: Software Developer Jr.\n\nJava Angular Java Springboot\n\nJob Description\n\nSails Software Inc. is seeking a motivated and skilled Software Developer Jr. to join our dynamic development team. The ideal candidate will be proficient in Java, Angular, and Spring Boot, and will contribute to the design...",
+        "scrapedAt": "2026-11-25 03:06:36",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-SXR5OXQwTC1QRE1DRmtBeEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXa0V3WHkweVJrbE9VRW94VlVsdlNuaHlaa1oxVDA5YWRsaGhSREJOT0VVd0xVeDRiVzVyT0RacmVtWTJUemxSUVc1TlFVNVZWVFpFYkdWNk9XSmxSRGxtUVZSQ01rWlhYelpCUTI0MWIwbElTa0pPYWxCU2EyZERXa3N3Y1dvd2RXdFBSRlZxZG5WM2QyOXpUWGwxU1ZWRlJWbFVYMjVvVkZRMldVdHpaMUJEVHpOd1MxY1NGM014UVVkaExWOUtSVXQ2YWpGbE9GQmZOVXh0TWxGSkdpSkJTRTR3UlRkSFlYZHhiVWxWZUcxUFZXdFhSbGhWTXkxbWJGbHJjSE40VEdOUjpjMGRjMDEzNA",
+        "profileId": "java-backend",
+        "title": "Java Spring Boot Backend Engineer",
+        "company": "CareerNet Technologies Pvt Ltd",
+        "location": "Chennai, Tamil Nadu, India",
+        "url": "https://www.iitjobs.com/job/java-spring-boot-backend-engineer-chennai-tamil-nadu-india-663048",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]",
+          "[Hibernate/JPA]",
+          "[Microservices]",
+          "[REST APIs]",
+          "[Docker]",
+          "[Spring Security / JWT]",
+          "[React]"
+        ],
+        "source": "iitjobs",
+        "description": "Design, build, and maintain scalable backend services and microservices architecture.\n\nThis role is on-site.\n\nResponsibilities\n\n• Design and develop RESTful APIs to integrate with frontend systems.\n\n• Implement microservices using Spring Cloud for scalability and flexibility.\n\n• Manage data persistence using JPA, Spring Data JPA, and RDBMS.\n\n• Write unit and integration tests using JUnit and Mockito to ensure code quality.\n\n• Deploy and manage applications using Docker, Kubernetes, and CI/CD...",
+        "scrapedAt": "2026-11-25 03:06:36",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-a2VlcVhsM0FDeDJFXzVDMUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZakYyT0ZscFFtaHBUVlZhWmkxcVNGWlZjME0xTmxKWlJUaHljakZQUWtkUFYwSlFRM0poVkdWMWVGWnlPRkI0U0c1dVoyNHhka1pXZDIwNWREQnhRV1oyUmxsamJXWkNhelpuUlhWMVl6Tm5WRmhHYmpkMVIyc3pUWHBzYldSdllWSkhTV0ZUUVVGWGQydEtTRnBuU1ZBNGVHdG9hRlJsYm01UFFUaFFVMlZzTVRObWVFZ1NGM014UVVkaExWOUtSVXQ2YWpGbE9GQmZOVXh0TWxGSkdpSkJTRTR3UlRkSFFXWjJhbDlLTVdzeFdEUlZVemhEYkhnNWR5MXJURmxJTFdWQjpiNDA1YzI3OQ",
+        "profileId": "java-backend",
+        "title": "Java Spring Boot Developer 5 -9 yrs (Pune)",
+        "company": "Infosys",
+        "location": "Pune, Maharashtra, India",
+        "url": "https://www.shine.com/jobs/java-spring-boot-developer-5-9-yrs-pune/infosys/20101239?jobtype=cr&position_in_results=10",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]",
+          "[Hibernate/JPA]",
+          "[Microservices]",
+          "[REST APIs]",
+          "[Oracle SQL]",
+          "[PostgreSQL]",
+          "[Docker]",
+          "[Spring Security / JWT]",
+          "[React]"
+        ],
+        "source": "shine",
+        "description": "Java Spring Boot Developer 5 -9 yrs (Pune)\n\nCompany: Infosys\nJob Location: Pune, Maharashtra, India\nEmployment Type: Full-time\nExperience Required: 5 - 9 years\n\nJob highlights\n\n6-8 years Java development with 4.5+ years Spring Boot, expertise in Microservices, Kafka, REST APIs, and cloud platforms\nDesign, develop, and maintain scalable enterprise applications using Java Spring Boot and Microservices; implement event-driven architecture; build APIs; optimize performance; support CI/CD and cloud...",
+        "scrapedAt": "2026-11-25 03:06:36",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-MDM1d2hiQTVKOTg2cXhhX0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbXB5V2xZdFNWRlpRbWw2TmxOdldtMXRRalJTUkVSUmNYWTBObXRWY0RKcFVIQkNRVVUyY1c1ZldGbFhXbWh4ZUhGNFZHZ3lhSGRPY1V4blNrOWhTVXN4VlVGU1FYZHZiWEUyZG5CcFdESlFMUzB3TTJsdlZYcHplRXhuWDJaWlEwUnZiRGxZYVRGRmFVOXVRbUpUTlMweFExQlJPRFoxZEU4NExXSTNkVVZNVkVacGFqZ1NGM014UVVkaExWOUtSVXQ2YWpGbE9GQmZOVXh0TWxGSkdpSkJTRTR3UlRkRlIwUTRNREZtY1hJM2JEYzNieTA1ZEhOS1ZrZzBORUZpY2tWMzphYjA3MjYxNA",
+        "profileId": "java-backend",
+        "title": "Senior Technical Architect - Spring Boot",
+        "company": "HCLTech",
+        "location": "India",
+        "url": "https://www.glassdoor.co.in/job-listing/jv?jl=1010323151586",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]",
+          "[Microservices]",
+          "[REST APIs]",
+          "[Docker]",
+          "[Python / Shell]"
+        ],
+        "source": "glassdoor",
+        "description": "Job Summary\n\nThe Senior Technical Architect is a critical role responsible for designing and implementing complex technical solutions using Spring Boot, Java, and Python. This position ensures that our architectural frameworks align with business objectives and industry best practices, driving innovation and excellence within the organization. The Senior Technical Architect plays a key role in leading technical teams, fostering collaboration, and influencing strategic decision-making to meet...",
+        "scrapedAt": "2026-11-25 03:06:36",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-WTNKaWlzb1BfVjU3bHlsY0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZWGxwTUVjdFdYWnJlUzFXY2xGWlREaE9ZVkpaVW1neVprTTVTa3d0V214MFgyaHhWM2t3ZUdVM05VNVpZV2M0V25kRVJTMVdRWGd5VkV0YVNqazNWMmg1Y2pBNVExSlVkVWRaV1hGd05IUmtUVEJ1WldvelpIcHdURGhqVTI5dUxVdDNXVkpWVmtSSlpXUjFYMUV5VFVKUFpEVkxXbTlLVkVreVlXczFUVk4yU21kMFZuVVNGM014UVVkaExWOUtSVXQ2YWpGbE9GQmZOVXh0TWxGSkdpSkJTRTR3UlRkRmEwSldRMWh1T0haTVlWQndUMjR6YXpCWFpXMTNRVGR5Y1d0bjo3MTRjYWMyMg",
+        "profileId": "java-backend",
+        "title": "Software Engineer III Java Springboot AWS",
+        "company": "JPMC Candidate Experience page",
+        "location": "Bengaluru, Karnataka, India",
+        "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210800940",
+        "tags": [
+          "[Spring Boot]",
+          "[Java]"
+        ],
+        "source": "jpmorgan chase",
+        "description": "We have an exciting and rewarding opportunity for you to take your software engineering career to the next level.\n\nAs a Software Engineer III at JPMorganChase within the Consumer & Community Banking, you serve as a seasoned member of an agile team to design and deliver trusted market-leading technology products in a secure, stable, and scalable way. You are responsible for carrying out critical technology solutions across multiple technical areas within various business functions in support of...",
+        "scrapedAt": "2026-11-25 03:06:36",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-7aea2d41",
+        "profileId": "java-backend",
+        "title": "DevOps Engineer (Observability)",
+        "company": "Twilio",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/twilio-devops-engineer-observability",
+        "tags": [
+          "[Java]",
+          "[Microservices]",
+          "[Python / Shell]"
+        ],
+        "source": "weworkremotely",
+        "description": "Headquarters: Remote - Ireland\n\nWho we are\n\nAt Twilio, we’re shaping the future of communications, all from the comfort of our homes. We deliver innovative solutions to hundreds of thousands of businesses and empower millions of developers worldwide to craft personalized customer experiences.\n\nOur dedication to remote-first work , and strong culture of connection and global inclusion means that no matter your location, you’re part of a vibrant team with diverse experiences making a global...",
+        "scrapedAt": "2026-11-25 03:06:36",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-3a758506",
+        "profileId": "java-backend",
+        "title": "Adjunct Instructor- Artificial Intelligence- CTU Online",
+        "company": "Perdoceo Education Corporation",
+        "location": "Remote Worldwide",
+        "url": "https://weworkremotely.com/remote-jobs/perdoceo-education-corporation-adjunct-instructor-artificial-intelligence-ctu-online",
+        "tags": [
+          "[Java Developer]"
+        ],
+        "source": "weworkremotely",
+        "description": "Headquarters: United States\n\nURL: https://myjobs.adp.com/pec/cx/job-listing\n\nPosition Description\n\nConsistent with and supportive of CTU's mission (to provide industry-relevant higher education to a diverse student population through innovative technology and experienced faculty, enabling the pursuit of personal and professional goals), Adjunct Faculty members provide quality and innovative instruction and meaningful engagement with our students to successfully achieve the relevant course...",
+        "scrapedAt": "2026-11-25 03:06:36",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
+        "id": "job-43723cac",
+        "profileId": "java-backend",
+        "title": "Senior Java Developer",
+        "company": "Tech Company",
+        "location": "Remote Worldwide",
+        "url": "https://himalayas.app/companies/microsourcing/jobs/senior-java-developer",
+        "tags": [
+          "[Java]"
+        ],
+        "source": "himalayas",
+        "description": "Discover your 100% YOU with MicroSourcing! Position: Senior Java Developer Location: Philippines Work setup & shift: Remote | Night Shift Why join MicroSourcing?",
+        "scrapedAt": "2026-11-25 03:06:36",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": false
+      },
+      {
         "id": "jsearch-VkRXa2U2ZXB0cktVRG9fZ0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbkJtTkVKVE9GZFlTbU16YjFGS2VqSlFiMlJ0UVRjeVZHVnlTVlIzWVhRNFYwSjNXVlpFYlhWMkxWRndObWcyZHpWSExXcGFSMVJaYW1jMWJEZFVkbmRxY0RkVFMyOWZTRjlVZW5CSlRXOTJPR3AzV1RCaGVVWm9YM2RVYkhoVmFHNWtaRW8xZWtjMmR6Qk5abTA1T1Uxb1FVOTBhMWhYUlVObGMyeGlRMVZOVVRkWk1qRVNGMDUyT0VWaE5WZFpSVFJYZW0xMGExQTFUak5GTmxGTkdpSkJTRTR3UlRkSU1rOUVXa2hhT0hWdVlWOTRVR0ZFZVhWUGNXeDJXazVYYTIxUjoyMzhmM2NkZA",
         "profileId": "java-backend",
         "title": "Software Engineer - Java Full Stack Developer_106233",
@@ -4497,10 +5033,10 @@
           "[Python / Shell]"
         ],
         "source": "linkedin",
-        "description": "Key Skills: Angular, Core Java, Python, Fullstack Java, React, Java, Javascript, SQL, HTML, Spring Boot, GIT, CSS, Typescript\n\nRoles and Responsibilities:\n• Develop and maintain responsive web application features using Angular or React.\n• Build and support application components that integrate frontend experiences with backend services.\n• Use Python for basic scripting and application support tasks.\n• Investigate and resolve defects across application layers and contribute to code reviews.\n•...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:45",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -4515,10 +5051,10 @@
           "[Java]"
         ],
         "source": "shine",
-        "description": "What This Job Is\nSuccess as a Java Developer in this role means delivering high-quality software solutions that meet user needs and system requirements while contributing to team collaboration and project goals.\n\nWhat You Will Own\n- Design, develop, and maintain Java applications with an emphasis on performance, scalability, and robustness.\n- Work closely with product managers and technical teams to articulate software specifications and requirements.\n- Write clean, efficient code that adheres...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:45",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -4536,10 +5072,10 @@
           "[Docker]"
         ],
         "source": "linkedin",
-        "description": "Job Role: Senior Software Engineer Java / Golang\n\nExperience: 5 7 Years\n\nLocation: Pune, India\n\nJob Overview\n\nWe are looking for a skilled Senior Software Engineer with strong backend development experience in Golang or Java. The ideal candidate should have hands-on experience in REST APIs, microservices, cloud platforms, databases, and automated testing. Java developers must be willing to learn and work full-time on Golang.\n\nKey Responsibilities\n\n• Design, develop, and maintain scalable...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:45",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -4555,10 +5091,10 @@
           "[Python / Shell]"
         ],
         "source": "weworkremotely",
-        "description": "Headquarters: Remote\n\nAlloy is where you belong!\n\nAlloy is the AI-powered identity and fraud prevention platform that accelerates onboarding, stops fraud, and scales compliance across the customer lifecycle so financial organizations can grow without limits. More than 900 of the world's leading financial institutions and fintechs trust Alloy for smarter risk management that drives growth.\n\nThrough our values: Be Bold, Go Fast, Collaborate, and Celebrate Our Differences, we are creating a...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:45",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -4573,10 +5109,10 @@
           "[Java]"
         ],
         "source": "himalayas",
-        "description": "Als IT-Dienstleister treiben wir die Digitalisierung des öffentlichen Sektors voran und schaffen echten Mehrwert für Millionen Menschen in Deutschland.",
+        "description": "",
         "scrapedAt": "2026-11-24 03:06:45",
         "dateGroup": "2026-11-24",
-        "dateLabel": "Today's Batch",
+        "dateLabel": "Yesterday",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -4600,7 +5136,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:30",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -4621,7 +5157,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:30",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -4645,7 +5181,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:30",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -4666,7 +5202,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:30",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -4688,7 +5224,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:30",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "domestic",
         "isTargetCompany": true
       },
@@ -4707,7 +5243,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:30",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -4725,7 +5261,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:30",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -4743,7 +5279,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:30",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -4767,7 +5303,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:30",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -4788,7 +5324,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:30",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -4808,7 +5344,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:30",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -4828,7 +5364,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:30",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -4848,7 +5384,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:30",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -6643,6 +7179,183 @@
     ],
     "plsql-developer": [
       {
+        "id": "jsearch-YW5IaWdRYVZ0SlNudHRDbUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbWx1VTJSMmNFWTRRakl3TjNCa1dXOU5YMUF4VFVObVFrbG5hVjgwVGxKbGRtbFVWVEJKTm5aUFltZzRZblpRUzNsb1VrTkpSR2QwVkRSNWNEUjJSaTFuVjJkT1RFbEVTekp5YWpGaE5ETnpaVmROY0dveVFWZzFkMWs0UjNacVVVSllZemxSUWpSSlZURldVamxSYzA4d1JFdFlja1JLV0RCVVptMXdRV0ZVYkdOeFlsQVNGM1l4UVVkaE9EWm5SM05EZVRWUFZWQXRPVWhRTkZGSkdpSkJTRTR3UlRkR1kycFdjMFZKUkROck4ycExiRXhPVlUxUFkxVnRTRlJrZFY5Mzo5YmQ3Y2UxYQ",
+        "profileId": "plsql-developer",
+        "title": "PL/SQL Developer",
+        "company": "Logic Planet Inc",
+        "location": "Kolkata, West Bengal, India",
+        "url": "https://www.iitjobs.com/job/plsql-developer-kolkata-west-bengal-india-664677",
+        "tags": [
+          "[PL/SQL]"
+        ],
+        "source": "iitjobs",
+        "description": "You will own database development and administration tasks within a PL/SQL environment.\nResponsibilities\n• Analyze and develop stored procedures.\n• Write and maintain database scripts.\n• Manage deployments and database administration tasks.\n• Provide technical support during SIT and UAT phases.\nRequired Skills\n• 4-6 years of experience in PL/SQL development.\n• Strong proficiency in PL/SQL and PL/SQL developer tools.\n• Experience with database administration.\n• Proven ability in writing and...",
+        "scrapedAt": "2026-11-25 03:06:50",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-bnZrZWpfRW1ndVBvLXlHaEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXWGRUVFhZMFVEbFZNRVJ5YUhGQmNqWjFXbk16Tm5kRldGTkZibFI1VDNreFgySnlaek5KUkVSNVZrTkNXbmxoTURCR1RIWjZSMlV5WDIxaU9VVkZTRmhGVDBKeVJWOWZlR3BKVkhObWFXeFlURGRhYlVZM1IxWmpTRWMwZVMxNk5WcFhRbWxpWVVZdE5USlFZbmRLU0VNMmJIaHRTemQxVHpkS1lWZFpUbU14Y2xSNmJEUVNGM1l4UVVkaE9EWm5SM05EZVRWUFZWQXRPVWhRTkZGSkdpSkJTRTR3UlRkSWMyVTNNazVtWjFsdFNWaFZVWGh6TFhKcVUxVlRhSHB4Y0VWMzo4YjI3N2I4Nw",
+        "profileId": "plsql-developer",
+        "title": "Avaloq Software Developer - PLSQL / Oracle/Reporting",
+        "company": "Avaloq",
+        "location": "Mumbai, Maharashtra, India",
+        "url": "https://www.shine.com/jobs/avaloq-software-developer-plsql-oracle-reporting/avaloq/20122980?jobtype=cr&position_in_results=80",
+        "tags": [
+          "[PL/SQL]",
+          "[Oracle SQL]",
+          "[Java]"
+        ],
+        "source": "shine",
+        "description": "Avaloq Software Developer - PLSQL / Oracle/Reporting\n\nCompany: Avaloq\nJob Location: Arvi, Maharashtra, India\nEmployment Type: Full-time\n\nThis job is with Avaloq, an inclusive employer and a member of myGwork the largest global platform for the LGBTQ+ business community. Please do not contact the recruiter directly.\n\nCompany Description\n\nFounded and headquartered in Switzerland, Avaloq is continuously expanding its global footprint with around 2,500 colleagues in 12 countries, and more than 170...",
+        "scrapedAt": "2026-11-25 03:06:50",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-NEh6WFEwZmRQd1p5TndOeEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbVZaY2tGSGEwWlZUVEJJU0VoWVltdHRaRzl5TTJ4WmEwVjVZak5zVWpObWJVRnNabFpsWkZGVWJFSk5TakJ6WWxkbE5GcHNkM0YwUXpkdE1URnBjamRZTkhwcWFtSkRhSFJUUVVkRVYxVktjazFqUm5WVGQyUmZTa3RaYWtkbmRUWnVWSFJCVnpSVWRUQldjR2RLV0VSTVVWUmlWRkJYVWtReWEzSlBhakZ5VGw5SGJrTVNGM1l4UVVkaE9EWm5SM05EZVRWUFZWQXRPVWhRTkZGSkdpSkJTRTR3UlRkSVJURlJUa2RRVTNveGFrNW9VblpCYkc5emFWSnZPV1o1YnpoMzozMjVhMTc2NQ",
+        "profileId": "plsql-developer",
+        "title": "Oracle Plsql Developer Ssiss, Etl, Linux Pune (India)",
+        "company": "Impact Infotech",
+        "location": "India",
+        "url": "https://www.kitjob.in/job/355614488/oracle-plsql-developer-ssiss-etl-linux-pune-india",
+        "tags": [
+          "[PL/SQL]",
+          "[Oracle SQL]"
+        ],
+        "source": "kit job",
+        "description": "Purpose of the Role\nThis position of Oracle PLSQL Developer is crucial to the data management and processing functions within our organization. The role is accountable for developing, testing, and maintaining robust database solutions that support our banking applications, aligning with our commitment to excellence in the banking and financial services sector.\n\nScope of Work\nDevelop and implement PLSQL procedures, functions, and packages tailored for banking applications.\nCollaborate with data...",
+        "scrapedAt": "2026-11-25 03:06:50",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-a1BBR0EtcHZkeS1yNFRsMEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXV3cyZVdsdk1IQnJVM0ZFT1dZeFpUbExXRGR6ZW00eU5sZFhhV3M0ZEhBMFp6ZGZlVmc1WlhoVlRFaHZMVzFzYVdvMFluWlRRVFpQV25waFVVVm5hRFIzY0Y4MVFtNTVUMDFrUzAxVlNGVldXUzF6VTFVM1NWb3dZMUJDT0doWWNscEVaa3hMTTB0TFFsOUlhRVpRVkVWUWQyOWFjblZ1WW10WmRUWkxVbDh4ZUZWSFVXWVNGM1l4UVVkaE9EWm5SM05EZVRWUFZWQXRPVWhRTkZGSkdpSkJTRTR3UlRkRlRUVjRTekp2Y3pRd1oyOVBOVzg0ZW1wMWNXVjFRMDk2TlhKbjpmYTJhOGRhMw",
+        "profileId": "plsql-developer",
+        "title": "PLSQL Developer with .NET C",
+        "company": "Teksills India Private Limited",
+        "location": "New Delhi, Delhi, India",
+        "url": "https://jobs.hudsonsignals.com/jobs/bf211c59-9b5e-479f-b31f-646a443b60f2",
+        "tags": [
+          "[PL/SQL]",
+          "[Oracle SQL]"
+        ],
+        "source": "hudson signals",
+        "description": "## PLSQL Developer with .NET C\n\nThis role involves developing and maintaining robust and scalable database applications using PL/SQL and .NET technologies. The successful candidate will be responsible for designing, coding, testing, and deploying high-quality solutions within a dynamic and collaborative environment.\n• *Key Responsibilities:**\n• Develop and maintain PL/SQL stored procedures, functions, and packages.\n• Design and implement database schemas and data models.\n• Write efficient and...",
+        "scrapedAt": "2026-11-25 03:06:50",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-dS1QRHJBYTB2cDR3MURnc0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbGN3TkdsalUzaHRPSFI2T1U1dVZVZGZTek5PVkVKRWVFTjBRbU01ZUV4WGNIbHNTVFJRVjIxT1ZtSmhOazFSVUVOU2JUTjNVV2wzT1hjMExXSnRha05wY0VzdFh6aGhTbnB5UjNGd00zQXlVa2hhTFd0WGNuWk5WM2M1UXpVNVJqUldkakYxWVc5S1NFNUJNMjUzYUVKTmJFUmlVRTFRUmxGWWQySjZWQzAyV1RsbE5XZ1NGM2RzUVVkaE4yNURRazU2UW5KMVJWQm9ZVkJzT0ZGWkdpSkJTRTR3UlRkSWFYQlRZMGRsV2tadlpsVldPVlJmV0VsQ2RXbzBORVV0UlZwbjo2OTQxYzBmNA",
+        "profileId": "plsql-developer",
+        "title": "Sr Oracle PL/SQL Developer",
+        "company": "TeamPlus",
+        "location": "Bengaluru, Karnataka, India",
+        "url": "https://www.teamplusindia.in/job/teamplus-work-from-home-night-shift-bengaluru-candidate-should-be-in-bangalore-mandatory-sr-oracle-pl-sql-developer/",
+        "tags": [
+          "[PL/SQL]",
+          "[Oracle SQL]",
+          "[CI/CD & Git]"
+        ],
+        "source": "teamplus staffing solution",
+        "description": "4+ years of hands-on experience in Oracle PL/SQL Development.\n\nStrong expertise in Oracle SQL and PL/SQL programming.\n\nExperience with packages, procedures, functions, triggers, cursors,\n\ncollections, and exception handling.\n\nStrong knowledge of query optimization and performance tuning.\n\nExperience with Oracle database design and data modeling concepts.\n\nFamiliarity with indexing, execution plans, and database performance\n\nanalysis.\n\nExperience with version control tools such as Git is...",
+        "scrapedAt": "2026-11-25 03:06:50",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-dllrNEJ3QTlxOTc3NTkzVUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZamxyT1RoTlpqbGpPRGR1UkZkcVpWUk5SemxMTVdWaVNWbGZkakpyVkVKdWJFVm5jeTFxTWxsNGJ6UkVMVTV3VHkxQ2F6aG5kVTlZU0dGR1JESjNRa2Q0WkdreFVrMWZRblZLZERSRGJYaHpNR2Q2YzFCcmVFaHhVRkV0WTNoWGJUaEpWVGt3ZDJZMWJuVjRSMHgyU1ZrNFJrZGZURU5EY1ZObmVUQlVTbEZyWDFSU1QzQVNGM2RzUVVkaE4yNURRazU2UW5KMVJWQm9ZVkJzT0ZGWkdpSkJTRTR3UlRkSFpYZHdiMUl6UW5sQ2IyeFpkVk5XTWpKVFpuUm1SSFZrZVhSUjowNGU0YzA3OQ",
+        "profileId": "plsql-developer",
+        "title": "Senior Software Engineer C++, Oracle PL/SQL & Kubernetes",
+        "company": "Persistent Systems",
+        "location": "Pune, Maharashtra, India",
+        "url": "https://www.shine.com/jobs/senior-software-engineer-c-oracle-pl-sql-kubernetes/persistent-systems/20125360?jobtype=cr&position_in_results=4",
+        "tags": [
+          "[PL/SQL]",
+          "[Oracle SQL]",
+          "[CI/CD & Git]"
+        ],
+        "source": "shine",
+        "description": "Senior Software Engineer C++, Oracle PL/SQL & Kubernetes\n\nCompany: Persistent Systems\nJob Location: Pune, Maharashtra, India\nEmployment Type: Full-time\nExperience Required: 5 - 7 years\nSalary: 15L24L a year\n\nAbout Persistent Systems\n\nPersistent Systems is hiring a Senior Software Engineer C++ in Pune (open across all Persistent locations) to design, build and maintain high-performance enterprise backend applications. You will work across C++, Oracle PL/SQL and Pro*C, Docker and Kubernetes...",
+        "scrapedAt": "2026-11-25 03:06:50",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "jsearch-TkJKNUF2aUpuZG9XcF9tcUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZa3BwYVdkU2FubzJSakYxVFhoQmVXcE9OMnczVG0xRUxXWTJVMHhyUTNkcmFIbGpaVXgyT1c1VWMzaEJVMkZ4V1RSa1IzVkNkVlpCY20xVGRUbHFiMWxvZEZOM05tVmxSM0ExUzFCcFRWWlRjVGs0Wkc4dFgyOUVaRzlqVkRnNFptbEVUblF5ZVRKVmFrVm9jMGhYTjBwbVdWQnpNWHBXVWpsNmNHOXRjbHA2V1ZGSlUyTVNGM2RzUVVkaE4yNURRazU2UW5KMVJWQm9ZVkJzT0ZGWkdpSkJTRTR3UlRkRk0xUlpSRWR4ZW1aYVN6WlFVMjFEZEhwVlNWRldTbE5uWVZGbjozNjBhYzM3NA",
+        "profileId": "plsql-developer",
+        "title": "Oracle/PLSQL (India)",
+        "company": "Wipro",
+        "location": "India",
+        "url": "https://in.jobrapido.com/jobpreview/8261155705558401024",
+        "tags": [
+          "[PL/SQL]",
+          "[Oracle SQL]",
+          "[CI/CD & Git]"
+        ],
+        "source": "jobrapido.com",
+        "description": "Job Title: Oracle/PLSQL\n\nCity: Mumbai\n\nState/Province: Maharashtra\n\nPosting Start Date: 11/18/26\n\nWipro Limited (NYSE: WIT, BSE: 507685, NSE: WIPRO) is a leading technology services and consulting company focused on building innovative solutions that address clients' most complex digital transformation needs. Leveraging our holistic portfolio of capabilities in consulting, design, engineering, and operations, we help clients realize their boldest ambitions and build future-ready, sustainable...",
+        "scrapedAt": "2026-11-25 03:06:50",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": true
+      },
+      {
+        "id": "jsearch-SERsNjdhQlVhaklWQy1jUUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXWE14WmpoMk1IZzFSRUV0UzB4M2VEazVTR2c1U0ZSR2FISkxVa0pWWm5jNVpuTlVlR3BJU1VOUlZTMVZMVnBzWDFGSGNtRjJSMDlZVlhodWFITkVSblpTU2swMGEwa3RUMEZ4YjIxWmJVMUxValF3WlVReFZWVTJjblpHWjNGaE9GWXhUekp2VEdveGFHZGZWMVJKYTNjd1JrOTBjMkU0ZFZFNWRFbGxUV2RPZW5aUU1Ib1NGM2RzUVVkaE4yNURRazU2UW5KMVJWQm9ZVkJzT0ZGWkdpSkJTRTR3UlRkSGFVcHRSVWs1UldOdVZVMDNWelYwYW00eWJVZzBhVE5vUlhKMzo5MTRmZTgxNg",
+        "profileId": "plsql-developer",
+        "title": "Associate/Senior Associate, PL/SQL Developer, Wealth Management Technology",
+        "company": "DBS Bank",
+        "location": "India",
+        "url": "https://www.shine.com/jobs/associate-senior-associate-pl-sql-developer-wealth-management-technology/dbs-bank/20019262?jobtype=cr&position_in_results=52",
+        "tags": [
+          "[PL/SQL]",
+          "[Oracle SQL]",
+          "[Java]",
+          "[CI/CD & Git]"
+        ],
+        "source": "shine",
+        "description": "Associate/Senior Associate, PL/SQL Developer, Wealth Management Technology\n\nCompany: DBS Bank\nJob Location: India\nEmployment Type: Full-time\nExperience Required: 3 - 7 years\n\nBusiness Function\n\nGroup Technology and Operations (T&O) enables and empowers the bank with an efficient, nimble and resilient infrastructure through a strategic focus on productivity, quality & control, technology, people capability and innovation. In Group T&O, we manage the majority of the Bank's operational processes...",
+        "scrapedAt": "2026-11-25 03:06:50",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "domestic",
+        "isTargetCompany": false
+      },
+      {
+        "id": "gh-stripe-8401662",
+        "profileId": "plsql-developer",
+        "title": "Accounting Analyst",
+        "company": "Stripe",
+        "location": "Bengaluru",
+        "url": "https://stripe.com/jobs/search?gh_jid=8401662",
+        "tags": [
+          "[Oracle SQL]",
+          "[Power BI]",
+          "[Python]"
+        ],
+        "source": "stripe careers",
+        "description": "Who we are\n\nAbout Stripe\n\nStripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the GDP of the internet, and we have a staggering amount of work ahead. That means you have an unprecedented opportunity to put the global economy within everyone’s reach while doing the most...",
+        "scrapedAt": "2026-11-25 03:06:50",
+        "dateGroup": "2026-11-25",
+        "dateLabel": "Today's Batch",
+        "tier": "remote",
+        "isTargetCompany": true
+      },
+      {
         "id": "jsearch-OFZqZ2ZSVzRrQ1c3cWI2NUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbTFZVGtOV1lraEVTWE41UXpWQmJFZEdSbTFUYm5sdmJVaFRlSGsyVFZkRU4wTTVaRGRVZDBkWVVHWXpUVFE0WjNnMmFVTllZblJFUVVkRWNWOVljVE5DYVRsWFpVWnlZVkYyTXpVNVYwbDVRVEJwZGt4UU9VaEtjbDgxVVc5b1EyWmZTV0ZVYzBsQ1FVMWZXR001YVZkbGJrb3lkMU15WVZGME5VbG1NbFJDWlhoNFV6TVNGMU5RT0VWaFgzcE9Ua2wyYVRWT2IxQnpaWEl0WjBGM0dpSkJTRTR3UlRkSVVrcFRVbTV2WWxoRWRVNUphWEV4ZVhRMlJXSmxVVXN6YzJkQjpmN2Q1YjM0ZA",
         "profileId": "plsql-developer",
         "title": "Oracle PLSQL Forms & Reports Engineer",
@@ -6656,7 +7369,7 @@
           "[CI/CD & Git]"
         ],
         "source": "linkedin",
-        "description": "About the Job\n\nAbout Azentio\n\nAzentio Software incorporated in 2020 at Singapore, has been carved out of 3i Infotech, Candela Labs, Beyontec Technologies and Path Solutions. Azentio Software provides mission critical, vertical-specific software products for customers in banking, financial services and insurance verticals and includes key products such as KASTLE™ (Universal Lending), AMLOCK™ (Anti-Money Laundering & Compliance software suite), iMal, PREMIA™ Astra (Core Insurance software)...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:07:03",
         "dateGroup": "2026-11-24",
         "dateLabel": "Today's Batch",
@@ -6677,7 +7390,7 @@
           "[CI/CD & Git]"
         ],
         "source": "shine",
-        "description": "Senior Oracle PL/SQL Developer Performance Tuning & Python Scripting\n\nCompany: ObjectWin Technology India Pvt. Ltd\nJob Location: India\nEmployment Type: Full-time\nExperience Required: 6+ years\n\nDescription\n\nWe are seeking an experienced Oracle PL/SQL Developer with over 6 years of hands-on experience in designing, developing, and optimizing database solutions. The ideal candidate will have strong expertise in performance tuning, query optimization, and Python scripting for automation and...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:07:03",
         "dateGroup": "2026-11-24",
         "dateLabel": "Today's Batch",
@@ -6698,7 +7411,7 @@
           "[CI/CD & Git]"
         ],
         "source": "shine",
-        "description": "About the Role\nAs a Senior PL/SQL Developer, you will design and implement complex database solutions using PL/SQL and Python. Your role will involve developing and optimizing stored procedures, PL/SQL packages, and functions to enhance data processing efficiency and retrieval speed. You will focus on SQL and query optimization to improve application performance and scalability.\n\nWhat You'll Do\n- Develop, maintain, and optimize PL/SQL code for Oracle databases\n- Design and implement stored...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:07:03",
         "dateGroup": "2026-11-24",
         "dateLabel": "Today's Batch",
@@ -6717,7 +7430,7 @@
           "[Oracle SQL]"
         ],
         "source": "ups jobs",
-        "description": "Before you apply to a job, select your language preference from the options available at the top right of this page.\n\nExplore your next opportunity at a Fortune Global 500 organization. Envision innovative possibilities, experience our rewarding culture, and work with talented teams that help you become better every day. We know what it takes to lead UPS into tomorrow—people with a unique combination of skill + passion. If you have the qualities and drive to lead yourself or teams, there are...",
+        "description": "",
         "scrapedAt": "2026-11-24 03:07:03",
         "dateGroup": "2026-11-24",
         "dateLabel": "Today's Batch",
@@ -6735,7 +7448,7 @@
           "[Oracle SQL]"
         ],
         "source": "himalayas",
-        "description": "ABOUT THE ROLE We are looking for a seasoned Oracle Retail Merchandising Technical Lead to spearhead technical delivery, sustaining engineering, and solution enhancements across Pricing, Invoice Matching, and Allocation modules.",
+        "description": "",
         "scrapedAt": "2026-11-24 03:07:03",
         "dateGroup": "2026-11-24",
         "dateLabel": "Today's Batch",
@@ -6753,7 +7466,7 @@
           "[PL/SQL Developer]"
         ],
         "source": "himalayas",
-        "description": "Senior SQL Developer Finance Data & Systems Migration Full-time / RemoteAbout the role We are looking for a Senior SQL Developer to be a part of PROVE Partner's parent company Allira’s team (remote).",
+        "description": "",
         "scrapedAt": "2026-11-24 03:07:03",
         "dateGroup": "2026-11-24",
         "dateLabel": "Today's Batch",
@@ -6775,7 +7488,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:55",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "remote",
         "isTargetCompany": false
       },
@@ -6794,7 +7507,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:55",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -6814,7 +7527,7 @@
         "description": "",
         "scrapedAt": "2026-11-23 03:06:55",
         "dateGroup": "2026-11-23",
-        "dateLabel": "Yesterday",
+        "dateLabel": "Nov 23, 2026",
         "tier": "domestic",
         "isTargetCompany": false
       },
@@ -7304,6 +8017,719 @@
   },
   "allJobs": [
     {
+      "id": "jsearch-YW5IaWdRYVZ0SlNudHRDbUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbWx1VTJSMmNFWTRRakl3TjNCa1dXOU5YMUF4VFVObVFrbG5hVjgwVGxKbGRtbFVWVEJKTm5aUFltZzRZblpRUzNsb1VrTkpSR2QwVkRSNWNEUjJSaTFuVjJkT1RFbEVTekp5YWpGaE5ETnpaVmROY0dveVFWZzFkMWs0UjNacVVVSllZemxSUWpSSlZURldVamxSYzA4d1JFdFlja1JLV0RCVVptMXdRV0ZVYkdOeFlsQVNGM1l4UVVkaE9EWm5SM05EZVRWUFZWQXRPVWhRTkZGSkdpSkJTRTR3UlRkR1kycFdjMFZKUkROck4ycExiRXhPVlUxUFkxVnRTRlJrZFY5Mzo5YmQ3Y2UxYQ",
+      "profileId": "plsql-developer",
+      "title": "PL/SQL Developer",
+      "company": "Logic Planet Inc",
+      "location": "Kolkata, West Bengal, India",
+      "url": "https://www.iitjobs.com/job/plsql-developer-kolkata-west-bengal-india-664677",
+      "tags": [
+        "[PL/SQL]"
+      ],
+      "source": "iitjobs",
+      "description": "You will own database development and administration tasks within a PL/SQL environment.\nResponsibilities\n• Analyze and develop stored procedures.\n• Write and maintain database scripts.\n• Manage deployments and database administration tasks.\n• Provide technical support during SIT and UAT phases.\nRequired Skills\n• 4-6 years of experience in PL/SQL development.\n• Strong proficiency in PL/SQL and PL/SQL developer tools.\n• Experience with database administration.\n• Proven ability in writing and...",
+      "scrapedAt": "2026-11-25 03:06:50",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-bnZrZWpfRW1ndVBvLXlHaEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXWGRUVFhZMFVEbFZNRVJ5YUhGQmNqWjFXbk16Tm5kRldGTkZibFI1VDNreFgySnlaek5KUkVSNVZrTkNXbmxoTURCR1RIWjZSMlV5WDIxaU9VVkZTRmhGVDBKeVJWOWZlR3BKVkhObWFXeFlURGRhYlVZM1IxWmpTRWMwZVMxNk5WcFhRbWxpWVVZdE5USlFZbmRLU0VNMmJIaHRTemQxVHpkS1lWZFpUbU14Y2xSNmJEUVNGM1l4UVVkaE9EWm5SM05EZVRWUFZWQXRPVWhRTkZGSkdpSkJTRTR3UlRkSWMyVTNNazVtWjFsdFNWaFZVWGh6TFhKcVUxVlRhSHB4Y0VWMzo4YjI3N2I4Nw",
+      "profileId": "plsql-developer",
+      "title": "Avaloq Software Developer - PLSQL / Oracle/Reporting",
+      "company": "Avaloq",
+      "location": "Mumbai, Maharashtra, India",
+      "url": "https://www.shine.com/jobs/avaloq-software-developer-plsql-oracle-reporting/avaloq/20122980?jobtype=cr&position_in_results=80",
+      "tags": [
+        "[PL/SQL]",
+        "[Oracle SQL]",
+        "[Java]"
+      ],
+      "source": "shine",
+      "description": "Avaloq Software Developer - PLSQL / Oracle/Reporting\n\nCompany: Avaloq\nJob Location: Arvi, Maharashtra, India\nEmployment Type: Full-time\n\nThis job is with Avaloq, an inclusive employer and a member of myGwork the largest global platform for the LGBTQ+ business community. Please do not contact the recruiter directly.\n\nCompany Description\n\nFounded and headquartered in Switzerland, Avaloq is continuously expanding its global footprint with around 2,500 colleagues in 12 countries, and more than 170...",
+      "scrapedAt": "2026-11-25 03:06:50",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-NEh6WFEwZmRQd1p5TndOeEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbVZaY2tGSGEwWlZUVEJJU0VoWVltdHRaRzl5TTJ4WmEwVjVZak5zVWpObWJVRnNabFpsWkZGVWJFSk5TakJ6WWxkbE5GcHNkM0YwUXpkdE1URnBjamRZTkhwcWFtSkRhSFJUUVVkRVYxVktjazFqUm5WVGQyUmZTa3RaYWtkbmRUWnVWSFJCVnpSVWRUQldjR2RLV0VSTVVWUmlWRkJYVWtReWEzSlBhakZ5VGw5SGJrTVNGM1l4UVVkaE9EWm5SM05EZVRWUFZWQXRPVWhRTkZGSkdpSkJTRTR3UlRkSVJURlJUa2RRVTNveGFrNW9VblpCYkc5emFWSnZPV1o1YnpoMzozMjVhMTc2NQ",
+      "profileId": "plsql-developer",
+      "title": "Oracle Plsql Developer Ssiss, Etl, Linux Pune (India)",
+      "company": "Impact Infotech",
+      "location": "India",
+      "url": "https://www.kitjob.in/job/355614488/oracle-plsql-developer-ssiss-etl-linux-pune-india",
+      "tags": [
+        "[PL/SQL]",
+        "[Oracle SQL]"
+      ],
+      "source": "kit job",
+      "description": "Purpose of the Role\nThis position of Oracle PLSQL Developer is crucial to the data management and processing functions within our organization. The role is accountable for developing, testing, and maintaining robust database solutions that support our banking applications, aligning with our commitment to excellence in the banking and financial services sector.\n\nScope of Work\nDevelop and implement PLSQL procedures, functions, and packages tailored for banking applications.\nCollaborate with data...",
+      "scrapedAt": "2026-11-25 03:06:50",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-a1BBR0EtcHZkeS1yNFRsMEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXV3cyZVdsdk1IQnJVM0ZFT1dZeFpUbExXRGR6ZW00eU5sZFhhV3M0ZEhBMFp6ZGZlVmc1WlhoVlRFaHZMVzFzYVdvMFluWlRRVFpQV25waFVVVm5hRFIzY0Y4MVFtNTVUMDFrUzAxVlNGVldXUzF6VTFVM1NWb3dZMUJDT0doWWNscEVaa3hMTTB0TFFsOUlhRVpRVkVWUWQyOWFjblZ1WW10WmRUWkxVbDh4ZUZWSFVXWVNGM1l4UVVkaE9EWm5SM05EZVRWUFZWQXRPVWhRTkZGSkdpSkJTRTR3UlRkRlRUVjRTekp2Y3pRd1oyOVBOVzg0ZW1wMWNXVjFRMDk2TlhKbjpmYTJhOGRhMw",
+      "profileId": "plsql-developer",
+      "title": "PLSQL Developer with .NET C",
+      "company": "Teksills India Private Limited",
+      "location": "New Delhi, Delhi, India",
+      "url": "https://jobs.hudsonsignals.com/jobs/bf211c59-9b5e-479f-b31f-646a443b60f2",
+      "tags": [
+        "[PL/SQL]",
+        "[Oracle SQL]"
+      ],
+      "source": "hudson signals",
+      "description": "## PLSQL Developer with .NET C\n\nThis role involves developing and maintaining robust and scalable database applications using PL/SQL and .NET technologies. The successful candidate will be responsible for designing, coding, testing, and deploying high-quality solutions within a dynamic and collaborative environment.\n• *Key Responsibilities:**\n• Develop and maintain PL/SQL stored procedures, functions, and packages.\n• Design and implement database schemas and data models.\n• Write efficient and...",
+      "scrapedAt": "2026-11-25 03:06:50",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-dS1QRHJBYTB2cDR3MURnc0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbGN3TkdsalUzaHRPSFI2T1U1dVZVZGZTek5PVkVKRWVFTjBRbU01ZUV4WGNIbHNTVFJRVjIxT1ZtSmhOazFSVUVOU2JUTjNVV2wzT1hjMExXSnRha05wY0VzdFh6aGhTbnB5UjNGd00zQXlVa2hhTFd0WGNuWk5WM2M1UXpVNVJqUldkakYxWVc5S1NFNUJNMjUzYUVKTmJFUmlVRTFRUmxGWWQySjZWQzAyV1RsbE5XZ1NGM2RzUVVkaE4yNURRazU2UW5KMVJWQm9ZVkJzT0ZGWkdpSkJTRTR3UlRkSWFYQlRZMGRsV2tadlpsVldPVlJmV0VsQ2RXbzBORVV0UlZwbjo2OTQxYzBmNA",
+      "profileId": "plsql-developer",
+      "title": "Sr Oracle PL/SQL Developer",
+      "company": "TeamPlus",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://www.teamplusindia.in/job/teamplus-work-from-home-night-shift-bengaluru-candidate-should-be-in-bangalore-mandatory-sr-oracle-pl-sql-developer/",
+      "tags": [
+        "[PL/SQL]",
+        "[Oracle SQL]",
+        "[CI/CD & Git]"
+      ],
+      "source": "teamplus staffing solution",
+      "description": "4+ years of hands-on experience in Oracle PL/SQL Development.\n\nStrong expertise in Oracle SQL and PL/SQL programming.\n\nExperience with packages, procedures, functions, triggers, cursors,\n\ncollections, and exception handling.\n\nStrong knowledge of query optimization and performance tuning.\n\nExperience with Oracle database design and data modeling concepts.\n\nFamiliarity with indexing, execution plans, and database performance\n\nanalysis.\n\nExperience with version control tools such as Git is...",
+      "scrapedAt": "2026-11-25 03:06:50",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-dllrNEJ3QTlxOTc3NTkzVUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZamxyT1RoTlpqbGpPRGR1UkZkcVpWUk5SemxMTVdWaVNWbGZkakpyVkVKdWJFVm5jeTFxTWxsNGJ6UkVMVTV3VHkxQ2F6aG5kVTlZU0dGR1JESjNRa2Q0WkdreFVrMWZRblZLZERSRGJYaHpNR2Q2YzFCcmVFaHhVRkV0WTNoWGJUaEpWVGt3ZDJZMWJuVjRSMHgyU1ZrNFJrZGZURU5EY1ZObmVUQlVTbEZyWDFSU1QzQVNGM2RzUVVkaE4yNURRazU2UW5KMVJWQm9ZVkJzT0ZGWkdpSkJTRTR3UlRkSFpYZHdiMUl6UW5sQ2IyeFpkVk5XTWpKVFpuUm1SSFZrZVhSUjowNGU0YzA3OQ",
+      "profileId": "plsql-developer",
+      "title": "Senior Software Engineer C++, Oracle PL/SQL & Kubernetes",
+      "company": "Persistent Systems",
+      "location": "Pune, Maharashtra, India",
+      "url": "https://www.shine.com/jobs/senior-software-engineer-c-oracle-pl-sql-kubernetes/persistent-systems/20125360?jobtype=cr&position_in_results=4",
+      "tags": [
+        "[PL/SQL]",
+        "[Oracle SQL]",
+        "[CI/CD & Git]"
+      ],
+      "source": "shine",
+      "description": "Senior Software Engineer C++, Oracle PL/SQL & Kubernetes\n\nCompany: Persistent Systems\nJob Location: Pune, Maharashtra, India\nEmployment Type: Full-time\nExperience Required: 5 - 7 years\nSalary: 15L24L a year\n\nAbout Persistent Systems\n\nPersistent Systems is hiring a Senior Software Engineer C++ in Pune (open across all Persistent locations) to design, build and maintain high-performance enterprise backend applications. You will work across C++, Oracle PL/SQL and Pro*C, Docker and Kubernetes...",
+      "scrapedAt": "2026-11-25 03:06:50",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-TkJKNUF2aUpuZG9XcF9tcUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZa3BwYVdkU2FubzJSakYxVFhoQmVXcE9OMnczVG0xRUxXWTJVMHhyUTNkcmFIbGpaVXgyT1c1VWMzaEJVMkZ4V1RSa1IzVkNkVlpCY20xVGRUbHFiMWxvZEZOM05tVmxSM0ExUzFCcFRWWlRjVGs0Wkc4dFgyOUVaRzlqVkRnNFptbEVUblF5ZVRKVmFrVm9jMGhYTjBwbVdWQnpNWHBXVWpsNmNHOXRjbHA2V1ZGSlUyTVNGM2RzUVVkaE4yNURRazU2UW5KMVJWQm9ZVkJzT0ZGWkdpSkJTRTR3UlRkRk0xUlpSRWR4ZW1aYVN6WlFVMjFEZEhwVlNWRldTbE5uWVZGbjozNjBhYzM3NA",
+      "profileId": "plsql-developer",
+      "title": "Oracle/PLSQL (India)",
+      "company": "Wipro",
+      "location": "India",
+      "url": "https://in.jobrapido.com/jobpreview/8261155705558401024",
+      "tags": [
+        "[PL/SQL]",
+        "[Oracle SQL]",
+        "[CI/CD & Git]"
+      ],
+      "source": "jobrapido.com",
+      "description": "Job Title: Oracle/PLSQL\n\nCity: Mumbai\n\nState/Province: Maharashtra\n\nPosting Start Date: 11/18/26\n\nWipro Limited (NYSE: WIT, BSE: 507685, NSE: WIPRO) is a leading technology services and consulting company focused on building innovative solutions that address clients' most complex digital transformation needs. Leveraging our holistic portfolio of capabilities in consulting, design, engineering, and operations, we help clients realize their boldest ambitions and build future-ready, sustainable...",
+      "scrapedAt": "2026-11-25 03:06:50",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-SERsNjdhQlVhaklWQy1jUUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXWE14WmpoMk1IZzFSRUV0UzB4M2VEazVTR2c1U0ZSR2FISkxVa0pWWm5jNVpuTlVlR3BJU1VOUlZTMVZMVnBzWDFGSGNtRjJSMDlZVlhodWFITkVSblpTU2swMGEwa3RUMEZ4YjIxWmJVMUxValF3WlVReFZWVTJjblpHWjNGaE9GWXhUekp2VEdveGFHZGZWMVJKYTNjd1JrOTBjMkU0ZFZFNWRFbGxUV2RPZW5aUU1Ib1NGM2RzUVVkaE4yNURRazU2UW5KMVJWQm9ZVkJzT0ZGWkdpSkJTRTR3UlRkSGFVcHRSVWs1UldOdVZVMDNWelYwYW00eWJVZzBhVE5vUlhKMzo5MTRmZTgxNg",
+      "profileId": "plsql-developer",
+      "title": "Associate/Senior Associate, PL/SQL Developer, Wealth Management Technology",
+      "company": "DBS Bank",
+      "location": "India",
+      "url": "https://www.shine.com/jobs/associate-senior-associate-pl-sql-developer-wealth-management-technology/dbs-bank/20019262?jobtype=cr&position_in_results=52",
+      "tags": [
+        "[PL/SQL]",
+        "[Oracle SQL]",
+        "[Java]",
+        "[CI/CD & Git]"
+      ],
+      "source": "shine",
+      "description": "Associate/Senior Associate, PL/SQL Developer, Wealth Management Technology\n\nCompany: DBS Bank\nJob Location: India\nEmployment Type: Full-time\nExperience Required: 3 - 7 years\n\nBusiness Function\n\nGroup Technology and Operations (T&O) enables and empowers the bank with an efficient, nimble and resilient infrastructure through a strategic focus on productivity, quality & control, technology, people capability and innovation. In Group T&O, we manage the majority of the Bank's operational processes...",
+      "scrapedAt": "2026-11-25 03:06:50",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "gh-stripe-8401662",
+      "profileId": "plsql-developer",
+      "title": "Accounting Analyst",
+      "company": "Stripe",
+      "location": "Bengaluru",
+      "url": "https://stripe.com/jobs/search?gh_jid=8401662",
+      "tags": [
+        "[Oracle SQL]",
+        "[Power BI]",
+        "[Python]"
+      ],
+      "source": "stripe careers",
+      "description": "Who we are\n\nAbout Stripe\n\nStripe is a financial infrastructure platform for businesses. Millions of companies—from the world’s largest enterprises to the most ambitious startups—use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the GDP of the internet, and we have a staggering amount of work ahead. That means you have an unprecedented opportunity to put the global economy within everyone’s reach while doing the most...",
+      "scrapedAt": "2026-11-25 03:06:50",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-aEdQZXdHZmNwRXh4WmFIaEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbTVLTUhSUk0yaFNkbGczUlV4TFRWUlpkR0ZPYTJOVFpGTmtTMmgxYzA5M1FteGFSMWswTmsxRlpXWmtSRUYyVFdOeVdIVlNlRmg0VURCdFQyTklXVlYxVVdKVFpXMXZWbDlKVEU5aVEyNXJSbmxLY1dSNlNtaE5TeTB3ZGs5U1VWRjRZM3A2TjNZeVIzTk9ZbWgzUVdreFQwUlJTbFpGY1hCcmJYQXdUa3huVDB0MlRYb1NGM05HUVVkaE5IcG1USFp4ZURWT2IxQXpUamROYlVFNEdpSkJTRTR3UlRkSFdHYzVWV3RqV0RWQlNXdFhUVjlzTVc0MWVWUnBXREZNUkV0Qjo1YTI4MDQ1Nw",
+      "profileId": "java-backend",
+      "title": "Senior Application Developer - Java [T500-31029]",
+      "company": "CIBC India",
+      "location": "Hyderabad, Telangana, India",
+      "url": "https://in.linkedin.com/jobs/view/senior-application-developer-java-t500-31029-at-cibc-india-4494138116",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]",
+        "[Microservices]",
+        "[Docker]",
+        "[Spring Security / JWT]",
+        "[Python / Shell]"
+      ],
+      "source": "linkedin",
+      "description": "About CIBC:\n\nCIBC is a leading North American bank, with a history of more than 150 years of living our purpose - to help make your ambition a reality. Client relationships are at the center of our strategy, and our growth is enabled by a highly engaged and connected global team. From digital banking to community impact, we’re proud to drive progress for our clients and our communities. Recognized for our culture, award-winning innovation and community investment, CIBC continues to evolve by...",
+      "scrapedAt": "2026-11-25 03:06:36",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-ZlVNT3E2WmtCdDRkZUlhVEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZalJMYTFSWFZISnNSMk5sZURkS2RYWXdNWGhPVFdoSlExZHNNblpLTjNrd1p6WkhjREpMVVhWVFltbGtXRGRJWjI1clltWmFiMjVGZUZCblgyOVdYMGxNZFVvd0xXZzJaMmx2UkZCQlRFcHZRa2hNVFdWcGVqTmhaMkp1Ym5SVGRVeG9ZbTA0Tm5WaVoxZEpWazFpV1ZWQ1IzRnBYM1ZZY1VrMGFFdEhZVWRWWkRsMVYzUVNGM05HUVVkaE5IcG1USFp4ZURWT2IxQXpUamROYlVFNEdpSkJTRTR3UlRkRk56VlJjMFJGU0dKVWRIcFpkVnAyVW1NMlpVRmZTR2RSYmxobjpjNTYzZWQ4ZQ",
+      "profileId": "java-backend",
+      "title": "Backend Engineer - Java",
+      "company": "Lenskart.com",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://in.linkedin.com/jobs/view/backend-engineer-java-at-lenskart-com-4492371979",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]",
+        "[Microservices]",
+        "[REST APIs]",
+        "[Docker]"
+      ],
+      "source": "linkedin",
+      "description": "Key Responsibilities\n\n1. Backend Development & Engineering\n• Translate complex business and functional requirements into robust technical solutions.\n• Design, develop, test, deploy, and maintain scalable backend systems and services.\n• Own the complete Software Development Life Cycle (SDLC), from requirement analysis to production deployment.\n• Build high-quality, extensible, and maintainable applications while ensuring timely delivery.\n\n2. Engineering Best Practices\n• Drive the adoption and...",
+      "scrapedAt": "2026-11-25 03:06:36",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-WFlERC1fSDRFUElfQWhxbEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVzR4Wlhrd2NXcFpRVEpOU0ZGNFpVbEhWV3BVTWtkRWRYTTFaMmRaYVdwb2VqZENXVk5IY3pCWk4ycFNObWRCVlhWeVdtSTRTWFpvYmtjMWVVOXdhVXAzY0VOaGVIQk1aVXhMYzJOMUxXRjVVVXhFT0doaFgyeDVRVXhzWW5Oa1dXUnFRbWRNVVVGS1ZtTTFiSGxPYkdKRFJXMTRPRTFGTmxvMFlua3hZMEZPZGxKNFlYb1NGM05HUVVkaE5IcG1USFp4ZURWT2IxQXpUamROYlVFNEdpSkJTRTR3UlRkR1pFRldhbVJKTkhNMlRGVkdaV1l4YW1Sa1p6bGFWa052VFZkMzoyZWY2M2QxNQ",
+      "profileId": "java-backend",
+      "title": "Senior Java Backend Developer (J2EE, Docker) (4 to 6 Years)- Pune/Bangalore",
+      "company": "FIS",
+      "location": "Pimpri-Chinchwad, Maharashtra, India",
+      "url": "https://in.linkedin.com/jobs/view/senior-java-backend-developer-j2ee-docker-4-to-6-years-pune-bangalore-at-fis-4493694088",
+      "tags": [
+        "[Java]",
+        "[Hibernate/JPA]",
+        "[Microservices]",
+        "[REST APIs]",
+        "[Oracle SQL]",
+        "[Docker]"
+      ],
+      "source": "linkedin",
+      "description": "Position Type\n\nFull time\n\nType Of Hire\n\nExperienced (relevant combo of work and education)\n\nJob Description For Java Developer (Banking / Payments)\n\nAre you curious, motivated, and forward-thinking? At FIS you’ll have the opportunity to work on some of the most challenging and relevant issues in financial services and technology. Our talented people empower us, and we believe in being part of a team that is open, collaborative, entrepreneurial, passionate and above all fun.\n\nAbout The...",
+      "scrapedAt": "2026-11-25 03:06:36",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-ckpJMU11NGVqblNuN3V1WEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZV0Z5V1cxU2FITmhhMFExWmxZMFlqaEtSbTEwYm5ORGMxOVZNVGhLVm5NMGNqQmpaM1o0V1cxRFNXODFhelkwUlVVelFsa3hiVTR5VERSVVJURnVlVEZaTjI1Q2VWSnRZMHcyVkZOc2RrVXhOVWxFUXpKalRrUXhSVlJ3UTNGclVFb3ROWFJHZVRGaGRVbDBhRWxGY1VGa1RuZGlYM1ZHZEZwS1psWjRaM0JGZFRSRWNHa1NGM05HUVVkaE5IcG1USFp4ZURWT2IxQXpUamROYlVFNEdpSkJTRTR3UlRkSFVYUjNkbEZFYUZadmFYaGplRWRJTFRsRlVIcHFUREpqVmtKMzpmZDc4NWUxMQ",
+      "profileId": "java-backend",
+      "title": "Java Fullstack Developer with AWS & React",
+      "company": "Cognizant",
+      "location": "Chennai, Tamil Nadu, India",
+      "url": "https://careers.cognizant.com/india-en/jobs/00070659271/java-fullstack-developer-with-aws-react/",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]",
+        "[React]"
+      ],
+      "source": "cognizant careers",
+      "description": "Experience: Minimum 6+ years in Java Development\n\nMust have Skills: Java, SpringBoot, AWS and React\n\nJob Summary\n\nLead Developer role in a global organization responsible for designing building and enhancing secure scalable applications using React Js, AWS and Java. The role focuses on delivering high quality solutions in a hybrid work model day shift environment supporting asset and wealth management platforms while driving technical excellence and measurable business...",
+      "scrapedAt": "2026-11-25 03:06:36",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-bWpFOGtFSUIyUWFLYUhNMUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVnBqVkRZMU1uSTBSa3B0TFVkWlQyRndRakpLZFVWdk1VeEpXRnAzVWtoeFFqTkVSVzQwYTFaaVdVeEhTbTVRUmt4NFRsRmxlR2xITTFwVFprNWFNek5PY210UU5HZGpTVlY2ZFVkRlEzaE1hblJsWDB4RFZqUkhaMEo2TlhrdFZYRnNUWGRwWDBKVGIwNUtUMnhUVlMxaExXbHdRVlI2UWs1TlpVOWpXR1JXYzA5cWJtSVNGM05HUVVkaE5IcG1USFp4ZURWT2IxQXpUamROYlVFNEdpSkJTRTR3UlRkSVJXNWFPVTlZV1RBeVFtNWtaWFZpVlZCSWRURmxVMlp2VjA5bjo3YjkxNzQzNg",
+      "profileId": "java-backend",
+      "title": "Senior Software Engineer (Java Full Stack Developer)",
+      "company": "Caterpillar",
+      "location": "Chennai, Tamil Nadu, India",
+      "url": "https://careers.caterpillar.com/en/jobs/r0000391829/senior-software-engineer-java-full-stack-developer/",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]",
+        "[Hibernate/JPA]",
+        "[Microservices]",
+        "[REST APIs]",
+        "[Docker]"
+      ],
+      "source": "caterpillar careers",
+      "description": "Career Area:\nTechnology, Digital and Data\n\nJob Description:\n\nYour Work Shapes the World at Caterpillar Inc.\n\nWhen you join Caterpillar, you're joining a global team who cares not just about the work we do – but also about each other. We are the makers, problem solvers, and future world builders who are creating stronger, more sustainable communities. We don't just talk about progress and innovation here – we make it happen, with our customers, where we work and live. Together, we are building a...",
+      "scrapedAt": "2026-11-25 03:06:36",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-NzNsOTlGTm5lY2V0SnhOa0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbmwzTVZkRWFEVjVXRVkxTmxSdmJFRTRaa0YxU201aU1FcFhZa2RmT0ZWU1FreHdYemRLVkZReU5FaFpPV1pVYVZsck9VZHNSMjVxWTBaRFlUbHVOMHB6VVZoUmNYcDZjVWw0WTFveVlXMUVNakZOVVVFNVlYVldORVIyVVVSMFlrNUhjVUpaUVcxeFpIYzRSbk42T1RKbmVXWk9WakZSVUZkNU9XTXlOVXRDTm1VMWFXRVNGM014UVVkaExWOUtSVXQ2YWpGbE9GQmZOVXh0TWxGSkdpSkJTRTR3UlRkSGEyRlZXbEZIUTJrdGNFZzRNVVpaWjIwM04yVldka3hYU2pWUjozZTJlZjk4ZA",
+      "profileId": "java-backend",
+      "title": "JAVA Fullstack Developer(JAVA, springboot, microservices, Reactjs)",
+      "company": "UST",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://in.linkedin.com/jobs/view/java-fullstack-developer-java-springboot-microservices-reactjs-at-ust-4483427907",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]",
+        "[Hibernate/JPA]",
+        "[Microservices]",
+        "[React]"
+      ],
+      "source": "linkedin",
+      "description": "Role Description\n\nJava Full-Stack Developer — 5+ Years of Experience\n\n• Strong proficiency in Core Java, including Java 17 and Java 21 features.\n• Strong experience with React.js.\n• Strong experience with Spring Framework, Spring Boot, and JPA.\n• Strong understanding of microservices architecture.\n• Working knowledge of SonarQube, Jenkins, JFrog, and Maven.\n\nSkills\n\nJAVA, Springboot, Microservices, Reactjs",
+      "scrapedAt": "2026-11-25 03:06:36",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-TDFSOFpETEgyTVhkdU44VUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZa3RNWjJkUWMwZ3dZME4xVkhOQ01XNTVUWFZKTmxGTVdWOXhjRTlwVnprdFRERktkMDVKUm1JMk1YbEhRblEyYUZSM1NHbEZSalF5TFZReFpFMUdRbXhVTVVVMmRrTm1XbHBuTFRWcFIwZEpWeTFOYUhGb2FXNXBkSE5aYzBaMmEzaDFhazF6VVUwemNXaHNlRGhKYmtOQ1NqWXlTekZhVmpScExUVjRaVWRoTmt0WVltSVNGM014UVVkaExWOUtSVXQ2YWpGbE9GQmZOVXh0TWxGSkdpSkJTRTR3UlRkRmNWVjJaMWN5TVhCRGJHbEpaVmt5Y1VVeVNHeG9NVnBqUjJ0QjpjNjMyOTZhMg",
+      "profileId": "java-backend",
+      "title": "IN_ Senior Associate_ Java Springboot+React.js +ReactNative Developer_AppTech_Advisory_ MUMBAI only (Immediate joiners)",
+      "company": "PwC India",
+      "location": "India",
+      "url": "https://in.linkedin.com/jobs/view/in-senior-associate-java-springboot%2Breact-js-%2Breactnative-developer-apptech-advisory-mumbai-only-immediate-joiners-at-pwc-india-4492673543",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]",
+        "[Microservices]",
+        "[REST APIs]",
+        "[Docker]",
+        "[React]"
+      ],
+      "source": "linkedin",
+      "description": "Job Description & Summary: A career within Technology Consulting services will provide you with the opportunity to bring our clients a competitive advantage through defining their technology objectives, assessing solution options, and devising architectural solutions that help them achieve both strategic goals and meet operational requirements. We help build software and design data platforms, manage large volumes of client data, develop compliance procedures for data management, and...",
+      "scrapedAt": "2026-11-25 03:06:36",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-c0dDRUpEU2VzejhkSmNrSEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXalkyZEVwTGVHVnNlWE5pTTBaRVNITlVTa3g1TTFGR2QxUndaRFpLWVRkaVZWSnhSM2c0WjJKVWJEbHNORzVLT1dSVVEwTXRibXQ1TkVWRFdXNWZSRlIyZUZGVE1XaGtjRGhPV0c5d1RGQm1XbTlwWTFSMFYwWk5ObEEwTjFKRVlqUktia1EyWmtzNU1WUkhOa2RvU2taVlRWOVJjRmRYYkdaVFJHNHhjRzFhWkVGUFkwUVNGM014UVVkaExWOUtSVXQ2YWpGbE9GQmZOVXh0TWxGSkdpSkJTRTR3UlRkSFdtbzBjVzk1VFdGTE9XUnpMVVYxWmpab1JHVTVjMHhEZGxGQjowMWI0ZjcxYQ",
+      "profileId": "java-backend",
+      "title": "Software Developer Jr. - Java Angular Java Springboot",
+      "company": "Sails Software",
+      "location": "Vijayawada, Andhra Pradesh, India",
+      "url": "https://www.shine.com/jobs/software-developer-jr-java-angular-java-springboot/sails-software/20117648",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]",
+        "[Hibernate/JPA]",
+        "[REST APIs]",
+        "[PostgreSQL]"
+      ],
+      "source": "shine",
+      "description": "Software Developer Jr. - Java Angular Java Springboot\n\nCompany: Sails Software\nJob Location: Visakhapatnam, Andhra Pradesh, India\nEmployment Type: Internship\n\nCompany Name: Sails Software Inc\n\nJob Title: Software Developer Jr.\n\nJava Angular Java Springboot\n\nJob Description\n\nSails Software Inc. is seeking a motivated and skilled Software Developer Jr. to join our dynamic development team. The ideal candidate will be proficient in Java, Angular, and Spring Boot, and will contribute to the design...",
+      "scrapedAt": "2026-11-25 03:06:36",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-SXR5OXQwTC1QRE1DRmtBeEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXa0V3WHkweVJrbE9VRW94VlVsdlNuaHlaa1oxVDA5YWRsaGhSREJOT0VVd0xVeDRiVzVyT0RacmVtWTJUemxSUVc1TlFVNVZWVFpFYkdWNk9XSmxSRGxtUVZSQ01rWlhYelpCUTI0MWIwbElTa0pPYWxCU2EyZERXa3N3Y1dvd2RXdFBSRlZxZG5WM2QyOXpUWGwxU1ZWRlJWbFVYMjVvVkZRMldVdHpaMUJEVHpOd1MxY1NGM014UVVkaExWOUtSVXQ2YWpGbE9GQmZOVXh0TWxGSkdpSkJTRTR3UlRkSFlYZHhiVWxWZUcxUFZXdFhSbGhWTXkxbWJGbHJjSE40VEdOUjpjMGRjMDEzNA",
+      "profileId": "java-backend",
+      "title": "Java Spring Boot Backend Engineer",
+      "company": "CareerNet Technologies Pvt Ltd",
+      "location": "Chennai, Tamil Nadu, India",
+      "url": "https://www.iitjobs.com/job/java-spring-boot-backend-engineer-chennai-tamil-nadu-india-663048",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]",
+        "[Hibernate/JPA]",
+        "[Microservices]",
+        "[REST APIs]",
+        "[Docker]",
+        "[Spring Security / JWT]",
+        "[React]"
+      ],
+      "source": "iitjobs",
+      "description": "Design, build, and maintain scalable backend services and microservices architecture.\n\nThis role is on-site.\n\nResponsibilities\n\n• Design and develop RESTful APIs to integrate with frontend systems.\n\n• Implement microservices using Spring Cloud for scalability and flexibility.\n\n• Manage data persistence using JPA, Spring Data JPA, and RDBMS.\n\n• Write unit and integration tests using JUnit and Mockito to ensure code quality.\n\n• Deploy and manage applications using Docker, Kubernetes, and CI/CD...",
+      "scrapedAt": "2026-11-25 03:06:36",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-a2VlcVhsM0FDeDJFXzVDMUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZakYyT0ZscFFtaHBUVlZhWmkxcVNGWlZjME0xTmxKWlJUaHljakZQUWtkUFYwSlFRM0poVkdWMWVGWnlPRkI0U0c1dVoyNHhka1pXZDIwNWREQnhRV1oyUmxsamJXWkNhelpuUlhWMVl6Tm5WRmhHYmpkMVIyc3pUWHBzYldSdllWSkhTV0ZUUVVGWGQydEtTRnBuU1ZBNGVHdG9hRlJsYm01UFFUaFFVMlZzTVRObWVFZ1NGM014UVVkaExWOUtSVXQ2YWpGbE9GQmZOVXh0TWxGSkdpSkJTRTR3UlRkSFFXWjJhbDlLTVdzeFdEUlZVemhEYkhnNWR5MXJURmxJTFdWQjpiNDA1YzI3OQ",
+      "profileId": "java-backend",
+      "title": "Java Spring Boot Developer 5 -9 yrs (Pune)",
+      "company": "Infosys",
+      "location": "Pune, Maharashtra, India",
+      "url": "https://www.shine.com/jobs/java-spring-boot-developer-5-9-yrs-pune/infosys/20101239?jobtype=cr&position_in_results=10",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]",
+        "[Hibernate/JPA]",
+        "[Microservices]",
+        "[REST APIs]",
+        "[Oracle SQL]",
+        "[PostgreSQL]",
+        "[Docker]",
+        "[Spring Security / JWT]",
+        "[React]"
+      ],
+      "source": "shine",
+      "description": "Java Spring Boot Developer 5 -9 yrs (Pune)\n\nCompany: Infosys\nJob Location: Pune, Maharashtra, India\nEmployment Type: Full-time\nExperience Required: 5 - 9 years\n\nJob highlights\n\n6-8 years Java development with 4.5+ years Spring Boot, expertise in Microservices, Kafka, REST APIs, and cloud platforms\nDesign, develop, and maintain scalable enterprise applications using Java Spring Boot and Microservices; implement event-driven architecture; build APIs; optimize performance; support CI/CD and cloud...",
+      "scrapedAt": "2026-11-25 03:06:36",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-MDM1d2hiQTVKOTg2cXhhX0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbXB5V2xZdFNWRlpRbWw2TmxOdldtMXRRalJTUkVSUmNYWTBObXRWY0RKcFVIQkNRVVUyY1c1ZldGbFhXbWh4ZUhGNFZHZ3lhSGRPY1V4blNrOWhTVXN4VlVGU1FYZHZiWEUyZG5CcFdESlFMUzB3TTJsdlZYcHplRXhuWDJaWlEwUnZiRGxZYVRGRmFVOXVRbUpUTlMweFExQlJPRFoxZEU4NExXSTNkVVZNVkVacGFqZ1NGM014UVVkaExWOUtSVXQ2YWpGbE9GQmZOVXh0TWxGSkdpSkJTRTR3UlRkRlIwUTRNREZtY1hJM2JEYzNieTA1ZEhOS1ZrZzBORUZpY2tWMzphYjA3MjYxNA",
+      "profileId": "java-backend",
+      "title": "Senior Technical Architect - Spring Boot",
+      "company": "HCLTech",
+      "location": "India",
+      "url": "https://www.glassdoor.co.in/job-listing/jv?jl=1010323151586",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]",
+        "[Microservices]",
+        "[REST APIs]",
+        "[Docker]",
+        "[Python / Shell]"
+      ],
+      "source": "glassdoor",
+      "description": "Job Summary\n\nThe Senior Technical Architect is a critical role responsible for designing and implementing complex technical solutions using Spring Boot, Java, and Python. This position ensures that our architectural frameworks align with business objectives and industry best practices, driving innovation and excellence within the organization. The Senior Technical Architect plays a key role in leading technical teams, fostering collaboration, and influencing strategic decision-making to meet...",
+      "scrapedAt": "2026-11-25 03:06:36",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-WTNKaWlzb1BfVjU3bHlsY0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZWGxwTUVjdFdYWnJlUzFXY2xGWlREaE9ZVkpaVW1neVprTTVTa3d0V214MFgyaHhWM2t3ZUdVM05VNVpZV2M0V25kRVJTMVdRWGd5VkV0YVNqazNWMmg1Y2pBNVExSlVkVWRaV1hGd05IUmtUVEJ1WldvelpIcHdURGhqVTI5dUxVdDNXVkpWVmtSSlpXUjFYMUV5VFVKUFpEVkxXbTlLVkVreVlXczFUVk4yU21kMFZuVVNGM014UVVkaExWOUtSVXQ2YWpGbE9GQmZOVXh0TWxGSkdpSkJTRTR3UlRkRmEwSldRMWh1T0haTVlWQndUMjR6YXpCWFpXMTNRVGR5Y1d0bjo3MTRjYWMyMg",
+      "profileId": "java-backend",
+      "title": "Software Engineer III Java Springboot AWS",
+      "company": "JPMC Candidate Experience page",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210800940",
+      "tags": [
+        "[Spring Boot]",
+        "[Java]"
+      ],
+      "source": "jpmorgan chase",
+      "description": "We have an exciting and rewarding opportunity for you to take your software engineering career to the next level.\n\nAs a Software Engineer III at JPMorganChase within the Consumer & Community Banking, you serve as a seasoned member of an agile team to design and deliver trusted market-leading technology products in a secure, stable, and scalable way. You are responsible for carrying out critical technology solutions across multiple technical areas within various business functions in support of...",
+      "scrapedAt": "2026-11-25 03:06:36",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-7aea2d41",
+      "profileId": "java-backend",
+      "title": "DevOps Engineer (Observability)",
+      "company": "Twilio",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/twilio-devops-engineer-observability",
+      "tags": [
+        "[Java]",
+        "[Microservices]",
+        "[Python / Shell]"
+      ],
+      "source": "weworkremotely",
+      "description": "Headquarters: Remote - Ireland\n\nWho we are\n\nAt Twilio, we’re shaping the future of communications, all from the comfort of our homes. We deliver innovative solutions to hundreds of thousands of businesses and empower millions of developers worldwide to craft personalized customer experiences.\n\nOur dedication to remote-first work , and strong culture of connection and global inclusion means that no matter your location, you’re part of a vibrant team with diverse experiences making a global...",
+      "scrapedAt": "2026-11-25 03:06:36",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-3a758506",
+      "profileId": "java-backend",
+      "title": "Adjunct Instructor- Artificial Intelligence- CTU Online",
+      "company": "Perdoceo Education Corporation",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/perdoceo-education-corporation-adjunct-instructor-artificial-intelligence-ctu-online",
+      "tags": [
+        "[Java Developer]"
+      ],
+      "source": "weworkremotely",
+      "description": "Headquarters: United States\n\nURL: https://myjobs.adp.com/pec/cx/job-listing\n\nPosition Description\n\nConsistent with and supportive of CTU's mission (to provide industry-relevant higher education to a diverse student population through innovative technology and experienced faculty, enabling the pursuit of personal and professional goals), Adjunct Faculty members provide quality and innovative instruction and meaningful engagement with our students to successfully achieve the relevant course...",
+      "scrapedAt": "2026-11-25 03:06:36",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-43723cac",
+      "profileId": "java-backend",
+      "title": "Senior Java Developer",
+      "company": "Tech Company",
+      "location": "Remote Worldwide",
+      "url": "https://himalayas.app/companies/microsourcing/jobs/senior-java-developer",
+      "tags": [
+        "[Java]"
+      ],
+      "source": "himalayas",
+      "description": "Discover your 100% YOU with MicroSourcing! Position: Senior Java Developer Location: Philippines Work setup & shift: Remote | Night Shift Why join MicroSourcing?",
+      "scrapedAt": "2026-11-25 03:06:36",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-dba568a",
+      "profileId": "full-stack",
+      "title": "Vehicle Condition Inspector - Remote",
+      "company": "FIXD Automotive",
+      "location": "Remote Worldwide",
+      "url": "https://weworkremotely.com/remote-jobs/fixd-automotive-vehicle-condition-inspector-remote",
+      "tags": [
+        "[Full Stack]"
+      ],
+      "source": "weworkremotely",
+      "description": "Headquarters: Atlanta, Georgia, United States\n\nURL: https://jobs.workable.com/company/p33WSu8nDxqqazwsZzRc7L/jobs-at-fixd-automotive\n\nAbout FIXD & AppraisalPRO\nAppraisalPRO is FIXD's B2B product that helps dealerships during the vehicle appraisal process. We detect any problems with trade-in vehicles, provide estimated reconditioning costs for a vehicle, and a consumer-facing condition report for use in negotiations.\n\nThe role\nDealers use AppraisalPRO's Inspect feature to take pictures of the...",
+      "scrapedAt": "2026-11-25 03:06:21",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "job-5c614642",
+      "profileId": "full-stack",
+      "title": "Senior Developer (.NET)",
+      "company": "Tech Company",
+      "location": "Remote Worldwide",
+      "url": "https://himalayas.app/companies/archretail/jobs/senior-developer-net",
+      "tags": [
+        "[.NET]"
+      ],
+      "source": "himalayas",
+      "description": "We're looking for an experienced Senior Developer to join our technology team and support the development, maintenance, and enhancement of a business-critical enterprise platform.",
+      "scrapedAt": "2026-11-25 03:06:21",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "remote",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-LXotczFIcnp2WEU0aVFxZkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVUkzUjJaSFMySndWbmhQVDJsa1QwTjRZVmhYWldwRlUyWjZRemhXVUVOdWNYWk1RbGxJY2s4emJsbG9ibTkzTVV4Q1UwRXhkRmxmTjE5akxYWk1VV1JPVFRJMFlraFNiVTExTjJWdU5rOVdhSFpZUTBWQlVESk1VMDVKZWtjeGFGZFhWRVpVT0hwTU5qTjZNbXN5WDJGeVEydFNjRkE0ZEVoUlRVOW1jV1F3VUVFdGQxb1NGM0V4UVVkaE9YcFRTbkF5U3pkT1dWQTNYeTFpTUZFNEdpSkJTRTR3UlRkRlNsaGlURTh6VWpoTFduTTFhbDkyWlUwNU9YQnZhM2cxZVU5MzowOWZmNWIxYQ",
+      "profileId": "full-stack",
+      "title": "Full Stack Developer - Java 17+, Angular",
+      "company": "Cognizant",
+      "location": "Hyderabad, Telangana, India",
+      "url": "https://careers.cognizant.com/india-en/jobs/00070442191/full-stack-developer-java-17plus-angular/",
+      "tags": [
+        "[Angular]"
+      ],
+      "source": "cognizant careers",
+      "description": "Java Full Stack Developer (Java 17+ & Angular) | Hyderabad\n\nRole: Java Full Stack Developer\nExperience: 6 to 12 Years\nLocation: Hyderabad\nShift: 2:00 PM to 11:00 PM IST\n\nJob Description\n\nWe are seeking an experienced Java Full Stack Developer with strong expertise in Java 17+ and Angular (any version). The ideal candidate will have hands-on experience in designing, developing, and maintaining scalable web applications while following software design best practices.\n\nKey Responsibilities\n•...",
+      "scrapedAt": "2026-11-25 03:06:21",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-UlhZMFJfYnpMRGl0blRoT0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZbmRVU2pSeFpEZE9iemhPUVUxb1VHRnZRekZOTXpoVFl6YzBRVGxpUlV4WlNHMVROM1pITXpWa1gwNW5jV3RzUkVKeGFIcENNV1IwVGxVMlFuSjVWRGc1VERKQlVGQmxTRGxpY21KbUxXZzFjR1l4WlRkWE4zWlJSRVIwVFdWQmJIcHZTelZqZEZFMmRHVm9ORnBwT1RVMVZqWTFORGgzTkRoaFVIWklZMjFsTWxabU1Hd1NGM0V4UVVkaE9YcFRTbkF5U3pkT1dWQTNYeTFpTUZFNEdpSkJTRTR3UlRkSU5HNHlUWFJoUzAxa2NGUlFOMWw1VlVSYWVVcHRiVVJPUlVGbjo1MDE5MGZiYQ",
+      "profileId": "full-stack",
+      "title": "Developer of Angular (REQ/HR/05) (Science City)",
+      "company": "Yama Tech",
+      "location": "India",
+      "url": "https://www.shine.com/jobs/developer-of-angular-req-hr-science-city/yama-tech/20124010",
+      "tags": [
+        "[Angular]"
+      ],
+      "source": "shine",
+      "description": "Developer of Angular (REQ/HR/05) (Science City)\n\nCompany: Yama Tech\nJob Location: India\nEmployment Type: Full-time\n\nObjective of the Position\n\nThis position will be responsible for development & designing new features for the products as well as change or amended in existing features, should also assist the IT function in day to day developmental requirements.\n\nJob Duties and Responsibilities\n\nResearching, designing, implementing, and managing software programs.\nUnderstand the project flow to...",
+      "scrapedAt": "2026-11-25 03:06:21",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-Tk1GTld3SUlFZkNMcTkzMkFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXWEJsVkZoeGVETlBRMmMzZUhCVFEwVlBUVUZvU1ZSM1QzcEJiMHc0TVVKVVJXVlFSR2wxVVdNM1NXVjFiRVY2YzBaTVFUVXdSemhhVWtGb1pYRTRVbEZFUld4TlNWUlljREoxUjJscFVtbHJSRUV5TjFKeU5FWjROVEU0ZGs1V1REaFBTbVJFVURJMmFXSkZaelpqTUVGZk5EWnhYME5YV0RoNGRHaDBWRjlxYUVsNVdFY1NGM0V4UVVkaE9YcFRTbkF5U3pkT1dWQTNYeTFpTUZFNEdpSkJTRTR3UlRkRlFUbFJNRFowTFZjMFVHdzFRMHRxZWs0MWQxRlhiRzR0YVdobjpjYWYyZWE1MA",
+      "profileId": "full-stack",
+      "title": "Angular Developer | India",
+      "company": "Photon",
+      "location": "Tamil Nadu, India",
+      "url": "https://in.indeed.com/viewjob?jk=b98fc1fcc9607c50",
+      "tags": [
+        "[Angular]"
+      ],
+      "source": "indeed",
+      "description": "Front End Developer (Angular)\n\nObjectives of this Role\n\n• Create design- and user-focused experiences.\n\n• Build personalized and customized features for customers.\n\n• Maintain up-to-date knowledge of industry trends and advancements.\n\n• Develop standard code that can serve as the foundation of future projects.\n\n• Perform tasks accurately and up to our quality standard.\n\nDaily and Monthly Responsibilities\n\n• Collaborate with web designers and back-end designers to complete projects.\n\n• Create...",
+      "scrapedAt": "2026-11-25 03:06:21",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-RU04U0Z0Y1VpNE1mcGJpTUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXa3Q2VjNSWVYyOVVkSGxqZHpkSWJGZEZaa04yZFVNMVZVMVhkMlZIU2xGSVRHTlRUVlZFWWxoZlQyeGFWMWhtY0VrMFQwWmlZbUpYTW5rdE0wNDBTV2N4VUhvMFRVZG1PSFZoUkZWblltSnNOa2QzV0ZsTFRrUjNOR3N5TjFkd2VXMTRVa3Q1VFRsUE5XZFdNV2Q1ZGxGWlVqRXhWVWh5YzBkdVIyOXJjMEl6WVRkTlFrSVNGM0V4UVVkaE9YcFRTbkF5U3pkT1dWQTNYeTFpTUZFNEdpSkJTRTR3UlRkRlpVdFVjSE54YTAxclgyUkZPV1JPU25KZlYzaHZURk0xZWxkbjo4NWQzNTY3NA",
+      "profileId": "full-stack",
+      "title": "Angular (UI Developer)",
+      "company": "Rexcel IT Services",
+      "location": "India",
+      "url": "https://www.glassdoor.co.in/job-listing/angular-ui-developer-rexcel-it-services-JV_KO0,20_KE21,39.htm?jl=1006546927367",
+      "tags": [
+        "[Angular]"
+      ],
+      "source": "glassdoor",
+      "description": "Greater Noida West, Uttar Pradesh, India\n\nFull Time Employment\n\nCurrent Status : [ HOLD ]\n\nJob Summary\n\n• We are looking for an Angular Developer who thinks that great products start with user experiences. If you like turning ideas into nice and easy to use interfaces this could be the perfect job for you.\n\n• In this job you will work with designers, product teams and backend developers to make web applications that look good and are easy to use. You will not just write code, you will also help...",
+      "scrapedAt": "2026-11-25 03:06:21",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-bkZHdk52bkpOVlE0ZWtScUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVUk0UWpGME1ISlVZa2hVTWs1eGQxWjRXalJpU0dvNVprOUpXVVJYZUhOc2EzbFNkRWd6YWxFNGIzbExXR1kzVmxWd2NHRmZVR05yUTNORU1YbDJlbEZpVUd0WGJYaFpPR05YTUdrNFZUTTVRMU16VkhSdE9YZGxjekp2TmpkV2JGSjJhbDlFWHpabU1XczBiekZIVjNCclp6RnRNa2xoVVVoU1VFNDRNWEExVjB4M1VEQVNGM0V4UVVkaE9YcFRTbkF5U3pkT1dWQTNYeTFpTUZFNEdpSkJTRTR3UlRkSE9WbzBOamxNVlU0MVRWaFVkMU5tU1VSd2FWRnBiekkyU21wbjoyMWZiOTdkYw",
+      "profileId": "full-stack",
+      "title": "Frontend Developer (Angular)",
+      "company": "Mobile Programming LLC India",
+      "location": "Mumbai, Maharashtra, India",
+      "url": "https://www.shine.com/jobs/frontend-developer-angular/mobile-programming-llc-india/20122862?jobtype=cr&position_in_results=17",
+      "tags": [
+        "[Angular]"
+      ],
+      "source": "shine",
+      "description": "Frontend Developer (Angular)\n\nCompany: Mobile Programming LLC India\nJob Location: Mumbai, Maharashtra, India\nEmployment Type: Full-time\nExperience Required: 5+ years\n\nYou will design and build responsive web applications using Angular.\n\nThis role is on-site.\n\nResponsibilities\n\nDevelop, test, and maintain web applications using Angular and related technologies.\n\nTranslate wireframes and mockups from UI/UX designers into high-quality code.\n\nIntegrate data from backend services and third-party...",
+      "scrapedAt": "2026-11-25 03:06:21",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-cnIyNEduX3lScHZyUjlhaUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZV1ppZWs4NWFqQjBRM1phUzFkck4zVlZVRGhHU2pGaWQxVmZhV3hQYUhFMFEwOUhaMDlEY1U5VVdUWkNaRFV4T0hCSU5YRklTbEJMZVZoQ09YTm9jMmx4YTJ0cmIxQlZjMmhpTmtadldXMDBXVWc0V0RsbE5rRnFRM2g1VnkxMGNHWnBabWhCY0V4aGNqWjRjME4zVVhOMFh6ZGhUVXBWWVU5NU5YZHZia3N4VVdkSVZUZ1NGM0V4UVVkaE9YcFRTbkF5U3pkT1dWQTNYeTFpTUZFNEdpSkJTRTR3UlRkSU9FZHhkbXhZTm1saU9ETm1RVWRPV25aMFZEWkJWV2h4WnpGUjo4NjIyYmVmZQ",
+      "profileId": "full-stack",
+      "title": "Front End Developer (Angular) (Remote)",
+      "company": "The Hub",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://cutshort.io/job/Front-End-Developer-Angular-Bengaluru-Bangalore-Mumbai-The-Hub-F63zMaY9",
+      "tags": [
+        "[Angular]"
+      ],
+      "source": "cutshort",
+      "description": "What will I do?\n\n• Delivering a complete front end application\n• Ensuring high performance on mobile and desktop\n• Writing tested, idiomatic, and documented JavaScript, HTML, and CSS\n• Coordinating the workflow between the graphic designer, the HTML coder, and yourself\n• Cooperating with the back-end developer in the process of building the RESTful API\n• Communicating with external web services\n• Ensure high-quality graphic standards and brand consistency\n• Stay up-to-date on emerging...",
+      "scrapedAt": "2026-11-25 03:06:21",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-aFU0YzhPMnhQaWgwVU9VX0FBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxZakJyYkhKUFpVcDJlazVyTTBKRGNEVTNTVEF5ZWpJdFkxTXpUeTFqUXpOdE16TlFVSEZvV2pkak5URlVaRkJFTURKVmFXUmxaa0pyWnpNeVJGUTRiMnd6VjJkNkxWaHpRM00yYTBsWlRsWnNablppWlcxak1FaEhZVEUzWld0ZmMzVmlOSFZrT1Y5UVgzbENiV1JDV25oSE5VWXdjVmt6Y2xkNFJFTjBlbGRvUW5wcVRFa1NGMll4UVVkaE9FdFFSblpJY25CMFVWQjFUbTAwYjFFMEdpSkJTRTR3UlRkSFNqSnllVUV0UkVGMU1XNVJlR3h2VEdSa1JGRnVZblExV1hSMzpiNTBhOGU4Yg",
+      "profileId": "power-platform",
+      "title": "PowerApps Developer",
+      "company": "Capgemini",
+      "location": "Bengaluru, Karnataka, India",
+      "url": "https://in.linkedin.com/jobs/view/powerapps-developer-at-capgemini-4464483443",
+      "tags": [
+        "[Canvas Apps]",
+        "[Power Automate]",
+        "[Dataverse]",
+        "[SharePoint Online]",
+        "[Model-Driven]"
+      ],
+      "source": "linkedin",
+      "description": "Choosing Capgemini means choosing a company where you will be empowered to shape your career in the way you’d like, where you’ll be supported and inspired by a collaborative community of colleagues around the world, and where you’ll be able to reimagine what’s possible. Join us and help the world’s leading organizations unlock the value of technology and build a more sustainable, more inclusive world.\n\nYour Role\n\n• Developing and deploying PowerApps solutions.\n• Architecture and design of...",
+      "scrapedAt": "2026-11-25 03:05:52",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": true
+    },
+    {
+      "id": "jsearch-bzc4TC1DMnR4NV9RRktxWEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXVEF3YW1oV1VXTXhObWRCWW00MlFuUjVhbXhUYlZGV1RVMTNOM0Y0Y1ZSUVgxSnhTMUZxYVU4MFp6ZHRVekpDWTA4eFkxOHRVWFV3V1U1RVZuTndXbXBwWWpkV2FYVmtaWGhrUzJKV1ltbGtZVWxJWWtwd1dVeFBRMFZEU0ROWmFYSjRNVlpKWlVaS2VrSmtSVXRyTVZGM2RYQlNTVkJwWjBab2IxTmxOWGwzTW1SQ2JtSVNGMll4UVVkaE9FdFFSblpJY25CMFVWQjFUbTAwYjFFMEdpSkJTRTR3UlRkSWJHcHpiRVptZWtJeFUxUnBWbFpTV2xSRU5VZG5hSFJPU1RaUjphMDA0NTcwYQ",
+      "profileId": "power-platform",
+      "title": "India: Power Platform Developer",
+      "company": "Helmerich & Payne, Inc.",
+      "location": "Goa, India",
+      "url": "https://in.indeed.com/viewjob?jk=09f852acaba1f1c4",
+      "tags": [
+        "[Power Automate]",
+        "[Copilot Studio]"
+      ],
+      "source": "indeed",
+      "description": "At H&P, our people are our strength.\n\n• Collaborate with business units and stakeholders to understand their requirements and translate them into functional solutions using Power Platform.\n\n• Design, develop, and deploy custom applications using Power Apps to meet business needs.\n\n• Automate workflows and processes using Power Automate, integrating with various data sources and services.\n\n• Create interactive and insightful dashboards and reports using Power BI to support data-driven...",
+      "scrapedAt": "2026-11-25 03:05:52",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
+      "id": "jsearch-Vm9ZLVVNbjFjdXFpT1JacEFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXV3RDTVdoUVRrdG5jR1ZMUWpoNFRGOUtaRVV6WlVGcGFDMDFkbFoxZUhORVZYY3lSVkIyVnpreFlrVjFUWFpZTkRScVZYUklhbEpmZVdwRFVYRTFVemhTVUd0NFkzTldha3Q2YWtsclQwTjNjRFJVU0d4dmRqRkhWekJQV1Zaa1NFaEhlRGw0YkVFNVozTkNOMTlsYUhGTlozTmxlRzlJYWpOWVVWSldTRGQzUjFKSFNHUVNGMll4UVVkaE9FdFFSblpJY25CMFVWQjFUbTAwYjFFMEdpSkJTRTR3UlRkRlZtOHdhVWMzWm1jMlJUTlpXamh6ZVRSUldESktjbnB0V2poUjphMjNhMWE0YQ",
+      "profileId": "power-platform",
+      "title": "Microsoft Power Platform / Power Apps Developer | Succor Technology Services | India – 100% Remote",
+      "company": "Succor Technology Services",
+      "location": "India (Remote)",
+      "url": "https://www.jobleads.com/in/job/microsoft-power-platform-power-apps-developer-succor-technology-services-india-100-remote--india--ebf727ffec3697fb7fbbb87cb290120c1",
+      "tags": [
+        "[Canvas Apps]",
+        "[Power Automate]",
+        "[Dataverse]",
+        "[SharePoint Online]",
+        "[Model-Driven]",
+        "[PCF]"
+      ],
+      "source": "jobleads",
+      "description": "Position Summary\n\n• Succor Technology Services is seeking an accomplished Microsoft Power Platform / Power Apps Developer for an exciting 3-month contract opportunity with possible extension, operating on a 100% remote basis from India.\n\n• This role requires a seasoned technical professional with specialized expertise in enterprise low-code application development, cloud data fabrics, and workflow automation.\n\n• You will play a pivotal role in designing, building, and scaling sophisticated...",
+      "scrapedAt": "2026-11-25 03:05:52",
+      "dateGroup": "2026-11-25",
+      "dateLabel": "Today's Batch",
+      "tier": "domestic",
+      "isTargetCompany": false
+    },
+    {
       "id": "jsearch-OFZqZ2ZSVzRrQ1c3cWI2NUFBQUFBQT09OkVzd0JDb3dCUVVSRVlsZGxXbTFZVGtOV1lraEVTWE41UXpWQmJFZEdSbTFUYm5sdmJVaFRlSGsyVFZkRU4wTTVaRGRVZDBkWVVHWXpUVFE0WjNnMmFVTllZblJFUVVkRWNWOVljVE5DYVRsWFpVWnlZVkYyTXpVNVYwbDVRVEJwZGt4UU9VaEtjbDgxVVc5b1EyWmZTV0ZVYzBsQ1FVMWZXR001YVZkbGJrb3lkMU15WVZGME5VbG1NbFJDWlhoNFV6TVNGMU5RT0VWaFgzcE9Ua2wyYVRWT2IxQnpaWEl0WjBGM0dpSkJTRTR3UlRkSVVrcFRVbTV2WWxoRWRVNUphWEV4ZVhRMlJXSmxVVXN6YzJkQjpmN2Q1YjM0ZA",
       "profileId": "plsql-developer",
       "title": "Oracle PLSQL Forms & Reports Engineer",
@@ -7317,7 +8743,7 @@
         "[CI/CD & Git]"
       ],
       "source": "linkedin",
-      "description": "About the Job\n\nAbout Azentio\n\nAzentio Software incorporated in 2020 at Singapore, has been carved out of 3i Infotech, Candela Labs, Beyontec Technologies and Path Solutions. Azentio Software provides mission critical, vertical-specific software products for customers in banking, financial services and insurance verticals and includes key products such as KASTLE™ (Universal Lending), AMLOCK™ (Anti-Money Laundering & Compliance software suite), iMal, PREMIA™ Astra (Core Insurance software)...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:07:03",
       "dateGroup": "2026-11-24",
       "dateLabel": "Today's Batch",
@@ -7338,7 +8764,7 @@
         "[CI/CD & Git]"
       ],
       "source": "shine",
-      "description": "Senior Oracle PL/SQL Developer Performance Tuning & Python Scripting\n\nCompany: ObjectWin Technology India Pvt. Ltd\nJob Location: India\nEmployment Type: Full-time\nExperience Required: 6+ years\n\nDescription\n\nWe are seeking an experienced Oracle PL/SQL Developer with over 6 years of hands-on experience in designing, developing, and optimizing database solutions. The ideal candidate will have strong expertise in performance tuning, query optimization, and Python scripting for automation and...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:07:03",
       "dateGroup": "2026-11-24",
       "dateLabel": "Today's Batch",
@@ -7359,7 +8785,7 @@
         "[CI/CD & Git]"
       ],
       "source": "shine",
-      "description": "About the Role\nAs a Senior PL/SQL Developer, you will design and implement complex database solutions using PL/SQL and Python. Your role will involve developing and optimizing stored procedures, PL/SQL packages, and functions to enhance data processing efficiency and retrieval speed. You will focus on SQL and query optimization to improve application performance and scalability.\n\nWhat You'll Do\n- Develop, maintain, and optimize PL/SQL code for Oracle databases\n- Design and implement stored...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:07:03",
       "dateGroup": "2026-11-24",
       "dateLabel": "Today's Batch",
@@ -7378,7 +8804,7 @@
         "[Oracle SQL]"
       ],
       "source": "ups jobs",
-      "description": "Before you apply to a job, select your language preference from the options available at the top right of this page.\n\nExplore your next opportunity at a Fortune Global 500 organization. Envision innovative possibilities, experience our rewarding culture, and work with talented teams that help you become better every day. We know what it takes to lead UPS into tomorrow—people with a unique combination of skill + passion. If you have the qualities and drive to lead yourself or teams, there are...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:07:03",
       "dateGroup": "2026-11-24",
       "dateLabel": "Today's Batch",
@@ -7396,7 +8822,7 @@
         "[Oracle SQL]"
       ],
       "source": "himalayas",
-      "description": "ABOUT THE ROLE We are looking for a seasoned Oracle Retail Merchandising Technical Lead to spearhead technical delivery, sustaining engineering, and solution enhancements across Pricing, Invoice Matching, and Allocation modules.",
+      "description": "",
       "scrapedAt": "2026-11-24 03:07:03",
       "dateGroup": "2026-11-24",
       "dateLabel": "Today's Batch",
@@ -7414,7 +8840,7 @@
         "[PL/SQL Developer]"
       ],
       "source": "himalayas",
-      "description": "Senior SQL Developer Finance Data & Systems Migration Full-time / RemoteAbout the role We are looking for a Senior SQL Developer to be a part of PROVE Partner's parent company Allira’s team (remote).",
+      "description": "",
       "scrapedAt": "2026-11-24 03:07:03",
       "dateGroup": "2026-11-24",
       "dateLabel": "Today's Batch",
@@ -7435,10 +8861,10 @@
         "[Python / Shell]"
       ],
       "source": "linkedin",
-      "description": "Key Skills: Angular, Core Java, Python, Fullstack Java, React, Java, Javascript, SQL, HTML, Spring Boot, GIT, CSS, Typescript\n\nRoles and Responsibilities:\n• Develop and maintain responsive web application features using Angular or React.\n• Build and support application components that integrate frontend experiences with backend services.\n• Use Python for basic scripting and application support tasks.\n• Investigate and resolve defects across application layers and contribute to code reviews.\n•...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:45",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7453,10 +8879,10 @@
         "[Java]"
       ],
       "source": "shine",
-      "description": "What This Job Is\nSuccess as a Java Developer in this role means delivering high-quality software solutions that meet user needs and system requirements while contributing to team collaboration and project goals.\n\nWhat You Will Own\n- Design, develop, and maintain Java applications with an emphasis on performance, scalability, and robustness.\n- Work closely with product managers and technical teams to articulate software specifications and requirements.\n- Write clean, efficient code that adheres...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:45",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7474,10 +8900,10 @@
         "[Docker]"
       ],
       "source": "linkedin",
-      "description": "Job Role: Senior Software Engineer Java / Golang\n\nExperience: 5 7 Years\n\nLocation: Pune, India\n\nJob Overview\n\nWe are looking for a skilled Senior Software Engineer with strong backend development experience in Golang or Java. The ideal candidate should have hands-on experience in REST APIs, microservices, cloud platforms, databases, and automated testing. Java developers must be willing to learn and work full-time on Golang.\n\nKey Responsibilities\n\n• Design, develop, and maintain scalable...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:45",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7493,10 +8919,10 @@
         "[Python / Shell]"
       ],
       "source": "weworkremotely",
-      "description": "Headquarters: Remote\n\nAlloy is where you belong!\n\nAlloy is the AI-powered identity and fraud prevention platform that accelerates onboarding, stops fraud, and scales compliance across the customer lifecycle so financial organizations can grow without limits. More than 900 of the world's leading financial institutions and fintechs trust Alloy for smarter risk management that drives growth.\n\nThrough our values: Be Bold, Go Fast, Collaborate, and Celebrate Our Differences, we are creating a...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:45",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -7511,10 +8937,10 @@
         "[Java]"
       ],
       "source": "himalayas",
-      "description": "Als IT-Dienstleister treiben wir die Digitalisierung des öffentlichen Sektors voran und schaffen echten Mehrwert für Millionen Menschen in Deutschland.",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:45",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -7529,10 +8955,10 @@
         "[Angular]"
       ],
       "source": "linkedin",
-      "description": "Key Skills: Angular, Core Java, Python, Fullstack Java, React, Java, Javascript, SQL, HTML, Spring Boot, GIT, CSS, Typescript\n\nRoles and Responsibilities:\n• Develop and maintain responsive web application features using Angular or React.\n• Build and support application components that integrate frontend experiences with backend services.\n• Use Python for basic scripting and application support tasks.\n• Investigate and resolve defects across application layers and contribute to code reviews.\n•...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:26",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7551,10 +8977,10 @@
         "[GitHub]"
       ],
       "source": "careers at exxonmobil",
-      "description": "About us\n\nAt ExxonMobil, our vision is to lead in energy innovations that advance modern living while reducing emissions. As one of the world’s largest publicly traded energy and chemical companies, we are powered by a unique and diverse workforce fueled by the pride in what we do and what we stand for.\n\nThe success of our Upstream, Product Solutions and Low Carbon Solutions businesses is the result of the talent, curiosity and drive of our people. They bring solutions every day to optimize our...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:26",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7571,10 +8997,10 @@
         "[GitHub]"
       ],
       "source": "wellfound",
-      "description": "Experience: 2-5 Years\n\nEmployment Type: Full-time\n\nWorking Days: 5 days a week\n\nWorking Hours: 2:30 PM – 11:30 PM IST\n\nLocation: Amritsar, Punjab\n\nAbout Us\n\nNinja Studio is a custom software development company with offices in San Francisco and Montreal. We build AI-powered solutions, MVPs, SaaS platforms, web and mobile apps for startup founders and early-stage companies across the US, Canada, UK, Europe, and Australia. Our clients are founders who move fast, value quality, and need a...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:26",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7590,10 +9016,10 @@
         "[GitHub]"
       ],
       "source": "cognizant careers",
-      "description": "Primary Skill: AEM FullStack (Backend+ Frontend) Developer\n\nExperience: 3-6 Years\n\nLocation : Any India Location\n\nJD:\n\nKey Responsibilities\n• Design, develop, and maintain AEM components, templates, blocks, workflows, and services using AEM Cloud Service.\n• Implement AEM Sites, Assets, Frontend Modules and Forms modules to deliver engaging digital experiences.\n• Develop and integrate custom OSGi bundles, servlets, and Sling models using Java and AEM APIs.\n• Collaborate with UX/UI designers...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:26",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -7608,10 +9034,10 @@
         "[Angular]"
       ],
       "source": "linkedin",
-      "description": "We are seeking a talented individual to join our Applications Development team, part of our Marsh Risk Tech business at Marsh. This role will be based in Pune. This is a hybrid role that has a requirement of working at least three days a week in the office.\n\nJava Full Stack Developer - Applications Development\n\nAs a Java Full Stack Developer, you will be responsible for designing, developing, and maintaining web applications using Java technologies. You will work closely with cross-functional...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:26",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7627,10 +9053,10 @@
         "[GitHub]"
       ],
       "source": "indeed",
-      "description": "Key Responsibilities\n\n• Modern Frontend Development: Build responsive, high-performance user interfaces using React.js and TypeScript .\n\n• AngularJS Enhancements & BAU: Manage ongoing feature enhancements, bug fixes, and Business As Usual (BAU) support for existing AngularJS 1.7 applications.\n\n• UI Styling: Craft clean, maintainable, and cross-browser compatible stylesheets using modern JavaScript , CSS3 , and SCSS .\n\n• Backend & Microservices: Design, build, and maintain robust RESTful APIs...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:26",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7647,10 +9073,10 @@
         "[MSSQL]"
       ],
       "source": "linkedin",
-      "description": "HCLTech is hiring .NET Full Stack, Angular, Azure Professionals with 8+ years of experience!\n\nWe are organizing an in-person Hackathon on 4 December at Trinity, Whitefield, Bengaluru.\n\nRegistration is mandatory for participation. Kindly complete your registration at the earliest to confirm your attendance:\n\n🔗 https://forms.cloud.microsoft/r/Fme93AEZ5X\n\nIf you are based in Bengaluru and looking for your next opportunity with HCLTech, we would love to meet you.\n\nIf you are originally from...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:26",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -7666,10 +9092,10 @@
         "[.NET]"
       ],
       "source": "shine",
-      "description": ".NET Full Stack Angular Developer\n\nCompany: HARP Technologies & Services Pvt Ltd\nJob Location: Chennai, Tamil Nadu, India\nEmployment Type: Full-time\nExperience Required: 5+ years\n\nAbout the Role\n\nYou will build and maintain full-stack applications using Angular, .NET Core, and Azure.\n\nThis role is hybrid.\n\nKey Responsibilities\n\nResponsibilities\n\nBuild responsive user interfaces with Angular and Type\n\nScript.\n\nDevelop backend services and Web APIs using .NET Core and C#.Manage data persistence...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:26",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7686,10 +9112,10 @@
         "[Azure DevOps]"
       ],
       "source": "dataart.team",
-      "description": "We are looking for a Middle to Senior Full Stack Developer with strong experience in .NET and Angular to build scalable cloud based applications and contribute to modern software solutions. You will collaborate with distributed teams and support communication with stakeholders with partial overlap to Singapore business hours.\n\nYou will work on a cloud based platform in the foreign exchange domain, building and enhancing applications with .NET and Angular. The project includes full stack...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:26",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7705,10 +9131,10 @@
         "[.NET]"
       ],
       "source": "iitjobs",
-      "description": "You will build and maintain web applications using .NET Core and Angular.\n\nThis role is on-site.\n\nResponsibilities\n\n• Develop and maintain web applications using .NET Core and Angular.\n\n• Write clean, scalable, and efficient code following established best practices.\n\n• Collaborate with cross-functional teams to design and implement new features.\n\n• Troubleshoot, debug, and optimize application performance.\n\n• Integrate APIs and databases with front-end frameworks to ensure seamless...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:26",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7723,10 +9149,10 @@
         "[Angular]"
       ],
       "source": "shine",
-      "description": "Angular Developer - Hiring Now (Nagpur)\n\nCompany: Important Company of the Sector\nJob Location: Nagpur, Maharashtra, India\nEmployment Type: Full-time\nExperience Required: 1+ years\n\nWe are on the lookout for a competitive Angular Developer to join our productive team at Kizora in Nagpur.\n\nGrowing your career as a Full Time Angular Developer is a fantastic opportunity to develop exceptional skills.\n\nIf you are solid in presentation, critical thinking and have the right mindset for the job, then...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:26",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7743,10 +9169,10 @@
         "[MSSQL]"
       ],
       "source": "apna jobs",
-      "description": "Angular + Java Developer We are looking for a highly skilled Angular + Java Full Stack Developer with strong experience in developing scalable web applications using Angular on the frontend and Java-based technologies on the backend. The ideal candidate should be proficient in building responsive user interfaces, developing RESTful services, and working in an Agile development environment. Key Responsibilities Design, develop, and maintain enterprise-grade web applications using Angular and...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:26",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7763,10 +9189,10 @@
         "[MSSQL]"
       ],
       "source": "iitjobs",
-      "description": "Build and maintain web applications using .NET Core and Angular, implementing RESTful APIs and managing SQL databases.\n\nThis role is hybrid.\n\nResponsibilities\n\n• Design, develop, and maintain web applications and RESTful APIs.\n\n• Collaborate with UX/UI designers to define requirements and build user interfaces.\n\n• Write efficient SQL queries and manage database structures.\n\n• Debug, troubleshoot, and conduct unit and integration testing.\n\n• Participate in Agile/Scrum ceremonies, code reviews...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:26",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7781,10 +9207,10 @@
         "[Angular]"
       ],
       "source": "weworkremotely",
-      "description": "Headquarters: US or Canada - Remote\n\nOur team is committed to enhancing physician and patient quality of life through Elation, a SaaS cloud-based clinical platform. Since inception, we’ve been focused on building an intuitive, reliable experience that empowers physicians to deliver better care to patients.\n\nElation is looking for a full-stack engineer with a deep understanding of web programming, design, and technical obstacles to join our application team focused on building and maintaining AI...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:06:26",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -7799,10 +9225,10 @@
         "[Power Automate]"
       ],
       "source": "talent.com",
-      "description": "Job Description\n\n:\n\nWe are seeking a Technical Lead with a strong background in UiPath and general software engineering principles. In this role, you will play a crucial part in developing and implementing automation solutions to optimize business processes for our clients. You will collaborate with cross-functional teams, analyse requirements, design, develop, test, and deploy RPA bots that deliver measurable improvements to our clients' operations.\n\nKey Responsibilities:\n• Design, develop...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:05:43",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7819,10 +9245,10 @@
         "[Copilot Studio]"
       ],
       "source": "efinancialcareers",
-      "description": "Position Summary\n\nThe Power Platform Developer is responsible for designing, developing, and delivering secure, scalable, and business-focused automation solutions across the Microsoft Power Platform and enterprise systems. The successful candidate will combine strong platform engineering expertise with a product-oriented mindset to deliver modern cloud-based applications.\n\nExperience Level: Senior Associate - 5+ years execution software engineering experience\n\nCore Tech Stack: Power Platform...",
+      "description": "",
       "scrapedAt": "2026-11-24 03:05:43",
       "dateGroup": "2026-11-24",
-      "dateLabel": "Today's Batch",
+      "dateLabel": "Yesterday",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7841,7 +9267,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:55",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -7860,7 +9286,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:55",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7880,7 +9306,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:55",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7904,7 +9330,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:30",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7925,7 +9351,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:30",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7949,7 +9375,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:30",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7970,7 +9396,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:30",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -7992,7 +9418,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:30",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "domestic",
       "isTargetCompany": true
     },
@@ -8011,7 +9437,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:30",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -8029,7 +9455,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:30",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -8047,7 +9473,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:30",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -8071,7 +9497,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:30",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -8092,7 +9518,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:30",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -8112,7 +9538,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:30",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -8132,7 +9558,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:30",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -8152,7 +9578,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:30",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -8170,7 +9596,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:15",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -8192,7 +9618,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:15",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -8210,7 +9636,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:15",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -8228,7 +9654,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:15",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -8246,7 +9672,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:15",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -8264,7 +9690,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:06:15",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "remote",
       "isTargetCompany": false
     },
@@ -8282,7 +9708,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:05:37",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -8303,7 +9729,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:05:37",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
@@ -8321,7 +9747,7 @@
       "description": "",
       "scrapedAt": "2026-11-23 03:05:37",
       "dateGroup": "2026-11-23",
-      "dateLabel": "Yesterday",
+      "dateLabel": "Nov 23, 2026",
       "tier": "domestic",
       "isTargetCompany": false
     },
